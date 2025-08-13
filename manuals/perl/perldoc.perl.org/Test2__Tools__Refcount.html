@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/Test2::Tools::Refcount by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test2::Tools::Refcount - assert reference counts on objects - Perldoc Browser</title>
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="Test2__Tools__Refcount.html">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.html"><img src="images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.42.0</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="Test2__Tools__Refcount.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item active" href="https://perldoc.perl.org/5.42.0/Test2::Tools::Refcount">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/Test2::Tools::Refcount">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/Test2::Tools::Refcount">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/Test2::Tools::Refcount">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/Test2::Tools::Refcount">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/Test2::Tools::Refcount">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/Test2::Tools::Refcount">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/Test2::Tools::Refcount">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/Test2::Tools::Refcount">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/Test2::Tools::Refcount">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/Test2::Tools::Refcount">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/Test2::Tools::Refcount">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/Test2::Tools::Refcount">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/Test2::Tools::Refcount">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/Test2::Tools::Refcount">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/Test2::Tools::Refcount">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/Test2::Tools::Refcount">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/Test2::Tools::Refcount">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/Test2::Tools::Refcount">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/Test2::Tools::Refcount">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/Test2::Tools::Refcount">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/Test2::Tools::Refcount">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/Test2::Tools::Refcount">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/Test2::Tools::Refcount">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/Test2::Tools::Refcount">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/Test2::Tools::Refcount">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/Test2::Tools::Refcount">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/Test2::Tools::Refcount">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/Test2::Tools::Refcount">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/Test2::Tools::Refcount">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/Test2::Tools::Refcount">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/Test2::Tools::Refcount">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/Test2::Tools::Refcount">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/Test2::Tools::Refcount">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/Test2::Tools::Refcount">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/Test2::Tools::Refcount">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/Test2::Tools::Refcount">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/Test2::Tools::Refcount">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/Test2::Tools::Refcount">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/Test2::Tools::Refcount">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/Test2::Tools::Refcount">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/Test2::Tools::Refcount">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/Test2::Tools::Refcount">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/Test2::Tools::Refcount">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/Test2::Tools::Refcount">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/Test2::Tools::Refcount">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/Test2::Tools::Refcount">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/Test2::Tools::Refcount">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/Test2::Tools::Refcount">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/Test2::Tools::Refcount">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/Test2::Tools::Refcount">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/Test2::Tools::Refcount">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/Test2::Tools::Refcount">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/Test2::Tools::Refcount">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/Test2::Tools::Refcount">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/Test2::Tools::Refcount">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/Test2::Tools::Refcount">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/Test2::Tools::Refcount">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/Test2::Tools::Refcount">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/Test2::Tools::Refcount">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/Test2::Tools::Refcount">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/Test2::Tools::Refcount">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/Test2::Tools::Refcount">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/Test2::Tools::Refcount">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/Test2::Tools::Refcount">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/Test2::Tools::Refcount">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/Test2::Tools::Refcount">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/Test2::Tools::Refcount">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/Test2::Tools::Refcount">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/Test2::Tools::Refcount">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/Test2::Tools::Refcount">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/Test2::Tools::Refcount">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/Test2::Tools::Refcount">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/Test2::Tools::Refcount">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/Test2::Tools::Refcount">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/Test2::Tools::Refcount">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/Test2::Tools::Refcount">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/Test2::Tools::Refcount">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/Test2::Tools::Refcount">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.2/Test2::Tools::Refcount">5.6.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.1/Test2::Tools::Refcount">5.6.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.0/Test2::Tools::Refcount">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_04/Test2::Tools::Refcount">5.005_04</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_03/Test2::Tools::Refcount">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/Test2::Tools::Refcount">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/Test2::Tools::Refcount">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/Test2::Tools::Refcount">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/Test2::Tools::Refcount">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/Test2::Tools::Refcount">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/Test2::Tools::Refcount">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/Test2::Tools::Refcount">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/Test2::Tools::Refcount">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/Test2::Tools::Refcount">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/Test2::Tools::Refcount">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/Test2::Tools::Refcount">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/Test2::Tools::Refcount">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/Test2::Tools::Refcount">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/Test2::Tools::Refcount">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/Test2::Tools::Refcount">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/Test2::Tools::Refcount">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/Test2::Tools::Refcount">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/Test2::Tools::Refcount">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/Test2::Tools::Refcount">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/Test2::Tools::Refcount">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/Test2::Tools::Refcount">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/Test2::Tools::Refcount">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/Test2::Tools::Refcount">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="Test2__Tools__Refcount.html">Test2::Tools::Refcount</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/Test2::Tools::Refcount.txt">source</a>,
+            <a href="https://metacpan.org/pod/Test2::Tools::Refcount">CPAN</a>)
+          </div>
+            <div id="moduleversion">version 1.302210</div>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SYNOPSIS">SYNOPSIS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#FUNCTIONS">FUNCTIONS</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#is_refcount">is_refcount</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#is_oneref">is_oneref</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#refcount">refcount</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#EXAMPLE">EXAMPLE</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#BUGS">BUGS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#ACKNOWLEDGEMENTS">ACKNOWLEDGEMENTS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#AUTHOR">AUTHOR</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p><code>Test2::Tools::Refcount</code> - assert reference counts on objects</p>
+
+<h1 id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">#</a>SYNOPSIS</h1>
+
+<pre><code>use Test2::Tools::Refcount;
+
+use Some::Class;
+my $object = Some::Class-&gt;new();
+
+is_oneref( $object, &#39;$object has a refcount of 1&#39; );
+
+my $otherref = $object;
+
+is_refcount( $object, 2, &#39;$object now has 2 references&#39; );</code></pre>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>The Perl garbage collector uses simple reference counting during the normal execution of a program. This means that cycles or unweakened references in other parts of code can keep an object around for longer than intended. To help avoid this problem, the reference count of a new object from its class constructor ought to be 1. This way, the caller can know the object will be properly DESTROYed when it drops all of its references to it.</p>
+
+<p>This module provides two test functions to help ensure this property holds for an object class, so as to be polite to its callers.</p>
+
+<p>If the assertion fails; that is, if the actual reference count is different to what was expected, either of the following two modules may be used to assist the developer in finding where the references are.</p>
+
+<ul>
+
+<li><p>If <a href="https://metacpan.org/pod/Devel::MAT">Devel::MAT</a> is installed, this test module will use it to dump the state of the memory after a failure. It will create a <i>.pmat</i> file named the same as the unit test, but with the trailing <i>.t</i> suffix replaced with <i>-TEST.pmat</i> where <code>TEST</code> is the number of the test that failed (in case there was more than one).</p>
+
+</li>
+</ul>
+
+<p>See the examples below for more information.</p>
+
+<h1 id="FUNCTIONS"><a class="permalink" href="#FUNCTIONS">#</a>FUNCTIONS</h1>
+
+<h2 id="is_refcount"><a class="permalink" href="#is_refcount">#</a>is_refcount</h2>
+
+<pre><code>is_refcount( $object, $count, $name )</code></pre>
+
+<p>Test that $object has $count references to it.</p>
+
+<h2 id="is_oneref"><a class="permalink" href="#is_oneref">#</a>is_oneref</h2>
+
+<pre><code>is_oneref( $object, $name )</code></pre>
+
+<p>Assert that the $object has only 1 reference to it.</p>
+
+<h2 id="refcount"><a class="permalink" href="#refcount">#</a>refcount</h2>
+
+<pre><code>$count = refcount( $object )</code></pre>
+
+<p>Returns the reference count of the given object as used by the test functions. This is useful for making tests that don&#39;t care what the count is before they start, but simply assert that the count hasn&#39;t changed by the end.</p>
+
+<pre><code>use Test2::Tools::Refcount import =&gt; [qw( is_refcount refcount )];
+{
+   my $count = refcount( $object );
+
+   do_something( $object );
+
+   is_refcount( $object, $count, &#39;do_something() preserves refcount&#39; );
+}</code></pre>
+
+<h1 id="EXAMPLE"><a class="permalink" href="#EXAMPLE">#</a>EXAMPLE</h1>
+
+<p>Suppose, having written a new class <code>MyBall</code>, you now want to check that its constructor and methods are well-behaved, and don&#39;t leak references. Consider the following test script:</p>
+
+<pre><code>use Test::More tests =&gt; 2;
+use Test2::Tools::Refcount;
+
+use MyBall;
+
+my $ball = MyBall-&gt;new();
+is_oneref( $ball, &#39;One reference after construct&#39; );
+
+$ball-&gt;bounce;
+
+# Any other code here that might be part of the test script
+
+is_oneref( $ball, &#39;One reference just before EOF&#39; );</code></pre>
+
+<p>The first assertion is just after the constructor, to check that the reference returned by it is the only reference to that object. This fact is important if we ever want <code>DESTROY</code> to behave properly. The second call is right at the end of the file, just before the main scope closes. At this stage we expect the reference count also to be one, so that the object is properly cleaned up.</p>
+
+<p>Suppose, when run, this produces the following output (presuming <a href="https://metacpan.org/pod/Devel::MAT::Dumper">Devel::MAT::Dumper</a> is available):</p>
+
+<pre><code class="plaintext">1..2
+ok 1 - One reference after construct
+not ok 2 - One reference just before EOF
+#   Failed test &#39;One reference just before EOF&#39;
+#   at ex.pl line 26.
+#   expected 1 references, found 2
+# SV address is 0x55e14c310278
+# Writing heap dump to ex-2.pmat
+# Looks like you failed 1 test of 2.</code></pre>
+
+<p>This has written a <i>ex-2.pmat</i> file we can load using the <code>pmat</code> shell and use the <code>identify</code> command on the given address to find where it went:</p>
+
+<pre><code>$ pmat ex-2.pmat 
+Perl memory dumpfile from perl 5.28.1 threaded
+Heap contains 25233 objects
+pmat&gt; identify 0x55e14c310278
+HASH(0)=MyBall at 0x55e14c310278 is:
+├─(via RV) the lexical $ball at depth 1 of CODE() at 0x55e14c3104a0=main_cv, which is:
+│ └─the main code
+└─(via RV) value {self} of HASH(2) at 0x55e14cacb860, which is (*A):
+  └─(via RV) value {cycle} of HASH(2) at 0x55e14cacb860, which is:
+    itself</code></pre>
+
+<p>(This document isn&#39;t intended to be a full tutorial on <a href="https://metacpan.org/pod/Devel::MAT">Devel::MAT</a> and the <code>pmat</code> shell; for that see <a href="https://metacpan.org/pod/Devel::MAT::UserGuide">Devel::MAT::UserGuide</a>).</p>
+
+<p>From this output, we can see that the constructor was well-behaved, but that a reference was leaked by the end of the script - the reference count was 2, when we expected just 1. Reading the trace output, we can see that there were 2 references that could be found - one stored in the $ball lexical in the main program, and one stored in a HASH. Since we expected to find the $ball lexical variable, we know we are now looking for a leak in a hash somewhere in the code. From reading the test script, we can guess this leak is likely to be in the bounce() method. Furthermore, we know that the reference to the object will be stored in a HASH in a member called <code>self</code>.</p>
+
+<p>By reading the code which implements the bounce() method, we can see this is indeed the case:</p>
+
+<pre><code>sub bounce
+{
+   my $self = shift;
+   my $cycle = { self =&gt; $self };
+   $cycle-&gt;{cycle} = $cycle;
+}</code></pre>
+
+<p>From reading the tracing output, we find that the HASH this object is referenced in also contains a reference to itself, in a member called <code>cycle</code>. This comes from the last line in this function, a line that purposely created a cycle, to demonstrate the point. While a real program probably wouldn&#39;t do anything quite this obvious, the trace would still be useful in finding the likely cause of the leak.</p>
+
+<p>If <code>Devel::MAT::Dumper</code> is not available, then these detailed traces will not be produced. The basic reference count testing will still take place, but a smaller message will be produced:</p>
+
+<pre><code class="plaintext">1..2
+ok 1 - One reference after construct
+not ok 2 - One reference just before EOF
+#   Failed test &#39;One reference just before EOF&#39;
+#   at demo.pl line 16.
+#   expected 1 references, found 2
+# Looks like you failed 1 test of 2.</code></pre>
+
+<h1 id="BUGS"><a class="permalink" href="#BUGS">#</a>BUGS</h1>
+
+<ul>
+
+<li><p>Temporaries created on the stack</p>
+
+<p>Code which creates temporaries on the stack, to be released again when the called function returns does not work correctly on perl 5.8 (and probably before). Examples such as</p>
+
+<pre><code>is_oneref( [] );</code></pre>
+
+<p>may fail and claim a reference count of 2 instead.</p>
+
+<p>Passing a variable such as</p>
+
+<pre><code>my $array = [];
+is_oneref( $array );</code></pre>
+
+<p>works fine. Because of the intention of this test module; that is, to assert reference counts on some object stored in a variable during the lifetime of the test script, this is unlikely to cause any problems.</p>
+
+</li>
+</ul>
+
+<h1 id="ACKNOWLEDGEMENTS"><a class="permalink" href="#ACKNOWLEDGEMENTS">#</a>ACKNOWLEDGEMENTS</h1>
+
+<p>Peter Rabbitson &lt;ribasushi@cpan.org&gt; - for suggesting using core&#39;s <code>B</code> instead of <code>Devel::Refcount</code> to obtain refcounts</p>
+
+<h1 id="AUTHOR"><a class="permalink" href="#AUTHOR">#</a>AUTHOR</h1>
+
+<p>Paul Evans &lt;leonerd@leonerd.org.uk&gt;</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/Test2::Tools::Refcount by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:52 GMT -->
+</html>

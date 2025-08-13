@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/Math::BigInt::FastCalc by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Math::BigInt::FastCalc - Math::BigInt::Calc with some XS for more speed - Perldoc Browser</title>
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="Math__BigInt__FastCalc.html">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.html"><img src="images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.42.0</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="Math__BigInt__FastCalc.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item active" href="https://perldoc.perl.org/5.42.0/Math::BigInt::FastCalc">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/Math::BigInt::FastCalc">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/Math::BigInt::FastCalc">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/Math::BigInt::FastCalc">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/Math::BigInt::FastCalc">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/Math::BigInt::FastCalc">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/Math::BigInt::FastCalc">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/Math::BigInt::FastCalc">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/Math::BigInt::FastCalc">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/Math::BigInt::FastCalc">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/Math::BigInt::FastCalc">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/Math::BigInt::FastCalc">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/Math::BigInt::FastCalc">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/Math::BigInt::FastCalc">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/Math::BigInt::FastCalc">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/Math::BigInt::FastCalc">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/Math::BigInt::FastCalc">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/Math::BigInt::FastCalc">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/Math::BigInt::FastCalc">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/Math::BigInt::FastCalc">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/Math::BigInt::FastCalc">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/Math::BigInt::FastCalc">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/Math::BigInt::FastCalc">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/Math::BigInt::FastCalc">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/Math::BigInt::FastCalc">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/Math::BigInt::FastCalc">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/Math::BigInt::FastCalc">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/Math::BigInt::FastCalc">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/Math::BigInt::FastCalc">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/Math::BigInt::FastCalc">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/Math::BigInt::FastCalc">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/Math::BigInt::FastCalc">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/Math::BigInt::FastCalc">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/Math::BigInt::FastCalc">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/Math::BigInt::FastCalc">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/Math::BigInt::FastCalc">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/Math::BigInt::FastCalc">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/Math::BigInt::FastCalc">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/Math::BigInt::FastCalc">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/Math::BigInt::FastCalc">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/Math::BigInt::FastCalc">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/Math::BigInt::FastCalc">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/Math::BigInt::FastCalc">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/Math::BigInt::FastCalc">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/Math::BigInt::FastCalc">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/Math::BigInt::FastCalc">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/Math::BigInt::FastCalc">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/Math::BigInt::FastCalc">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/Math::BigInt::FastCalc">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/Math::BigInt::FastCalc">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/Math::BigInt::FastCalc">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/Math::BigInt::FastCalc">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/Math::BigInt::FastCalc">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/Math::BigInt::FastCalc">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/Math::BigInt::FastCalc">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/Math::BigInt::FastCalc">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/Math::BigInt::FastCalc">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/Math::BigInt::FastCalc">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/Math::BigInt::FastCalc">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/Math::BigInt::FastCalc">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/Math::BigInt::FastCalc">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/Math::BigInt::FastCalc">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/Math::BigInt::FastCalc">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/Math::BigInt::FastCalc">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/Math::BigInt::FastCalc">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/Math::BigInt::FastCalc">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/Math::BigInt::FastCalc">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/Math::BigInt::FastCalc">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/Math::BigInt::FastCalc">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/Math::BigInt::FastCalc">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/Math::BigInt::FastCalc">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/Math::BigInt::FastCalc">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/Math::BigInt::FastCalc">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/Math::BigInt::FastCalc">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/Math::BigInt::FastCalc">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/Math::BigInt::FastCalc">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/Math::BigInt::FastCalc">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/Math::BigInt::FastCalc">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/Math::BigInt::FastCalc">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.2/Math::BigInt::FastCalc">5.6.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.1/Math::BigInt::FastCalc">5.6.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.0/Math::BigInt::FastCalc">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_04/Math::BigInt::FastCalc">5.005_04</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_03/Math::BigInt::FastCalc">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/Math::BigInt::FastCalc">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/Math::BigInt::FastCalc">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/Math::BigInt::FastCalc">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/Math::BigInt::FastCalc">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/Math::BigInt::FastCalc">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/Math::BigInt::FastCalc">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/Math::BigInt::FastCalc">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/Math::BigInt::FastCalc">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/Math::BigInt::FastCalc">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/Math::BigInt::FastCalc">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/Math::BigInt::FastCalc">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/Math::BigInt::FastCalc">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/Math::BigInt::FastCalc">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/Math::BigInt::FastCalc">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/Math::BigInt::FastCalc">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/Math::BigInt::FastCalc">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/Math::BigInt::FastCalc">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/Math::BigInt::FastCalc">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/Math::BigInt::FastCalc">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/Math::BigInt::FastCalc">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/Math::BigInt::FastCalc">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/Math::BigInt::FastCalc">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/Math::BigInt::FastCalc">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="Math__BigInt__FastCalc.html">Math::BigInt::FastCalc</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/Math::BigInt::FastCalc.txt">source</a>,
+            <a href="https://metacpan.org/pod/Math::BigInt::FastCalc">CPAN</a>)
+          </div>
+            <div id="moduleversion">version 0.5020</div>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SYNOPSIS">SYNOPSIS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#STORAGE">STORAGE</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#METHODS">METHODS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#BUGS">BUGS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SUPPORT">SUPPORT</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#LICENSE">LICENSE</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#AUTHORS">AUTHORS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SEE-ALSO">SEE ALSO</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>Math::BigInt::FastCalc - Math::BigInt::Calc with some XS for more speed</p>
+
+<h1 id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">#</a>SYNOPSIS</h1>
+
+<pre><code># to use it with Math::BigInt
+use Math::BigInt lib =&gt; &#39;FastCalc&#39;;
+
+# to use it with Math::BigFloat
+use Math::BigFloat lib =&gt; &#39;FastCalc&#39;;
+
+# to use it with Math::BigRat
+use Math::BigRat lib =&gt; &#39;FastCalc&#39;;</code></pre>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>Math::BigInt::FastCalc inherits from Math::BigInt::Calc.</p>
+
+<p>Provides support for big integer calculations. Not intended to be used by other modules. Other modules which sport the same functions can also be used to support Math::BigInt, like <a href="https://metacpan.org/pod/Math::BigInt::GMP">Math::BigInt::GMP</a> or <a href="https://metacpan.org/pod/Math::BigInt::Pari">Math::BigInt::Pari</a>.</p>
+
+<p>In order to allow for multiple big integer libraries, Math::BigInt was rewritten to use library modules for core math routines. Any module which follows the same API as this can be used instead by using the following:</p>
+
+<pre><code>use Math::BigInt lib =&gt; &#39;libname&#39;;</code></pre>
+
+<p>&#39;libname&#39; is either the long name (&#39;Math::BigInt::Pari&#39;), or only the short version like &#39;Pari&#39;. To use this library:</p>
+
+<pre><code>use Math::BigInt lib =&gt; &#39;FastCalc&#39;;</code></pre>
+
+<p>The default behaviour is to chose the best internal representation of big integers, but the base length used in the internal representation can be specified explicitly. Note that this must be done before Math::BigInt is loaded. For example,</p>
+
+<pre><code>use Math::BigInt::FastCalc base_len =&gt; 3;
+use Math::BigInt lib =&gt; &#39;FastCalc&#39;;</code></pre>
+
+<h1 id="STORAGE"><a class="permalink" href="#STORAGE">#</a>STORAGE</h1>
+
+<p>Math::BigInt::FastCalc works exactly like Math::BigInt::Calc. Numbers are stored in decimal form chopped into parts.</p>
+
+<h1 id="METHODS"><a class="permalink" href="#METHODS">#</a>METHODS</h1>
+
+<p>The following functions are now implemented in FastCalc.xs:</p>
+
+<pre><code class="plaintext">_is_odd         _is_even        _is_one         _is_zero
+_is_two         _is_ten
+_zero           _one            _two            _ten
+_acmp           _len
+_inc            _dec
+__strip_zeros   _copy</code></pre>
+
+<h1 id="BUGS"><a class="permalink" href="#BUGS">#</a>BUGS</h1>
+
+<p>Please report any bugs or feature requests to <code>bug-math-bigint-fastcalc at rt.cpan.org</code>, or through the web interface at <a href="https://rt.cpan.org/Ticket/Create.html?Queue=Math-BigInt-FastCalc">https://rt.cpan.org/Ticket/Create.html?Queue=Math-BigInt-FastCalc</a> (requires login). We will be notified, and then you&#39;ll automatically be notified of progress on your bug as I make changes.</p>
+
+<h1 id="SUPPORT"><a class="permalink" href="#SUPPORT">#</a>SUPPORT</h1>
+
+<p>After installing, you can find documentation for this module with the perldoc command.</p>
+
+<pre><code class="plaintext">perldoc Math::BigInt::FastCalc</code></pre>
+
+<p>You can also look for information at:</p>
+
+<dl>
+
+<dt id="GitHub"><a class="permalink" href="#GitHub">#</a>GitHub</dt>
+<dd>
+
+<p><a href="https://github.com/pjacklam/p5-Math-BigInt-FastCalc">https://github.com/pjacklam/p5-Math-BigInt-FastCalc</a></p>
+
+</dd>
+<dt id="RT:-CPAN&#39;s-request-tracker"><a class="permalink" href="#RT:-CPAN&#39;s-request-tracker">#</a><a id="RT"></a><a id="RT:-CPANs-request-tracker"></a>RT: CPAN&#39;s request tracker</dt>
+<dd>
+
+<p><a href="https://rt.cpan.org/Dist/Display.html?Name=Math-BigInt-FastCalc">https://rt.cpan.org/Dist/Display.html?Name=Math-BigInt-FastCalc</a></p>
+
+</dd>
+<dt id="MetaCPAN"><a class="permalink" href="#MetaCPAN">#</a>MetaCPAN</dt>
+<dd>
+
+<p><a href="https://metacpan.org/release/Math-BigInt-FastCalc">https://metacpan.org/release/Math-BigInt-FastCalc</a></p>
+
+</dd>
+<dt id="CPAN-Testers-Matrix"><a class="permalink" href="#CPAN-Testers-Matrix">#</a><a id="CPAN"></a>CPAN Testers Matrix</dt>
+<dd>
+
+<p><a href="http://matrix.cpantesters.org/?dist=Math-BigInt-FastCalc">http://matrix.cpantesters.org/?dist=Math-BigInt-FastCalc</a></p>
+
+</dd>
+</dl>
+
+<h1 id="LICENSE"><a class="permalink" href="#LICENSE">#</a>LICENSE</h1>
+
+<p>This program is free software; you may redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<h1 id="AUTHORS"><a class="permalink" href="#AUTHORS">#</a>AUTHORS</h1>
+
+<p>Original math code by Mark Biggar, rewritten by Tels <a href="http://bloodgate.com/">http://bloodgate.com/</a> in late 2000.</p>
+
+<p>Separated from Math::BigInt and shaped API with the help of John Peacock.</p>
+
+<p>Fixed, sped-up and enhanced by Tels http://bloodgate.com 2001-2003. Further streamlining (api_version 1 etc.) by Tels 2004-2007.</p>
+
+<p>Maintained by Peter John Acklam &lt;pjacklam@gmail.com&gt; 2010-2021.</p>
+
+<h1 id="SEE-ALSO"><a class="permalink" href="#SEE-ALSO">#</a><a id="SEE"></a>SEE ALSO</h1>
+
+<p><a href="Math__BigInt__Lib.html">Math::BigInt::Lib</a> for a description of the API.</p>
+
+<p>Alternative libraries <a href="Math__BigInt__Calc.html">Math::BigInt::Calc</a>, <a href="https://metacpan.org/pod/Math::BigInt::GMP">Math::BigInt::GMP</a>, and <a href="https://metacpan.org/pod/Math::BigInt::Pari">Math::BigInt::Pari</a>.</p>
+
+<p>Some of the modules that use these libraries <a href="Math__BigInt.html">Math::BigInt</a>, <a href="Math__BigFloat.html">Math::BigFloat</a>, and <a href="Math__BigRat.html">Math::BigRat</a>.</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/Math::BigInt::FastCalc by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:53 GMT -->
+</html>

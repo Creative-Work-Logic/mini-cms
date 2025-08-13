@@ -1,0 +1,1696 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-holy-grail   show-table-of-contents conceptual show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		
+<!-- Mirrored from learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models?view=aspnetcore-9.0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 14:53:03 GMT -->
+<head>
+			<title>ASP.NET Core Blazor hosting models | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="Learn about Blazor hosting models and how to pick which one to use." />
+			<link rel="canonical" href="hosting-models553c.html?view=aspnetcore-9.0" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="ASP.NET Core Blazor hosting models | Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/dotnet/media/dotnet-logo.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="ASP.NET Core Blazor hosting models" />
+			<meta property="og:url" content="hosting-models553c.html?view=aspnetcore-9.0" />
+			<meta property="og:description" content="Learn about Blazor hosting models and how to pick which one to use." />
+			<meta name="platform_id" content="01a06dd8-4f82-4cbc-7eee-035d7ca676c6" /> <meta name="scope" content="ASP.NET Core" />
+			<meta name="locale" content="en-us" />
+			 <meta name="adobe-target" content="true" />
+			<meta name="uhfHeaderId" content="MSDocsHeader-AspNet" />
+
+			<meta name="page_type" content="conceptual" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="breadcrumb_path" content="/aspnet/core/breadcrumb/toc.json" />
+	
+		<meta name="feedback_system" content="OpenSource" />
+	
+		<meta name="feedback_product_url" content="https://github.com/dotnet/aspnetcore/blob/main/CONTRIBUTING.md" />
+	
+		<meta name="ms.service" content="aspnet-core" />
+	
+		<meta name="ms.topic" content="conceptual" />
+	
+		<meta name="ms.subservice" content="blazor" />
+	
+		<meta name="author" content="guardrex" />
+	
+		<meta name="monikerRange" content="&gt;= aspnetcore-3.1" />
+	
+		<meta name="ms.author" content="wpickett" />
+	
+		<meta name="ms.custom" content="mvc" />
+	
+		<meta name="ms.date" content="2024-11-12T00:00:00Z" />
+	
+		<meta name="uid" content="blazor/hosting-models" />
+	
+		<meta name="document_id" content="542f38c4-1502-f739-372a-80c86c377491" />
+	
+		<meta name="document_version_independent_id" content="72c2a844-ffb2-4799-2c7a-a7a73d3b6833" />
+	
+		<meta name="updated_at" content="2025-07-30T11:33:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/dotnet/AspNetCore.Docs/blob/live/aspnetcore/blazor/hosting-models.md" />
+	
+		<meta name="gitcommit" content="https://github.com/dotnet/AspNetCore.Docs/blob/879a03201958c8aea52cdfa611a1272865b09707/aspnetcore/blazor/hosting-models.md" />
+	
+		<meta name="git_commit_id" content="879a03201958c8aea52cdfa611a1272865b09707" />
+	
+		<meta name="monikers" content="aspnetcore-3.1" />
+	
+		<meta name="monikers" content="aspnetcore-5.0" />
+	
+		<meta name="monikers" content="aspnetcore-6.0" />
+	
+		<meta name="monikers" content="aspnetcore-7.0" />
+	
+		<meta name="monikers" content="aspnetcore-8.0" />
+	
+		<meta name="monikers" content="aspnetcore-9.0" />
+	
+		<meta name="monikers" content="aspnetcore-10.0" />
+	
+		<meta name="default_moniker" content="aspnetcore-9.0" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="MSDN.aspnet-core-conceptual" />
+	
+		<meta name="schema" content="Conceptual" />
+	
+		<meta name="toc_rel" content="../toc.json" />
+	
+		<meta name="pdf_url_template" content="https://learn.microsoft.com/pdfstore/en-us/MSDN.aspnet-core-conceptual/{branchName}{pdfName}" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="word_count" content="3946" />
+	
+		<meta name="config_moniker_range" content="&gt;= aspnetcore-1.0" />
+	
+		<meta name="asset_id" content="blazor/hosting-models" />
+	
+		<meta name="moniker_range_name" content="dd7b9de2e2e080a77b76aef7078b3e55" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="aspnetcore/blazor/hosting-models.md" />
+	
+		<meta name="previous_tlsh_hash" content="B132E4B2850CD32AF9E34E16D8171ED021F0E0CC5AEDB7C4152993B6D94A2F5A0D6A47BB9333768423B8173111CAAFCE26C2F72F512827A719543429C39E299176E837F1F5" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/blazor/hosting-models.md" />
+	 
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/06819054-3d1b-4589-8746-b33c4dc1ebf2" data-source="generated" />
+	
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/7696cda6-0510-47f6-8302-71bb5d2e28cf" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/ae0d1d73-8b86-4e29-9ab4-867b4f9f6186" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/69c76c32-967e-4c65-b89a-74cc527db725" data-source="generated" />
+	
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="https://learn.microsoft.com/static/assets/0.4.03137.7032-e8b681c0/styles/site-ltr.css" />
+			<link rel="preconnect" href="http://mscom.demdex.net/" crossorigin />
+						<link rel="dns-prefetch" href="http://target.microsoft.com/" />
+						<link rel="dns-prefetch" href="http://microsoftmscompoc.tt.omtrdc.net/" />
+						<link
+							rel="preload"
+							as="script"
+							href="https://learn.microsoft.com/static/third-party/adobe-target/at-js/2.9.0/at.js"
+							integrity="sha384-1/viVM50hgc33O2gOgkWz3EjiD/Fy/ld1dKYXJRUyjNYVEjSUGcSN+iPiQF7e4cu"
+							crossorigin="anonymous"
+							id="adobe-target-script"
+							type="application/javascript"
+						/>
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			<script src="https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/deprecation.js"></script>
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Conceptual",
+    "brand": "",
+    "context": {},
+    "standardFeedback": false,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "OpenSource",
+    "feedbackGitHubRepo": "dotnet/AspNetCore.Docs",
+    "feedbackProductUrl": "https://github.com/dotnet/aspnetcore/blob/main/CONTRIBUTING.md",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": true,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": true,
+    "contributors": [
+      {
+        "name": "guardrex",
+        "url": "https://github.com/guardrex"
+      },
+      {
+        "name": "Copilot",
+        "url": "https://github.com/Copilot"
+      },
+      {
+        "name": "Rick-Anderson",
+        "url": "https://github.com/Rick-Anderson"
+      },
+      {
+        "name": "achingono",
+        "url": "https://github.com/achingono"
+      },
+      {
+        "name": "hjoab",
+        "url": "https://github.com/hjoab"
+      },
+      {
+        "name": "danroth27",
+        "url": "https://github.com/danroth27"
+      },
+      {
+        "name": "BhargaviAnnadevara",
+        "url": "https://github.com/BhargaviAnnadevara"
+      },
+      {
+        "name": "pranavkm",
+        "url": "https://github.com/pranavkm"
+      },
+      {
+        "name": "BrennanConroy",
+        "url": "https://github.com/BrennanConroy"
+      },
+      {
+        "name": "dev-masih",
+        "url": "https://github.com/dev-masih"
+      },
+      {
+        "name": "isaacrlevin",
+        "url": "https://github.com/isaacrlevin"
+      },
+      {
+        "name": "erwindevreugd",
+        "url": "https://github.com/erwindevreugd"
+      },
+      {
+        "name": "britebit",
+        "url": "https://github.com/britebit"
+      },
+      {
+        "name": "v-thepet",
+        "url": "https://github.com/v-thepet"
+      },
+      {
+        "name": "ajaybhargavb",
+        "url": "https://github.com/ajaybhargavb"
+      }
+    ],
+    "openSourceFeedbackIssueUrl": "https://github.com/dotnet/aspnetcore.docs/issues/new?template=customer-feedback.yml",
+    "openSourceFeedbackIssueTitle": "",
+    "openSourceFeedbackIssueLabels": "Source - Docs.ms,:watch: Not Triaged"
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script src="https://learn.microsoft.com/static/assets/0.4.03137.7032-e8b681c0/scripts/en-us/index-docs.js"></script>
+			
+
+			<!-- json-ld -->
+			
+		</head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+		<a
+			href="#"
+			data-skip-to-ask-learn
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			hidden
+		>
+			Skip to Ask Learn chat experience
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881"
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<header
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				role="banner"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+				></div>
+			</header>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 <section
+					id="layout-body-menu"
+					class="layout-body-menu display-flex"
+					data-bi-name="menu"
+			  >
+					<div
+		id="left-container"
+		class="left-container display-none display-block-tablet padding-inline-sm padding-bottom-sm width-full"
+	>
+		<nav
+			id="affixed-left-container"
+			class="margin-top-sm-tablet position-sticky display-flex flex-direction-column"
+			aria-label="Primary"
+		></nav>
+	</div>
+			  </section>
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main "
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div
+		id="ms--content-header"
+		class="content-header default-focus border-bottom-none"
+		data-bi-name="content-header"
+	>
+		<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+			<button
+				type="button"
+				class="contents-button button button-sm margin-right-xxs"
+				data-bi-name="contents-expand"
+				aria-haspopup="true"
+				data-contents-button
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-menu"></span></span>
+				<span class="contents-expand-title"> Table of contents </span>
+			</button>
+			<button
+				type="button"
+				class="ap-collapse-behavior ap-expanded button button-sm"
+				data-bi-name="ap-collapse"
+				aria-controls="action-panel"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit editor mode</span>
+			</button>
+		</div>
+	</div>
+			<div data-main-column class="padding-sm padding-top-none padding-top-sm-tablet">
+				<div>
+					
+		<div id="article-header" class="background-color-body margin-bottom-xs display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content padding-none"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs	border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	 
+		<button
+			type="button"
+			id="ms--focus-mode-button"
+			data-focus-mode
+			data-bi-name="focus-mode-entry"
+			class="button button-sm flex-shrink-0 margin-right-xxs display-none display-inline-flex-desktop"
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-glasses"></span>
+			</span>
+			<span>Focus mode</span>
+		</button>
+	 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					
+		<button
+			data-page-action-item="overflow-mobile"
+			type="button"
+			class="button-block button-sm has-inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
+			data-bi-name="contents-expand"
+			data-contents-button
+			data-popover-close
+		>
+			<span class="icon">
+				<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+			</span>
+			<span class="contents-expand-title">Table of contents</span>
+		</button>
+	 
+		<a
+			id="lang-link-overflow"
+			class="button-sm has-inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	 
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	
+					
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to plan</span>
+		</button>
+	  
+		<a
+			data-contenteditbtn
+			class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none"
+			data-bi-name="edit"
+			
+			href="https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/blazor/hosting-models.md"
+			data-original_content_git_url="https://github.com/dotnet/AspNetCore.Docs/blob/live/aspnetcore/blazor/hosting-models.md"
+			data-original_content_git_url_template="{repo}/blob/{branch}/aspnetcore/blazor/hosting-models.md"
+			data-pr_repo=""
+			data-pr_branch=""
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-edit-outline"></span>
+			</span>
+			<span>Edit</span>
+		</a>
+	
+					
+		<hr class="margin-block-xxs" />
+		<h4 class="font-size-sm padding-left-xxs">Share via</h4>
+		
+					<a
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-facebook"
+						data-bi-name="facebook"
+						data-page-action-item="overflow-all"
+						href="#"
+					>
+						<span class="icon color-primary" aria-hidden="true">
+							<span class="docon docon-facebook-share"></span>
+						</span>
+						<span>Facebook</span>
+					</a>
+
+					<a
+						href="#"
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-twitter"
+						data-bi-name="twitter"
+						data-page-action-item="overflow-all"
+					>
+						<span class="icon color-text" aria-hidden="true">
+							<span class="docon docon-xlogo-share"></span>
+						</span>
+						<span>x.com</span>
+					</a>
+
+					<a
+						href="#"
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-linkedin"
+						data-bi-name="linkedin"
+						data-page-action-item="overflow-all"
+					>
+						<span class="icon color-primary" aria-hidden="true">
+							<span class="docon docon-linked-in-logo"></span>
+						</span>
+						<span>LinkedIn</span>
+					</a>
+					<a
+						href="#"
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-email"
+						data-bi-name="email"
+						data-page-action-item="overflow-all"
+					>
+						<span class="icon color-primary" aria-hidden="true">
+							<span class="docon docon-mail-message"></span>
+						</span>
+						<span>Email</span>
+					</a>
+			  
+	 
+		<hr class="margin-block-xxs" />
+		<button
+			class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			type="button"
+			data-bi-name="print"
+			data-page-action-item="overflow-all"
+			data-popover-close
+			data-print-page
+			data-check-hidden="true"
+		>
+			<span class="icon color-primary" aria-hidden="true">
+				<span class="docon docon-print"></span>
+			</span>
+			<span>Print</span>
+		</button>
+	
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	
+					<!-- azure disclaimer -->
+					
+					<!-- privateUnauthorizedTemplate is hidden by default -->
+					
+		<div unauthorized-private-section data-bi-name="permission-content-unauthorized-private" hidden>
+			<hr class="hr margin-top-xs margin-bottom-sm" />
+			<div class="notification notification-info">
+				<div class="notification-content">
+					<p class="margin-top-none notification-title">
+						<span class="icon">
+							<span class="docon docon-exclamation-circle-solid" aria-hidden="true"></span>
+						</span>
+						<span>Note</span>
+					</p>
+					<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" href="#" data-bi-name="permission-content-sign-in">signing in</a> or <a  class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+					<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+					<div class="content"><h1 id="aspnet-core-blazor-hosting-models">ASP.NET Core Blazor hosting models</h1></div>
+					
+		<div
+			id="article-metadata"
+			class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap"
+		>
+			
+		<div class="margin-block-xxs">
+			<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+				  <li class="visibility-hidden-visual-diff">
+			<local-time
+				format="twoDigitNumeric"
+				datetime="2024-11-12T08:00:00.000Z"
+				data-article-date-source="calculated"
+				class="is-invisible"
+			>
+				2024-11-12
+			</local-time>
+		</li>  
+			</ul>
+		</div>
+	 
+				<div
+					id="user-feedback"
+					class="margin-block-xxs display-none display-none-print"
+					hidden
+					data-hide-on-archived
+				>
+					
+		<button
+			id="user-feedback-button"
+			data-test-id="conceptual-feedback-button"
+			class="button button-sm button-clear button-primary display-none"
+			type="button"
+			data-bi-name="user-feedback-button"
+			data-user-feedback-button
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-like"></span>
+			</span>
+			<span>Feedback</span>
+		</button>
+	
+				</div>
+		  
+		</div>
+	 
+		<nav
+			id="center-doc-outline"
+			class="doc-outline is-hidden-desktop display-none-print margin-bottom-sm"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">
+				In this article
+			</h2>
+		</nav>
+	
+					<div class="content"><div data-moniker="aspnetcore-3.1 aspnetcore-5.0 aspnetcore-6.0 aspnetcore-7.0 aspnetcore-8.0">
+<div class="NOTE">
+<p>Note</p>
+<p>This isn't the latest version of this article. For the current release, see the <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models?view=aspnetcore-9.0&amp;preserve-view=true" data-linktype="relative-path">.NET 9 version of this article</a>.</p>
+</div>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0 aspnetcore-7.0">
+<div class="WARNING">
+<p>Warning</p>
+<p>This version of ASP.NET Core is no longer supported. For more information, see the <a href="https://dotnet.microsoft.com/platform/support/policy/dotnet-core" data-linktype="external">.NET and .NET Core Support Policy</a>. For the current release, see the <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models?view=aspnetcore-9.0&amp;preserve-view=true" data-linktype="relative-path">.NET 9 version of this article</a>.</p>
+</div>
+</div>
+<div data-moniker="aspnetcore-10.0">
+<div class="IMPORTANT">
+<p>Important</p>
+<p>This information relates to a pre-release product that may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.</p>
+<p>For the current release, see the <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models?view=aspnetcore-9.0&amp;preserve-view=true" data-linktype="relative-path">.NET 9 version of this article</a>.</p>
+</div>
+</div>
+<!--
+Include either this file or 'not-latest-version-without-not-supported-content.md' at the top 
+of articles.
+
+'not-latest-version.md' (this file): Includes not-supported content.
+'not-latest-version-without-not-supported-content.md': Doesn't include not-supported content.
+
+Use this file in articles that target >=7.0. For articles that target >=8.0 prior to 9.0
+reaching EOL, 'not-latest-version-without-not-supported-content.md' must be used to avoid
+a zone/file moniker range mismatch error.
+
+When a new version is released, it might be necessary to temporarily comment out the current 
+version moniker range section until the new moniker is created.
+
+Markdown to include this file:
+
+[!INCLUDE[](~/includes/not-latest-version.md)]
+-->
+<!-- 
+
+NOTE: Daggered lines under the table (&dagger;, &Dagger;) use a double-space at the ends of lines to generate a bare return across rendered lines.
+
+-->
+<div data-moniker="aspnetcore-10.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>This article explains Blazor hosting models, primarily focused on Blazor Server and Blazor WebAssembly apps in versions of .NET earlier than .NET 8. The guidance in this article is relevant under all .NET releases for Blazor Hybrid apps that run on native mobile and desktop platforms. Blazor Web Apps in .NET 8 or later are better conceptualized by how Razor components are rendered, which is described as their <em>render mode</em>. Render modes are briefly touched on in the <em>Fundamentals</em> overview article and covered in detail in <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-9.0" data-linktype="relative-path">ASP.NET Core Blazor render modes</a> of the <em>Components</em> node.</p>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0 aspnetcore-6.0 aspnetcore-7.0">
+<p>This article explains Blazor hosting models and how to choose which one to use.</p>
+</div>
+<div data-moniker="aspnetcore-10.0 aspnetcore-6.0 aspnetcore-7.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>Blazor is a web framework for building web UI components (<a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-9.0" data-linktype="relative-path">Razor components</a>) that can be hosted in different ways. Razor components can run server-side in ASP.NET Core (<em>Blazor Server</em>) versus client-side in the browser on a <a href="https://webassembly.org/" data-linktype="external">WebAssembly</a>-based .NET runtime (<em>Blazor WebAssembly</em>, <em>Blazor WASM</em>). You can also host Razor components in native mobile and desktop apps that render to an embedded Web View control (<em>Blazor Hybrid</em>). Regardless of the hosting model, the way you build Razor components <em>is the same</em>. The same Razor components can be used with any of the hosting models unchanged.</p>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0">
+<p>Blazor is a web framework for building web UI components (<a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-9.0" data-linktype="relative-path">Razor components</a>) that can be hosted in different ways. Razor components can run server-side in ASP.NET Core (<em>Blazor Server</em>) versus client-side in the browser on a <a href="https://webassembly.org/" data-linktype="external">WebAssembly</a>-based .NET runtime (<em>Blazor WebAssembly</em>, <em>Blazor WASM</em>). Regardless of the hosting model, the way you build Razor components <em>is the same</em>. The same Razor components can be used with any of the hosting models unchanged.</p>
+</div>
+<h2 id="blazor-server">Blazor Server</h2>
+<p>With the Blazor Server hosting model, components are executed on the server from within an ASP.NET Core app. UI updates, event handling, and JavaScript calls are handled over a <a href="../signalr/introduction553c.html?view=aspnetcore-9.0" data-linktype="relative-path">SignalR</a> connection using the <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/websockets?view=aspnetcore-9.0" data-linktype="relative-path">WebSockets protocol</a>. The state on the server associated with each connected client is called a <em>circuit</em>. Circuits aren't tied to a specific network connection and can tolerate temporary network interruptions and attempts by the client to reconnect to the server when the connection is lost.</p>
+<p>In a traditional server-rendered app, opening the same app in multiple browser screens (tabs or <code>iframes</code>) typically doesn't translate into additional resource demands on the server. For the Blazor Server hosting model, each browser screen requires a separate circuit and separate instances of server-managed component state. Blazor considers closing a browser tab or navigating to an external URL a <em>graceful</em> termination. In the event of a graceful termination, the circuit and associated resources are immediately released. A client may also disconnect non-gracefully, for instance due to a network interruption. Blazor Server stores disconnected circuits for a configurable interval to allow the client to reconnect.</p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models/_static/blazor-server.png?view=aspnetcore-9.0" alt="The browser interacts with Blazor (hosted inside of an ASP.NET Core app) on the server over a SignalR connection." data-linktype="relative-path"></p>
+<div data-moniker="aspnetcore-10.0">
+<p>On the client, the Blazor script establishes the SignalR connection with the server. The script is served as a static web asset with automatic compression and <a href="https://developer.mozilla.org/docs/Glossary/Fingerprinting" data-linktype="external">fingerprinting</a>.</p>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0 aspnetcore-6.0 aspnetcore-7.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>On the client, the Blazor script establishes the SignalR connection with the server. The script is served from an embedded resource in the ASP.NET Core shared framework.</p>
+</div>
+<p>The Blazor Server hosting model offers several benefits:</p>
+<ul>
+<li>Download size is significantly smaller than when the Blazor WebAssembly hosting model is used, and the app loads much faster.</li>
+<li>The app takes full advantage of server capabilities, including the use of .NET APIs.</li>
+<li>.NET on the server is used to run the app, so existing .NET tooling, such as debugging, works as expected.</li>
+<li>Thin clients are supported. For example, Blazor Server works with browsers that don't support WebAssembly and on resource-constrained devices.</li>
+<li>The app's .NET/C# code base, including the app's component code, isn't served to clients.</li>
+</ul>
+<p>The Blazor Server hosting model has the following limitations:</p>
+<ul>
+<li>Higher latency usually exists. Every user interaction involves a network hop.</li>
+<li>There's no offline support. If the client connection fails, interactivity fails.</li>
+<li>Scaling apps with many users requires server resources to handle multiple client connections and client state.</li>
+<li>An ASP.NET Core server is required to serve the app. Serverless deployment scenarios aren't possible, such as serving the app from a Content Delivery Network (CDN).</li>
+</ul>
+<p>We recommend using the <a href="https://learn.microsoft.com/en-us/azure/azure-signalr" data-linktype="absolute-path">Azure SignalR Service</a> for apps that adopt the Blazor Server hosting model. The service allows for scaling up a Blazor Server app to a large number of concurrent SignalR connections.</p>
+<h2 id="blazor-webassembly">Blazor WebAssembly</h2>
+<p>The Blazor WebAssembly hosting model runs components client-side in the browser on a WebAssembly-based .NET runtime. Razor components, their dependencies, and the .NET runtime are downloaded to the browser. Components are executed directly on the browser UI thread. UI updates and event handling occur within the same process. Assets are deployed as static files to a web server or service capable of serving static content to clients.</p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models/_static/blazor-webassembly.png?view=aspnetcore-9.0" alt="Blazor WebAssembly: Blazor runs on a UI thread inside the browser." data-linktype="relative-path"></p>
+<div data-moniker="aspnetcore-10.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>Blazor Web Apps can use the Blazor WebAssembly hosting model to enable client-side interactivity. When an app is created that exclusively runs on the Blazor WebAssembly hosting model without server-side rendering and interactivity, the app is called a <em>standalone</em> Blazor WebAssembly app.</p>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0 aspnetcore-6.0 aspnetcore-7.0">
+<p>When the Blazor WebAssembly app is created for deployment without a backend ASP.NET Core app to serve its files, the app is called a <em>standalone</em> Blazor WebAssembly app.</p>
+<p>When a standalone Blazor WebAssembly app uses a backend ASP.NET Core app to serve its files, the app is called a <em>hosted</em> Blazor WebAssembly app. Using hosted Blazor WebAssembly, you get a full-stack web development experience with .NET, including the ability to share code between the client and server apps, support for prerendering, and integration with MVC and Razor Pages. A hosted client app can interact with its backend server app over the network using a variety of messaging frameworks and protocols, such as <a href="https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-9.0" data-linktype="relative-path">web API</a>, <a href="../grpc/index553c.html?view=aspnetcore-9.0" data-linktype="relative-path">gRPC-web</a>, and <a href="../signalr/introduction553c.html?view=aspnetcore-9.0" data-linktype="relative-path">SignalR</a> (<a href="tutorials/signalr-blazor553c.html?view=aspnetcore-9.0" data-linktype="relative-path">Use ASP.NET Core SignalR with Blazor</a>).</p>
+</div>
+<div data-moniker="aspnetcore-10.0 aspnetcore-6.0 aspnetcore-7.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>A Blazor WebAssembly app built as a <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/progressive-web-app/?view=aspnetcore-9.0" data-linktype="relative-path">Progressive Web App (PWA)</a> uses modern browser APIs to enable many of the capabilities of a native client app, such as working offline, running in its own app window, launching from the host's operating system, receiving push notifications, and automatically updating in the background.</p>
+</div>
+<p>The Blazor script handles:</p>
+<ul>
+<li>Downloading the .NET runtime, Razor components, and dependencies.</li>
+<li>Runtime initialization.</li>
+</ul>
+<p>The size of the published app, its <em>payload size</em>, is a critical performance factor for an app's usability. A large app takes a relatively long time to download to a browser, which diminishes the user experience. Blazor WebAssembly optimizes payload size to reduce download times:</p>
+<ul>
+<li>Unused code is stripped out of the app when it's published by the <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/configure-trimmer?view=aspnetcore-9.0" data-linktype="relative-path">Intermediate Language (IL) Trimmer</a>.</li>
+<li>HTTP responses are compressed.</li>
+<li>The .NET runtime and assemblies are cached in the browser.</li>
+</ul>
+<p>The Blazor WebAssembly hosting model offers several benefits:</p>
+<ul>
+<li>For standalone Blazor WebAssembly apps, there's no .NET server-side dependency after the app is downloaded from the server, so the app remains functional if the server goes offline.</li>
+<li>Client resources and capabilities are fully leveraged.</li>
+<li>Work is offloaded from the server to the client.</li>
+<li>For standalone Blazor WebAssembly apps, an ASP.NET Core web server isn't required to host the app. Serverless deployment scenarios are possible, such as serving the app from a Content Delivery Network (CDN).</li>
+</ul>
+<p>The Blazor WebAssembly hosting model has the following limitations:</p>
+<ul>
+<li>Razor components are restricted to the capabilities of the browser.</li>
+<li>Capable client hardware and software (for example, WebAssembly support) is required.</li>
+<li>Download size is larger, and components take longer to load.</li>
+<li>Code sent to the client can't be protected from inspection and tampering by users.</li>
+</ul>
+<div data-moniker="aspnetcore-10.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>The .NET <a href="https://learn.microsoft.com/en-us/dotnet/standard/glossary#il" data-linktype="absolute-path">Intermediate Language (IL)</a> interpreter includes partial <a href="https://learn.microsoft.com/en-us/dotnet/standard/glossary#jit" data-linktype="absolute-path">just-in-time (JIT)</a> runtime support to achieve improved runtime performance. The JIT interpreter optimizes execution of interpreter bytecodes by replacing them with tiny blobs of WebAssembly code. The JIT interpreter is automatically enabled for Blazor WebAssembly apps except when debugging.</p>
+</div>
+<div data-moniker="aspnetcore-10.0 aspnetcore-6.0 aspnetcore-7.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>Blazor supports ahead-of-time (AOT) compilation, where you can compile your .NET code directly into WebAssembly. AOT compilation results in runtime performance improvements at the expense of a larger app size. For more information, see <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-9.0#ahead-of-time-aot-compilation" data-linktype="relative-path">ASP.NET Core Blazor WebAssembly build tools and ahead-of-time (AOT) compilation</a>.</p>
+<p>The same <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-9.0" data-linktype="relative-path">.NET WebAssembly build tools</a> used for AOT compilation also <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-9.0#runtime-relinking" data-linktype="relative-path">relink the .NET WebAssembly runtime</a> to trim unused runtime code. Blazor also trims unused code from .NET framework libraries. The .NET compiler further precompresses a standalone Blazor WebAssembly app for a smaller app payload.</p>
+<p>WebAssembly-rendered Razor components can use <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-native-dependencies?view=aspnetcore-9.0" data-linktype="relative-path">native dependencies</a> built to run on WebAssembly.</p>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0">
+<p>Blazor WebAssembly includes support for trimming unused code from .NET libraries. For more information, see <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?view=aspnetcore-9.0" data-linktype="relative-path">ASP.NET Core Blazor globalization and localization</a>.</p>
+</div>
+<div data-moniker="aspnetcore-10.0 aspnetcore-6.0 aspnetcore-7.0 aspnetcore-8.0 aspnetcore-9.0">
+<h2 id="blazor-hybrid">Blazor Hybrid</h2>
+<p>Blazor can also be used to build native client apps using a hybrid approach. Hybrid apps are native apps that leverage web technologies for their functionality. In a Blazor Hybrid app, Razor components run directly in the native app (not on WebAssembly) along with any other .NET code and render web UI based on HTML and CSS to an embedded Web View control through a local interop channel.</p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models/_static/hybrid-apps-1.png?view=aspnetcore-9.0" alt="Hybrid apps with .NET and Blazor render UI in a Web View control, where the HTML DOM interacts with Blazor and .NET of the native desktop or mobile app." data-linktype="relative-path"></p>
+<p>Blazor Hybrid apps can be built using different .NET native app frameworks, including .NET MAUI, WPF, and Windows Forms. Blazor provides <code>BlazorWebView</code> controls for adding Razor components to apps built with these frameworks. Using Blazor with .NET MAUI offers a convenient way to build cross-platform Blazor Hybrid apps for mobile and desktop, while Blazor integration with WPF and Windows Forms can be a great way to modernize existing apps.</p>
+<p>Because Blazor Hybrid apps are native apps, they can support functionality that isn't available with only the web platform. Blazor Hybrid apps have full access to native platform capabilities through normal .NET APIs. Blazor Hybrid apps can also share and reuse components with existing Blazor Server or Blazor WebAssembly apps. Blazor Hybrid apps combine the benefits of the web, native apps, and the .NET platform.</p>
+<p>The Blazor Hybrid hosting model offers several benefits:</p>
+<ul>
+<li>Reuse existing components that can be shared across mobile, desktop, and web.</li>
+<li>Leverage web development skills, experience, and resources.</li>
+<li>Apps have full access to the native capabilities of the device.</li>
+</ul>
+<p>The Blazor Hybrid hosting model has the following limitations:</p>
+<ul>
+<li>Separate native client apps must be built, deployed, and maintained for each target platform.</li>
+<li>Native client apps usually take longer to find, download, and install over accessing a web app in a browser.</li>
+</ul>
+<p>For more information, see <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/?view=aspnetcore-9.0" data-linktype="relative-path">ASP.NET Core Blazor Hybrid</a>.</p>
+<p>For more information on Microsoft native client frameworks, see the following resources:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui" data-linktype="absolute-path">.NET Multi-platform App UI (.NET MAUI)</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/" data-linktype="absolute-path">Windows Presentation Foundation (WPF)</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/desktop/winforms/overview/" data-linktype="absolute-path">Windows Forms</a></li>
+</ul>
+</div>
+<h2 id="which-blazor-hosting-model-should-i-choose">Which Blazor hosting model should I choose?</h2>
+<div data-moniker="aspnetcore-10.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>A component's hosting model is set by its <em>render mode</em>, either at compile time or runtime, which is described with examples in <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-9.0" data-linktype="relative-path">ASP.NET Core Blazor render modes</a>. The following table shows the primary considerations for setting the render mode to determine a component's hosting model. For standalone Blazor WebAssembly apps, all of the app's components are rendered on the client with the Blazor WebAssembly hosting model.</p>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0 aspnetcore-6.0 aspnetcore-7.0">
+<p>Select the Blazor hosting model based on the app's feature requirements. The following table shows the primary considerations for selecting the hosting model.</p>
+</div>
+<div data-moniker="aspnetcore-10.0 aspnetcore-6.0 aspnetcore-7.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>Blazor Hybrid apps include .NET MAUI, WPF, and Windows Forms framework apps.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: center;">Blazor Server</th>
+<th style="text-align: center;">Blazor WebAssembly (WASM)</th>
+<th style="text-align: center;">Blazor Hybrid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#complete-net-api-compatibility" data-linktype="self-bookmark">Complete .NET API compatibility</a></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+</tr>
+<tr>
+<td><a href="#direct-access-to-server-and-network-resources" data-linktype="self-bookmark">Direct access to server and network resources</a></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span>†</td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span>†</td>
+</tr>
+<tr>
+<td><a href="#small-payload-size-with-fast-initial-load-time" data-linktype="self-bookmark">Small payload size with fast initial load time</a></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span></td>
+</tr>
+<tr>
+<td><a href="#near-native-execution-speed" data-linktype="self-bookmark">Near native execution speed</a></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span>‡</td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+</tr>
+<tr>
+<td><a href="#app-code-secure-and-private-on-the-server" data-linktype="self-bookmark">App code secure and private on the server</a></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span>†</td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span>†</td>
+</tr>
+<tr>
+<td><a href="#run-apps-offline-once-downloaded" data-linktype="self-bookmark">Run apps offline once downloaded</a></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+</tr>
+<tr>
+<td><a href="#static-site-hosting" data-linktype="self-bookmark">Static site hosting</a></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span></td>
+</tr>
+<tr>
+<td><a href="#offloads-processing-to-clients" data-linktype="self-bookmark">Offloads processing to clients</a></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+</tr>
+<tr>
+<td><a href="#full-access-to-native-client-capabilities" data-linktype="self-bookmark">Full access to native client capabilities</a></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+</tr>
+<tr>
+<td><a href="#web-based-deployment" data-linktype="self-bookmark">Web-based deployment</a></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span></td>
+</tr>
+</tbody>
+</table>
+<p>†Blazor WebAssembly and Blazor Hybrid apps can use server-based APIs to access server/network resources and access private and secure app code.<br>
+‡Blazor WebAssembly only reaches near-native performance with <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-9.0#ahead-of-time-aot-compilation" data-linktype="relative-path">ahead-of-time (AOT) compilation</a>.</p>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0">
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: center;">Blazor Server</th>
+<th style="text-align: center;">Blazor WebAssembly (WASM)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#complete-net-api-compatibility" data-linktype="self-bookmark">Complete .NET API compatibility</a></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span></td>
+</tr>
+<tr>
+<td><a href="#direct-access-to-server-and-network-resources" data-linktype="self-bookmark">Direct access to server and network resources</a></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span>†</td>
+</tr>
+<tr>
+<td><a href="#small-payload-size-with-fast-initial-load-time" data-linktype="self-bookmark">Small payload size with fast initial load time</a></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span></td>
+</tr>
+<tr>
+<td><a href="#app-code-secure-and-private-on-the-server" data-linktype="self-bookmark">App code secure and private on the server</a></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span>†</td>
+</tr>
+<tr>
+<td><a href="#run-apps-offline-once-downloaded" data-linktype="self-bookmark">Run apps offline once downloaded</a></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+</tr>
+<tr>
+<td><a href="#static-site-hosting" data-linktype="self-bookmark">Static site hosting</a></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+</tr>
+<tr>
+<td><a href="#offloads-processing-to-clients" data-linktype="self-bookmark">Offloads processing to clients</a></td>
+<td style="text-align: center;"><span aria-hidden="true">❌</span><span class="visually-hidden">Not supported</span></td>
+<td style="text-align: center;"><span aria-hidden="true">✔️</span><span class="visually-hidden">Supported</span></td>
+</tr>
+</tbody>
+</table>
+<p>†Blazor WebAssembly apps can use server-based APIs to access server/network resources and access private and secure app code.</p>
+</div>
+<p>After you choose the app's hosting model, you can generate a Blazor Server or Blazor WebAssembly app from a Blazor project template. For more information, see <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0#blazor-template-options" data-linktype="relative-path">Tooling for ASP.NET Core Blazor</a>.</p>
+<div data-moniker="aspnetcore-10.0 aspnetcore-6.0 aspnetcore-7.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>To create a Blazor Hybrid app, see the articles under <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/?view=aspnetcore-9.0" data-linktype="relative-path">ASP.NET Core Blazor Hybrid tutorials</a>.</p>
+</div>
+<h3 id="complete-net-api-compatibility">Complete .NET API compatibility</h3>
+<div data-moniker="aspnetcore-10.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>Components rendered for the Blazor Server hosting model and Blazor Hybrid apps have complete .NET API compatibility, while components rendered for Blazor WebAssembly are limited to a <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/?view=aspnetcore-9.0#subset-of-net-apis-for-blazor-webassembly-apps" data-linktype="relative-path">subset of .NET APIs</a>. When an app's specification requires one or more .NET APIs that are unavailable to WebAssembly-rendered components, then choose to render components for Blazor Server or use Blazor Hybrid.</p>
+</div>
+<div data-moniker="aspnetcore-6.0 aspnetcore-7.0">
+<p>Blazor Server and Blazor Hybrid apps have complete .NET API compatibility, while Blazor WebAssembly apps are limited to a subset of .NET APIs. When an app's specification requires one or more .NET APIs that are unavailable to Blazor WebAssembly apps, then choose Blazor Server or Blazor Hybrid.</p>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0">
+<p>Blazor Server apps have complete .NET API compatibility, while Blazor WebAssembly apps are limited to a subset of .NET APIs. When an app's specification requires one or more .NET APIs that are unavailable to Blazor WebAssembly apps, then choose Blazor Server.</p>
+</div>
+<h3 id="direct-access-to-server-and-network-resources">Direct access to server and network resources</h3>
+<div data-moniker="aspnetcore-10.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>Components rendered for the Blazor Server hosting model have direct access to server and network resources where the app is executing. Because components hosted using Blazor WebAssembly or Blazor Hybrid execute on a client, they don't have direct access to server and network resources. Components can access server and network resources <em>indirectly</em> via protected server-based APIs. Server-based APIs might be available via third-party libraries, packages, and services. Take into account the following considerations:</p>
+<ul>
+<li>Third-party libraries, packages, and services might be costly to implement and maintain, weakly supported, or introduce security risks.</li>
+<li>If one or more server-based APIs are developed internally by your organization, additional resources are required to build and maintain them.</li>
+</ul>
+<p>Use the Blazor Server hosting model to avoid the need to expose APIs from the server environment.</p>
+</div>
+<div data-moniker="aspnetcore-6.0 aspnetcore-7.0">
+<p>Blazor Server apps have direct access to server and network resources where the app is executing. Because Blazor WebAssembly and Blazor Hybrid apps execute on a client, they don't have direct access to server and network resources. Blazor WebAssembly and Blazor Hybrid apps can access server and network resources <em>indirectly</em> via protected server-based APIs. Server-based APIs might be available via third-party libraries, packages, and services. Take into account the following considerations:</p>
+<ul>
+<li>Third-party libraries, packages, and services might be costly to implement and maintain, weakly supported, or introduce security risks.</li>
+<li>If one or more server-based APIs are developed internally by your organization, additional resources are required to build and maintain them.</li>
+</ul>
+<p>To avoid server-based APIs for Blazor WebAssembly or Blazor Hybrid apps, adopt Blazor Server, which can access server and network resources directly.</p>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0">
+<p>Blazor Server apps have direct access to server and network resources where the app is executing. Because Blazor WebAssembly apps execute on a client, they don't have direct access to server and network resources. Blazor WebAssembly apps can access server and network resources <em>indirectly</em> via protected server-based APIs. Server-based APIs might be available via third-party libraries, packages, and services. Take into account the following considerations:</p>
+<ul>
+<li>Third-party libraries, packages, and services might be costly to implement and maintain, weakly supported, or introduce security risks.</li>
+<li>If one or more server-based APIs are developed internally by your organization, additional resources are required to build and maintain them.</li>
+</ul>
+<p>To avoid server-based APIs for Blazor WebAssembly apps, adopt Blazor Server, which can access server and network resources directly.</p>
+</div>
+<h3 id="small-payload-size-with-fast-initial-load-time">Small payload size with fast initial load time</h3>
+<div data-moniker="aspnetcore-10.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>Rendering components from the server reduces the app payload size and improves initial load times. When a fast initial load time is desired, use the Blazor Server hosting model or consider static server-side rendering.</p>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0 aspnetcore-6.0 aspnetcore-7.0">
+<p>Blazor Server apps have relatively small payload sizes with faster initial load times. When a fast initial load time is desired, adopt Blazor Server.</p>
+</div>
+<h3 id="near-native-execution-speed">Near native execution speed</h3>
+<div data-moniker="aspnetcore-10.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>Blazor Hybrid apps run using the .NET runtime natively on the target platform, which offers the best possible speed.</p>
+<p>Components rendered for the Blazor WebAssembly hosting model, including Progressive Web Apps (PWAs), and standalone Blazor WebAssembly apps run using the .NET runtime for WebAssembly, which is slower than running directly on the platform. Consider using <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-9.0#ahead-of-time-aot-compilation" data-linktype="relative-path">ahead-of-time (AOT) compiled</a> to improve runtime performance when using Blazor WebAssembly.</p>
+</div>
+<div data-moniker="aspnetcore-6.0 aspnetcore-7.0">
+<p>Blazor Hybrid apps run using the .NET runtime natively on the target platform, which offers the best possible speed.</p>
+<p>Blazor WebAssembly, including Progressive Web Apps (PWAs), apps run using the .NET runtime for WebAssembly, which is slower than running directly on the platform, even for apps that are <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-9.0#ahead-of-time-aot-compilation" data-linktype="relative-path">ahead-of-time (AOT) compiled</a> for WebAssembly in the browser.</p>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0">
+<p>Blazor Server apps generally execute on the server quickly.</p>
+<p>Blazor WebAssembly apps run using the .NET runtime for WebAssembly, which is slower than running directly on the platform.</p>
+</div>
+<h3 id="app-code-secure-and-private-on-the-server">App code secure and private on the server</h3>
+<div data-moniker="aspnetcore-10.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>Maintaining app code securely and privately on the server is a built-in feature of components rendered for the Blazor Server hosting model. Components rendered using the Blazor WebAssembly or Blazor Hybrid hosting models can use server-based APIs to access functionality that must be kept private and secure. The considerations for developing and maintaining server-based APIs described in the <a href="#direct-access-to-server-and-network-resources" data-linktype="self-bookmark">Direct access to server and network resources</a> section apply. If the development and maintenance of server-based APIs isn't desirable for maintaining secure and private app code, render components for the Blazor Server hosting model.</p>
+</div>
+<div data-moniker="aspnetcore-6.0 aspnetcore-7.0">
+<p>Maintaining app code securely and privately on the server is a built-in feature of Blazor Server. Blazor WebAssembly and Blazor Hybrid apps can use server-based APIs to access functionality that must be kept private and secure. The considerations for developing and maintaining server-based APIs described in the <a href="#direct-access-to-server-and-network-resources" data-linktype="self-bookmark">Direct access to server and network resources</a> section apply. If the development and maintenance of server-based APIs isn't desirable for maintaining secure and private app code, adopt the Blazor Server hosting model.</p>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0">
+<p>Maintaining app code securely and privately on the server is a built-in feature of Blazor Server. Blazor WebAssembly apps can use server-based APIs to access functionality that must be kept private and secure. The considerations for developing and maintaining server-based APIs described in the <a href="#direct-access-to-server-and-network-resources" data-linktype="self-bookmark">Direct access to server and network resources</a> section apply. If the development and maintenance of server-based APIs isn't desirable for maintaining secure and private app code, adopt the Blazor Server hosting model.</p>
+</div>
+<h3 id="run-apps-offline-once-downloaded">Run apps offline once downloaded</h3>
+<div data-moniker="aspnetcore-10.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>Standalone Blazor WebAssembly apps built as Progressive Web Apps (PWAs) and Blazor Hybrid apps can run offline, which is particularly useful when clients aren't able to connect to the Internet. Components rendered for the Blazor Server hosting model fail to run when the connection to the server is lost. If an app must run offline, standalone Blazor WebAssembly and Blazor Hybrid are the best choices.</p>
+</div>
+<div data-moniker="aspnetcore-6.0 aspnetcore-7.0">
+<p>Blazor WebAssembly apps built as Progressive Web Apps (PWAs) and Blazor Hybrid apps can run offline, which is particularly useful when clients aren't able to connect to the Internet. Blazor Server apps fail to run when the connection to the server is lost. If an app must run offline, Blazor WebAssembly and Blazor Hybrid are the best choices.</p>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0">
+<p>Blazor WebAssembly apps can run offline, which is particularly useful when clients aren't able to connect to the Internet. Blazor Server apps fail to run when the connection to the server is lost. If an app must run offline, Blazor WebAssembly is the best choice.</p>
+</div>
+<h3 id="static-site-hosting">Static site hosting</h3>
+<p>Static site hosting is possible with standalone Blazor WebAssembly apps because they're downloaded to clients as a set of static files. Standalone Blazor WebAssembly apps don't require a server to execute server-side code in order to download and run and can be delivered via a <a href="https://developer.mozilla.org/docs/Glossary/CDN" data-linktype="external">Content Delivery Network (CDN)</a> (for example, <a href="https://azure.microsoft.com/services/cdn/" data-linktype="external">Azure CDN</a>).</p>
+<div data-moniker="aspnetcore-10.0 aspnetcore-6.0 aspnetcore-7.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>Although Blazor Hybrid apps are compiled into one or more self-contained deployment assets, the assets are usually provided to clients through a third-party app store. If static hosting is an app requirement, select standalone Blazor WebAssembly.</p>
+</div>
+<h3 id="offloads-processing-to-clients">Offloads processing to clients</h3>
+<div data-moniker="aspnetcore-6.0 aspnetcore-7.0">
+<p>Components rendered using the Blazor WebAssembly or Blazor Hybrid hosting models execute on clients and thus offload processing to clients. Components rendered for the Blazor Server hosting model execute on a server, so server resource demand typically increases with the number of users and the amount of processing required per user. When it's possible to offload most or all of an app's processing to clients and the app processes a significant amount of data, Blazor WebAssembly or Blazor Hybrid is the best choice.</p>
+</div>
+<div data-moniker="aspnetcore-10.0 aspnetcore-6.0 aspnetcore-7.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>Blazor WebAssembly and Blazor Hybrid apps execute on clients and thus offload processing to clients. Blazor Server apps execute on a server, so server resource demand typically increases with the number of users and the amount of processing required per user. When it's possible to offload most or all of an app's processing to clients and the app processes a significant amount of data, Blazor WebAssembly or Blazor Hybrid is the best choice.</p>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0">
+<p>Blazor WebAssembly apps execute on clients and thus offload processing to clients. Blazor Server apps execute on a server, so server resource demand typically increases with the number of users and the amount of processing required per user. When it's possible to offload most or all of an app's processing to clients and the app processes a significant amount of data, Blazor WebAssembly is the best choice.</p>
+</div>
+<div data-moniker="aspnetcore-10.0 aspnetcore-6.0 aspnetcore-7.0 aspnetcore-8.0 aspnetcore-9.0">
+<h3 id="full-access-to-native-client-capabilities">Full access to native client capabilities</h3>
+<p>Blazor Hybrid apps have full access to native client API capabilities via .NET native app frameworks. In Blazor Hybrid apps, Razor components run directly in the native app, not on <a href="https://developer.mozilla.org/docs/WebAssembly" data-linktype="external">WebAssembly</a>. When full client capabilities are a requirement, Blazor Hybrid is the best choice.</p>
+</div>
+<h3 id="web-based-deployment">Web-based deployment</h3>
+<p>Blazor Web Apps are updated on the next app refresh from the browser.</p>
+<div data-moniker="aspnetcore-10.0 aspnetcore-6.0 aspnetcore-7.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>Blazor Hybrid apps are native client apps that typically require an installer and platform-specific deployment mechanism.</p>
+</div>
+<div data-moniker="aspnetcore-10.0 aspnetcore-8.0 aspnetcore-9.0">
+<h2 id="setting-a-components-hosting-model">Setting a component's hosting model</h2>
+<p>To set a component's hosting model to Blazor Server or Blazor WebAssembly at compile-time or dynamically at runtime, you set its <em>render mode</em>. Render modes are fully explained and demonstrated in the <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-9.0" data-linktype="relative-path">ASP.NET Core Blazor render modes</a> article. We don't recommend that you jump from this article directly to the <em>Render modes</em> article without reading the content in the articles between these two articles. For example, render modes are more easily understood by looking at Razor component examples, but basic Razor component structure and function isn't covered until the <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/?view=aspnetcore-9.0" data-linktype="relative-path">ASP.NET Core Blazor fundamentals</a> article is reached. It's also helpful to learn about Blazor's project templates and tooling before working with the component examples in the <em>Render modes</em> article.</p>
+</div>
+</div>
+					
+		<div
+			id="ms--inline-notifications"
+			class="margin-block-xs"
+			data-bi-name="inline-notification"
+		></div>
+	 
+		<div
+			id="assertive-live-region"
+			role="alert"
+			aria-live="assertive"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+		<div
+			id="polite-live-region"
+			role="status"
+			aria-live="polite"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+	
+					
+			
+		<!-- feedback section -->
+		<section
+			class="feedback-section position-relative margin-top-lg border border-radius padding-xxs display-none-print"
+			data-bi-name="open-source-feedback-section"
+			data-open-source-feedback-section
+			hidden
+		>
+			<div class="display-flex flex-direction-column flex-direction-row-tablet">
+				<div
+					class="width-450-tablet padding-inline-xs padding-inline-xs-tablet padding-top-xs padding-bottom-sm padding-top-xs-tablet background-color-body-medium"
+				>
+					<div class="display-flex flex-direction-column">
+						<div class="padding-bottom-xxs">
+							<span class="icon margin-right-xxs" aria-hidden="true">
+								<span class="docon docon-brand-github"></span>
+							</span>
+							<span class="font-weight-semibold">
+								Collaborate with us on GitHub
+							</span>
+						</div>
+						<span class="line-height-normal">
+							The source for this content can be found on GitHub, where you can also create and review issues and pull requests. For more information, see <a href="https://learn.microsoft.com/contribute/content/dotnet/dotnet-contribute">our contributor guide</a>.
+						</span>
+					</div>
+				</div>
+				<div
+					class="display-flex gap-xs width-full-tablet flex-direction-column padding-xs justify-content-space-evenly"
+				>
+					<div class="media">
+						
+					<div class="media-left">
+						<div class="image image-36x36" hidden data-open-source-image-container>
+							<img
+								class="theme-display is-light"
+								src="https://learn.microsoft.com/media/logos/logo_net.svg"
+								aria-hidden="true"
+								data-open-source-image-light
+							/>
+							<img
+								class="theme-display is-dark is-high-contrast"
+								src="https://learn.microsoft.com/media/logos/logo_net.svg"
+								aria-hidden="true"
+								data-open-source-image-dark
+							/>
+						</div>
+					</div>
+			  
+
+						<div class="media-content">
+							<p
+								class="font-size-xl font-weight-semibold margin-bottom-xxs"
+								data-open-source-product-title
+							>
+								ASP.NET Core
+							</p>
+							<div class="display-flex gap-xs flex-direction-column">
+								<p class="line-height-normal" data-open-source-product-description></p>
+								<div class="display-flex gap-xs flex-direction-column">
+									<a href="#" data-github-link>
+										<span class="icon margin-right-xxs" aria-hidden="true">
+											<span class="docon docon-bug"></span>
+										</span>
+										<span>Open a documentation issue</span>
+									</a>
+									<a
+										href="https://github.com/dotnet/aspnetcore/blob/main/CONTRIBUTING.md"
+										class="display-block margin-top-auto font-size-md"
+										data-feedback-product-url
+									>
+										<span class="icon margin-right-xxs" aria-hidden="true">
+											<span class="docon docon-feedback"></span>
+										</span>
+										<span>Provide product feedback</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+			
+		<!-- feedback section -->
+		<section
+			id="site-user-feedback-footer"
+			class="font-size-sm margin-top-md display-none-print display-none-desktop"
+			data-test-id="site-user-feedback-footer"
+			data-bi-name="site-feedback-section"
+		>
+			<hr class="hr" />
+			<h2 id="ms--feedback" class="title is-3">Feedback</h2>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="buttons">
+					<button
+						class="thumb-rating-button like button button-primary button-sm"
+						data-test-id="footer-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+						<span>Yes</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike button button-primary button-sm"
+						data-test-id="footer-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+						<span>No</span>
+					</button>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+		
+				</div>
+				
+		<div id="ms--additional-resources-mobile" class="display-none-print">
+			<hr class="hr" hidden />
+			<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>
+				Additional resources
+			</h2>
+			
+		<section
+			id="right-rail-recommendations-mobile"
+			class=""
+			data-bi-name="recommendations"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-training-mobile"
+			class=""
+			data-bi-name="learning-resource-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-events-mobile"
+			class=""
+			data-bi-name="events-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-qna-mobile"
+			class="margin-top-xxs"
+			data-bi-name="qna-link-card"
+			hidden
+		></section>
+	
+		</div>
+	
+			</div>
+			
+		<div
+			id="action-panel"
+			role="region"
+			aria-label="Action Panel"
+			class="action-panel"
+			tabindex="-1"
+		></div>
+	
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside "
+					data-bi-name="aside"
+			  >
+					
+		<div
+			id="ms--additional-resources"
+			class="right-container padding-sm display-none display-block-desktop height-full"
+			data-bi-name="pageactions"
+			role="complementary"
+			aria-label="Additional resources"
+		>
+			<div id="affixed-right-container" data-bi-name="right-column">
+				
+		<nav
+			id="side-doc-outline"
+			class="doc-outline border-bottom padding-bottom-xs margin-bottom-xs"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h3>In this article</h3>
+		</nav>
+	
+				<!-- Feedback -->
+				
+		<section
+			id="ms--site-user-feedback-right-rail"
+			class="font-size-sm display-none-print"
+			data-test-id="site-user-feedback-right-rail"
+			data-bi-name="site-feedback-right-rail"
+		>
+			<p class="font-weight-semibold margin-bottom-xs">Was this page helpful?</p>
+			<div class="buttons">
+				<button
+					class="thumb-rating-button like button button-primary button-sm"
+					data-test-id="right-rail-rating-yes"
+					data-binary-rating-response="rating-yes"
+					type="button"
+					title="This article is helpful"
+					data-bi-name="button-rating-yes"
+					aria-pressed="false"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-like"></span>
+					</span>
+					<span>Yes</span>
+				</button>
+				<button
+					class="thumb-rating-button dislike button button-primary button-sm"
+					data-test-id="right-rail-rating-no"
+					data-binary-rating-response="rating-no"
+					type="button"
+					title="This article is not helpful"
+					data-bi-name="button-rating-no"
+					aria-pressed="false"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-dislike"></span>
+					</span>
+					<span>No</span>
+				</button>
+			</div>
+		</section>
+	
+			</div>
+		</div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout has-padding has-default-focus border-top  uhf-container"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	
+				<div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-expanded="false"
+				title="Theme"
+				data-bi-name="theme"
+			>
+				<span class="icon">
+					<span class="docon docon-sun" aria-hidden="true"></span>
+				</span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu">
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="light"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="dark"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="high-contrast"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2025</li>
+			</ul>
+		</footer>
+	</footer>
+			</body>
+		
+<!-- Mirrored from learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models?view=aspnetcore-9.0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 14:53:03 GMT -->
+</html>

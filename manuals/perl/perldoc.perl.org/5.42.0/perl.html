@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/5.42.0/perl by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>perl - The Perl 5 language interpreter - Perldoc Browser</title>
+    <link rel="search" href="../opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="../perl.html">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="../css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html"><img src="../images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.42.0</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="../perl.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item active" href="perl.html">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.40.3/perl.html">5.40.3</a>
+          <a class="dropdown-item" href="../5.40.2/perl.html">5.40.2</a>
+          <a class="dropdown-item" href="../5.40.1/perl.html">5.40.1</a>
+          <a class="dropdown-item" href="../5.40.0/perl.html">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.38.5/perl.html">5.38.5</a>
+          <a class="dropdown-item" href="../5.38.4/perl.html">5.38.4</a>
+          <a class="dropdown-item" href="../5.38.3/perl.html">5.38.3</a>
+          <a class="dropdown-item" href="../5.38.2/perl.html">5.38.2</a>
+          <a class="dropdown-item" href="../5.38.1/perl.html">5.38.1</a>
+          <a class="dropdown-item" href="../5.38.0/perl.html">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.36.3/perl.html">5.36.3</a>
+          <a class="dropdown-item" href="../5.36.2/perl.html">5.36.2</a>
+          <a class="dropdown-item" href="../5.36.1/perl.html">5.36.1</a>
+          <a class="dropdown-item" href="../5.36.0/perl.html">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.34.3/perl.html">5.34.3</a>
+          <a class="dropdown-item" href="../5.34.2/perl.html">5.34.2</a>
+          <a class="dropdown-item" href="../5.34.1/perl.html">5.34.1</a>
+          <a class="dropdown-item" href="../5.34.0/perl.html">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.32.1/perl.html">5.32.1</a>
+          <a class="dropdown-item" href="../5.32.0/perl.html">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.30.3/perl.html">5.30.3</a>
+          <a class="dropdown-item" href="../5.30.2/perl.html">5.30.2</a>
+          <a class="dropdown-item" href="../5.30.1/perl.html">5.30.1</a>
+          <a class="dropdown-item" href="../5.30.0/perl.html">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.28.3/perl.html">5.28.3</a>
+          <a class="dropdown-item" href="../5.28.2/perl.html">5.28.2</a>
+          <a class="dropdown-item" href="../5.28.1/perl.html">5.28.1</a>
+          <a class="dropdown-item" href="../5.28.0/perl.html">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.26.3/perl.html">5.26.3</a>
+          <a class="dropdown-item" href="../5.26.2/perl.html">5.26.2</a>
+          <a class="dropdown-item" href="../5.26.1/perl.html">5.26.1</a>
+          <a class="dropdown-item" href="../5.26.0/perl.html">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.24.4/perl.html">5.24.4</a>
+          <a class="dropdown-item" href="../5.24.3/perl.html">5.24.3</a>
+          <a class="dropdown-item" href="../5.24.2/perl.html">5.24.2</a>
+          <a class="dropdown-item" href="../5.24.1/perl.html">5.24.1</a>
+          <a class="dropdown-item" href="../5.24.0/perl.html">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.22.4/perl.html">5.22.4</a>
+          <a class="dropdown-item" href="../5.22.3/perl.html">5.22.3</a>
+          <a class="dropdown-item" href="../5.22.2/perl.html">5.22.2</a>
+          <a class="dropdown-item" href="../5.22.1/perl.html">5.22.1</a>
+          <a class="dropdown-item" href="../5.22.0/perl.html">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.20.3/perl.html">5.20.3</a>
+          <a class="dropdown-item" href="../5.20.2/perl.html">5.20.2</a>
+          <a class="dropdown-item" href="../5.20.1/perl.html">5.20.1</a>
+          <a class="dropdown-item" href="../5.20.0/perl.html">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.18.4/perl.html">5.18.4</a>
+          <a class="dropdown-item" href="../5.18.3/perl.html">5.18.3</a>
+          <a class="dropdown-item" href="../5.18.2/perl.html">5.18.2</a>
+          <a class="dropdown-item" href="../5.18.1/perl.html">5.18.1</a>
+          <a class="dropdown-item" href="../5.18.0/perl.html">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.16.3/perl.html">5.16.3</a>
+          <a class="dropdown-item" href="../5.16.2/perl.html">5.16.2</a>
+          <a class="dropdown-item" href="../5.16.1/perl.html">5.16.1</a>
+          <a class="dropdown-item" href="../5.16.0/perl.html">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.14.4/perl.html">5.14.4</a>
+          <a class="dropdown-item" href="../5.14.3/perl.html">5.14.3</a>
+          <a class="dropdown-item" href="../5.14.2/perl.html">5.14.2</a>
+          <a class="dropdown-item" href="../5.14.1/perl.html">5.14.1</a>
+          <a class="dropdown-item" href="../5.14.0/perl.html">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.12.5/perl.html">5.12.5</a>
+          <a class="dropdown-item" href="../5.12.4/perl.html">5.12.4</a>
+          <a class="dropdown-item" href="../5.12.3/perl.html">5.12.3</a>
+          <a class="dropdown-item" href="../5.12.2/perl.html">5.12.2</a>
+          <a class="dropdown-item" href="../5.12.1/perl.html">5.12.1</a>
+          <a class="dropdown-item" href="../5.12.0/perl.html">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.10.1/perl.html">5.10.1</a>
+          <a class="dropdown-item" href="../5.10.0/perl.html">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.8.9/perl.html">5.8.9</a>
+          <a class="dropdown-item" href="../5.8.8/perl.html">5.8.8</a>
+          <a class="dropdown-item" href="../5.8.7/perl.html">5.8.7</a>
+          <a class="dropdown-item" href="../5.8.6/perl.html">5.8.6</a>
+          <a class="dropdown-item" href="../5.8.5/perl.html">5.8.5</a>
+          <a class="dropdown-item" href="../5.8.4/perl.html">5.8.4</a>
+          <a class="dropdown-item" href="../5.8.3/perl.html">5.8.3</a>
+          <a class="dropdown-item" href="../5.8.2/perl.html">5.8.2</a>
+          <a class="dropdown-item" href="../5.8.1/perl.html">5.8.1</a>
+          <a class="dropdown-item" href="../5.8.0/perl.html">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.6.2/perl.html">5.6.2</a>
+          <a class="dropdown-item" href="../5.6.1/perl.html">5.6.1</a>
+          <a class="dropdown-item" href="../5.6.0/perl.html">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.005_04/perl.html">5.005_04</a>
+          <a class="dropdown-item" href="../5.005_03/perl.html">5.005_03</a>
+          <a class="dropdown-item" href="../5.005_02/perl.html">5.005_02</a>
+          <a class="dropdown-item" href="../5.005_01/perl.html">5.005_01</a>
+          <a class="dropdown-item" href="../5.005/perl.html">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="../blead/perl.html">blead</a>
+          <a class="dropdown-item" href="../5.43.1/perl.html">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.42.0-RC3/perl.html">5.42.0-RC3</a>
+          <a class="dropdown-item" href="../5.42.0-RC2/perl.html">5.42.0-RC2</a>
+          <a class="dropdown-item" href="../5.42.0-RC1/perl.html">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.41.13/perl.html">5.41.13</a>
+          <a class="dropdown-item" href="../5.41.12/perl.html">5.41.12</a>
+          <a class="dropdown-item" href="../5.41.11/perl.html">5.41.11</a>
+          <a class="dropdown-item" href="../5.41.10/perl.html">5.41.10</a>
+          <a class="dropdown-item" href="../5.41.9/perl.html">5.41.9</a>
+          <a class="dropdown-item" href="../5.41.8/perl.html">5.41.8</a>
+          <a class="dropdown-item" href="../5.41.7/perl.html">5.41.7</a>
+          <a class="dropdown-item" href="../5.41.6/perl.html">5.41.6</a>
+          <a class="dropdown-item" href="../5.41.5/perl.html">5.41.5</a>
+          <a class="dropdown-item" href="../5.41.4/perl.html">5.41.4</a>
+          <a class="dropdown-item" href="../5.41.3/perl.html">5.41.3</a>
+          <a class="dropdown-item" href="../5.41.2/perl.html">5.41.2</a>
+          <a class="dropdown-item" href="../5.41.1/perl.html">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.40.3-RC1/perl.html">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.38.5-RC1/perl.html">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="../js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/5.42.0/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="../js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="perl.html">perl</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/5.42.0/perl.txt">source</a>,
+            <a href="https://metacpan.org/pod/perl">CPAN</a>)
+          </div>
+        </div>
+        <div class="leading-notice">
+          You are viewing the version of this documentation from Perl 5.42.0.
+            <a href="../perl.html">View the latest version</a>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SYNOPSIS">SYNOPSIS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#GETTING-HELP">GETTING HELP</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Overview">Overview</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Tutorials">Tutorials</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Reference-Manual">Reference Manual</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Internals-and-C-Language-Interface">Internals and C Language Interface</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#History">History</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Miscellaneous">Miscellaneous</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Language-Specific">Language-Specific</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Platform-Specific">Platform-Specific</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Stubs-for-Deleted-Documents">Stubs for Deleted Documents</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#AVAILABILITY">AVAILABILITY</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#ENVIRONMENT">ENVIRONMENT</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#AUTHOR">AUTHOR</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#FILES">FILES</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SEE-ALSO">SEE ALSO</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DIAGNOSTICS">DIAGNOSTICS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#BUGS">BUGS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#NOTES">NOTES</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>perl - The Perl 5 language interpreter</p>
+
+<h1 id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">#</a>SYNOPSIS</h1>
+
+<p><b>perl</b> <span style="white-space: nowrap;">[ <b>-sTtuUWX</b> ]</span> <span style="white-space: nowrap;">[ <b>-hv</b> ] [ <b>-V</b>[:<i>configvar</i>] ]</span> <span style="white-space: nowrap;">[ <b>-cw</b> ] [ <b>-d</b>[<b>t</b>][:<i>debugger</i>] ] [ <b>-D</b>[<i>number/list</i>] ]</span> <span style="white-space: nowrap;">[ <b>-pna</b> ] [ <b>-F</b><i>pattern</i> ] [ <b>-l</b>[<i>octal</i>] ] [ <b>-0</b>[<i>octal/hexadecimal</i>] ]</span> <span style="white-space: nowrap;">[ <b>-I</b><i>dir</i> ] [ <b>-m</b>[<b>-</b>]<i>module</i> ] [ <b>-M</b>[<b>-</b>]<i>&#39;module...&#39;</i> ] [ <b>-f</b> ]</span> <span style="white-space: nowrap;">[ <b>-C [<i>number/list</i>] </b>]</span> <span style="white-space: nowrap;">[ <b>-S</b> ]</span> <span style="white-space: nowrap;">[ <b>-x</b>[<i>dir</i>] ]</span> <span style="white-space: nowrap;">[ <b>-i</b>[<i>extension</i>] ]</span> <span style="white-space: nowrap;">[ [<b>-e</b>|<b>-E</b>] <i>&#39;command&#39;</i> ] [ <b>--</b> ] [ <i>programfile</i> ] [ <i>argument</i> ]...</span></p>
+
+<p>For more information on these options, you can run <a href="https://perldoc.perl.org/5.42.0/perlrun"><code>perldoc perlrun</code></a>.</p>
+
+<h1 id="GETTING-HELP"><a class="permalink" href="#GETTING-HELP">#</a><a id="GETTING"></a>GETTING HELP</h1>
+
+<p>The <i>perldoc</i> program gives you access to all the documentation that comes with Perl. You can get more documentation, tutorials and community support online at <a href="https://www.perl.org/">https://www.perl.org/</a>.</p>
+
+<p>If you&#39;re new to Perl, you should start by running <a href="perlintro.html"><code>perldoc perlintro</code></a>, which is a general intro for beginners and provides some background to help you navigate the rest of Perl&#39;s extensive documentation. Run <a href="perldoc.html"><code>perldoc perldoc</code></a> to learn more things you can do with <i>perldoc</i>.</p>
+
+<p>For ease of access, the Perl manual has been split up into several sections.</p>
+
+<h2 id="Overview"><a class="permalink" href="#Overview">#</a>Overview</h2>
+
+<pre><code class="nohighlight">perl                Perl overview (this section)
+<a href="perlintro.html">perlintro</a>           Perl introduction for beginners
+<a href="https://perldoc.perl.org/5.42.0/perlrun">perlrun</a>             Perl execution and options
+<a href="https://perldoc.perl.org/5.42.0/perltoc">perltoc</a>             Perl documentation table of contents</code></pre>
+
+<h2 id="Tutorials"><a class="permalink" href="#Tutorials">#</a>Tutorials</h2>
+
+<pre><code class="nohighlight"><a href="https://perldoc.perl.org/5.42.0/perlreftut">perlreftut</a>          Perl references short introduction
+<a href="https://perldoc.perl.org/5.42.0/perldsc">perldsc</a>             Perl data structures intro
+<a href="https://perldoc.perl.org/5.42.0/perllol">perllol</a>             Perl data structures: arrays of arrays
+
+<a href="https://perldoc.perl.org/5.42.0/perlrequick">perlrequick</a>         Perl regular expressions quick start
+<a href="https://perldoc.perl.org/5.42.0/perlretut">perlretut</a>           Perl regular expressions tutorial
+
+<a href="https://perldoc.perl.org/5.42.0/perlootut">perlootut</a>           Perl OO tutorial for beginners
+
+<a href="https://perldoc.perl.org/5.42.0/perlperf">perlperf</a>            Perl Performance and Optimization Techniques
+
+<a href="https://perldoc.perl.org/5.42.0/perlstyle">perlstyle</a>           Perl style guide
+
+<a href="https://perldoc.perl.org/5.42.0/perlcheat">perlcheat</a>           Perl cheat sheet
+<a href="https://perldoc.perl.org/5.42.0/perltrap">perltrap</a>            Perl traps for the unwary
+<a href="https://perldoc.perl.org/5.42.0/perldebtut">perldebtut</a>          Perl debugging tutorial
+
+<a href="perlfaq.html">perlfaq</a>             Perl frequently asked questions
+  <a href="https://perldoc.perl.org/5.42.0/perlfaq1">perlfaq1</a>          General Questions About Perl
+  <a href="https://perldoc.perl.org/5.42.0/perlfaq2">perlfaq2</a>          Obtaining and Learning about Perl
+  <a href="https://perldoc.perl.org/5.42.0/perlfaq3">perlfaq3</a>          Programming Tools
+  <a href="https://perldoc.perl.org/5.42.0/perlfaq4">perlfaq4</a>          Data Manipulation
+  <a href="https://perldoc.perl.org/5.42.0/perlfaq5">perlfaq5</a>          Files and Formats
+  <a href="https://perldoc.perl.org/5.42.0/perlfaq6">perlfaq6</a>          Regexes
+  <a href="https://perldoc.perl.org/5.42.0/perlfaq7">perlfaq7</a>          Perl Language Issues
+  <a href="https://perldoc.perl.org/5.42.0/perlfaq8">perlfaq8</a>          System Interaction
+  <a href="https://perldoc.perl.org/5.42.0/perlfaq9">perlfaq9</a>          Networking</code></pre>
+
+<h2 id="Reference-Manual"><a class="permalink" href="#Reference-Manual">#</a><a id="Reference"></a>Reference Manual</h2>
+
+<pre><code class="nohighlight"><a href="https://perldoc.perl.org/5.42.0/perlsyn">perlsyn</a>             Perl syntax: declarations, statements, comments
+<a href="https://perldoc.perl.org/5.42.0/perldata">perldata</a>            Perl data structures
+<a href="perlop.html">perlop</a>              Perl expressions: operators, precedence, string literals
+<a href="https://perldoc.perl.org/5.42.0/perlsub">perlsub</a>             Perl subroutines
+<a href="https://perldoc.perl.org/5.42.0/perlfunc">perlfunc</a>            Perl built-in functions
+  <a href="https://perldoc.perl.org/5.42.0/perlopentut">perlopentut</a>       Perl open() tutorial
+  <a href="https://perldoc.perl.org/5.42.0/perlpacktut">perlpacktut</a>       Perl pack() and unpack() tutorial
+<a href="https://perldoc.perl.org/5.42.0/perlpod">perlpod</a>             Perl plain old documentation
+<a href="https://perldoc.perl.org/5.42.0/perlpodspec">perlpodspec</a>         Perl plain old documentation format specification
+<a href="https://perldoc.perl.org/5.42.0/perldocstyle">perldocstyle</a>        Perl style guide for core docs
+<a href="https://perldoc.perl.org/5.42.0/perlpodstyle">perlpodstyle</a>        Perl POD style guide
+<a href="https://perldoc.perl.org/5.42.0/perldiag">perldiag</a>            Perl diagnostic messages
+<a href="https://perldoc.perl.org/5.42.0/perldeprecation">perldeprecation</a>     Perl deprecations
+<a href="https://perldoc.perl.org/5.42.0/perllexwarn">perllexwarn</a>         Perl warnings and their control
+<a href="https://perldoc.perl.org/5.42.0/perldebug">perldebug</a>           Perl debugging
+<a href="https://perldoc.perl.org/5.42.0/perlvar">perlvar</a>             Perl predefined variables
+<a href="https://perldoc.perl.org/5.42.0/perlre">perlre</a>              Perl regular expressions, the rest of the story
+<a href="https://perldoc.perl.org/5.42.0/perlrebackslash">perlrebackslash</a>     Perl regular expression backslash sequences
+<a href="https://perldoc.perl.org/5.42.0/perlrecharclass">perlrecharclass</a>     Perl regular expression character classes
+<a href="https://perldoc.perl.org/5.42.0/perlreref">perlreref</a>           Perl regular expressions quick reference
+<a href="https://perldoc.perl.org/5.42.0/perlref">perlref</a>             Perl references, the rest of the story
+<a href="https://perldoc.perl.org/5.42.0/perlform">perlform</a>            Perl formats
+<a href="https://perldoc.perl.org/5.42.0/perlobj">perlobj</a>             Perl objects
+<a href="https://perldoc.perl.org/5.42.0/perltie">perltie</a>             Perl objects hidden behind simple variables
+  <a href="https://perldoc.perl.org/5.42.0/perldbmfilter">perldbmfilter</a>     Perl DBM filters
+<a href="https://perldoc.perl.org/5.42.0/perlclass">perlclass</a>           Perl class syntax
+
+<a href="https://perldoc.perl.org/5.42.0/perlipc">perlipc</a>             Perl interprocess communication
+<a href="https://perldoc.perl.org/5.42.0/perlfork">perlfork</a>            Perl fork() information
+<a href="https://perldoc.perl.org/5.42.0/perlnumber">perlnumber</a>          Perl number semantics
+
+<a href="https://perldoc.perl.org/5.42.0/perlthrtut">perlthrtut</a>          Perl threads tutorial
+
+<a href="https://perldoc.perl.org/5.42.0/perlport">perlport</a>            Perl portability guide
+<a href="https://perldoc.perl.org/5.42.0/perllocale">perllocale</a>          Perl locale support
+<a href="https://perldoc.perl.org/5.42.0/perluniintro">perluniintro</a>        Perl Unicode introduction
+<a href="https://perldoc.perl.org/5.42.0/perlunicode">perlunicode</a>         Perl Unicode support
+<a href="https://perldoc.perl.org/5.42.0/perlunicook">perlunicook</a>         Perl Unicode cookbook
+<a href="https://perldoc.perl.org/5.42.0/perlunifaq">perlunifaq</a>          Perl Unicode FAQ
+<a href="https://perldoc.perl.org/5.42.0/perluniprops">perluniprops</a>        Index of Unicode properties in Perl
+<a href="https://perldoc.perl.org/5.42.0/perlunitut">perlunitut</a>          Perl Unicode tutorial
+<a href="https://perldoc.perl.org/5.42.0/perlebcdic">perlebcdic</a>          Considerations for running Perl on EBCDIC platforms
+
+<a href="https://perldoc.perl.org/5.42.0/perlsec">perlsec</a>             Perl security
+<a href="https://perldoc.perl.org/5.42.0/perlsecpolicy">perlsecpolicy</a>       Perl security report handling policy
+
+<a href="https://perldoc.perl.org/5.42.0/perlmod">perlmod</a>             Perl modules: how they work
+<a href="https://perldoc.perl.org/5.42.0/perlmodlib">perlmodlib</a>          Perl modules: how to write and use
+<a href="https://perldoc.perl.org/5.42.0/perlmodstyle">perlmodstyle</a>        Perl modules: how to write modules with style
+<a href="https://perldoc.perl.org/5.42.0/perlmodinstall">perlmodinstall</a>      Perl modules: how to install from CPAN
+<a href="https://perldoc.perl.org/5.42.0/perlnewmod">perlnewmod</a>          Perl modules: preparing a new module for distribution
+<a href="https://perldoc.perl.org/5.42.0/perlpragma">perlpragma</a>          Perl modules: writing a user pragma
+
+<a href="perlutil.html">perlutil</a>            utilities packaged with the Perl distribution
+
+<a href="https://perldoc.perl.org/5.42.0/perlfilter">perlfilter</a>          Perl source filters
+
+<a href="https://perldoc.perl.org/5.42.0/perldtrace">perldtrace</a>          Perl&#39;s support for DTrace
+
+<a href="https://perldoc.perl.org/5.42.0/perlglossary">perlglossary</a>        Perl Glossary</code></pre>
+
+<h2 id="Internals-and-C-Language-Interface"><a class="permalink" href="#Internals-and-C-Language-Interface">#</a><a id="Internals"></a>Internals and C Language Interface</h2>
+
+<pre><code class="nohighlight"><a href="https://perldoc.perl.org/5.42.0/perlembed">perlembed</a>           Perl ways to embed perl in your C or C++ application
+<a href="https://perldoc.perl.org/5.42.0/perldebguts">perldebguts</a>         Perl debugging guts and tips
+<a href="https://perldoc.perl.org/5.42.0/perlxstut">perlxstut</a>           Perl XS tutorial
+<a href="https://perldoc.perl.org/5.42.0/perlxs">perlxs</a>              Perl XS application programming interface
+<a href="https://perldoc.perl.org/5.42.0/perlxstypemap">perlxstypemap</a>       Perl XS C/Perl type conversion tools
+<a href="https://perldoc.perl.org/5.42.0/perlclib">perlclib</a>            Interacting with standard C library functions
+<a href="https://perldoc.perl.org/5.42.0/perlguts">perlguts</a>            Perl internal functions for those doing extensions
+<a href="https://perldoc.perl.org/5.42.0/perlcall">perlcall</a>            Perl calling conventions from C
+<a href="https://perldoc.perl.org/5.42.0/perlmroapi">perlmroapi</a>          Perl method resolution plugin interface
+<a href="https://perldoc.perl.org/5.42.0/perlreapi">perlreapi</a>           Perl regular expression plugin interface
+<a href="https://perldoc.perl.org/5.42.0/perlreguts">perlreguts</a>          Perl regular expression engine internals
+<a href="https://perldoc.perl.org/5.42.0/perlclassguts">perlclassguts</a>       Internals of class syntax
+
+<a href="https://perldoc.perl.org/5.42.0/perlapi">perlapi</a>             Perl API listing (autogenerated)
+<a href="https://perldoc.perl.org/5.42.0/perlintern">perlintern</a>          Perl internal functions (autogenerated)
+<a href="https://perldoc.perl.org/5.42.0/perliol">perliol</a>             C API for Perl&#39;s implementation of IO in Layers
+<a href="https://perldoc.perl.org/5.42.0/perlapio">perlapio</a>            Perl internal IO abstraction interface
+
+<a href="https://perldoc.perl.org/5.42.0/perlhack">perlhack</a>            Perl hackers guide
+<a href="https://perldoc.perl.org/5.42.0/perlsource">perlsource</a>          Guide to the Perl source tree
+<a href="https://perldoc.perl.org/5.42.0/perlinterp">perlinterp</a>          Overview of the Perl interpreter source and how it works
+<a href="https://perldoc.perl.org/5.42.0/perlhacktut">perlhacktut</a>         Walk through the creation of a simple C code patch
+<a href="https://perldoc.perl.org/5.42.0/perlhacktips">perlhacktips</a>        Tips for Perl core C code hacking
+<a href="https://perldoc.perl.org/5.42.0/perlpolicy">perlpolicy</a>          Perl development policies
+<a href="https://perldoc.perl.org/5.42.0/perlgov">perlgov</a>             Perl Rules of Governance
+<a href="https://perldoc.perl.org/5.42.0/perlgit">perlgit</a>             Using git with the Perl repository</code></pre>
+
+<h2 id="History"><a class="permalink" href="#History">#</a>History</h2>
+
+<pre><code class="nohighlight"><a href="perlhist.html">perlhist</a>            Perl history records
+<a href="perldelta.html">perldelta</a>           Perl changes since previous version
+<a href="https://perldoc.perl.org/5.42.0/perl5420delta">perl5420delta</a>       Perl changes in version 5.42.0
+<a href="https://perldoc.perl.org/5.42.0/perl5402delta">perl5402delta</a>       Perl changes in version 5.40.2
+<a href="https://perldoc.perl.org/5.42.0/perl5401delta">perl5401delta</a>       Perl changes in version 5.40.1
+<a href="https://perldoc.perl.org/5.42.0/perl5400delta">perl5400delta</a>       Perl changes in version 5.40.0
+<a href="https://perldoc.perl.org/5.42.0/perl5384delta">perl5384delta</a>       Perl changes in version 5.38.4
+<a href="https://perldoc.perl.org/5.42.0/perl5383delta">perl5383delta</a>       Perl changes in version 5.38.3
+<a href="https://perldoc.perl.org/5.42.0/perl5382delta">perl5382delta</a>       Perl changes in version 5.38.2
+<a href="https://perldoc.perl.org/5.42.0/perl5381delta">perl5381delta</a>       Perl changes in version 5.38.1
+<a href="https://perldoc.perl.org/5.42.0/perl5380delta">perl5380delta</a>       Perl changes in version 5.38.0
+<a href="https://perldoc.perl.org/5.42.0/perl5363delta">perl5363delta</a>       Perl changes in version 5.36.3
+<a href="https://perldoc.perl.org/5.42.0/perl5362delta">perl5362delta</a>       Perl changes in version 5.36.2
+<a href="https://perldoc.perl.org/5.42.0/perl5361delta">perl5361delta</a>       Perl changes in version 5.36.1
+<a href="https://perldoc.perl.org/5.42.0/perl5360delta">perl5360delta</a>       Perl changes in version 5.36.0
+<a href="https://perldoc.perl.org/5.42.0/perl5343delta">perl5343delta</a>       Perl changes in version 5.34.3
+<a href="https://perldoc.perl.org/5.42.0/perl5342delta">perl5342delta</a>       Perl changes in version 5.34.2
+<a href="https://perldoc.perl.org/5.42.0/perl5341delta">perl5341delta</a>       Perl changes in version 5.34.1
+<a href="https://perldoc.perl.org/5.42.0/perl5340delta">perl5340delta</a>       Perl changes in version 5.34.0
+<a href="https://perldoc.perl.org/5.42.0/perl5321delta">perl5321delta</a>       Perl changes in version 5.32.1
+<a href="https://perldoc.perl.org/5.42.0/perl5320delta">perl5320delta</a>       Perl changes in version 5.32.0
+<a href="https://perldoc.perl.org/5.42.0/perl5303delta">perl5303delta</a>       Perl changes in version 5.30.3
+<a href="https://perldoc.perl.org/5.42.0/perl5302delta">perl5302delta</a>       Perl changes in version 5.30.2
+<a href="https://perldoc.perl.org/5.42.0/perl5301delta">perl5301delta</a>       Perl changes in version 5.30.1
+<a href="https://perldoc.perl.org/5.42.0/perl5300delta">perl5300delta</a>       Perl changes in version 5.30.0
+<a href="https://perldoc.perl.org/5.42.0/perl5283delta">perl5283delta</a>       Perl changes in version 5.28.3
+<a href="https://perldoc.perl.org/5.42.0/perl5282delta">perl5282delta</a>       Perl changes in version 5.28.2
+<a href="https://perldoc.perl.org/5.42.0/perl5281delta">perl5281delta</a>       Perl changes in version 5.28.1
+<a href="https://perldoc.perl.org/5.42.0/perl5280delta">perl5280delta</a>       Perl changes in version 5.28.0
+<a href="https://perldoc.perl.org/5.42.0/perl5263delta">perl5263delta</a>       Perl changes in version 5.26.3
+<a href="https://perldoc.perl.org/5.42.0/perl5262delta">perl5262delta</a>       Perl changes in version 5.26.2
+<a href="https://perldoc.perl.org/5.42.0/perl5261delta">perl5261delta</a>       Perl changes in version 5.26.1
+<a href="https://perldoc.perl.org/5.42.0/perl5260delta">perl5260delta</a>       Perl changes in version 5.26.0
+<a href="https://perldoc.perl.org/5.42.0/perl5244delta">perl5244delta</a>       Perl changes in version 5.24.4
+<a href="https://perldoc.perl.org/5.42.0/perl5243delta">perl5243delta</a>       Perl changes in version 5.24.3
+<a href="https://perldoc.perl.org/5.42.0/perl5242delta">perl5242delta</a>       Perl changes in version 5.24.2
+<a href="https://perldoc.perl.org/5.42.0/perl5241delta">perl5241delta</a>       Perl changes in version 5.24.1
+<a href="https://perldoc.perl.org/5.42.0/perl5240delta">perl5240delta</a>       Perl changes in version 5.24.0
+<a href="https://perldoc.perl.org/5.42.0/perl5224delta">perl5224delta</a>       Perl changes in version 5.22.4
+<a href="https://perldoc.perl.org/5.42.0/perl5223delta">perl5223delta</a>       Perl changes in version 5.22.3
+<a href="https://perldoc.perl.org/5.42.0/perl5222delta">perl5222delta</a>       Perl changes in version 5.22.2
+<a href="https://perldoc.perl.org/5.42.0/perl5221delta">perl5221delta</a>       Perl changes in version 5.22.1
+<a href="https://perldoc.perl.org/5.42.0/perl5220delta">perl5220delta</a>       Perl changes in version 5.22.0
+<a href="https://perldoc.perl.org/5.42.0/perl5203delta">perl5203delta</a>       Perl changes in version 5.20.3
+<a href="https://perldoc.perl.org/5.42.0/perl5202delta">perl5202delta</a>       Perl changes in version 5.20.2
+<a href="https://perldoc.perl.org/5.42.0/perl5201delta">perl5201delta</a>       Perl changes in version 5.20.1
+<a href="https://perldoc.perl.org/5.42.0/perl5200delta">perl5200delta</a>       Perl changes in version 5.20.0
+<a href="https://perldoc.perl.org/5.42.0/perl5184delta">perl5184delta</a>       Perl changes in version 5.18.4
+<a href="https://perldoc.perl.org/5.42.0/perl5182delta">perl5182delta</a>       Perl changes in version 5.18.2
+<a href="https://perldoc.perl.org/5.42.0/perl5181delta">perl5181delta</a>       Perl changes in version 5.18.1
+<a href="https://perldoc.perl.org/5.42.0/perl5180delta">perl5180delta</a>       Perl changes in version 5.18.0
+<a href="https://perldoc.perl.org/5.42.0/perl5163delta">perl5163delta</a>       Perl changes in version 5.16.3
+<a href="https://perldoc.perl.org/5.42.0/perl5162delta">perl5162delta</a>       Perl changes in version 5.16.2
+<a href="https://perldoc.perl.org/5.42.0/perl5161delta">perl5161delta</a>       Perl changes in version 5.16.1
+<a href="https://perldoc.perl.org/5.42.0/perl5160delta">perl5160delta</a>       Perl changes in version 5.16.0
+<a href="https://perldoc.perl.org/5.42.0/perl5144delta">perl5144delta</a>       Perl changes in version 5.14.4
+<a href="https://perldoc.perl.org/5.42.0/perl5143delta">perl5143delta</a>       Perl changes in version 5.14.3
+<a href="https://perldoc.perl.org/5.42.0/perl5142delta">perl5142delta</a>       Perl changes in version 5.14.2
+<a href="https://perldoc.perl.org/5.42.0/perl5141delta">perl5141delta</a>       Perl changes in version 5.14.1
+<a href="https://perldoc.perl.org/5.42.0/perl5140delta">perl5140delta</a>       Perl changes in version 5.14.0
+<a href="https://perldoc.perl.org/5.42.0/perl5125delta">perl5125delta</a>       Perl changes in version 5.12.5
+<a href="https://perldoc.perl.org/5.42.0/perl5124delta">perl5124delta</a>       Perl changes in version 5.12.4
+<a href="https://perldoc.perl.org/5.42.0/perl5123delta">perl5123delta</a>       Perl changes in version 5.12.3
+<a href="https://perldoc.perl.org/5.42.0/perl5122delta">perl5122delta</a>       Perl changes in version 5.12.2
+<a href="https://perldoc.perl.org/5.42.0/perl5121delta">perl5121delta</a>       Perl changes in version 5.12.1
+<a href="https://perldoc.perl.org/5.42.0/perl5120delta">perl5120delta</a>       Perl changes in version 5.12.0
+<a href="https://perldoc.perl.org/5.42.0/perl5101delta">perl5101delta</a>       Perl changes in version 5.10.1
+<a href="https://perldoc.perl.org/5.42.0/perl5100delta">perl5100delta</a>       Perl changes in version 5.10.0
+<a href="https://perldoc.perl.org/5.42.0/perl589delta">perl589delta</a>        Perl changes in version 5.8.9
+<a href="https://perldoc.perl.org/5.42.0/perl588delta">perl588delta</a>        Perl changes in version 5.8.8
+<a href="https://perldoc.perl.org/5.42.0/perl587delta">perl587delta</a>        Perl changes in version 5.8.7
+<a href="https://perldoc.perl.org/5.42.0/perl586delta">perl586delta</a>        Perl changes in version 5.8.6
+<a href="https://perldoc.perl.org/5.42.0/perl585delta">perl585delta</a>        Perl changes in version 5.8.5
+<a href="https://perldoc.perl.org/5.42.0/perl584delta">perl584delta</a>        Perl changes in version 5.8.4
+<a href="https://perldoc.perl.org/5.42.0/perl583delta">perl583delta</a>        Perl changes in version 5.8.3
+<a href="https://perldoc.perl.org/5.42.0/perl582delta">perl582delta</a>        Perl changes in version 5.8.2
+<a href="https://perldoc.perl.org/5.42.0/perl581delta">perl581delta</a>        Perl changes in version 5.8.1
+<a href="https://perldoc.perl.org/5.42.0/perl58delta">perl58delta</a>         Perl changes in version 5.8.0
+<a href="https://perldoc.perl.org/5.42.0/perl561delta">perl561delta</a>        Perl changes in version 5.6.1
+<a href="https://perldoc.perl.org/5.42.0/perl56delta">perl56delta</a>         Perl changes in version 5.6
+<a href="https://perldoc.perl.org/5.42.0/perl5005delta">perl5005delta</a>       Perl changes in version 5.005
+<a href="https://perldoc.perl.org/5.42.0/perl5004delta">perl5004delta</a>       Perl changes in version 5.004</code></pre>
+
+<h2 id="Miscellaneous"><a class="permalink" href="#Miscellaneous">#</a>Miscellaneous</h2>
+
+<pre><code class="nohighlight"><a href="https://perldoc.perl.org/5.42.0/perlbook">perlbook</a>            Perl book information
+<a href="perlcommunity.html">perlcommunity</a>       Perl community information
+
+<a href="perldoc.html">perldoc</a>             Look up Perl documentation in Pod format
+
+<a href="https://perldoc.perl.org/5.42.0/perlexperiment">perlexperiment</a>      A listing of experimental features in Perl
+
+<a href="https://perldoc.perl.org/5.42.0/perlartistic">perlartistic</a>        Perl Artistic License
+<a href="https://perldoc.perl.org/5.42.0/perlgpl">perlgpl</a>             GNU General Public License</code></pre>
+
+<h2 id="Language-Specific"><a class="permalink" href="#Language-Specific">#</a><a id="Language"></a>Language-Specific</h2>
+
+<pre><code class="nohighlight"><a href="https://perldoc.perl.org/5.42.0/perlcn">perlcn</a>              Perl for Simplified Chinese (in UTF-8)
+<a href="https://perldoc.perl.org/5.42.0/perljp">perljp</a>              Perl for Japanese (in EUC-JP)
+<a href="https://perldoc.perl.org/5.42.0/perlko">perlko</a>              Perl for Korean (in EUC-KR)
+<a href="https://perldoc.perl.org/5.42.0/perltw">perltw</a>              Perl for Traditional Chinese (in Big5)</code></pre>
+
+<h2 id="Platform-Specific"><a class="permalink" href="#Platform-Specific">#</a><a id="Platform"></a>Platform-Specific</h2>
+
+<pre><code class="nohighlight"><a href="https://perldoc.perl.org/5.42.0/perlaix">perlaix</a>             Perl notes for AIX
+<a href="https://perldoc.perl.org/5.42.0/perlamiga">perlamiga</a>           Perl notes for AmigaOS
+<a href="https://perldoc.perl.org/5.42.0/perlandroid">perlandroid</a>         Perl notes for Android
+<a href="https://perldoc.perl.org/5.42.0/perlbs2000">perlbs2000</a>          Perl notes for POSIX-BC BS2000
+<a href="https://perldoc.perl.org/5.42.0/perlcygwin">perlcygwin</a>          Perl notes for Cygwin
+<a href="https://perldoc.perl.org/5.42.0/perlfreebsd">perlfreebsd</a>         Perl notes for FreeBSD
+<a href="https://perldoc.perl.org/5.42.0/perlhaiku">perlhaiku</a>           Perl notes for Haiku
+<a href="https://perldoc.perl.org/5.42.0/perlhpux">perlhpux</a>            Perl notes for HP-UX
+<a href="https://perldoc.perl.org/5.42.0/perlhurd">perlhurd</a>            Perl notes for Hurd
+<a href="https://perldoc.perl.org/5.42.0/perlirix">perlirix</a>            Perl notes for Irix
+<a href="https://perldoc.perl.org/5.42.0/perllinux">perllinux</a>           Perl notes for Linux
+<a href="https://perldoc.perl.org/5.42.0/perlmacosx">perlmacosx</a>          Perl notes for Mac OS X
+<a href="https://perldoc.perl.org/5.42.0/perlopenbsd">perlopenbsd</a>         Perl notes for OpenBSD
+<a href="https://perldoc.perl.org/5.42.0/perlos2">perlos2</a>             Perl notes for OS/2
+<a href="https://perldoc.perl.org/5.42.0/perlos390">perlos390</a>           Perl notes for OS/390
+<a href="https://perldoc.perl.org/5.42.0/perlos400">perlos400</a>           Perl notes for OS/400
+<a href="https://perldoc.perl.org/5.42.0/perlplan9">perlplan9</a>           Perl notes for Plan 9
+<a href="https://perldoc.perl.org/5.42.0/perlqnx">perlqnx</a>             Perl notes for QNX
+<a href="https://perldoc.perl.org/5.42.0/perlriscos">perlriscos</a>          Perl notes for RISC OS
+<a href="https://perldoc.perl.org/5.42.0/perlsolaris">perlsolaris</a>         Perl notes for Solaris
+<a href="https://perldoc.perl.org/5.42.0/perlsynology">perlsynology</a>        Perl notes for Synology
+<a href="https://perldoc.perl.org/5.42.0/perltru64">perltru64</a>           Perl notes for Tru64
+<a href="https://perldoc.perl.org/5.42.0/perlvms">perlvms</a>             Perl notes for VMS
+<a href="https://perldoc.perl.org/5.42.0/perlvos">perlvos</a>             Perl notes for Stratus VOS
+<a href="https://perldoc.perl.org/5.42.0/perlwin32">perlwin32</a>           Perl notes for Windows</code></pre>
+
+<h2 id="Stubs-for-Deleted-Documents"><a class="permalink" href="#Stubs-for-Deleted-Documents">#</a><a id="Stubs"></a>Stubs for Deleted Documents</h2>
+
+<pre><code class="nohighlight"><a href="https://perldoc.perl.org/5.42.0/perlboot">perlboot</a>
+<a href="https://perldoc.perl.org/5.42.0/perlbot">perlbot</a>
+<a href="https://perldoc.perl.org/5.42.0/perlrepository">perlrepository</a>
+<a href="https://perldoc.perl.org/5.42.0/perltodo">perltodo</a>
+<a href="https://perldoc.perl.org/5.42.0/perltooc">perltooc</a>
+<a href="https://perldoc.perl.org/5.42.0/perltoot">perltoot</a></code></pre>
+
+<p>On a Unix-like system, these documentation files will usually also be available as manpages for use with the <i>man</i> program.</p>
+
+<p>Some documentation is not available as man pages, so if a cross-reference is not found by man, try it with <a href="perldoc.html">perldoc</a>. Perldoc can also take you directly to documentation for functions (with the <b>-f</b> switch). See <span style="white-space: nowrap;"><code>perldoc --help</code></span> (or <span style="white-space: nowrap;"><a href="perldoc.html"><code>perldoc perldoc</code></a></span> or <span style="white-space: nowrap;"><code>man perldoc</code></span>) for other helpful options <a href="perldoc.html">perldoc</a> has to offer.</p>
+
+<p>In general, if something strange has gone wrong with your program and you&#39;re not sure where you should look for help, try making your code comply with <b>use <a href="https://perldoc.perl.org/5.42.0/strict">strict</a></b> and <b>use <a href="https://perldoc.perl.org/5.42.0/warnings">warnings</a></b>. These will often point out exactly where the trouble is.</p>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>Perl officially stands for Practical Extraction and Report Language, except when it doesn&#39;t.</p>
+
+<p>Perl was originally a language optimized for scanning arbitrary text files, extracting information from those text files, and printing reports based on that information. It quickly became a good language for many system management tasks. Over the years, Perl has grown into a general-purpose programming language. It&#39;s widely used for everything from quick &quot;one-liners&quot; to full-scale application development.</p>
+
+<p>The language is intended to be practical (easy to use, efficient, complete) rather than beautiful (tiny, elegant, minimal). It combines (in the author&#39;s opinion, anyway) some of the best features of <b>sed</b>, <b>awk</b>, and <b>sh</b>, making it familiar and easy to use for Unix users to whip up quick solutions to annoying problems. Its general-purpose programming facilities support procedural, functional, and object-oriented programming paradigms, making Perl a comfortable language for the long haul on major projects, whatever your bent.</p>
+
+<p>Perl&#39;s roots in text processing haven&#39;t been forgotten over the years. It still boasts some of the most powerful regular expressions to be found anywhere, and its support for Unicode text is world-class. It handles all kinds of structured text, too, through an extensive collection of extensions. Those libraries, collected in the CPAN, provide ready-made solutions to an astounding array of problems. When they haven&#39;t set the standard themselves, they steal from the best -- just like Perl itself.</p>
+
+<h1 id="AVAILABILITY"><a class="permalink" href="#AVAILABILITY">#</a>AVAILABILITY</h1>
+
+<p>Perl is available for most operating systems, including virtually all Unix-like platforms. See <a href="https://perldoc.perl.org/5.42.0/perlport#Supported-Platforms">&quot;Supported Platforms&quot; in perlport</a> for a listing.</p>
+
+<h1 id="ENVIRONMENT"><a class="permalink" href="#ENVIRONMENT">#</a>ENVIRONMENT</h1>
+
+<p>See <a href="https://perldoc.perl.org/5.42.0/perlrun#ENVIRONMENT">&quot;ENVIRONMENT&quot; in perlrun</a>.</p>
+
+<h1 id="AUTHOR"><a class="permalink" href="#AUTHOR">#</a>AUTHOR</h1>
+
+<p>Larry Wall &lt;larry@wall.org&gt;, with the help of oodles of other folks.</p>
+
+<p>If your Perl success stories and testimonials may be of help to others who wish to advocate the use of Perl in their applications, or if you wish to simply express your gratitude to Larry and the Perl developers, please write to perl-thanks@perl.org .</p>
+
+<h1 id="FILES"><a class="permalink" href="#FILES">#</a>FILES</h1>
+
+<pre><code class="nohighlight">&quot;@INC&quot;                 locations of perl libraries</code></pre>
+
+<p>&quot;@INC&quot; above is a reference to the built-in variable of the same name; see <a href="https://perldoc.perl.org/5.42.0/perlvar">perlvar</a> for more information.</p>
+
+<h1 id="SEE-ALSO"><a class="permalink" href="#SEE-ALSO">#</a><a id="SEE"></a>SEE ALSO</h1>
+
+<dl>
+
+<dt id="https://www.perl.org/"><a class="permalink" href="#https://www.perl.org/">#</a><a id="https"></a><a id="https:-www.perl.org"></a><a href="https://www.perl.org/">https://www.perl.org/</a></dt>
+<dd>
+
+<p>the Perl homepage</p>
+
+</dd>
+<dt id="https://www.perl.com/"><a class="permalink" href="#https://www.perl.com/">#</a><a id="https1"></a><a id="https:-www.perl.com"></a><a href="https://www.perl.com/">https://www.perl.com/</a></dt>
+<dd>
+
+<p>Perl articles</p>
+
+</dd>
+<dt id="https://www.cpan.org/"><a class="permalink" href="#https://www.cpan.org/">#</a><a id="https2"></a><a id="https:-www.cpan.org"></a><a href="https://www.cpan.org/">https://www.cpan.org/</a></dt>
+<dd>
+
+<p>the Comprehensive Perl Archive</p>
+
+</dd>
+<dt id="https://www.pm.org/"><a class="permalink" href="#https://www.pm.org/">#</a><a id="https3"></a><a id="https:-www.pm.org"></a><a href="https://www.pm.org/">https://www.pm.org/</a></dt>
+<dd>
+
+<p>the Perl Mongers</p>
+
+</dd>
+</dl>
+
+<h1 id="DIAGNOSTICS"><a class="permalink" href="#DIAGNOSTICS">#</a>DIAGNOSTICS</h1>
+
+<p>Using the <code>use <a href="https://perldoc.perl.org/5.42.0/strict">strict</a></code> pragma ensures that all variables are properly declared and prevents other misuses of legacy Perl features. These are enabled by default within the scope of <code><a href="https://perldoc.perl.org/5.42.0/perlfunc#use-VERSION">use v5.12</a></code> (or higher).</p>
+
+<p>The <code>use <a href="https://perldoc.perl.org/5.42.0/warnings">warnings</a></code> pragma produces some lovely diagnostics. It is enabled by default when you say <code>use v5.35</code> (or higher). One can also use the <b>-w</b> flag, but its use is normally discouraged, because it gets applied to all executed Perl code, including that not under your control.</p>
+
+<p>See <a href="https://perldoc.perl.org/5.42.0/perldiag">perldiag</a> for explanations of all Perl&#39;s diagnostics. The <code>use <a href="https://perldoc.perl.org/5.42.0/diagnostics">diagnostics</a></code> pragma automatically turns Perl&#39;s normally terse warnings and errors into these longer forms.</p>
+
+<p>Compilation errors will tell you the line number of the error, with an indication of the next token or token type that was to be examined. (In a script passed to Perl via <b>-e</b> switches, each <b>-e</b> is counted as one line.)</p>
+
+<p>Setuid scripts have additional constraints that can produce error messages such as &quot;Insecure dependency&quot;. See <a href="https://perldoc.perl.org/5.42.0/perlsec">perlsec</a>.</p>
+
+<p>Did we mention that you should definitely consider using the <b>use <a href="https://perldoc.perl.org/5.42.0/warnings">warnings</a></b> pragma?</p>
+
+<h1 id="BUGS"><a class="permalink" href="#BUGS">#</a>BUGS</h1>
+
+<p>The behavior implied by the <b>use <a href="https://perldoc.perl.org/5.42.0/warnings">warnings</a></b> pragma is not mandatory.</p>
+
+<p>Perl is at the mercy of your machine&#39;s definitions of various operations such as type casting, atof(), and floating-point output with sprintf().</p>
+
+<p>If your stdio requires a seek or eof between reads and writes on a particular stream, so does Perl. (This doesn&#39;t apply to sysread() and syswrite().)</p>
+
+<p>While none of the built-in data types have any arbitrary size limits (apart from memory size), there are still a few arbitrary limits: a given variable name may not be longer than 251 characters. Line numbers displayed by diagnostics are internally stored as short integers, so they are limited to a maximum of 65535 (higher numbers usually being affected by wraparound).</p>
+
+<p>You may submit your bug reports (be sure to include full configuration information as output by the myconfig program in the perl source tree, or by <code>perl -V</code>) to <a href="https://github.com/Perl/perl5/issues">https://github.com/Perl/perl5/issues</a>.</p>
+
+<p>Perl actually stands for Pathologically Eclectic Rubbish Lister, but don&#39;t tell anyone I said that.</p>
+
+<h1 id="NOTES"><a class="permalink" href="#NOTES">#</a>NOTES</h1>
+
+<p>The Perl motto is &quot;There&#39;s more than one way to do it.&quot; Divining how many more is left as an exercise to the reader.</p>
+
+<p>The three principal virtues of a programmer are Laziness, Impatience, and Hubris. See the Camel Book for why.</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/5.42.0/perl by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:33 GMT -->
+</html>

@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/5.6.1/perltodo by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>perltodo - Perl TO-DO List - Perldoc Browser</title>
+    <link rel="search" href="../opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="../perltodo.html">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="../css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html"><img src="../images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.6.1</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="../perltodo.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0/perltodo">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/perltodo">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/perltodo">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/perltodo">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/perltodo">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/perltodo">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/perltodo">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/perltodo">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/perltodo">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/perltodo">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/perltodo">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/perltodo">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/perltodo">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/perltodo">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/perltodo">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/perltodo">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/perltodo">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/perltodo">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/perltodo">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/perltodo">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/perltodo">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/perltodo">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/perltodo">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/perltodo">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/perltodo">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/perltodo">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/perltodo">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/perltodo">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/perltodo">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/perltodo">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/perltodo">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/perltodo">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/perltodo">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/perltodo">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/perltodo">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/perltodo">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/perltodo">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/perltodo">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/perltodo">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/perltodo">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/perltodo">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/perltodo">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/perltodo">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/perltodo">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/perltodo">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/perltodo">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/perltodo">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/perltodo">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/perltodo">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/perltodo">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/perltodo">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/perltodo">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/perltodo">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/perltodo">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/perltodo">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/perltodo">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/perltodo">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/perltodo">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/perltodo">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/perltodo">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/perltodo">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/perltodo">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/perltodo">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/perltodo">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/perltodo">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/perltodo">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/perltodo">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/perltodo">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/perltodo">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/perltodo">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/perltodo">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/perltodo">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/perltodo">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/perltodo">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/perltodo">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/perltodo">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/perltodo">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/perltodo">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/perltodo">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.6.2/perltodo.html">5.6.2</a>
+          <a class="dropdown-item active" href="perltodo.html">5.6.1</a>
+          <a class="dropdown-item" href="../5.6.0/perltodo.html">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_04/perltodo">5.005_04</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_03/perltodo">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/perltodo">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/perltodo">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/perltodo">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/perltodo">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/perltodo">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/perltodo">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/perltodo">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/perltodo">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/perltodo">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/perltodo">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/perltodo">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/perltodo">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/perltodo">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/perltodo">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/perltodo">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/perltodo">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/perltodo">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/perltodo">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/perltodo">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/perltodo">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/perltodo">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/perltodo">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/perltodo">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="../js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/5.6.1/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="../js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="perltodo.html">perltodo</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/5.6.1/perltodo.txt">source</a>,
+            <a href="https://metacpan.org/pod/perltodo">CPAN</a>)
+          </div>
+        </div>
+        <div class="leading-notice">
+          You are viewing the version of this documentation from Perl 5.6.1.
+            <a href="../perltodo.html">View the latest version</a>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Infrastructure">Infrastructure</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Mailing-list-archives">Mailing list archives</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Bug-tracking-system">Bug tracking system</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Regression-Tests">Regression Tests</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Configure">Configure</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Install-HTML">Install HTML</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Perl-Language">Perl Language</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#64-bit-Perl">64-bit Perl</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Prototypes">Prototypes</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Perl-Internals">Perl Internals</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#magic_setisa">magic_setisa</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Garbage-Collection">Garbage Collection</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Reliable-signals">Reliable signals</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Interpolated-regex-performance-bugs">Interpolated regex performance bugs</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Memory-leaks-from-failed-eval/regcomp">Memory leaks from failed eval/regcomp</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Make-XS-easier-to-use">Make XS easier to use</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Make-embedded-Perl-easier-to-use">Make embedded Perl easier to use</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Namespace-cleanup">Namespace cleanup</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#MULTIPLICITY">MULTIPLICITY</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#MacPerl">MacPerl</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Documentation">Documentation</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#A-clear-division-into-tutorial-and-reference">A clear division into tutorial and reference</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Remove-the-artificial-distinction-between-operators-and-functions">Remove the artificial distinction between operators and functions</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#More-tutorials">More tutorials</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Include-a-search-tool">Include a search tool</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Include-a-locate-tool">Include a locate tool</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Separate-function-manpages-by-default">Separate function manpages by default</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Users-can&#39;t-find-the-manpages">Users can&#39;t find the manpages</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Install-ALL-Documentation">Install ALL Documentation</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Outstanding-issues-to-be-documented">Outstanding issues to be documented</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Adapt-www.linuxhq.com-for-Perl">Adapt www.linuxhq.com for Perl</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Replace-man-with-a-perl-program">Replace man with a perl program</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Unicode-tutorial">Unicode tutorial</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Modules">Modules</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Update-the-POSIX-extension-to-conform-with-the-POSIX-1003.1-Edition-2">Update the POSIX extension to conform with the POSIX 1003.1 Edition 2</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Module-versions">Module versions</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#New-modules">New modules</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Profiler">Profiler</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Tie-Modules">Tie Modules</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Procedural-options">Procedural options</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#RPC">RPC</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#y2k-localtime/gmtime">y2k localtime/gmtime</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Export-File::Find-variables">Export File::Find variables</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Ioctl">Ioctl</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Debugger-attach/detach">Debugger attach/detach</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Regular-Expression-debugger">Regular Expression debugger</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Alternative-RE-Syntax">Alternative RE Syntax</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Bundled-modules">Bundled modules</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Expect">Expect</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#GUI::Native">GUI::Native</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Update-semibroken-auxiliary-tools;-h2ph,-a2p,-etc.">Update semibroken auxiliary tools; h2ph, a2p, etc.</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#pod2html">pod2html</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Podchecker">Podchecker</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Tom&#39;s-Wishes">Tom&#39;s Wishes</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Webperl">Webperl</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Mobile-agents">Mobile agents</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#POSIX-on-non-POSIX">POSIX on non-POSIX</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Portable-installations">Portable installations</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Win32-Stuff">Win32 Stuff</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Rename-new-headers-to-be-consistent-with-the-rest">Rename new headers to be consistent with the rest</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Sort-out-the-spawnvp()-mess">Sort out the spawnvp() mess</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Work-out-DLL-versioning">Work out DLL versioning</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Style-check">Style-check</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Would-be-nice-to-have">Would be nice to have</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Possible-pragmas">Possible pragmas</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#&#39;less&#39;">&#39;less&#39;</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Optimizations">Optimizations</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#constant-function-cache">constant function cache</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#foreach(reverse...)">foreach(reverse...)</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Cache-eval-tree">Cache eval tree</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#rcatmaybe">rcatmaybe</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Shrink-opcode-tables">Shrink opcode tables</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Cache-hash-value">Cache hash value</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Optimize-away-@_-where-possible">Optimize away @_ where possible</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Optimize-sort-by-%7B-$a-%3C=%3E-$b-%7D">Optimize sort by { $a &lt;=&gt; $b }</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Rewrite-regexp-parser-for-better-integrated-optimization">Rewrite regexp parser for better integrated optimization</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Vague-possibilities">Vague possibilities</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#To-Do-Or-Not-To-Do">To Do Or Not To Do</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Making-my()-work-on-%22package%22-variables">Making my() work on &quot;package&quot; variables</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#%22or%22-testing-defined-not-truth">&quot;or&quot; testing defined not truth</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#%22dynamic%22-lexicals">&quot;dynamic&quot; lexicals</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#%22class%22-based,-rather-than-package-based-%22lexicals%22">&quot;class&quot;-based, rather than package-based &quot;lexicals&quot;</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Threading">Threading</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Modules1">Modules</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Testing">Testing</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#$AUTOLOAD">$AUTOLOAD</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#exit/die">exit/die</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#External-threads">External threads</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Thread::Pool">Thread::Pool</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#thread-safety">thread-safety</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Per-thread-GVs">Per-thread GVs</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Compiler">Compiler</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Optimization">Optimization</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Byteperl">Byteperl</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Precompiled-modules">Precompiled modules</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Executables">Executables</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Typed-lexicals">Typed lexicals</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Win32">Win32</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#END-blocks">END blocks</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#_AUTOLOAD">_AUTOLOAD</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#comppadlist">comppadlist</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Cached-compilation">Cached compilation</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Recently-Finished-Tasks">Recently Finished Tasks</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Figure-a-way-out-of-$%5E(capital-letter)">Figure a way out of $^(capital letter)</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Filenames">Filenames</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Foreign-lines">Foreign lines</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Namespace-cleanup1">Namespace cleanup</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#ISA.pm">ISA.pm</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#gettimeofday">gettimeofday</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#autocroak?">autocroak?</a>
+              </li>
+          </ul>
+
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>perltodo - Perl TO-DO List</p>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>This is a list of wishes for Perl. It is maintained by Nathan Torkington for the Perl porters. Send updates to <i>perl5-porters@perl.org</i>. If you want to work on any of these projects, be sure to check the perl5-porters archives for past ideas, flames, and propaganda. This will save you time and also prevent you from implementing something that Larry has already vetoed. One set of archives may be found at:</p>
+
+<pre><code class="plaintext">http://www.xray.mpe.mpg.de/mailing-lists/perl5-porters/</code></pre>
+
+<h1 id="Infrastructure"><a class="permalink" href="#Infrastructure">#</a>Infrastructure</h1>
+
+<h2 id="Mailing-list-archives"><a class="permalink" href="#Mailing-list-archives">#</a><a id="Mailing"></a>Mailing list archives</h2>
+
+<p>Chaim suggests contacting egroup and asking them to archive the other perl.org mailing lists. Probably not advocacy, but definitely perl6-porters, etc.</p>
+
+<h2 id="Bug-tracking-system"><a class="permalink" href="#Bug-tracking-system">#</a><a id="Bug"></a>Bug tracking system</h2>
+
+<p>Richard Foley <i>richard@perl.org</i> is writing one. We looked at several, like gnats and the Debian system, but at the time we investigated them, none met our needs. Since then, Jitterbug has matured, and may be worth reinvestigation.</p>
+
+<p>The system we&#39;ve developed is the recipient of perlbug mail, and any followups it generates from perl5-porters. New bugs are entered into a mysql database, and sent on to perl5-porters with the subject line rewritten to include a &quot;ticket number&quot; (unique ID for the new bug). If the incoming message already had a ticket number in the subject line, then the message is logged against that bug. There is a separate email interface (not forwarding to p5p) that permits porters to claim, categorize, and close tickets.</p>
+
+<p>There is also a web interface to the system at http://bugs.perl.org.</p>
+
+<p>The current delay in implementation is caused by perl.org lockups. One suspect is the mail handling system, possibly going into loops.</p>
+
+<p>We still desperately need a bugmaster, someone who will look at every new &quot;bug&quot; and kill those that we already know about, those that are not bugs at all, etc.</p>
+
+<h2 id="Regression-Tests"><a class="permalink" href="#Regression-Tests">#</a><a id="Regression1"></a>Regression Tests</h2>
+
+<p>The test suite for Perl serves two needs: ensuring features work, and ensuring old bugs have not been reintroduced. Both need work.</p>
+
+<p>Brent LaVelle (lavelle@metronet.com) has stepped forward to work on performance tests and improving the size of the test suite.</p>
+
+<dl>
+
+<dt id="Coverage"><a class="permalink" href="#Coverage">#</a>Coverage</dt>
+<dd>
+
+<p>Do the tests that come with Perl exercise every line (or every block, or ...) of the Perl interpreter, and if not then how can we make them do so?</p>
+
+</dd>
+<dt id="Regression"><a class="permalink" href="#Regression">#</a>Regression</dt>
+<dd>
+
+<p>No bug fixes should be made without a corresponding testsuite addition. This needs a dedicated enforcer, as the current pumpking is either too lazy or too stupid or both and lets enforcement wander all over the map. :-)</p>
+
+</dd>
+<dt id="__DIE__"><a class="permalink" href="#__DIE__">#</a><a id="DIE__"></a>__DIE__</dt>
+<dd>
+
+<p>Tests that fail need to be of a form that can be readily mailed to perlbug and diagnosed with minimal back-and-forth&#39;s to determine which test failed, due to what cause, etc.</p>
+
+</dd>
+<dt id="suidperl"><a class="permalink" href="#suidperl">#</a>suidperl</dt>
+<dd>
+
+<p>We need regression/sanity tests for suidperl</p>
+
+</dd>
+<dt id="The-25%-slowdown-from-perl4-to-perl5"><a class="permalink" href="#The-25%25-slowdown-from-perl4-to-perl5">#</a><a id="The"></a><a id="The-25-slowdown-from-perl4-to-perl5"></a>The 25% slowdown from perl4 to perl5</dt>
+<dd>
+
+<p>This value may or may not be accurate, but it certainly is eye-catching. For some things perl5 is faster than perl4, but often the reliability and extensibility have come at a cost of speed. The benchmark suite that Gisle released earlier has been hailed as both a fantastic solution and as a source of entirely meaningless figures. Do we need to test &quot;real applications&quot;? Can you do so? Anyone have machines to dedicate to the task? Identify the things that have grown slower, and see if there&#39;s a way to make them faster.</p>
+
+</dd>
+</dl>
+
+<h1 id="Configure"><a class="permalink" href="#Configure">#</a>Configure</h1>
+
+<p>Andy Dougherty maintain(ed|s) a list of &quot;todo&quot; items for the configure that comes with Perl. See Porting/pumpkin.pod in the latest source release.</p>
+
+<h2 id="Install-HTML"><a class="permalink" href="#Install-HTML">#</a><a id="Install"></a>Install HTML</h2>
+
+<p>Have &quot;make install&quot; give you the option to install HTML as well. This would be part of Configure. Andy Wardley (certified Perl studmuffin) will look into the current problems of HTML installation--is &#39;installhtml&#39; preventing this from happening cleanly, or is pod2html the problem? If the latter, Brad Appleton&#39;s pod work may fix the problem for free.</p>
+
+<h1 id="Perl-Language"><a class="permalink" href="#Perl-Language">#</a><a id="Perl"></a>Perl Language</h1>
+
+<h2 id="64-bit-Perl"><a class="permalink" href="#64-bit-Perl">#</a><a id="64"></a><a id="bit-Perl"></a>64-bit Perl</h2>
+
+<p>Verify complete 64 bit support so that the value of sysseek, or <code>-s</code>, or stat(), or tell can fit into a perl number without losing precision. Work with the perl-64bit mailing list on perl.org.</p>
+
+<h2 id="Prototypes"><a class="permalink" href="#Prototypes">#</a>Prototypes</h2>
+
+<dl>
+
+<dt id="Named-prototypes"><a class="permalink" href="#Named-prototypes">#</a><a id="Named"></a>Named prototypes</dt>
+<dd>
+
+<p>Add proper named prototypes that actually work usefully.</p>
+
+</dd>
+<dt id="Indirect-objects"><a class="permalink" href="#Indirect-objects">#</a><a id="Indirect"></a>Indirect objects</dt>
+<dd>
+
+<p>Fix prototype bug that forgets indirect objects.</p>
+
+</dd>
+<dt id="Method-calls"><a class="permalink" href="#Method-calls">#</a><a id="Method"></a>Method calls</dt>
+<dd>
+
+<p>Prototypes for method calls.</p>
+
+</dd>
+<dt id="Context"><a class="permalink" href="#Context">#</a>Context</dt>
+<dd>
+
+<p>Return context prototype declarations.</p>
+
+</dd>
+<dt id="Scoped-subs"><a class="permalink" href="#Scoped-subs">#</a><a id="Scoped"></a>Scoped subs</dt>
+<dd>
+
+<p>lexically-scoped subs, e.g. my sub</p>
+
+</dd>
+</dl>
+
+<h1 id="Perl-Internals"><a class="permalink" href="#Perl-Internals">#</a><a id="Perl1"></a>Perl Internals</h1>
+
+<h2 id="magic_setisa"><a class="permalink" href="#magic_setisa">#</a>magic_setisa</h2>
+
+<p><code>magic_setisa</code> should be made to update %FIELDS [???]</p>
+
+<h2 id="Garbage-Collection"><a class="permalink" href="#Garbage-Collection">#</a><a id="Garbage"></a>Garbage Collection</h2>
+
+<p>There was talk of a mark-and-sweep garbage collector at TPC2, but the (to users) unpredictable nature of its behaviour put some off. Sarathy, I believe, did the work. Here&#39;s what he has to say:</p>
+
+<p>Yeah, I hope to implement it someday too. The points that were raised in TPC2 were all to do with calling DESTROY() methods, but I think we can accommodate that by extending bless() to stash extra information for objects so we track their lifetime accurately for those that want their DESTROY() to be predictable (this will be a speed hit, naturally, and will therefore be optional, naturally. :)</p>
+
+<p>[N.B. Don&#39;t even ask me about this now! When I have the time to write a cogent summary, I&#39;ll post it.]</p>
+
+<h2 id="Reliable-signals"><a class="permalink" href="#Reliable-signals">#</a><a id="Reliable"></a>Reliable signals</h2>
+
+<p>Sarathy and Dan Sugalski are working on this. Chip posted a patch earlier, but it was not accepted into 5.005. The issue is tricky, because it has the potential to greatly slow down the core.</p>
+
+<p>There are at least three things to consider:</p>
+
+<dl>
+
+<dt id="Alternate-runops()-for-signal-despatch"><a class="permalink" href="#Alternate-runops()-for-signal-despatch">#</a><a id="Alternate"></a><a id="Alternate-runops-for-signal-despatch"></a>Alternate runops() for signal despatch</dt>
+<dd>
+
+<p>Sarathy and Dan are discussed this on perl5-porters.</p>
+
+</dd>
+<dt id="Figure-out-how-to-die()-in-delayed-sighandler"><a class="permalink" href="#Figure-out-how-to-die()-in-delayed-sighandler">#</a><a id="Figure"></a><a id="Figure-out-how-to-die-in-delayed-sighandler"></a>Figure out how to die() in delayed sighandler</dt>
+<dd>
+
+</dd>
+<dt id="Add-tests-for-Thread::Signal"><a class="permalink" href="#Add-tests-for-Thread::Signal">#</a><a id="Add"></a>Add tests for Thread::Signal</dt>
+<dd>
+
+</dd>
+<dt id="Automatic-tests-against-CPAN"><a class="permalink" href="#Automatic-tests-against-CPAN">#</a><a id="Automatic"></a>Automatic tests against CPAN</dt>
+<dd>
+
+<p>Is there some way to automatically build all/most of CPAN with the new Perl and check that the modules there pass all the tests?</p>
+
+</dd>
+</dl>
+
+<h2 id="Interpolated-regex-performance-bugs"><a class="permalink" href="#Interpolated-regex-performance-bugs">#</a><a id="Interpolated"></a>Interpolated regex performance bugs</h2>
+
+<pre><code>while (&lt;&gt;) {
+  $found = 0;
+  foreach $pat (@patterns) {
+    $found++ if /$pat/o;
+  }
+  print if $found;
+}</code></pre>
+
+<p>The qr// syntax added in 5.005 has solved this problem, but it needs more thorough documentation.</p>
+
+<h2 id="Memory-leaks-from-failed-eval/regcomp"><a class="permalink" href="#Memory-leaks-from-failed-eval/regcomp">#</a><a id="Memory"></a><a id="Memory-leaks-from-failed-eval-regcomp"></a>Memory leaks from failed eval/regcomp</h2>
+
+<p>The only known memory leaks in Perl are in failed code or regexp compilation. Fix this. Hugo Van Der Sanden will attempt this but won&#39;t have tuits until January 1999.</p>
+
+<h2 id="Make-XS-easier-to-use"><a class="permalink" href="#Make-XS-easier-to-use">#</a><a id="Make"></a>Make XS easier to use</h2>
+
+<p>There was interest in SWIG from porters, but nothing has happened lately.</p>
+
+<h2 id="Make-embedded-Perl-easier-to-use"><a class="permalink" href="#Make-embedded-Perl-easier-to-use">#</a><a id="Make1"></a>Make embedded Perl easier to use</h2>
+
+<p>This is probably difficult for the same reasons that &quot;XS For Dummies&quot; will be difficult.</p>
+
+<h2 id="Namespace-cleanup"><a class="permalink" href="#Namespace-cleanup">#</a><a id="Namespace"></a>Namespace cleanup</h2>
+
+<pre><code class="plaintext">CPP-space:    restrict CPP symbols exported from headers
+header-space: move into CORE/perl/
+API-space:    begin list of things that constitute public api
+env-space:    Configure should use PERL_CONFIG instead of CONFIG etc.</code></pre>
+
+<h2 id="MULTIPLICITY"><a class="permalink" href="#MULTIPLICITY">#</a>MULTIPLICITY</h2>
+
+<p>Complete work on safe recursive interpreters <code>Perl-&gt;new()</code>. Sarathy says that a reference implementation exists.</p>
+
+<h2 id="MacPerl"><a class="permalink" href="#MacPerl">#</a>MacPerl</h2>
+
+<p>Chris Nandor and Matthias Neeracher are working on better integrating MacPerl into the Perl distribution.</p>
+
+<h1 id="Documentation"><a class="permalink" href="#Documentation">#</a>Documentation</h1>
+
+<p>There&#39;s a lot of documentation that comes with Perl. The quantity of documentation makes it difficult for users to know which section of which manpage to read in order to solve their problem. Tom Christiansen has done much of the documentation work in the past.</p>
+
+<h2 id="A-clear-division-into-tutorial-and-reference"><a class="permalink" href="#A-clear-division-into-tutorial-and-reference">#</a><a id="A"></a>A clear division into tutorial and reference</h2>
+
+<p>Some manpages (e.g., perltoot and perlreftut) clearly set out to educate the reader about a subject. Other manpages (e.g., perlsub) are references for which there is no tutorial, or are references with a slight tutorial bent. If things are either tutorial or reference, then the reader knows which manpage to read to learn about a subject, and which manpage to read to learn all about an aspect of that subject. Part of the solution to this is:</p>
+
+<h2 id="Remove-the-artificial-distinction-between-operators-and-functions"><a class="permalink" href="#Remove-the-artificial-distinction-between-operators-and-functions">#</a><a id="Remove"></a>Remove the artificial distinction between operators and functions</h2>
+
+<p>History shows us that users, and often porters, aren&#39;t clear on the operator-function distinction. The present split in reference material between perlfunc and perlop hinders user navigation. Given that perlfunc is by far the larger of the two, move operator reference into perlfunc.</p>
+
+<h2 id="More-tutorials"><a class="permalink" href="#More-tutorials">#</a><a id="More"></a>More tutorials</h2>
+
+<p>More documents of a tutorial nature could help. Here are some candidates:</p>
+
+<dl>
+
+<dt id="Regular-expressions"><a class="permalink" href="#Regular-expressions">#</a><a id="Regular"></a>Regular expressions</dt>
+<dd>
+
+<p>Robin Berjon (r.berjon@ltconsulting.net) has volunteered.</p>
+
+</dd>
+<dt id="I/O"><a class="permalink" href="#I/O">#</a><a id="I"></a><a id="I-O"></a>I/O</dt>
+<dd>
+
+<p>Mark-Jason Dominus (mjd@plover.com) has an outline for perliotut.</p>
+
+</dd>
+<dt id="pack/unpack"><a class="permalink" href="#pack/unpack">#</a><a id="pack"></a><a id="pack-unpack"></a>pack/unpack</dt>
+<dd>
+
+<p>This is badly needed. There has been some discussion on the subject on perl5-porters.</p>
+
+</dd>
+<dt id="Debugging"><a class="permalink" href="#Debugging">#</a>Debugging</dt>
+<dd>
+
+<p>Ronald Kimball (rjk@linguist.dartmouth.edu) has volunteered.</p>
+
+</dd>
+</dl>
+
+<h2 id="Include-a-search-tool"><a class="permalink" href="#Include-a-search-tool">#</a><a id="Include"></a>Include a search tool</h2>
+
+<p>perldoc should be able to &#39;grep&#39; fulltext indices of installed POD files. This would let people say:</p>
+
+<pre><code class="plaintext">perldoc -find printing numbers with commas</code></pre>
+
+<p>and get back the perlfaq entry on &#39;commify&#39;.</p>
+
+<p>This solution, however, requires documentation to contain the keywords the user is searching for. Even when the users know what they&#39;re looking for, often they can&#39;t spell it.</p>
+
+<h2 id="Include-a-locate-tool"><a class="permalink" href="#Include-a-locate-tool">#</a><a id="Include1"></a>Include a locate tool</h2>
+
+<p>perldoc should be able to help people find the manpages on a particular high-level subject:</p>
+
+<pre><code class="plaintext">perldoc -find web</code></pre>
+
+<p>would tell them manpages, web pages, and books with material on web programming. Similarly <code>perldoc -find databases</code>, <code>perldoc -find references</code> and so on.</p>
+
+<p>We need something in the vicinity of:</p>
+
+<pre><code class="plaintext">% perl -help random stuff
+No documentation for perl function `random stuff&#39; found
+The following entry in perlfunc.pod matches /random/a:
+  =item rand EXPR
+
+  =item rand
+
+  Returns a random fractional number greater than or equal to C&lt;0&gt; and less
+  than the value of EXPR.  (EXPR should be positive.)  If EXPR is
+  omitted, the value C&lt;1&gt; is used.  Automatically calls C&lt;srand()&gt; unless
+  C&lt;srand()&gt; has already been called.  See also C&lt;srand()&gt;.
+
+  (Note: If your rand function consistently returns numbers that are too
+  large or too small, then your version of Perl was probably compiled
+  with the wrong number of RANDBITS.)
+The following pod pages seem to have /stuff/a:
+  perlfunc.pod	(7 hits)
+  perlfaq7.pod	(6 hits)
+  perlmod.pod		(4 hits)
+  perlsyn.pod		(3 hits)
+  perlfaq8.pod	(2 hits)
+  perlipc.pod		(2 hits)
+  perl5004delta.pod	(1 hit)
+  perl5005delta.pod	(1 hit)
+  perlcall.pod	(1 hit)
+  perldelta.pod	(1 hit)
+  perlfaq3.pod	(1 hit)
+  perlfaq5.pod	(1 hit)
+  perlhist.pod	(1 hit)
+  perlref.pod		(1 hit)
+  perltoc.pod		(1 hit)
+  perltrap.pod	(1 hit)
+Proceed to open perlfunc.pod? [y] n
+Do you want to speak perl interactively? [y] n
+Should I dial 911? [y] n
+Do you need psychiatric help? [y] y
+&lt;PELIZA&gt; Hi, what bothers you today?
+         A Python programmer in the next cubby is driving me nuts!
+&lt;PELIZA&gt; Hmm, thats fixable.  Just [rest censored]</code></pre>
+
+<h2 id="Separate-function-manpages-by-default"><a class="permalink" href="#Separate-function-manpages-by-default">#</a><a id="Separate"></a>Separate function manpages by default</h2>
+
+<p>Perl should install &#39;manpages&#39; for every function/operator into the 3pl or 3p manual section. By default. The splitman program in the Perl source distribution does the work of turning big perlfunc into little 3p pages.</p>
+
+<h2 id="Users-can&#39;t-find-the-manpages"><a class="permalink" href="#Users-can&#39;t-find-the-manpages">#</a><a id="Users"></a><a id="Users-cant-find-the-manpages"></a>Users can&#39;t find the manpages</h2>
+
+<p>Make <code>perldoc</code> tell users what they need to add to their .login or .cshrc to set their MANPATH correctly.</p>
+
+<h2 id="Install-ALL-Documentation"><a class="permalink" href="#Install-ALL-Documentation">#</a><a id="Install1"></a>Install ALL Documentation</h2>
+
+<p>Make the standard documentation kit include the VMS, OS/2, Win32, Threads, etc information. installperl and pod/Makefile should know enough to copy README.foo to perlfoo.pod before building everything, when appropriate.</p>
+
+<h2 id="Outstanding-issues-to-be-documented"><a class="permalink" href="#Outstanding-issues-to-be-documented">#</a><a id="Outstanding"></a>Outstanding issues to be documented</h2>
+
+<p>Tom has a list of 5.005_5* features or changes that require documentation.</p>
+
+<p>Create one document that coherently explains the delta between the last camel release and the current release. perldelta was supposed to be that, but no longer. The things in perldelta never seemed to get placed in the right places in the real manpages, either. This needs work.</p>
+
+<h2 id="Adapt-www.linuxhq.com-for-Perl"><a class="permalink" href="#Adapt-www.linuxhq.com-for-Perl">#</a><a id="Adapt"></a>Adapt www.linuxhq.com for Perl</h2>
+
+<p>This should help glorify documentation and get more people involved in perl development.</p>
+
+<h2 id="Replace-man-with-a-perl-program"><a class="permalink" href="#Replace-man-with-a-perl-program">#</a><a id="Replace"></a>Replace man with a perl program</h2>
+
+<p>Can we reimplement man in Perl? Tom has a start. I believe some of the Linux systems distribute a manalike. Alternatively, build on perldoc to remove the unfeatures like &quot;is slow&quot; and &quot;has no apropos&quot;.</p>
+
+<h2 id="Unicode-tutorial"><a class="permalink" href="#Unicode-tutorial">#</a><a id="Unicode"></a>Unicode tutorial</h2>
+
+<p>We could use more work on helping people understand Perl&#39;s new Unicode support that Larry has created.</p>
+
+<h1 id="Modules"><a class="permalink" href="#Modules">#</a>Modules</h1>
+
+<h2 id="Update-the-POSIX-extension-to-conform-with-the-POSIX-1003.1-Edition-2"><a class="permalink" href="#Update-the-POSIX-extension-to-conform-with-the-POSIX-1003.1-Edition-2">#</a><a id="Update"></a>Update the POSIX extension to conform with the POSIX 1003.1 Edition 2</h2>
+
+<p>The current state of the POSIX extension is as of Edition 1, 1991, whereas the Edition 2 came out in 1996. ISO/IEC 9945:1-1996(E), ANSI/IEEE Std 1003.1, 1996 Edition. ISBN 1-55937-573-6. The updates were legion: threads, IPC, and real time extensions.</p>
+
+<h2 id="Module-versions"><a class="permalink" href="#Module-versions">#</a><a id="Module"></a>Module versions</h2>
+
+<p>Automate the checking of versions in the standard distribution so it&#39;s easy for a pumpking to check whether CPAN has a newer version that we should be including?</p>
+
+<h2 id="New-modules"><a class="permalink" href="#New-modules">#</a><a id="New"></a>New modules</h2>
+
+<p>Which modules should be added to the standard distribution? This ties in with the SDK discussed on the perl-sdk list at perl.org.</p>
+
+<h2 id="Profiler"><a class="permalink" href="#Profiler">#</a>Profiler</h2>
+
+<p>Make the profiler (Devel::DProf) part of the standard release, and document it well.</p>
+
+<h2 id="Tie-Modules"><a class="permalink" href="#Tie-Modules">#</a><a id="Tie"></a>Tie Modules</h2>
+
+<dl>
+
+<dt id="VecArray"><a class="permalink" href="#VecArray">#</a>VecArray</dt>
+<dd>
+
+<p>Implement array using vec(). Nathan Torkington has working code to do this.</p>
+
+</dd>
+<dt id="SubstrArray"><a class="permalink" href="#SubstrArray">#</a>SubstrArray</dt>
+<dd>
+
+<p>Implement array using substr()</p>
+
+</dd>
+<dt id="VirtualArray"><a class="permalink" href="#VirtualArray">#</a>VirtualArray</dt>
+<dd>
+
+<p>Implement array using a file</p>
+
+</dd>
+<dt id="ShiftSplice"><a class="permalink" href="#ShiftSplice">#</a>ShiftSplice</dt>
+<dd>
+
+<p>Defines shift et al in terms of splice method</p>
+
+</dd>
+</dl>
+
+<h2 id="Procedural-options"><a class="permalink" href="#Procedural-options">#</a><a id="Procedural"></a>Procedural options</h2>
+
+<p>Support procedural interfaces for the common cases of Perl&#39;s gratuitously OOO modules. Tom objects to &quot;use IO::File&quot; reading many thousands of lines of code.</p>
+
+<h2 id="RPC"><a class="permalink" href="#RPC">#</a>RPC</h2>
+
+<p>Write a module for transparent, portable remote procedure calls. (Not core). This touches on the CORBA and ILU work.</p>
+
+<h2 id="y2k-localtime/gmtime"><a class="permalink" href="#y2k-localtime/gmtime">#</a><a id="y2k"></a><a id="y2k-localtime-gmtime"></a>y2k localtime/gmtime</h2>
+
+<p>Write a module, Y2k::Catch, which overloads localtime and gmtime&#39;s returned year value and catches &quot;bad&quot; attempts to use it.</p>
+
+<h2 id="Export-File::Find-variables"><a class="permalink" href="#Export-File::Find-variables">#</a><a id="Export"></a>Export File::Find variables</h2>
+
+<p>Make File::Find export <code>$name</code> etc manually, at least if asked to.</p>
+
+<h2 id="Ioctl"><a class="permalink" href="#Ioctl">#</a>Ioctl</h2>
+
+<p>Finish a proper Ioctl module.</p>
+
+<h2 id="Debugger-attach/detach"><a class="permalink" href="#Debugger-attach/detach">#</a><a id="Debugger"></a><a id="Debugger-attach-detach"></a>Debugger attach/detach</h2>
+
+<p>Permit a user to debug an already-running program.</p>
+
+<h2 id="Regular-Expression-debugger"><a class="permalink" href="#Regular-Expression-debugger">#</a><a id="Regular1"></a>Regular Expression debugger</h2>
+
+<p>Create a visual profiler/debugger tool that stepped you through the execution of a regular expression point by point. Ilya has a module to color-code and display regular expression parses and executions. There&#39;s something at http://tkworld.org/ that might be a good start, it&#39;s a Tk/Tcl RE wizard, that builds regexen of many flavours.</p>
+
+<h2 id="Alternative-RE-Syntax"><a class="permalink" href="#Alternative-RE-Syntax">#</a><a id="Alternative"></a>Alternative RE Syntax</h2>
+
+<p>Make an alternative regular expression syntax that is accessed through a module. For instance,</p>
+
+<pre><code>use RE;
+$re = start_of_line()
+    -&gt;literal(&quot;1998/10/08&quot;)
+    -&gt;optional( whitespace() )
+    -&gt;literal(&quot;[&quot;)
+    -&gt;remember( many( or( &quot;-&quot;, digit() ) ) );
+
+if (/$re/) {
+  print &quot;time is $1\n&quot;;
+}</code></pre>
+
+<p>Newbies to regular expressions typically only use a subset of the full language. Perhaps you wouldn&#39;t have to implement the full feature set.</p>
+
+<h2 id="Bundled-modules"><a class="permalink" href="#Bundled-modules">#</a><a id="Bundled"></a>Bundled modules</h2>
+
+<p>Nicholas Clark (nick@flirble.org) had a patch for storing modules in zipped format. This needs exploring and concluding.</p>
+
+<h2 id="Expect"><a class="permalink" href="#Expect">#</a>Expect</h2>
+
+<p>Adopt IO::Tty, make it as portable as Don Libes&#39; &quot;expect&quot; (can we link against expect code?), and perfect a Perl version of expect. IO::Tty and expect could then be distributed as part of the core distribution, replacing Comm.pl and other hacks.</p>
+
+<h2 id="GUI::Native"><a class="permalink" href="#GUI::Native">#</a><a id="GUI"></a>GUI::Native</h2>
+
+<p>A simple-to-use interface to native graphical abilities would be welcomed. Oh, Perl&#39;s access Tk is nice enough, and reasonably portable, but it&#39;s not particularly as fast as one would like. Simple access to the mouse&#39;s cut buffer or mouse-presses shouldn&#39;t required loading a few terabytes of Tk code.</p>
+
+<h2 id="Update-semibroken-auxiliary-tools;-h2ph,-a2p,-etc."><a class="permalink" href="#Update-semibroken-auxiliary-tools;-h2ph,-a2p,-etc.">#</a><a id="Update1"></a><a id="Update-semibroken-auxiliary-tools-h2ph-a2p-etc"></a>Update semibroken auxiliary tools; h2ph, a2p, etc.</h2>
+
+<p>Kurt Starsinic is working on h2ph. mjd has fixed bugs in a2p in the past. a2p apparently doesn&#39;t work on nawk and gawk extensions. Graham Barr has an Include module that does h2ph work at runtime.</p>
+
+<h2 id="pod2html"><a class="permalink" href="#pod2html">#</a>pod2html</h2>
+
+<p>A short-term fix: pod2html generates absolute HTML links. Make it generate relative links.</p>
+
+<h2 id="Podchecker"><a class="permalink" href="#Podchecker">#</a>Podchecker</h2>
+
+<p>Something like lint for Pod would be good. Something that catches common errors as well as gross ones. Brad Appleton is putting together something as part of his PodParser work.</p>
+
+<h1 id="Tom&#39;s-Wishes"><a class="permalink" href="#Tom&#39;s-Wishes">#</a><a id="Tom"></a><a id="Toms-Wishes"></a>Tom&#39;s Wishes</h1>
+
+<h2 id="Webperl"><a class="permalink" href="#Webperl">#</a>Webperl</h2>
+
+<p>Design a webperl environment that&#39;s as tightly integrated and as easy-to-use as Perl&#39;s current command-line environment.</p>
+
+<h2 id="Mobile-agents"><a class="permalink" href="#Mobile-agents">#</a><a id="Mobile"></a>Mobile agents</h2>
+
+<p>More work on a safe and secure execution environment for mobile agents would be neat; the Safe.pm module is a start, but there&#39;s a still a lot to be done in that area. Adopt Penguin?</p>
+
+<h2 id="POSIX-on-non-POSIX"><a class="permalink" href="#POSIX-on-non-POSIX">#</a><a id="POSIX"></a>POSIX on non-POSIX</h2>
+
+<p>Standard programming constructs for non-POSIX systems would help a lot of programmers stuck on primitive, legacy systems. For example, Microsoft still hasn&#39;t made a usable POSIX interface on their clunky systems, which means that standard operations such as alarm() and fork(), both critical for sophisticated client-server programming, must both be kludged around.</p>
+
+<p>I&#39;m unsure whether Tom means to emulate alarm( )and fork(), or merely to provide a document like perlport.pod to say which features are portable and which are not.</p>
+
+<h2 id="Portable-installations"><a class="permalink" href="#Portable-installations">#</a><a id="Portable"></a>Portable installations</h2>
+
+<p>Figure out a portable semi-gelled installation, that is, one without full paths. Larry has said that he&#39;s thinking about this. Ilya pointed out that perllib_mangle() is good for this.</p>
+
+<h1 id="Win32-Stuff"><a class="permalink" href="#Win32-Stuff">#</a><a id="Win321"></a>Win32 Stuff</h1>
+
+<h2 id="Rename-new-headers-to-be-consistent-with-the-rest"><a class="permalink" href="#Rename-new-headers-to-be-consistent-with-the-rest">#</a><a id="Rename"></a>Rename new headers to be consistent with the rest</h2>
+
+<h2 id="Sort-out-the-spawnvp()-mess"><a class="permalink" href="#Sort-out-the-spawnvp()-mess">#</a><a id="Sort"></a><a id="Sort-out-the-spawnvp-mess"></a>Sort out the spawnvp() mess</h2>
+
+<h2 id="Work-out-DLL-versioning"><a class="permalink" href="#Work-out-DLL-versioning">#</a><a id="Work"></a>Work out DLL versioning</h2>
+
+<h2 id="Style-check"><a class="permalink" href="#Style-check">#</a><a id="Style"></a>Style-check</h2>
+
+<h1 id="Would-be-nice-to-have"><a class="permalink" href="#Would-be-nice-to-have">#</a><a id="Would"></a>Would be nice to have</h1>
+
+<dl>
+
+<dt id="pack-&quot;(stuff)*&quot;"><a class="permalink" href="#pack-%22(stuff)*%22">#</a><a id="pack1"></a><a id="pack-stuff"></a><code>pack &quot;(stuff)*&quot;</code></dt>
+<dd>
+
+</dd>
+<dt id="Contiguous-bitfields-in-pack/unpack"><a class="permalink" href="#Contiguous-bitfields-in-pack/unpack">#</a><a id="Contiguous"></a><a id="Contiguous-bitfields-in-pack-unpack"></a>Contiguous bitfields in pack/unpack</dt>
+<dd>
+
+</dd>
+<dt id="lexperl"><a class="permalink" href="#lexperl">#</a>lexperl</dt>
+<dd>
+
+</dd>
+<dt id="Bundled-perl-preprocessor"><a class="permalink" href="#Bundled-perl-preprocessor">#</a><a id="Bundled1"></a>Bundled perl preprocessor</dt>
+<dd>
+
+</dd>
+<dt id="Use-posix-calls-internally-where-possible"><a class="permalink" href="#Use-posix-calls-internally-where-possible">#</a><a id="Use"></a>Use posix calls internally where possible</dt>
+<dd>
+
+</dd>
+<dt id="format-BOTTOM"><a class="permalink" href="#format-BOTTOM">#</a><a id="format"></a>format BOTTOM</dt>
+<dd>
+
+</dd>
+<dt id="-i-rename-file-only-when-successfully-changed"><a class="permalink" href="#-i-rename-file-only-when-successfully-changed">#</a><a id="i-rename-file-only-when-successfully-changed"></a>-i rename file only when successfully changed</dt>
+<dd>
+
+</dd>
+<dt id="All-ARGV-input-should-act-like-&lt;&gt;"><a class="permalink" href="#All-ARGV-input-should-act-like-%3C%3E">#</a><a id="All"></a><a id="All-ARGV-input-should-act-like"></a>All ARGV input should act like &lt;&gt;</dt>
+<dd>
+
+</dd>
+<dt id="report-HANDLE-[formats]."><a class="permalink" href="#report-HANDLE-%5Bformats%5D.">#</a><a id="report"></a><a id="report-HANDLE-formats"></a>report HANDLE [formats].</dt>
+<dd>
+
+</dd>
+<dt id="support-in-perlmain-to-rerun-debugger"><a class="permalink" href="#support-in-perlmain-to-rerun-debugger">#</a><a id="support"></a>support in perlmain to rerun debugger</dt>
+<dd>
+
+</dd>
+<dt id="lvalue-functions"><a class="permalink" href="#lvalue-functions">#</a><a id="lvalue"></a>lvalue functions</dt>
+<dd>
+
+<p>Tuomas Lukka, on behalf of the PDL project, greatly desires this and Ilya has a patch for it (probably against an older version of Perl). Tuomas points out that what PDL really wants is lvalue <i>methods</i>, not just subs.</p>
+
+</dd>
+</dl>
+
+<h1 id="Possible-pragmas"><a class="permalink" href="#Possible-pragmas">#</a><a id="Possible"></a>Possible pragmas</h1>
+
+<h2 id="&#39;less&#39;"><a class="permalink" href="#&#39;less&#39;">#</a><a id="less"></a>&#39;less&#39;</h2>
+
+<p>(use less memory, CPU)</p>
+
+<h1 id="Optimizations"><a class="permalink" href="#Optimizations">#</a>Optimizations</h1>
+
+<h2 id="constant-function-cache"><a class="permalink" href="#constant-function-cache">#</a><a id="constant"></a>constant function cache</h2>
+
+<h2 id="foreach(reverse...)"><a class="permalink" href="#foreach(reverse...)">#</a><a id="foreach"></a><a id="foreach-reverse"></a>foreach(reverse...)</h2>
+
+<h2 id="Cache-eval-tree"><a class="permalink" href="#Cache-eval-tree">#</a><a id="Cache"></a>Cache eval tree</h2>
+
+<p>Unless lexical outer scope used (mark in &amp;compiling?).</p>
+
+<h2 id="rcatmaybe"><a class="permalink" href="#rcatmaybe">#</a>rcatmaybe</h2>
+
+<h2 id="Shrink-opcode-tables"><a class="permalink" href="#Shrink-opcode-tables">#</a><a id="Shrink"></a>Shrink opcode tables</h2>
+
+<p>Via multiple implementations selected in peep.</p>
+
+<h2 id="Cache-hash-value"><a class="permalink" href="#Cache-hash-value">#</a><a id="Cache1"></a>Cache hash value</h2>
+
+<p>Not a win, according to Guido.</p>
+
+<h2 id="Optimize-away-@_-where-possible"><a class="permalink" href="#Optimize-away-@_-where-possible">#</a><a id="Optimize"></a><a id="Optimize-away-_-where-possible"></a>Optimize away @_ where possible</h2>
+
+<h2 id="Optimize-sort-by-{-$a-&lt;=&gt;-$b-}"><a class="permalink" href="#Optimize-sort-by-%7B-$a-%3C=%3E-$b-%7D">#</a><a id="Optimize1"></a><a id="Optimize-sort-by-a-b"></a>Optimize sort by { $a &lt;=&gt; $b }</h2>
+
+<p>Greg Bacon added several more sort optimizations. These have made it into 5.005_55, thanks to Hans Mulder.</p>
+
+<h2 id="Rewrite-regexp-parser-for-better-integrated-optimization"><a class="permalink" href="#Rewrite-regexp-parser-for-better-integrated-optimization">#</a><a id="Rewrite"></a>Rewrite regexp parser for better integrated optimization</h2>
+
+<p>The regexp parser was rewritten for 5.005. Ilya&#39;s the regexp guru.</p>
+
+<h1 id="Vague-possibilities"><a class="permalink" href="#Vague-possibilities">#</a><a id="Vague"></a>Vague possibilities</h1>
+
+<dl>
+
+<dt id="ref-function-in-list-context"><a class="permalink" href="#ref-function-in-list-context">#</a><a id="ref"></a>ref function in list context</dt>
+<dd>
+
+<p>This seems impossible to do without substantially breaking code.</p>
+
+</dd>
+<dt id="make-tr///-return-histogram-in-list-context?"><a class="permalink" href="#make-tr///-return-histogram-in-list-context?">#</a><a id="make"></a><a id="make-tr-return-histogram-in-list-context"></a>make tr/// return histogram in list context?</dt>
+<dd>
+
+</dd>
+<dt id="Loop-control-on-do{}-et-al"><a class="permalink" href="#Loop-control-on-do%7B%7D-et-al">#</a><a id="Loop"></a><a id="Loop-control-on-do-et-al"></a>Loop control on do{} et al</dt>
+<dd>
+
+</dd>
+<dt id="Explicit-switch-statements"><a class="permalink" href="#Explicit-switch-statements">#</a><a id="Explicit"></a>Explicit switch statements</dt>
+<dd>
+
+<p>Nobody has yet managed to come up with a switch syntax that would allow for mixed hash, constant, regexp checks. Submit implementation with syntax, please.</p>
+
+</dd>
+<dt id="compile-to-real-threaded-code"><a class="permalink" href="#compile-to-real-threaded-code">#</a><a id="compile"></a>compile to real threaded code</dt>
+<dd>
+
+</dd>
+<dt id="structured-types"><a class="permalink" href="#structured-types">#</a><a id="structured"></a>structured types</dt>
+<dd>
+
+</dd>
+<dt id="Modifiable-$1-et-al"><a class="permalink" href="#Modifiable-$1-et-al">#</a><a id="Modifiable"></a><a id="Modifiable-1-et-al"></a>Modifiable $1 et al</dt>
+<dd>
+
+<p>The intent is for this to be a means of editing the matched portions of the target string.</p>
+
+</dd>
+</dl>
+
+<h1 id="To-Do-Or-Not-To-Do"><a class="permalink" href="#To-Do-Or-Not-To-Do">#</a><a id="To"></a>To Do Or Not To Do</h1>
+
+<p>These are things that have been discussed in the past and roundly criticized for being of questionable value.</p>
+
+<h2 id="Making-my()-work-on-&quot;package&quot;-variables"><a class="permalink" href="#Making-my()-work-on-%22package%22-variables">#</a><a id="Making"></a><a id="Making-my-work-on-package-variables"></a>Making my() work on &quot;package&quot; variables</h2>
+
+<p>Being able to say my($Foo::Bar), something that sounds ludicrous and the 5.6 pumpking has mocked.</p>
+
+<h2 id="&quot;or&quot;-testing-defined-not-truth"><a class="permalink" href="#%22or%22-testing-defined-not-truth">#</a><a id="or-testing-defined-not-truth"></a>&quot;or&quot; testing defined not truth</h2>
+
+<p>We tell people that <code>||</code> can be used to give a default value to a variable:</p>
+
+<pre><code>$children = shift || 5;		# default is 5 children</code></pre>
+
+<p>which is almost (but not):</p>
+
+<pre><code>$children = shift;
+$children = 5 unless $children;</code></pre>
+
+<p>but if the first argument was given and is &quot;0&quot;, then it will be considered false by <code>||</code> and <code>5</code> used instead. Really we want an <code>||</code>-like operator that behaves like:</p>
+
+<pre><code>$children = shift;
+$children = 5 unless defined $children;</code></pre>
+
+<p>Namely, a <code>||</code> that tests defined-ness rather than truth. One was discussed, and a patch submitted, but the objections were many. While there were objections, many still feel the need. At least it was decided that <code>??</code> is the best name for the operator.</p>
+
+<h2 id="&quot;dynamic&quot;-lexicals"><a class="permalink" href="#%22dynamic%22-lexicals">#</a><a id="dynamic-lexicals"></a>&quot;dynamic&quot; lexicals</h2>
+
+<pre><code>my $x;
+sub foo {
+  local $x;
+}</code></pre>
+
+<p>Localizing, as Tim Bunce points out, is a separate concept from whether the variable is global or lexical. Chip Salzenberg had an implementation once, but Larry thought it had potential to confuse.</p>
+
+<h2 id="&quot;class&quot;-based,-rather-than-package-based-&quot;lexicals&quot;"><a class="permalink" href="#%22class%22-based,-rather-than-package-based-%22lexicals%22">#</a><a id="class-based-rather-than-package-based-lexicals"></a>&quot;class&quot;-based, rather than package-based &quot;lexicals&quot;</h2>
+
+<p>This is like what the Alias module provides, but the variables would be lexicals reserved by perl at compile-time, which really are indices pointing into the pseudo-hash object visible inside every method so declared.</p>
+
+<h1 id="Threading"><a class="permalink" href="#Threading">#</a>Threading</h1>
+
+<h2 id="Modules1"><a class="permalink" href="#Modules1">#</a>Modules</h2>
+
+<p>Which of the standard modules are thread-safe? Which CPAN modules? How easy is it to fix those non-safe modules?</p>
+
+<h2 id="Testing"><a class="permalink" href="#Testing">#</a>Testing</h2>
+
+<p>Threading is still experimental. Every reproducible bug identifies something else for us to fix. Find and submit more of these problems.</p>
+
+<h2 id="$AUTOLOAD"><a class="permalink" href="#$AUTOLOAD">#</a><a id="AUTOLOAD"></a>$AUTOLOAD</h2>
+
+<h2 id="exit/die"><a class="permalink" href="#exit/die">#</a><a id="exit"></a><a id="exit-die"></a>exit/die</h2>
+
+<p>Consistent semantics for exit/die in threads.</p>
+
+<h2 id="External-threads"><a class="permalink" href="#External-threads">#</a><a id="External"></a>External threads</h2>
+
+<p>Better support for externally created threads.</p>
+
+<h2 id="Thread::Pool"><a class="permalink" href="#Thread::Pool">#</a><a id="Thread"></a>Thread::Pool</h2>
+
+<h2 id="thread-safety"><a class="permalink" href="#thread-safety">#</a><a id="thread"></a>thread-safety</h2>
+
+<p>Spot-check globals like statcache and global GVs for thread-safety. &quot;<b>Part done</b>&quot;, says Sarathy.</p>
+
+<h2 id="Per-thread-GVs"><a class="permalink" href="#Per-thread-GVs">#</a><a id="Per"></a>Per-thread GVs</h2>
+
+<p>According to Sarathy, this would make @_ be the same in threaded and non-threaded, as well as helping solve problems like filehandles (the same filehandle currently cannot be used in two threads).</p>
+
+<h1 id="Compiler"><a class="permalink" href="#Compiler">#</a>Compiler</h1>
+
+<h2 id="Optimization"><a class="permalink" href="#Optimization">#</a>Optimization</h2>
+
+<p>The compiler&#39;s back-end code-generators for creating bytecode or compilable C code could use optimization work.</p>
+
+<h2 id="Byteperl"><a class="permalink" href="#Byteperl">#</a>Byteperl</h2>
+
+<p>Figure out how and where byteperl will be built for the various platforms.</p>
+
+<h2 id="Precompiled-modules"><a class="permalink" href="#Precompiled-modules">#</a><a id="Precompiled"></a>Precompiled modules</h2>
+
+<p>Save byte-compiled modules on disk.</p>
+
+<h2 id="Executables"><a class="permalink" href="#Executables">#</a>Executables</h2>
+
+<p>Auto-produce executable.</p>
+
+<h2 id="Typed-lexicals"><a class="permalink" href="#Typed-lexicals">#</a><a id="Typed"></a>Typed lexicals</h2>
+
+<p>Typed lexicals should affect B::CC::load_pad.</p>
+
+<h2 id="Win32"><a class="permalink" href="#Win32">#</a>Win32</h2>
+
+<p>Workarounds to help Win32 dynamic loading.</p>
+
+<h2 id="END-blocks"><a class="permalink" href="#END-blocks">#</a><a id="END"></a>END blocks</h2>
+
+<p>END blocks need saving in compiled output, now that CHECK blocks are available.</p>
+
+<h2 id="_AUTOLOAD"><a class="permalink" href="#_AUTOLOAD">#</a><a id="AUTOLOAD1"></a>_AUTOLOAD</h2>
+
+<p>_AUTOLOAD prodding.</p>
+
+<h2 id="comppadlist"><a class="permalink" href="#comppadlist">#</a>comppadlist</h2>
+
+<p>Fix comppadlist (names in comppad_name can have fake SvCUR from where newASSIGNOP steals the field).</p>
+
+<h2 id="Cached-compilation"><a class="permalink" href="#Cached-compilation">#</a><a id="Cached"></a>Cached compilation</h2>
+
+<p>Can we install modules as bytecode?</p>
+
+<h1 id="Recently-Finished-Tasks"><a class="permalink" href="#Recently-Finished-Tasks">#</a><a id="Recently"></a>Recently Finished Tasks</h1>
+
+<h2 id="Figure-a-way-out-of-$^(capital-letter)"><a class="permalink" href="#Figure-a-way-out-of-$%5E(capital-letter)">#</a><a id="Figure1"></a><a id="Figure-a-way-out-of-capital-letter"></a>Figure a way out of $^(capital letter)</h2>
+
+<p>Figure out a clean way to extend $^(capital letter) beyond the 26 alphabets. (${^WORD} maybe?)</p>
+
+<p>Mark-Jason Dominus sent a patch which went into 5.005_56.</p>
+
+<h2 id="Filenames"><a class="permalink" href="#Filenames">#</a>Filenames</h2>
+
+<p>Keep filenames in the distribution and in the standard module set be 8.3 friendly where feasible. Good luck changing the standard modules, though.</p>
+
+<h2 id="Foreign-lines"><a class="permalink" href="#Foreign-lines">#</a><a id="Foreign"></a>Foreign lines</h2>
+
+<p>Perl should be more generous in accepting foreign line terminations. Mostly <b>done</b> in 5.005.</p>
+
+<h2 id="Namespace-cleanup1"><a class="permalink" href="#Namespace-cleanup1">#</a><a id="Namespace1"></a>Namespace cleanup</h2>
+
+<pre><code class="plaintext">symbol-space: &quot;pl_&quot; prefix for all global vars
+              &quot;Perl_&quot; prefix for all functions
+
+CPP-space:	  stop malloc()/free() pollution unless asked</code></pre>
+
+<h2 id="ISA.pm"><a class="permalink" href="#ISA.pm">#</a><a id="ISA"></a>ISA.pm</h2>
+
+<p>Rename and alter ISA.pm. <b>Done</b>. It is now base.pm.</p>
+
+<h2 id="gettimeofday"><a class="permalink" href="#gettimeofday">#</a>gettimeofday</h2>
+
+<p>See Time::HiRes.</p>
+
+<h2 id="autocroak?"><a class="permalink" href="#autocroak?">#</a><a id="autocroak"></a>autocroak?</h2>
+
+<p>This is the Fatal.pm module, so any builtin that does not return success automatically die()s. If you&#39;re feeling brave, tie this in with the unified exceptions scheme.</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/5.6.1/perltodo by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:46 GMT -->
+</html>

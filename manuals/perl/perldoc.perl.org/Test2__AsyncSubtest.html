@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/Test2::AsyncSubtest by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test2::AsyncSubtest - Object representing an async subtest. - Perldoc Browser</title>
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="Test2__AsyncSubtest.html">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.html"><img src="images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.42.0</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="Test2__AsyncSubtest.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item active" href="https://perldoc.perl.org/5.42.0/Test2::AsyncSubtest">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/Test2::AsyncSubtest">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/Test2::AsyncSubtest">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/Test2::AsyncSubtest">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/Test2::AsyncSubtest">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/Test2::AsyncSubtest">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/Test2::AsyncSubtest">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/Test2::AsyncSubtest">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/Test2::AsyncSubtest">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/Test2::AsyncSubtest">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/Test2::AsyncSubtest">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/Test2::AsyncSubtest">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/Test2::AsyncSubtest">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/Test2::AsyncSubtest">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/Test2::AsyncSubtest">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/Test2::AsyncSubtest">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/Test2::AsyncSubtest">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/Test2::AsyncSubtest">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/Test2::AsyncSubtest">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/Test2::AsyncSubtest">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/Test2::AsyncSubtest">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/Test2::AsyncSubtest">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/Test2::AsyncSubtest">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/Test2::AsyncSubtest">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/Test2::AsyncSubtest">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/Test2::AsyncSubtest">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/Test2::AsyncSubtest">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/Test2::AsyncSubtest">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/Test2::AsyncSubtest">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/Test2::AsyncSubtest">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/Test2::AsyncSubtest">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/Test2::AsyncSubtest">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/Test2::AsyncSubtest">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/Test2::AsyncSubtest">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/Test2::AsyncSubtest">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/Test2::AsyncSubtest">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/Test2::AsyncSubtest">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/Test2::AsyncSubtest">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/Test2::AsyncSubtest">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/Test2::AsyncSubtest">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/Test2::AsyncSubtest">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/Test2::AsyncSubtest">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/Test2::AsyncSubtest">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/Test2::AsyncSubtest">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/Test2::AsyncSubtest">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/Test2::AsyncSubtest">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/Test2::AsyncSubtest">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/Test2::AsyncSubtest">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/Test2::AsyncSubtest">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/Test2::AsyncSubtest">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/Test2::AsyncSubtest">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/Test2::AsyncSubtest">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/Test2::AsyncSubtest">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/Test2::AsyncSubtest">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/Test2::AsyncSubtest">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/Test2::AsyncSubtest">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/Test2::AsyncSubtest">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/Test2::AsyncSubtest">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/Test2::AsyncSubtest">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/Test2::AsyncSubtest">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/Test2::AsyncSubtest">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/Test2::AsyncSubtest">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/Test2::AsyncSubtest">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/Test2::AsyncSubtest">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/Test2::AsyncSubtest">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/Test2::AsyncSubtest">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/Test2::AsyncSubtest">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/Test2::AsyncSubtest">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/Test2::AsyncSubtest">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/Test2::AsyncSubtest">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/Test2::AsyncSubtest">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/Test2::AsyncSubtest">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/Test2::AsyncSubtest">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/Test2::AsyncSubtest">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/Test2::AsyncSubtest">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/Test2::AsyncSubtest">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/Test2::AsyncSubtest">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/Test2::AsyncSubtest">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/Test2::AsyncSubtest">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.2/Test2::AsyncSubtest">5.6.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.1/Test2::AsyncSubtest">5.6.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.0/Test2::AsyncSubtest">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_04/Test2::AsyncSubtest">5.005_04</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_03/Test2::AsyncSubtest">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/Test2::AsyncSubtest">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/Test2::AsyncSubtest">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/Test2::AsyncSubtest">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/Test2::AsyncSubtest">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/Test2::AsyncSubtest">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/Test2::AsyncSubtest">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/Test2::AsyncSubtest">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/Test2::AsyncSubtest">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/Test2::AsyncSubtest">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/Test2::AsyncSubtest">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/Test2::AsyncSubtest">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/Test2::AsyncSubtest">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/Test2::AsyncSubtest">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/Test2::AsyncSubtest">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/Test2::AsyncSubtest">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/Test2::AsyncSubtest">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/Test2::AsyncSubtest">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/Test2::AsyncSubtest">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/Test2::AsyncSubtest">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/Test2::AsyncSubtest">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/Test2::AsyncSubtest">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/Test2::AsyncSubtest">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/Test2::AsyncSubtest">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="Test2__AsyncSubtest.html">Test2::AsyncSubtest</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/Test2::AsyncSubtest.txt">source</a>,
+            <a href="https://metacpan.org/pod/Test2::AsyncSubtest">CPAN</a>)
+          </div>
+            <div id="moduleversion">version 1.302210</div>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SYNOPSIS">SYNOPSIS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#CONSTRUCTION">CONSTRUCTION</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#METHODS">METHODS</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#SIMPLE-ACCESSORS">SIMPLE ACCESSORS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#INTERFACE">INTERFACE</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SOURCE">SOURCE</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#MAINTAINERS">MAINTAINERS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#AUTHORS">AUTHORS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#COPYRIGHT">COPYRIGHT</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>Test2::AsyncSubtest - Object representing an async subtest.</p>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>Regular subtests have a limited scope, they start, events are generated, then they close and send an <a href="Test2__Event__Subtest.html">Test2::Event::Subtest</a> event. This is a problem if you want the subtest to keep receiving events while other events are also being generated. This class implements subtests that stay open until you decide to close them.</p>
+
+<p>This is mainly useful for tools that start a subtest in one process and then spawn children. In many cases it is nice to let the parent process continue instead of waiting on the children.</p>
+
+<h1 id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">#</a>SYNOPSIS</h1>
+
+<pre><code>use Test2::AsyncSubtest;
+
+my $ast = Test2::AsyncSubtest-&gt;new(name =&gt; foo);
+
+$ast-&gt;run(sub {
+    ok(1, &quot;Event in parent&quot; );
+});
+
+ok(1, &quot;Event outside of subtest&quot;);
+
+$ast-&gt;run_fork(sub {
+    ok(1, &quot;Event in child process&quot;);
+});
+
+...
+
+$ast-&gt;finish;
+
+done_testing;</code></pre>
+
+<h1 id="CONSTRUCTION"><a class="permalink" href="#CONSTRUCTION">#</a>CONSTRUCTION</h1>
+
+<pre><code>my $ast = Test2::AsyncSubtest-&gt;new( ... );</code></pre>
+
+<dl>
+
+<dt id="name-=&gt;-$name-(required)"><a class="permalink" href="#name-=%3E-$name-(required)">#</a><a id="name"></a><a id="name-name-required"></a>name =&gt; $name (required)</dt>
+<dd>
+
+<p>Name of the subtest. This construction argument is required.</p>
+
+</dd>
+<dt id="send_to-=&gt;-$hub-(optional)"><a class="permalink" href="#send_to-=%3E-$hub-(optional)">#</a><a id="send_to"></a><a id="send_to-hub-optional"></a>send_to =&gt; $hub (optional)</dt>
+<dd>
+
+<p>Hub to which the final subtest event should be sent. This must be an instance of <a href="Test2__Hub.html">Test2::Hub</a> or a subclass. If none is specified then the current top hub will be used.</p>
+
+</dd>
+<dt id="trace-=&gt;-$trace-(optional)"><a class="permalink" href="#trace-=%3E-$trace-(optional)">#</a><a id="trace"></a><a id="trace-trace-optional"></a>trace =&gt; $trace (optional)</dt>
+<dd>
+
+<p>File/Line to which errors should be attributed. This must be an instance of <a href="Test2__Util__Trace.html">Test2::Util::Trace</a>. If none is specified then the file/line where the constructor was called will be used.</p>
+
+</dd>
+<dt id="hub-=&gt;-$hub-(optional)"><a class="permalink" href="#hub-=%3E-$hub-(optional)">#</a><a id="hub"></a><a id="hub-hub-optional"></a>hub =&gt; $hub (optional)</dt>
+<dd>
+
+<p>Use this to specify a hub the subtest should use. By default a new hub is generated. This must be an instance of <a href="Test2__AsyncSubtest__Hub.html">Test2::AsyncSubtest::Hub</a>.</p>
+
+</dd>
+</dl>
+
+<h1 id="METHODS"><a class="permalink" href="#METHODS">#</a>METHODS</h1>
+
+<h2 id="SIMPLE-ACCESSORS"><a class="permalink" href="#SIMPLE-ACCESSORS">#</a><a id="SIMPLE"></a>SIMPLE ACCESSORS</h2>
+
+<dl>
+
+<dt id="$bool-=-$ast-&gt;active"><a class="permalink" href="#$bool-=-$ast-%3Eactive">#</a><a id="bool-ast-active"></a>$bool = $ast-&gt;active</dt>
+<dd>
+
+<p>True if the subtest is active. The subtest is active if its hub appears in the global hub stack. This is true when <code>$ast-&gt;run(...)</code> us running.</p>
+
+</dd>
+<dt id="$arrayref-=-$ast-&gt;children"><a class="permalink" href="#$arrayref-=-$ast-%3Echildren">#</a><a id="arrayref-ast-children"></a>$arrayref = $ast-&gt;children</dt>
+<dd>
+
+<p>Get an arrayref of child processes/threads. Numerical items are PIDs, blessed items are <a href="threads.html">threads</a> instances.</p>
+
+</dd>
+<dt id="$arrayref-=-$ast-&gt;events"><a class="permalink" href="#$arrayref-=-$ast-%3Eevents">#</a><a id="arrayref-ast-events"></a>$arrayref = $ast-&gt;events</dt>
+<dd>
+
+<p>Get an arrayref of events that have been sent to the subtests hub.</p>
+
+</dd>
+<dt id="$bool-=-$ast-&gt;finished"><a class="permalink" href="#$bool-=-$ast-%3Efinished">#</a><a id="bool-ast-finished"></a>$bool = $ast-&gt;finished</dt>
+<dd>
+
+<p>True if <code>finished()</code> has already been called.</p>
+
+</dd>
+<dt id="$hub-=-$ast-&gt;hub"><a class="permalink" href="#$hub-=-$ast-%3Ehub">#</a><a id="hub-ast-hub"></a>$hub = $ast-&gt;hub</dt>
+<dd>
+
+<p>The hub created for the subtest.</p>
+
+</dd>
+<dt id="$int-=-$ast-&gt;id"><a class="permalink" href="#$int-=-$ast-%3Eid">#</a><a id="int-ast-id"></a>$int = $ast-&gt;id</dt>
+<dd>
+
+<p>Attach/Detach counter. Used internally, not useful to users.</p>
+
+</dd>
+<dt id="$str-=-$ast-&gt;name"><a class="permalink" href="#$str-=-$ast-%3Ename">#</a><a id="str-ast-name"></a>$str = $ast-&gt;name</dt>
+<dd>
+
+<p>Name of the subtest.</p>
+
+</dd>
+<dt id="$pid-=-$ast-&gt;pid"><a class="permalink" href="#$pid-=-$ast-%3Epid">#</a><a id="pid-ast-pid"></a>$pid = $ast-&gt;pid</dt>
+<dd>
+
+<p>PID in which the subtest was created.</p>
+
+</dd>
+<dt id="$tid-=-$ast-&gt;tid"><a class="permalink" href="#$tid-=-$ast-%3Etid">#</a><a id="tid-ast-tid"></a>$tid = $ast-&gt;tid</dt>
+<dd>
+
+<p>Thread ID in which the subtest was created.</p>
+
+</dd>
+<dt id="$hub-=-$ast-&gt;send_to"><a class="permalink" href="#$hub-=-$ast-%3Esend_to">#</a><a id="hub-ast-send_to"></a>$hub = $ast-&gt;send_to</dt>
+<dd>
+
+<p>Hub to which the final subtest event should be sent.</p>
+
+</dd>
+<dt id="$arrayref-=-$ast-&gt;stack"><a class="permalink" href="#$arrayref-=-$ast-%3Estack">#</a><a id="arrayref-ast-stack"></a>$arrayref = $ast-&gt;stack</dt>
+<dd>
+
+<p>Stack of async subtests at the time this one was created. This is mainly for internal use.</p>
+
+</dd>
+<dt id="$trace-=-$ast-&gt;trace"><a class="permalink" href="#$trace-=-$ast-%3Etrace">#</a><a id="trace-ast-trace"></a>$trace = $ast-&gt;trace</dt>
+<dd>
+
+<p><a href="Test2__Util__Trace.html">Test2::Util::Trace</a> instance used for error reporting.</p>
+
+</dd>
+</dl>
+
+<h2 id="INTERFACE"><a class="permalink" href="#INTERFACE">#</a>INTERFACE</h2>
+
+<dl>
+
+<dt id="$ast-&gt;attach($id)"><a class="permalink" href="#$ast-%3Eattach($id)">#</a><a id="attach"></a><a id="ast-attach-id"></a>$ast-&gt;attach($id)</dt>
+<dd>
+
+<p>Attach a subtest in a child/process to the original.</p>
+
+<p><b>Note:</b> <code>my $id = $ast-&gt;cleave</code> must have been called in the parent process/thread before the child was started, the id it returns must be used in the call to <code>$ast-&gt;attach($id)</code></p>
+
+</dd>
+<dt id="$id-=-$ast-&gt;cleave"><a class="permalink" href="#$id-=-$ast-%3Ecleave">#</a><a id="id-ast-cleave"></a>$id = $ast-&gt;cleave</dt>
+<dd>
+
+<p>Prepare a slot for a child process/thread to attach. This must be called BEFORE the child process or thread is started. The ID returned is used by <code>attach()</code>.</p>
+
+<p>This must only be called in the original process/thread.</p>
+
+</dd>
+<dt id="$ctx-=-$ast-&gt;context"><a class="permalink" href="#$ctx-=-$ast-%3Econtext">#</a><a id="ctx-ast-context"></a>$ctx = $ast-&gt;context</dt>
+<dd>
+
+<p>Get an <a href="Test2__API__Context.html">Test2::API::Context</a> instance that can be used to send events to the context in which the hub was created. This is not a canonical context, you should not call <code>$ctx-&gt;release</code> on it.</p>
+
+</dd>
+<dt id="$ast-&gt;detach"><a class="permalink" href="#$ast-%3Edetach">#</a><a id="detach"></a><a id="ast-detach"></a>$ast-&gt;detach</dt>
+<dd>
+
+<p>Detach from the parent in a child process/thread. This should be called just before the child exits.</p>
+
+</dd>
+<dt id="$ast-&gt;finish"><a class="permalink" href="#$ast-%3Efinish">#</a><a id="finish"></a><a id="ast-finish"></a>$ast-&gt;finish</dt>
+<dd>
+
+</dd>
+<dt id="$ast-&gt;finish(%options)"><a class="permalink" href="#$ast-%3Efinish(%25options)">#</a><a id="finish1"></a><a id="ast-finish-options"></a>$ast-&gt;finish(%options)</dt>
+<dd>
+
+<p>Finish the subtest, wait on children, and send the final subtest event.</p>
+
+<p>This must only be called in the original process/thread.</p>
+
+<p><b>Note:</b> This calls <code>$ast-&gt;wait</code>.</p>
+
+<p>These are the options:</p>
+
+<dl>
+
+<dt id="collapse-=&gt;-1"><a class="permalink" href="#collapse-=%3E-1">#</a><a id="collapse"></a><a id="collapse-1"></a>collapse =&gt; 1</dt>
+<dd>
+
+<p>This intelligently allows a subtest to be empty.</p>
+
+<p>If no events bump the test count then the subtest no final plan will be added. The subtest will not be considered a failure (normally an empty subtest is a failure).</p>
+
+<p>If there are no events at all the subtest will be collapsed into an <a href="Test2__Event__Ok.html">Test2::Event::Ok</a> event.</p>
+
+</dd>
+<dt id="silent-=&gt;-1"><a class="permalink" href="#silent-=%3E-1">#</a><a id="silent"></a><a id="silent-1"></a>silent =&gt; 1</dt>
+<dd>
+
+<p>This will prevent finish from generating a final <a href="Test2__Event__Subtest.html">Test2::Event::Subtest</a> event. This effectively ends the subtest without it affecting the parent subtest (or top level test).</p>
+
+</dd>
+<dt id="no_plan-=&gt;-1"><a class="permalink" href="#no_plan-=%3E-1">#</a><a id="no_plan"></a><a id="no_plan-1"></a>no_plan =&gt; 1</dt>
+<dd>
+
+<p>This will prevent a final plan from being added to the subtest for you when none is directly specified.</p>
+
+</dd>
+<dt id="skip-=&gt;-&quot;reason&quot;"><a class="permalink" href="#skip-=%3E-%22reason%22">#</a><a id="skip"></a><a id="skip-reason"></a>skip =&gt; &quot;reason&quot;</dt>
+<dd>
+
+<p>This will issue an <a href="Test2__Event__Skip.html">Test2::Event::Skip</a> instead of a subtest. This will throw an exception if any events have been seen, or if state implies events have occurred.</p>
+
+</dd>
+</dl>
+
+</dd>
+<dt id="$out-=-$ast-&gt;fork"><a class="permalink" href="#$out-=-$ast-%3Efork">#</a><a id="out-ast-fork"></a>$out = $ast-&gt;fork</dt>
+<dd>
+
+<p>This is a slightly higher level interface to fork. Running it will fork your code in-place just like <code>fork()</code>. It will return a pid in the parent, and an <a href="Test2__Util__Guard.html">Test2::Util::Guard</a> instance in the child. An exception will be thrown if fork fails.</p>
+
+<p>It is recommended that you use <code>$ast-&gt;run_fork(sub { ... })</code> instead.</p>
+
+</dd>
+<dt id="$bool-=-$ast-&gt;pending"><a class="permalink" href="#$bool-=-$ast-%3Epending">#</a><a id="bool-ast-pending"></a>$bool = $ast-&gt;pending</dt>
+<dd>
+
+<p>True if there are child processes, threads, or subtests that depend on this one.</p>
+
+</dd>
+<dt id="$bool-=-$ast-&gt;ready"><a class="permalink" href="#$bool-=-$ast-%3Eready">#</a><a id="bool-ast-ready"></a>$bool = $ast-&gt;ready</dt>
+<dd>
+
+<p>This is essentially <code>!$ast-&gt;pending</code>.</p>
+
+</dd>
+<dt id="$ast-&gt;run(sub-{-...-})"><a class="permalink" href="#$ast-%3Erun(sub-%7B-...-%7D)">#</a><a id="run"></a><a id="ast-run-sub"></a>$ast-&gt;run(sub { ... })</dt>
+<dd>
+
+<p>Run the provided codeblock inside the subtest. This will push the subtest hub onto the stack, run the code, then pop the hub off the stack.</p>
+
+</dd>
+<dt id="$pid-=-$ast-&gt;run_fork(sub-{-...-})"><a class="permalink" href="#$pid-=-$ast-%3Erun_fork(sub-%7B-...-%7D)">#</a><a id="pid-ast-run_fork-sub"></a>$pid = $ast-&gt;run_fork(sub { ... })</dt>
+<dd>
+
+<p>Same as <code>$ast-&gt;run()</code>, except that the codeblock is run in a child process.</p>
+
+<p>You do not need to directly call <code>wait($pid)</code>, that will be done for you when <code>$ast-&gt;wait</code>, or <code>$ast-&gt;finish</code> are called.</p>
+
+</dd>
+<dt id="my-$thr-=-$ast-&gt;run_thread(sub-{-...-});"><a class="permalink" href="#my-$thr-=-$ast-%3Erun_thread(sub-%7B-...-%7D);">#</a><a id="my"></a><a id="my-thr-ast-run_thread-sub"></a>my $thr = $ast-&gt;run_thread(sub { ... });</dt>
+<dd>
+
+<p><b>** DISCOURAGED **</b> Threads cause problems. This method remains for anyone who REALLY wants it, but it is no longer supported. Tests for this functionality do not even run unless the AUTHOR_TESTING or T2_DO_THREAD_TESTS env vars are enabled.</p>
+
+<p>Same as <code>$ast-&gt;run()</code>, except that the codeblock is run in a child thread.</p>
+
+<p>You do not need to directly call <code>$thr-&gt;join</code>, that is done for you when <code>$ast-&gt;wait</code>, or <code>$ast-&gt;finish</code> are called.</p>
+
+</dd>
+<dt id="$passing-=-$ast-&gt;start"><a class="permalink" href="#$passing-=-$ast-%3Estart">#</a><a id="passing-ast-start"></a>$passing = $ast-&gt;start</dt>
+<dd>
+
+<p>Push the subtest hub onto the stack. Returns the current pass/fail status of the subtest.</p>
+
+</dd>
+<dt id="$ast-&gt;stop"><a class="permalink" href="#$ast-%3Estop">#</a><a id="stop"></a><a id="ast-stop"></a>$ast-&gt;stop</dt>
+<dd>
+
+<p>Pop the subtest hub off the stack. Returns the current pass/fail status of the subtest.</p>
+
+</dd>
+<dt id="$ast-&gt;wait"><a class="permalink" href="#$ast-%3Ewait">#</a><a id="wait"></a><a id="ast-wait"></a>$ast-&gt;wait</dt>
+<dd>
+
+<p>Wait on all threads/processes that were started using <code>$ast-&gt;fork</code>, <code>$ast-&gt;run_fork</code>, or <code>$ast-&gt;run_thread</code>.</p>
+
+</dd>
+</dl>
+
+<h1 id="SOURCE"><a class="permalink" href="#SOURCE">#</a>SOURCE</h1>
+
+<p>The source code repository for Test2-AsyncSubtest can be found at <i>https://github.com/Test-More/test-more/</i>.</p>
+
+<h1 id="MAINTAINERS"><a class="permalink" href="#MAINTAINERS">#</a>MAINTAINERS</h1>
+
+<dl>
+
+<dt id="Chad-Granum-&lt;exodist@cpan.org&gt;"><a class="permalink" href="#Chad-Granum-%3Cexodist@cpan.org%3E">#</a><a id="Chad"></a><a id="Chad-Granum-exodist-cpan.org"></a>Chad Granum &lt;exodist@cpan.org&gt;</dt>
+<dd>
+
+</dd>
+</dl>
+
+<h1 id="AUTHORS"><a class="permalink" href="#AUTHORS">#</a>AUTHORS</h1>
+
+<dl>
+
+<dt id="Chad-Granum-&lt;exodist@cpan.org&gt;1"><a class="permalink" href="#Chad-Granum-%3Cexodist@cpan.org%3E1">#</a><a id="Chad1"></a><a id="Chad-Granum-exodist-cpan.org1"></a>Chad Granum &lt;exodist@cpan.org&gt;</dt>
+<dd>
+
+</dd>
+</dl>
+
+<h1 id="COPYRIGHT"><a class="permalink" href="#COPYRIGHT">#</a>COPYRIGHT</h1>
+
+<p>Copyright Chad Granum &lt;exodist7@gmail.com&gt;.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>See <i>http://dev.perl.org/licenses/</i></p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/Test2::AsyncSubtest by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:53 GMT -->
+</html>

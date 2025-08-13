@@ -1,0 +1,3486 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-holy-grail   show-table-of-contents conceptual show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		
+<!-- Mirrored from learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting?view=aspnetcore-9.0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 14:53:03 GMT -->
+<head>
+			<title>URL Rewriting Middleware in ASP.NET Core | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="Learn about URL rewriting and redirecting with URL Rewriting Middleware in ASP.NET Core applications." />
+			<link rel="canonical" href="url-rewriting553c.html?view=aspnetcore-9.0" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="URL Rewriting Middleware in ASP.NET Core | Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/dotnet/media/dotnet-logo.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="URL Rewriting Middleware in ASP.NET Core" />
+			<meta property="og:url" content="url-rewriting553c.html?view=aspnetcore-9.0" />
+			<meta property="og:description" content="Learn about URL rewriting and redirecting with URL Rewriting Middleware in ASP.NET Core applications." />
+			<meta name="platform_id" content="ed0282a3-16ae-4d2b-9356-fc7610aaa74d" /> <meta name="scope" content="ASP.NET Core" />
+			<meta name="locale" content="en-us" />
+			 <meta name="adobe-target" content="true" />
+			<meta name="uhfHeaderId" content="MSDocsHeader-AspNet" />
+
+			<meta name="page_type" content="conceptual" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="breadcrumb_path" content="/aspnet/core/breadcrumb/toc.json" />
+	
+		<meta name="feedback_system" content="OpenSource" />
+	
+		<meta name="feedback_product_url" content="https://github.com/dotnet/aspnetcore/blob/main/CONTRIBUTING.md" />
+	
+		<meta name="ms.service" content="aspnet-core" />
+	
+		<meta name="ms.topic" content="conceptual" />
+	
+		<meta name="ms.subservice" content="fundamentals" />
+	
+		<meta name="author" content="Rick-Anderson" />
+	
+		<meta name="monikerRange" content="&gt;= aspnetcore-2.1" />
+	
+		<meta name="ms.author" content="riande" />
+	
+		<meta name="ms.custom" content="mvc, sfi-image-nochange" />
+	
+		<meta name="ms.date" content="2022-03-03T00:00:00Z" />
+	
+		<meta name="uid" content="fundamentals/url-rewriting" />
+	
+		<meta name="document_id" content="7f5f7c61-a9fa-bd34-001d-217477874bb6" />
+	
+		<meta name="document_version_independent_id" content="9c48da92-af90-3fc1-fde0-c3f74fa88510" />
+	
+		<meta name="updated_at" content="2025-08-01T13:31:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/dotnet/AspNetCore.Docs/blob/live/aspnetcore/fundamentals/url-rewriting.md" />
+	
+		<meta name="gitcommit" content="https://github.com/dotnet/AspNetCore.Docs/blob/6a51096c09da531a44f5de89218041792966a565/aspnetcore/fundamentals/url-rewriting.md" />
+	
+		<meta name="git_commit_id" content="6a51096c09da531a44f5de89218041792966a565" />
+	
+		<meta name="monikers" content="aspnetcore-2.1" />
+	
+		<meta name="monikers" content="aspnetcore-2.2" />
+	
+		<meta name="monikers" content="aspnetcore-3.0" />
+	
+		<meta name="monikers" content="aspnetcore-3.1" />
+	
+		<meta name="monikers" content="aspnetcore-5.0" />
+	
+		<meta name="monikers" content="aspnetcore-6.0" />
+	
+		<meta name="monikers" content="aspnetcore-7.0" />
+	
+		<meta name="monikers" content="aspnetcore-8.0" />
+	
+		<meta name="monikers" content="aspnetcore-9.0" />
+	
+		<meta name="monikers" content="aspnetcore-10.0" />
+	
+		<meta name="default_moniker" content="aspnetcore-9.0" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="MSDN.aspnet-core-conceptual" />
+	
+		<meta name="schema" content="Conceptual" />
+	
+		<meta name="toc_rel" content="../toc.json" />
+	
+		<meta name="pdf_url_template" content="https://learn.microsoft.com/pdfstore/en-us/MSDN.aspnet-core-conceptual/{branchName}{pdfName}" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="word_count" content="10514" />
+	
+		<meta name="config_moniker_range" content="&gt;= aspnetcore-1.0" />
+	
+		<meta name="asset_id" content="fundamentals/url-rewriting" />
+	
+		<meta name="moniker_range_name" content="37fa60b1fa5386966cfa742f834a698e" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="aspnetcore/fundamentals/url-rewriting.md" />
+	
+		<meta name="previous_tlsh_hash" content="5D7BAF33960CDA38FFD14E1A79A5FA6150F0C24D9BA0BEE4A52516A3E09A2EDB06257BB7834776C43372836122A1E64D96D5EF1BD0AC639F6374CCECC38C384253AC27D5D5" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/fundamentals/url-rewriting.md" />
+	 
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/8b896464-3b7d-4e1f-84b0-9bb45aeb5f64" data-source="generated" />
+	
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/d452572f-6212-498f-9050-ca4a9e50a425" data-source="generated" />
+	
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/7696cda6-0510-47f6-8302-71bb5d2e28cf" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/b1d2d671-9549-46e8-918c-24349120dbf5" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/a12e40b7-59a2-4437-96e2-166ce622b864" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/69c76c32-967e-4c65-b89a-74cc527db725" data-source="generated" />
+	
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="https://learn.microsoft.com/static/assets/0.4.03137.7032-e8b681c0/styles/site-ltr.css" />
+			<link rel="preconnect" href="http://mscom.demdex.net/" crossorigin />
+						<link rel="dns-prefetch" href="http://target.microsoft.com/" />
+						<link rel="dns-prefetch" href="http://microsoftmscompoc.tt.omtrdc.net/" />
+						<link
+							rel="preload"
+							as="script"
+							href="https://learn.microsoft.com/static/third-party/adobe-target/at-js/2.9.0/at.js"
+							integrity="sha384-1/viVM50hgc33O2gOgkWz3EjiD/Fy/ld1dKYXJRUyjNYVEjSUGcSN+iPiQF7e4cu"
+							crossorigin="anonymous"
+							id="adobe-target-script"
+							type="application/javascript"
+						/>
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			<script src="https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/deprecation.js"></script>
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Conceptual",
+    "brand": "",
+    "context": {},
+    "standardFeedback": false,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "OpenSource",
+    "feedbackGitHubRepo": "dotnet/AspNetCore.Docs",
+    "feedbackProductUrl": "https://github.com/dotnet/aspnetcore/blob/main/CONTRIBUTING.md",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": true,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": true,
+    "contributors": [
+      {
+        "name": "Rick-Anderson",
+        "url": "https://github.com/Rick-Anderson"
+      },
+      {
+        "name": "Dickson-Mwendia",
+        "url": "https://github.com/Dickson-Mwendia"
+      },
+      {
+        "name": "guardrex",
+        "url": "https://github.com/guardrex"
+      },
+      {
+        "name": "wadepickett",
+        "url": "https://github.com/wadepickett"
+      },
+      {
+        "name": "v-thepet",
+        "url": "https://github.com/v-thepet"
+      },
+      {
+        "name": "tdykstra",
+        "url": "https://github.com/tdykstra"
+      },
+      {
+        "name": "asbjornu",
+        "url": "https://github.com/asbjornu"
+      },
+      {
+        "name": "serpent5",
+        "url": "https://github.com/serpent5"
+      },
+      {
+        "name": "scottaddie",
+        "url": "https://github.com/scottaddie"
+      },
+      {
+        "name": "v-makoud",
+        "url": "https://github.com/v-makoud"
+      },
+      {
+        "name": "AYS17",
+        "url": "https://github.com/AYS17"
+      },
+      {
+        "name": "snomad",
+        "url": "https://github.com/snomad"
+      },
+      {
+        "name": "user135711",
+        "url": "https://github.com/user135711"
+      },
+      {
+        "name": "isaac2004",
+        "url": "https://github.com/isaac2004"
+      },
+      {
+        "name": "v-anpasi",
+        "url": "https://github.com/v-anpasi"
+      }
+    ],
+    "openSourceFeedbackIssueUrl": "https://github.com/dotnet/aspnetcore.docs/issues/new?template=customer-feedback.yml",
+    "openSourceFeedbackIssueTitle": "",
+    "openSourceFeedbackIssueLabels": "Source - Docs.ms,:watch: Not Triaged"
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script src="https://learn.microsoft.com/static/assets/0.4.03137.7032-e8b681c0/scripts/en-us/index-docs.js"></script>
+			
+
+			<!-- json-ld -->
+			
+		</head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+		<a
+			href="#"
+			data-skip-to-ask-learn
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			hidden
+		>
+			Skip to Ask Learn chat experience
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881"
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<header
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				role="banner"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+				></div>
+			</header>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 <section
+					id="layout-body-menu"
+					class="layout-body-menu display-flex"
+					data-bi-name="menu"
+			  >
+					<div
+		id="left-container"
+		class="left-container display-none display-block-tablet padding-inline-sm padding-bottom-sm width-full"
+	>
+		<nav
+			id="affixed-left-container"
+			class="margin-top-sm-tablet position-sticky display-flex flex-direction-column"
+			aria-label="Primary"
+		></nav>
+	</div>
+			  </section>
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main "
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div
+		id="ms--content-header"
+		class="content-header default-focus border-bottom-none"
+		data-bi-name="content-header"
+	>
+		<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+			<button
+				type="button"
+				class="contents-button button button-sm margin-right-xxs"
+				data-bi-name="contents-expand"
+				aria-haspopup="true"
+				data-contents-button
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-menu"></span></span>
+				<span class="contents-expand-title"> Table of contents </span>
+			</button>
+			<button
+				type="button"
+				class="ap-collapse-behavior ap-expanded button button-sm"
+				data-bi-name="ap-collapse"
+				aria-controls="action-panel"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit editor mode</span>
+			</button>
+		</div>
+	</div>
+			<div data-main-column class="padding-sm padding-top-none padding-top-sm-tablet">
+				<div>
+					
+		<div id="article-header" class="background-color-body margin-bottom-xs display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content padding-none"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs	border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	 
+		<button
+			type="button"
+			id="ms--focus-mode-button"
+			data-focus-mode
+			data-bi-name="focus-mode-entry"
+			class="button button-sm flex-shrink-0 margin-right-xxs display-none display-inline-flex-desktop"
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-glasses"></span>
+			</span>
+			<span>Focus mode</span>
+		</button>
+	 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					
+		<button
+			data-page-action-item="overflow-mobile"
+			type="button"
+			class="button-block button-sm has-inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
+			data-bi-name="contents-expand"
+			data-contents-button
+			data-popover-close
+		>
+			<span class="icon">
+				<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+			</span>
+			<span class="contents-expand-title">Table of contents</span>
+		</button>
+	 
+		<a
+			id="lang-link-overflow"
+			class="button-sm has-inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	 
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	
+					
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to plan</span>
+		</button>
+	  
+		<a
+			data-contenteditbtn
+			class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none"
+			data-bi-name="edit"
+			
+			href="https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/fundamentals/url-rewriting.md"
+			data-original_content_git_url="https://github.com/dotnet/AspNetCore.Docs/blob/live/aspnetcore/fundamentals/url-rewriting.md"
+			data-original_content_git_url_template="{repo}/blob/{branch}/aspnetcore/fundamentals/url-rewriting.md"
+			data-pr_repo=""
+			data-pr_branch=""
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-edit-outline"></span>
+			</span>
+			<span>Edit</span>
+		</a>
+	
+					
+		<hr class="margin-block-xxs" />
+		<h4 class="font-size-sm padding-left-xxs">Share via</h4>
+		
+					<a
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-facebook"
+						data-bi-name="facebook"
+						data-page-action-item="overflow-all"
+						href="#"
+					>
+						<span class="icon color-primary" aria-hidden="true">
+							<span class="docon docon-facebook-share"></span>
+						</span>
+						<span>Facebook</span>
+					</a>
+
+					<a
+						href="#"
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-twitter"
+						data-bi-name="twitter"
+						data-page-action-item="overflow-all"
+					>
+						<span class="icon color-text" aria-hidden="true">
+							<span class="docon docon-xlogo-share"></span>
+						</span>
+						<span>x.com</span>
+					</a>
+
+					<a
+						href="#"
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-linkedin"
+						data-bi-name="linkedin"
+						data-page-action-item="overflow-all"
+					>
+						<span class="icon color-primary" aria-hidden="true">
+							<span class="docon docon-linked-in-logo"></span>
+						</span>
+						<span>LinkedIn</span>
+					</a>
+					<a
+						href="#"
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-email"
+						data-bi-name="email"
+						data-page-action-item="overflow-all"
+					>
+						<span class="icon color-primary" aria-hidden="true">
+							<span class="docon docon-mail-message"></span>
+						</span>
+						<span>Email</span>
+					</a>
+			  
+	 
+		<hr class="margin-block-xxs" />
+		<button
+			class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			type="button"
+			data-bi-name="print"
+			data-page-action-item="overflow-all"
+			data-popover-close
+			data-print-page
+			data-check-hidden="true"
+		>
+			<span class="icon color-primary" aria-hidden="true">
+				<span class="docon docon-print"></span>
+			</span>
+			<span>Print</span>
+		</button>
+	
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	
+					<!-- azure disclaimer -->
+					
+					<!-- privateUnauthorizedTemplate is hidden by default -->
+					
+		<div unauthorized-private-section data-bi-name="permission-content-unauthorized-private" hidden>
+			<hr class="hr margin-top-xs margin-bottom-sm" />
+			<div class="notification notification-info">
+				<div class="notification-content">
+					<p class="margin-top-none notification-title">
+						<span class="icon">
+							<span class="docon docon-exclamation-circle-solid" aria-hidden="true"></span>
+						</span>
+						<span>Note</span>
+					</p>
+					<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" href="#" data-bi-name="permission-content-sign-in">signing in</a> or <a  class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+					<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+					<div class="content"><h1 id="url-rewriting-middleware-in-aspnet-core">URL Rewriting Middleware in ASP.NET Core</h1></div>
+					
+		<div
+			id="article-metadata"
+			class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap"
+		>
+			
+		<div class="margin-block-xxs">
+			<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+				  <li class="visibility-hidden-visual-diff">
+			<local-time
+				format="twoDigitNumeric"
+				datetime="2024-07-26T17:48:00.000Z"
+				data-article-date-source="calculated"
+				class="is-invisible"
+			>
+				2024-07-26
+			</local-time>
+		</li>  
+			</ul>
+		</div>
+	 
+				<div
+					id="user-feedback"
+					class="margin-block-xxs display-none display-none-print"
+					hidden
+					data-hide-on-archived
+				>
+					
+		<button
+			id="user-feedback-button"
+			data-test-id="conceptual-feedback-button"
+			class="button button-sm button-clear button-primary display-none"
+			type="button"
+			data-bi-name="user-feedback-button"
+			data-user-feedback-button
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-like"></span>
+			</span>
+			<span>Feedback</span>
+		</button>
+	
+				</div>
+		  
+		</div>
+	 
+		<nav
+			id="center-doc-outline"
+			class="doc-outline is-hidden-desktop display-none-print margin-bottom-sm"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">
+				In this article
+			</h2>
+		</nav>
+	
+					<div class="content"><div data-moniker="aspnetcore-2.1 aspnetcore-2.2 aspnetcore-3.0 aspnetcore-3.1 aspnetcore-5.0 aspnetcore-6.0 aspnetcore-7.0 aspnetcore-8.0">
+<div class="NOTE">
+<p>Note</p>
+<p>This isn't the latest version of this article. For the current release, see the <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting?view=aspnetcore-9.0&amp;preserve-view=true" data-linktype="relative-path">.NET 9 version of this article</a>.</p>
+</div>
+</div>
+<div data-moniker="aspnetcore-3.0 aspnetcore-3.1 aspnetcore-5.0 aspnetcore-7.0">
+<div class="WARNING">
+<p>Warning</p>
+<p>This version of ASP.NET Core is no longer supported. For more information, see the <a href="https://dotnet.microsoft.com/platform/support/policy/dotnet-core" data-linktype="external">.NET and .NET Core Support Policy</a>. For the current release, see the <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting?view=aspnetcore-9.0&amp;preserve-view=true" data-linktype="relative-path">.NET 9 version of this article</a>.</p>
+</div>
+</div>
+<div data-moniker="aspnetcore-10.0">
+<div class="IMPORTANT">
+<p>Important</p>
+<p>This information relates to a pre-release product that may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.</p>
+<p>For the current release, see the <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting?view=aspnetcore-9.0&amp;preserve-view=true" data-linktype="relative-path">.NET 9 version of this article</a>.</p>
+</div>
+</div>
+<!--
+Include either this file or 'not-latest-version-without-not-supported-content.md' at the top 
+of articles.
+
+'not-latest-version.md' (this file): Includes not-supported content.
+'not-latest-version-without-not-supported-content.md': Doesn't include not-supported content.
+
+Use this file in articles that target >=7.0. For articles that target >=8.0 prior to 9.0
+reaching EOL, 'not-latest-version-without-not-supported-content.md' must be used to avoid
+a zone/file moniker range mismatch error.
+
+When a new version is released, it might be necessary to temporarily comment out the current 
+version moniker range section until the new moniker is created.
+
+Markdown to include this file:
+
+[!INCLUDE[](~/includes/not-latest-version.md)]
+-->
+<p>By <a href="https://twitter.com/serpent5" data-linktype="external">Kirk Larkin</a> and <a href="https://twitter.com/RickAndMSFT" data-linktype="external">Rick Anderson</a></p>
+<div data-moniker="aspnetcore-10.0 aspnetcore-6.0 aspnetcore-7.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>This article introduces URL rewriting with instructions on how to use URL Rewriting Middleware in ASP.NET Core apps.</p>
+<p>URL rewriting is the act of modifying request URLs based on one or more predefined rules. URL rewriting creates an abstraction between resource locations and their addresses so that the locations and addresses aren't tightly linked. URL rewriting is valuable in several scenarios to:</p>
+<ul>
+<li>Move or replace server resources temporarily or permanently and maintain stable locators for those resources.</li>
+<li>Split request processing across different apps or across areas of one app.</li>
+<li>Remove, add, or reorganize URL segments on incoming requests.</li>
+<li>Optimize public URLs for Search Engine Optimization (SEO).</li>
+<li>Permit the use of friendly public URLs to help visitors predict the content returned by requesting a resource.</li>
+<li>Redirect insecure requests to secure endpoints.</li>
+<li>Prevent hotlinking, where an external site uses a hosted static asset on another site by linking the asset into its own content.</li>
+</ul>
+<p><em><strong>URL rewriting can reduce the performance of an app</strong></em>. Limit the number and complexity of rules.</p>
+<h2 id="url-redirect-and-url-rewrite">URL redirect and URL rewrite</h2>
+<p>The difference in wording between <em>URL redirect</em> and <em>URL rewrite</em> is subtle but has important implications for providing resources to clients. ASP.NET Core's URL Rewriting Middleware is capable of meeting the need for both.</p>
+<p>A <em>URL redirect</em> involves a client-side operation, where the client is instructed to access a resource at a different address than the client originally requested. This requires a round trip to the server. The redirect URL returned to the client appears in the browser's address bar when the client makes a new request for the resource.</p>
+<p>If <code>/resource</code> is <em>redirected</em> to <code>/different-resource</code>, the server responds that the client should obtain the resource at <code>/different-resource</code> with a status code indicating that the redirect is either temporary or permanent.</p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/url_redirect.png?view=aspnetcore-9.0" alt="A WebAPI service endpoint has been temporarily changed from version 1 (v1) to version 2 (v2) on the server. A client makes a request to the service at the version 1 path /v1/api. The server sends back a 302 (Found) response with the new, temporary path for the service at version 2 /v2/api. The client makes a second request to the service at the redirect URL. The server responds with a 200 (OK) status code." data-linktype="relative-path"></p>
+<p>When redirecting requests to a different URL, indicate whether the redirect is permanent or temporary by specifying the status code with the response:</p>
+<ul>
+<li><p>The <a href="https://developer.mozilla.org/docs/Web/HTTP/Status/301" data-linktype="external"><code>301 - Moved Permanently</code></a> status code is used where the resource has a new, permanent URL and that all future requests for the resource should use the new URL. <em>The client may cache and reuse the response when a 301 status code is received.</em></p>
+</li>
+<li><p>The <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302" data-linktype="external"><code>302 - Found</code></a> status code is used where the redirection is temporary or generally subject to change. The 302 status code indicates to the client not to store the URL and use it in the future.</p>
+</li>
+</ul>
+<p>For more information on status codes, see <a href="https://www.rfc-editor.org/rfc/rfc9110#name-status-codes" data-linktype="external">RFC 9110: Status Code Definitions</a>.</p>
+<p>A <em>URL rewrite</em> is a server-side operation that provides a resource from a different resource address than the client requested. Rewriting a URL doesn't require a round trip to the server. The rewritten URL isn't returned to the client and doesn't appear in the browser's address bar.</p>
+<p>If <code>/resource</code> is <em>rewritten</em> to <code>/different-resource</code>, the server <em>internally</em> fetches and returns the resource at <code>/different-resource</code>.</p>
+<p>Although the client might be able to retrieve the resource at the rewritten URL, the client isn't informed that the resource exists at the rewritten URL when it makes its request and receives the response.</p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/url_rewrite.png?view=aspnetcore-9.0" alt="A WebAPI service endpoint has been changed from version 1 (v1) to version 2 (v2) on the server. A client makes a request to the service at the version 1 path /v1/api. The request URL is rewritten to access the service at the version 2 path /v2/api. The service responds to the client with a 200 (OK) status code." data-linktype="relative-path"></p>
+<h2 id="url-rewriting-sample-app">URL rewriting sample app</h2>
+<p>Explore the features of the URL Rewriting Middleware with the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/fundamentals/url-rewriting/samples/" data-linktype="external">sample app</a>. The app applies redirect and rewrite rules and shows the redirected or rewritten URL for several scenarios.</p>
+<h2 id="when-to-use-url-rewriting-middleware">When to use URL rewriting middleware</h2>
+<p>Use URL Rewriting Middleware when the following approaches aren't satisfactory:</p>
+<ul>
+<li><a href="https://www.iis.net/downloads/microsoft/url-rewrite" data-linktype="external">URL Rewrite module with IIS on Windows Server</a></li>
+<li><a href="https://httpd.apache.org/docs/2.4/rewrite/" data-linktype="external">Apache mod_rewrite module on Apache Server</a></li>
+<li><a href="https://www.nginx.com/blog/creating-nginx-rewrite-rules/" data-linktype="external">URL rewriting on Nginx</a></li>
+</ul>
+<p>Use the URL rewriting middleware when the app is hosted on <a href="servers/httpsys553c.html?view=aspnetcore-9.0" data-linktype="relative-path">HTTP.sys server</a>.</p>
+<p>The main reasons to use the server-based URL rewriting technologies in IIS, Apache, and Nginx are:</p>
+<ul>
+<li><p>The middleware doesn't support the full features of these modules.</p>
+<p>Some of the features of the server modules don't work with ASP.NET Core projects, such as the <code>IsFile</code> and <code>IsDirectory</code> constraints of the IIS Rewrite module. In these scenarios, use the middleware instead.</p>
+</li>
+<li><p>The performance of the middleware probably doesn't match that of the modules.</p>
+<p>Benchmarking is the only way to know with certainty which approach degrades performance the most or if degraded performance is negligible.</p>
+</li>
+</ul>
+<h2 id="extension-and-options">Extension and options</h2>
+<p>Establish URL rewrite and redirect rules by creating an instance of the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptions" data-linktype="absolute-path">RewriteOptions</a> class with extension methods for each of the rewrite rules. Chain multiple rules <em><strong>in the order that they should be processed</strong></em>. The <code>RewriteOptions</code> are passed into the URL Rewriting Middleware as it's added to the request pipeline with <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.rewritebuilderextensions.userewriter" class="no-loc" data-linktype="absolute-path">UseRewriter</a>:</p>
+<pre><code class="lang-csharp" highlight-lines="7-24">using Microsoft.AspNetCore.Rewrite;
+using RewriteRules;
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+using (StreamReader apacheModRewriteStreamReader =
+    File.OpenText("ApacheModRewrite.txt"))
+using (StreamReader iisUrlRewriteStreamReader =
+    File.OpenText("IISUrlRewrite.xml"))
+{
+    var options = new RewriteOptions()
+        .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+        .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2",
+            skipRemainingRules: true)
+        .AddApacheModRewrite(apacheModRewriteStreamReader)
+        .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+        .Add(MethodRules.RedirectXmlFileRequests)
+        .Add(MethodRules.RewriteTextFileRequests)
+        .Add(new RedirectImageRequests(".png", "/png-images"))
+        .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+    app.UseRewriter(options);
+}
+
+app.UseStaticFiles();
+
+app.Run(context =&gt; context.Response.WriteAsync(
+    $"Rewritten or Redirected Url: " +
+    $"{context.Request.Path + context.Request.QueryString}"));
+
+app.Run();
+</code></pre>
+<p>In the preceding code, <a href="https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/fundamentals/url-rewriting/samples/6.x/SampleApp/RewriteRules.cs" data-linktype="external"><code>MethodRules</code></a> is a user defined class. See <a href="#rrr" data-linktype="self-bookmark"><code>RewriteRules.cs</code></a> in this article for more information.</p>
+<h3 id="redirect-non-www-to-www">Redirect non-www to www</h3>
+<p>Three options permit the app to redirect non-<code>www</code> requests to <code>www</code>:</p>
+<ul>
+<li><p><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addredirecttowwwpermanent" class="no-loc" data-linktype="absolute-path">AddRedirectToWwwPermanent</a>: Permanently redirect the request to the <code>www</code> subdomain if the request is non-<code>www</code>. Redirects with a <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.statuscodes.status308permanentredirect#microsoft-aspnetcore-http-statuscodes-status308permanentredirect" data-linktype="absolute-path">Status308PermanentRedirect</a> status code.</p>
+</li>
+<li><p><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addredirecttowww" class="no-loc" data-linktype="absolute-path">AddRedirectToWww</a>: Redirect the request to the <code>www</code> subdomain if the incoming request is non-<code>www</code>. Redirects with a <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.statuscodes.status307temporaryredirect#microsoft-aspnetcore-http-statuscodes-status307temporaryredirect" data-linktype="absolute-path">Status307TemporaryRedirect</a> status code. An overload permits  providing the status code for the response. Use a field of the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.statuscodes" class="no-loc" data-linktype="absolute-path">StatusCodes</a> class for a status code assignment.</p>
+</li>
+</ul>
+<h3 id="url-redirect">URL redirect</h3>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addredirect" class="no-loc" data-linktype="absolute-path">AddRedirect</a> to redirect requests. The first parameter contains the <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions" data-linktype="absolute-path">.NET regular expression</a> (Regex) for matching on the path of the incoming URL. The second parameter is the replacement string. The third parameter, if present, specifies the status code. If the status code isn't specified, the status code defaults to <a href="https://developer.mozilla.org/docs/Web/HTTP/Status/302" data-linktype="external">302 - Found</a>, which indicates that the resource is temporarily moved or replaced.</p>
+<pre><code class="lang-csharp" highlight-lines="13">using Microsoft.AspNetCore.Rewrite;
+using RewriteRules;
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+using (StreamReader apacheModRewriteStreamReader =
+    File.OpenText("ApacheModRewrite.txt"))
+using (StreamReader iisUrlRewriteStreamReader =
+    File.OpenText("IISUrlRewrite.xml"))
+{
+    var options = new RewriteOptions()
+        .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+        .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2",
+            skipRemainingRules: true)
+        .AddApacheModRewrite(apacheModRewriteStreamReader)
+        .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+        .Add(MethodRules.RedirectXmlFileRequests)
+        .Add(MethodRules.RewriteTextFileRequests)
+        .Add(new RedirectImageRequests(".png", "/png-images"))
+        .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+    app.UseRewriter(options);
+}
+
+app.UseStaticFiles();
+
+app.Run(context =&gt; context.Response.WriteAsync(
+    $"Rewritten or Redirected Url: " +
+    $"{context.Request.Path + context.Request.QueryString}"));
+
+app.Run();
+</code></pre>
+<p>In a browser with developer tools enabled, make a request to the sample app with the path <code>/redirect-rule/1234/5678</code>. The regular expression matches the request path on <code>redirect-rule/(.*)</code>, and the path is replaced with <code>/redirected/1234/5678</code>. The redirect URL is sent back to the client with a <em>302 - Found</em> status code. The browser makes a new request at the redirect URL, which appears in the browser's address bar. Since no rules in the sample app match on the redirect URL:</p>
+<ul>
+<li>The second request receives a <em>200 - OK</em> response from the app.</li>
+<li>The body of the response shows the redirect URL.</li>
+</ul>
+<p>A round trip is made to the server when a URL is <em>redirected</em>.</p>
+<div class="WARNING">
+<p>Warning</p>
+<p>Be cautious when establishing redirect rules. Redirect rules are evaluated on every request to the app, including after a redirect. It's easy to accidentally create a loop of <em><strong>infinite</strong></em> redirects.</p>
+</div>
+<p>The part of the expression contained within parentheses is called a <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/grouping-constructs-in-regular-expressions" data-linktype="absolute-path">capture group</a>. The dot (<code>.</code>) of the expression means <em>match any character</em>. The asterisk (<code>*</code>) indicates <em>match the preceding character zero or more times</em>. Therefore, the last two path segments of the URL, <code>1234/5678</code>, are captured by capture group <code>(.*)</code>. Any value provided in the request URL after <code>redirect-rule/</code> is captured by this single capture group.</p>
+<p>In the replacement string, captured groups are injected into the string with the dollar sign (<code>$</code>) followed by the sequence number of the capture. The first capture group value is obtained with <code>$1</code>, the second with <code>$2</code>, and they continue in sequence for the capture groups in the regular expression. There's only one captured group in the redirect rule regular expression in <code>redirect-rule/(.*)</code>, so there's only one injected group in the replacement string, which is <code>$1</code>. When the rule is applied, the URL becomes <code>/redirected/1234/5678</code>.</p>
+<p>Try <code>/redirect-rule/1234/5678</code> with the browser tools on the network tab.</p>
+<h3 id="url-redirect-to-a-secure-endpoint">URL redirect to a secure endpoint</h3>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addredirecttohttps" class="no-loc" data-linktype="absolute-path">AddRedirectToHttps</a> to redirect HTTP requests to the same host and path using the HTTPS protocol. If the status code isn't supplied, the middleware defaults to <em>302 - Found</em>. If the port isn't supplied:</p>
+<ul>
+<li>The middleware defaults to <code>null</code>.</li>
+<li>The scheme changes to <code>https</code> (HTTPS protocol), and the client accesses the resource on port 443.</li>
+</ul>
+<p>The following example shows how to set the status code to <code>301 - Moved Permanently</code> and change the port to the HTTPS port used by Kestrel on localhost. In production, the HTTPS port is set to null:</p>
+<pre><code class="lang-csharp" highlight-lines="7-12,20-21">using Microsoft.AspNetCore.Rewrite;
+using RewriteRules;
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+int? localhostHTTPSport = null;
+if (app.Environment.IsDevelopment())
+{
+    localhostHTTPSport = Int32.Parse(Environment.GetEnvironmentVariable(
+                   "ASPNETCORE_URLS")!.Split(new Char[] { ':', ';' })[2]);
+}
+
+using (StreamReader apacheModRewriteStreamReader =
+    File.OpenText("ApacheModRewrite.txt"))
+using (StreamReader iisUrlRewriteStreamReader =
+    File.OpenText("IISUrlRewrite.xml"))
+{
+    var options = new RewriteOptions()
+        // localhostHTTPport not needed for production, used only with localhost.
+        .AddRedirectToHttps(301, localhostHTTPSport)
+        .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+        .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2",
+            skipRemainingRules: true)
+        .AddApacheModRewrite(apacheModRewriteStreamReader)
+        .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+        .Add(MethodRules.RedirectXmlFileRequests)
+        .Add(MethodRules.RewriteTextFileRequests)
+        .Add(new RedirectImageRequests(".png", "/png-images"))
+        .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+    app.UseRewriter(options);
+}
+
+app.UseStaticFiles();
+
+app.Run(context =&gt; context.Response.WriteAsync(
+    $"Rewritten or Redirected Url: " +
+    $"{context.Request.Path + context.Request.QueryString}"));
+
+app.Run();
+</code></pre>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addredirecttohttpspermanent" class="no-loc" data-linktype="absolute-path">AddRedirectToHttpsPermanent</a> to redirect insecure requests to the same host and path with secure HTTPS protocol on port 443. The middleware sets the status code to <code>301 - Moved Permanently</code>.</p>
+<pre><code class="lang-csharp" highlight-lines="13">using Microsoft.AspNetCore.Rewrite;
+using RewriteRules;
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+using (StreamReader apacheModRewriteStreamReader =
+    File.OpenText("ApacheModRewrite.txt"))
+using (StreamReader iisUrlRewriteStreamReader =
+    File.OpenText("IISUrlRewrite.xml"))
+{
+    var options = new RewriteOptions()
+        .AddRedirectToHttpsPermanent()
+        .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+        .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2",
+            skipRemainingRules: true)
+        .AddApacheModRewrite(apacheModRewriteStreamReader)
+        .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+        .Add(MethodRules.RedirectXmlFileRequests)
+        .Add(MethodRules.RewriteTextFileRequests)
+        .Add(new RedirectImageRequests(".png", "/png-images"))
+        .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+    app.UseRewriter(options);
+}
+
+app.UseStaticFiles();
+
+app.Run(context =&gt; context.Response.WriteAsync(
+    $"Rewritten or Redirected Url: " +
+    $"{context.Request.Path + context.Request.QueryString}"));
+
+app.Run();
+</code></pre><!-- Note: something wrong with project because the localhostHTTPSport is correctly calculated but not used in the redirect. The exact same code at https://github.com/Rick-Anderson/WebRedirect does work. -->
+<div class="NOTE">
+<p>Note</p>
+<p>When redirecting to a secure endpoint without the requirement for additional redirect rules, we recommend using HTTPS Redirection Middleware. For more information, see <a href="../security/enforcing-ssl553c.html?view=aspnetcore-9.0#require-https" data-linktype="relative-path">Enforce HTTPS</a>.</p>
+</div>
+<p>The sample app demonstrates how to use <code>AddRedirectToHttps</code> or <code>AddRedirectToHttpsPermanent</code>. Make an insecure HTTP request to the app at <code>http://redirect6.azurewebsites.net/iis-rules-rewrite/xyz</code>. When testing HTTP to HTTPS redirection with localhost:</p>
+<ul>
+<li>Use the HTTP URL, which has a different port than the HTTPS URL. The HTTP URL is in the <code>Properties/launchSettings.json</code> file.</li>
+<li>Removing the <code>s</code> from <code>https://localhost/{port}</code> fails because localhost doesn't respond on HTTP to the HTTPS port.</li>
+</ul>
+<p>The following image shows the F12 browser tools image of a request to <code>http://redirect6.azurewebsites.net/iis-rules-rewrite/xyz</code>  using the preceding code:</p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_redirect_to_https6.png?view=aspnetcore-9.0" alt="Browser window with developer tools tracking the requests and responses: Add redirect to HTTPS" data-linktype="relative-path"></p>
+<h3 id="url-rewrite">URL rewrite</h3>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addrewrite" class="no-loc" data-linktype="absolute-path">AddRewrite</a> to create a rule for rewriting URLs. The first parameter contains the regular expression for matching on the incoming URL path. The second parameter is the replacement string. The third parameter, <code>skipRemainingRules: {true|false}</code>, indicates to the middleware whether or not to skip additional rewrite rules if the current rule is applied.</p>
+<pre><code class="lang-csharp" highlight-lines="15-16">using Microsoft.AspNetCore.Rewrite;
+using RewriteRules;
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+using (StreamReader apacheModRewriteStreamReader =
+    File.OpenText("ApacheModRewrite.txt"))
+using (StreamReader iisUrlRewriteStreamReader =
+    File.OpenText("IISUrlRewrite.xml"))
+{
+    var options = new RewriteOptions()
+        .AddRedirectToHttpsPermanent()
+        .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+        .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2",
+            skipRemainingRules: true)
+        .AddApacheModRewrite(apacheModRewriteStreamReader)
+        .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+        .Add(MethodRules.RedirectXmlFileRequests)
+        .Add(MethodRules.RewriteTextFileRequests)
+        .Add(new RedirectImageRequests(".png", "/png-images"))
+        .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+    app.UseRewriter(options);
+}
+
+app.UseStaticFiles();
+
+app.Run(context =&gt; context.Response.WriteAsync(
+    $"Rewritten or Redirected Url: " +
+    $"{context.Request.Path + context.Request.QueryString}"));
+
+app.Run();
+</code></pre>
+<p>Try the request to <code>https://redirect6.azurewebsites.net/rewrite-rule/1234/5678</code></p>
+<p>The caret (<code>^</code>) at the beginning of the expression means that matching starts at the beginning of the URL path.</p>
+<p>In the earlier example with the redirect rule, <code>redirect-rule/(.*)</code>, there's no caret (<code>^</code>) at the start of the regular expression. Therefore, any characters may precede <code>redirect-rule/</code> in the path for a successful match.</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th style="text-align: center;">Match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/redirect-rule/1234/5678</code></td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td><code>/my-cool-redirect-rule/1234/5678</code></td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td><code>/anotherredirect-rule/1234/5678</code></td>
+<td style="text-align: center;">Yes</td>
+</tr>
+</tbody>
+</table>
+<p>The rewrite rule, <code>^rewrite-rule/(\d+)/(\d+)</code>, only matches paths if they start with <code>rewrite-rule/</code>. In the following table, note the difference in matching.</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th style="text-align: center;">Match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/rewrite-rule/1234/5678</code></td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td><code>/my-cool-rewrite-rule/1234/5678</code></td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td><code>/anotherrewrite-rule/1234/5678</code></td>
+<td style="text-align: center;">No</td>
+</tr>
+</tbody>
+</table>
+<p>Following the <code>^rewrite-rule/</code> portion of the expression, there are two capture groups, <code>(\d+)/(\d+)</code>. The <code>\d</code> signifies <em>match a digit (number)</em>. The plus sign (<code>+</code>) means <em>match one or more of the preceding character</em>. Therefore, the URL must contain a number followed by a forward-slash followed by another number. These capture groups are injected into the rewritten URL as <code>$1</code> and <code>$2</code>. The rewrite rule replacement string places the captured groups into the query string. The requested path <code>/rewrite-rule/1234/5678</code> is rewritten to return the resource at <code>/rewritten?var1=1234&amp;var2=5678</code>. If a query string is present on the original request, it's preserved when the URL is rewritten.</p>
+<p>There's no round trip to the server to return the resource. If the resource exists, it's fetched and returned to the client with a <em>200 - OK</em> status code. Because the client isn't redirected, the URL in the browser's address bar doesn't change. Clients can't detect that a URL rewrite operation occurred on the server.</p>
+<h3 id="performance-tips-for-url-rewrite-and-redirect">Performance tips for URL rewrite and redirect</h3>
+<p>For the fastest response:</p>
+<ul>
+<li>Order rewrite rules from the most frequently matched rule to the least frequently matched rule.</li>
+<li>Use <code>skipRemainingRules: true</code> whenever possible because matching rules is computationally expensive and increases app response time. Skip the processing of the remaining rules when a match occurs and no additional rule processing is required.</li>
+</ul>
+<div class="WARNING">
+<p>Warning</p>
+<p>A malicious user can provide expensive-to-process input to <code>RegularExpressions</code> causing a <a href="https://www.cisa.gov/news-events/news/understanding-denial-service-attacks" data-linktype="external">Denial-of-Service attack</a>. ASP.NET Core framework APIs that use <code>RegularExpressions</code> institute a timeout. For example, the Regex timeout (<code>_regexTimeout</code>) of the <a href="https://github.com/dotnet/aspnetcore/blob/main/src/Middleware/Rewrite/src/RedirectRule.cs" data-linktype="external"><code>RedirectRule</code> class</a> and <a href="https://github.com/dotnet/aspnetcore/blob/main/src/Middleware/Rewrite/src/RewriteRule.cs" data-linktype="external"><code>RewriteRule</code> class</a> classes both pass in a one second timeout.</p>
+</div>
+<div class="NOTE">
+<p>Note</p>
+<p>Documentation links to .NET reference source usually load the repository's default branch, which represents the current development for the next release of .NET. To select a tag for a specific release, use the <strong>Switch branches or tags</strong> dropdown list. For more information, see <a href="https://github.com/dotnet/AspNetCore.Docs/discussions/26205" data-linktype="external">How to select a version tag of ASP.NET Core source code (dotnet/AspNetCore.Docs #26205)</a>.</p>
+</div>
+<h3 id="apache-mod_rewrite">Apache mod_rewrite</h3>
+<p>Apply Apache mod_rewrite rules with <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.apachemodrewriteoptionsextensions.addapachemodrewrite" class="no-loc" data-linktype="absolute-path">AddApacheModRewrite</a>. Make sure that the rules file is deployed with the app. For more information and examples of mod_rewrite rules, see <a href="https://httpd.apache.org/docs/2.4/rewrite/" data-linktype="external">Apache mod_rewrite</a>.</p>
+<p>A <a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.streamreader" class="no-loc" data-linktype="absolute-path">StreamReader</a> is used to read the rules from the <em>ApacheModRewrite.txt</em> rules file:</p>
+<pre><code class="lang-csharp" highlight-lines="7-8,17">using Microsoft.AspNetCore.Rewrite;
+using RewriteRules;
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+using (StreamReader apacheModRewriteStreamReader =
+    File.OpenText("ApacheModRewrite.txt"))
+using (StreamReader iisUrlRewriteStreamReader =
+    File.OpenText("IISUrlRewrite.xml"))
+{
+    var options = new RewriteOptions()
+        .AddRedirectToHttpsPermanent()
+        .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+        .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2",
+            skipRemainingRules: true)
+        .AddApacheModRewrite(apacheModRewriteStreamReader)
+        .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+        .Add(MethodRules.RedirectXmlFileRequests)
+        .Add(MethodRules.RewriteTextFileRequests)
+        .Add(new RedirectImageRequests(".png", "/png-images"))
+        .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+    app.UseRewriter(options);
+}
+
+app.UseStaticFiles();
+
+app.Run(context =&gt; context.Response.WriteAsync(
+    $"Rewritten or Redirected Url: " +
+    $"{context.Request.Path + context.Request.QueryString}"));
+
+app.Run();
+</code></pre>
+<p>The sample app redirects requests from <code>/apache-mod-rules-redirect/(.\*)</code> to <code>/redirected?id=$1</code>. The response status code is <em>302 - Found</em>.</p>
+<pre><code># Rewrite path with additional sub directory
+RewriteRule ^/apache-mod-rules-redirect/(.*) /redirected?id=$1 [L,R=302]
+</code></pre>
+<p>Try the request to <code>https://redirect6.azurewebsites.net/apache-mod-rules-redirect/1234</code></p>
+<p>The <a href="https://github.com/dotnet/aspnetcore/blob/main/src/Middleware/Rewrite/src/ApacheModRewrite/ServerVariables.cs" data-linktype="external">Apache middleware</a> supports the following Apache mod_rewrite server variables:</p>
+<ul>
+<li>CONN_REMOTE_ADDR</li>
+<li>HTTP_ACCEPT</li>
+<li>HTTP_CONNECTION</li>
+<li>HTTP_COOKIE</li>
+<li>HTTP_FORWARDED</li>
+<li>HTTP_HOST</li>
+<li>HTTP_REFERER</li>
+<li>HTTP_USER_AGENT</li>
+<li>HTTPS</li>
+<li>IPV6</li>
+<li>QUERY_STRING</li>
+<li>REMOTE_ADDR</li>
+<li>REMOTE_PORT</li>
+<li>REQUEST_FILENAME</li>
+<li>REQUEST_METHOD</li>
+<li>REQUEST_SCHEME</li>
+<li>REQUEST_URI</li>
+<li>SCRIPT_FILENAME</li>
+<li>SERVER_ADDR</li>
+<li>SERVER_PORT</li>
+<li>SERVER_PROTOCOL</li>
+<li>TIME</li>
+<li>TIME_DAY</li>
+<li>TIME_HOUR</li>
+<li>TIME_MIN</li>
+<li>TIME_MON</li>
+<li>TIME_SEC</li>
+<li>TIME_WDAY</li>
+<li>TIME_YEAR</li>
+</ul>
+<div class="NOTE">
+<p>Note</p>
+<p>Documentation links to .NET reference source usually load the repository's default branch, which represents the current development for the next release of .NET. To select a tag for a specific release, use the <strong>Switch branches or tags</strong> dropdown list. For more information, see <a href="https://github.com/dotnet/AspNetCore.Docs/discussions/26205" data-linktype="external">How to select a version tag of ASP.NET Core source code (dotnet/AspNetCore.Docs #26205)</a>.</p>
+</div>
+<h3 id="iis-url-rewrite-module-rules">IIS URL Rewrite Module rules</h3>
+<p>To use the same rule set that applies to the IIS URL Rewrite Module, use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.iisurlrewriteoptionsextensions.addiisurlrewrite" class="no-loc" data-linktype="absolute-path">AddIISUrlRewrite</a>. Make sure that the rules file is deployed with the app. Don't direct the middleware to use the app's <em>web.config</em> file when running on Windows Server IIS. With IIS, these rules should be stored outside of the app's <em>web.config</em> file in order to avoid conflicts with the IIS Rewrite module. For more information and examples of IIS URL Rewrite Module rules, see <a href="https://learn.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-url-rewrite-module-20" data-linktype="absolute-path">Using Url Rewrite Module 2.0</a> and <a href="https://learn.microsoft.com/en-us/iis/extensions/url-rewrite-module/url-rewrite-module-configuration-reference" data-linktype="absolute-path">URL Rewrite Module Configuration Reference</a>.</p>
+<p>A <a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.streamreader" class="no-loc" data-linktype="absolute-path">StreamReader</a> is used to read the rules from the <code>IISUrlRewrite.xml</code> rules file:</p>
+<pre><code class="lang-csharp" highlight-lines="9-10,18">using Microsoft.AspNetCore.Rewrite;
+using RewriteRules;
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+using (StreamReader apacheModRewriteStreamReader =
+    File.OpenText("ApacheModRewrite.txt"))
+using (StreamReader iisUrlRewriteStreamReader =
+    File.OpenText("IISUrlRewrite.xml"))
+{
+    var options = new RewriteOptions()
+        .AddRedirectToHttpsPermanent()
+        .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+        .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2",
+            skipRemainingRules: true)
+        .AddApacheModRewrite(apacheModRewriteStreamReader)
+        .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+        .Add(MethodRules.RedirectXmlFileRequests)
+        .Add(MethodRules.RewriteTextFileRequests)
+        .Add(new RedirectImageRequests(".png", "/png-images"))
+        .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+    app.UseRewriter(options);
+}
+
+app.UseStaticFiles();
+
+app.Run(context =&gt; context.Response.WriteAsync(
+    $"Rewritten or Redirected Url: " +
+    $"{context.Request.Path + context.Request.QueryString}"));
+
+app.Run();
+</code></pre>
+<p>The sample app rewrites requests from <code>/iis-rules-rewrite/(.*)</code> to <code>/rewritten?id=$1</code>. The response is sent to the client with a <em>200 - OK</em> status code.</p>
+<pre><code class="lang-xml">&lt;rewrite&gt;
+  &lt;rules&gt;
+    &lt;rule name="Rewrite segment to id querystring" stopProcessing="true"&gt;
+      &lt;match url="^iis-rules-rewrite/(.*)$" /&gt;
+      &lt;action type="Rewrite" url="rewritten?id={R:1}" appendQueryString="false"/&gt;
+    &lt;/rule&gt;
+  &lt;/rules&gt;
+&lt;/rewrite&gt;
+</code></pre>
+<p>Try the request to <code>https://redirect6.azurewebsites.net/iis-rules-rewrite/xyz</code></p>
+<p>Apps that have an active IIS Rewrite Module with server-level rules configured that impacts the app in undesirable ways:</p>
+<ul>
+<li>Consider disabling the IIS Rewrite Module for the app.</li>
+<li>For more information, see <a href="https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/modules?view=aspnetcore-9.0#disabling-iis-modules" data-linktype="relative-path">Disabling IIS modules</a>.</li>
+</ul>
+<h4 id="unsupported-features">Unsupported features</h4>
+<p>The middleware doesn't support the following IIS URL Rewrite Module features:</p>
+<ul>
+<li>Outbound Rules</li>
+<li>Custom Server Variables</li>
+<li>Wildcards</li>
+<li>LogRewrittenUrl</li>
+</ul>
+<h4 id="supported-server-variables">Supported server variables</h4>
+<p>The <a href="https://github.com/dotnet/aspnetcore/blob/main/src/Middleware/Rewrite/src/IISUrlRewrite/ServerVariables.cs" data-linktype="external">middleware</a> supports the following IIS URL Rewrite Module server variables:</p>
+<ul>
+<li>CONTENT_LENGTH</li>
+<li>CONTENT_TYPE</li>
+<li>HTTP_ACCEPT</li>
+<li>HTTP_CONNECTION</li>
+<li>HTTP_COOKIE</li>
+<li>HTTP_HOST</li>
+<li>HTTP_REFERER</li>
+<li>HTTP_URL</li>
+<li>HTTP_USER_AGENT</li>
+<li>HTTPS</li>
+<li>LOCAL_ADDR</li>
+<li>QUERY_STRING</li>
+<li>REMOTE_ADDR</li>
+<li>REMOTE_PORT</li>
+<li>REQUEST_FILENAME</li>
+<li>REQUEST_URI</li>
+</ul>
+<div class="NOTE">
+<p>Note</p>
+<p>Documentation links to .NET reference source usually load the repository's default branch, which represents the current development for the next release of .NET. To select a tag for a specific release, use the <strong>Switch branches or tags</strong> dropdown list. For more information, see <a href="https://github.com/dotnet/AspNetCore.Docs/discussions/26205" data-linktype="external">How to select a version tag of ASP.NET Core source code (dotnet/AspNetCore.Docs #26205)</a>.</p>
+</div>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.fileproviders.ifileprovider" class="no-loc" data-linktype="absolute-path">IFileProvider</a> can be obtained via a <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.fileproviders.physicalfileprovider" class="no-loc" data-linktype="absolute-path">PhysicalFileProvider</a>. This approach may provide greater flexibility for the location of rewrite rules files. Make sure that the rewrite rules files are deployed to the server at the path provided.</p>
+<pre><code class="lang-csharp">var fileProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory());
+</code></pre>
+<h3 id="method-based-rule">Method-based rule</h3>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.add" class="no-loc" data-linktype="absolute-path">Add</a> to implement custom rule logic in a method. <code>Add</code> exposes the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewritecontext" class="no-loc" data-linktype="absolute-path">RewriteContext</a>, which makes available the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httpcontext" class="no-loc" data-linktype="absolute-path">HttpContext</a> for use in redirect methods. The <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewritecontext.result" class="no-loc" data-linktype="absolute-path">RewriteContext.Result</a> property determines how additional pipeline processing is handled. Set the value to one of the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.ruleresult" class="no-loc" data-linktype="absolute-path">RuleResult</a> fields described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Rewrite context result</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RuleResult.ContinueRules</code> (default)</td>
+<td>Continue applying rules.</td>
+</tr>
+<tr>
+<td><code>RuleResult.EndResponse</code></td>
+<td>Stop applying rules and send the response.</td>
+</tr>
+<tr>
+<td><code>RuleResult.SkipRemainingRules</code></td>
+<td>Stop applying rules and send the context to the next middleware.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-csharp" highlight-lines="19">using Microsoft.AspNetCore.Rewrite;
+using RewriteRules;
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+using (StreamReader apacheModRewriteStreamReader =
+    File.OpenText("ApacheModRewrite.txt"))
+using (StreamReader iisUrlRewriteStreamReader =
+    File.OpenText("IISUrlRewrite.xml"))
+{
+    var options = new RewriteOptions()
+        .AddRedirectToHttpsPermanent()
+        .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+        .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2",
+            skipRemainingRules: true)
+        .AddApacheModRewrite(apacheModRewriteStreamReader)
+        .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+        .Add(MethodRules.RedirectXmlFileRequests)
+        .Add(MethodRules.RewriteTextFileRequests)
+        .Add(new RedirectImageRequests(".png", "/png-images"))
+        .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+    app.UseRewriter(options);
+}
+
+app.UseStaticFiles();
+
+app.Run(context =&gt; context.Response.WriteAsync(
+    $"Rewritten or Redirected Url: " +
+    $"{context.Request.Path + context.Request.QueryString}"));
+
+app.Run();
+</code></pre>
+<p>The sample app demonstrates a method that redirects requests for paths that end with <code>.xml</code>. When a request is made for <code>/file.xml</code>:</p>
+<ul>
+<li>The request is redirected to <code>/xmlfiles/file.xml</code></li>
+<li>The status code is set to <code>301 - Moved Permanently</code>. When the browser makes a new request for <code>/xmlfiles/file.xml</code>, Static File Middleware serves the file to the client from the <em>wwwroot/xmlfiles</em> folder. For a redirect, explicitly set the status code of the response. Otherwise, a <em>200 - OK</em> status code is returned, and the redirect doesn't occur on the client.</li>
+</ul>
+<p><a name="rrr"></a></p>
+<p><code>RewriteRules.cs</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="15-19">public static void RedirectXmlFileRequests(RewriteContext context)
+{
+    var request = context.HttpContext.Request;
+
+    // Because the client is redirecting back to the same app, stop 
+    // processing if the request has already been redirected.
+    if (request.Path.StartsWithSegments(new PathString("/xmlfiles")) ||
+        request.Path.Value==null)
+    {
+        return;
+    }
+
+    if (request.Path.Value.EndsWith(".xml", StringComparison.OrdinalIgnoreCase))
+    {
+        var response = context.HttpContext.Response;
+        response.StatusCode = (int) HttpStatusCode.MovedPermanently;
+        context.Result = RuleResult.EndResponse;
+        response.Headers[HeaderNames.Location] = 
+            "/xmlfiles" + request.Path + request.QueryString;
+    }
+}
+</code></pre>
+<p>This approach can also rewrite requests. The sample app demonstrates rewriting the path for any text file request to serve the <em>file.txt</em> text file from the <em>wwwroot</em> folder. Static File Middleware serves the file based on the updated request path:</p>
+<pre><code class="lang-csharp" highlight-lines="20,27">using Microsoft.AspNetCore.Rewrite;
+using RewriteRules;
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+using (StreamReader apacheModRewriteStreamReader =
+    File.OpenText("ApacheModRewrite.txt"))
+using (StreamReader iisUrlRewriteStreamReader =
+    File.OpenText("IISUrlRewrite.xml"))
+{
+    var options = new RewriteOptions()
+        .AddRedirectToHttpsPermanent()
+        .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+        .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2",
+            skipRemainingRules: true)
+        .AddApacheModRewrite(apacheModRewriteStreamReader)
+        .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+        .Add(MethodRules.RedirectXmlFileRequests)
+        .Add(MethodRules.RewriteTextFileRequests)
+        .Add(new RedirectImageRequests(".png", "/png-images"))
+        .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+    app.UseRewriter(options);
+}
+
+app.UseStaticFiles();
+
+app.Run(context =&gt; context.Response.WriteAsync(
+    $"Rewritten or Redirected Url: " +
+    $"{context.Request.Path + context.Request.QueryString}"));
+
+app.Run();
+</code></pre>
+<p><code>RewriteRules.cs</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="8-9">public static void RewriteTextFileRequests(RewriteContext context)
+{
+    var request = context.HttpContext.Request;
+
+    if (request.Path.Value != null &amp;&amp;
+        request.Path.Value.EndsWith(".txt", StringComparison.OrdinalIgnoreCase))
+    {
+        context.Result = RuleResult.SkipRemainingRules;
+        request.Path = "/file.txt";
+    }
+}
+</code></pre><h3 id="irule-based-rule">IRule-based rule</h3>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.add" class="no-loc" data-linktype="absolute-path">Add</a> to use rule logic in a class that implements the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.irule" class="no-loc" data-linktype="absolute-path">IRule</a> interface. <code>IRule</code> provides greater flexibility over using the method-based rule approach. The implementation class may include a constructor that allows passing in parameters for the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.irule.applyrule" class="no-loc" data-linktype="absolute-path">ApplyRule</a> method.</p>
+<pre><code class="lang-csharp" highlight-lines="21-22">using Microsoft.AspNetCore.Rewrite;
+using RewriteRules;
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+using (StreamReader apacheModRewriteStreamReader =
+    File.OpenText("ApacheModRewrite.txt"))
+using (StreamReader iisUrlRewriteStreamReader =
+    File.OpenText("IISUrlRewrite.xml"))
+{
+    var options = new RewriteOptions()
+        .AddRedirectToHttpsPermanent()
+        .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+        .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2",
+            skipRemainingRules: true)
+        .AddApacheModRewrite(apacheModRewriteStreamReader)
+        .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+        .Add(MethodRules.RedirectXmlFileRequests)
+        .Add(MethodRules.RewriteTextFileRequests)
+        .Add(new RedirectImageRequests(".png", "/png-images"))
+        .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+    app.UseRewriter(options);
+}
+
+app.UseStaticFiles();
+
+app.Run(context =&gt; context.Response.WriteAsync(
+    $"Rewritten or Redirected Url: " +
+    $"{context.Request.Path + context.Request.QueryString}"));
+
+app.Run();
+</code></pre>
+<p>The values of the parameters in the sample app for the <code>extension</code> and the <code>newPath</code> are checked to meet several conditions. The <code>extension</code> must contain a value, and the value must be <code>.png</code>, <code>.jpg</code>, or <code>.gif</code>. If the <code>newPath</code> isn't valid, an <a href="https://learn.microsoft.com/en-us/dotnet/api/system.argumentexception" class="no-loc" data-linktype="absolute-path">ArgumentException</a> is thrown. If a request is made for <code>image.png</code>, the request is redirected to <code>/png-images/image.png</code>. If a request is made for <code>image.jpg</code>, the request is redirected to <code>/jpg-images/image.jpg</code>. The status code is set to <code>301 - Moved Permanently</code>, and the <code>context.Result</code> is set to stop processing rules and send the response.</p>
+<pre><code class="lang-csharp">public class RedirectImageRequests : IRule
+{
+    private readonly string _extension;
+    private readonly PathString _newPath;
+
+    public RedirectImageRequests(string extension, string newPath)
+    {
+        if (string.IsNullOrEmpty(extension))
+        {
+            throw new ArgumentException(nameof(extension));
+        }
+
+        if (!Regex.IsMatch(extension, @"^\.(png|jpg|gif)$"))
+        {
+            throw new ArgumentException("Invalid extension", nameof(extension));
+        }
+
+        if (!Regex.IsMatch(newPath, @"(/[A-Za-z0-9]+)+?"))
+        {
+            throw new ArgumentException("Invalid path", nameof(newPath));
+        }
+
+        _extension = extension;
+        _newPath = new PathString(newPath);
+    }
+
+    public void ApplyRule(RewriteContext context)
+    {
+        var request = context.HttpContext.Request;
+
+        // Because we're redirecting back to the same app, stop 
+        // processing if the request has already been redirected
+        if (request.Path.StartsWithSegments(new PathString(_newPath)) ||
+            request.Path.Value == null)
+        {
+            return;
+        }
+
+        if (request.Path.Value.EndsWith(_extension, StringComparison.OrdinalIgnoreCase))
+        {
+            var response = context.HttpContext.Response;
+            response.StatusCode = (int) HttpStatusCode.MovedPermanently;
+            context.Result = RuleResult.EndResponse;
+            response.Headers[HeaderNames.Location] = 
+                _newPath + request.Path + request.QueryString;
+        }
+    }
+}
+</code></pre>
+<p>Try:</p>
+<ul>
+<li>PNG request: <code>https://redirect6.azurewebsites.net/image.png</code></li>
+<li>JPG request: <code>https://redirect6.azurewebsites.net/image.jpg</code></li>
+</ul>
+<p><a name="regex6"></a></p>
+<h2 id="regex-examples">Regex examples</h2>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Regex String &amp;<br>Match Example</th>
+<th>Replacement String &amp;<br>Output Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rewrite path into querystring</td>
+<td><code>^path/(.*)/(.*)</code><br><code>/path/abc/123</code></td>
+<td><code>path?var1=$1&amp;var2=$2</code><br><code>/path?var1=abc&amp;var2=123</code></td>
+</tr>
+<tr>
+<td>Strip trailing slash</td>
+<td><code>^path2/(.*)/$</code><br><code>/path2/xyz/</code></td>
+<td><code>$1</code><br><code>/path2/xyz</code></td>
+</tr>
+<tr>
+<td>Enforce trailing slash</td>
+<td><code>^path3/(.*[^/])$</code><br><code>/path3/xyz</code></td>
+<td><code>$1/</code><br><code>/path3/xyz/</code></td>
+</tr>
+<tr>
+<td>Avoid rewriting specific requests</td>
+<td><code>^(.*)(?&lt;!\.axd)$</code> or <br> <code>^(?!.*\.axd$)(.*)$</code><br>Yes: <code>/path4/resource.htm</code><br>No: <code>/path4/resource.axd</code></td>
+<td><code>rewritten/$1</code><br><code>/rewritten/resource.htm</code><br><code>/resource.axd</code></td>
+</tr>
+<tr>
+<td>Rearrange URL segments</td>
+<td><code>path5/(.*)/(.*)/(.*)</code><br><code>path5/1/2/3</code></td>
+<td><code>path5/$3/$2/$1</code><br><code>path5/3/2/1</code></td>
+</tr>
+<tr>
+<td>Replace a URL segment</td>
+<td><code>^path6/(.*)/segment2/(.*)</code><br><code>^path6/segment1/segment2/segment3</code></td>
+<td><code>path6/$1/replaced/$2</code><br><code>/path6/segment1/replaced/segment3</code></td>
+</tr>
+</tbody>
+</table>
+<p>The links in the preceding table use the following code deployed to Azure:</p>
+<pre><code class="lang-csharp" highlight-lines="18-35">using Microsoft.AspNetCore.Rewrite;
+using RewriteRules;
+
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+using (StreamReader apacheModRewriteStreamReader =
+    File.OpenText("ApacheModRewrite.txt"))
+using (StreamReader iisUrlRewriteStreamReader =
+    File.OpenText("IISUrlRewrite.xml"))
+{
+    var options = new RewriteOptions()
+        .AddRedirectToHttpsPermanent()
+        .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+        .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2",
+            skipRemainingRules: true)
+
+        // Rewrite path to QS.
+        .AddRewrite(@"^path/(.*)/(.*)", "path?var1=$1&amp;var2=$2",
+            skipRemainingRules: true)
+        // Skip trailing slash.
+        .AddRewrite(@"^path2/(.*)/$", "path2/$1",
+            skipRemainingRules: true)
+         // Enforce trailing slash.
+         .AddRewrite(@"^path3/(.*[^/])$", "path3/$1/",
+            skipRemainingRules: true)
+         // Avoid rewriting specific requests.
+         .AddRewrite(@"^path4/(.*)(?&lt;!\.axd)$", "rewritten/$1",
+            skipRemainingRules: true)
+         // Rearrange URL segments
+         .AddRewrite(@"^path5/(.*)/(.*)/(.*)", "path5/$3/$2/$1",
+            skipRemainingRules: true)
+          // Replace a URL segment
+          .AddRewrite(@"^path6/(.*)/segment2/(.*)", "path6/$1/replaced/$2",
+            skipRemainingRules: true)
+
+        .AddApacheModRewrite(apacheModRewriteStreamReader)
+        .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+        .Add(MethodRules.RedirectXmlFileRequests)
+        .Add(MethodRules.RewriteTextFileRequests)
+        .Add(new RedirectImageRequests(".png", "/png-images"))
+        .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+    app.UseRewriter(options);
+}
+
+app.UseStaticFiles();
+
+app.Run(context =&gt; context.Response.WriteAsync(
+    $"Rewritten or Redirected Url: " +
+    $"{context.Request.Path + context.Request.QueryString}"));
+
+app.Run();
+</code></pre>
+<p>In most of the preceding regular expression samples, the literal <code>path</code> is used to make unique testable rewrite rules for the deployed sample. Typically the regular expression wouldn't include <code>path</code>. For example, see these <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting?view=aspnetcore-5.0&amp;preserve-view=true#regex5" data-linktype="relative-path">regular expression examples</a> table.</p>
+</div>
+<div data-moniker="aspnetcore-3.0 aspnetcore-3.1 aspnetcore-5.0">
+<p>This document introduces URL rewriting with instructions on how to use URL Rewriting Middleware in ASP.NET Core apps.</p>
+<p>URL rewriting is the act of modifying request URLs based on one or more predefined rules. URL rewriting creates an abstraction between resource locations and their addresses so that the locations and addresses aren't tightly linked. URL rewriting is valuable in several scenarios to:</p>
+<ul>
+<li>Move or replace server resources temporarily or permanently and maintain stable locators for those resources.</li>
+<li>Split request processing across different apps or across areas of one app.</li>
+<li>Remove, add, or reorganize URL segments on incoming requests.</li>
+<li>Optimize public URLs for Search Engine Optimization (SEO).</li>
+<li>Permit the use of friendly public URLs to help visitors predict the content returned by requesting a resource.</li>
+<li>Redirect insecure requests to secure endpoints.</li>
+<li>Prevent hotlinking, where an external site uses a hosted static asset on another site by linking the asset into its own content.</li>
+</ul>
+<div class="NOTE">
+<p>Note</p>
+<p>URL rewriting can reduce the performance of an app. Where feasible, limit the number and complexity of rules.</p>
+</div>
+<p><a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/fundamentals/url-rewriting/samples/" data-linktype="external">View or download sample code</a> (<a href="../overview553c.html?view=aspnetcore-9.0#how-to-download-a-sample" data-linktype="relative-path">how to download</a>)</p>
+<h2 id="url-redirect-and-url-rewrite-1">URL redirect and URL rewrite</h2>
+<p>The difference in wording between <em>URL redirect</em> and <em>URL rewrite</em> is subtle but has important implications for providing resources to clients. ASP.NET Core's URL Rewriting Middleware is capable of meeting the need for both.</p>
+<p>A <em>URL redirect</em> involves a client-side operation, where the client is instructed to access a resource at a different address than the client originally requested. This requires a round trip to the server. The redirect URL returned to the client appears in the browser's address bar when the client makes a new request for the resource.</p>
+<p>If <code>/resource</code> is <em>redirected</em> to <code>/different-resource</code>, the server responds that the client should obtain the resource at <code>/different-resource</code> with a status code indicating that the redirect is either temporary or permanent.</p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/url_redirect.png?view=aspnetcore-9.0" alt="A WebAPI service endpoint has been temporarily changed from version 1 (v1) to version 2 (v2) on the server. A client makes a request to the service at the version 1 path /v1/api. The server sends back a 302 (Found) response with the new, temporary path for the service at version 2 /v2/api. The client makes a second request to the service at the redirect URL. The server responds with a 200 (OK) status code." data-linktype="relative-path"></p>
+<p>When redirecting requests to a different URL, indicate whether the redirect is permanent or temporary by specifying the status code with the response:</p>
+<ul>
+<li><p>The <code>301 - Moved Permanently</code> status code is used where the resource has a new, permanent URL and you wish to instruct the client that all future requests for the resource should use the new URL. <em>The client may cache and reuse the response when a 301 status code is received.</em></p>
+</li>
+<li><p>The <em>302 - Found</em> status code is used where the redirection is temporary or generally subject to change. The 302 status code indicates to the client not to store the URL and use it in the future.</p>
+</li>
+</ul>
+<p>For more information on status codes, see <a href="https://www.rfc-editor.org/rfc/rfc9110#name-status-codes" data-linktype="external">RFC 9110: Status Code Definitions</a>.</p>
+<p>A <em>URL rewrite</em> is a server-side operation that provides a resource from a different resource address than the client requested. Rewriting a URL doesn't require a round trip to the server. The rewritten URL isn't returned to the client and doesn't appear in the browser's address bar.</p>
+<p>If <code>/resource</code> is <em>rewritten</em> to <code>/different-resource</code>, the server <em>internally</em> fetches and returns the resource at <code>/different-resource</code>.</p>
+<p>Although the client might be able to retrieve the resource at the rewritten URL, the client isn't informed that the resource exists at the rewritten URL when it makes its request and receives the response.</p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/url_rewrite.png?view=aspnetcore-9.0" alt="A WebAPI service endpoint has been changed from version 1 (v1) to version 2 (v2) on the server. A client makes a request to the service at the version 1 path /v1/api. The request URL is rewritten to access the service at the version 2 path /v2/api. The service responds to the client with a 200 (OK) status code." data-linktype="relative-path"></p>
+<h2 id="url-rewriting-sample-app-1">URL rewriting sample app</h2>
+<p>You can explore the features of the URL Rewriting Middleware with the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/fundamentals/url-rewriting/samples/" data-linktype="external">sample app</a>. The app applies redirect and rewrite rules and shows the redirected or rewritten URL for several scenarios.</p>
+<h2 id="when-to-use-url-rewriting-middleware-1">When to use URL rewriting middleware</h2>
+<p>Use URL Rewriting Middleware when you're unable to use the following approaches:</p>
+<ul>
+<li><a href="https://www.iis.net/downloads/microsoft/url-rewrite" data-linktype="external">URL Rewrite module with IIS on Windows Server</a></li>
+<li><a href="https://httpd.apache.org/docs/2.4/rewrite/" data-linktype="external">Apache mod_rewrite module on Apache Server</a></li>
+<li><a href="https://www.nginx.com/blog/creating-nginx-rewrite-rules/" data-linktype="external">URL rewriting on Nginx</a></li>
+</ul>
+<p>Use the URL rewriting middleware when the app is hosted on <a href="servers/httpsys553c.html?view=aspnetcore-9.0" data-linktype="relative-path">HTTP.sys server</a>.</p>
+<p>The main reasons to use the server-based URL rewriting technologies in IIS, Apache, and Nginx are:</p>
+<ul>
+<li><p>The middleware doesn't support the full features of these modules.</p>
+<p>Some of the features of the server modules don't work with ASP.NET Core projects, such as the <code>IsFile</code> and <code>IsDirectory</code> constraints of the IIS Rewrite module. In these scenarios, use the middleware instead.</p>
+</li>
+<li><p>The performance of the middleware probably doesn't match that of the modules.</p>
+<p>Benchmarking is the only way to know for sure which approach degrades performance the most or if degraded performance is negligible.</p>
+</li>
+</ul>
+<h2 id="package">Package</h2>
+<p>URL Rewriting Middleware is provided by the <a href="https://www.nuget.org/packages/Microsoft.AspNetCore.Rewrite" data-linktype="external">Microsoft.AspNetCore.Rewrite</a> package, which is implicitly included in ASP.NET Core apps.</p>
+<h2 id="extension-and-options-1">Extension and options</h2>
+<p>Establish URL rewrite and redirect rules by creating an instance of the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptions" data-linktype="absolute-path">RewriteOptions</a> class with extension methods for each of your rewrite rules. Chain multiple rules in the order that you would like them processed. The <code>RewriteOptions</code> are passed into the URL Rewriting Middleware as it's added to the request pipeline with <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.rewritebuilderextensions.userewriter" class="no-loc" data-linktype="absolute-path">UseRewriter</a>:</p>
+<pre><code class="lang-csharp">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre><h3 id="redirect-non-www-to-www-1">Redirect non-www to www</h3>
+<p>Three options permit the app to redirect non-<code>www</code> requests to <code>www</code>:</p>
+<ul>
+<li><p><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addredirecttowwwpermanent" class="no-loc" data-linktype="absolute-path">AddRedirectToWwwPermanent</a>: Permanently redirect the request to the <code>www</code> subdomain if the request is non-<code>www</code>. Redirects with a <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.statuscodes.status308permanentredirect#microsoft-aspnetcore-http-statuscodes-status308permanentredirect" data-linktype="absolute-path">Status308PermanentRedirect</a> status code.</p>
+</li>
+<li><p><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addredirecttowww" class="no-loc" data-linktype="absolute-path">AddRedirectToWww</a>: Redirect the request to the <code>www</code> subdomain if the incoming request is non-<code>www</code>. Redirects with a <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.statuscodes.status307temporaryredirect#microsoft-aspnetcore-http-statuscodes-status307temporaryredirect" data-linktype="absolute-path">Status307TemporaryRedirect</a> status code. An overload permits you to provide the status code for the response. Use a field of the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.statuscodes" class="no-loc" data-linktype="absolute-path">StatusCodes</a> class for a status code assignment.</p>
+</li>
+</ul>
+<h3 id="url-redirect-1">URL redirect</h3>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addredirect" class="no-loc" data-linktype="absolute-path">AddRedirect</a> to redirect requests. The first parameter contains your Regex for matching on the path of the incoming URL. The second parameter is the replacement string. The third parameter, if present, specifies the status code. If you don't specify the status code, the status code defaults to <em>302 - Found</em>, which indicates that the resource is temporarily moved or replaced.</p>
+<pre><code class="lang-csharp" highlight-lines="9">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre>
+<p>In a browser with developer tools enabled, make a request to the sample app with the path <code>/redirect-rule/1234/5678</code>. The regex matches the request path on <code>redirect-rule/(.*)</code>, and the path is replaced with <code>/redirected/1234/5678</code>. The redirect URL is sent back to the client with a <em>302 - Found</em> status code. The browser makes a new request at the redirect URL, which appears in the browser's address bar. Since no rules in the sample app match on the redirect URL:</p>
+<ul>
+<li>The second request receives a <em>200 - OK</em> response from the app.</li>
+<li>The body of the response shows the redirect URL.</li>
+</ul>
+<p>A round trip is made to the server when a URL is <em>redirected</em>.</p>
+<div class="WARNING">
+<p>Warning</p>
+<p>Be cautious when establishing redirect rules. Redirect rules are evaluated on every request to the app, including after a redirect. It's easy to accidentally create a <em>loop of infinite redirects</em>.</p>
+</div>
+<p>Original Request: <code>/redirect-rule/1234/5678</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_redirect.png?view=aspnetcore-9.0" alt="Browser window with developer tools tracking the requests and responses: Add redirect" data-linktype="relative-path"></p>
+<p>The part of the expression contained within parentheses is called a <em>capture group</em>. The dot (<code>.</code>) of the expression means <em>match any character</em>. The asterisk (<code>*</code>) indicates <em>match the preceding character zero or more times</em>. Therefore, the last two path segments of the URL, <code>1234/5678</code>, are captured by capture group <code>(.*)</code>. Any value you provide in the request URL after <code>redirect-rule/</code> is captured by this single capture group.</p>
+<p>In the replacement string, captured groups are injected into the string with the dollar sign (<code>$</code>) followed by the sequence number of the capture. The first capture group value is obtained with <code>$1</code>, the second with <code>$2</code>, and they continue in sequence for the capture groups in your regex. There's only one captured group in the redirect rule regex in the sample app, so there's only one injected group in the replacement string, which is <code>$1</code>. When the rule is applied, the URL becomes <code>/redirected/1234/5678</code>.</p>
+<h3 id="url-redirect-to-a-secure-endpoint-1">URL redirect to a secure endpoint</h3>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addredirecttohttps" class="no-loc" data-linktype="absolute-path">AddRedirectToHttps</a> to redirect HTTP requests to the same host and path using the HTTPS protocol. If the status code isn't supplied, the middleware defaults to <em>302 - Found</em>. If the port isn't supplied:</p>
+<ul>
+<li>The middleware defaults to <code>null</code>.</li>
+<li>The scheme changes to <code>https</code> (HTTPS protocol), and the client accesses the resource on port 443.</li>
+</ul>
+<p>The following example shows how to set the status code to <code>301 - Moved Permanently</code> and change the port to 5001.</p>
+<pre><code class="lang-csharp">public void Configure(IApplicationBuilder app)
+{
+    var options = new RewriteOptions()
+        .AddRedirectToHttps(301, 5001);
+
+    app.UseRewriter(options);
+}
+</code></pre>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addredirecttohttpspermanent" class="no-loc" data-linktype="absolute-path">AddRedirectToHttpsPermanent</a> to redirect insecure requests to the same host and path with secure HTTPS protocol on port 443. The middleware sets the status code to <code>301 - Moved Permanently</code>.</p>
+<pre><code class="lang-csharp">public void Configure(IApplicationBuilder app)
+{
+    var options = new RewriteOptions()
+        .AddRedirectToHttpsPermanent();
+
+    app.UseRewriter(options);
+}
+</code></pre>
+<div class="NOTE">
+<p>Note</p>
+<p>When redirecting to a secure endpoint without the requirement for additional redirect rules, we recommend using HTTPS Redirection Middleware. For more information, see the <a href="../security/enforcing-ssl553c.html?view=aspnetcore-9.0#require-https" data-linktype="relative-path">Enforce HTTPS</a> topic.</p>
+</div>
+<p>The sample app is capable of demonstrating how to use <code>AddRedirectToHttps</code> or <code>AddRedirectToHttpsPermanent</code>. Add the extension method to the <code>RewriteOptions</code>. Make an insecure request to the app at any URL. Dismiss the browser security warning that the self-signed certificate is untrusted or create an exception to trust the certificate.</p>
+<p>Original Request using <code>AddRedirectToHttps(301, 5001)</code>: <code>http://localhost:5000/secure</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_redirect_to_https.png?view=aspnetcore-9.0" alt="Browser window with developer tools tracking the requests and responses: Add redirect to HTTPS" data-linktype="relative-path"></p>
+<p>Original Request using <code>AddRedirectToHttpsPermanent</code>: <code>http://localhost:5000/secure</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_redirect_to_https_permanent.png?view=aspnetcore-9.0" alt="Browser window with developer tools tracking the requests and responses: Add redirect to HTTPS permanent" data-linktype="relative-path"></p>
+<h3 id="url-rewrite-1">URL rewrite</h3>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addrewrite" class="no-loc" data-linktype="absolute-path">AddRewrite</a> to create a rule for rewriting URLs. The first parameter contains the regex for matching on the incoming URL path. The second parameter is the replacement string. The third parameter, <code>skipRemainingRules: {true|false}</code>, indicates to the middleware whether or not to skip additional rewrite rules if the current rule is applied.</p>
+<pre><code class="lang-csharp" highlight-lines="10-11">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre>
+<p>Original Request: <code>/rewrite-rule/1234/5678</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_rewrite.png?view=aspnetcore-9.0" alt="Browser window with developer tools tracking the request and response: Add rewrite" data-linktype="relative-path"></p>
+<p>The carat (<code>^</code>) at the beginning of the expression means that matching starts at the beginning of the URL path.</p>
+<p>In the earlier example with the redirect rule, <code>redirect-rule/(.*)</code>, there's no carat (<code>^</code>) at the start of the regex. Therefore, any characters may precede <code>redirect-rule/</code> in the path for a successful match.</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th style="text-align: center;">Match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/redirect-rule/1234/5678</code></td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td><code>/my-cool-redirect-rule/1234/5678</code></td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td><code>/anotherredirect-rule/1234/5678</code></td>
+<td style="text-align: center;">Yes</td>
+</tr>
+</tbody>
+</table>
+<p>The rewrite rule, <code>^rewrite-rule/(\d+)/(\d+)</code>, only matches paths if they start with <code>rewrite-rule/</code>. In the following table, note the difference in matching.</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th style="text-align: center;">Match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/rewrite-rule/1234/5678</code></td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td><code>/my-cool-rewrite-rule/1234/5678</code></td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td><code>/anotherrewrite-rule/1234/5678</code></td>
+<td style="text-align: center;">No</td>
+</tr>
+</tbody>
+</table>
+<p>Following the <code>^rewrite-rule/</code> portion of the expression, there are two capture groups, <code>(\d+)/(\d+)</code>. The <code>\d</code> signifies <em>match a digit (number)</em>. The plus sign (<code>+</code>) means <em>match one or more of the preceding character</em>. Therefore, the URL must contain a number followed by a forward-slash followed by another number. These capture groups are injected into the rewritten URL as <code>$1</code> and <code>$2</code>. The rewrite rule replacement string places the captured groups into the query string. The requested path of <code>/rewrite-rule/1234/5678</code> is rewritten to obtain the resource at <code>/rewritten?var1=1234&amp;var2=5678</code>. If a query string is present on the original request, it's preserved when the URL is rewritten.</p>
+<p>There's no round trip to the server to obtain the resource. If the resource exists, it's fetched and returned to the client with a <em>200 - OK</em> status code. Because the client isn't redirected, the URL in the browser's address bar doesn't change. Clients can't detect that a URL rewrite operation occurred on the server.</p>
+<div class="NOTE">
+<p>Note</p>
+<p>Use <code>skipRemainingRules: true</code> whenever possible because matching rules is computationally expensive and increases app response time. For the fastest app response:</p>
+<ul>
+<li>Order rewrite rules from the most frequently matched rule to the least frequently matched rule.</li>
+<li>Skip the processing of the remaining rules when a match occurs and no additional rule processing is required.</li>
+</ul>
+</div>
+<h3 id="apache-mod_rewrite-1">Apache mod_rewrite</h3>
+<p>Apply Apache mod_rewrite rules with <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.apachemodrewriteoptionsextensions.addapachemodrewrite" class="no-loc" data-linktype="absolute-path">AddApacheModRewrite</a>. Make sure that the rules file is deployed with the app. For more information and examples of mod_rewrite rules, see <a href="https://httpd.apache.org/docs/2.4/rewrite/" data-linktype="external">Apache mod_rewrite</a>.</p>
+<p>A <a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.streamreader" class="no-loc" data-linktype="absolute-path">StreamReader</a> is used to read the rules from the <em>ApacheModRewrite.txt</em> rules file:</p>
+<pre><code class="lang-csharp" highlight-lines="3-4,12">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre>
+<p>The sample app redirects requests from <code>/apache-mod-rules-redirect/(.\*)</code> to <code>/redirected?id=$1</code>. The response status code is <em>302 - Found</em>.</p>
+<pre><code># Rewrite path with additional sub directory
+RewriteRule ^/apache-mod-rules-redirect/(.*) /redirected?id=$1 [L,R=302]
+</code></pre>
+<p>Original Request: <code>/apache-mod-rules-redirect/1234</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_apache_mod_redirect.png?view=aspnetcore-9.0" alt="Browser window with developer tools tracking the requests and responses: Add Apache mod redirect" data-linktype="relative-path"></p>
+<p>The middleware supports the following Apache mod_rewrite server variables:</p>
+<ul>
+<li>CONN_REMOTE_ADDR</li>
+<li>HTTP_ACCEPT</li>
+<li>HTTP_CONNECTION</li>
+<li>HTTP_COOKIE</li>
+<li>HTTP_FORWARDED</li>
+<li>HTTP_HOST</li>
+<li>HTTP_REFERER</li>
+<li>HTTP_USER_AGENT</li>
+<li>HTTPS</li>
+<li>IPV6</li>
+<li>QUERY_STRING</li>
+<li>REMOTE_ADDR</li>
+<li>REMOTE_PORT</li>
+<li>REQUEST_FILENAME</li>
+<li>REQUEST_METHOD</li>
+<li>REQUEST_SCHEME</li>
+<li>REQUEST_URI</li>
+<li>SCRIPT_FILENAME</li>
+<li>SERVER_ADDR</li>
+<li>SERVER_PORT</li>
+<li>SERVER_PROTOCOL</li>
+<li>TIME</li>
+<li>TIME_DAY</li>
+<li>TIME_HOUR</li>
+<li>TIME_MIN</li>
+<li>TIME_MON</li>
+<li>TIME_SEC</li>
+<li>TIME_WDAY</li>
+<li>TIME_YEAR</li>
+</ul>
+<h3 id="iis-url-rewrite-module-rules-1">IIS URL Rewrite Module rules</h3>
+<p>To use the same rule set that applies to the IIS URL Rewrite Module, use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.iisurlrewriteoptionsextensions.addiisurlrewrite" class="no-loc" data-linktype="absolute-path">AddIISUrlRewrite</a>. Make sure that the rules file is deployed with the app. Don't direct the middleware to use the app's <em>web.config</em> file when running on Windows Server IIS. With IIS, these rules should be stored outside of the app's <em>web.config</em> file in order to avoid conflicts with the IIS Rewrite module. For more information and examples of IIS URL Rewrite Module rules, see <a href="https://learn.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-url-rewrite-module-20" data-linktype="absolute-path">Using Url Rewrite Module 2.0</a> and <a href="https://learn.microsoft.com/en-us/iis/extensions/url-rewrite-module/url-rewrite-module-configuration-reference" data-linktype="absolute-path">URL Rewrite Module Configuration Reference</a>.</p>
+<p>A <a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.streamreader" class="no-loc" data-linktype="absolute-path">StreamReader</a> is used to read the rules from the <code>IISUrlRewrite.xml</code> rules file:</p>
+<pre><code class="lang-csharp" highlight-lines="5-6,13">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre>
+<p>The sample app rewrites requests from <code>/iis-rules-rewrite/(.*)</code> to <code>/rewritten?id=$1</code>. The response is sent to the client with a <em>200 - OK</em> status code.</p>
+<pre><code class="lang-xml">&lt;rewrite&gt;
+  &lt;rules&gt;
+    &lt;rule name="Rewrite segment to id querystring" stopProcessing="true"&gt;
+      &lt;match url="^iis-rules-rewrite/(.*)$" /&gt;
+      &lt;action type="Rewrite" url="rewritten?id={R:1}" appendQueryString="false"/&gt;
+    &lt;/rule&gt;
+  &lt;/rules&gt;
+&lt;/rewrite&gt;
+</code></pre>
+<p>Original Request: <code>/iis-rules-rewrite/1234</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_iis_url_rewrite.png?view=aspnetcore-9.0" alt="Browser window with developer tools tracking the request and response: Add IIS URL rewrite" data-linktype="relative-path"></p>
+<p>If you have an active IIS Rewrite Module with server-level rules configured that would impact your app in undesirable ways, you can disable the IIS Rewrite Module for an app. For more information, see <a href="https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/modules?view=aspnetcore-9.0#disabling-iis-modules" data-linktype="relative-path">Disabling IIS modules</a>.</p>
+<h4 id="unsupported-features-1">Unsupported features</h4>
+<p>The middleware doesn't support the following IIS URL Rewrite Module features:</p>
+<ul>
+<li>Outbound Rules</li>
+<li>Custom Server Variables</li>
+<li>Wildcards</li>
+<li>LogRewrittenUrl</li>
+</ul>
+<h4 id="supported-server-variables-1">Supported server variables</h4>
+<p>The middleware supports the following IIS URL Rewrite Module server variables:</p>
+<ul>
+<li>CONTENT_LENGTH</li>
+<li>CONTENT_TYPE</li>
+<li>HTTP_ACCEPT</li>
+<li>HTTP_CONNECTION</li>
+<li>HTTP_COOKIE</li>
+<li>HTTP_HOST</li>
+<li>HTTP_REFERER</li>
+<li>HTTP_URL</li>
+<li>HTTP_USER_AGENT</li>
+<li>HTTPS</li>
+<li>LOCAL_ADDR</li>
+<li>QUERY_STRING</li>
+<li>REMOTE_ADDR</li>
+<li>REMOTE_PORT</li>
+<li>REQUEST_FILENAME</li>
+<li>REQUEST_URI</li>
+</ul>
+<div class="NOTE">
+<p>Note</p>
+<p>You can also obtain an <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.fileproviders.ifileprovider" class="no-loc" data-linktype="absolute-path">IFileProvider</a> via a <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.fileproviders.physicalfileprovider" class="no-loc" data-linktype="absolute-path">PhysicalFileProvider</a>. This approach may provide greater flexibility for the location of your rewrite rules files. Make sure that your rewrite rules files are deployed to the server at the path you provide.</p>
+<pre><code class="lang-csharp">PhysicalFileProvider fileProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory());
+</code></pre>
+</div>
+<h3 id="method-based-rule-1">Method-based rule</h3>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.add" class="no-loc" data-linktype="absolute-path">Add</a> to implement your own rule logic in a method. <code>Add</code> exposes the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewritecontext" class="no-loc" data-linktype="absolute-path">RewriteContext</a>, which makes available the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httpcontext" class="no-loc" data-linktype="absolute-path">HttpContext</a> for use in your method. The <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewritecontext.result" data-linktype="absolute-path">RewriteContext.Result</a> determines how additional pipeline processing is handled. Set the value to one of the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.ruleresult" class="no-loc" data-linktype="absolute-path">RuleResult</a> fields described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Rewrite context result</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RuleResult.ContinueRules</code> (default)</td>
+<td>Continue applying rules.</td>
+</tr>
+<tr>
+<td><code>RuleResult.EndResponse</code></td>
+<td>Stop applying rules and send the response.</td>
+</tr>
+<tr>
+<td><code>RuleResult.SkipRemainingRules</code></td>
+<td>Stop applying rules and send the context to the next middleware.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-csharp" highlight-lines="14">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre>
+<p>The sample app demonstrates a method that redirects requests for paths that end with <code>.xml</code>. If a request is made for <code>/file.xml</code>, the request is redirected to <code>/xmlfiles/file.xml</code>. The status code is set to <code>301 - Moved Permanently</code>. When the browser makes a new request for <code>/xmlfiles/file.xml</code>, Static File Middleware serves the file to the client from the <em>wwwroot/xmlfiles</em> folder. For a redirect, explicitly set the status code of the response. Otherwise, a <em>200 - OK</em> status code is returned, and the redirect doesn't occur on the client.</p>
+<p><code>RewriteRules.cs</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="14-18">public static void RedirectXmlFileRequests(RewriteContext context)
+{
+    var request = context.HttpContext.Request;
+
+    // Because the client is redirecting back to the same app, stop 
+    // processing if the request has already been redirected.
+    if (request.Path.StartsWithSegments(new PathString("/xmlfiles")))
+    {
+        return;
+    }
+
+    if (request.Path.Value.EndsWith(".xml", StringComparison.OrdinalIgnoreCase))
+    {
+        var response = context.HttpContext.Response;
+        response.StatusCode = (int) HttpStatusCode.MovedPermanently;
+        context.Result = RuleResult.EndResponse;
+        response.Headers[HeaderNames.Location] = 
+            "/xmlfiles" + request.Path + request.QueryString;
+    }
+}
+</code></pre>
+<p>This approach can also rewrite requests. The sample app demonstrates rewriting the path for any text file request to serve the <em>file.txt</em> text file from the <em>wwwroot</em> folder. Static File Middleware serves the file based on the updated request path:</p>
+<pre><code class="lang-csharp" highlight-lines="15,22">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre>
+<p><code>RewriteRules.cs</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="7-8">public static void RewriteTextFileRequests(RewriteContext context)
+{
+    var request = context.HttpContext.Request;
+
+    if (request.Path.Value.EndsWith(".txt", StringComparison.OrdinalIgnoreCase))
+    {
+        context.Result = RuleResult.SkipRemainingRules;
+        request.Path = "/file.txt";
+    }
+}
+</code></pre><h3 id="irule-based-rule-1">IRule-based rule</h3>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.add" class="no-loc" data-linktype="absolute-path">Add</a> to use rule logic in a class that implements the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.irule" class="no-loc" data-linktype="absolute-path">IRule</a> interface. <code>IRule</code> provides greater flexibility over using the method-based rule approach. Your implementation class may include a constructor that allows you can pass in parameters for the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.irule.applyrule" class="no-loc" data-linktype="absolute-path">ApplyRule</a> method.</p>
+<pre><code class="lang-csharp" highlight-lines="16-17">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre>
+<p>The values of the parameters in the sample app for the <code>extension</code> and the <code>newPath</code> are checked to meet several conditions. The <code>extension</code> must contain a value, and the value must be <code>.png</code>, <code>.jpg</code>, or <em>.gif</em>. If the <code>newPath</code> isn't valid, an <a href="https://learn.microsoft.com/en-us/dotnet/api/system.argumentexception" class="no-loc" data-linktype="absolute-path">ArgumentException</a> is thrown. If a request is made for <code>image.png</code>, the request is redirected to <code>/png-images/image.png</code>. If a request is made for <code>image.jpg</code>, the request is redirected to <code>/jpg-images/image.jpg</code>. The status code is set to <code>301 - Moved Permanently</code>, and the <code>context.Result</code> is set to stop processing rules and send the response.</p>
+<pre><code class="lang-csharp">public class RedirectImageRequests : IRule
+{
+    private readonly string _extension;
+    private readonly PathString _newPath;
+
+    public RedirectImageRequests(string extension, string newPath)
+    {
+        if (string.IsNullOrEmpty(extension))
+        {
+            throw new ArgumentException(nameof(extension));
+        }
+
+        if (!Regex.IsMatch(extension, @"^\.(png|jpg|gif)$"))
+        {
+            throw new ArgumentException("Invalid extension", nameof(extension));
+        }
+
+        if (!Regex.IsMatch(newPath, @"(/[A-Za-z0-9]+)+?"))
+        {
+            throw new ArgumentException("Invalid path", nameof(newPath));
+        }
+
+        _extension = extension;
+        _newPath = new PathString(newPath);
+    }
+
+    public void ApplyRule(RewriteContext context)
+    {
+        var request = context.HttpContext.Request;
+
+        // Because we're redirecting back to the same app, stop 
+        // processing if the request has already been redirected
+        if (request.Path.StartsWithSegments(new PathString(_newPath)))
+        {
+            return;
+        }
+
+        if (request.Path.Value.EndsWith(_extension, StringComparison.OrdinalIgnoreCase))
+        {
+            var response = context.HttpContext.Response;
+            response.StatusCode = (int) HttpStatusCode.MovedPermanently;
+            context.Result = RuleResult.EndResponse;
+            response.Headers[HeaderNames.Location] = 
+                _newPath + request.Path + request.QueryString;
+        }
+    }
+}
+</code></pre>
+<p>Original Request: <code>/image.png</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_redirect_png_requests.png?view=aspnetcore-9.0" alt="Browser window with developer tools tracking the requests and responses for image.png" data-linktype="relative-path"></p>
+<p>Original Request: <code>/image.jpg</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_redirect_jpg_requests.png?view=aspnetcore-9.0" alt="Browser window with developer tools tracking the requests and responses for image.jpg" data-linktype="relative-path"></p>
+<p><a name="regex5"></a></p>
+<h2 id="regex-examples-1">Regex examples</h2>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Regex String &amp;<br>Match Example</th>
+<th>Replacement String &amp;<br>Output Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rewrite path into querystring</td>
+<td><code>^path/(.*)/(.*)</code><br><code>/path/abc/123</code></td>
+<td><code>path?var1=$1&amp;var2=$2</code><br><code>/path?var1=abc&amp;var2=123</code></td>
+</tr>
+<tr>
+<td>Strip trailing slash</td>
+<td><code>(.*)/$</code><br><code>/path/</code></td>
+<td><code>$1</code><br><code>/path</code></td>
+</tr>
+<tr>
+<td>Enforce trailing slash</td>
+<td><code>(.*[^/])$</code><br><code>/path</code></td>
+<td><code>$1/</code><br><code>/path/</code></td>
+</tr>
+<tr>
+<td>Avoid rewriting specific requests</td>
+<td><code>^(.*)(?&lt;!\.axd)$</code> or <code>^(?!.*\.axd$)(.*)$</code><br>Yes: <code>/resource.htm</code><br>No: <code>/resource.axd</code></td>
+<td><code>rewritten/$1</code><br><code>/rewritten/resource.htm</code><br><code>/resource.axd</code></td>
+</tr>
+<tr>
+<td>Rearrange URL segments</td>
+<td><code>path/(.*)/(.*)/(.*)</code><br><code>path/1/2/3</code></td>
+<td><code>path/$3/$2/$1</code><br><code>path/3/2/1</code></td>
+</tr>
+<tr>
+<td>Replace a URL segment</td>
+<td><code>^(.*)/segment2/(.*)</code><br><code>/segment1/segment2/segment3</code></td>
+<td><code>$1/replaced/$2</code><br><code>/segment1/replaced/segment3</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div data-moniker="aspnetcore-2.1 aspnetcore-2.2">
+<p>This document introduces URL rewriting with instructions on how to use URL Rewriting Middleware in ASP.NET Core apps.</p>
+<p>URL rewriting is the act of modifying request URLs based on one or more predefined rules. URL rewriting creates an abstraction between resource locations and their addresses so that the locations and addresses aren't tightly linked. URL rewriting is valuable in several scenarios to:</p>
+<ul>
+<li>Move or replace server resources temporarily or permanently and maintain stable locators for those resources.</li>
+<li>Split request processing across different apps or across areas of one app.</li>
+<li>Remove, add, or reorganize URL segments on incoming requests.</li>
+<li>Optimize public URLs for Search Engine Optimization (SEO).</li>
+<li>Permit the use of friendly public URLs to help visitors predict the content returned by requesting a resource.</li>
+<li>Redirect insecure requests to secure endpoints.</li>
+<li>Prevent hotlinking, where an external site uses a hosted static asset on another site by linking the asset into its own content.</li>
+</ul>
+<div class="NOTE">
+<p>Note</p>
+<p>URL rewriting can reduce the performance of an app. Where feasible, limit the number and complexity of rules.</p>
+</div>
+<p><a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/fundamentals/url-rewriting/samples/" data-linktype="external">View or download sample code</a> (<a href="../overview553c.html?view=aspnetcore-9.0#how-to-download-a-sample" data-linktype="relative-path">how to download</a>)</p>
+<h2 id="url-redirect-and-url-rewrite-2">URL redirect and URL rewrite</h2>
+<p>The difference in wording between <em>URL redirect</em> and <em>URL rewrite</em> is subtle but has important implications for providing resources to clients. ASP.NET Core's URL Rewriting Middleware is capable of meeting the need for both.</p>
+<p>A <em>URL redirect</em> involves a client-side operation, where the client is instructed to access a resource at a different address than the client originally requested. This requires a round trip to the server. The redirect URL returned to the client appears in the browser's address bar when the client makes a new request for the resource.</p>
+<p>If <code>/resource</code> is <em>redirected</em> to <code>/different-resource</code>, the server responds that the client should obtain the resource at <code>/different-resource</code> with a status code indicating that the redirect is either temporary or permanent.</p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/url_redirect.png?view=aspnetcore-9.0" alt="A WebAPI service endpoint has been temporarily changed from version 1 (v1) to version 2 (v2) on the server. A client makes a request to the service at the version 1 path /v1/api. The server sends back a 302 (Found) response with the new, temporary path for the service at version 2 /v2/api. The client makes a second request to the service at the redirect URL. The server responds with a 200 (OK) status code." data-linktype="relative-path"></p>
+<p>When redirecting requests to a different URL, indicate whether the redirect is permanent or temporary by specifying the status code with the response:</p>
+<ul>
+<li><p>The <code>301 - Moved Permanently</code> status code is used where the resource has a new, permanent URL and you wish to instruct the client that all future requests for the resource should use the new URL. <em>The client may cache and reuse the response when a 301 status code is received.</em></p>
+</li>
+<li><p>The <em>302 - Found</em> status code is used where the redirection is temporary or generally subject to change. The 302 status code indicates to the client not to store the URL and use it in the future.</p>
+</li>
+</ul>
+<p>For more information on status codes, see <a href="https://www.rfc-editor.org/rfc/rfc9110#name-status-codes" data-linktype="external">RFC 9110: Status Code Definitions</a>.</p>
+<p>A <em>URL rewrite</em> is a server-side operation that provides a resource from a different resource address than the client requested. Rewriting a URL doesn't require a round trip to the server. The rewritten URL isn't returned to the client and doesn't appear in the browser's address bar.</p>
+<p>If <code>/resource</code> is <em>rewritten</em> to <code>/different-resource</code>, the server <em>internally</em> fetches and returns the resource at <code>/different-resource</code>.</p>
+<p>Although the client might be able to retrieve the resource at the rewritten URL, the client isn't informed that the resource exists at the rewritten URL when it makes its request and receives the response.</p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/url_rewrite.png?view=aspnetcore-9.0" alt="A WebAPI service endpoint has been changed from version 1 (v1) to version 2 (v2) on the server. A client makes a request to the service at the version 1 path /v1/api. The request URL is rewritten to access the service at the version 2 path /v2/api. The service responds to the client with a 200 (OK) status code." data-linktype="relative-path"></p>
+<h2 id="url-rewriting-sample-app-2">URL rewriting sample app</h2>
+<p>You can explore the features of the URL Rewriting Middleware with the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/fundamentals/url-rewriting/samples/" data-linktype="external">sample app</a>. The app applies redirect and rewrite rules and shows the redirected or rewritten URL for several scenarios.</p>
+<h2 id="when-to-use-url-rewriting-middleware-2">When to use URL Rewriting Middleware</h2>
+<p>Use URL Rewriting Middleware when you're unable to use the following approaches:</p>
+<ul>
+<li><a href="https://www.iis.net/downloads/microsoft/url-rewrite" data-linktype="external">URL Rewrite module with IIS on Windows Server</a></li>
+<li><a href="https://httpd.apache.org/docs/2.4/rewrite/" data-linktype="external">Apache mod_rewrite module on Apache Server</a></li>
+<li><a href="https://www.nginx.com/blog/creating-nginx-rewrite-rules/" data-linktype="external">URL rewriting on Nginx</a></li>
+</ul>
+<p>Also, use the middleware when the app is hosted on <a href="servers/httpsys553c.html?view=aspnetcore-9.0" data-linktype="relative-path">HTTP.sys server</a> (formerly called WebListener).</p>
+<p>The main reasons to use the server-based URL rewriting technologies in IIS, Apache, and Nginx are:</p>
+<ul>
+<li><p>The middleware doesn't support the full features of these modules.</p>
+<p>Some of the features of the server modules don't work with ASP.NET Core projects, such as the <code>IsFile</code> and <code>IsDirectory</code> constraints of the IIS Rewrite module. In these scenarios, use the middleware instead.</p>
+</li>
+<li><p>The performance of the middleware probably doesn't match that of the modules.</p>
+<p>Benchmarking is the only way to know for sure which approach degrades performance the most or if degraded performance is negligible.</p>
+</li>
+</ul>
+<h2 id="package-1">Package</h2>
+<p>To include the middleware in your project, add a package reference to the <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/metapackage-app?view=aspnetcore-9.0" data-linktype="relative-path">Microsoft.AspNetCore.App metapackage</a> in the project file, which contains the <a href="https://www.nuget.org/packages/Microsoft.AspNetCore.Rewrite" data-linktype="external">Microsoft.AspNetCore.Rewrite</a> package.</p>
+<p>When not using the <code>Microsoft.AspNetCore.App</code> metapackage, add a project reference to the <code>Microsoft.AspNetCore.Rewrite</code> package.</p>
+<h2 id="extension-and-options-2">Extension and options</h2>
+<p>Establish URL rewrite and redirect rules by creating an instance of the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptions" data-linktype="absolute-path">RewriteOptions</a> class with extension methods for each of your rewrite rules. Chain multiple rules in the order that you would like them processed. The <code>RewriteOptions</code> are passed into the URL Rewriting Middleware as it's added to the request pipeline with <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.rewritebuilderextensions.userewriter" class="no-loc" data-linktype="absolute-path">UseRewriter</a>:</p>
+<pre><code class="lang-csharp">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre><h3 id="redirect-non-www-to-www-2">Redirect non-www to www</h3>
+<p>Three options permit the app to redirect non-<code>www</code> requests to <code>www</code>:</p>
+<ul>
+<li><p><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addredirecttowwwpermanent" class="no-loc" data-linktype="absolute-path">AddRedirectToWwwPermanent</a>: Permanently redirect the request to the <code>www</code> subdomain if the request is non-<code>www</code>. Redirects with a <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.statuscodes.status308permanentredirect#microsoft-aspnetcore-http-statuscodes-status308permanentredirect" data-linktype="absolute-path">Status308PermanentRedirect</a> status code.</p>
+</li>
+<li><p><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addredirecttowww" class="no-loc" data-linktype="absolute-path">AddRedirectToWww</a>: Redirect the request to the <code>www</code> subdomain if the incoming request is non-<code>www</code>. Redirects with a <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.statuscodes.status307temporaryredirect#microsoft-aspnetcore-http-statuscodes-status307temporaryredirect" data-linktype="absolute-path">Status307TemporaryRedirect</a> status code. An overload permits you to provide the status code for the response. Use a field of the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.statuscodes" class="no-loc" data-linktype="absolute-path">StatusCodes</a> class for a status code assignment.</p>
+</li>
+</ul>
+<h3 id="url-redirect-2">URL redirect</h3>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addredirect" class="no-loc" data-linktype="absolute-path">AddRedirect</a> to redirect requests. The first parameter contains your regex for matching on the path of the incoming URL. The second parameter is the replacement string. The third parameter, if present, specifies the status code. If you don't specify the status code, the status code defaults to <em>302 - Found</em>, which indicates that the resource is temporarily moved or replaced.</p>
+<pre><code class="lang-csharp" highlight-lines="9">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre>
+<p>In a browser with developer tools enabled, make a request to the sample app with the path <code>/redirect-rule/1234/5678</code>. The regex matches the request path on <code>redirect-rule/(.*)</code>, and the path is replaced with <code>/redirected/1234/5678</code>. The redirect URL is sent back to the client with a <em>302 - Found</em> status code. The browser makes a new request at the redirect URL, which appears in the browser's address bar. Since no rules in the sample app match on the redirect URL:</p>
+<ul>
+<li>The second request receives a <em>200 - OK</em> response from the app.</li>
+<li>The body of the response shows the redirect URL.</li>
+</ul>
+<p>A round trip is made to the server when a URL is <em>redirected</em>.</p>
+<div class="WARNING">
+<p>Warning</p>
+<p>Be cautious when establishing redirect rules. Redirect rules are evaluated on every request to the app, including after a redirect. It's easy to accidentally create a <em>loop of infinite redirects</em>.</p>
+</div>
+<p>Original Request: <code>/redirect-rule/1234/5678</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_redirect.png?view=aspnetcore-9.0" alt="Add redirect: Browser window with developer tools tracking the requests and responses" data-linktype="relative-path"></p>
+<p>The part of the expression contained within parentheses is called a <em>capture group</em>. The dot (<code>.</code>) of the expression means <em>match any character</em>. The asterisk (<code>*</code>) indicates <em>match the preceding character zero or more times</em>. Therefore, the last two path segments of the URL, <code>1234/5678</code>, are captured by capture group <code>(.*)</code>. Any value you provide in the request URL after <code>redirect-rule/</code> is captured by this single capture group.</p>
+<p>In the replacement string, captured groups are injected into the string with the dollar sign (<code>$</code>) followed by the sequence number of the capture. The first capture group value is obtained with <code>$1</code>, the second with <code>$2</code>, and they continue in sequence for the capture groups in your regex. There's only one captured group in the redirect rule regex in the sample app, so there's only one injected group in the replacement string, which is <code>$1</code>. When the rule is applied, the URL becomes <code>/redirected/1234/5678</code>.</p>
+<h3 id="url-redirect-to-a-secure-endpoint-2">URL redirect to a secure endpoint</h3>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addredirecttohttps" class="no-loc" data-linktype="absolute-path">AddRedirectToHttps</a> to redirect HTTP requests to the same host and path using the HTTPS protocol. If the status code isn't supplied, the middleware defaults to <em>302 - Found</em>. If the port isn't supplied:</p>
+<ul>
+<li>The middleware defaults to <code>null</code>.</li>
+<li>The scheme changes to <code>https</code> (HTTPS protocol), and the client accesses the resource on port 443.</li>
+</ul>
+<p>The following example shows how to set the status code to <code>301 - Moved Permanently</code> and change the port to 5001.</p>
+<pre><code class="lang-csharp">public void Configure(IApplicationBuilder app)
+{
+    var options = new RewriteOptions()
+        .AddRedirectToHttps(301, 5001);
+
+    app.UseRewriter(options);
+}
+</code></pre>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addredirecttohttpspermanent" class="no-loc" data-linktype="absolute-path">AddRedirectToHttpsPermanent</a> to redirect insecure requests to the same host and path with secure HTTPS protocol on port 443. The middleware sets the status code to <code>301 - Moved Permanently</code>.</p>
+<pre><code class="lang-csharp">public void Configure(IApplicationBuilder app)
+{
+    var options = new RewriteOptions()
+        .AddRedirectToHttpsPermanent();
+
+    app.UseRewriter(options);
+}
+</code></pre>
+<div class="NOTE">
+<p>Note</p>
+<p>When redirecting to a secure endpoint without the requirement for additional redirect rules, we recommend using HTTPS Redirection Middleware. For more information, see the <a href="../security/enforcing-ssl553c.html?view=aspnetcore-9.0#require-https" data-linktype="relative-path">Enforce HTTPS</a> topic.</p>
+</div>
+<p>The sample app is capable of demonstrating how to use <code>AddRedirectToHttps</code> or <code>AddRedirectToHttpsPermanent</code>. Add the extension method to the <code>RewriteOptions</code>. Make an insecure request to the app at any URL. Dismiss the browser security warning that the self-signed certificate is untrusted or create an exception to trust the certificate.</p>
+<p>Original Request using <code>AddRedirectToHttps(301, 5001)</code>: <code>http://localhost:5000/secure</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_redirect_to_https.png?view=aspnetcore-9.0" alt="Add redirect to HTTPS: Browser window with developer tools tracking the requests and responses" data-linktype="relative-path"></p>
+<p>Original Request using <code>AddRedirectToHttpsPermanent</code>: <code>http://localhost:5000/secure</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_redirect_to_https_permanent.png?view=aspnetcore-9.0" alt="Add redirect to HTTPS permanent: Browser window with developer tools tracking the requests and responses" data-linktype="relative-path"></p>
+<h3 id="url-rewrite-2">URL rewrite</h3>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.addrewrite" class="no-loc" data-linktype="absolute-path">AddRewrite</a> to create a rule for rewriting URLs. The first parameter contains the regex for matching on the incoming URL path. The second parameter is the replacement string. The third parameter, <code>skipRemainingRules: {true|false}</code>, indicates to the middleware whether or not to skip additional rewrite rules if the current rule is applied.</p>
+<pre><code class="lang-csharp" highlight-lines="10-11">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre>
+<p>Original Request: <code>/rewrite-rule/1234/5678</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_rewrite.png?view=aspnetcore-9.0" alt="Add rewrite: Browser window with developer tools tracking the request and response" data-linktype="relative-path"></p>
+<p>The carat (<code>^</code>) at the beginning of the expression means that matching starts at the beginning of the URL path.</p>
+<p>In the earlier example with the redirect rule, <code>redirect-rule/(.*)</code>, there's no carat (<code>^</code>) at the start of the regex. Therefore, any characters may precede <code>redirect-rule/</code> in the path for a successful match.</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th style="text-align: center;">Match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/redirect-rule/1234/5678</code></td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td><code>/my-cool-redirect-rule/1234/5678</code></td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td><code>/anotherredirect-rule/1234/5678</code></td>
+<td style="text-align: center;">Yes</td>
+</tr>
+</tbody>
+</table>
+<p>The rewrite rule, <code>^rewrite-rule/(\d+)/(\d+)</code>, only matches paths if they start with <code>rewrite-rule/</code>. In the following table, note the difference in matching.</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th style="text-align: center;">Match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/rewrite-rule/1234/5678</code></td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td><code>/my-cool-rewrite-rule/1234/5678</code></td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td><code>/anotherrewrite-rule/1234/5678</code></td>
+<td style="text-align: center;">No</td>
+</tr>
+</tbody>
+</table>
+<p>Following the <code>^rewrite-rule/</code> portion of the expression, there are two capture groups, <code>(\d+)/(\d+)</code>. The <code>\d</code> signifies <em>match a digit (number)</em>. The plus sign (<code>+</code>) means <em>match one or more of the preceding character</em>. Therefore, the URL must contain a number followed by a forward-slash followed by another number. These capture groups are injected into the rewritten URL as <code>$1</code> and <code>$2</code>. The rewrite rule replacement string places the captured groups into the query string. The requested path of <code>/rewrite-rule/1234/5678</code> is rewritten to obtain the resource at <code>/rewritten?var1=1234&amp;var2=5678</code>. If a query string is present on the original request, it's preserved when the URL is rewritten.</p>
+<p>There's no round trip to the server to obtain the resource. If the resource exists, it's fetched and returned to the client with a <em>200 - OK</em> status code. Because the client isn't redirected, the URL in the browser's address bar doesn't change. Clients can't detect that a URL rewrite operation occurred on the server.</p>
+<div class="NOTE">
+<p>Note</p>
+<p>Use <code>skipRemainingRules: true</code> whenever possible because matching rules is computationally expensive and increases app response time. For the fastest app response:</p>
+<ul>
+<li>Order rewrite rules from the most frequently matched rule to the least frequently matched rule.</li>
+<li>Skip the processing of the remaining rules when a match occurs and no additional rule processing is required.</li>
+</ul>
+</div>
+<h3 id="apache-mod_rewrite-2">Apache mod_rewrite</h3>
+<p>Apply Apache mod_rewrite rules with <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.apachemodrewriteoptionsextensions.addapachemodrewrite" class="no-loc" data-linktype="absolute-path">AddApacheModRewrite</a>. Make sure that the rules file is deployed with the app. For more information and examples of mod_rewrite rules, see <a href="https://httpd.apache.org/docs/2.4/rewrite/" data-linktype="external">Apache mod_rewrite</a>.</p>
+<p>A <a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.streamreader" class="no-loc" data-linktype="absolute-path">StreamReader</a> is used to read the rules from the <em>ApacheModRewrite.txt</em> rules file:</p>
+<pre><code class="lang-csharp" highlight-lines="3-4,12">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre>
+<p>The sample app redirects requests from <code>/apache-mod-rules-redirect/(.\*)</code> to <code>/redirected?id=$1</code>. The response status code is <em>302 - Found</em>.</p>
+<pre><code># Rewrite path with additional sub directory
+RewriteRule ^/apache-mod-rules-redirect/(.*) /redirected?id=$1 [L,R=302]
+</code></pre>
+<p>Original Request: <code>/apache-mod-rules-redirect/1234</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_apache_mod_redirect.png?view=aspnetcore-9.0" alt="Add Apache mod redirect: Browser window with developer tools tracking the requests and responses" data-linktype="relative-path"></p>
+<p>The middleware supports the following Apache mod_rewrite server variables:</p>
+<ul>
+<li>CONN_REMOTE_ADDR</li>
+<li>HTTP_ACCEPT</li>
+<li>HTTP_CONNECTION</li>
+<li>HTTP_COOKIE</li>
+<li>HTTP_FORWARDED</li>
+<li>HTTP_HOST</li>
+<li>HTTP_REFERER</li>
+<li>HTTP_USER_AGENT</li>
+<li>HTTPS</li>
+<li>IPV6</li>
+<li>QUERY_STRING</li>
+<li>REMOTE_ADDR</li>
+<li>REMOTE_PORT</li>
+<li>REQUEST_FILENAME</li>
+<li>REQUEST_METHOD</li>
+<li>REQUEST_SCHEME</li>
+<li>REQUEST_URI</li>
+<li>SCRIPT_FILENAME</li>
+<li>SERVER_ADDR</li>
+<li>SERVER_PORT</li>
+<li>SERVER_PROTOCOL</li>
+<li>TIME</li>
+<li>TIME_DAY</li>
+<li>TIME_HOUR</li>
+<li>TIME_MIN</li>
+<li>TIME_MON</li>
+<li>TIME_SEC</li>
+<li>TIME_WDAY</li>
+<li>TIME_YEAR</li>
+</ul>
+<h3 id="iis-url-rewrite-module-rules-2">IIS URL Rewrite Module rules</h3>
+<p>To use the same rule set that applies to the IIS URL Rewrite Module, use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.iisurlrewriteoptionsextensions.addiisurlrewrite" class="no-loc" data-linktype="absolute-path">AddIISUrlRewrite</a>. Make sure that the rules file is deployed with the app. Don't direct the middleware to use the app's <em>web.config</em> file when running on Windows Server IIS. With IIS, these rules should be stored outside of the app's <em>web.config</em> file in order to avoid conflicts with the IIS Rewrite module. For more information and examples of IIS URL Rewrite Module rules, see <a href="https://learn.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-url-rewrite-module-20" data-linktype="absolute-path">Using Url Rewrite Module 2.0</a> and <a href="https://learn.microsoft.com/en-us/iis/extensions/url-rewrite-module/url-rewrite-module-configuration-reference" data-linktype="absolute-path">URL Rewrite Module Configuration Reference</a>.</p>
+<p>A <a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.streamreader" class="no-loc" data-linktype="absolute-path">StreamReader</a> is used to read the rules from the <code>IISUrlRewrite.xml</code> rules file:</p>
+<pre><code class="lang-csharp" highlight-lines="5-6,13">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre>
+<p>The sample app rewrites requests from <code>/iis-rules-rewrite/(.*)</code> to <code>/rewritten?id=$1</code>. The response is sent to the client with a <em>200 - OK</em> status code.</p>
+<pre><code class="lang-xml">&lt;rewrite&gt;
+  &lt;rules&gt;
+    &lt;rule name="Rewrite segment to id querystring" stopProcessing="true"&gt;
+      &lt;match url="^iis-rules-rewrite/(.*)$" /&gt;
+      &lt;action type="Rewrite" url="rewritten?id={R:1}" appendQueryString="false"/&gt;
+    &lt;/rule&gt;
+  &lt;/rules&gt;
+&lt;/rewrite&gt;
+</code></pre>
+<p>Original Request: <code>/iis-rules-rewrite/1234</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_iis_url_rewrite.png?view=aspnetcore-9.0" alt="Add IIS URL rewrite: Browser window with developer tools tracking the request and response" data-linktype="relative-path"></p>
+<p>If you have an active IIS Rewrite Module with server-level rules configured that would impact your app in undesirable ways, you can disable the IIS Rewrite Module for an app. For more information, see <a href="https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/modules?view=aspnetcore-9.0#disabling-iis-modules" data-linktype="relative-path">Disabling IIS modules</a>.</p>
+<h4 id="unsupported-features-2">Unsupported features</h4>
+<p>The middleware released with ASP.NET Core 2.x doesn't support the following IIS URL Rewrite Module features:</p>
+<ul>
+<li>Outbound Rules</li>
+<li>Custom Server Variables</li>
+<li>Wildcards</li>
+<li>LogRewrittenUrl</li>
+</ul>
+<h4 id="supported-server-variables-2">Supported server variables</h4>
+<p>The middleware supports the following IIS URL Rewrite Module server variables:</p>
+<ul>
+<li>CONTENT_LENGTH</li>
+<li>CONTENT_TYPE</li>
+<li>HTTP_ACCEPT</li>
+<li>HTTP_CONNECTION</li>
+<li>HTTP_COOKIE</li>
+<li>HTTP_HOST</li>
+<li>HTTP_REFERER</li>
+<li>HTTP_URL</li>
+<li>HTTP_USER_AGENT</li>
+<li>HTTPS</li>
+<li>LOCAL_ADDR</li>
+<li>QUERY_STRING</li>
+<li>REMOTE_ADDR</li>
+<li>REMOTE_PORT</li>
+<li>REQUEST_FILENAME</li>
+<li>REQUEST_URI</li>
+</ul>
+<div class="NOTE">
+<p>Note</p>
+<p>You can also obtain an <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.fileproviders.ifileprovider" class="no-loc" data-linktype="absolute-path">IFileProvider</a> via a <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.fileproviders.physicalfileprovider" class="no-loc" data-linktype="absolute-path">PhysicalFileProvider</a>. This approach may provide greater flexibility for the location of your rewrite rules files. Make sure that your rewrite rules files are deployed to the server at the path you provide.</p>
+<pre><code class="lang-csharp">PhysicalFileProvider fileProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory());
+</code></pre>
+</div>
+<h3 id="method-based-rule-2">Method-based rule</h3>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.add" class="no-loc" data-linktype="absolute-path">Add</a> to implement your own rule logic in a method. <code>Add</code> exposes the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewritecontext" class="no-loc" data-linktype="absolute-path">RewriteContext</a>, which makes available the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httpcontext" class="no-loc" data-linktype="absolute-path">HttpContext</a> for use in your method. The <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewritecontext.result" data-linktype="absolute-path">RewriteContext.Result</a> determines how additional pipeline processing is handled. Set the value to one of the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.ruleresult" class="no-loc" data-linktype="absolute-path">RuleResult</a> fields described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Rewrite context result</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RuleResult.ContinueRules</code> (default)</td>
+<td>Continue applying rules.</td>
+</tr>
+<tr>
+<td><code>RuleResult.EndResponse</code></td>
+<td>Stop applying rules and send the response.</td>
+</tr>
+<tr>
+<td><code>RuleResult.SkipRemainingRules</code></td>
+<td>Stop applying rules and send the context to the next middleware.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-csharp" highlight-lines="14">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre>
+<p>The sample app demonstrates a method that redirects requests for paths that end with <code>.xml</code>. If a request is made for <code>/file.xml</code>, the request is redirected to <code>/xmlfiles/file.xml</code>. The status code is set to <code>301 - Moved Permanently</code>. When the browser makes a new request for <code>/xmlfiles/file.xml</code>, Static File Middleware serves the file to the client from the <em>wwwroot/xmlfiles</em> folder. For a redirect, explicitly set the status code of the response. Otherwise, a <em>200 - OK</em> status code is returned, and the redirect doesn't occur on the client.</p>
+<p><code>RewriteRules.cs</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="14-18">public static void RedirectXmlFileRequests(RewriteContext context)
+{
+    var request = context.HttpContext.Request;
+
+    // Because the client is redirecting back to the same app, stop 
+    // processing if the request has already been redirected.
+    if (request.Path.StartsWithSegments(new PathString("/xmlfiles")))
+    {
+        return;
+    }
+
+    if (request.Path.Value.EndsWith(".xml", StringComparison.OrdinalIgnoreCase))
+    {
+        var response = context.HttpContext.Response;
+        response.StatusCode = (int) HttpStatusCode.MovedPermanently;
+        context.Result = RuleResult.EndResponse;
+        response.Headers[HeaderNames.Location] = 
+            "/xmlfiles" + request.Path + request.QueryString;
+    }
+}
+</code></pre>
+<p>This approach can also rewrite requests. The sample app demonstrates rewriting the path for any text file request to serve the <em>file.txt</em> text file from the <em>wwwroot</em> folder. Static File Middleware serves the file based on the updated request path:</p>
+<pre><code class="lang-csharp" highlight-lines="15,22">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre>
+<p><code>RewriteRules.cs</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="7-8">public static void RewriteTextFileRequests(RewriteContext context)
+{
+    var request = context.HttpContext.Request;
+
+    if (request.Path.Value.EndsWith(".txt", StringComparison.OrdinalIgnoreCase))
+    {
+        context.Result = RuleResult.SkipRemainingRules;
+        request.Path = "/file.txt";
+    }
+}
+</code></pre><h3 id="irule-based-rule-2">IRule-based rule</h3>
+<p>Use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.rewriteoptionsextensions.add" class="no-loc" data-linktype="absolute-path">Add</a> to use rule logic in a class that implements the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.irule" class="no-loc" data-linktype="absolute-path">IRule</a> interface. <code>IRule</code> provides greater flexibility over using the method-based rule approach. Your implementation class may include a constructor that allows you can pass in parameters for the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.rewrite.irule.applyrule" class="no-loc" data-linktype="absolute-path">ApplyRule</a> method.</p>
+<pre><code class="lang-csharp" highlight-lines="16-17">public void Configure(IApplicationBuilder app)
+{
+    using (StreamReader apacheModRewriteStreamReader = 
+        File.OpenText("ApacheModRewrite.txt"))
+    using (StreamReader iisUrlRewriteStreamReader = 
+        File.OpenText("IISUrlRewrite.xml")) 
+    {
+        var options = new RewriteOptions()
+            .AddRedirect("redirect-rule/(.*)", "redirected/$1")
+            .AddRewrite(@"^rewrite-rule/(\d+)/(\d+)", "rewritten?var1=$1&amp;var2=$2", 
+                skipRemainingRules: true)
+            .AddApacheModRewrite(apacheModRewriteStreamReader)
+            .AddIISUrlRewrite(iisUrlRewriteStreamReader)
+            .Add(MethodRules.RedirectXmlFileRequests)
+            .Add(MethodRules.RewriteTextFileRequests)
+            .Add(new RedirectImageRequests(".png", "/png-images"))
+            .Add(new RedirectImageRequests(".jpg", "/jpg-images"));
+
+        app.UseRewriter(options);
+    }
+
+    app.UseStaticFiles();
+
+    app.Run(context =&gt; context.Response.WriteAsync(
+        $"Rewritten or Redirected Url: " +
+        $"{context.Request.Path + context.Request.QueryString}"));
+}
+</code></pre>
+<p>The values of the parameters in the sample app for the <code>extension</code> and the <code>newPath</code> are checked to meet several conditions. The <code>extension</code> must contain a value, and the value must be <code>.png</code>, <code>.jpg</code>, or <em>.gif</em>. If the <code>newPath</code> isn't valid, an <a href="https://learn.microsoft.com/en-us/dotnet/api/system.argumentexception" class="no-loc" data-linktype="absolute-path">ArgumentException</a> is thrown. If a request is made for <code>image.png</code>, the request is redirected to <code>/png-images/image.png</code>. If a request is made for <code>image.jpg</code>, the request is redirected to <code>/jpg-images/image.jpg</code>. The status code is set to <code>301 - Moved Permanently</code>, and the <code>context.Result</code> is set to stop processing rules and send the response.</p>
+<pre><code class="lang-csharp">public class RedirectImageRequests : IRule
+{
+    private readonly string _extension;
+    private readonly PathString _newPath;
+
+    public RedirectImageRequests(string extension, string newPath)
+    {
+        if (string.IsNullOrEmpty(extension))
+        {
+            throw new ArgumentException(nameof(extension));
+        }
+
+        if (!Regex.IsMatch(extension, @"^\.(png|jpg|gif)$"))
+        {
+            throw new ArgumentException("Invalid extension", nameof(extension));
+        }
+
+        if (!Regex.IsMatch(newPath, @"(/[A-Za-z0-9]+)+?"))
+        {
+            throw new ArgumentException("Invalid path", nameof(newPath));
+        }
+
+        _extension = extension;
+        _newPath = new PathString(newPath);
+    }
+
+    public void ApplyRule(RewriteContext context)
+    {
+        var request = context.HttpContext.Request;
+
+        // Because we're redirecting back to the same app, stop 
+        // processing if the request has already been redirected
+        if (request.Path.StartsWithSegments(new PathString(_newPath)))
+        {
+            return;
+        }
+
+        if (request.Path.Value.EndsWith(_extension, StringComparison.OrdinalIgnoreCase))
+        {
+            var response = context.HttpContext.Response;
+            response.StatusCode = (int) HttpStatusCode.MovedPermanently;
+            context.Result = RuleResult.EndResponse;
+            response.Headers[HeaderNames.Location] = 
+                _newPath + request.Path + request.QueryString;
+        }
+    }
+}
+</code></pre>
+<p>Original Request: <code>/image.png</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_redirect_png_requests.png?view=aspnetcore-9.0" alt="For image.png: Browser window with developer tools tracking the requests and responses" data-linktype="relative-path"></p>
+<p>Original Request: <code>/image.jpg</code></p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting/_static/add_redirect_jpg_requests.png?view=aspnetcore-9.0" alt="For image.jpg: Browser window with developer tools tracking the requests and responses" data-linktype="relative-path"></p>
+<h2 id="regex-examples-2">Regex examples</h2>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Regex String &amp;<br>Match Example</th>
+<th>Replacement String &amp;<br>Output Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rewrite path into querystring</td>
+<td><code>^path/(.*)/(.*)</code><br><code>/path/abc/123</code></td>
+<td><code>path?var1=$1&amp;var2=$2</code><br><code>/path?var1=abc&amp;var2=123</code></td>
+</tr>
+<tr>
+<td>Strip trailing slash</td>
+<td><code>(.*)/$</code><br><code>/path/</code></td>
+<td><code>$1</code><br><code>/path</code></td>
+</tr>
+<tr>
+<td>Enforce trailing slash</td>
+<td><code>(.*[^/])$</code><br><code>/path</code></td>
+<td><code>$1/</code><br><code>/path/</code></td>
+</tr>
+<tr>
+<td>Avoid rewriting specific requests</td>
+<td><code>^(.*)(?&lt;!\.axd)$</code> or <code>^(?!.*\.axd$)(.*)$</code><br>Yes: <code>/resource.htm</code><br>No: <code>/resource.axd</code></td>
+<td><code>rewritten/$1</code><br><code>/rewritten/resource.htm</code><br><code>/resource.axd</code></td>
+</tr>
+<tr>
+<td>Rearrange URL segments</td>
+<td><code>path/(.*)/(.*)/(.*)</code><br><code>path/1/2/3</code></td>
+<td><code>path/$3/$2/$1</code><br><code>path/3/2/1</code></td>
+</tr>
+<tr>
+<td>Replace a URL segment</td>
+<td><code>^(.*)/segment2/(.*)</code><br><code>/segment1/segment2/segment3</code></td>
+<td><code>$1/replaced/$2</code><br><code>/segment1/replaced/segment3</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="additional-resources">Additional resources</h2>
+<ul>
+<li><a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/fundamentals/url-rewriting/samples/" data-linktype="external">View or download sample code</a> (<a href="../overview553c.html?view=aspnetcore-9.0#how-to-download-a-sample" data-linktype="relative-path">how to download</a>)</li>
+<li><a href="https://github.com/dotnet/aspnetcore/blob/main/src/Middleware/Rewrite/src/RewriteMiddleware.cs" data-linktype="external"><code>RewriteMiddleware</code> (reference source)</a></li>
+<li><a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/startup?view=aspnetcore-9.0" data-linktype="relative-path">App startup in ASP.NET Core</a></li>
+<li><a href="middleware/index553c.html?view=aspnetcore-9.0" data-linktype="relative-path">ASP.NET Core Middleware</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/articles/standard/base-types/regular-expressions" data-linktype="absolute-path">Regular expressions in .NET</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/articles/standard/base-types/quick-ref" data-linktype="absolute-path">Regular expression language - quick reference</a></li>
+<li><a href="https://httpd.apache.org/docs/2.4/rewrite/" data-linktype="external">Apache mod_rewrite</a></li>
+<li><a href="https://learn.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-url-rewrite-module-20" data-linktype="absolute-path">Using Url Rewrite Module 2.0 (for IIS)</a></li>
+<li><a href="https://learn.microsoft.com/en-us/iis/extensions/url-rewrite-module/url-rewrite-module-configuration-reference" data-linktype="absolute-path">URL Rewrite Module Configuration Reference</a></li>
+<li><a href="https://support.google.com/webmasters/answer/76329?hl=en" data-linktype="external">Keep a simple URL structure</a></li>
+<li><a href="https://ruslany.net/2009/04/10-url-rewriting-tips-and-tricks/" data-linktype="external">10 URL Rewriting Tips and Tricks</a></li>
+<li><a href="https://webmasters.googleblog.com/2010/04/to-slash-or-not-to-slash.html" data-linktype="external">To slash or not to slash</a></li>
+</ul>
+</div>
+					
+		<div
+			id="ms--inline-notifications"
+			class="margin-block-xs"
+			data-bi-name="inline-notification"
+		></div>
+	 
+		<div
+			id="assertive-live-region"
+			role="alert"
+			aria-live="assertive"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+		<div
+			id="polite-live-region"
+			role="status"
+			aria-live="polite"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+	
+					
+			
+		<!-- feedback section -->
+		<section
+			class="feedback-section position-relative margin-top-lg border border-radius padding-xxs display-none-print"
+			data-bi-name="open-source-feedback-section"
+			data-open-source-feedback-section
+			hidden
+		>
+			<div class="display-flex flex-direction-column flex-direction-row-tablet">
+				<div
+					class="width-450-tablet padding-inline-xs padding-inline-xs-tablet padding-top-xs padding-bottom-sm padding-top-xs-tablet background-color-body-medium"
+				>
+					<div class="display-flex flex-direction-column">
+						<div class="padding-bottom-xxs">
+							<span class="icon margin-right-xxs" aria-hidden="true">
+								<span class="docon docon-brand-github"></span>
+							</span>
+							<span class="font-weight-semibold">
+								Collaborate with us on GitHub
+							</span>
+						</div>
+						<span class="line-height-normal">
+							The source for this content can be found on GitHub, where you can also create and review issues and pull requests. For more information, see <a href="https://learn.microsoft.com/contribute/content/dotnet/dotnet-contribute">our contributor guide</a>.
+						</span>
+					</div>
+				</div>
+				<div
+					class="display-flex gap-xs width-full-tablet flex-direction-column padding-xs justify-content-space-evenly"
+				>
+					<div class="media">
+						
+					<div class="media-left">
+						<div class="image image-36x36" hidden data-open-source-image-container>
+							<img
+								class="theme-display is-light"
+								src="https://learn.microsoft.com/media/logos/logo_net.svg"
+								aria-hidden="true"
+								data-open-source-image-light
+							/>
+							<img
+								class="theme-display is-dark is-high-contrast"
+								src="https://learn.microsoft.com/media/logos/logo_net.svg"
+								aria-hidden="true"
+								data-open-source-image-dark
+							/>
+						</div>
+					</div>
+			  
+
+						<div class="media-content">
+							<p
+								class="font-size-xl font-weight-semibold margin-bottom-xxs"
+								data-open-source-product-title
+							>
+								ASP.NET Core
+							</p>
+							<div class="display-flex gap-xs flex-direction-column">
+								<p class="line-height-normal" data-open-source-product-description></p>
+								<div class="display-flex gap-xs flex-direction-column">
+									<a href="#" data-github-link>
+										<span class="icon margin-right-xxs" aria-hidden="true">
+											<span class="docon docon-bug"></span>
+										</span>
+										<span>Open a documentation issue</span>
+									</a>
+									<a
+										href="https://github.com/dotnet/aspnetcore/blob/main/CONTRIBUTING.md"
+										class="display-block margin-top-auto font-size-md"
+										data-feedback-product-url
+									>
+										<span class="icon margin-right-xxs" aria-hidden="true">
+											<span class="docon docon-feedback"></span>
+										</span>
+										<span>Provide product feedback</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+			
+		<!-- feedback section -->
+		<section
+			id="site-user-feedback-footer"
+			class="font-size-sm margin-top-md display-none-print display-none-desktop"
+			data-test-id="site-user-feedback-footer"
+			data-bi-name="site-feedback-section"
+		>
+			<hr class="hr" />
+			<h2 id="ms--feedback" class="title is-3">Feedback</h2>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="buttons">
+					<button
+						class="thumb-rating-button like button button-primary button-sm"
+						data-test-id="footer-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+						<span>Yes</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike button button-primary button-sm"
+						data-test-id="footer-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+						<span>No</span>
+					</button>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+		
+				</div>
+				
+		<div id="ms--additional-resources-mobile" class="display-none-print">
+			<hr class="hr" hidden />
+			<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>
+				Additional resources
+			</h2>
+			
+		<section
+			id="right-rail-recommendations-mobile"
+			class=""
+			data-bi-name="recommendations"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-training-mobile"
+			class=""
+			data-bi-name="learning-resource-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-events-mobile"
+			class=""
+			data-bi-name="events-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-qna-mobile"
+			class="margin-top-xxs"
+			data-bi-name="qna-link-card"
+			hidden
+		></section>
+	
+		</div>
+	
+			</div>
+			
+		<div
+			id="action-panel"
+			role="region"
+			aria-label="Action Panel"
+			class="action-panel"
+			tabindex="-1"
+		></div>
+	
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside "
+					data-bi-name="aside"
+			  >
+					
+		<div
+			id="ms--additional-resources"
+			class="right-container padding-sm display-none display-block-desktop height-full"
+			data-bi-name="pageactions"
+			role="complementary"
+			aria-label="Additional resources"
+		>
+			<div id="affixed-right-container" data-bi-name="right-column">
+				
+		<nav
+			id="side-doc-outline"
+			class="doc-outline border-bottom padding-bottom-xs margin-bottom-xs"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h3>In this article</h3>
+		</nav>
+	
+				<!-- Feedback -->
+				
+		<section
+			id="ms--site-user-feedback-right-rail"
+			class="font-size-sm display-none-print"
+			data-test-id="site-user-feedback-right-rail"
+			data-bi-name="site-feedback-right-rail"
+		>
+			<p class="font-weight-semibold margin-bottom-xs">Was this page helpful?</p>
+			<div class="buttons">
+				<button
+					class="thumb-rating-button like button button-primary button-sm"
+					data-test-id="right-rail-rating-yes"
+					data-binary-rating-response="rating-yes"
+					type="button"
+					title="This article is helpful"
+					data-bi-name="button-rating-yes"
+					aria-pressed="false"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-like"></span>
+					</span>
+					<span>Yes</span>
+				</button>
+				<button
+					class="thumb-rating-button dislike button button-primary button-sm"
+					data-test-id="right-rail-rating-no"
+					data-binary-rating-response="rating-no"
+					type="button"
+					title="This article is not helpful"
+					data-bi-name="button-rating-no"
+					aria-pressed="false"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-dislike"></span>
+					</span>
+					<span>No</span>
+				</button>
+			</div>
+		</section>
+	
+			</div>
+		</div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout has-padding has-default-focus border-top  uhf-container"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	
+				<div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-expanded="false"
+				title="Theme"
+				data-bi-name="theme"
+			>
+				<span class="icon">
+					<span class="docon docon-sun" aria-hidden="true"></span>
+				</span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu">
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="light"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="dark"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="high-contrast"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2025</li>
+			</ul>
+		</footer>
+	</footer>
+			</body>
+		
+<!-- Mirrored from learn.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting?view=aspnetcore-9.0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 14:53:03 GMT -->
+</html>

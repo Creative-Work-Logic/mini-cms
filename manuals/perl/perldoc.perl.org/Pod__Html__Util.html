@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/Pod::Html::Util by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pod::Html::Util - helper functions for Pod-Html - Perldoc Browser</title>
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="Pod__Html__Util.html">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.html"><img src="images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.42.0</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="Pod__Html__Util.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item active" href="https://perldoc.perl.org/5.42.0/Pod::Html::Util">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/Pod::Html::Util">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/Pod::Html::Util">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/Pod::Html::Util">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/Pod::Html::Util">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/Pod::Html::Util">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/Pod::Html::Util">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/Pod::Html::Util">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/Pod::Html::Util">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/Pod::Html::Util">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/Pod::Html::Util">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/Pod::Html::Util">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/Pod::Html::Util">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/Pod::Html::Util">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/Pod::Html::Util">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/Pod::Html::Util">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/Pod::Html::Util">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/Pod::Html::Util">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/Pod::Html::Util">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/Pod::Html::Util">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/Pod::Html::Util">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/Pod::Html::Util">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/Pod::Html::Util">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/Pod::Html::Util">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/Pod::Html::Util">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/Pod::Html::Util">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/Pod::Html::Util">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/Pod::Html::Util">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/Pod::Html::Util">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/Pod::Html::Util">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/Pod::Html::Util">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/Pod::Html::Util">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/Pod::Html::Util">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/Pod::Html::Util">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/Pod::Html::Util">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/Pod::Html::Util">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/Pod::Html::Util">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/Pod::Html::Util">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/Pod::Html::Util">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/Pod::Html::Util">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/Pod::Html::Util">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/Pod::Html::Util">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/Pod::Html::Util">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/Pod::Html::Util">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/Pod::Html::Util">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/Pod::Html::Util">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/Pod::Html::Util">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/Pod::Html::Util">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/Pod::Html::Util">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/Pod::Html::Util">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/Pod::Html::Util">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/Pod::Html::Util">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/Pod::Html::Util">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/Pod::Html::Util">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/Pod::Html::Util">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/Pod::Html::Util">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/Pod::Html::Util">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/Pod::Html::Util">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/Pod::Html::Util">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/Pod::Html::Util">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/Pod::Html::Util">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/Pod::Html::Util">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/Pod::Html::Util">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/Pod::Html::Util">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/Pod::Html::Util">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/Pod::Html::Util">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/Pod::Html::Util">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/Pod::Html::Util">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/Pod::Html::Util">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/Pod::Html::Util">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/Pod::Html::Util">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/Pod::Html::Util">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/Pod::Html::Util">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/Pod::Html::Util">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/Pod::Html::Util">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/Pod::Html::Util">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/Pod::Html::Util">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/Pod::Html::Util">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/Pod::Html::Util">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.2/Pod::Html::Util">5.6.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.1/Pod::Html::Util">5.6.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.0/Pod::Html::Util">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_04/Pod::Html::Util">5.005_04</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_03/Pod::Html::Util">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/Pod::Html::Util">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/Pod::Html::Util">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/Pod::Html::Util">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/Pod::Html::Util">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/Pod::Html::Util">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/Pod::Html::Util">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/Pod::Html::Util">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/Pod::Html::Util">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/Pod::Html::Util">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/Pod::Html::Util">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/Pod::Html::Util">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/Pod::Html::Util">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/Pod::Html::Util">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/Pod::Html::Util">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/Pod::Html::Util">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/Pod::Html::Util">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/Pod::Html::Util">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/Pod::Html::Util">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/Pod::Html::Util">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/Pod::Html::Util">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/Pod::Html::Util">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/Pod::Html::Util">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/Pod::Html::Util">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="Pod__Html__Util.html">Pod::Html::Util</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/Pod::Html::Util.txt">source</a>,
+            <a href="https://metacpan.org/pod/Pod::Html::Util">CPAN</a>)
+          </div>
+            <div id="moduleversion">version 1.35</div>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SUBROUTINES">SUBROUTINES</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#process_command_line()">process_command_line()</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#usage()">usage()</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#unixify()">unixify()</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#relativize_url()">relativize_url()</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#html_escape()">html_escape()</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#htmlify()">htmlify()</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#anchorify()">anchorify()</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#trim_leading_whitespace()">trim_leading_whitespace()</a>
+              </li>
+          </ul>
+
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>Pod::Html::Util - helper functions for Pod-Html</p>
+
+<h1 id="SUBROUTINES"><a class="permalink" href="#SUBROUTINES">#</a>SUBROUTINES</h1>
+
+<p><b>Note:</b> While these functions are importable on request from <i>Pod::Html::Util</i>, they are specifically intended for use within (a) the <i>Pod-Html</i> distribution (modules and test programs) shipped as part of the Perl 5 core and (b) other parts of the core such as the <i>installhtml</i> program. These functions may be modified or relocated within the core distribution -- or removed entirely therefrom -- as the core&#39;s needs evolve. Hence, you should not rely on these functions in situations other than those just described.</p>
+
+<h2 id="process_command_line()"><a class="permalink" href="#process_command_line()">#</a><a id="process_command_line"></a><code>process_command_line()</code></h2>
+
+<p>Process command-line switches (options). Returns a reference to a hash. Will provide usage message if <code>--help</code> switch is present or if parameters are invalid.</p>
+
+<p>Calling this subroutine may modify <code>@ARGV</code>.</p>
+
+<h2 id="usage()"><a class="permalink" href="#usage()">#</a><a id="usage"></a><code>usage()</code></h2>
+
+<p>Display customary Pod::Html usage information on STDERR.</p>
+
+<h2 id="unixify()"><a class="permalink" href="#unixify()">#</a><a id="unixify"></a><code>unixify()</code></h2>
+
+<p>Ensure that <i>Pod::Html</i>&#39;s internals and tests handle paths consistently across Unix, Windows and VMS.</p>
+
+<h2 id="relativize_url()"><a class="permalink" href="#relativize_url()">#</a><a id="relativize_url"></a><code>relativize_url()</code></h2>
+
+<p>Convert an absolute URL to one relative to a base URL. Assumes both end in a filename.</p>
+
+<h2 id="html_escape()"><a class="permalink" href="#html_escape()">#</a><a id="html_escape"></a><code>html_escape()</code></h2>
+
+<p>Make text safe for HTML.</p>
+
+<h2 id="htmlify()"><a class="permalink" href="#htmlify()">#</a><a id="htmlify"></a><code>htmlify()</code></h2>
+
+<pre><code>htmlify($heading);</code></pre>
+
+<p>Converts a pod section specification to a suitable section specification for HTML. Note that we keep spaces and special characters except <code>&quot;, ?</code> (Netscape problem) and the hyphen (writer&#39;s problem...).</p>
+
+<h2 id="anchorify()"><a class="permalink" href="#anchorify()">#</a><a id="anchorify"></a><code>anchorify()</code></h2>
+
+<pre><code>anchorify(@heading);</code></pre>
+
+<p>Similar to <code>htmlify()</code>, but turns non-alphanumerics into underscores. Note that <code>anchorify()</code> is not exported by default.</p>
+
+<h2 id="trim_leading_whitespace()"><a class="permalink" href="#trim_leading_whitespace()">#</a><a id="trim_leading_whitespace"></a><code>trim_leading_whitespace()</code></h2>
+
+<p>Remove any level of indentation (spaces or tabs) from each code block consistently. Adapted from: https://metacpan.org/source/HAARG/MetaCPAN-Pod-XHTML-0.002001/lib/Pod/Simple/Role/StripVerbatimIndent.pm</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/Pod::Html::Util by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:53 GMT -->
+</html>

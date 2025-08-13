@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/Test2::Tools::Subtest by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test2::Tools::Subtest - Tools for writing subtests - Perldoc Browser</title>
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="Test2__Tools__Subtest.html">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.html"><img src="images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.42.0</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="Test2__Tools__Subtest.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item active" href="https://perldoc.perl.org/5.42.0/Test2::Tools::Subtest">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/Test2::Tools::Subtest">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/Test2::Tools::Subtest">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/Test2::Tools::Subtest">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/Test2::Tools::Subtest">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/Test2::Tools::Subtest">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/Test2::Tools::Subtest">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/Test2::Tools::Subtest">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/Test2::Tools::Subtest">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/Test2::Tools::Subtest">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/Test2::Tools::Subtest">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/Test2::Tools::Subtest">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/Test2::Tools::Subtest">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/Test2::Tools::Subtest">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/Test2::Tools::Subtest">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/Test2::Tools::Subtest">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/Test2::Tools::Subtest">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/Test2::Tools::Subtest">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/Test2::Tools::Subtest">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/Test2::Tools::Subtest">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/Test2::Tools::Subtest">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/Test2::Tools::Subtest">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/Test2::Tools::Subtest">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/Test2::Tools::Subtest">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/Test2::Tools::Subtest">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/Test2::Tools::Subtest">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/Test2::Tools::Subtest">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/Test2::Tools::Subtest">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/Test2::Tools::Subtest">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/Test2::Tools::Subtest">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/Test2::Tools::Subtest">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/Test2::Tools::Subtest">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/Test2::Tools::Subtest">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/Test2::Tools::Subtest">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/Test2::Tools::Subtest">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/Test2::Tools::Subtest">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/Test2::Tools::Subtest">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/Test2::Tools::Subtest">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/Test2::Tools::Subtest">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/Test2::Tools::Subtest">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/Test2::Tools::Subtest">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/Test2::Tools::Subtest">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/Test2::Tools::Subtest">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/Test2::Tools::Subtest">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/Test2::Tools::Subtest">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/Test2::Tools::Subtest">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/Test2::Tools::Subtest">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/Test2::Tools::Subtest">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/Test2::Tools::Subtest">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/Test2::Tools::Subtest">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/Test2::Tools::Subtest">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/Test2::Tools::Subtest">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/Test2::Tools::Subtest">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/Test2::Tools::Subtest">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/Test2::Tools::Subtest">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/Test2::Tools::Subtest">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/Test2::Tools::Subtest">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/Test2::Tools::Subtest">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/Test2::Tools::Subtest">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/Test2::Tools::Subtest">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/Test2::Tools::Subtest">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/Test2::Tools::Subtest">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/Test2::Tools::Subtest">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/Test2::Tools::Subtest">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/Test2::Tools::Subtest">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/Test2::Tools::Subtest">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/Test2::Tools::Subtest">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/Test2::Tools::Subtest">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/Test2::Tools::Subtest">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/Test2::Tools::Subtest">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/Test2::Tools::Subtest">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/Test2::Tools::Subtest">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/Test2::Tools::Subtest">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/Test2::Tools::Subtest">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/Test2::Tools::Subtest">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/Test2::Tools::Subtest">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/Test2::Tools::Subtest">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/Test2::Tools::Subtest">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/Test2::Tools::Subtest">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.2/Test2::Tools::Subtest">5.6.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.1/Test2::Tools::Subtest">5.6.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.0/Test2::Tools::Subtest">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_04/Test2::Tools::Subtest">5.005_04</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_03/Test2::Tools::Subtest">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/Test2::Tools::Subtest">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/Test2::Tools::Subtest">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/Test2::Tools::Subtest">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/Test2::Tools::Subtest">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/Test2::Tools::Subtest">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/Test2::Tools::Subtest">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/Test2::Tools::Subtest">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/Test2::Tools::Subtest">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/Test2::Tools::Subtest">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/Test2::Tools::Subtest">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/Test2::Tools::Subtest">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/Test2::Tools::Subtest">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/Test2::Tools::Subtest">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/Test2::Tools::Subtest">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/Test2::Tools::Subtest">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/Test2::Tools::Subtest">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/Test2::Tools::Subtest">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/Test2::Tools::Subtest">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/Test2::Tools::Subtest">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/Test2::Tools::Subtest">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/Test2::Tools::Subtest">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/Test2::Tools::Subtest">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/Test2::Tools::Subtest">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="Test2__Tools__Subtest.html">Test2::Tools::Subtest</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/Test2::Tools::Subtest.txt">source</a>,
+            <a href="https://metacpan.org/pod/Test2::Tools::Subtest">CPAN</a>)
+          </div>
+            <div id="moduleversion">version 1.302210</div>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SYNOPSIS">SYNOPSIS</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#BUFFERED">BUFFERED</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#STREAMED">STREAMED</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#IMPORTANT-NOTE">IMPORTANT NOTE</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#EXPORTS">EXPORTS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SOURCE">SOURCE</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#MAINTAINERS">MAINTAINERS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#AUTHORS">AUTHORS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#COPYRIGHT">COPYRIGHT</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>Test2::Tools::Subtest - Tools for writing subtests</p>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>This package exports subs that let you write subtests.</p>
+
+<p>There are two types of subtests, buffered and streamed. Streamed subtests mimic subtests from <a href="Test__More.html">Test::More</a> in that they render all events as soon as they are produced. Buffered subtests wait until the subtest completes before rendering any results.</p>
+
+<p>The main difference is that streamed subtests are unreadable when combined with concurrency. Buffered subtests look fine with any number of concurrent threads and processes.</p>
+
+<h1 id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">#</a>SYNOPSIS</h1>
+
+<h2 id="BUFFERED"><a class="permalink" href="#BUFFERED">#</a>BUFFERED</h2>
+
+<pre><code>use Test2::Tools::Subtest qw/subtest_buffered/;
+
+subtest_buffered my_test =&gt; sub {
+    ok(1, &quot;subtest event A&quot;);
+    ok(1, &quot;subtest event B&quot;);
+};</code></pre>
+
+<p>This will produce output like this:</p>
+
+<pre><code>ok 1 - my_test {
+    ok 1 - subtest event A
+    ok 2 - subtest event B
+    1..2
+}</code></pre>
+
+<h2 id="STREAMED"><a class="permalink" href="#STREAMED">#</a>STREAMED</h2>
+
+<p>The default option is &#39;buffered&#39;. If you want streamed subtests, the way <a href="Test__Builder.html">Test::Builder</a> does it, use this:</p>
+
+<pre><code>use Test2::Tools::Subtest qw/subtest_streamed/;
+
+subtest_streamed my_test =&gt; sub {
+    ok(1, &quot;subtest event A&quot;);
+    ok(1, &quot;subtest event B&quot;);
+};</code></pre>
+
+<p>This will produce output like this:</p>
+
+<pre><code class="plaintext"># Subtest: my_test
+    ok 1 - subtest event A
+    ok 2 - subtest event B
+    1..2
+ok 1 - Subtest: my_test</code></pre>
+
+<h1 id="IMPORTANT-NOTE"><a class="permalink" href="#IMPORTANT-NOTE">#</a><a id="IMPORTANT"></a>IMPORTANT NOTE</h1>
+
+<p>You can use <code>bail_out</code> or <code>skip_all</code> in a subtest, but not in a BEGIN block or <code>use</code> statement. This is due to the way flow control works within a BEGIN block. This is not normally an issue, but can happen in rare conditions using eval, or script files as subtests.</p>
+
+<h1 id="EXPORTS"><a class="permalink" href="#EXPORTS">#</a>EXPORTS</h1>
+
+<dl>
+
+<dt id="subtest_streamed-$name-=&gt;-$sub"><a class="permalink" href="#subtest_streamed-$name-=%3E-$sub">#</a><a id="subtest_streamed"></a><a id="subtest_streamed-name-sub"></a>subtest_streamed $name =&gt; $sub</dt>
+<dd>
+
+</dd>
+<dt id="subtest_streamed($name,-$sub,-@args)"><a class="permalink" href="#subtest_streamed($name,-$sub,-@args)">#</a><a id="subtest_streamed1"></a><a id="subtest_streamed-name-sub-args"></a>subtest_streamed($name, $sub, @args)</dt>
+<dd>
+
+</dd>
+<dt id="subtest_streamed-$name-=&gt;-\%params,-$sub"><a class="permalink" href="#subtest_streamed-$name-=%3E-%5C%25params,-$sub">#</a><a id="subtest_streamed2"></a><a id="subtest_streamed-name-params-sub"></a>subtest_streamed $name =&gt; \%params, $sub</dt>
+<dd>
+
+</dd>
+<dt id="subtest_streamed($name,-\%params,-$sub,-@args)"><a class="permalink" href="#subtest_streamed($name,-%5C%25params,-$sub,-@args)">#</a><a id="subtest_streamed3"></a><a id="subtest_streamed-name-params-sub-args"></a>subtest_streamed($name, \%params, $sub, @args)</dt>
+<dd>
+
+<p>Run subtest coderef, stream events as they happen.</p>
+
+<p><code>\%params</code> is a hashref with any arguments you wish to pass into hub construction.</p>
+
+</dd>
+<dt id="subtest_buffered-$name-=&gt;-$sub"><a class="permalink" href="#subtest_buffered-$name-=%3E-$sub">#</a><a id="subtest_buffered"></a><a id="subtest_buffered-name-sub"></a>subtest_buffered $name =&gt; $sub</dt>
+<dd>
+
+</dd>
+<dt id="subtest_buffered($name,-$sub,-@args)"><a class="permalink" href="#subtest_buffered($name,-$sub,-@args)">#</a><a id="subtest_buffered1"></a><a id="subtest_buffered-name-sub-args"></a>subtest_buffered($name, $sub, @args)</dt>
+<dd>
+
+</dd>
+<dt id="subtest_buffered-$name-=&gt;-\%params,-$sub"><a class="permalink" href="#subtest_buffered-$name-=%3E-%5C%25params,-$sub">#</a><a id="subtest_buffered2"></a><a id="subtest_buffered-name-params-sub"></a>subtest_buffered $name =&gt; \%params, $sub</dt>
+<dd>
+
+</dd>
+<dt id="subtest_buffered($name,-\%params,-$sub,-@args)"><a class="permalink" href="#subtest_buffered($name,-%5C%25params,-$sub,-@args)">#</a><a id="subtest_buffered3"></a><a id="subtest_buffered-name-params-sub-args"></a>subtest_buffered($name, \%params, $sub, @args)</dt>
+<dd>
+
+<p>Run subtest coderef, render events all at once when subtest is complete.</p>
+
+<p><code>\%params</code> is a hashref with any arguments you wish to pass into hub construction.</p>
+
+</dd>
+</dl>
+
+<h1 id="SOURCE"><a class="permalink" href="#SOURCE">#</a>SOURCE</h1>
+
+<p>The source code repository for Test2-Suite can be found at <i>https://github.com/Test-More/test-more/</i>.</p>
+
+<h1 id="MAINTAINERS"><a class="permalink" href="#MAINTAINERS">#</a>MAINTAINERS</h1>
+
+<dl>
+
+<dt id="Chad-Granum-&lt;exodist@cpan.org&gt;"><a class="permalink" href="#Chad-Granum-%3Cexodist@cpan.org%3E">#</a><a id="Chad"></a><a id="Chad-Granum-exodist-cpan.org"></a>Chad Granum &lt;exodist@cpan.org&gt;</dt>
+<dd>
+
+</dd>
+</dl>
+
+<h1 id="AUTHORS"><a class="permalink" href="#AUTHORS">#</a>AUTHORS</h1>
+
+<dl>
+
+<dt id="Chad-Granum-&lt;exodist@cpan.org&gt;1"><a class="permalink" href="#Chad-Granum-%3Cexodist@cpan.org%3E1">#</a><a id="Chad1"></a><a id="Chad-Granum-exodist-cpan.org1"></a>Chad Granum &lt;exodist@cpan.org&gt;</dt>
+<dd>
+
+</dd>
+</dl>
+
+<h1 id="COPYRIGHT"><a class="permalink" href="#COPYRIGHT">#</a>COPYRIGHT</h1>
+
+<p>Copyright Chad Granum &lt;exodist@cpan.org&gt;.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>See <i>http://dev.perl.org/licenses/</i></p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/Test2::Tools::Subtest by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:53 GMT -->
+</html>

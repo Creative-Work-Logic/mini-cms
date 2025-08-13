@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/5.005_01/perlxs by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>perlxs - XS language reference manual - Perldoc Browser</title>
+    <link rel="search" href="../opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="../perlxs.html">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="../css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html"><img src="../images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.005_01</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="../perlxs.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0/perlxs">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/perlxs">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/perlxs">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/perlxs">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/perlxs">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/perlxs">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/perlxs">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/perlxs">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/perlxs">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/perlxs">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/perlxs">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/perlxs">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/perlxs">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/perlxs">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/perlxs">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/perlxs">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/perlxs">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/perlxs">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/perlxs">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/perlxs">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/perlxs">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/perlxs">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/perlxs">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/perlxs">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/perlxs">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/perlxs">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/perlxs">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/perlxs">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/perlxs">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/perlxs">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/perlxs">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/perlxs">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/perlxs">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/perlxs">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/perlxs">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/perlxs">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/perlxs">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/perlxs">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/perlxs">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/perlxs">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/perlxs">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/perlxs">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/perlxs">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/perlxs">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/perlxs">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/perlxs">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/perlxs">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/perlxs">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/perlxs">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/perlxs">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/perlxs">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/perlxs">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.16.3/perlxs.html">5.16.3</a>
+          <a class="dropdown-item" href="../5.16.2/perlxs.html">5.16.2</a>
+          <a class="dropdown-item" href="../5.16.1/perlxs.html">5.16.1</a>
+          <a class="dropdown-item" href="../5.16.0/perlxs.html">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.14.4/perlxs.html">5.14.4</a>
+          <a class="dropdown-item" href="../5.14.3/perlxs.html">5.14.3</a>
+          <a class="dropdown-item" href="../5.14.2/perlxs.html">5.14.2</a>
+          <a class="dropdown-item" href="../5.14.1/perlxs.html">5.14.1</a>
+          <a class="dropdown-item" href="../5.14.0/perlxs.html">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.12.5/perlxs.html">5.12.5</a>
+          <a class="dropdown-item" href="../5.12.4/perlxs.html">5.12.4</a>
+          <a class="dropdown-item" href="../5.12.3/perlxs.html">5.12.3</a>
+          <a class="dropdown-item" href="../5.12.2/perlxs.html">5.12.2</a>
+          <a class="dropdown-item" href="../5.12.1/perlxs.html">5.12.1</a>
+          <a class="dropdown-item" href="../5.12.0/perlxs.html">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.10.1/perlxs.html">5.10.1</a>
+          <a class="dropdown-item" href="../5.10.0/perlxs.html">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.8.9/perlxs.html">5.8.9</a>
+          <a class="dropdown-item" href="../5.8.8/perlxs.html">5.8.8</a>
+          <a class="dropdown-item" href="../5.8.7/perlxs.html">5.8.7</a>
+          <a class="dropdown-item" href="../5.8.6/perlxs.html">5.8.6</a>
+          <a class="dropdown-item" href="../5.8.5/perlxs.html">5.8.5</a>
+          <a class="dropdown-item" href="../5.8.4/perlxs.html">5.8.4</a>
+          <a class="dropdown-item" href="../5.8.3/perlxs.html">5.8.3</a>
+          <a class="dropdown-item" href="../5.8.2/perlxs.html">5.8.2</a>
+          <a class="dropdown-item" href="../5.8.1/perlxs.html">5.8.1</a>
+          <a class="dropdown-item" href="../5.8.0/perlxs.html">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.6.2/perlxs.html">5.6.2</a>
+          <a class="dropdown-item" href="../5.6.1/perlxs.html">5.6.1</a>
+          <a class="dropdown-item" href="../5.6.0/perlxs.html">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.005_04/perlxs.html">5.005_04</a>
+          <a class="dropdown-item" href="../5.005_03/perlxs.html">5.005_03</a>
+          <a class="dropdown-item" href="../5.005_02/perlxs.html">5.005_02</a>
+          <a class="dropdown-item active" href="perlxs.html">5.005_01</a>
+          <a class="dropdown-item" href="../5.005/perlxs.html">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/perlxs">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/perlxs">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/perlxs">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/perlxs">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/perlxs">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/perlxs">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/perlxs">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/perlxs">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/perlxs">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/perlxs">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/perlxs">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/perlxs">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/perlxs">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/perlxs">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/perlxs">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/perlxs">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/perlxs">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/perlxs">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/perlxs">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/perlxs">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="../js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/5.005_01/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="../js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="perlxs.html">perlxs</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/5.005_01/perlxs.txt">source</a>,
+            <a href="https://metacpan.org/pod/perlxs">CPAN</a>)
+          </div>
+        </div>
+        <div class="leading-notice">
+          You are viewing the version of this documentation from Perl 5.005_01.
+            <a href="../perlxs.html">View the latest version</a>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Introduction">Introduction</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#On-The-Road">On The Road</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-Anatomy-of-an-XSUB">The Anatomy of an XSUB</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-Argument-Stack">The Argument Stack</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-RETVAL-Variable">The RETVAL Variable</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-MODULE-Keyword">The MODULE Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-PACKAGE-Keyword">The PACKAGE Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-PREFIX-Keyword">The PREFIX Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-OUTPUT:-Keyword">The OUTPUT: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-CODE:-Keyword">The CODE: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-INIT:-Keyword">The INIT: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-NO_INIT-Keyword">The NO_INIT Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Initializing-Function-Parameters">Initializing Function Parameters</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Default-Parameter-Values">Default Parameter Values</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-PREINIT:-Keyword">The PREINIT: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-SCOPE:-Keyword">The SCOPE: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-INPUT:-Keyword">The INPUT: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Variable-length-Parameter-Lists">Variable-length Parameter Lists</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-C_ARGS:-Keyword">The C_ARGS: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-PPCODE:-Keyword">The PPCODE: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Returning-Undef-And-Empty-Lists">Returning Undef And Empty Lists</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-REQUIRE:-Keyword">The REQUIRE: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-CLEANUP:-Keyword">The CLEANUP: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-BOOT:-Keyword">The BOOT: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-VERSIONCHECK:-Keyword">The VERSIONCHECK: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-PROTOTYPES:-Keyword">The PROTOTYPES: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-PROTOTYPE:-Keyword">The PROTOTYPE: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-ALIAS:-Keyword">The ALIAS: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-INTERFACE:-Keyword">The INTERFACE: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-INTERFACE_MACRO:-Keyword">The INTERFACE_MACRO: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-INCLUDE:-Keyword">The INCLUDE: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-CASE:-Keyword">The CASE: Keyword</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-&amp;-Unary-Operator">The &amp; Unary Operator</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Inserting-Comments-and-C-Preprocessor-Directives">Inserting Comments and C Preprocessor Directives</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Using-XS-With-C++">Using XS With C++</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Interface-Strategy">Interface Strategy</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Perl-Objects-And-C-Structures">Perl Objects And C Structures</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-Typemap">The Typemap</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#EXAMPLES">EXAMPLES</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#XS-VERSION">XS VERSION</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#AUTHOR">AUTHOR</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>perlxs - XS language reference manual</p>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<h2 id="Introduction"><a class="permalink" href="#Introduction">#</a>Introduction</h2>
+
+<p>XS is a language used to create an extension interface between Perl and some C library which one wishes to use with Perl. The XS interface is combined with the library to create a new library which can be linked to Perl. An <b>XSUB</b> is a function in the XS language and is the core component of the Perl application interface.</p>
+
+<p>The XS compiler is called <b>xsubpp</b>. This compiler will embed the constructs necessary to let an XSUB, which is really a C function in disguise, manipulate Perl values and creates the glue necessary to let Perl access the XSUB. The compiler uses <b>typemaps</b> to determine how to map C function parameters and variables to Perl values. The default typemap handles many common C types. A supplement typemap must be created to handle special structures and types for the library being linked.</p>
+
+<p>See <a href="perlxstut.html">perlxstut</a> for a tutorial on the whole extension creation process.</p>
+
+<p>Note: For many extensions, Dave Beazley&#39;s SWIG system provides a significantly more convenient mechanism for creating the XS glue code. See <a href="http://www.cs.utah.edu/~beazley/SWIG">http://www.cs.utah.edu/~beazley/SWIG</a> for more information.</p>
+
+<h2 id="On-The-Road"><a class="permalink" href="#On-The-Road">#</a><a id="On"></a>On The Road</h2>
+
+<p>Many of the examples which follow will concentrate on creating an interface between Perl and the ONC+ RPC bind library functions. The rpcb_gettime() function is used to demonstrate many features of the XS language. This function has two parameters; the first is an input parameter and the second is an output parameter. The function also returns a status value.</p>
+
+<pre><code>bool_t rpcb_gettime(const char *host, time_t *timep);</code></pre>
+
+<p>From C this function will be called with the following statements.</p>
+
+<pre><code>#include &lt;rpc/rpc.h&gt;
+bool_t status;
+time_t timep;
+status = rpcb_gettime( &quot;localhost&quot;, &amp;timep );</code></pre>
+
+<p>If an XSUB is created to offer a direct translation between this function and Perl, then this XSUB will be used from Perl with the following code. The $status and $timep variables will contain the output of the function.</p>
+
+<pre><code>use RPC;
+$status = rpcb_gettime( &quot;localhost&quot;, $timep );</code></pre>
+
+<p>The following XS file shows an XS subroutine, or XSUB, which demonstrates one possible interface to the rpcb_gettime() function. This XSUB represents a direct translation between C and Perl and so preserves the interface even from Perl. This XSUB will be invoked from Perl with the usage shown above. Note that the first three #include statements, for <code>EXTERN.h</code>, <code>perl.h</code>, and <code>XSUB.h</code>, will always be present at the beginning of an XS file. This approach and others will be expanded later in this document.</p>
+
+<pre><code class="plaintext">#include &quot;EXTERN.h&quot;
+#include &quot;perl.h&quot;
+#include &quot;XSUB.h&quot;
+#include &lt;rpc/rpc.h&gt;
+
+MODULE = RPC  PACKAGE = RPC
+
+bool_t
+rpcb_gettime(host,timep)
+     char *host
+     time_t &amp;timep
+     OUTPUT:
+     timep</code></pre>
+
+<p>Any extension to Perl, including those containing XSUBs, should have a Perl module to serve as the bootstrap which pulls the extension into Perl. This module will export the extension&#39;s functions and variables to the Perl program and will cause the extension&#39;s XSUBs to be linked into Perl. The following module will be used for most of the examples in this document and should be used from Perl with the <code>use</code> command as shown earlier. Perl modules are explained in more detail later in this document.</p>
+
+<pre><code>package RPC;
+
+require Exporter;
+require DynaLoader;
+@ISA = qw(Exporter DynaLoader);
+@EXPORT = qw( rpcb_gettime );
+
+bootstrap RPC;
+1;</code></pre>
+
+<p>Throughout this document a variety of interfaces to the rpcb_gettime() XSUB will be explored. The XSUBs will take their parameters in different orders or will take different numbers of parameters. In each case the XSUB is an abstraction between Perl and the real C rpcb_gettime() function, and the XSUB must always ensure that the real rpcb_gettime() function is called with the correct parameters. This abstraction will allow the programmer to create a more Perl-like interface to the C function.</p>
+
+<h2 id="The-Anatomy-of-an-XSUB"><a class="permalink" href="#The-Anatomy-of-an-XSUB">#</a><a id="The"></a>The Anatomy of an XSUB</h2>
+
+<p>The following XSUB allows a Perl program to access a C library function called sin(). The XSUB will imitate the C function which takes a single argument and returns a single value.</p>
+
+<pre><code class="plaintext">double
+sin(x)
+  double x</code></pre>
+
+<p>When using C pointers the indirection operator <code>*</code> should be considered part of the type and the address operator <code>&amp;</code> should be considered part of the variable, as is demonstrated in the rpcb_gettime() function above. See the section on typemaps for more about handling qualifiers and unary operators in C types.</p>
+
+<p>The function name and the return type must be placed on separate lines.</p>
+
+<pre><code class="plaintext">  INCORRECT                        CORRECT
+
+  double sin(x)                    double
+    double x                       sin(x)
+				     double x</code></pre>
+
+<p>The function body may be indented or left-adjusted. The following example shows a function with its body left-adjusted. Most examples in this document will indent the body.</p>
+
+<pre><code class="plaintext">CORRECT
+
+double
+sin(x)
+double x</code></pre>
+
+<h2 id="The-Argument-Stack"><a class="permalink" href="#The-Argument-Stack">#</a><a id="The1"></a>The Argument Stack</h2>
+
+<p>The argument stack is used to store the values which are sent as parameters to the XSUB and to store the XSUB&#39;s return value. In reality all Perl functions keep their values on this stack at the same time, each limited to its own range of positions on the stack. In this document the first position on that stack which belongs to the active function will be referred to as position 0 for that function.</p>
+
+<p>XSUBs refer to their stack arguments with the macro <b>ST(x)</b>, where <i>x</i> refers to a position in this XSUB&#39;s part of the stack. Position 0 for that function would be known to the XSUB as ST(0). The XSUB&#39;s incoming parameters and outgoing return values always begin at ST(0). For many simple cases the <b>xsubpp</b> compiler will generate the code necessary to handle the argument stack by embedding code fragments found in the typemaps. In more complex cases the programmer must supply the code.</p>
+
+<h2 id="The-RETVAL-Variable"><a class="permalink" href="#The-RETVAL-Variable">#</a><a id="The2"></a>The RETVAL Variable</h2>
+
+<p>The RETVAL variable is a magic variable which always matches the return type of the C library function. The <b>xsubpp</b> compiler will supply this variable in each XSUB and by default will use it to hold the return value of the C library function being called. In simple cases the value of RETVAL will be placed in ST(0) of the argument stack where it can be received by Perl as the return value of the XSUB.</p>
+
+<p>If the XSUB has a return type of <code>void</code> then the compiler will not supply a RETVAL variable for that function. When using the PPCODE: directive the RETVAL variable is not needed, unless used explicitly.</p>
+
+<p>If PPCODE: directive is not used, <code>void</code> return value should be used only for subroutines which do not return a value, <i>even if</i> CODE: directive is used which sets ST(0) explicitly.</p>
+
+<p>Older versions of this document recommended to use <code>void</code> return value in such cases. It was discovered that this could lead to segfaults in cases when XSUB was <i>truely</i> <code>void</code>. This practice is now deprecated, and may be not supported at some future version. Use the return value <code>SV *</code> in such cases. (Currently <code>xsubpp</code> contains some heuristic code which tries to disambiguate between &quot;truely-void&quot; and &quot;old-practice-declared-as-void&quot; functions. Hence your code is at mercy of this heuristics unless you use <code>SV *</code> as return value.)</p>
+
+<h2 id="The-MODULE-Keyword"><a class="permalink" href="#The-MODULE-Keyword">#</a><a id="The3"></a>The MODULE Keyword</h2>
+
+<p>The MODULE keyword is used to start the XS code and to specify the package of the functions which are being defined. All text preceding the first MODULE keyword is considered C code and is passed through to the output untouched. Every XS module will have a bootstrap function which is used to hook the XSUBs into Perl. The package name of this bootstrap function will match the value of the last MODULE statement in the XS source files. The value of MODULE should always remain constant within the same XS file, though this is not required.</p>
+
+<p>The following example will start the XS code and will place all functions in a package named RPC.</p>
+
+<pre><code class="plaintext">MODULE = RPC</code></pre>
+
+<h2 id="The-PACKAGE-Keyword"><a class="permalink" href="#The-PACKAGE-Keyword">#</a><a id="The4"></a>The PACKAGE Keyword</h2>
+
+<p>When functions within an XS source file must be separated into packages the PACKAGE keyword should be used. This keyword is used with the MODULE keyword and must follow immediately after it when used.</p>
+
+<pre><code class="plaintext">MODULE = RPC  PACKAGE = RPC
+
+[ XS code in package RPC ]
+
+MODULE = RPC  PACKAGE = RPCB
+
+[ XS code in package RPCB ]
+
+MODULE = RPC  PACKAGE = RPC
+
+[ XS code in package RPC ]</code></pre>
+
+<p>Although this keyword is optional and in some cases provides redundant information it should always be used. This keyword will ensure that the XSUBs appear in the desired package.</p>
+
+<h2 id="The-PREFIX-Keyword"><a class="permalink" href="#The-PREFIX-Keyword">#</a><a id="The5"></a>The PREFIX Keyword</h2>
+
+<p>The PREFIX keyword designates prefixes which should be removed from the Perl function names. If the C function is <code>rpcb_gettime()</code> and the PREFIX value is <code>rpcb_</code> then Perl will see this function as <code>gettime()</code>.</p>
+
+<p>This keyword should follow the PACKAGE keyword when used. If PACKAGE is not used then PREFIX should follow the MODULE keyword.</p>
+
+<pre><code class="plaintext">MODULE = RPC  PREFIX = rpc_
+
+MODULE = RPC  PACKAGE = RPCB  PREFIX = rpcb_</code></pre>
+
+<h2 id="The-OUTPUT:-Keyword"><a class="permalink" href="#The-OUTPUT:-Keyword">#</a><a id="The6"></a>The OUTPUT: Keyword</h2>
+
+<p>The OUTPUT: keyword indicates that certain function parameters should be updated (new values made visible to Perl) when the XSUB terminates or that certain values should be returned to the calling Perl function. For simple functions, such as the sin() function above, the RETVAL variable is automatically designated as an output value. In more complex functions the <b>xsubpp</b> compiler will need help to determine which variables are output variables.</p>
+
+<p>This keyword will normally be used to complement the CODE: keyword. The RETVAL variable is not recognized as an output variable when the CODE: keyword is present. The OUTPUT: keyword is used in this situation to tell the compiler that RETVAL really is an output variable.</p>
+
+<p>The OUTPUT: keyword can also be used to indicate that function parameters are output variables. This may be necessary when a parameter has been modified within the function and the programmer would like the update to be seen by Perl.</p>
+
+<pre><code class="plaintext">bool_t
+rpcb_gettime(host,timep)
+     char *host
+     time_t &amp;timep
+     OUTPUT:
+     timep</code></pre>
+
+<p>The OUTPUT: keyword will also allow an output parameter to be mapped to a matching piece of code rather than to a typemap.</p>
+
+<pre><code>bool_t
+rpcb_gettime(host,timep)
+     char *host
+     time_t &amp;timep
+     OUTPUT:
+     timep sv_setnv(ST(1), (double)timep);</code></pre>
+
+<p><b>xsubpp</b> emits an automatic <code>SvSETMAGIC()</code> for all parameters in the OUTPUT section of the XSUB, except RETVAL. This is the usually desired behavior, as it takes care of properly invoking &#39;set&#39; magic on output parameters (needed for hash or array element parameters that must be created if they didn&#39;t exist). If for some reason, this behavior is not desired, the OUTPUT section may contain a <code>SETMAGIC: DISABLE</code> line to disable it for the remainder of the parameters in the OUTPUT section. Likewise, <code>SETMAGIC: ENABLE</code> can be used to reenable it for the remainder of the OUTPUT section. See <a href="perlguts.html">perlguts</a> for more details about &#39;set&#39; magic.</p>
+
+<h2 id="The-CODE:-Keyword"><a class="permalink" href="#The-CODE:-Keyword">#</a><a id="The7"></a>The CODE: Keyword</h2>
+
+<p>This keyword is used in more complicated XSUBs which require special handling for the C function. The RETVAL variable is available but will not be returned unless it is specified under the OUTPUT: keyword.</p>
+
+<p>The following XSUB is for a C function which requires special handling of its parameters. The Perl usage is given first.</p>
+
+<pre><code>$status = rpcb_gettime( &quot;localhost&quot;, $timep );</code></pre>
+
+<p>The XSUB follows.</p>
+
+<pre><code>bool_t
+rpcb_gettime(host,timep)
+     char *host
+     time_t timep
+     CODE:
+          RETVAL = rpcb_gettime( host, &amp;timep );
+     OUTPUT:
+     timep
+     RETVAL</code></pre>
+
+<h2 id="The-INIT:-Keyword"><a class="permalink" href="#The-INIT:-Keyword">#</a><a id="The8"></a>The INIT: Keyword</h2>
+
+<p>The INIT: keyword allows initialization to be inserted into the XSUB before the compiler generates the call to the C function. Unlike the CODE: keyword above, this keyword does not affect the way the compiler handles RETVAL.</p>
+
+<pre><code>    bool_t
+    rpcb_gettime(host,timep)
+          char *host
+          time_t &amp;timep
+	  INIT:
+	  printf(&quot;# Host is %s\n&quot;, host );
+          OUTPUT:
+          timep</code></pre>
+
+<h2 id="The-NO_INIT-Keyword"><a class="permalink" href="#The-NO_INIT-Keyword">#</a><a id="The9"></a>The NO_INIT Keyword</h2>
+
+<p>The NO_INIT keyword is used to indicate that a function parameter is being used only as an output value. The <b>xsubpp</b> compiler will normally generate code to read the values of all function parameters from the argument stack and assign them to C variables upon entry to the function. NO_INIT will tell the compiler that some parameters will be used for output rather than for input and that they will be handled before the function terminates.</p>
+
+<p>The following example shows a variation of the rpcb_gettime() function. This function uses the timep variable only as an output variable and does not care about its initial contents.</p>
+
+<pre><code class="plaintext">bool_t
+rpcb_gettime(host,timep)
+     char *host
+     time_t &amp;timep = NO_INIT
+     OUTPUT:
+     timep</code></pre>
+
+<h2 id="Initializing-Function-Parameters"><a class="permalink" href="#Initializing-Function-Parameters">#</a><a id="Initializing"></a>Initializing Function Parameters</h2>
+
+<p>Function parameters are normally initialized with their values from the argument stack. The typemaps contain the code segments which are used to transfer the Perl values to the C parameters. The programmer, however, is allowed to override the typemaps and supply alternate (or additional) initialization code.</p>
+
+<p>The following code demonstrates how to supply initialization code for function parameters. The initialization code is eval&#39;d within double quotes by the compiler before it is added to the output so anything which should be interpreted literally [mainly <code>$</code>, <code>@</code>, or <code>\\</code>] must be protected with backslashes. The variables <code>$var</code>, <code>$arg</code>, and <code>$type</code> can be used as in typemaps.</p>
+
+<pre><code>bool_t
+rpcb_gettime(host,timep)
+     char *host = (char *)SvPV($arg,PL_na);
+     time_t &amp;timep = 0;
+     OUTPUT:
+     timep</code></pre>
+
+<p>This should not be used to supply default values for parameters. One would normally use this when a function parameter must be processed by another library function before it can be used. Default parameters are covered in the next section.</p>
+
+<p>If the initialization begins with <code>=</code>, then it is output on the same line where the input variable is declared. If the initialization begins with <code>;</code> or <code>+</code>, then it is output after all of the input variables have been declared. The <code>=</code> and <code>;</code> cases replace the initialization normally supplied from the typemap. For the <code>+</code> case, the initialization from the typemap will preceed the initialization code included after the <code>+</code>. A global variable, <code>%v</code>, is available for the truely rare case where information from one initialization is needed in another initialization.</p>
+
+<pre><code>bool_t
+rpcb_gettime(host,timep)
+     time_t &amp;timep ; /*\$v{time}=@{[$v{time}=$arg]}*/
+     char *host + SvOK($v{time}) ? SvPV($arg,PL_na) : NULL;
+     OUTPUT:
+     timep</code></pre>
+
+<h2 id="Default-Parameter-Values"><a class="permalink" href="#Default-Parameter-Values">#</a><a id="Default"></a>Default Parameter Values</h2>
+
+<p>Default values can be specified for function parameters by placing an assignment statement in the parameter list. The default value may be a number or a string. Defaults should always be used on the right-most parameters only.</p>
+
+<p>To allow the XSUB for rpcb_gettime() to have a default host value the parameters to the XSUB could be rearranged. The XSUB will then call the real rpcb_gettime() function with the parameters in the correct order. Perl will call this XSUB with either of the following statements.</p>
+
+<pre><code>$status = rpcb_gettime( $timep, $host );
+
+$status = rpcb_gettime( $timep );</code></pre>
+
+<p>The XSUB will look like the code which follows. A CODE: block is used to call the real rpcb_gettime() function with the parameters in the correct order for that function.</p>
+
+<pre><code>bool_t
+rpcb_gettime(timep,host=&quot;localhost&quot;)
+     char *host
+     time_t timep = NO_INIT
+     CODE:
+          RETVAL = rpcb_gettime( host, &amp;timep );
+     OUTPUT:
+     timep
+     RETVAL</code></pre>
+
+<h2 id="The-PREINIT:-Keyword"><a class="permalink" href="#The-PREINIT:-Keyword">#</a><a id="The10"></a>The PREINIT: Keyword</h2>
+
+<p>The PREINIT: keyword allows extra variables to be declared before the typemaps are expanded. If a variable is declared in a CODE: block then that variable will follow any typemap code. This may result in a C syntax error. To force the variable to be declared before the typemap code, place it into a PREINIT: block. The PREINIT: keyword may be used one or more times within an XSUB.</p>
+
+<p>The following examples are equivalent, but if the code is using complex typemaps then the first example is safer.</p>
+
+<pre><code>     bool_t
+     rpcb_gettime(timep)
+          time_t timep = NO_INIT
+	  PREINIT:
+          char *host = &quot;localhost&quot;;
+          CODE:
+	  RETVAL = rpcb_gettime( host, &amp;timep );
+          OUTPUT:
+          timep
+          RETVAL</code></pre>
+
+<p>A correct, but error-prone example.</p>
+
+<pre><code>     bool_t
+     rpcb_gettime(timep)
+          time_t timep = NO_INIT
+	  CODE:
+          char *host = &quot;localhost&quot;;
+	  RETVAL = rpcb_gettime( host, &amp;timep );
+          OUTPUT:
+          timep
+          RETVAL</code></pre>
+
+<h2 id="The-SCOPE:-Keyword"><a class="permalink" href="#The-SCOPE:-Keyword">#</a><a id="The11"></a>The SCOPE: Keyword</h2>
+
+<p>The SCOPE: keyword allows scoping to be enabled for a particular XSUB. If enabled, the XSUB will invoke ENTER and LEAVE automatically.</p>
+
+<p>To support potentially complex type mappings, if a typemap entry used by this XSUB contains a comment like <code>/*scope*/</code> then scoping will automatically be enabled for that XSUB.</p>
+
+<p>To enable scoping:</p>
+
+<pre><code class="plaintext">SCOPE: ENABLE</code></pre>
+
+<p>To disable scoping:</p>
+
+<pre><code class="plaintext">SCOPE: DISABLE</code></pre>
+
+<h2 id="The-INPUT:-Keyword"><a class="permalink" href="#The-INPUT:-Keyword">#</a><a id="The12"></a>The INPUT: Keyword</h2>
+
+<p>The XSUB&#39;s parameters are usually evaluated immediately after entering the XSUB. The INPUT: keyword can be used to force those parameters to be evaluated a little later. The INPUT: keyword can be used multiple times within an XSUB and can be used to list one or more input variables. This keyword is used with the PREINIT: keyword.</p>
+
+<p>The following example shows how the input parameter <code>timep</code> can be evaluated late, after a PREINIT.</p>
+
+<pre><code>    bool_t
+    rpcb_gettime(host,timep)
+          char *host
+	  PREINIT:
+	  time_t tt;
+	  INPUT:
+          time_t timep
+          CODE:
+               RETVAL = rpcb_gettime( host, &amp;tt );
+	       timep = tt;
+          OUTPUT:
+          timep
+          RETVAL</code></pre>
+
+<p>The next example shows each input parameter evaluated late.</p>
+
+<pre><code>    bool_t
+    rpcb_gettime(host,timep)
+	  PREINIT:
+	  time_t tt;
+	  INPUT:
+          char *host
+	  PREINIT:
+	  char *h;
+	  INPUT:
+          time_t timep
+          CODE:
+	       h = host;
+	       RETVAL = rpcb_gettime( h, &amp;tt );
+	       timep = tt;
+          OUTPUT:
+          timep
+          RETVAL</code></pre>
+
+<h2 id="Variable-length-Parameter-Lists"><a class="permalink" href="#Variable-length-Parameter-Lists">#</a><a id="Variable"></a>Variable-length Parameter Lists</h2>
+
+<p>XSUBs can have variable-length parameter lists by specifying an ellipsis <code>(...)</code> in the parameter list. This use of the ellipsis is similar to that found in ANSI C. The programmer is able to determine the number of arguments passed to the XSUB by examining the <code>items</code> variable which the <b>xsubpp</b> compiler supplies for all XSUBs. By using this mechanism one can create an XSUB which accepts a list of parameters of unknown length.</p>
+
+<p>The <i>host</i> parameter for the rpcb_gettime() XSUB can be optional so the ellipsis can be used to indicate that the XSUB will take a variable number of parameters. Perl should be able to call this XSUB with either of the following statements.</p>
+
+<pre><code>$status = rpcb_gettime( $timep, $host );
+
+$status = rpcb_gettime( $timep );</code></pre>
+
+<p>The XS code, with ellipsis, follows.</p>
+
+<pre><code>     bool_t
+     rpcb_gettime(timep, ...)
+          time_t timep = NO_INIT
+	  PREINIT:
+          char *host = &quot;localhost&quot;;
+          CODE:
+		  if( items &gt; 1 )
+		       host = (char *)SvPV(ST(1), PL_na);
+		  RETVAL = rpcb_gettime( host, &amp;timep );
+          OUTPUT:
+          timep
+          RETVAL</code></pre>
+
+<h2 id="The-C_ARGS:-Keyword"><a class="permalink" href="#The-C_ARGS:-Keyword">#</a><a id="The13"></a>The C_ARGS: Keyword</h2>
+
+<p>The C_ARGS: keyword allows creating of XSUBS which have different calling sequence from Perl than from C, without a need to write CODE: or CPPCODE: section. The contents of the C_ARGS: paragraph is put as the argument to the called C function without any change.</p>
+
+<p>For example, suppose that C function is declared as</p>
+
+<pre><code>symbolic nth_derivative(int n, symbolic function, int flags);</code></pre>
+
+<p>and that the default flags are kept in a global C variable <code>default_flags</code>. Suppose that you want to create an interface which is called as</p>
+
+<pre><code>$second_deriv = $function-&gt;nth_derivative(2);</code></pre>
+
+<p>To do this, declare the XSUB as</p>
+
+<pre><code class="plaintext">    symbolic
+    nth_derivative(function, n)
+	symbolic	function
+	int		n
+    C_ARGS:
+	n, function, default_flags</code></pre>
+
+<h2 id="The-PPCODE:-Keyword"><a class="permalink" href="#The-PPCODE:-Keyword">#</a><a id="The14"></a>The PPCODE: Keyword</h2>
+
+<p>The PPCODE: keyword is an alternate form of the CODE: keyword and is used to tell the <b>xsubpp</b> compiler that the programmer is supplying the code to control the argument stack for the XSUBs return values. Occasionally one will want an XSUB to return a list of values rather than a single value. In these cases one must use PPCODE: and then explicitly push the list of values on the stack. The PPCODE: and CODE: keywords are not used together within the same XSUB.</p>
+
+<p>The following XSUB will call the C rpcb_gettime() function and will return its two output values, timep and status, to Perl as a single list.</p>
+
+<pre><code>     void
+     rpcb_gettime(host)
+          char *host
+	  PREINIT:
+          time_t  timep;
+          bool_t  status;
+          PPCODE:
+          status = rpcb_gettime( host, &amp;timep );
+          EXTEND(SP, 2);
+          PUSHs(sv_2mortal(newSViv(status)));
+          PUSHs(sv_2mortal(newSViv(timep)));</code></pre>
+
+<p>Notice that the programmer must supply the C code necessary to have the real rpcb_gettime() function called and to have the return values properly placed on the argument stack.</p>
+
+<p>The <code>void</code> return type for this function tells the <b>xsubpp</b> compiler that the RETVAL variable is not needed or used and that it should not be created. In most scenarios the void return type should be used with the PPCODE: directive.</p>
+
+<p>The EXTEND() macro is used to make room on the argument stack for 2 return values. The PPCODE: directive causes the <b>xsubpp</b> compiler to create a stack pointer available as <code>SP</code>, and it is this pointer which is being used in the EXTEND() macro. The values are then pushed onto the stack with the PUSHs() macro.</p>
+
+<p>Now the rpcb_gettime() function can be used from Perl with the following statement.</p>
+
+<pre><code>($status, $timep) = rpcb_gettime(&quot;localhost&quot;);</code></pre>
+
+<p>When handling output parameters with a PPCODE section, be sure to handle &#39;set&#39; magic properly. See <a href="perlguts.html">perlguts</a> for details about &#39;set&#39; magic.</p>
+
+<h2 id="Returning-Undef-And-Empty-Lists"><a class="permalink" href="#Returning-Undef-And-Empty-Lists">#</a><a id="Returning"></a>Returning Undef And Empty Lists</h2>
+
+<p>Occasionally the programmer will want to return simply <code>undef</code> or an empty list if a function fails rather than a separate status value. The rpcb_gettime() function offers just this situation. If the function succeeds we would like to have it return the time and if it fails we would like to have undef returned. In the following Perl code the value of $timep will either be undef or it will be a valid time.</p>
+
+<pre><code>$timep = rpcb_gettime( &quot;localhost&quot; );</code></pre>
+
+<p>The following XSUB uses the <code>SV *</code> return type as a mnemonic only, and uses a CODE: block to indicate to the compiler that the programmer has supplied all the necessary code. The sv_newmortal() call will initialize the return value to undef, making that the default return value.</p>
+
+<pre><code>     SV *
+     rpcb_gettime(host)
+          char *  host
+	  PREINIT:
+          time_t  timep;
+          bool_t x;
+          CODE:
+          ST(0) = sv_newmortal();
+          if( rpcb_gettime( host, &amp;timep ) )
+               sv_setnv( ST(0), (double)timep);</code></pre>
+
+<p>The next example demonstrates how one would place an explicit undef in the return value, should the need arise.</p>
+
+<pre><code>     SV *
+     rpcb_gettime(host)
+          char *  host
+	  PREINIT:
+          time_t  timep;
+          bool_t x;
+          CODE:
+          ST(0) = sv_newmortal();
+          if( rpcb_gettime( host, &amp;timep ) ){
+               sv_setnv( ST(0), (double)timep);
+          }
+          else{
+               ST(0) = &amp;PL_sv_undef;
+          }</code></pre>
+
+<p>To return an empty list one must use a PPCODE: block and then not push return values on the stack.</p>
+
+<pre><code>     void
+     rpcb_gettime(host)
+          char *host
+	  PREINIT:
+          time_t  timep;
+          PPCODE:
+          if( rpcb_gettime( host, &amp;timep ) )
+               PUSHs(sv_2mortal(newSViv(timep)));
+          else{
+          /* Nothing pushed on stack, so an empty */
+          /* list is implicitly returned. */
+          }</code></pre>
+
+<p>Some people may be inclined to include an explicit <code>return</code> in the above XSUB, rather than letting control fall through to the end. In those situations <code>XSRETURN_EMPTY</code> should be used, instead. This will ensure that the XSUB stack is properly adjusted. Consult <a href="perlguts.html#API-LISTING">&quot;API LISTING&quot; in perlguts</a> for other <code>XSRETURN</code> macros.</p>
+
+<h2 id="The-REQUIRE:-Keyword"><a class="permalink" href="#The-REQUIRE:-Keyword">#</a><a id="The15"></a>The REQUIRE: Keyword</h2>
+
+<p>The REQUIRE: keyword is used to indicate the minimum version of the <b>xsubpp</b> compiler needed to compile the XS module. An XS module which contains the following statement will compile with only <b>xsubpp</b> version 1.922 or greater:</p>
+
+<pre><code class="plaintext">REQUIRE: 1.922</code></pre>
+
+<h2 id="The-CLEANUP:-Keyword"><a class="permalink" href="#The-CLEANUP:-Keyword">#</a><a id="The16"></a>The CLEANUP: Keyword</h2>
+
+<p>This keyword can be used when an XSUB requires special cleanup procedures before it terminates. When the CLEANUP: keyword is used it must follow any CODE:, PPCODE:, or OUTPUT: blocks which are present in the XSUB. The code specified for the cleanup block will be added as the last statements in the XSUB.</p>
+
+<h2 id="The-BOOT:-Keyword"><a class="permalink" href="#The-BOOT:-Keyword">#</a><a id="The17"></a>The BOOT: Keyword</h2>
+
+<p>The BOOT: keyword is used to add code to the extension&#39;s bootstrap function. The bootstrap function is generated by the <b>xsubpp</b> compiler and normally holds the statements necessary to register any XSUBs with Perl. With the BOOT: keyword the programmer can tell the compiler to add extra statements to the bootstrap function.</p>
+
+<p>This keyword may be used any time after the first MODULE keyword and should appear on a line by itself. The first blank line after the keyword will terminate the code block.</p>
+
+<pre><code>BOOT:
+# The following message will be printed when the
+# bootstrap function executes.
+printf(&quot;Hello from the bootstrap!\n&quot;);</code></pre>
+
+<h2 id="The-VERSIONCHECK:-Keyword"><a class="permalink" href="#The-VERSIONCHECK:-Keyword">#</a><a id="The18"></a>The VERSIONCHECK: Keyword</h2>
+
+<p>The VERSIONCHECK: keyword corresponds to <b>xsubpp</b>&#39;s <code>-versioncheck</code> and <code>-noversioncheck</code> options. This keyword overrides the command line options. Version checking is enabled by default. When version checking is enabled the XS module will attempt to verify that its version matches the version of the PM module.</p>
+
+<p>To enable version checking:</p>
+
+<pre><code class="plaintext">VERSIONCHECK: ENABLE</code></pre>
+
+<p>To disable version checking:</p>
+
+<pre><code class="plaintext">VERSIONCHECK: DISABLE</code></pre>
+
+<h2 id="The-PROTOTYPES:-Keyword"><a class="permalink" href="#The-PROTOTYPES:-Keyword">#</a><a id="The19"></a>The PROTOTYPES: Keyword</h2>
+
+<p>The PROTOTYPES: keyword corresponds to <b>xsubpp</b>&#39;s <code>-prototypes</code> and <code>-noprototypes</code> options. This keyword overrides the command line options. Prototypes are enabled by default. When prototypes are enabled XSUBs will be given Perl prototypes. This keyword may be used multiple times in an XS module to enable and disable prototypes for different parts of the module.</p>
+
+<p>To enable prototypes:</p>
+
+<pre><code class="plaintext">PROTOTYPES: ENABLE</code></pre>
+
+<p>To disable prototypes:</p>
+
+<pre><code class="plaintext">PROTOTYPES: DISABLE</code></pre>
+
+<h2 id="The-PROTOTYPE:-Keyword"><a class="permalink" href="#The-PROTOTYPE:-Keyword">#</a><a id="The20"></a>The PROTOTYPE: Keyword</h2>
+
+<p>This keyword is similar to the PROTOTYPES: keyword above but can be used to force <b>xsubpp</b> to use a specific prototype for the XSUB. This keyword overrides all other prototype options and keywords but affects only the current XSUB. Consult <a href="perlsub.html#Prototypes">&quot;Prototypes&quot; in perlsub</a> for information about Perl prototypes.</p>
+
+<pre><code>    bool_t
+    rpcb_gettime(timep, ...)
+          time_t timep = NO_INIT
+	  PROTOTYPE: $;$
+	  PREINIT:
+          char *host = &quot;localhost&quot;;
+          CODE:
+		  if( items &gt; 1 )
+		       host = (char *)SvPV(ST(1), PL_na);
+		  RETVAL = rpcb_gettime( host, &amp;timep );
+          OUTPUT:
+          timep
+          RETVAL</code></pre>
+
+<h2 id="The-ALIAS:-Keyword"><a class="permalink" href="#The-ALIAS:-Keyword">#</a><a id="The21"></a>The ALIAS: Keyword</h2>
+
+<p>The ALIAS: keyword allows an XSUB to have two or more unique Perl names and to know which of those names was used when it was invoked. The Perl names may be fully-qualified with package names. Each alias is given an index. The compiler will setup a variable called <code>ix</code> which contain the index of the alias which was used. When the XSUB is called with its declared name <code>ix</code> will be 0.</p>
+
+<p>The following example will create aliases <code>FOO::gettime()</code> and <code>BAR::getit()</code> for this function.</p>
+
+<pre><code>    bool_t
+    rpcb_gettime(host,timep)
+          char *host
+          time_t &amp;timep
+	  ALIAS:
+	    FOO::gettime = 1
+	    BAR::getit = 2
+	  INIT:
+	  printf(&quot;# ix = %d\n&quot;, ix );
+          OUTPUT:
+          timep</code></pre>
+
+<h2 id="The-INTERFACE:-Keyword"><a class="permalink" href="#The-INTERFACE:-Keyword">#</a><a id="The22"></a>The INTERFACE: Keyword</h2>
+
+<p>This keyword declares the current XSUB as a keeper of the given calling signature. If some text follows this keyword, it is considered as a list of functions which have this signature, and should be attached to XSUBs.</p>
+
+<p>Say, if you have 4 functions multiply(), divide(), add(), subtract() all having the signature</p>
+
+<pre><code>symbolic f(symbolic, symbolic);</code></pre>
+
+<p>you code them all by using XSUB</p>
+
+<pre><code class="plaintext">    symbolic
+    interface_s_ss(arg1, arg2)  
+	symbolic	arg1
+	symbolic	arg2
+    INTERFACE:
+	multiply divide 
+	add subtract</code></pre>
+
+<p>The advantage of this approach comparing to ALIAS: keyword is that one can attach an extra function remainder() at runtime by using</p>
+
+<pre><code>    CV *mycv = newXSproto(&quot;Symbolic::remainder&quot;, 
+			  XS_Symbolic_interface_s_ss, __FILE__, &quot;$$&quot;);
+    XSINTERFACE_FUNC_SET(mycv, remainder);</code></pre>
+
+<p>(This example supposes that there was no INTERFACE_MACRO: section, otherwise one needs to use something else instead of <code>XSINTERFACE_FUNC_SET</code>.)</p>
+
+<h2 id="The-INTERFACE_MACRO:-Keyword"><a class="permalink" href="#The-INTERFACE_MACRO:-Keyword">#</a><a id="The23"></a>The INTERFACE_MACRO: Keyword</h2>
+
+<p>This keyword allows one to define an INTERFACE using a different way to extract a function pointer from an XSUB. The text which follows this keyword should give the name of macros which would extract/set a function pointer. The extractor macro is given return type, <code>CV*</code>, and <code>XSANY.any_dptr</code> for this <code>CV*</code>. The setter macro is given cv, and the function pointer.</p>
+
+<p>The default value is <code>XSINTERFACE_FUNC</code> and <code>XSINTERFACE_FUNC_SET</code>. An INTERFACE keyword with an empty list of functions can be omitted if INTERFACE_MACRO keyword is used.</p>
+
+<p>Suppose that in the previous example functions pointers for multiply(), divide(), add(), subtract() are kept in a global C array <code>fp[]</code> with offsets being <code>multiply_off</code>, <code>divide_off</code>, <code>add_off</code>, <code>subtract_off</code>. Then one can use</p>
+
+<pre><code class="plaintext">    #define XSINTERFACE_FUNC_BYOFFSET(ret,cv,f) \
+	((XSINTERFACE_CVT(ret,))fp[CvXSUBANY(cv).any_i32])
+    #define XSINTERFACE_FUNC_BYOFFSET_set(cv,f) \
+	CvXSUBANY(cv).any_i32 = CAT2( f, _off )</code></pre>
+
+<p>in C section,</p>
+
+<pre><code class="plaintext">    symbolic
+    interface_s_ss(arg1, arg2)  
+	symbolic	arg1
+	symbolic	arg2
+    INTERFACE_MACRO: 
+	XSINTERFACE_FUNC_BYOFFSET
+	XSINTERFACE_FUNC_BYOFFSET_set
+    INTERFACE:
+	multiply divide 
+	add subtract</code></pre>
+
+<p>in XSUB section.</p>
+
+<h2 id="The-INCLUDE:-Keyword"><a class="permalink" href="#The-INCLUDE:-Keyword">#</a><a id="The24"></a>The INCLUDE: Keyword</h2>
+
+<p>This keyword can be used to pull other files into the XS module. The other files may have XS code. INCLUDE: can also be used to run a command to generate the XS code to be pulled into the module.</p>
+
+<p>The file <i>Rpcb1.xsh</i> contains our <code>rpcb_gettime()</code> function:</p>
+
+<pre><code class="plaintext">bool_t
+rpcb_gettime(host,timep)
+      char *host
+      time_t &amp;timep
+      OUTPUT:
+      timep</code></pre>
+
+<p>The XS module can use INCLUDE: to pull that file into it.</p>
+
+<pre><code class="plaintext">INCLUDE: Rpcb1.xsh</code></pre>
+
+<p>If the parameters to the INCLUDE: keyword are followed by a pipe (<code>|</code>) then the compiler will interpret the parameters as a command.</p>
+
+<pre><code class="plaintext">INCLUDE: cat Rpcb1.xsh |</code></pre>
+
+<h2 id="The-CASE:-Keyword"><a class="permalink" href="#The-CASE:-Keyword">#</a><a id="The25"></a>The CASE: Keyword</h2>
+
+<p>The CASE: keyword allows an XSUB to have multiple distinct parts with each part acting as a virtual XSUB. CASE: is greedy and if it is used then all other XS keywords must be contained within a CASE:. This means nothing may precede the first CASE: in the XSUB and anything following the last CASE: is included in that case.</p>
+
+<p>A CASE: might switch via a parameter of the XSUB, via the <code>ix</code> ALIAS: variable (see <a href="#The-ALIAS%3A-Keyword">&quot;The ALIAS: Keyword&quot;</a>), or maybe via the <code>items</code> variable (see <a href="#Variable-length-Parameter-Lists">&quot;Variable-length Parameter Lists&quot;</a>). The last CASE: becomes the <b>default</b> case if it is not associated with a conditional. The following example shows CASE switched via <code>ix</code> with a function <code>rpcb_gettime()</code> having an alias <code>x_gettime()</code>. When the function is called as <code>rpcb_gettime()</code> its parameters are the usual <code>(char *host, time_t *timep)</code>, but when the function is called as <code>x_gettime()</code> its parameters are reversed, <code>(time_t *timep, char *host)</code>.</p>
+
+<pre><code>    long
+    rpcb_gettime(a,b)
+      CASE: ix == 1
+	  ALIAS:
+	  x_gettime = 1
+	  INPUT:
+	  # &#39;a&#39; is timep, &#39;b&#39; is host
+          char *b
+          time_t a = NO_INIT
+          CODE:
+               RETVAL = rpcb_gettime( b, &amp;a );
+          OUTPUT:
+          a
+          RETVAL
+      CASE:
+	  # &#39;a&#39; is host, &#39;b&#39; is timep
+          char *a
+          time_t &amp;b = NO_INIT
+          OUTPUT:
+          b
+          RETVAL</code></pre>
+
+<p>That function can be called with either of the following statements. Note the different argument lists.</p>
+
+<pre><code>$status = rpcb_gettime( $host, $timep );
+
+$status = x_gettime( $timep, $host );</code></pre>
+
+<h2 id="The-&amp;-Unary-Operator"><a class="permalink" href="#The-&amp;-Unary-Operator">#</a><a id="The26"></a><a id="The-Unary-Operator"></a>The &amp; Unary Operator</h2>
+
+<p>The &amp; unary operator is used to tell the compiler that it should dereference the object when it calls the C function. This is used when a CODE: block is not used and the object is a not a pointer type (the object is an <code>int</code> or <code>long</code> but not a <code>int*</code> or <code>long*</code>).</p>
+
+<p>The following XSUB will generate incorrect C code. The xsubpp compiler will turn this into code which calls <code>rpcb_gettime()</code> with parameters <code>(char *host, time_t timep)</code>, but the real <code>rpcb_gettime()</code> wants the <code>timep</code> parameter to be of type <code>time_t*</code> rather than <code>time_t</code>.</p>
+
+<pre><code class="plaintext">bool_t
+rpcb_gettime(host,timep)
+      char *host
+      time_t timep
+      OUTPUT:
+      timep</code></pre>
+
+<p>That problem is corrected by using the <code>&amp;</code> operator. The xsubpp compiler will now turn this into code which calls <code>rpcb_gettime()</code> correctly with parameters <code>(char *host, time_t *timep)</code>. It does this by carrying the <code>&amp;</code> through, so the function call looks like <code>rpcb_gettime(host, &amp;timep)</code>.</p>
+
+<pre><code class="plaintext">bool_t
+rpcb_gettime(host,timep)
+      char *host
+      time_t &amp;timep
+      OUTPUT:
+      timep</code></pre>
+
+<h2 id="Inserting-Comments-and-C-Preprocessor-Directives"><a class="permalink" href="#Inserting-Comments-and-C-Preprocessor-Directives">#</a><a id="Inserting"></a>Inserting Comments and C Preprocessor Directives</h2>
+
+<p>C preprocessor directives are allowed within BOOT:, PREINIT: INIT:, CODE:, PPCODE:, and CLEANUP: blocks, as well as outside the functions. Comments are allowed anywhere after the MODULE keyword. The compiler will pass the preprocessor directives through untouched and will remove the commented lines.</p>
+
+<p>Comments can be added to XSUBs by placing a <code>#</code> as the first non-whitespace of a line. Care should be taken to avoid making the comment look like a C preprocessor directive, lest it be interpreted as such. The simplest way to prevent this is to put whitespace in front of the <code>#</code>.</p>
+
+<p>If you use preprocessor directives to choose one of two versions of a function, use</p>
+
+<pre><code class="plaintext">#if ... version1
+#else /* ... version2  */
+#endif</code></pre>
+
+<p>and not</p>
+
+<pre><code class="plaintext">#if ... version1
+#endif
+#if ... version2
+#endif</code></pre>
+
+<p>because otherwise xsubpp will believe that you made a duplicate definition of the function. Also, put a blank line before the #else/#endif so it will not be seen as part of the function body.</p>
+
+<h2 id="Using-XS-With-C++"><a class="permalink" href="#Using-XS-With-C++">#</a><a id="Using"></a><a id="Using-XS-With-C"></a>Using XS With C++</h2>
+
+<p>If a function is defined as a C++ method then it will assume its first argument is an object pointer. The object pointer will be stored in a variable called THIS. The object should have been created by C++ with the new() function and should be blessed by Perl with the sv_setref_pv() macro. The blessing of the object by Perl can be handled by a typemap. An example typemap is shown at the end of this section.</p>
+
+<p>If the method is defined as static it will call the C++ function using the class::method() syntax. If the method is not static the function will be called using the THIS-&gt;method() syntax.</p>
+
+<p>The next examples will use the following C++ class.</p>
+
+<pre><code>class color {
+     public:
+     color();
+     ~color();
+     int blue();
+     void set_blue( int );
+
+     private:
+     int c_blue;
+};</code></pre>
+
+<p>The XSUBs for the blue() and set_blue() methods are defined with the class name but the parameter for the object (THIS, or &quot;self&quot;) is implicit and is not listed.</p>
+
+<pre><code class="plaintext">int
+color::blue()
+
+void
+color::set_blue( val )
+     int val</code></pre>
+
+<p>Both functions will expect an object as the first parameter. The xsubpp compiler will call that object <code>THIS</code> and will use it to call the specified method. So in the C++ code the blue() and set_blue() methods will be called in the following manner.</p>
+
+<pre><code>RETVAL = THIS-&gt;blue();
+
+THIS-&gt;set_blue( val );</code></pre>
+
+<p>If the function&#39;s name is <b>DESTROY</b> then the C++ <code>delete</code> function will be called and <code>THIS</code> will be given as its parameter.</p>
+
+<pre><code class="plaintext">void
+color::DESTROY()</code></pre>
+
+<p>The C++ code will call <code>delete</code>.</p>
+
+<pre><code>delete THIS;</code></pre>
+
+<p>If the function&#39;s name is <b>new</b> then the C++ <code>new</code> function will be called to create a dynamic C++ object. The XSUB will expect the class name, which will be kept in a variable called <code>CLASS</code>, to be given as the first argument.</p>
+
+<pre><code class="plaintext">color *
+color::new()</code></pre>
+
+<p>The C++ code will call <code>new</code>.</p>
+
+<pre><code>RETVAL = new color();</code></pre>
+
+<p>The following is an example of a typemap that could be used for this C++ example.</p>
+
+<pre><code>TYPEMAP
+color *		O_OBJECT
+
+OUTPUT
+# The Perl object is blessed into &#39;CLASS&#39;, which should be a
+# char* having the name of the package for the blessing.
+O_OBJECT
+	sv_setref_pv( $arg, CLASS, (void*)$var );
+
+INPUT
+O_OBJECT
+	if( sv_isobject($arg) &amp;&amp; (SvTYPE(SvRV($arg)) == SVt_PVMG) )
+		$var = ($type)SvIV((SV*)SvRV( $arg ));
+	else{
+		warn( \&quot;${Package}::$func_name() -- $var is not a blessed SV reference\&quot; );
+		XSRETURN_UNDEF;
+	}</code></pre>
+
+<h2 id="Interface-Strategy"><a class="permalink" href="#Interface-Strategy">#</a><a id="Interface"></a>Interface Strategy</h2>
+
+<p>When designing an interface between Perl and a C library a straight translation from C to XS is often sufficient. The interface will often be very C-like and occasionally nonintuitive, especially when the C function modifies one of its parameters. In cases where the programmer wishes to create a more Perl-like interface the following strategy may help to identify the more critical parts of the interface.</p>
+
+<p>Identify the C functions which modify their parameters. The XSUBs for these functions may be able to return lists to Perl, or may be candidates to return undef or an empty list in case of failure.</p>
+
+<p>Identify which values are used by only the C and XSUB functions themselves. If Perl does not need to access the contents of the value then it may not be necessary to provide a translation for that value from C to Perl.</p>
+
+<p>Identify the pointers in the C function parameter lists and return values. Some pointers can be handled in XS with the &amp; unary operator on the variable name while others will require the use of the * operator on the type name. In general it is easier to work with the &amp; operator.</p>
+
+<p>Identify the structures used by the C functions. In many cases it may be helpful to use the T_PTROBJ typemap for these structures so they can be manipulated by Perl as blessed objects.</p>
+
+<h2 id="Perl-Objects-And-C-Structures"><a class="permalink" href="#Perl-Objects-And-C-Structures">#</a><a id="Perl"></a>Perl Objects And C Structures</h2>
+
+<p>When dealing with C structures one should select either <b>T_PTROBJ</b> or <b>T_PTRREF</b> for the XS type. Both types are designed to handle pointers to complex objects. The T_PTRREF type will allow the Perl object to be unblessed while the T_PTROBJ type requires that the object be blessed. By using T_PTROBJ one can achieve a form of type-checking because the XSUB will attempt to verify that the Perl object is of the expected type.</p>
+
+<p>The following XS code shows the getnetconfigent() function which is used with ONC+ TIRPC. The getnetconfigent() function will return a pointer to a C structure and has the C prototype shown below. The example will demonstrate how the C pointer will become a Perl reference. Perl will consider this reference to be a pointer to a blessed object and will attempt to call a destructor for the object. A destructor will be provided in the XS source to free the memory used by getnetconfigent(). Destructors in XS can be created by specifying an XSUB function whose name ends with the word <b>DESTROY</b>. XS destructors can be used to free memory which may have been malloc&#39;d by another XSUB.</p>
+
+<pre><code>struct netconfig *getnetconfigent(const char *netid);</code></pre>
+
+<p>A <code>typedef</code> will be created for <code>struct netconfig</code>. The Perl object will be blessed in a class matching the name of the C type, with the tag <code>Ptr</code> appended, and the name should not have embedded spaces if it will be a Perl package name. The destructor will be placed in a class corresponding to the class of the object and the PREFIX keyword will be used to trim the name to the word DESTROY as Perl will expect.</p>
+
+<pre><code>typedef struct netconfig Netconfig;
+
+MODULE = RPC  PACKAGE = RPC
+
+Netconfig *
+getnetconfigent(netid)
+     char *netid
+
+MODULE = RPC  PACKAGE = NetconfigPtr  PREFIX = rpcb_
+
+void
+rpcb_DESTROY(netconf)
+     Netconfig *netconf
+     CODE:
+     printf(&quot;Now in NetconfigPtr::DESTROY\n&quot;);
+     free( netconf );</code></pre>
+
+<p>This example requires the following typemap entry. Consult the typemap section for more information about adding new typemaps for an extension.</p>
+
+<pre><code class="plaintext">TYPEMAP
+Netconfig *  T_PTROBJ</code></pre>
+
+<p>This example will be used with the following Perl statements.</p>
+
+<pre><code>use RPC;
+$netconf = getnetconfigent(&quot;udp&quot;);</code></pre>
+
+<p>When Perl destroys the object referenced by $netconf it will send the object to the supplied XSUB DESTROY function. Perl cannot determine, and does not care, that this object is a C struct and not a Perl object. In this sense, there is no difference between the object created by the getnetconfigent() XSUB and an object created by a normal Perl subroutine.</p>
+
+<h2 id="The-Typemap"><a class="permalink" href="#The-Typemap">#</a><a id="The27"></a>The Typemap</h2>
+
+<p>The typemap is a collection of code fragments which are used by the <b>xsubpp</b> compiler to map C function parameters and values to Perl values. The typemap file may consist of three sections labeled <code>TYPEMAP</code>, <code>INPUT</code>, and <code>OUTPUT</code>. The INPUT section tells the compiler how to translate Perl values into variables of certain C types. The OUTPUT section tells the compiler how to translate the values from certain C types into values Perl can understand. The TYPEMAP section tells the compiler which of the INPUT and OUTPUT code fragments should be used to map a given C type to a Perl value. Each of the sections of the typemap must be preceded by one of the TYPEMAP, INPUT, or OUTPUT keywords.</p>
+
+<p>The default typemap in the <code>ext</code> directory of the Perl source contains many useful types which can be used by Perl extensions. Some extensions define additional typemaps which they keep in their own directory. These additional typemaps may reference INPUT and OUTPUT maps in the main typemap. The <b>xsubpp</b> compiler will allow the extension&#39;s own typemap to override any mappings which are in the default typemap.</p>
+
+<p>Most extensions which require a custom typemap will need only the TYPEMAP section of the typemap file. The custom typemap used in the getnetconfigent() example shown earlier demonstrates what may be the typical use of extension typemaps. That typemap is used to equate a C structure with the T_PTROBJ typemap. The typemap used by getnetconfigent() is shown here. Note that the C type is separated from the XS type with a tab and that the C unary operator <code>*</code> is considered to be a part of the C type name.</p>
+
+<pre><code class="plaintext">TYPEMAP
+Netconfig *&lt;tab&gt;T_PTROBJ</code></pre>
+
+<p>Here&#39;s a more complicated example: suppose that you wanted <code>struct netconfig</code> to be blessed into the class <code>Net::Config</code>. One way to do this is to use underscores (_) to separate package names, as follows:</p>
+
+<pre><code>typedef struct netconfig * Net_Config;</code></pre>
+
+<p>And then provide a typemap entry <code>T_PTROBJ_SPECIAL</code> that maps underscores to double-colons (::), and declare <code>Net_Config</code> to be of that type:</p>
+
+<pre><code>TYPEMAP
+Net_Config      T_PTROBJ_SPECIAL
+
+INPUT
+T_PTROBJ_SPECIAL
+        if (sv_derived_from($arg, \&quot;${(my $ntt=$ntype)=~s/_/::/g;\$ntt}\&quot;)) {
+                IV tmp = SvIV((SV*)SvRV($arg));
+        $var = ($type) tmp;
+        }
+        else
+                croak(\&quot;$var is not of type ${(my $ntt=$ntype)=~s/_/::/g;\$ntt}\&quot;)
+
+OUTPUT
+T_PTROBJ_SPECIAL
+        sv_setref_pv($arg, \&quot;${(my $ntt=$ntype)=~s/_/::/g;\$ntt}\&quot;,
+        (void*)$var);</code></pre>
+
+<p>The INPUT and OUTPUT sections substitute underscores for double-colons on the fly, giving the desired effect. This example demonstrates some of the power and versatility of the typemap facility.</p>
+
+<h1 id="EXAMPLES"><a class="permalink" href="#EXAMPLES">#</a>EXAMPLES</h1>
+
+<p>File <code>RPC.xs</code>: Interface to some ONC+ RPC bind library functions.</p>
+
+<pre><code>     #include &quot;EXTERN.h&quot;
+     #include &quot;perl.h&quot;
+     #include &quot;XSUB.h&quot;
+
+     #include &lt;rpc/rpc.h&gt;
+
+     typedef struct netconfig Netconfig;
+
+     MODULE = RPC  PACKAGE = RPC
+
+     SV *
+     rpcb_gettime(host=&quot;localhost&quot;)
+          char *host
+	  PREINIT:
+          time_t  timep;
+          CODE:
+          ST(0) = sv_newmortal();
+          if( rpcb_gettime( host, &amp;timep ) )
+               sv_setnv( ST(0), (double)timep );
+
+     Netconfig *
+     getnetconfigent(netid=&quot;udp&quot;)
+          char *netid
+
+     MODULE = RPC  PACKAGE = NetconfigPtr  PREFIX = rpcb_
+
+     void
+     rpcb_DESTROY(netconf)
+          Netconfig *netconf
+          CODE:
+          printf(&quot;NetconfigPtr::DESTROY\n&quot;);
+          free( netconf );</code></pre>
+
+<p>File <code>typemap</code>: Custom typemap for RPC.xs.</p>
+
+<pre><code class="plaintext">TYPEMAP
+Netconfig *  T_PTROBJ</code></pre>
+
+<p>File <code>RPC.pm</code>: Perl module for the RPC extension.</p>
+
+<pre><code>package RPC;
+
+require Exporter;
+require DynaLoader;
+@ISA = qw(Exporter DynaLoader);
+@EXPORT = qw(rpcb_gettime getnetconfigent);
+
+bootstrap RPC;
+1;</code></pre>
+
+<p>File <code>rpctest.pl</code>: Perl test program for the RPC extension.</p>
+
+<pre><code>use RPC;
+
+$netconf = getnetconfigent();
+$a = rpcb_gettime();
+print &quot;time = $a\n&quot;;
+print &quot;netconf = $netconf\n&quot;;
+
+$netconf = getnetconfigent(&quot;tcp&quot;);
+$a = rpcb_gettime(&quot;poplar&quot;);
+print &quot;time = $a\n&quot;;
+print &quot;netconf = $netconf\n&quot;;</code></pre>
+
+<h1 id="XS-VERSION"><a class="permalink" href="#XS-VERSION">#</a><a id="XS"></a>XS VERSION</h1>
+
+<p>This document covers features supported by <code>xsubpp</code> 1.935.</p>
+
+<h1 id="AUTHOR"><a class="permalink" href="#AUTHOR">#</a>AUTHOR</h1>
+
+<p>Dean Roehrich &lt;<i>roehrich@cray.com</i>&gt; Jul 8, 1996</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/5.005_01/perlxs by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:48 GMT -->
+</html>

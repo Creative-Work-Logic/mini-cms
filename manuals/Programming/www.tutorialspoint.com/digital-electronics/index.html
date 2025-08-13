@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+
+<!-- Mirrored from www.tutorialspoint.com/digital-electronics/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Aug 2025 05:16:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Digital Electronics Tutorial</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes">
+<meta name="keywords" content="digital electronics, logic gates, flip-flops, circuit design, digital systems, electronics tutorial, combinational circuits, sequential circuits, binary numbers">
+<meta name="description" content="Explore the fundamentals of digital electronics, including logic gates, flip-flops, and circuit design. Learn everything you need to know about digital systems.">
+<!-- Open Graph Meta Tags for Social Sharing -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Digital Electronics Tutorial">
+<meta property="og:description" content="Explore the fundamentals of digital electronics, including logic gates, flip-flops, and circuit design. Learn everything you need to know about digital systems.">
+<meta property="og:url" content="index.html">
+<meta property="og:image" content="../images/tp_logo_436.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="436">
+<meta property="og:image:height" content="228">
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Digital Electronics Tutorial">
+<meta name="twitter:description" content="Explore the fundamentals of digital electronics, including logic gates, flip-flops, and circuit design. Learn everything you need to know about digital systems.">
+<meta name="twitter:image" content="../images/tp_logo_436.png">
+<!-- Favicon -->
+<link rel="icon" href="../images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+<!-- Preload Google Fonts -->
+<link rel="preload" href="../../fonts.googleapis.com/css24961.css?family=Nunito:wght@400;600;700&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "mainEntityOfPage": {
+     "@type": "WebPage",
+     "id": "https://www.tutorialspoint.com/digital-electronics/index.htm"
+   },
+  "headline": "Digital Electronics Tutorial",
+  "description": "Explore the fundamentals of digital electronics, including logic gates, flip-flops, and circuit design. Learn everything you need to know about digital systems.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TutorialsPoint",
+     "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.tutorialspoint.com/images/tp_logo_436.png"
+      }
+   },
+   "proficiencyLevel": "Beginner",
+   "educationalUse": "Tutorial"
+}
+</script>
+<script>
+   window.googletag = window.googletag || {};
+   window.googletag.cmd = window.googletag.cmd || [];
+   window.googletag.cmd.push(() => {
+        window.googletag.pubads().enableAsyncRendering();
+        window.googletag.pubads().disableInitialLoad();
+  });
+  const injectPgScript = (src, isAsync, onLoadCallback) => {
+    if (!src)
+      return;
+    const script = document.createElement("script");
+    script.src = src;
+    if (isAsync)
+      script.async = isAsync;
+    if (onLoadCallback)
+      script.onload = onLoadCallback;
+    document.head.appendChild(script);
+  };
+  const initiatePgAds = () => {
+    !!window.__tcfapi && window.__tcfapi("addEventListener", 2, (tcData, success) => {
+      if (success && (tcData.eventStatus === "useractioncomplete" || tcData.eventStatus === "tcloaded" || tcData.gdprApplies === false)) {
+        if (!window._initAds) {
+          window._initAds = true;
+          injectPgScript("../../dsh7ky7308k4b.cloudfront.net/publishers/tutorialspointcom.min.js", true);
+          injectPgScript("//btloader.com/tag?o=5184339635601408&upapi=true", true);
+        }
+      }
+    }
+    );
+  };
+  injectPgScript("../../securepubads.g.doubleclick.net/tag/js/fa070.txt?network-code=8095840", true, () => { 
+    window.googlefc = window.googlefc || {
+      callbackQueue: []
+    };
+    window.googlefc.callbackQueue.push({
+      "CONSENT_API_READY": () => initiatePgAds()
+    });
+  });
+</script>
+<link rel="stylesheet" href="../static/css/new-lib-stylef858.css?v-2" media="screen, print">
+<link rel="canonical" href="index.html">
+</head>
+<body class="[--nav-1-height:44px] md:[--nav-2-height:68px] [--nav-2-height:60px] [--nav-3-height:40px]">
+   <nav class="bg-[#2c9d30] z-[11] text-sm max-lg:sticky top-0 text-white flex items-center h-(--nav-1-height) [&_a]:hover:underline">
+      <div
+         class="w-(--container) px-4 mx-auto flex items-center gap-6 overflow-x-auto scrollbar-hidden whitespace-nowrap">
+         <a class="min-w-fit" href="../index.html" alt="Online Courses, Certifications &amp; eBooks">
+            <i class="fa-sharp fa-light fa-home"></i> Home
+         </a>
+         <a class="min-w-fit" href="../whiteboard.html" title="Online Whiteboard">
+            <i class="fa-sharp fa-light fa-chalkboard"></i> Whiteboard</a>
+         </a>
+         <a class="min-w-fit" href="../compilers/index.html" title="Online Compilers and Editors">
+            <i class="fa-sharp fa-light fa-code"></i> Online Compilers
+         </a>
+         <a class="min-w-fit" href="../practice/index.html" title="Practice">
+            <i class="fa-sharp fa-light fa-display-code"></i> Practice
+         </a>
+         <a class="min-w-fit" href="../articles/index.html" alt="Tutorials And Articles">
+            <i class="fa-sharp fa-light fa-pen-to-square top-nav-icon"></i> Articles
+         </a>
+         <a class="min-w-fit" href="../job_search.html" alt="Latest Jop Openings">
+            <i class="fa-sharp fa-light fa-suitcase top-nav-icon"></i> Jobs
+         </a>
+	      <a class="min-w-fit" href="../online_dev_tools.html" alt="Development Tools">
+	         <i class="fa-sharp fa-light fa-tools"></i> Tools
+         </a>         
+         <a class="min-w-fit" href="../business/index.html" alt="Corporate Training - Training For A Team">
+            <i class="fa-sharp fa-light fa-screen-users top-nav-icon"></i> Corporate Training
+         </a>
+         
+         <div class="ml-auto flex items-center gap-2">
+            <a class=" bg-[#318634] size-8 grid place-items-center" target="_blank"
+               href="https://www.facebook.com/tutorialspointindia" aria-label="Connect with us on Facebook" rel="nofollow">
+               <i class="fa-sharp fa-light fa-brands fa-facebook-f !h-[18px]"></i>
+            </a>
+            <a class="bg-[#318634] size-8 grid place-items-center" target="_blank"
+               href="https://x.com/tutorialspoint" aria-label="Connect with us on X" rel="nofollow">
+               <i class="fa-sharp fa-light fa-brands fa-x-twitter !h-[18px]"></i>
+            </a>
+            <a class="bg-[#318634] size-8 grid place-items-center" target="_blank" rel="nofollow"
+               href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" aria-label="Connect with us on Youtube">
+               <i class="fa-sharp fa-light fa-brands fa-youtube !h-[18px]"></i>
+            </a>
+            <a class="bg-[#318634] size-8 grid place-items-center" target="_blank"
+               href="https://www.linkedin.com/company/tutorialspoint/" aria-label="Connect with us on LinkedIn" rel="nofollow">
+               <i class="fa-sharp fa-light fa-brands fa-linkedin-in !h-[18px]"></i>
+            </a>
+            <a class="bg-[#318634] size-8 grid place-items-center" target="_blank"
+               href="https://www.instagram.com/tutorialspoint_/" aria-label="Connect with us on Instagram" rel="nofollow">
+               <i class="fa-sharp fa-light fa-brands fa-instagram !h-[18px]"></i>
+            </a>            
+         </div>
+      </div>
+      <div class="w-(--container) lg:hidden px-4 mx-auto absolute h-full pointer-events-none inset-x-0">
+         <div class="absolute inset-y-0 right-0 h-full w-10 bg-gradient-to-l from-[#2c9d30] to-transparent"
+            aria-hidden="true">
+         </div>
+      </div>
+   </nav>
+   <nav
+      class="h-(--nav-2-height) z-[11] sticky bg-white top-(--nav-1-height) lg:top-0 px-3 flex items-center border-b border-gray-300">
+      <div class="w-(--container) mx-auto  flex gap-3 items-center">
+         <a href="../index-2.html" class="block md:w-full md:max-w-[226px]" title="Tutorialspoint">
+            <svg class="max-md:hidden w-full" xmlns="http://www.w3.org/2000/svg" width="226" height="42" viewBox="0 0 226 42" fill="none">
+               <path
+                  d="M76.2136 13.8408V27.7576H72.3845V26.1045C71.3229 27.3193 69.7701 27.9689 68.0642 27.9689C64.5731 27.9689 62.1172 26.0042 62.1172 21.7103V13.8461H66.1523V21.1135C66.1523 23.4426 67.1874 24.4778 68.9726 24.4778C70.7577 24.4778 72.1785 23.2895 72.1785 20.7279V13.8461H76.2136V13.8408Z"
+                  fill="#40A944"></path>
+               <path
+                  d="M89.1484 20.7959C89.1484 16.6077 92.3807 13.6289 96.8066 13.6289C101.233 13.6289 104.438 16.6024 104.438 20.7959C104.438 24.9894 101.233 27.9629 96.8066 27.9629C92.3807 27.9629 89.1484 24.9894 89.1484 20.7959ZM100.351 20.7959C100.351 18.3928 98.8242 16.9404 96.8066 16.9404C94.7891 16.9404 93.2363 18.3876 93.2363 20.7959C93.2363 23.2043 94.7891 24.6514 96.8066 24.6514C98.8242 24.6514 100.351 23.2043 100.351 20.7959Z"
+                  fill="#40A944"></path>
+               <path
+                  d="M115.28 13.6348V17.3582C114.942 17.3318 114.683 17.3054 114.377 17.3054C112.153 17.3054 110.68 18.5202 110.68 21.1873V27.7575H106.645V13.8407H110.5V15.6787C111.482 14.3319 113.141 13.6348 115.285 13.6348H115.28Z"
+                  fill="#40A944"></path>
+               <path d="M117.695 13.8408H121.73V27.7576H117.695V13.8408Z" fill="#40A944">
+               </path>
+               <path
+                  d="M139.119 13.8402V27.757H135.263V26.1514C134.255 27.3661 132.781 27.9629 130.917 27.9629C126.987 27.9629 123.961 25.169 123.961 20.7959C123.961 16.4228 126.987 13.6289 130.917 13.6289C132.623 13.6289 134.07 14.1729 135.079 15.3084V13.8349H139.114L139.119 13.8402ZM135.163 20.7959C135.163 18.3928 133.61 16.9404 131.619 16.9404C129.628 16.9404 128.049 18.3876 128.049 20.7959C128.049 23.2043 129.602 24.6514 131.619 24.6514C133.637 24.6514 135.163 23.2043 135.163 20.7959Z"
+                  fill="#40A944"></path>
+               <path d="M146.402 8.5625H142.367V27.7555H146.402V8.5625Z" fill="#40A944">
+               </path>
+               <path
+                  d="M149.141 26.4622L150.487 23.5679C151.729 24.3707 153.619 24.9147 155.325 24.9147C157.19 24.9147 157.887 24.4235 157.887 23.6471C157.887 21.3708 149.479 23.7 149.479 18.1385C149.479 15.4978 151.861 13.6387 155.917 13.6387C157.829 13.6387 159.952 14.077 161.272 14.8534L159.925 17.7266C158.552 16.9502 157.184 16.6914 155.917 16.6914C154.105 16.6914 153.329 17.2618 153.329 17.9854C153.329 20.3673 161.737 18.0646 161.737 23.5468C161.737 26.1347 159.334 27.9674 155.167 27.9674C152.811 27.9674 150.435 27.3231 149.141 26.4675V26.4622Z"
+                  fill="#40A944"></path>
+               <path
+                  d="M178.226 20.9541C178.226 25.0948 175.332 27.8835 171.45 27.8835C169.279 27.8835 167.415 26.9539 166.279 25.1952V32.7742H164.441V14.1515H166.2V16.8398C167.315 15.0283 169.2 14.0459 171.45 14.0459C175.332 14.0459 178.226 16.8398 178.226 20.9541ZM176.388 20.9541C176.388 17.8011 174.191 15.6515 171.318 15.6515C168.445 15.6515 166.248 17.7958 166.248 20.9541C166.248 24.1125 168.418 26.2568 171.318 26.2568C174.218 26.2568 176.388 24.1336 176.388 20.9541Z"
+                  fill="#000"></path>
+               <path
+                  d="M180.129 20.9541C180.129 16.919 183.076 14.0459 187.058 14.0459C191.041 14.0459 193.966 16.919 193.966 20.9541C193.966 24.9892 191.046 27.8835 187.058 27.8835C183.071 27.8835 180.129 24.9892 180.129 20.9541ZM192.102 20.9541C192.102 17.7747 189.953 15.6515 187.058 15.6515C184.164 15.6515 181.988 17.7747 181.988 20.9541C181.988 24.1336 184.159 26.2568 187.058 26.2568C189.958 26.2568 192.102 24.1336 192.102 20.9541Z"
+                  fill="#000"></path>
+               <path d="M196.754 14.1523H198.592V27.7575H196.754V14.1523Z" fill="#000"></path>
+               <path
+                  d="M215.288 19.8661V27.7567H213.45V20.051C213.45 17.1778 211.95 15.7043 209.362 15.7043C206.442 15.7043 204.604 17.5159 204.604 20.6161V27.7567H202.766V14.1515H204.524V16.6602C205.507 15.0071 207.345 14.0459 209.695 14.0459C213.006 14.0459 215.283 15.9578 215.283 19.8661H215.288Z"
+                  fill="#000"></path>
+               <path
+                  d="M59.3346 24.2389C58.8699 24.5769 58.2731 24.7565 57.6815 24.7565C56.5935 24.7565 55.9756 24.1122 55.9756 22.9185V17.2568H59.4139V14.1512H55.9756V10.2852L51.9405 11.2411V14.1512H50.2188V17.2568H51.9405V22.9714C51.9405 26.2829 53.8313 27.9624 57.1375 27.9624C58.3523 27.9624 59.567 27.6772 60.3962 27.0804L59.3346 24.2336V24.2389Z"
+                  fill="#40A944"></path>
+               <path
+                  d="M87.2878 24.2389C86.823 24.5769 86.2262 24.7565 85.6347 24.7565C84.5467 24.7565 83.9287 24.1122 83.9287 22.9185V17.2568H87.367V14.1512H83.9287V10.2852L79.8936 11.2411V14.1512H78.1719V17.2568H79.8936V22.9714C79.8936 26.2829 81.7844 27.9624 85.0907 27.9624C86.3054 27.9624 87.5202 27.6772 88.3494 27.0804L87.2878 24.2336V24.2389Z"
+                  fill="#40A944"></path>
+               <path
+                  d="M119.713 11.8222C120.827 11.8222 121.73 10.9189 121.73 9.80465C121.73 8.69039 120.827 7.78711 119.713 7.78711C118.599 7.78711 117.695 8.69039 117.695 9.80465C117.695 10.9189 118.599 11.8222 119.713 11.8222Z"
+                  fill="#40A944"></path>
+               <path
+                  d="M197.674 11.8222C198.788 11.8222 199.691 10.9189 199.691 9.80465C199.691 8.69039 198.788 7.78711 197.674 7.78711C196.56 7.78711 195.656 8.69039 195.656 9.80465C195.656 10.9189 196.56 11.8222 197.674 11.8222Z"
+                  fill="#40A944"></path>
+               <path
+                  d="M225.15 25.6071C224.633 26.0719 223.909 26.3043 223.133 26.3043C221.606 26.3043 220.803 25.4223 220.803 23.822V15.699H224.918V14.1462H220.803V10.2168L218.965 11.1728V14.1462H217.043V15.699H218.965V23.9223C218.965 26.4311 220.386 27.8782 222.948 27.8782C224.009 27.8782 225.097 27.5666 225.794 26.9222L225.15 25.6019V25.6071Z"
+                  fill="#000"></path>
+               <path
+                  d="M27.3002 39.5829C33.1626 39.4561 38.4072 35.87 40.8842 30.5568C42.3208 27.4829 43.0444 24.013 42.8542 20.3582C42.2785 9.30395 33.1521 0.394029 22.082 0.0718569C9.95038 -0.282005 0 9.44655 0 21.5043C0 30.7099 5.80439 38.5583 13.9485 41.6004C13.1721 40.7871 12.6017 39.7941 12.2531 38.6217C11.7091 36.8101 11.725 34.6711 12.2954 32.2046L15.2319 19.8881H9.16343L10.1564 15.5837L10.4257 14.4429H16.5259L16.6368 13.9411L18.0628 7.76175L26.9727 6.05582L25.1506 13.9411L23.8408 19.8881L20.8197 33.2609C20.3602 35.2626 20.5398 36.8101 21.3743 37.8928C21.3743 37.8928 22.6207 39.6832 27.3002 39.5829ZM29.4128 13.4605C31.8951 12.9904 34.0288 15.1242 33.5588 17.6065C33.2947 18.9902 32.1803 20.1099 30.7912 20.374C28.3089 20.8441 26.1752 18.7103 26.6453 16.228C26.9093 14.8443 28.0237 13.7246 29.4128 13.4605Z"
+                  fill="#40A944"></path>
+            </svg>
+            <svg class="md:hidden" xmlns="http://www.w3.org/2000/svg" width="43" height="42" viewBox="0 0 43 42"
+               fill="none">
+               <path
+                  d="M27.3002 39.5829C33.1626 39.4561 38.4072 35.87 40.8842 30.5568C42.3208 27.4829 43.0444 24.013 42.8542 20.3582C42.2785 9.30395 33.1521 0.394029 22.082 0.0718569C9.95038 -0.282005 0 9.44655 0 21.5043C0 30.7099 5.80439 38.5583 13.9485 41.6004C13.1721 40.7871 12.6017 39.7941 12.2531 38.6217C11.7091 36.8101 11.725 34.6711 12.2954 32.2046L15.2319 19.8881H9.16343L10.1564 15.5837L10.4257 14.4429H16.5259L16.6368 13.9411L18.0628 7.76175L26.9727 6.05582L25.1506 13.9411L23.8408 19.8881L20.8197 33.2609C20.3602 35.2626 20.5398 36.8101 21.3743 37.8928C21.3743 37.8928 22.6207 39.6832 27.3002 39.5829ZM29.4128 13.4605C31.8951 12.9904 34.0288 15.1242 33.5588 17.6065C33.2947 18.9902 32.1803 20.1099 30.7912 20.374C28.3089 20.8441 26.1752 18.7103 26.6453 16.228C26.9093 14.8443 28.0237 13.7246 29.4128 13.4605Z"
+                  fill="#40A944"></path>
+            </svg>
+         </a>
+         <button data-toc-toggle aria-expanded="false" class="lg:mr-10 min-w-fit cursor-pointer group flex items-center gap-1.5">
+            Chapters
+            <i class="fa-sharp max-md:group-aria-expanded:-rotate-90 fa-light fa-angle-down"></i>
+         </button>
+         <div data-categories class="ml-auto lg:ml-7">
+            <button data-categories-toggle aria-expanded="false" class="lg:mr-10 min-w-fit cursor-pointer group flex items-center gap-1.5">
+               <i class="fa-sharp fa-light fa-grid-2" aria-hidden="true"></i>
+               <span>Categories</span>
+               <i class="fa-sharp max-md:group-aria-expanded:-rotate-90 fa-light fa-angle-down" aria-hidden="true"></i>
+            </button>
+            <div data-categories-popup class="w-full shadow-lg h-[calc(100vh-var(--nav-2-height)-var(--nav-1-height))] top-(--nav-2-height) text-base lg:text-sm max-lg:overflow-y-auto lg:h-[519px] bottom-0 flex-col [&_a]:py-2 bg-white z-[11] lg:max-w-fit lg:flex-row max-lg:left-0 border border-gray-300 hidden data-[visible]:flex absolute lg:items-start">
+               <div data-categories-tabs-list class="divide-y flex flex-col h-full lg:overflow-y-auto [&_a]:py-4 [&_a]:px-3 divide-gray-300">
+                  <a class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" aria-selected="true" href="#item1" title="AI, ML, and Data Science Tutorials">
+                     <span>AI, ML, and Data Science</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" href="#item2" title="Programming Languages Tutorials">
+                     <span>Programming Languages</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" href="#item3" title="Web Development Languages Tutorials">
+                     <span>Web Development Languages</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" href="#item4" title="DevOps Tutorials">
+                     <span>DevOps</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" href="#item5" title="Database Tutorials">
+                     <span>Databases</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" href="#item6" title="Computer Science Subject Tutorials">
+                     <span>Computer Science Subjects</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" href="#item7" title="Python Technologies Tutorials">
+                     <span>Python Technologies</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" href="#item8" title="Software Testing Tutorials">
+                     <span>Software Testing</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 lg:border-b-transparent transition-colors" href="#item9" title="Cyber Security Tutorials">
+                     <span>Cyber Security</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a href="../top-categories.html" class="sticky mt-auto bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center hover:bg-[#27902b] transition-colors" title="View All Tutorial Categories">
+                     <i class="fa-sharp fa-light fa-cubes" aria-hidden="true"></i> <span>All Categories</span>
+                  </a>
+               </div>
+               <div data-categories-panels
+                  class="has-[[data-visible]]:h-full [&_a:not(.sticky)]:hover:bg-gray-200 [&_a]:transition-colors lg:[&_a:not(.sticky)]:border-l [&_a]:border-gray-300 lg:bg-gray-100 [&>div]:grow [&>div>div]:grow [&>div]:flex lg:overflow-y-auto [&>div]:flex-col lg:h-full flex flex-col lg:min-w-[350px]">
+                  <div id="item1" role="tabpanel" aria-labelledby="tab-item1">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../artificial_intelligence/index.html" title="Learn Artificial Intelligence">Artificial Intelligence</a>
+                        <a href="../machine_learning/index.html" title="Learn Machine Learning">Machine Learning</a>
+                        <a href="../machine_learning_with_python/index.html" title="Learn Machine Learning with Python">ML With Python</a>
+                        <a href="../data_science/index.html" title="Learn Data Science">Data Science</a>
+                        <a href="../statistics/index.html" title="Learn Statistics">Statistics</a>
+                        <a href="../natural_language_processing/index.html" title="Learn Natural Language Processing">NLP</a>
+                        <a href="../artificial_neural_network/index.html" title="Learn Neural Networks">Neural Networks</a>
+                        <a href="../tensorflow/index.html" title="Learn TensorFlow">TensorFlow</a>
+                        <a href="../pytorch/index.html" title="Learn PyTorch">PyTorch</a>
+                        <a href="../matplotlib/index.html" title="Learn Matplotlib">Matplotlib</a>
+                        <a href="../numpy/index.html" title="Learn NumPy">NumPy</a>
+                        <a href="../python_pandas/index.html" title="Learn Pandas">Pandas</a>
+                        <a href="../scipy/index.html" title="Learn SciPy">SciPy</a>
+                        <a href="../big_data_analytics/index.html" title="Learn Big Data Analytics">Big Data Analytics</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors" href="../machine_learning_tutorials.html" title="View All Machine Learning Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item2" role="tabpanel" aria-labelledby="tab-item2">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../python/index.html" title="Learn Python Programming">Learn Python</a>
+                        <a href="../java/index.html" title="Learn Java Programming">Learn Java</a>
+                        <a href="../cplusplus/index.html" title="Learn C++ Programming">Learn C++</a>
+                        <a href="../cprogramming/index.html" title="Learn C Programming">Learn C</a>
+                        <a href="../php/index.html" title="Learn PHP Programming">Learn PHP</a>
+                        <a href="../go/index.html" title="Learn Go Programming">Learn Go</a>
+                        <a href="../kotlin/index.html" title="Learn Kotlin Programming">Learn Kotlin</a>
+                        <a href="../r/index.html" title="Learn R Programming">Learn R</a>
+                        <a href="../asp.net/index.html" title="Learn ASP.Net">Learn ASP.Net</a>
+                        <a href="../csharp/index.html" title="Learn C# Programming">Learn C#.Net</a>
+                        <a href="../vb.net/index.html" title="Learn VB.Net">Learn VB.Net</a>
+                        <a href="../scala/index.html" title="Learn Scala Programming">Learn Scala</a>
+                        <a href="../swift/index.html" title="Learn Swift Programming">Learn Swift</a>
+                        <a href="../perl/index.html" title="Learn Perl Programming">Learn Perl</a>
+                        <a href="../ruby/index.html" title="Learn Ruby Programming">Learn Ruby</a>
+                        <a href="../rust/index.html" title="Learn Rust Programming">Learn Rust</a>
+                        <a href="../lua/index.html" title="Learn Lua Programming">Learn Lua</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors"
+                           href="../computer_programming_tutorials.html" title="View All Programming Language Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item3" role="tabpanel" aria-labelledby="tab-item3">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../html/index.html" title="Learn HTML">Learn HTML</a>
+                        <a href="../css/index.html" title="Learn CSS">Learn CSS</a>
+                        <a href="../javascript/index.html" title="Learn JavaScript">Learn JavaScript</a>
+                        <a href="../jquery/index.html" title="Learn jQuery">Learn jQuery</a>
+                        <a href="../reactjs/index.html" title="Learn React.js">ReactJs</a>
+                        <a href="../nodejs/index.html" title="Learn Node.js">NodeJs</a>
+                        <a href="../wordpress/index.html" title="Learn WordPress">Wordpress</a>
+                        <a href="../angularjs/index.html" title="Learn Angular.js">AngularJs</a>
+                        <a href="../php/index.html" title="Learn PHP">Learn PHP</a>
+                        <a href="../django/index.html" title="Learn Django">Django</a>
+                        <a href="../json/index.html" title="Learn JSON">Learn JSON</a>
+                        <a href="../codeigniter/index.html" title="Learn CodeIgniter">Codeigniter</a>
+                        <a href="../typescript/index.html" title="Learn TypeScript">TypeScript</a>
+                        <a href="../ajax/index.html" title="Learn AJAX">Learn Ajax</a>
+                        <a href="../bootstrap/index.html" title="Learn Bootstrap">Bootstrap</a>
+                        <a href="../sass/index.html" title="Learn Sass">Learn Sass</a>
+                        <a href="../appml/index.html" title="Learn AppML">AppML</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors"
+                           href="../web_development_tutorials.html" title="View All Web Development Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item4" role="tabpanel" aria-labelledby="tab-item4">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../git/index.html" title="Learn Git">GIT</a>
+                        <a href="../amazon_web_services/index.html" title="Learn Amazon Web Services">AWS</a>
+                        <a href="../docker/index.html" title="Learn Docker">Docker</a>
+                        <a href="../kubernetes/index.html" title="Learn Kubernetes">Kubernetes</a>
+                        <a href="../microsoft_azure/index.html" title="Learn Microsoft Azure">Azure</a>
+                        <a href="../gitlab/index.html" title="Learn GitLab">Gitlab</a>
+                        <a href="../jira/index.html" title="Learn Jira">Jira</a>
+                        <a href="../gerrit/index.html" title="Learn Gerrit">Gerrit</a>
+                        <a href="../ansible/index.html" title="Learn Ansible">Ansible</a>
+                        <a href="../bugzilla/index.html" title="Learn Bugzilla">Bugzilla</a>
+                        <a href="../chef/index.html" title="Learn Chef">Chef</a>
+                        <a href="../saltstack/index.html" title="Learn SaltStack">SaltStack</a>
+                        <a href="../openshift/index.html" title="Learn OpenShift">OpenShift</a>
+                        <a href="../puppet/index.html" title="Learn Puppet">Puppet</a>
+                        <a href="../unix/index.html" title="Learn UNIX">UNIX</a>
+                        <a href="../linux_admin/index.html" title="Learn Linux Administration">Linux Admin</a>
+                        <a href="../ubuntu/index.html" title="Learn Ubuntu">Ubuntu</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors"
+                           href="../devops_tutorials.html" title="View All DevOps Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item5" role="tabpanel" aria-labelledby="tab-item5">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../dbms/index.html" title="Learn Database Management Systems">DBMS</a>
+                        <a href="../sql/index.html" title="Learn SQL">SQL</a>
+                        <a href="../plsql/index.html" title="Learn PL/SQL">PL/SQL</a>
+                        <a href="../mysql/index.html" title="Learn MySQL">MySQL</a>
+                        <a href="../tinydb/index.html" title="Learn TinyDB">TinyDB</a>
+                        <a href="../ms_sql_server/index.html" title="Learn Microsoft SQL Server">SQL Server</a>
+                        <a href="../mongodb/index.html" title="Learn MongoDB">MongoDB</a>
+                        <a href="../postgresql/index.html" title="Learn PostgreSQL">PostgreSQL</a>
+                        <a href="../sqlite/index.html" title="Learn SQLite">SQLite</a>
+                        <a href="../redis/index.html" title="Learn Redis">Redis</a>
+                        <a href="../phpmyadmin/index.html" title="Learn PHPMyAdmin">PHP MyAdmin</a>
+                        <a href="../mariadb/index.html" title="Learn MariaDB">MariaDB</a>
+                        <a href="../couchdb/index.html" title="Learn CouchDB">CouchDB</a>
+                        <a href="../db2/index.html" title="Learn DB2">DB2</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors"
+                           href="../database_tutorials.html" title="View All Database Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item6" role="tabpanel" aria-labelledby="tab-item6">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../computer_fundamentals/index.html" title="Learn Computer Fundamentals">Computer Fundamentals</a>
+                        <a href="../operating_system/index.html" title="Learn Operating System Concepts">Operating System</a>
+                        <a href="../dbms/index.html" title="Learn Database Management Systems">DBMS</a>
+                        <a href="../data_structures_algorithms/index.html" title="Learn Data Structures and Algorithms">DSA</a>
+                        <a href="../data_communication_computer_network/index.html" title="Learn Computer Networks">Computer Networks</a>
+                        <a href="../software_engineering/index.html" title="Learn Software Engineering">Software Engineering</a>
+                        <a href="../computer_graphics/index.html" title="Learn Computer Graphics">Computer Graphics</a>
+                        <a href="../data_mining/index.html" title="Learn Data Mining">Data Mining</a>
+                        <a href="../digital_marketing/index.html" title="Learn Digital Marketing">Digital Marketing</a>
+                        <a href="../seo/index.html" title="Learn Search Engine Optimization">SEO</a>
+                        <a href="index.html" title="Learn Digital Circuits">Digital Circuits</a>
+                        <a href="../discrete_mathematics/index.html" title="Learn Discrete Mathematics">Discrete Mathematics</a>
+                        <a href="../cryptography/index.html" title="Learn Cryptography">Cryptography</a>
+                        <a href="../cloud_computing/index.html" title="Learn Cloud Computing">Cloud Computing</a>
+                        <a href="../compiler_design/index.html" title="Learn Compiler Design">Compiler Design</a>
+                        <a href="../embedded_systems/index.html" title="Learn Embedded Systems">Embedded Systems</a>
+                        <a href="../microprocessor/index.html" title="Learn Microprocessors">Microprocessors</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors"
+                           href="../computer_science_tutorials.html" title="View All Computer Science Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item7" role="tabpanel" aria-labelledby="tab-item7">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../python/index.html" title="Learn Python Programming">Python</a>
+                        <a href="../numpy/index.html" title="Learn NumPy for Data Analysis">NumPy</a>
+                        <a href="../python_pandas/index.html" title="Learn Pandas for Data Analysis">Pandas</a>
+                        <a href="../matplotlib/index.html" title="Learn Matplotlib for Data Visualization">Matplotlib</a>
+                        <a href="../django/index.html" title="Learn Django Web Framework">Django</a>
+                        <a href="../pyqt/index.html" title="Learn PyQt for GUI Development">PyQt</a>
+                        <a href="../pycharm/index.html" title="Learn PyCharm IDE">PyCharm</a>
+                        <a href="../python_pillow/index.html" title="Learn Pillow for Image Processing">Pillow</a>
+                        <a href="../opencv/index.html" title="Learn OpenCV for Computer Vision">OpenCV</a>
+                        <a href="../seaborn/index.html" title="Learn Seaborn for Statistical Data Visualization">Seaborn</a>
+                        <a href="../machine_learning_with_python/index.html" title="Learn Machine Learning with Python">ML with Python</a>
+                        <a href="../scipy/index.html" title="Learn SciPy for Scientific Computing">SciPy</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors" href="../python_technologies_tutorials.html" title="View All Python Technology Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item8" role="tabpanel" aria-labelledby="tab-item8">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../software_testing/index.html" title="Learn Software Testing Fundamentals">Software Testing</a>
+                        <a href="../jira/index.html" title="Learn Jira for Project Management">Jira</a>
+                        <a href="../selenium/index.html" title="Learn Selenium for Test Automation">Selenium</a>
+                        <a href="../testrail/index.html" title="Learn TestRail for Test Case Management">TestRail</a>
+                        <a href="../postman/index.html" title="Learn Postman for API Testing">Postman</a>
+                        <a href="../cucumber/index.html" title="Learn Cucumber for BDD Testing">Cucumber</a>
+                        <a href="../cypress/index.html" title="Learn Cypress for Front-End Testing">Cypress</a>
+                        <a href="../watir/index.html" title="Learn Watir for Ruby-Based Testing">Watir</a>
+                        <a href="../agile/index.html" title="Learn Agile Methodology">Agile</a>
+                        <a href="../jmeter/index.html" title="Learn JMeter for Performance Testing">jMeter</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors" href="../software_testing_tutorials.html" title="View All Software Testing Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item9" role="tabpanel" aria-labelledby="tab-item9">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../blockchain/index.html" title="Learn Blockchain Technology">Blockchain</a>
+                        <a href="../information_security_cyber_law/index.html" title="Learn Information Security and Cyber Law">Information Security</a>
+                        <a href="../computer_security/index.html" title="Learn Computer Security Fundamentals">Computer Security</a>
+                        <a href="../internet_security/index.html" title="Learn Internet Security Best Practices">Internet Security</a>
+                        <a href="../network_security/index.html" title="Learn Network Security">Network Security</a>
+                        <a href="../wireless_security/index.html" title="Learn Wireless Security">Wireless Security</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors" href="../cyber_security_tutorials.html" title="View All Cyber Security Tutorials">See all</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <button aria-expanded="false" data-nav-toggle class="lg:hidden group flex items-center gap-1.5"
+            aria-label="Toggle menu">
+            <svg class="group-aria-expanded:hidden size-7" xmlns="http://www.w3.org/2000/svg" fill="none"
+               viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <svg class="group-aria-expanded:block hidden size-7" xmlns="http://www.w3.org/2000/svg" fill="none"
+               viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+         </button>
+         <div data-nav
+            class="w-full max-lg:shadow-lg top-(--nav-2-height) max-lg:flex-col [&_a]:py-2 max-lg:bg-white z-[2] left-0 max-lg:p-4 max-lg:border border-gray-300 max-lg:hidden max-lg:data-[visible]:flex max-lg:absolute flex lg:items-center lg:gap-6">
+            <div class="relative w-full max-w-[600px] max-lg:mb-2">
+               <input data-result="search-results" id="search-strings" name="key"
+                  class="border-black w-full py-2 border focus:border-[#2c9d30] placeholder:text-black/90 text-sm focus:outline-hidden px-3"
+                  placeholder="Search tutorials, courses and ebooks..." />
+               <div class="search-box search-box-inn right-0" id="search-results"></div>
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="absolute right-3 inset-y-0 my-auto size-5 opacity-50">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                     d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+               </svg>
+            </div>
+            <a href="../tutorialslibrary.html" class="lg:ml-auto hover:underline    ">Library</a>
+            <a href="../market/index.html" class="hover:underline">Courses</a>
+            <a href="../latest/certifications.html" class="hover:underline">Certifications</a>
+            <a href="../market/login.html"
+               class="bg-[#2c9d30] py-2 px-4 text-white hover:opacity-80 max-lg:mt-1 transition-opacity font-semibold" id="nav__signup-link">Login</a>
+         </div>
+      </div>
+   </nav>
+   <nav class="bg-[#031926] text-sm text-white relative flex items-center h-(--nav-3-height) [&_a]:hover:bg-[#2c9d30]">
+      <div class="w-(--container) px-4 mx-auto absolute h-full pointer-events-none inset-x-0">
+         <div class="absolute inset-y-0 left-0 h-full w-10 bg-gradient-to-r from-[#031926] to-transparent"
+            aria-hidden="true">
+         </div>
+      </div>
+      <button class="w-[50px] !h-[30px] flex items-center cursor-pointer" data-scroll-prev>
+         <i class="fa-sharp fa-light !h-4 z-[2] ml-3 lg:ml-6 fa-angle-left"></i>
+      </button>
+      <div data-scroll-container class="w-(--container) px-4 mx-auto flex items-center overflow-x-auto scrollbar-hidden whitespace-nowrap h-full [&_a]:h-full [&_a]:flex [&_a]:items-center [&_a]:px-3.5 lg:[&_a]:px-5">
+         <a href="../sql/index.html" title="SQL Tutorial">SQL</a>
+         <a href="../html/index.html" title="HTML Tutorial">HTML</a>
+         <a href="../css/index.html" title="CSS Tutorial">CSS</a>
+         <a href="../javascript/index.html" title="JavaScript Tutorial">Javascript</a>
+         <a href="../python/index.html" title="Python Tutorial">Python</a>
+         <a href="../java/index.html" title="Java Tutorial">Java</a>
+         <a href="../cprogramming/index.html" title="C Tutorial">C</a>
+         <a href="../cplusplus/index.html" title="C++ Tutorial">C++</a>
+         <a href="../php/index.html" title="PHP Tutorial">PHP</a>
+         <a href="../scala/index.html" title="Scala Tutorial">Scala</a>
+         <a href="../csharp/index.html" title="C# Tutorial">C#</a>
+         <a href="../tailwind_css/index.html" title="Tailwind CSS Tutorial">Tailwind CSS</a>
+         <a href="../nodejs/index.html" title="Node.js Tutorial">Node.js</a>
+         <a href="../mysql/index.html" title="MySQL">MySQL</a>
+         <a href="../mongodb/index.html" title="MongoDB Tutorial">MongoDB</a>
+         <a href="../plsql/index.html" title="PL/SQL Tutorial">PL/SQL</a>
+         <a href="../swift/index.html" title="Swift Tutorial">Swift</a>
+         <a href="../bootstrap/index.html" title="Bootstrap Tutorial">Bootstrap</a>
+         <a href="../r/index.html" title="R Programming">R</a>
+         <a href="../machine_learning/index.html" title="Machine Learning">Machine Learning</a>
+         <a href="../blockchain/index.html" title="Blockchain Tutorial">Blockchain</a>
+         <a href="../angular/index.html" title="Angular Tutorial">Angular</a>
+         <a href="../react_native/index.html" title="React Native Tutorial">React Native</a>
+         <a href="../computer_fundamentals/index.html" title="Computer Fundamentals Tutorial">Computer Fundamentals </a>
+         <a href="../compiler_design/index.html" title="Compiler Design Tutorial">Compiler Design</a>
+         <a href="../operating_system/index.html" title="Operating System Tutorial">Operating System</a>
+         <a href="../data_structures_algorithms/index.html" title="Data Structure and Algorithms Tutorial">Data Structure and Algorithms </a>
+         <a href="../data_communication_computer_network/index.html" title="Computer Network Tutorial"> Computer Network</a>
+         <a href="../dbms/index.html" title="DBMS Tutorial">DBMS</a>
+         <a href="../excel/index.html" title="Excel Tutorial">Excel</a>
+      </div>
+      <button class="cursor-pointer w-[50px]  h-[30px] flex items-center" data-scroll-next>
+         <i class="fa-sharp fa-light !h-4 z-[2] mr-3 lg:mr-6 fa-angle-right"></i>
+      </button>
+      <div class="w-(--container) px-4 mx-auto absolute h-full pointer-events-none inset-x-0">
+         <div class="absolute inset-y-0 right-0 h-full w-10 bg-gradient-to-l from-[#031926] to-transparent" aria-hidden="true">
+         </div>
+      </div>
+   </nav>
+<main class="bg-light" style="overflow: unset;">
+<div class="container-fluid">
+<div class="row">
+<div class="tutorial-toc">
+<div class="toc-nav">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+"HTML-CSS": {
+linebreaks: { automatic: true, width: "container" }          
+}              
+});
+</script>
+<script src="../../cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<div class="mini-logo">
+<img src="images/digital-electronics-mini-logo.jpg" alt="Digital Electronics Tutorial" />
+</div>
+<ul class="toc chapters">
+<li><a href="index.html">Digital Electronics - Home</a></li>
+<li class="heading">Digital Electronics Basics</li>
+<li><a href="types-of-digital-systems.html">Types of Digital Systems</a></li>
+<li><a href="types-of-signals.html">Types of Signals</a></li>
+<li><a href="logic-levels-and-pulse-waveforms.html">Logic Levels And Pulse Waveforms</a></li>
+<li><a href="digital-system-components.html">Digital System Components</a></li>
+<li><a href="digital-logic-operations.html">Digital Logic Operations</a></li>
+<li><a href="advantages-and-limitations-of-digital-systems.html">Digital Systems Advantages</a></li>
+<li class="heading">Number Systems</li>
+<li><a href="digital-electronics-number-systems.html">Number Systems</a></li>
+<!--<li><a href="/digital-electronics/digital-electronics-base-conversions.htm">Base Conversions</a></li>-->
+<li><a href="binary-numbers-representation.html">Binary Numbers Representation</a></li>
+<li><a href="digital-electronics-binary-arithmetic.html">Binary Arithmetic</a></li>
+<li><a href="signed-binary-arithmetic.html">Signed Binary Arithmetic</a></li>
+<li><a href="digital-electronics-octal-arithmetic.html">Octal Arithmetic</a></li>
+<li><a href="digital-electronics-hexadecimal-arithmetic.html">Hexadecimal Arithmetic</a></li>
+<li><a href="digital-electronics-complement-arithmetic.html">Complement Arithmetic</a></li>
+<li class="heading">Base Conversions</li>
+<li><a href="digital-electronics-base-conversions.html">Base Conversions</a></li>
+<li><a href="binary-to-decimal-conversion.html">Binary to Decimal Conversion</a></li>
+<li><a href="decimal-to-binary-conversion.html">Decimal to Binary Conversion</a></li>
+<li><a href="binary-to-octal-conversion.html">Binary to Octal Conversion</a></li>
+<li><a href="octal-to-binary-conversion.html">Octal to Binary Conversion</a></li>
+<li><a href="octal-to-decimal-conversion.html">Octal to Decimal Conversion</a></li>
+<li><a href="decimal-to-octal-conversion.html">Decimal to Octal Conversion</a></li>
+<li><a href="hexadecimal-to-binary-conversion.html">Hexadecimal to Binary Conversion</a></li>
+<li><a href="binary-to-hexadecimal-conversion.html">Binary to Hexadecimal Conversion</a></li>
+<li><a href="hexadecimal-to-decimal-conversion.html">Hexadecimal to Decimal Conversion</a></li>
+<li><a href="decimal-to-hexadecimal-conversion.html">Decimal to Hexadecimal Conversion</a></li>
+<li><a href="octal-to-hexadecimal-conversion.html">Octal to Hexadecimal Conversion</a></li>
+<li><a href="hexadecimal-to-octal-conversion.html">Hexadecimal to Octal Conversion</a></li>
+<li class="heading">Binary Codes</li>
+<li><a href="digital-electronics-binary-codes.html">Binary Codes</a></li>
+<li><a href="what-is-8421-bcd-code.html">8421 BCD Code</a></li>
+<li><a href="what-is-excess-3-code.html">Excess-3 Code</a></li>
+<li><a href="what-is-gray-code.html">Gray Code</a></li>
+<li><a href="digital-electronics-ascii-codes.html">ASCII Codes</a></li>
+<li><a href="what-is-ebcdic-code.html">EBCDIC Code</a></li>
+<li><a href="digital-electronics-codes-conversion.html">Code Conversion</a></li>
+<li><a href="error-detection-and-correction-codes.html">Error Detection &amp; Correction Codes</a></li>
+<li class="heading">Logic Gates</li>
+<li><a href="logic-gates.html">Logic Gates</a></li>
+<li><a href="and-gate.html">AND Gate</a></li>
+<li><a href="or-gate.html">OR Gate</a></li>
+<li><a href="not-gate.html">NOT Gate</a></li>
+<li><a href="universal-gates-nand-and-nor.html">Universal Gates</a></li>
+<li><a href="xor-gate.html">XOR Gate</a></li>
+<li><a href="xnor-gate.html">XNOR Gate</a></li>
+<li><a href="cmos-logic-gate.html">CMOS Logic Gate</a></li>
+<li><a href="or-gate-using-diode-resistor-logic.html">OR Gate Using Diode Resistor Logic</a></li>
+<li><a href="difference-between-and-gate-and-or-gate.html">AND Gate vs OR Gate</a></li>
+<li><a href="two-level-logic-realization.html">Two Level Logic Realization</a></li>
+<li><a href="digital-electronics-threshold-logic.html">Threshold Logic</a></li>
+<li class="heading">Boolean Algebra</li>
+<li><a href="digital-electronics-boolean-algebra.html">Boolean Algebra</a></li>
+<li><a href="laws-of-boolean-algebra.html">Laws of Boolean Algebra</a></li>
+<li><a href="digital-electronics-boolean-functions.html">Boolean Functions</a></li>
+<li><a href="digital-electronics-demorgans-theorem.html">DeMorgan's Theorem</a></li>
+<li><a href="logical-expression-in-sop-and-pos-form.html">SOP and POS Form</a></li>
+<li><a href="convert-pos-to-standard-pos-form.html">POS to Standard POS Form</a></li>
+<li class="heading">Minimization Techniques</li>
+<li><a href="digital-electronics-k-map-minimization.html">K-Map Minimization</a></li>
+<li><a href="three-variable-k-map-in-digital-electronics.html">Three Variable K-Map</a></li>
+<li><a href="four-variable-k-map-in-digital-electronics.html">Four Variable K-Map</a></li>
+<li><a href="five-variable-k-map-in-digital-electronics.html">Five Variable K-Map</a></li>
+<li><a href="six-variable-k-map-in-digital-electronics.html">Six Variable K-Map</a></li>
+<li><a href="don-t-care-conditions-in-k-maps.html">Don't Care Condition</a></li>
+<li><a href="quine-mccluskey-tabular-method.html">Quine-McCluskey Method</a></li>
+<li><a href="minterms-and-maxterms-in-boolean-algebra.html">Min Terms and Max Terms</a></li>
+<li><a href="canonical-and-standard-forms.html">Canonical and Standard Form</a></li>
+<li><a href="maxterms-representation-of-boolean-expression.html">Max Term Representation</a></li>
+<li><a href="simplification-using-boolean-algebra.html">Simplification using Boolean Algebra</a></li>
+<li class="heading">Combinational Logic Circuits</li>
+<li><a href="digital-electronics-combinational-circuits.html">Digital Combinational Circuits</a></li>
+<li><a href="digital-arithmetic-circuits.html">Digital Arithmetic Circuits</a></li>
+<li><a href="digital-electronics-multiplexers.html">Multiplexers</a></li>
+<li><a href="multiplexer-design-procedure-and-applications.html">Multiplexer Design Procedure</a></li>
+<li><a href="multiplexer-universal-logic-gate.html">Mux Universal Gate</a></li>
+<li><a href="two-variable-function-using-4-1-multiplexer.html">2-Variable Function Using 4:1 Mux</a></li>
+<li><a href="three-variable-function-using-8-1-multiplexer.html">3-Variable Function Using 8:1 Mux</a></li>
+<li><a href="digital-electronics-demultiplexers.html">Demultiplexers</a></li>
+<li><a href="difference-between-multiplexer-and-demultiplexer.html">Mux vs Demux</a></li>
+<li><a href="parity-bit-generator-and-checker.html">Parity Bit Generator and Checker</a></li>
+<li><a href="digital-electronics-comparators.html">Comparators</a></li>
+<li><a href="digital-electronics-encoders.html">Encoders</a></li>
+<li><a href="digital-electronics-keyboard-encoders.html">Keyboard Encoders</a></li>
+<li><a href="digital-electronics-priority-encoders.html">Priority Encoders</a></li>
+<li><a href="digital-electronics-decoders.html">Decoders</a></li>
+<li><a href="arithmetic-logic-unit.html">Arithmetic Logic Unit</a></li>
+<li><a href="seven-segment-led-display.html">7-Segment LED Display</a></li>
+<li class="heading">Code Converters</li>
+<li><a href="digital-electronics-code-converters.html">Code Converters</a></li>
+<li><a href="binary-to-decimal-converter.html">Binary to Decimal Converter</a></li>
+<li><a href="decimal-to-bcd-converter.html">Decimal to BCD Converter</a></li>
+<li><a href="bcd-to-decimal-converter.html">BCD to Decimal Converter</a></li>
+<li><a href="binary-to-gray-code-converter.html">Binary to Gray Code Converter</a></li>
+<li><a href="gray-code-to-binary-converter.html">Gray Code to Binary Converter</a></li>
+<li><a href="bcd-to-excess-3-converter.html">BCD to Excess-3 Converter</a></li>
+<li><a href="excess-3-to-bcd-converter.html">Excess-3 to BCD Converter</a></li>
+<li class="heading">Adders</li>
+<li><a href="digital-electronics-half-adder.html">Half Adders</a></li>
+<li><a href="digital-electronics-full-adder.html">Full Adders</a></li>
+<li><a href="digital-electronics-serial-binary-adder.html">Serial Adders</a></li>
+<li><a href="digital-electronics-n-bit-parallel-adders.html">Parallel Adders</a></li>
+<li><a href="design-full-adder-using-half-adder.html">Full Adder using Half Adder</a></li>
+<li><a href="difference-between-half-adder-and-full-adder.html">Half Adder vs Full Adder</a></li>
+<li><a href="full-adder-with-nand-gates.html">Full Adder with NAND Gates</a></li>
+<li><a href="half-adder-with-nand-gates.html">Half Adder with NAND Gates</a></li>
+<li><a href="digital-electronics-binary-adder-subtractor.html">Binary Adder-Subtractor</a></li>
+<li class="heading">Subtractors</li>
+<li><a href="digital-electronics-half-subtractor.html">Half Subtractors</a></li>
+<li><a href="digital-electronics-full-subtractor.html">Full Subtractors</a></li>
+<li><a href="parallel-adder-and-parallel-subtractor.html">Parallel Subtractors</a></li>
+<li><a href="implementation-of-a-full-subtractor-using-two-half-subtractors.html">Full Subtractor using 2 Half Subtractors</a></li>
+<li><a href="half-subtractor-using-nand-gates.html">Half Subtractor using NAND Gates</a></li>
+<li class="heading">Sequential Logic Circuits</li>
+<li><a href="digital-electronics-sequential-circuits.html">Digital Sequential Circuits</a></li>
+<li><a href="clock-signal-and-triggering.html">Clock Signal and Triggering</a></li>
+<li><a href="digital-electronics-latches.html">Latches</a></li>
+<!--<li><a href="/digital-electronics/digital-electronics-flip-flops.htm">Flip-Flops</a></li>-->
+<!--<li><a href="/digital-electronics/digital-electronics-conversion-of-flip-flops.htm">Conversion of Flip-Flops</a></li>-->
+<li><a href="digital-electronics-shift-registers.html">Shift Registers</a></li>
+<li><a href="application-of-shift-registers.html">Shift Register Applications</a></li>
+<li><a href="binary-registers-in-digital-electronics.html">Binary Registers</a></li>
+<li><a href="bidirectional-shift-register-in-digital-electronics.html">Bidirectional Shift Register</a></li>
+<li><a href="digital-electronics-counters.html">Counters</a></li>
+<li><a href="binary-counter-in-digital-electronics.html">Binary Counters</a></li>
+<li><a href="non-binary-counter-in-digital-electronics.html">Non-binary Counter</a></li>
+<li><a href="design-of-synchronous-counter.html">Design of Synchronous Counter</a></li>
+<li><a href="difference-between-synchronous-and-asynchronous-counter.html">Synchronous vs Asynchronous Counter</a></li>
+<li><a href="digital-electronics-finite-state-machines.html">Finite State Machines</a></li>
+<li><a href="algorithmic-state-machine-charts.html">Algorithmic State Machines</a></li>
+<li class="heading">Flip Flops</li>
+<li><a href="digital-electronics-flip-flops.html">Flip-Flops</a></li>
+<li><a href="digital-electronics-conversion-of-flip-flops.html">Conversion of Flip-Flops</a></li>
+<li><a href="what-is-d-flip-flop.html">D Flip-Flops</a></li>
+<li><a href="what-is-jk-flip-flop.html">JK Flip-Flops</a></li>
+<li><a href="what-is-t-flip-flop.html">T Flip-Flops</a></li>
+<li><a href="what-is-sr-flip-flop.html">SR Flip-Flops</a></li>
+<li><a href="synchronous-or-clocked-sr-flip-flop.html">Clocked SR Flip-Flop</a></li>
+<li><a href="asynchronous-or-unclocked-sr-flip-flop.html">Unclocked SR Flip-Flop</a></li>
+<li><a href="clocked-jk-flip-flop.html">Clocked JK Flip-Flop</a></li>
+<li><a href="conversion-of-jk-flip-flop-to-t-flip-flop.html">JK to T Flip-Flop</a></li>
+<li><a href="conversion-of-sr-flip-flop-to-jk-flip-flop.html">SR to JK Flip-Flop</a></li>
+<li><a href="flip-flop-triggering-methods.html">Triggering Methods:Flip-Flop</a></li>
+<li><a href="edge-triggered-flip-flop.html">Edge-Triggered Flip-Flop</a></li>
+<li><a href="master-slave-jk-flip-flop.html">Master-Slave JK Flip-Flop</a></li>
+<li><a href="race-around-condition-in-jk-flip-flop.html">Race-around Condition</a></li>
+<li class="heading">A/D and D/A Converters</li>
+<li><a href="analog-to-digital-converter.html">Analog-to-Digital Converter</a></li>
+<li><a href="digital-to-analog-converter.html">Digital-to-Analog Converter</a></li>
+<li><a href="dac-and-adc-ics.html">DAC and ADC ICs</a></li>
+<li class="heading">Realization of Logic Gates</li>
+<li><a href="implementation-of-not-gate-using-nand-gate.html">NOT Gate from NAND Gate</a></li>
+<li><a href="implementation-of-or-gate-from-nand-gate.html">OR Gate from NAND Gate</a></li>
+<li><a href="implementation-of-and-gate-from-nand-gate.html">AND Gate from NAND Gate</a></li>
+<li><a href="implementation-of-nor-gate-from-nand-gate.html">NOR Gate from NAND Gate</a></li>
+<li><a href="implementation-of-xor-gate-from-nand-gate.html">XOR Gate from NAND Gate</a></li>
+<li><a href="implementation-of-xnor-gate-from-nand-gate.html">XNOR Gate from NAND Gate</a></li>
+<li><a href="implementation-of-not-gate-from-nor-gate.html">NOT Gate from NOR Gate</a></li>
+<li><a href="implementation-of-or-gate-from-nor-gate.html">OR Gate from NOR Gate</a></li>
+<li><a href="implementation-of-and-gate-from-nor-gate.html">AND Gate from NOR Gate</a></li>
+<li><a href="difference-between-nand-gate-and-nor-gate.html">NAND Gate from NOR Gate</a></li>
+<li><a href="implementation-of-xor-gate-from-nor-gate.html">XOR Gate from NOR Gate</a></li>
+<li><a href="implementation-of-xnor-gate-from-nor-gate.html">XNOR Gate from NOR Gate</a></li>
+<li><a href="implementation-of-nand-nor-gate-using-cmos.html">NAND/NOR Gate using CMOS</a></li>
+<li><a href="full-subtractor-using-nand-gate.html">Full Subtractor using NAND Gate</a></li>
+<li><a href="and-gate-using-2-1-mux.html">AND Gate Using 2:1 MUX</a></li>
+<li><a href="or-gate-using-2-1-mux.html">OR Gate Using 2:1 MUX</a></li>
+<li><a href="not-gate-using-2-1-mux.html">NOT Gate Using 2:1 MUX</a></li>
+<li class="heading">Memory Devices</li>
+<li><a href="memory-devices.html">Memory Devices</a></li>
+<li><a href="ram-and-rom.html">RAM and ROM</a></li>
+<li><a href="cache-memory-design.html">Cache Memory Design</a></li>
+<li class="heading">Programmable Logic Devices</li>
+<li><a href="programmable-logic-devices.html">Programmable Logic Devices</a></li>
+<li><a href="programmable-logic-array.html">Programmable Logic Array</a></li>
+<li><a href="programmable-array-logic.html">Programmable Array Logic</a></li>
+<li><a href="field-programmable-gate-arrays.html">Field Programmable Gate Arrays</a></li>
+<li class="heading">Digital Electronics Families</li>
+<li><a href="digital-electronics-families.html">Digital Electronics Families</a></li>
+<li class="heading">CPU Architecture</li>
+<li><a href="cpu-architecture.html">CPU Architecture</a></li>
+</ul>
+<ul class="toc chapters">
+<li><a href="digital-electronics-quick-guide.html">Digital Electronics - Quick Guide</a></li>
+<li><a href="digital-electronics-useful-resources.html">Digital Electronics - Resources</a></li>
+<li><a href="digital-electronics-discussion.html">Digital Electronics - Discussion</a></li>
+</ul>
+         <ul class="toc reading">
+            <li class="sreading">Selected Reading</li>
+            <li><a target="_blank" href="../upsc_ias_exams.html">UPSC IAS Exams Notes</a></li>
+            <li><a target="_blank" href="../developers_best_practices/index.html">Developer's Best Practices</a></li>
+            <li><a target="_blank" href="../questions_and_answers.html">Questions and Answers</a></li>
+            <li><a target="_blank" href="../effective_resume_writing.html">Effective Resume Writing</a></li>
+            <li><a target="_blank" href="../resume-builder.html">AI Based Resume Builder</a></li>
+            <li><a target="_blank" href="../assist.html">Personal AI Study Assistant</a></li>
+            <li><a target="_blank" href="../generate_coding_logic.html">Generate Coding Logic</a></li>
+            <li><a target="_blank" href="../hr_interview_questions/index.html">HR Interview Questions</a></li>
+            <li><a target="_blank" href="../computer_glossary.html">Computer Glossary</a></li>
+            <li><a target="_blank" href="../computer_whoiswho.html">Who is Who</a></li>
+         </ul>
+      </div>
+      <div id="stickyparent" class="d-none d-sm-block">
+         <div style="height:0px;width:300px;" id="sticky-ad">
+          <!-- Placeholder for an advertisement -->
+         </div>
+      </div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="tutorial-content" id="mainContent">
+<div class="cover">
+<img class="img-responsive" src="images/digital-electronics.jpg" alt="Digital Electronics Tutorial">
+</div>
+<h1>Digital Electronics Tutorial</h1>
+<div class="center-aligned tutorial-menu">
+<form action="https://www.tutorialspoint.com/job_search.php" class="tutorial-menu-slider" id="tutorial-menu-slider" method="POST">
+<input type="hidden" name="search_string" value="Digital Electronics">
+<button type="submit" class="tp-btn"><i class="fal fa-search-dollar"></i> Job Search</button>
+<a class="tp-btn" href="digital-electronics-pdf-version.html"><i class="fal fa-file-pdf"></i> PDF Version</a>
+<a class="tp-btn" href="digital-electronics-quick-guide.html"><i class="fal fa-book-reader"></i>  Quick Guide</a>
+<a class="tp-btn" href="digital-electronics-useful-resources.html"><i class="fal fa-external-link"></i>  Resources</a>
+<a class="tp-btn" href="digital-electronics-discussion.html"><i class="fal fa-comments"></i> Discussion</a>
+</form>
+</div>
+<p><b>Digital Electronics</b> is a type of electronics that deals with the study of design, working, and applications of systems that operate on <strong><a href="types-of-signals.html" target="_blank">digital signals</a></strong>. The systems operating on digital signals are referred to as digital systems and the main constituents of <strong><a href="types-of-digital-systems.html" target="_blank">digital systems</a></strong> are digital circuits.</p>
+<p>Digital circuits are designed to process data and signals represented in the form of binary numbers, i.e., 0s and 1s. Digital electronics is not limited to the study of digital systems, but it also deals with the analysis of digital signals and development of advanced digital components and technologies.</p>
+<img src="images/digital-electronics-tutorial.jpg" alt="Digital Electronics Tutorial">
+<p>This comprehensive tutorial on <b>Digital Electronics</b> has been designed for students and professionals who want to learn the concepts of digital electronics. This tutorial covers all the core concepts of digital electronics including number systems, combinational circuits, sequential circuits, <strong><a href="digital-electronics-families.html" target="_blank">IC families</a></strong>, and more.</p> 
+<h2>Introduction to Digital Electronics</h2>
+<p>We can define Digital Electronics as</p>
+<blockquote>
+"The branch of electrical and electronics engineering that deals with study of design, working, and applications of digital signals and systems."
+</blockquote> 
+<p>Digital electronics covers the comprehensive study of digital signals, digital circuits, and digital technologies which are used in electronics, electrical, computers, and communications.</p>
+<p>Digital devices and systems are much faster, accurate, reliable, and efficient as compared to analog electronic devices. This is because digital electronic devices are two-state devices and use binary number system to function. Thus, the operation of these devices toggle between only two binary states namely, on (logic 1) and off (logic 0).</p>
+<p>A digital circuit or system consists of a large collection of logic gates which are interconnected together to implement a specific Boolean or logic function.</p> 
+<div class="inserted-div"><script async="true" id="PS_67ebd889ca6f1325b65a5242" type="text/javascript" src="https://ads.playstream.media/api/adserver/scripts?PS_TAGID=67ebd889ca6f1325b65a5242&amp;PS_PUB_ID=67ebd5e3ca6f1325b65a46fe"></script></div>
+<h2>Evolution of Digital Electronics</h2>
+<p>The following table gives the key milestones in the development of digital electronics and binary logic, from binary number system to modern digital logic gates −</p>
+<div class="table-wrapper">
+<table class="table table-bordered">
+<tr>
+<th class="ts">Year</th> 
+<th class="ts">Description</th> 
+</tr>
+<tr>
+<td class="ts"><b>1705</b></td> 
+<td>Gottfried Wilhelm Leibniz improved and published binary number system.</td>
+</tr>
+<tr>
+<td class="ts"><b>Mid-19<sup>th</sup> Century</b></td> 
+<td>George Boole paved the foundation of digital logical.</td>
+</tr>
+<tr>
+<td class="ts"><b>1886</b></td> 
+<td>American scientist Charles Sanders Peirce explained how logic operations can be performed by using electrical switching circuits.</td>
+</tr>
+<tr>
+<td class="ts"><b>1907</b></td> 
+<td>American inventor Lee De Forest modified the Fleming valve and shown that it can be used as an AND gate.</td>
+</tr>
+<tr>
+<td class="ts"><b>1921</b></td> 
+<td>Austrian philosopher Ludwig Wittgenstein introduced a version of the 16-row truth table.</td>
+</tr>
+<tr>
+<td class="ts"><b>1924</b></td> 
+<td>German nuclear physicist invented the coincidence circuit. This was the first modern electronic AND gate.</td>
+</tr>
+<tr>
+<td class="ts"><b>1941</b></td> 
+<td>Konrad Zuse developed the first fully automatic and programmable digital computer "Z3".</td>
+</tr>
+<tr>
+<td class="ts"><b>1942</b></td> 
+<td>George Stibitz introduced the term "Digital" for first time.</td>
+</tr>
+<tr>
+<td class="ts"><b>1947</b></td> 
+<td>John Bardeen and Walter Brattain invented the point-contact transistor at Bell Labs.</td>
+</tr>
+<tr>
+<td class="ts"><b>1948</b></td> 
+<td>William Shockley developed bipolar junction transistor (BJT) at Bell Labs.</td>
+</tr>
+<tr>
+<td class="ts"><b>1953</b></td> 
+<td>Tom Kilburn and his team developed the first transistorized computer (used transistors instead of vacuum tubes) at the University of Manchester.</td>
+</tr>
+<tr>
+<td class="ts"><b>1955</b></td> 
+<td>Carl Forsch and Lincoln Derick discovered the Silicon Dioxide effects.</td>
+</tr>
+<tr>
+<td class="ts"><b>1957</b></td> 
+<td>First planar transistor was developed.</td>
+</tr>
+<tr>
+<td class="ts"><b>1958</b></td> 
+<td>Germanium-based first integrated circuit (IC) was invented by Jack Kilby at Texas Instruments.</td>
+</tr>
+<tr>
+<td class="ts"><b>1959</b></td> 
+<td>The first MOS (Metal Oxide Semiconductor) transistor was built by Mohamed Atalla and Dawon Kahng at Bell Labs.</td>
+</tr>
+<tr>
+<td class="ts"><b>1959</b></td> 
+<td>Robert Noyce invented a silicon IC at Fairchild semiconductor.</td>
+</tr>
+<tr>
+<td class="ts"><b>1970s</b></td> 
+<td>Large Scale Integration (LSI) technology integrated more than 10,000 transistors on a single chip.</td>
+</tr>
+<tr>
+<td class="ts"><b>1980s</b></td> 
+<td>CMOS (Complementary Metal Oxide Semiconductor) technology made it possible to integrate millions to billons of transistors on a single chip.</td>
+</tr>
+<tr>
+<td class="ts"><b>1990s</b></td> 
+<td>MOSFET-based radio frequency circuits and power amplifiers were laid the foundation of wireless technologies like digital TV, radio, wireless &amp; satellite internet, GPS, mobile communication, etc.</td>
+</tr>
+</table>
+</div>
+<h2>Design and Construction of Digital Circuits</h2>
+<p>The <b>digital electronic circuits</b> are made up of tiny electronic components called <b>logic gates</b>. Where, logic gates are electronic circuits that can perform a Boolean or logical function on input signals. The main component of logic gates is transistor that acts as a switching device.</p>
+<p>An example of digital electronic circuit is shown in the following figure.</p>
+<img src="images/design-and-construction-of-digital-circuits.jpg" alt="Design and Construction of Digital Circuits"> 
+<p>Before designing and constructing a digital electronic circuit, designers and engineers try to minimize logic redundancy, so the circuit can become simpler, use fewer components and become cost effective. This also reduces the chances of errors in design and construction of digital circuits. To reduce the logic redundancy, there are various techniques in digital electronics such as Boolean algebra, K-Map, <strong><a href="quine-mccluskey-tabular-method.html" target="_blank">Quine-McCluskey method</a></strong>, etc.</p>
+<p>In actual practice, the complex digital circuits are usually implemented using embedded systems and microcontrollers like PLCs, because these systems do not need to be perfectly optimized and can be programmed easily using tools like ladder logic.</p> 
+<h2>Importance of Digital Electronics in Computer Organization</h2>
+<p><b>Computer Organization (CO)</b> is a branch of computer engineering that deals with the study of the physical components of a computer system and their functioning. It allows us to understand how different components of a computer system interact with each other to process data, instructions, and perform tasks.</p>
+<img src="images/digital-electronics-in-computer-organization.jpg" alt="Digital Electronics in Computer Organization"> 
+<p>Under computer organization, we study about the hardware architecture and design principles of a computer system. Therefore, computer organization helps computer engineers and system designers to develop more efficient computer systems.</p>
+<p>Here are the key points that highlight the importance of Digital Electronics in the field of Computer Organization −</p>
+<ul class="list-nobg">
+<li>The binary representation of digital electronics is used to design different circuits of a computer system.</li>
+<li>Digital electronics provide logic gates and other digital circuits which are used in designing different components of a computer system like control units, arithmetic logic units (ALUs), memory unit, and more.</li>
+<li>Digital electronics provide principles for design memory units and data storage systems in computers.</li>
+<li>Digital electronics principles also empower computers to perform various digital signal processing tasks such as modulation, demodulation, filtering, etc.</li>
+</ul>
+<p>Digital electronics is the foundational concept in computer organization which provides all the important tools and techniques required for designing and implementing circuits and systems of a computer.</p> 
+<h2>Classification of Digital Electronic Systems</h2>
+<p>Digital electronic systems are broadly classified into two types namely, combinational systems and sequential systems, and they are −</p>
+<ul class="list-nobg">
+<li>
+<b>Combinational Systems</b> − A digital electronic system that produces an output according to its current inputs only is referred to as a combinational system. It does not remember the past inputs and outputs. Instead, it determines the output immediately based on the present inputs.</li>
+<li>
+<b>Sequential Systems</b> − A sequential system is a digital electronic system that gives output based on both current inputs and past inputs. In sequential systems, a feedback path and memory element are provided to feed some of the outputs back as inputs.</li>
+</ul>
+<img src="images/classification-of-digital-electronic-systems.jpg" alt="Classification of Digital Electronic Systems">  
+<p>Sequential systems are further classified into the following two types −</p>
+<ul class="list-numbers list-nobg">
+<li>
+<b>Synchronous Systems</b> − Those sequential systems that use a clock signal for triggering the change in their state are called synchronous systems.</li>
+<li>
+<b>Asynchronous Systems</b> − Those sequential systems that do not use any clock signal and change their state according to applied input are called asynchronous systems.</li>
+</ul>
+<h2>Advantages and Disadvantages of Digital Electronics</h2>
+<p>The following table highlights some major <strong><a href="advantages-and-limitations-of-digital-systems.html" target="_blank">advantages and disadvantages of digital electronics</a></strong> −</p>
+<div class="table-wrapper">
+<table class="table table-bordered">
+<tr>
+<th class="ts">Advantages</th> 
+<th class="ts">Disadvantages</th>
+</tr>
+<tr> 
+<td>Digital signals represent information more accurately.</td>
+<td>Sources of electricity required for operation of digital systems is not readily available.</td>
+</tr>
+<tr> 
+<td>Digital systems are less susceptible to noise and interference.</td>
+<td>Digital signals can have quantization errors, as they cannot perfectly represent information using finite binary digits.</td>
+</tr>
+<tr> 
+<td>Digital electronics provides easy and reliable storage, processing, and transmission of information using binary numbers.</td>
+<td>Analog to digital conversion is involved, hence, digital systems are slower.</td>
+</tr>
+<tr> 
+<td>Digital systems can perform complex operations more precisely.</td>
+<td>Due to sophisticated design and manufacturing process, digital systems are expensive to produce.</td>
+</tr>
+<tr> 
+<td>Design and manufacturing of digital system is easier and faster.</td>
+<td>Repairing process of digital systems require technical expertise.</td>
+</tr>
+<tr> 
+<td>Digital systems are highly energy efficient.</td>
+<td>Due to very high compactness, digital systems cannot be repaired.</td>
+</tr>
+</table>
+</div>
+<h2>Applications of Digital Electronics</h2>
+<p>Digital electronics play an important role in every aspect of our lives, from personal devices to advanced industrial systems. In this section, we have highlighted some of the common applications of digital electronics across various fields −</p>
+<ul class="list-nobg">
+<li>
+<b>Computers</b> − Digital electronics is the backbone of computers. In computers, digital electronics allows for storage, processing, and transmission of data and information in digital format.</li>
+<li>
+<b>Communication Systems</b> − Digital electronics is used in communication systems for information exchange among digital devices like computers, laptops, servers, cell phones, etc. In communication systems, digital electronics provides devices and technologies like modem, multiplexers, <strong><a href="digital-electronics-encoders.html" target="_blank">encoders</a></strong>, etc. for transmission and reception of digital signals.</li>
+<li>
+<b>Home Appliances</b> − Digital electronics is also used in various household appliances like smart TVs, music systems, automated washing machines, remote controlled lights, etc.</li>
+<li>
+<b>Automotives</b> − Digital electronics is being used in modern vehicles for infotainment, engine monitoring and control, navigation, cruise control, etc.</li>
+<li>
+<b>Industrial Control and Automation</b> − In industries, digital electronics is used for automating and controlling processes like assembly line, manufacturing, etc.</li>
+<li>
+<b>Medical Devices</b> − Digital electronics is also being used in advanced medical devices like patient monitoring systems, digital x-rays, CT scans, MRI, ECG, etc.</li>
+</ul> 
+<p>Other applications of digital electronics include military, space research, data processing, simulation, environmental monitoring, security systems, etc.</p>
+<h2>Important Terms in Digital Electronics</h2>
+<p>The following terms and their definitions are important and very helpful to grasp the concepts explained in this tutorial −</p>
+<h3>Binary Number System</h3>
+<p>It is a <strong><a href="digital-electronics-number-systems.html" target="_blank">number system</a></strong> that uses only two digits, i.e., 0 and 1. Thus, the binary number system is a base 2 number system and acts as the foundational concept in digital electronics. It is used for representing information in digital format as shown below.</p>
+<img src="images/binary-number-system.jpg" alt="Binary Number System"> 
+<h3>Binary Arithmetic</h3>
+<p><strong><a href="digital-electronics-binary-arithmetic.html" target="_blank">Binary arithmetic</a></strong> is a mathematical method of performing arithmetic operations like addition, subtraction, multiplication, and division on binary numbers. It is the foundation of data processing in digital electronics.</p>
+<p>Examples of binary arithmetic are,</p>
+<p>$$\mathrm{0 \: + \: 0 \: = \: 0}$$</p>
+<p>$$\mathrm{0 \: + \: 1 \: = \: 1}$$</p>
+<p>$$\mathrm{1 \: + \: 0 \: = \: 1}$$</p>
+<p>$$\mathrm{1 \: + \: 1 \: = \: 0 \: (Carry \: = \: 1)}$$</p>
+<h3>Boolean Algebra</h3>
+<p>Boolean algebra is a branch of algebra that deals with the study of logical operations. It was introduced by an English mathematician George Boole. In Boolean algebra, the values of variables can be either true (denoted by 1) or false (denoted 0), and the operators used are logical operators like AND, OR, NOT, etc.</p>
+<p><strong><a href="digital-electronics-boolean-algebra.html" target="_blank">Boolean algebra</a></strong> is used in digital electronics to simplify complex logical functions and optimize the digital circuit designs.</p>
+<p>Examples of Boolean algebraic expressions are,</p>
+<p></p>
+<p>$$\mathrm{A(B+C) \: = \: AB \: + \: AC}$$</p>
+<p>$$\mathrm{(\overline{A+B}) \: = \: \bar{A}\:\cdot\:\bar{B}}$$</p> 
+<h3>Logic Gates</h3>
+<p><strong><a href="logic-gates.html" target="_blank">Logic gates</a></strong> are the fundamental building blocks in digital electronics. These are the electronic circuits designed to perform Boolean or logical operations.</p>
+<p>The common logic gates are AND gate, OR gate, NOT gate, NAND gate, NOR gate, <strong><a href="xor-gate.html" target="_blank">XOR gate</a></strong>, and <strong><a href="xnor-gate.html" target="_blank">XNOR gate</a></strong>. Logic gates are important in digital electronics to implement decision making capabilities in electronic circuits.</p>
+<img src="images/logic-gates-in-digital-electronic.jpg" alt="Logic Gates in Digital Electronic">
+<h3>Combinational Logic Circuits</h3>
+<p>Combinational logic circuits are the types of digital circuits in which the output depends only on the current inputs. Examples of <strong><a href="digital-electronics-combinational-circuits.html" target="_blank">combinational logic circuits</a></strong> include multiplexers, adders, <strong><a href="digital-electronics-decoders.html" target="_blank">decoders</a></strong>, etc.</p>
+<p>An example of a typical combinational logic circuit is shown in the following figure.</p>
+<img src="images/combinational-logic-circuits.jpg" alt="Combinational Logic Circuits">
+<h3>Sequential Logic Circuits</h3>
+<p><strong><a href="digital-electronics-sequential-circuits.html" target="_blank">Sequential logic circuits</a></strong> are another type of digital circuits whose output depends on both present and past inputs. These circuits are combinations of combinational circuits and a memory element. Examples of sequential logic circuits include registers, counters, state machines, etc. An example of sequential logic circuit is depicted in the following figure.</p>
+<img src="images/sequential-logic-circuits.jpg" alt="Sequential Logic Circuits">
+<h3>Flip-Flops</h3>
+<p><strong><a href="digital-electronics-flip-flops.html" target="_blank">Flip-flops</a></strong> are nothing but digital circuits that have capability to store 1-bit of data and are used in digital electronics as the basic memory element. There are various types of flip-flops like SR flip-flop, D flip-flop, T flip-flop, JK flip-flop, etc. The following figure shows the circuit diagram of the RS flip-flop.</p>
+<img src="images/flip-flops.jpg" alt="Flip-Flops">
+<h3>Multiplexers</h3>
+<p><strong><a href="digital-electronics-multiplexers.html" target="_blank">Multiplexers</a></strong> are represented as MUX and known as Many-to-One devices. A multiplexer is a digital circuit that select one input from multiple inputs and sent it to the output. The block diagram of a multiplexer is shown below.</p>
+<img src="images/multiplexers.jpg" alt="Multiplexers">
+<h3>Karnaugh Map (K-Map)</h3>
+<p><strong><a href="digital-electronics-k-map-minimization.html" target="_blank">K-Map</a></strong> is a graphical tool developed for simplifying complex Boolean expressions. It is used for reducing logic redundancy in digital circuits and make them more design efficient.</p>
+<img src="images/karnaugh-map.jpg" alt="Karnaugh Map">
+<p>K-Map can be used for minimization of logical functions in 2 variables, <strong><a href="three-variable-k-map-in-digital-electronics.html" target="_blank">3 variables</a></strong>, <strong><a href="four-variable-k-map-in-digital-electronics.html" target="_blank">4 variables</a></strong>, <strong><a href="five-variable-k-map-in-digital-electronics.html" target="_blank">5 variables</a></strong>, and <strong><a href="six-variable-k-map-in-digital-electronics.html" target="_blank">6 variables</a></strong>. For more than 6 variable functions, K-map becomes complex and hard to handle.</p>
+<h3>Quine-McCluskey Method</h3>
+<p>It is another method of simplifying or minimizing logical functions to their simplest form. This method was developed to simply complex Boolean expressions using computer systems.</p>
+<h3>Adders</h3>
+<p>Digital circuits designed to perform addition of two binary numbers are called adders. Adders are widely used in arithmetic logic units and calculators. There are two types of adders namely, <strong><a href="digital-electronics-half-adder.html" target="_blank">half-adder</a></strong> and <strong><a href="digital-electronics-full-adder.html" target="_blank">full-adder</a></strong>.</p>
+<img src="images/adders.jpg" alt="Adders"> 
+<p>A half-adder is an adder circuit that can add only two binary digits and produces a sum and a carry output. While a full-adder is one that can add three binary digits at a time (two input bits and one carry from previous addition) and produces a sum and a carry output.</p>
+<h3>Shift Registers</h3>
+<p><strong><a href="digital-electronics-shift-registers.html" target="_blank">Shift registers</a></strong> are digital circuits designed to store multiple data bits and move them in left or right direction depending on control signal.</p>
+<h3>Counters</h3>
+<p><strong><a href="digital-electronics-counters.html" target="_blank">Counters</a></strong> are digital circuits designed to count the input pulses and increase or decrease their output accordingly. They are used in digital clocks, timers, and digital control systems.</p>
+<h3>DAC and ADC Converters</h3>
+<p><strong><a href="digital-to-analog-converter.html" target="_blank">DAC (Digital-to-Analog Converter)</a></strong> are digital circuits that convert digital signals into analog signals and are widely used in devices like amplifiers, audio, video players, etc.</p>
+<p><strong><a href="analog-to-digital-converter.html" target="_blank">ADC (Analog-to-Digital Converter)</a></strong> are digital circuits that convert analog signals into digital signals and are used in computers, laptops, microcontrollers, and other digital devices.</p>
+<h3>Programmable Logic Devices (PLDs)</h3>
+<p><strong><a href="programmable-logic-devices.html" target="_blank">PLDs</a></strong> are digital circuits that can be programmed to perform specific functions in digital systems.</p>
+<h3>Memory Devices (RAM &amp; ROM)</h3>
+<p>RAM (Random Access Memory) is a temporary storage device used in digital systems like computers for quick data access during processing. Whereas, ROM (Read Only Memory) is a permanent storage device used to store those programs and instructions that do not need to be changed. <strong><a href="memory-devices.html" target="_blank">Memory devices</a></strong> are important <strong><a href="digital-system-components.html" target="_blank">components in digital systems</a></strong> for information storage and retrieval.</p>
+<h3>Binary Codes</h3>
+<p>The codes that represent text, numbers, instructions, or any other data using binary digits (0 and 1) are called binary codes. Some common examples of <strong><a href="digital-electronics-binary-codes.html" target="_blank">binary codes</a></strong> include BCD, <strong><a href="what-is-gray-code.html" target="_blank">Gray code</a></strong>, ASCII, <strong><a href="what-is-excess-3-code.html" target="_blank">XS-3</a></strong>, EBCDIC, etc. Binary codes are essential for data storage and processing in digital systems.</p>
+<h3>Complement Arithmetic</h3>
+<p>Complements are defined as the pairs of mutually additive inverse numbers. <strong><a href="digital-electronics-complement-arithmetic.html" target="_blank">Complement arithmetic</a></strong> is a mathematical method of representing negative numbers and performing subtraction using addition operation. It is mainly used in digital systems like computers to perform subtractions.</p>
+<p>Example,</p>
+<p style="text-align:center;">2's Complement = 2<sup>N</sup> - Number</p>
+<p style="text-align:center;">Where, N is the number of bits in the number.</p>
+<p style="text-align:center;">The 2's complement of (1001101)<sub>2</sub> will be,</p>
+<p style="text-align:center;">2's Complement = 2<sup>7</sup> - 1001101</p>
+<p style="text-align:center;">2's Complement = 128 - 1001101</p>
+<p style="text-align:center;">2's Complement = 10000000 - 1001101</p>
+<p style="text-align:center;">2's Complement = 0110011</p>
+<h2>Who Should Learn Digital Electronics?</h2>
+<p>This tutorial on Digital Electronics can be suitable for anyone who is interested in learning about digital systems. It is specially designed for beginner students studying electrical, electronics, computer engineering, or any related field at undergraduate or post-graduate level.</p>
+<p>It can be also a valuable resource for professionals and practicing engineers in the field of digital electronics, automation and control, communication, etc. It can help them to refresh or deepen their understanding of digital electronics and logic concepts.</p> 
+<h2>Prerequisites to Learn Digital Electronics</h2>
+<p>This is a most introductory tutorial on <b>Digital Electronics</b> and thus there are not any strict prerequisites. However, if the readers have some familiarity with the fundamental concepts of electronics like current, voltage, circuits, transistors, diodes, resistors, capacitors, etc. then it will help them grasp the concepts covered in this tutorial more easily and effectively.</p>
+<p>Additionally, if readers have a basic knowledge of binary numbers and logic gates, then it will make the learning of this tutorial smoother.</p>
+<h2>FAQs on Digital Electronics</h2>
+<p>In this section, we have collected a set of <b>Frequently Asked Questions (FAQs)</b> on Digital Electronics followed by their answers −</p>
+<h3>1. What is meant by digital electronics?</h3>
+<p>Digital Electronics is a branch of electronics engineering that deals with the study of digital signals and development of devices that can operate on them. Common examples of digital electronics include computers, smartphones, internet, smart TVs, USB drives, etc.</p>
+<p>Some of the major reasons why we use digital electronics include the following −</p>
+<ul class="list">
+<li>Digital systems are more accurate and efficient.</li>
+<li>Digital signals and systems are more immune to noise and interference.</li>
+<li>Digital electronic circuits require less power to perform functions.</li>
+<li>Digital systems are easier to design and manufacture, etc.</li>
+</ul>
+<h3>2. What is digital electronic machine?</h3>
+<p>Any electronic machine that can perform functions or operations by processing data in discrete form is called a digital electronic machine. These machines use data and instructions expressed in binary codes, i.e., using 0s and 1s. A desktop computer is an example of digital electronic machine.</p>
+<h3>3. What are the basic gates?</h3>
+<p>In digital electronics, there are three basic gates namely,</p>
+<ul class="list-nobg">
+<li>
+<strong><a href="or-gate.html" target="_blank">OR Gate</a></strong> − Takes two or more binary inputs and gives a high (or true) output when any one of the inputs is high.</li>
+<li>
+<strong><a href="and-gate.html" target="_blank">AND Gate</a></strong>− Takes two or more binary inputs and gives a high (or true) output when all the applied inputs are high.</li>
+<li>
+<strong><a href="not-gate.html" target="_blank">NOT Gate</a></strong> − Takes only one binary input and gives an inverted or complemented output. If input is high, the output will be low and vice-versa.</li>
+</ul>
+<h3>4. How does Digital Electronics differ from Analog Electronics?</h3>
+<p>The primary difference between digital and analog electronics is that digital electronics process data in the form of discrete or discontinuous time signals, while analog electronics use continuous signals for processing purposes.</p>
+<h3>5. Who invented digital electronics?</h3>
+<p>Digital electronics was not invented by a single person, instead it is a result of research work of many scientists and engineers like George Boole, G. W. Leibniz, Claude Shannon, John Bardeen, W. Brattain, William Shockley, and many other. </p>
+<h3>6. What is a "clock" in digital electronics?</h3>
+<p>In digital electronics, a clock is a signal that oscillates between a high and a low state at a constant frequency and used for synchronization of actions in digital circuits.</p>
+<h3>7. How do Combinational and Sequential Circuits Differ?</h3>
+<p>A <b>combinational logic circuit</b> is simply an interconnected set of logic gates that produces an output depending on the inputs applied.</p>
+<p>On the other hand, a <b>sequential circuit</b> is a group of combinational circuit and memory element. Thus, the output of the sequential circuit is governed by the present inputs and past outputs.</p>
+<h3>8. What is the Role of Digital Logic Design in Integrated Circuit (IC) Fabrication?</h3>
+<p>Digital logic design is an important concept in integrated circuit fabrication. It helps the designer in the following processes −</p>
+<ul class="list">
+<li>Determine the specifications and design parameters of the IC.</li>
+<li>Technology mapping, i.e., selection and mapping of logic gates and other components.</li>
+<li>Prepare the physical design and structure to understand the position and interconnection of components.</li>
+<li>Test and verify the design for any error or bug.</li>
+<li>Final product production at mass level.</li>
+</ul> 
+<h3>9. What are FPGAs and Their Role in Digital Electronics?</h3>
+<p><strong><a href="field-programmable-gate-arrays.html" target="_blank">Field Programmable Gate Arrays (FPGAs)</a></strong> are digital devices in which a matrix of configurable logic blocks (CLBs) is connected together through programmable interconnects.</p>
+<p>A user can reprogram an FPGA to meet the needs of a desired application. Therefore, it allows us to design a wide range of custom digital circuits, such as combinational and sequential circuits, arithmetic logic units, memory blocks, control systems, data processing systems, etc.</p><div class="library-page-bottom-nav ">
+   <div class="button button--blue" id="print-page">
+    <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M112 160V64c0-8.8 7.2-16 16-16H357.5c4.2 0 8.3 1.7 11.3 4.7l26.5 26.5c3 3 4.7 7.1 4.7 11.3V160h48V90.5c0-17-6.7-33.3-18.7-45.3L402.7 18.7C390.7 6.7 374.5 0 357.5 0H128C92.7 0 64 28.7 64 64v96h48zm16 208H384v96H128V368zm-16-48c-17.7 0-32 14.3-32 32H48V256c0-8.8 7.2-16 16-16H448c8.8 0 16 7.2 16 16v96H432c0-17.7-14.3-32-32-32H112zm320 80h48c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64V368c0 17.7 14.3 32 32 32H80v80c0 17.7 14.3 32 32 32H400c17.7 0 32-14.3 32-32V400z"/></svg>
+      Print Page
+   </div>
+   <div class="flex-group">
+   <a href="index.html">
+   <div class="button button--neutral">
+   <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M1.03117 8.48836C0.64065 8.09783 0.64065 7.46467 1.03117 7.07414L7.39514 0.710183C7.78566 0.319658 8.41883 0.319658 8.80935 0.710183C9.19987 1.10071 9.19987 1.73387 8.80935 2.1244L3.15249 7.78125L8.80935 13.4381C9.19987 13.8286 9.19987 14.4618 8.80935 14.8523C8.41882 15.2428 7.78566 15.2428 7.39513 14.8523L1.03117 8.48836ZM3.12109 8.78125L1.73828 8.78125L1.73828 6.78125L3.12109 6.78125L3.12109 8.78125Z" fill="black" /></svg>
+      Previous
+   </div>
+   </a>
+   <a href="types-of-digital-systems.html">
+   <div class="button ">Next
+   <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path
+   d="M8.87117 8.48836C9.26169 8.09783 9.26169 7.46467 8.87117 7.07414L2.50721 0.710183C2.11668 0.319658 1.48352 0.319658 1.09299 0.710183C0.70247 1.10071 0.70247 1.73387 1.09299 2.1244L6.74985 7.78125L1.093 13.4381C0.702471 13.8286 0.702471 14.4618 1.093 14.8523C1.48352 15.2428 2.11668 15.2428 2.50721 14.8523L8.87117 8.48836ZM6.78125 8.78125L8.16406 8.78125L8.16406 6.78125L6.78125 6.78125L6.78125 8.78125Z" fill="white" /></svg>
+   </div>
+   </a>
+   </div>
+</div>
+   <div class="bottom-library-ads mt"  style="margin:5px;">
+      <div class="google-bottom-ads" id="google-bottom-ads">
+         <div>Advertisements</div>
+                    <div style="width: 750px; height: 300px;">
+                <!-- TAGNAME: 750x300_Bottom_Ad -->
+                <div id='tutorialspointcom47468'>
+                </div>
+           </div>
+                 </div>
+   </div>
+   </div>
+   <div>
+         <div class="data-sticky" id="google-right-ads">
+        <div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;min-height:280px!important">
+             <!-- TAGNAME: 336x280_Right_Sidebar_1 -->
+             <div id='tutorialspointcom47465'>
+             </div>
+        </div>
+        <div class="google-right-ad" style="margin-top:16px;min-height:280px!important">
+            <!-- TAGNAME: 336x280_Right_Sidebar_2 -->
+            <div id='tutorialspointcom47466'>
+            </div>
+        </div>
+        <div class="google-right-ad" style="margin-top:16px;min-height:280px!important">
+            <!-- TAGNAME: 300x600_Right_Sidebar -->
+           <div id='tutorialspointcom47467'>
+           </div>
+        </div>
+      </div>
+     </div>
+   </div>
+</div>
+</div>
+</main>
+<footer class="bg-neutral-800 text-sm">
+      <div class="container mx-auto px-4 py-12">
+         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:justify-items-center gap-8">
+            <div>
+               <h5 class="text-white font-bold text-base mb-4">TOP TUTORIALS</h5>
+               <ul class="space-y-2">
+                  <li><a href="../python/index.html" class="text-gray-300 hover:text-white">Python Tutorial</a></li>
+                  <li><a href="../java/index.html" class="text-gray-300 hover:text-white">Java Tutorial</a></li>
+                  <li><a href="../cplusplus/index.html" class="text-gray-300 hover:text-white">C++ Tutorial</a></li>
+                  <li><a href="../cprogramming/index.html" class="text-gray-300 hover:text-white">C Programming
+                        Tutorial</a></li>
+                  <li><a href="../csharp/index.html" class="text-gray-300 hover:text-white">C# Tutorial</a></li>
+                  <li><a href="../php/index.html" class="text-gray-300 hover:text-white">PHP Tutorial</a></li>
+                  <li><a href="../r/index.html" class="text-gray-300 hover:text-white">R Tutorial</a></li>
+                  <li><a href="../html/index.html" class="text-gray-300 hover:text-white">HTML Tutorial</a></li>
+                  <li><a href="../css/index.html" class="text-gray-300 hover:text-white">CSS Tutorial</a></li>
+                  <li><a href="../javascript/index.html" class="text-gray-300 hover:text-white">JavaScript Tutorial</a>
+                  </li>
+                  <li><a href="../sql/index.html" class="text-gray-300 hover:text-white">SQL Tutorial</a></li>
+               </ul>
+            </div>
+
+            <div>
+               <h5 class="text-white font-bold text-base mb-4">TRENDING TECHNOLOGIES</h5>
+               <ul class="space-y-2">
+                  <li><a href="../cloud_computing/index.html" class="text-gray-300 hover:text-white">Cloud Computing
+                        Tutorial</a></li>
+                  <li><a href="../amazon_web_services/index.html" class="text-gray-300 hover:text-white">Amazon Web
+                        Services Tutorial</a></li>
+                  <li><a href="../microsoft_azure/index.html" class="text-gray-300 hover:text-white">Microsoft Azure
+                        Tutorial</a></li>
+                  <li><a href="../git/index.html" class="text-gray-300 hover:text-white">Git Tutorial</a></li>
+                  <li><a href="../ethical_hacking/index.html" class="text-gray-300 hover:text-white">Ethical Hacking
+                        Tutorial</a></li>
+                  <li><a href="../docker/index.html" class="text-gray-300 hover:text-white">Docker Tutorial</a></li>
+                  <li><a href="../kubernetes/index.html" class="text-gray-300 hover:text-white">Kubernetes Tutorial</a>
+                  </li>
+                  <li><a href="../data_structures_algorithms/index.html" class="text-gray-300 hover:text-white">DSA
+                        Tutorial</a></li>
+                  <li><a href="../spring_boot/index.html" class="text-gray-300 hover:text-white">Spring Boot Tutorial</a>
+                  </li>
+                  <li><a href="../sdlc/index.html" class="text-gray-300 hover:text-white">SDLC Tutorial</a></li>
+                  <li><a href="../unix/index.html" class="text-gray-300 hover:text-white">Unix Tutorial</a></li>
+               </ul>
+            </div>
+
+            <div>
+               <h5 class="text-white font-bold text-base mb-4">CERTIFICATIONS</h5>
+               <ul class="space-y-2">
+                  <li><a href="../certification/business-analytics-certification-2023/index.html"
+                        class="text-gray-300 hover:text-white">Business Analytics Certification</a></li>
+                  <li><a href="../certification/java-prime-pack/index.html" class="text-gray-300 hover:text-white">Java &
+                        Spring Boot Advanced Certification</a></li>
+                  <li><a href="../certification/data-science-advanced-certification/index.html"
+                        class="text-gray-300 hover:text-white">Data Science Advanced Certification</a></li>
+                  <li><a href="../certification/cloud-computing-and-devops-advanced-certification/index.html"
+                        class="text-gray-300 hover:text-white">Cloud Computing And DevOps</a></li>
+                  <li><a href="../certification/advanced-certification-in-business-analytics/index.html"
+                        class="text-gray-300 hover:text-white">Advanced Certification In Business Analytics</a></li>
+                  <li><a href="../certification/artificial-intelligence-and-machine-learning-certification/index.html"
+                        class="text-gray-300 hover:text-white">Artificial Intelligence And Machine Learning</a></li>
+                  <li><a href="../certification/devops-certification/index.html"
+                        class="text-gray-300 hover:text-white">DevOps Certification</a></li>
+                  <li><a href="../certification/game-development-prime-pack/index.html"
+                        class="text-gray-300 hover:text-white">Game Development Certification</a></li>
+                  <li><a href="../certification/frontend-developer-certification/index.html"
+                        class="text-gray-300 hover:text-white">Front-End Developer Certification</a></li>
+                  <li><a href="../certification/aws-prime-pack/index.html" class="text-gray-300 hover:text-white">AWS
+                        Certification Training</a></li>
+                  <li><a href="../certification/complete-python-prime-pack/index.html"
+                        class="text-gray-300 hover:text-white">Python Programming Certification</a></li>
+               </ul>
+            </div>
+
+            <div>
+               <h5 class="text-white font-bold text-base mb-4">COMPILERS & EDITORS</h5>
+               <ul class="space-y-2">
+                    <li><a href="../compilers/online-java-compiler.html" class="text-gray-300 hover:text-white" title="Online Java Compiler">Online Java Compiler</a></li>
+                    <li><a href="../compilers/online-python-compiler.html" class="text-gray-300 hover:text-white" title="Online Python Compiler">Online Python Compiler</a></li>
+                    <li><a href="../compilers/online-golang-compiler.html" class="text-gray-300 hover:text-white" title="Online Go Compiler">Online Go Compiler</a></li>
+                    <li><a href="../compilers/online-c-compiler.html" class="text-gray-300 hover:text-white" title="Online C Compiler">Online C Compiler</a></li>
+                    <li><a href="../compilers/online-cpp-compiler.html" class="text-gray-300 hover:text-white" title="Online C++ Compiler">Online C++ Compiler</a></li>
+                    <li><a href="../compilers/online-csharp-compiler.html" class="text-gray-300 hover:text-white" title="Online C# Compiler">Online C# Compiler</a></li>
+                    <li><a href="../compilers/online-php-compiler.html" class="text-gray-300 hover:text-white" title="Online PHP Compiler">Online PHP Compiler</a></li>
+                    <li><a href="../compilers/online-matlab-compiler.html" class="text-gray-300 hover:text-white" title="Online MATLAB Compiler">Online MATLAB Compiler</a></li>
+                    <li><a href="../compilers/online-bash-terminal.html" class="text-gray-300 hover:text-white" title="Online Bash Terminal">Online Bash Terminal</a></li>
+                    <li><a href="../compilers/online-sql-editor.html" class="text-gray-300 hover:text-white" title="Online SQL Compiler">Online SQL Compiler</a></li>
+                    <li><a href="../compilers/online-html-editor.html" class="text-gray-300 hover:text-white" title="Online Html Editor">Online Html Editor</a></li>
+               </ul>
+            </div>
+         </div>
+
+         <ul class="footer-links flex text-xs flex-wrap justify-center gap-x-2 text-gray-300 mt-10 mb-6">
+           <li><a href="../about/index.html" class="hover:text-white">ABOUT US</a></li>
+           <li><a href="../about/about_team.html" class="hover:text-white">OUR TEAM</a></li>
+           <li><a href="../about/about_careers.html" class="hover:text-white">CAREERS</a></li>
+           <li><a href="../job_search.html" class="hover:text-white">JOBS</a></li>
+           <li><a href="../about/contact_us.html" class="hover:text-white">CONTACT US</a></li>
+           <li><a href="../about/about_terms_of_use.html" class="hover:text-white">TERMS OF USE</a></li>
+           <li><a href="../about/about_privacy.html" class="hover:text-white">PRIVACY POLICY</a></li>
+           <li><a href="../about/return_refund_policy.html" class="hover:text-white">REFUND POLICY</a></li>
+           <li><a href="../about/about_cookies.html" class="hover:text-white">COOKIES POLICY</a></li>
+           <li><a href="../about/faq.html" class="hover:text-white">FAQ'S</a></li>
+         </ul>
+
+         <div class="flex flex-col md:flex-row items-center justify-center gap-8 py-6 border-t border-gray-700">
+            <img class="h-8 mb-4 md:mb-0" src="../static/images/logo-footer.svg" loading="lazy" alt="tutorials point logo">
+
+            <div class="flex space-x-6 mb-4 md:mb-0">
+               <a rel="nofollow" target="_blank" href="https://www.facebook.com/tutorialspointindia" class="text-gray-400 hover:text-white" aria-label="Facebook">
+                  <i class="!size-7 fa-brands fa-facebook-f"></i>
+               </a>
+               <a target="_blank" href="https://x.com/tutorialspoint" rel="nofollow" class="text-gray-400 hover:text-white" aria-label="X">
+                  <i class="!size-7 fa-brands fa-x-twitter"></i>
+               </a>
+               <a target="_blank" href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" rel="nofollow" class="text-gray-400 hover:text-white" aria-label="YouTube">
+                  <i class="!size-7 fa-brands fa-youtube"></i>
+               </a>
+               <a target="_blank" href="https://www.linkedin.com/company/tutorialspoint/" rel="nofollow" class="text-gray-400 hover:text-white" aria-label="Linkedin">
+                  <i class="!size-7 fa-brands fa-linkedin-in"></i>
+               </a>
+               <a target="_blank" href="https://www.instagram.com/tutorialspoint_/" rel="nofollow" class="text-gray-400 hover:text-white" aria-label="Instagram">
+                  <i class="!size-7 fa-brands fa-instagram"></i>
+               </a>
+            </div>
+
+            <div class="flex space-x-4">
+               <a href="https://play.google.com/store/apps/details?id=com.tutorialspoint.onlineviewer" target="_blank"
+                  rel="nofollow">
+                  <img src="../static/images/googleplay.svg" alt="Download Android App" loading="lazy" class="h-10">
+               </a>
+               <a href="https://itunes.apple.com/us/app/tutorials-point/id914891263?ls=1&amp;mt=8" target="_blank" rel="nofollow">
+                  <img src="../static/images/appstore.svg" alt="Download IOS App" loading="lazy" class="h-10">
+               </a>
+            </div>
+         </div>
+         <div class="pt-6 pb-8 text-center border-t border-gray-700">
+            <p class="text-gray-300 max-w-5xl mx-auto mb-2">
+               Tutorials Point is a leading Ed Tech company striving to provide the best learning material on technical
+               and non-technical subjects.
+            </p>
+            <p class="text-gray-300 mt-8 text-sm">© Copyright 2025. All Rights Reserved.</p>
+         </div>
+      </div>
+</footer>
+<script src="../static/js/new-lib-script.min3aa2.js?v-3"></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<div id="fluid-privacy-opt-out-link" onmouseover="this.style.color='rgb(25, 103, 210)'; this.style.cursor='pointer'" onmouseout="this.style.color='#CCCCCC'; this.style.cursor='auto'"></div>
+<script>
+const privacyOptOutLink = document.getElementById("fluid-privacy-opt-out-link");
+window.googlefc = window.googlefc || { callbackQueue: [] };
+window.googlefc.ccpa = window.googlefc.ccpa || {};
+window.googlefc.ccpa.overrideDnsLink = true;
+window.googlefc.callbackQueue.push({
+    "CONSENT_API_READY": () => {
+      if (!privacyOptOutLink) {
+        return;
+      }
+      !!window.__tcfapi && window.__tcfapi("addEventListener", 2, (tcData, success) => {
+        if (success && tcData.gdprApplies) {
+          privacyOptOutLink.innerText = "Change GDPR Consent";
+          privacyOptOutLink.addEventListener("click", () => googlefc.showRevocationMessage());
+          return;
+        }
+      });
+    }
+});
+window.googlefc.callbackQueue.push({
+    "INITIAL_CCPA_DATA_READY": () => {
+      if (!privacyOptOutLink) {
+        return;
+      }
+
+      if (googlefc.ccpa.getInitialCcpaStatus() && googlefc.ccpa.getInitialCcpaStatus() === googlefc.ccpa.InitialCcpaStatusEnum.NOT_OPTED_OUT) {
+        privacyOptOutLink.innerText = "Don't sell or share my personal info";
+        privacyOptOutLink.addEventListener("click", () => googlefc.ccpa.openConfirmationDialog((optedOut) => {
+          if (optedOut) {
+            privacyOptOutLink.style.display = "none";
+          }
+        }));
+        return
+      }
+    }
+ });
+</script>
+<script>
+if(getCookie('auid') == '' || getCookie('auid') == null){
+   window.onload = function() {
+        initializeGoogleOneTap();
+   };
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EX9ZP4VY84"></script>
+<script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-EX9ZP4VY84');
+</script>
+<!-- New Facebook Pixel Code -->
+<script>
+   !function(f,b,e,v,n,t,s)
+   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+   n.queue=[];t=b.createElement(e);t.async=!0;
+   t.src=v;s=b.getElementsByTagName(e)[0];
+   s.parentNode.insertBefore(t,s)}(window,document,'script',
+   '../../connect.facebook.net/en_US/fbevents.js');
+   fbq('init', '854536859149047');
+   fbq('track', 'PageView');
+</script>
+ <!-- End facebook Pixel Code -->
+</body>
+
+<!-- Mirrored from www.tutorialspoint.com/digital-electronics/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Aug 2025 05:20:11 GMT -->
+</html>

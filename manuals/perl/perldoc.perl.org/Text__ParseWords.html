@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/Text::ParseWords by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Text::ParseWords - parse text into an array of tokens or array of arrays - Perldoc Browser</title>
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="Text__ParseWords.html">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.html"><img src="images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.42.0</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="Text__ParseWords.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item active" href="https://perldoc.perl.org/5.42.0/Text::ParseWords">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/Text::ParseWords">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/Text::ParseWords">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/Text::ParseWords">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/Text::ParseWords">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/Text::ParseWords">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/Text::ParseWords">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/Text::ParseWords">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/Text::ParseWords">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/Text::ParseWords">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/Text::ParseWords">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/Text::ParseWords">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/Text::ParseWords">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/Text::ParseWords">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/Text::ParseWords">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/Text::ParseWords">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/Text::ParseWords">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/Text::ParseWords">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/Text::ParseWords">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/Text::ParseWords">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/Text::ParseWords">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/Text::ParseWords">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/Text::ParseWords">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/Text::ParseWords">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/Text::ParseWords">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/Text::ParseWords">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/Text::ParseWords">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/Text::ParseWords">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/Text::ParseWords">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/Text::ParseWords">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/Text::ParseWords">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/Text::ParseWords">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/Text::ParseWords">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/Text::ParseWords">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/Text::ParseWords">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/Text::ParseWords">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/Text::ParseWords">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/Text::ParseWords">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/Text::ParseWords">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/Text::ParseWords">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/Text::ParseWords">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/Text::ParseWords">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/Text::ParseWords">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/Text::ParseWords">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/Text::ParseWords">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/Text::ParseWords">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/Text::ParseWords">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/Text::ParseWords">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/Text::ParseWords">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/Text::ParseWords">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/Text::ParseWords">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/Text::ParseWords">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/Text::ParseWords">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/Text::ParseWords">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/Text::ParseWords">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/Text::ParseWords">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/Text::ParseWords">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/Text::ParseWords">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/Text::ParseWords">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/Text::ParseWords">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/Text::ParseWords">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/Text::ParseWords">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/Text::ParseWords">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/Text::ParseWords">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/Text::ParseWords">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/Text::ParseWords">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/Text::ParseWords">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/Text::ParseWords">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/Text::ParseWords">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/Text::ParseWords">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/Text::ParseWords">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/Text::ParseWords">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/Text::ParseWords">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/Text::ParseWords">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/Text::ParseWords">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/Text::ParseWords">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/Text::ParseWords">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/Text::ParseWords">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/Text::ParseWords">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.2/Text::ParseWords">5.6.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.1/Text::ParseWords">5.6.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.0/Text::ParseWords">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_04/Text::ParseWords">5.005_04</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_03/Text::ParseWords">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/Text::ParseWords">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/Text::ParseWords">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/Text::ParseWords">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/Text::ParseWords">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/Text::ParseWords">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/Text::ParseWords">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/Text::ParseWords">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/Text::ParseWords">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/Text::ParseWords">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/Text::ParseWords">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/Text::ParseWords">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/Text::ParseWords">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/Text::ParseWords">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/Text::ParseWords">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/Text::ParseWords">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/Text::ParseWords">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/Text::ParseWords">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/Text::ParseWords">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/Text::ParseWords">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/Text::ParseWords">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/Text::ParseWords">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/Text::ParseWords">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/Text::ParseWords">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="Text__ParseWords.html">Text::ParseWords</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/Text::ParseWords.txt">source</a>,
+            <a href="https://metacpan.org/pod/Text::ParseWords">CPAN</a>)
+          </div>
+            <div id="moduleversion">version 3.31</div>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SYNOPSIS">SYNOPSIS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#EXAMPLES">EXAMPLES</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SEE-ALSO">SEE ALSO</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#AUTHORS">AUTHORS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#COPYRIGHT-AND-LICENSE">COPYRIGHT AND LICENSE</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>Text::ParseWords - parse text into an array of tokens or array of arrays</p>
+
+<h1 id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">#</a>SYNOPSIS</h1>
+
+<pre><code>use Text::ParseWords;
+@lists = nested_quotewords($delim, $keep, @lines);
+@words = quotewords($delim, $keep, @lines);
+@words = shellwords(@lines);
+@words = parse_line($delim, $keep, $line);
+@words = old_shellwords(@lines); # DEPRECATED!</code></pre>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>The <code>nested_quotewords()</code> and <code>quotewords()</code> functions accept a delimiter (which can be a regular expression) and a list of lines and then breaks those lines up into a list of words ignoring delimiters that appear inside quotes. <code>quotewords()</code> returns all of the tokens in a single long list, while <code>nested_quotewords()</code> returns a list of token lists corresponding to the elements of <code>@lines</code>. <code>parse_line()</code> does tokenizing on a single string. The <code>*quotewords()</code> functions simply call <code>parse_line()</code>, so if you&#39;re only splitting one line you can call <code>parse_line()</code> directly and save a function call.</p>
+
+<p>The <code>$keep</code> controls what happens with delimters and special characters:</p>
+
+<dl>
+
+<dt id="true"><a class="permalink" href="#true">#</a>true</dt>
+<dd>
+
+<p>If true, then the tokens are split on the specified delimiter, but all other characters (including quotes and backslashes) are kept in the tokens.</p>
+
+</dd>
+<dt id="false"><a class="permalink" href="#false">#</a>false</dt>
+<dd>
+
+<p>If $keep is false then the <code>*quotewords()</code> functions remove all quotes and backslashes that are not themselves backslash-escaped or inside of single quotes (i.e., <code>quotewords()</code> tries to interpret these characters just like the Bourne shell). NB: these semantics are significantly different from the original version of this module shipped with Perl 5.000 through 5.004.</p>
+
+</dd>
+<dt id="&quot;delimiters&quot;"><a class="permalink" href="#%22delimiters%22">#</a><a id="delimiters"></a><code>&quot;delimiters&quot;</code></dt>
+<dd>
+
+<p>As an additional feature, $keep may be the keyword &quot;delimiters&quot; which causes the functions to preserve the delimiters in each string as tokens in the token lists, in addition to preserving quote and backslash characters.</p>
+
+</dd>
+</dl>
+
+<p><code>shellwords()</code> is written as a special case of <code>quotewords()</code>, and it does token parsing with whitespace as a delimiter-- similar to most Unix shells.</p>
+
+<h1 id="EXAMPLES"><a class="permalink" href="#EXAMPLES">#</a>EXAMPLES</h1>
+
+<p>The sample program:</p>
+
+<pre><code>use Text::ParseWords;
+@words = quotewords(&#39;\s+&#39;, 0, q{this   is &quot;a test&quot; of\ quotewords \&quot;for you});
+$i = 0;
+foreach (@words) {
+    print &quot;$i: &lt;$_&gt;\n&quot;;
+    $i++;
+}</code></pre>
+
+<p>produces:</p>
+
+<pre><code class="plaintext">0: &lt;this&gt;
+1: &lt;is&gt;
+2: &lt;a test&gt;
+3: &lt;of quotewords&gt;
+4: &lt;&quot;for&gt;
+5: &lt;you&gt;</code></pre>
+
+<p>demonstrating:</p>
+
+<dl>
+
+<dt id="0"><a class="permalink" href="#0">#</a><a id="pod0"></a>0</dt>
+<dd>
+
+<p>a simple word</p>
+
+</dd>
+<dt id="1"><a class="permalink" href="#1">#</a><a id="pod1"></a>1</dt>
+<dd>
+
+<p>multiple spaces are skipped because of our $delim</p>
+
+</dd>
+<dt id="2"><a class="permalink" href="#2">#</a><a id="pod2"></a>2</dt>
+<dd>
+
+<p>use of quotes to include a space in a word</p>
+
+</dd>
+<dt id="3"><a class="permalink" href="#3">#</a><a id="pod3"></a>3</dt>
+<dd>
+
+<p>use of a backslash to include a space in a word</p>
+
+</dd>
+<dt id="4"><a class="permalink" href="#4">#</a><a id="pod4"></a>4</dt>
+<dd>
+
+<p>use of a backslash to remove the special meaning of a double-quote</p>
+
+</dd>
+<dt id="5"><a class="permalink" href="#5">#</a><a id="pod5"></a>5</dt>
+<dd>
+
+<p>another simple word (note the lack of effect of the backslashed double-quote)</p>
+
+</dd>
+</dl>
+
+<p>Replacing <code>quotewords(&#39;\s+&#39;, 0, q{this is...})</code> with <code>shellwords(q{this is...})</code> is a simpler way to accomplish the same thing.</p>
+
+<h1 id="SEE-ALSO"><a class="permalink" href="#SEE-ALSO">#</a><a id="SEE"></a>SEE ALSO</h1>
+
+<p><a href="https://metacpan.org/pod/Text::CSV">Text::CSV</a> - for parsing CSV files</p>
+
+<h1 id="AUTHORS"><a class="permalink" href="#AUTHORS">#</a>AUTHORS</h1>
+
+<p>The original author is unknown, but presumably this evolved from <code>shellwords.pl</code> in Perl 4.</p>
+
+<p>Much of the code for <code>parse_line()</code> (including the primary regexp) came from Joerk Behrends &lt;jbehrends@multimediaproduzenten.de&gt;.</p>
+
+<p>Examples section and other documentation provided by John Heidemann &lt;johnh@ISI.EDU&gt;.</p>
+
+<p>Hal Pomeranz &lt;pomeranz@netcom.com&gt; maintained this from 1994 through 1999, and did the first CPAN release.</p>
+
+<p>Alexandr Ciornii &lt;alexchornyATgmail.com&gt; maintained this from 2008 to 2015.</p>
+
+<p>Many other people have contributed, with special thanks due to Michael Schwern &lt;schwern@envirolink.org&gt; and Jeff Friedl &lt;jfriedl@yahoo-inc.com&gt;.</p>
+
+<h1 id="COPYRIGHT-AND-LICENSE"><a class="permalink" href="#COPYRIGHT-AND-LICENSE">#</a><a id="COPYRIGHT"></a>COPYRIGHT AND LICENSE</h1>
+
+<p>This library is free software; you may redistribute and/or modify it under the same terms as Perl itself.</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/Text::ParseWords by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:53 GMT -->
+</html>

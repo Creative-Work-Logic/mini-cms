@@ -1,0 +1,1835 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-holy-grail   show-table-of-contents conceptual show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		
+<!-- Mirrored from learn.microsoft.com/en-us/aspnet/core/fundamentals/portable-object-localization?view=aspnetcore-9.0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 14:53:03 GMT -->
+<head>
+			<title>Configure portable object localization in ASP.NET Core | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="This article introduces Portable Object files and outlines steps for using them in an ASP.NET Core application with the Orchard Core framework." />
+			<link rel="canonical" href="portable-object-localization553c.html?view=aspnetcore-9.0" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="Configure portable object localization in ASP.NET Core | Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/dotnet/media/dotnet-logo.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="Configure portable object localization in ASP.NET Core" />
+			<meta property="og:url" content="portable-object-localization553c.html?view=aspnetcore-9.0" />
+			<meta property="og:description" content="This article introduces Portable Object files and outlines steps for using them in an ASP.NET Core application with the Orchard Core framework." />
+			<meta name="platform_id" content="8c3f279a-96ca-f7a6-4e5f-82fd94aa8bbd" /> <meta name="scope" content="ASP.NET Core" />
+			<meta name="locale" content="en-us" />
+			 <meta name="adobe-target" content="true" />
+			<meta name="uhfHeaderId" content="MSDocsHeader-AspNet" />
+
+			<meta name="page_type" content="conceptual" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="breadcrumb_path" content="/aspnet/core/breadcrumb/toc.json" />
+	
+		<meta name="feedback_system" content="OpenSource" />
+	
+		<meta name="feedback_product_url" content="https://github.com/dotnet/aspnetcore/blob/main/CONTRIBUTING.md" />
+	
+		<meta name="ms.service" content="aspnet-core" />
+	
+		<meta name="ms.topic" content="conceptual" />
+	
+		<meta name="ms.subservice" content="fundamentals" />
+	
+		<meta name="author" content="sebastienros" />
+	
+		<meta name="ms.author" content="wpickett" />
+	
+		<meta name="ms.date" content="2025-07-09T00:00:00Z" />
+	
+		<meta name="uid" content="fundamentals/portable-object-localization" />
+	
+		<meta name="document_id" content="6b1098b7-dbe7-a8d8-f57f-017b1c94e960" />
+	
+		<meta name="document_version_independent_id" content="96179de2-df1c-ff1d-5a2e-89b0949e0620" />
+	
+		<meta name="updated_at" content="2025-07-15T17:50:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/dotnet/AspNetCore.Docs/blob/live/aspnetcore/fundamentals/portable-object-localization.md" />
+	
+		<meta name="gitcommit" content="https://github.com/dotnet/AspNetCore.Docs/blob/dd3a90e8c5d127e75cff44b13fe5d30a95039a13/aspnetcore/fundamentals/portable-object-localization.md" />
+	
+		<meta name="git_commit_id" content="dd3a90e8c5d127e75cff44b13fe5d30a95039a13" />
+	
+		<meta name="monikers" content="aspnetcore-1.0" />
+	
+		<meta name="monikers" content="aspnetcore-1.1" />
+	
+		<meta name="monikers" content="aspnetcore-2.0" />
+	
+		<meta name="monikers" content="aspnetcore-2.1" />
+	
+		<meta name="monikers" content="aspnetcore-2.2" />
+	
+		<meta name="monikers" content="aspnetcore-3.0" />
+	
+		<meta name="monikers" content="aspnetcore-3.1" />
+	
+		<meta name="monikers" content="aspnetcore-5.0" />
+	
+		<meta name="monikers" content="aspnetcore-6.0" />
+	
+		<meta name="monikers" content="aspnetcore-7.0" />
+	
+		<meta name="monikers" content="aspnetcore-8.0" />
+	
+		<meta name="monikers" content="aspnetcore-9.0" />
+	
+		<meta name="monikers" content="aspnetcore-10.0" />
+	
+		<meta name="default_moniker" content="aspnetcore-9.0" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="MSDN.aspnet-core-conceptual" />
+	
+		<meta name="schema" content="Conceptual" />
+	
+		<meta name="toc_rel" content="../toc.json" />
+	
+		<meta name="pdf_url_template" content="https://learn.microsoft.com/pdfstore/en-us/MSDN.aspnet-core-conceptual/{branchName}{pdfName}" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="word_count" content="3943" />
+	
+		<meta name="config_moniker_range" content="&gt;= aspnetcore-1.0" />
+	
+		<meta name="asset_id" content="fundamentals/portable-object-localization" />
+	
+		<meta name="moniker_range_name" content="63df444442f95e9131e3b83a36ddb51e" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="aspnetcore/fundamentals/portable-object-localization.md" />
+	
+		<meta name="previous_tlsh_hash" content="5CAADC92530CD104BFC2BD1B055EA620E5F0ED4DACF81BD8166A7562D4092DE39B46E9CAE767698513760E5612E1BBCF12E5D71FC0AE23727AB16CA8814C30D286D53FFAF0" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/fundamentals/portable-object-localization.md" />
+	 
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/97159432-14a9-4307-a469-d2f2c75f0e33" data-source="generated" />
+	
+		<meta name="cmProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/c6f99e62-1cf6-4b71-af9b-649b05f80cce" data-source="generated" />
+	
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/d452572f-6212-498f-9050-ca4a9e50a425" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/50565c62-5f6b-4687-be38-323113c72c2e" data-source="generated" />
+	
+		<meta name="spProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/3f56b378-07a9-4fa1-afe8-9889fdc77628" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/a12e40b7-59a2-4437-96e2-166ce622b864" data-source="generated" />
+	
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="https://learn.microsoft.com/static/assets/0.4.03137.7032-e8b681c0/styles/site-ltr.css" />
+			<link rel="preconnect" href="http://mscom.demdex.net/" crossorigin />
+						<link rel="dns-prefetch" href="http://target.microsoft.com/" />
+						<link rel="dns-prefetch" href="http://microsoftmscompoc.tt.omtrdc.net/" />
+						<link
+							rel="preload"
+							as="script"
+							href="https://learn.microsoft.com/static/third-party/adobe-target/at-js/2.9.0/at.js"
+							integrity="sha384-1/viVM50hgc33O2gOgkWz3EjiD/Fy/ld1dKYXJRUyjNYVEjSUGcSN+iPiQF7e4cu"
+							crossorigin="anonymous"
+							id="adobe-target-script"
+							type="application/javascript"
+						/>
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			<script src="https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/deprecation.js"></script>
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Conceptual",
+    "brand": "",
+    "context": {},
+    "standardFeedback": false,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "OpenSource",
+    "feedbackGitHubRepo": "dotnet/AspNetCore.Docs",
+    "feedbackProductUrl": "https://github.com/dotnet/aspnetcore/blob/main/CONTRIBUTING.md",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": true,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": true,
+    "contributors": [
+      {
+        "name": "sebastienros",
+        "url": "https://github.com/sebastienros"
+      },
+      {
+        "name": "wadepickett",
+        "url": "https://github.com/wadepickett"
+      },
+      {
+        "name": "benhopkinstech",
+        "url": "https://github.com/benhopkinstech"
+      },
+      {
+        "name": "hishamco",
+        "url": "https://github.com/hishamco"
+      },
+      {
+        "name": "Rick-Anderson",
+        "url": "https://github.com/Rick-Anderson"
+      },
+      {
+        "name": "guardrex",
+        "url": "https://github.com/guardrex"
+      },
+      {
+        "name": "serpent5",
+        "url": "https://github.com/serpent5"
+      },
+      {
+        "name": "scottaddie",
+        "url": "https://github.com/scottaddie"
+      },
+      {
+        "name": "JonathanWallmark",
+        "url": "https://github.com/JonathanWallmark"
+      },
+      {
+        "name": "tdykstra",
+        "url": "https://github.com/tdykstra"
+      },
+      {
+        "name": "nschonni",
+        "url": "https://github.com/nschonni"
+      }
+    ],
+    "openSourceFeedbackIssueUrl": "https://github.com/dotnet/aspnetcore.docs/issues/new?template=customer-feedback.yml",
+    "openSourceFeedbackIssueTitle": "",
+    "openSourceFeedbackIssueLabels": "Source - Docs.ms,:watch: Not Triaged"
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script src="https://learn.microsoft.com/static/assets/0.4.03137.7032-e8b681c0/scripts/en-us/index-docs.js"></script>
+			
+
+			<!-- json-ld -->
+			
+		</head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+		<a
+			href="#"
+			data-skip-to-ask-learn
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			hidden
+		>
+			Skip to Ask Learn chat experience
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881"
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<header
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				role="banner"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+				></div>
+			</header>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 <section
+					id="layout-body-menu"
+					class="layout-body-menu display-flex"
+					data-bi-name="menu"
+			  >
+					<div
+		id="left-container"
+		class="left-container display-none display-block-tablet padding-inline-sm padding-bottom-sm width-full"
+	>
+		<nav
+			id="affixed-left-container"
+			class="margin-top-sm-tablet position-sticky display-flex flex-direction-column"
+			aria-label="Primary"
+		></nav>
+	</div>
+			  </section>
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main "
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div
+		id="ms--content-header"
+		class="content-header default-focus border-bottom-none"
+		data-bi-name="content-header"
+	>
+		<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+			<button
+				type="button"
+				class="contents-button button button-sm margin-right-xxs"
+				data-bi-name="contents-expand"
+				aria-haspopup="true"
+				data-contents-button
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-menu"></span></span>
+				<span class="contents-expand-title"> Table of contents </span>
+			</button>
+			<button
+				type="button"
+				class="ap-collapse-behavior ap-expanded button button-sm"
+				data-bi-name="ap-collapse"
+				aria-controls="action-panel"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit editor mode</span>
+			</button>
+		</div>
+	</div>
+			<div data-main-column class="padding-sm padding-top-none padding-top-sm-tablet">
+				<div>
+					
+		<div id="article-header" class="background-color-body margin-bottom-xs display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content padding-none"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs	border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	 
+		<button
+			type="button"
+			id="ms--focus-mode-button"
+			data-focus-mode
+			data-bi-name="focus-mode-entry"
+			class="button button-sm flex-shrink-0 margin-right-xxs display-none display-inline-flex-desktop"
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-glasses"></span>
+			</span>
+			<span>Focus mode</span>
+		</button>
+	 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					
+		<button
+			data-page-action-item="overflow-mobile"
+			type="button"
+			class="button-block button-sm has-inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
+			data-bi-name="contents-expand"
+			data-contents-button
+			data-popover-close
+		>
+			<span class="icon">
+				<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+			</span>
+			<span class="contents-expand-title">Table of contents</span>
+		</button>
+	 
+		<a
+			id="lang-link-overflow"
+			class="button-sm has-inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	 
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	
+					
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to plan</span>
+		</button>
+	  
+		<a
+			data-contenteditbtn
+			class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none"
+			data-bi-name="edit"
+			
+			href="https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/fundamentals/portable-object-localization.md"
+			data-original_content_git_url="https://github.com/dotnet/AspNetCore.Docs/blob/live/aspnetcore/fundamentals/portable-object-localization.md"
+			data-original_content_git_url_template="{repo}/blob/{branch}/aspnetcore/fundamentals/portable-object-localization.md"
+			data-pr_repo=""
+			data-pr_branch=""
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-edit-outline"></span>
+			</span>
+			<span>Edit</span>
+		</a>
+	
+					
+		<hr class="margin-block-xxs" />
+		<h4 class="font-size-sm padding-left-xxs">Share via</h4>
+		
+					<a
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-facebook"
+						data-bi-name="facebook"
+						data-page-action-item="overflow-all"
+						href="#"
+					>
+						<span class="icon color-primary" aria-hidden="true">
+							<span class="docon docon-facebook-share"></span>
+						</span>
+						<span>Facebook</span>
+					</a>
+
+					<a
+						href="#"
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-twitter"
+						data-bi-name="twitter"
+						data-page-action-item="overflow-all"
+					>
+						<span class="icon color-text" aria-hidden="true">
+							<span class="docon docon-xlogo-share"></span>
+						</span>
+						<span>x.com</span>
+					</a>
+
+					<a
+						href="#"
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-linkedin"
+						data-bi-name="linkedin"
+						data-page-action-item="overflow-all"
+					>
+						<span class="icon color-primary" aria-hidden="true">
+							<span class="docon docon-linked-in-logo"></span>
+						</span>
+						<span>LinkedIn</span>
+					</a>
+					<a
+						href="#"
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-email"
+						data-bi-name="email"
+						data-page-action-item="overflow-all"
+					>
+						<span class="icon color-primary" aria-hidden="true">
+							<span class="docon docon-mail-message"></span>
+						</span>
+						<span>Email</span>
+					</a>
+			  
+	 
+		<hr class="margin-block-xxs" />
+		<button
+			class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			type="button"
+			data-bi-name="print"
+			data-page-action-item="overflow-all"
+			data-popover-close
+			data-print-page
+			data-check-hidden="true"
+		>
+			<span class="icon color-primary" aria-hidden="true">
+				<span class="docon docon-print"></span>
+			</span>
+			<span>Print</span>
+		</button>
+	
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	
+					<!-- azure disclaimer -->
+					
+					<!-- privateUnauthorizedTemplate is hidden by default -->
+					
+		<div unauthorized-private-section data-bi-name="permission-content-unauthorized-private" hidden>
+			<hr class="hr margin-top-xs margin-bottom-sm" />
+			<div class="notification notification-info">
+				<div class="notification-content">
+					<p class="margin-top-none notification-title">
+						<span class="icon">
+							<span class="docon docon-exclamation-circle-solid" aria-hidden="true"></span>
+						</span>
+						<span>Note</span>
+					</p>
+					<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" href="#" data-bi-name="permission-content-sign-in">signing in</a> or <a  class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+					<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+					<div class="content"><h1 id="configure-portable-object-localization-in-aspnet-core">Configure portable object localization in ASP.NET Core</h1></div>
+					
+		<div
+			id="article-metadata"
+			class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap"
+		>
+			
+		<div class="margin-block-xxs">
+			<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+				  <li class="visibility-hidden-visual-diff">
+			<local-time
+				format="twoDigitNumeric"
+				datetime="2025-07-09T08:00:00.000Z"
+				data-article-date-source="calculated"
+				class="is-invisible"
+			>
+				2025-07-09
+			</local-time>
+		</li>  
+			</ul>
+		</div>
+	 
+				<div
+					id="user-feedback"
+					class="margin-block-xxs display-none display-none-print"
+					hidden
+					data-hide-on-archived
+				>
+					
+		<button
+			id="user-feedback-button"
+			data-test-id="conceptual-feedback-button"
+			class="button button-sm button-clear button-primary display-none"
+			type="button"
+			data-bi-name="user-feedback-button"
+			data-user-feedback-button
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-like"></span>
+			</span>
+			<span>Feedback</span>
+		</button>
+	
+				</div>
+		  
+		</div>
+	 
+		<nav
+			id="center-doc-outline"
+			class="doc-outline is-hidden-desktop display-none-print margin-bottom-sm"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">
+				In this article
+			</h2>
+		</nav>
+	
+					<div class="content"><div data-moniker="aspnetcore-10.0 aspnetcore-6.0 aspnetcore-7.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>By  <a href="https://github.com/hishamco" data-linktype="external">Hisham Bin Ateya</a> and <a href="https://github.com/sebastienros" data-linktype="external">Sébastien Ros</a>.</p>
+<p>This article walks through the steps for using Portable Object (PO) files in an ASP.NET Core application with the <a href="https://github.com/OrchardCMS/OrchardCore" data-linktype="external">Orchard Core</a> framework.</p>
+<p><strong>Note:</strong> Orchard Core isn't a Microsoft product. Microsoft provides no support for this feature.</p>
+<p><a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/fundamentals/localization/sample/6.x/POLocalization" data-linktype="external">View or download sample code</a> (<a href="../overview553c.html?view=aspnetcore-9.0#how-to-download-a-sample" data-linktype="relative-path">how to download</a>)</p>
+<h2 id="what-is-a-po-file">What is a PO file?</h2>
+<p>PO files are distributed as text files containing the translated strings for a given language. Some advantages of using PO files instead of <em>.resx</em> files include:</p>
+<ul>
+<li>PO files support pluralization; <em>.resx</em> files don't support pluralization.</li>
+<li>PO files aren't compiled like <em>.resx</em> files. As such, specialized tooling and build steps aren't required.</li>
+<li>PO files work well with collaborative online editing tools.</li>
+</ul>
+<h3 id="example">Example</h3>
+<p>The following sample PO file contains the translation for two strings in French, including one with its plural form:</p>
+<p><em>fr.po</em></p>
+<pre><code class="lang-text">#: Pages/Index.cshtml:13
+msgid "Hello world!"
+msgstr "Bonjour le monde!"
+
+msgid "There is one item."
+msgid_plural "There are {0} items."
+msgstr[0] "Il y a un élément."
+msgstr[1] "Il y a {0} éléments."
+</code></pre>
+<p>This example uses the following syntax:</p>
+<ul>
+<li><code>#:</code>: A comment indicating the context of the string to be translated. The same string might be translated differently depending on where it's being used.</li>
+<li><code>msgid</code>: The untranslated string.</li>
+<li><code>msgstr</code>: The translated string.</li>
+</ul>
+<p>For pluralization support, more entries can be defined.</p>
+<ul>
+<li><code>msgid_plural</code>: The untranslated plural string.</li>
+<li><code>msgstr[0]</code>: The translated string for the case 0.</li>
+<li><code>msgstr[N]</code>: The translated string for the case N.</li>
+</ul>
+<p>The PO file specification can be found <a href="https://www.gnu.org/savannah-checkouts/gnu/gettext/manual/html_node/PO-Files.html" data-linktype="external">here</a>.</p>
+<h2 id="configuring-po-file-support-in-aspnet-core">Configuring PO file support in ASP.NET Core</h2>
+<p>This example is based on an ASP.NET Core Web application generated from a Visual Studio 2022 project template.</p>
+<h3 id="referencing-the-package">Referencing the package</h3>
+<p>Add a reference to the <code>OrchardCore.Localization.Core</code> NuGet package.</p>
+<p>The <code>.csproj</code> file now contains a line similar to the following (version number may vary):</p>
+<pre><code class="lang-xml">&lt;PackageReference Include="OrchardCore.Localization.Core" Version="1.5.0" /&gt;
+</code></pre><h3 id="registering-the-service">Registering the service</h3>
+<p>Add the required services to <code>Program.cs</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="9-16">builder.Services.AddPortableObjectLocalization();
+
+builder.Services
+    .Configure&lt;RequestLocalizationOptions&gt;(options =&gt; options
+        .AddSupportedCultures("fr", "cs")
+        .AddSupportedUICultures("fr", "cs"));
+
+builder.Services
+    .AddRazorPages()
+    .AddViewLocalization();
+</code></pre>
+<p>Add the following code to your Razor page of choice. <code>Index.cshtml</code> is used in this example.</p>
+<pre><code class="lang-cshtml">@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = "Home";
+}
+
+&lt;div class="text-center"&gt;
+    &lt;h1 class="display-4"&gt;Welcome&lt;/h1&gt;
+    &lt;p&gt;Learn about &lt;a href="https://docs.microsoft.com/aspnet/core"&gt;building Web apps with ASP.NET Core&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;@Localizer["Hello world!"]&lt;/p&gt;
+</code></pre>
+<p>An <code>IViewLocalizer</code> instance is injected and used to translate the text "Hello world!".</p>
+<h3 id="creating-a-po-file">Creating a PO file</h3>
+<p>Create a file named <em>&lt;culture code&gt;.po</em> in your application root folder. In this example, the file name is <em>fr.po</em> because the French language is used:</p>
+<pre><code class="lang-text">msgid "Hello world!"
+msgstr "Bonjour le monde!"
+</code></pre>
+<p>This file stores both the string to translate and the French-translated string. Translations revert to their parent culture, if necessary. In this example, the <em>fr.po</em> file is used if the requested culture is <code>fr-FR</code> or <code>fr-CA</code>.</p>
+<h3 id="testing-the-application">Testing the application</h3>
+<p>Run your application, the text <strong>Hello world!</strong> is displayed.</p>
+<p>Navigate to the URL <code>/Index?culture=fr-FR</code>. The text <strong>Bonjour le monde!</strong> is displayed.</p>
+<h2 id="pluralization">Pluralization</h2>
+<p>PO files support pluralization forms, which is useful when the same string needs to be translated differently based on a cardinality. This task is made complicated by the fact that each language defines custom rules to select which string to use based on the cardinality.</p>
+<p>The Orchard Localization package provides an API to invoke these different plural forms automatically.</p>
+<h3 id="creating-pluralization-po-files">Creating pluralization PO files</h3>
+<p>Add the following content to the previously mentioned <em>fr.po</em> file:</p>
+<pre><code class="lang-text">msgid "There is one item."
+msgid_plural "There are {0} items."
+msgstr[0] "Il y a un élément."
+msgstr[1] "Il y a {0} éléments."
+</code></pre>
+<p>See <a href="#what-is-a-po-file" data-linktype="self-bookmark">What is a PO file?</a> for an explanation of what each entry in this example represents.</p>
+<h3 id="adding-a-language-using-different-pluralization-forms">Adding a language using different pluralization forms</h3>
+<p>English and French strings were used in the previous example. English and French have only two pluralization forms and share the same form rules, which is that a cardinality of one is mapped to the first plural form. Any other cardinality is mapped to the second plural form.</p>
+<p>Not all languages share the same rules. This is illustrated with the Czech language, which has three plural forms.</p>
+<p>Create the <code>cs.po</code> file as follows, and note how the pluralization needs three different translations:</p>
+<pre><code class="lang-text">msgid "Hello world!"
+msgstr "Ahoj světe!!"
+
+msgid "There is one item."
+msgid_plural "There are {0} items."
+msgstr[0] "Existuje jedna položka."
+msgstr[1] "Existují {0} položky."
+msgstr[2] "Existuje {0} položek."
+</code></pre>
+<p>To accept Czech localizations, add <code>"cs"</code> to the list of supported cultures in the <code>Configure</code> method:</p>
+<pre><code class="lang-csharp">builder.Services
+    .Configure&lt;RequestLocalizationOptions&gt;(options =&gt; options
+        .AddSupportedCultures("fr", "cs")
+        .AddSupportedUICultures("fr", "cs"));
+</code></pre>
+<p>Edit the <code>Pages/Index.cshtml</code> file to render localized, plural strings for several cardinalities:</p>
+<pre><code class="lang-cshtml">&lt;p&gt;@Localizer.Plural(1, "There is one item.", "There are {0} items.")&lt;/p&gt;
+&lt;p&gt;@Localizer.Plural(2, "There is one item.", "There are {0} items.")&lt;/p&gt;
+&lt;p&gt;@Localizer.Plural(5, "There is one item.", "There are {0} items.")&lt;/p&gt;
+</code></pre>
+<p><strong>Note:</strong> In a real world scenario, a variable would be used to represent the count. Here, we repeat the same code with three different values to expose a specific case.</p>
+<p>Upon switching cultures, you see the following:</p>
+<p>For <code>/Index</code>:</p>
+<pre><code class="lang-html">There is one item.
+There are 2 items.
+There are 5 items.
+</code></pre>
+<p>For <code>/Index?culture=fr</code>:</p>
+<pre><code class="lang-html">Il y a un élément.
+Il y a 2 éléments.
+Il y a 5 éléments.
+</code></pre>
+<p>For <code>/Index?culture=cs</code>:</p>
+<pre><code class="lang-html">Existuje jedna položka.
+Existují 2 položky.
+Existuje 5 položek.
+</code></pre>
+<p>For the Czech culture, the three translations are different. The French and English cultures share the same construction for the two last translated strings.</p>
+<h2 id="advanced-tasks">Advanced tasks</h2>
+<h3 id="using-additional-arguments">Using additional arguments</h3>
+<p>The argument at index zero <code>{0}</code> always represents the count value. When invoking the <code>Plural</code> method it is possible to add additional arguments and their index will then start at one (<code>1</code>).</p>
+<pre><code class="lang-cshtml">&lt;p&gt;@Localizer.Plural(count, "There is one item with the color {1}.", "There are {0} items. The main color is {1}.", color)&lt;/p&gt;
+</code></pre>
+<h3 id="contextualizing-strings">Contextualizing strings</h3>
+<p>Applications often contain the strings to be translated in several places. The same string may have a different translation in certain locations within an app (Razor views or class files). A PO file supports the notion of a file context, which can be used to categorize the string being represented. Using a file context, a string can be translated differently, depending on the file context (or lack of a file context).</p>
+<p>The PO localization services use the name of the full class or the view that's used when translating a string. This is accomplished by setting the value on the <code>msgctxt</code> entry.</p>
+<p>Consider a minor addition to the previous <em>fr.po</em> example. A Razor page located at <code>Pages/Index.cshtml</code> can be defined as the file context by setting the reserved <code>msgctxt</code> entry's value:</p>
+<pre><code class="lang-text">msgctxt "Views.Home.About"
+msgid "Hello world!"
+msgstr "Bonjour le monde!"
+</code></pre>
+<p>With the <code>msgctxt</code> set as such, text translation occurs when navigating to <code>/Index?culture=fr-FR</code>. The translation doesn't occur when navigating to <code>/Privacy?culture=fr-FR</code>.</p>
+<p>When no specific entry is matched with a given file context, Orchard Core's fallback mechanism looks for an appropriate PO file without a context. Assuming there's no specific file context defined for <code>Pages/Privacy.cshtml</code>, navigating to <code>/Privacy?culture=fr-FR</code> loads a PO file such as:</p>
+<pre><code class="lang-text">msgid "Hello world!"
+msgstr "Bonjour le monde!"
+</code></pre><h3 id="changing-the-location-of-po-files">Changing the location of PO files</h3>
+<p>The default location of PO files can be changed in <code>Programs.cs</code>:</p>
+<pre><code class="lang-csharp">services.AddPortableObjectLocalization(options =&gt; options.ResourcesPath = "Localization");
+</code></pre>
+<p>In this example, the PO files are loaded from the <em>Localization</em> folder.</p>
+<h3 id="implementing-a-custom-logic-for-finding-localization-files">Implementing a custom logic for finding localization files</h3>
+<p>When more complex logic is needed to locate PO files, the <code>OrchardCore.Localization.PortableObject.ILocalizationFileLocationProvider</code> interface can be implemented
+and registered as a service. This is useful when PO files can be stored in varying locations or when the files have to be found within a hierarchy of folders.</p>
+<h3 id="using-a-different-default-pluralized-language">Using a different default pluralized language</h3>
+<p>The package includes a <code>Plural</code> extension method that's specific to two plural forms. For languages requiring more plural forms, create an extension method. With an extension method, you won't need to provide any localization file for the default language — the original strings are already available directly in the code.</p>
+<p>You can use the more generic <code>Plural(int count, string[] pluralForms, params object[] arguments)</code> overload which accepts a string array of translations.</p>
+</div>
+<div data-moniker="aspnetcore-5.0">
+<p>By <a href="https://github.com/sebastienros" data-linktype="external">Sébastien Ros</a>, <a href="https://twitter.com/Scott_Addie" data-linktype="external">Scott Addie</a> and <a href="https://github.com/hishamco" data-linktype="external">Hisham Bin Ateya</a></p>
+<p>This article walks through the steps for using Portable Object (PO) files in an ASP.NET Core application with the <a href="https://github.com/OrchardCMS/OrchardCore" data-linktype="external">Orchard Core</a> framework.</p>
+<p><strong>Note:</strong> Orchard Core isn't a Microsoft product. Consequently, Microsoft provides no support for this feature.</p>
+<p><a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/fundamentals/localization/sample/5.x/POLocalization" data-linktype="external">View or download sample code</a> (<a href="../overview553c.html?view=aspnetcore-9.0#how-to-download-a-sample" data-linktype="relative-path">how to download</a>)</p>
+<h2 id="what-is-a-po-file-1">What is a PO file?</h2>
+<p>PO files are distributed as text files containing the translated strings for a given language. Some advantages of using PO files instead of <em>.resx</em> files include:</p>
+<ul>
+<li>PO files support pluralization; <em>.resx</em> files don't support pluralization.</li>
+<li>PO files aren't compiled like <em>.resx</em> files. As such, specialized tooling and build steps aren't required.</li>
+<li>PO files work well with collaborative online editing tools.</li>
+</ul>
+<h3 id="example-1">Example</h3>
+<p>Here is a sample PO file containing the translation for two strings in French, including one with its plural form:</p>
+<p><em>fr.po</em></p>
+<pre><code class="lang-text">#: Pages/Index.cshtml:13
+msgid "Hello world!"
+msgstr "Bonjour le monde!"
+
+msgid "There is one item."
+msgid_plural "There are {0} items."
+msgstr[0] "Il y a un élément."
+msgstr[1] "Il y a {0} éléments."
+</code></pre>
+<p>This example uses the following syntax:</p>
+<ul>
+<li><code>#:</code>: A comment indicating the context of the string to be translated. The same string might be translated differently depending on where it's being used.</li>
+<li><code>msgid</code>: The untranslated string.</li>
+<li><code>msgstr</code>: The translated string.</li>
+</ul>
+<p>In the case of pluralization support, more entries can be defined.</p>
+<ul>
+<li><code>msgid_plural</code>: The untranslated plural string.</li>
+<li><code>msgstr[0]</code>: The translated string for the case 0.</li>
+<li><code>msgstr[N]</code>: The translated string for the case N.</li>
+</ul>
+<p>The PO file specification can be found <a href="https://www.gnu.org/savannah-checkouts/gnu/gettext/manual/html_node/PO-Files.html" data-linktype="external">here</a>.</p>
+<h2 id="configuring-po-file-support-in-aspnet-core-1">Configuring PO file support in ASP.NET Core</h2>
+<p>This example is based on an ASP.NET Core MVC application generated from a Visual Studio 2019 project template.</p>
+<h3 id="referencing-the-package-1">Referencing the package</h3>
+<p>Add a reference to the <code>OrchardCore.Localization.Core</code> NuGet package.</p>
+<p>The <code>.csproj</code> file now contains a line similar to the following (version number may vary):</p>
+<pre><code class="lang-xml">&lt;PackageReference Include="OrchardCore.Localization.Core" Version="1.2.0" /&gt;
+</code></pre><h3 id="registering-the-service-1">Registering the service</h3>
+<p>Add the required services to the <code>ConfigureServices</code> method of <code>Startup.cs</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="4-11">public void ConfigureServices(IServiceCollection services)
+{
+    services.AddRazorPages()
+        .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
+
+    services.AddPortableObjectLocalization();
+
+    services.Configure&lt;RequestLocalizationOptions&gt;(options =&gt; options
+        .AddSupportedCultures("fr", "cs")
+        .AddSupportedUICultures("fr", "cs")
+    );
+}
+</code></pre>
+<p>Add the required middleware to the <code>Configure</code> method of <code>Startup.cs</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="15">public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    if (env.IsDevelopment())
+    {
+        app.UseDeveloperExceptionPage();
+    }
+    else
+    {
+        app.UseExceptionHandler("/Home/Error");
+    }
+
+    app.UseRouting();
+    app.UseStaticFiles();
+
+    app.UseRequestLocalization();
+
+    app.UseEndpoints(endpoints =&gt;
+    {
+        endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+    });
+}
+</code></pre>
+<p>Add the following code to your Razor page of choice. <code>Index.cshtml</code> is used in this example.</p>
+<pre><code class="lang-cshtml">@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = "Home";
+}
+
+&lt;div class="text-center"&gt;
+    &lt;h1 class="display-4"&gt;Welcome&lt;/h1&gt;
+    &lt;p&gt;Learn about &lt;a href="https://docs.microsoft.com/aspnet/core"&gt;building Web apps with ASP.NET Core&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;@Localizer["Hello world!"]&lt;/p&gt;
+</code></pre>
+<p>An <code>IViewLocalizer</code> instance is injected and used to translate the text "Hello world!".</p>
+<h3 id="creating-a-po-file-1">Creating a PO file</h3>
+<p>Create a file named <em>&lt;culture code&gt;.po</em> in your application root folder. In this example, the file name is <em>fr.po</em> because the French language is used:</p>
+<pre><code class="lang-text">msgid "Hello world!"
+msgstr "Bonjour le monde!"
+</code></pre>
+<p>This file stores both the string to translate and the French-translated string. Translations revert to their parent culture, if necessary. In this example, the <em>fr.po</em> file is used if the requested culture is <code>fr-FR</code> or <code>fr-CA</code>.</p>
+<h3 id="testing-the-application-1">Testing the application</h3>
+<p>Run your application, and navigate to the URL <code>/Index</code>. The text <strong>Hello world!</strong> is displayed.</p>
+<p>Navigate to the URL <code>/Index?culture=fr-FR</code>. The text <strong>Bonjour le monde!</strong> is displayed.</p>
+<h2 id="pluralization-1">Pluralization</h2>
+<p>PO files support pluralization forms, which is useful when the same string needs to be translated differently based on a cardinality. This task is made complicated by the fact that each language defines custom rules to select which string to use based on the cardinality.</p>
+<p>The Orchard Localization package provides an API to invoke these different plural forms automatically.</p>
+<h3 id="creating-pluralization-po-files-1">Creating pluralization PO files</h3>
+<p>Add the following content to the previously mentioned <em>fr.po</em> file:</p>
+<pre><code class="lang-text">msgid "There is one item."
+msgid_plural "There are {0} items."
+msgstr[0] "Il y a un élément."
+msgstr[1] "Il y a {0} éléments."
+</code></pre>
+<p>See <a href="#what-is-a-po-file" data-linktype="self-bookmark">What is a PO file?</a> for an explanation of what each entry in this example represents.</p>
+<h3 id="adding-a-language-using-different-pluralization-forms-1">Adding a language using different pluralization forms</h3>
+<p>English and French strings were used in the previous example. English and French have only two pluralization forms and share the same form rules, which is that a cardinality of one is mapped to the first plural form. Any other cardinality is mapped to the second plural form.</p>
+<p>Not all languages share the same rules. This is illustrated with the Czech language, which has three plural forms.</p>
+<p>Create the <code>cs.po</code> file as follows, and note how the pluralization needs three different translations:</p>
+<pre><code class="lang-text">msgid "Hello world!"
+msgstr "Ahoj světe!!"
+
+msgid "There is one item."
+msgid_plural "There are {0} items."
+msgstr[0] "Existuje jedna položka."
+msgstr[1] "Existují {0} položky."
+msgstr[2] "Existuje {0} položek."
+</code></pre>
+<p>To accept Czech localizations, add <code>"cs"</code> to the list of supported cultures in the <code>ConfigureServices</code> method:</p>
+<pre><code class="lang-csharp">services.Configure&lt;RequestLocalizationOptions&gt;(options =&gt; options
+                .AddSupportedCultures("fr", "cs")
+                .AddSupportedUICultures("fr", "cs")
+            );
+</code></pre>
+<p>Edit the <code>Pages/Index.cshtml</code> file to render localized, plural strings for several cardinalities:</p>
+<pre><code class="lang-cshtml">&lt;p&gt;@Localizer.Plural(1, "There is one item.", "There are {0} items.")&lt;/p&gt;
+&lt;p&gt;@Localizer.Plural(2, "There is one item.", "There are {0} items.")&lt;/p&gt;
+&lt;p&gt;@Localizer.Plural(5, "There is one item.", "There are {0} items.")&lt;/p&gt;
+</code></pre>
+<p><strong>Note:</strong> In a real world scenario, a variable would be used to represent the count. Here, we repeat the same code with three different values to expose a very specific case.</p>
+<p>Upon switching cultures, you see the following:</p>
+<p>For <code>/Index</code>:</p>
+<pre><code class="lang-html">There is one item.
+There are 2 items.
+There are 5 items.
+</code></pre>
+<p>For <code>/Index?culture=fr</code>:</p>
+<pre><code class="lang-html">Il y a un élément.
+Il y a 2 éléments.
+Il y a 5 éléments.
+</code></pre>
+<p>For <code>/Index?culture=cs</code>:</p>
+<pre><code class="lang-html">Existuje jedna položka.
+Existují 2 položky.
+Existuje 5 položek.
+</code></pre>
+<p>Note that for the Czech culture, the three translations are different. The French and English cultures share the same construction for the two last translated strings.</p>
+<h2 id="advanced-tasks-1">Advanced tasks</h2>
+<h3 id="contextualizing-strings-1">Contextualizing strings</h3>
+<p>Applications often contain the strings to be translated in several places. The same string may have a different translation in certain locations within an app (Razor views or class files). A PO file supports the notion of a file context, which can be used to categorize the string being represented. Using a file context, a string can be translated differently, depending on the file context (or lack of a file context).</p>
+<p>The PO localization services use the name of the full class or the view that's used when translating a string. This is accomplished by setting the value on the <code>msgctxt</code> entry.</p>
+<p>Consider a minor addition to the previous <em>fr.po</em> example. A Razor view located at <code>Pages/Index.cshtml</code> can be defined as the file context by setting the reserved <code>msgctxt</code> entry's value:</p>
+<pre><code class="lang-text">msgctxt "Pages.Index"
+msgid "Hello world!"
+msgstr "Bonjour le monde!"
+</code></pre>
+<p>With the <code>msgctxt</code> set as such, text translation occurs when navigating to <code>/Index?culture=fr-FR</code>. The translation won't occur when navigating to <code>/Privacy?culture=fr-FR</code>.</p>
+<p>When no specific entry is matched with a given file context, Orchard Core's fallback mechanism looks for an appropriate PO file without a context. Assuming there's no specific file context defined for <code>Pages/Privacy.cshtml</code>, navigating to <code>/Privacy?culture=fr-FR</code> loads a PO file such as:</p>
+<pre><code class="lang-text">msgid "Hello world!"
+msgstr "Bonjour le monde!"
+</code></pre><h3 id="changing-the-location-of-po-files-1">Changing the location of PO files</h3>
+<p>The default location of PO files can be changed in <code>ConfigureServices</code>:</p>
+<pre><code class="lang-csharp">services.AddPortableObjectLocalization(options =&gt; options.ResourcesPath = "Localization");
+</code></pre>
+<p>In this example, the PO files are loaded from the <em>Localization</em> folder.</p>
+<h3 id="implementing-a-custom-logic-for-finding-localization-files-1">Implementing a custom logic for finding localization files</h3>
+<p>When more complex logic is needed to locate PO files, the <code>OrchardCore.Localization.PortableObject.ILocalizationFileLocationProvider</code> interface can be implemented
+and registered as a service. This is useful when PO files can be stored in varying locations or when the files have to be found within a hierarchy of folders.</p>
+<h3 id="using-a-different-default-pluralized-language-1">Using a different default pluralized language</h3>
+<p>The package includes a <code>Plural</code> extension method that's specific to two plural forms. For languages requiring more plural forms, create an extension method. With an extension method, you won't need to provide any localization file for the default language — the original strings are already available directly in the code.</p>
+<p>You can use the more generic <code>Plural(int count, string[] pluralForms, params object[] arguments)</code> overload which accepts a string array of translations.</p>
+</div>
+<div data-moniker="aspnetcore-1.0 aspnetcore-1.1 aspnetcore-2.0 aspnetcore-2.1 aspnetcore-2.2 aspnetcore-3.0 aspnetcore-3.1">
+<p>By <a href="https://github.com/sebastienros" data-linktype="external">Sébastien Ros</a>, <a href="https://twitter.com/Scott_Addie" data-linktype="external">Scott Addie</a> and <a href="https://github.com/hishamco" data-linktype="external">Hisham Bin Ateya</a></p>
+<p>This article walks through the steps for using Portable Object (PO) files in an ASP.NET Core application with the <a href="https://github.com/OrchardCMS/OrchardCore" data-linktype="external">Orchard Core</a> framework.</p>
+<p><strong>Note:</strong> Orchard Core isn't a Microsoft product. Consequently, Microsoft provides no support for this feature.</p>
+<p><a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/fundamentals/localization/sample/3.x/POLocalization" data-linktype="external">View or download sample code</a> (<a href="../overview553c.html?view=aspnetcore-9.0#how-to-download-a-sample" data-linktype="relative-path">how to download</a>)</p>
+<h2 id="what-is-a-po-file-2">What is a PO file?</h2>
+<p>PO files are distributed as text files containing the translated strings for a given language. Some advantages of using PO files instead of <em>.resx</em> files include:</p>
+<ul>
+<li>PO files support pluralization; <em>.resx</em> files don't support pluralization.</li>
+<li>PO files aren't compiled like <em>.resx</em> files. As such, specialized tooling and build steps aren't required.</li>
+<li>PO files work well with collaborative online editing tools.</li>
+</ul>
+<h3 id="example-2">Example</h3>
+<p>Here is a sample PO file containing the translation for two strings in French, including one with its plural form:</p>
+<p><em>fr.po</em></p>
+<pre><code class="lang-text">#: Services/EmailService.cs:29
+msgid "Enter a comma separated list of email addresses."
+msgstr "Entrez une liste d'emails séparés par une virgule."
+
+#: Views/Email.cshtml:112
+msgid "The email address is \"{0}\"."
+msgid_plural "The email addresses are \"{0}\"."
+msgstr[0] "L'adresse email est \"{0}\"."
+msgstr[1] "Les adresses email sont \"{0}\""
+</code></pre>
+<p>This example uses the following syntax:</p>
+<ul>
+<li><code>#:</code>: A comment indicating the context of the string to be translated. The same string might be translated differently depending on where it's being used.</li>
+<li><code>msgid</code>: The untranslated string.</li>
+<li><code>msgstr</code>: The translated string.</li>
+</ul>
+<p>In the case of pluralization support, more entries can be defined.</p>
+<ul>
+<li><code>msgid_plural</code>: The untranslated plural string.</li>
+<li><code>msgstr[0]</code>: The translated string for the case 0.</li>
+<li><code>msgstr[N]</code>: The translated string for the case N.</li>
+</ul>
+<p>The PO file specification can be found <a href="https://www.gnu.org/savannah-checkouts/gnu/gettext/manual/html_node/PO-Files.html" data-linktype="external">here</a>.</p>
+<h2 id="configuring-po-file-support-in-aspnet-core-2">Configuring PO file support in ASP.NET Core</h2>
+<p>This example is based on an ASP.NET Core MVC application generated from a Visual Studio 2017 project template.</p>
+<h3 id="referencing-the-package-2">Referencing the package</h3>
+<p>Add a reference to the <code>OrchardCore.Localization.Core</code> NuGet package.</p>
+<p>The <code>.csproj</code> file now contains a line similar to the following (version number may vary):</p>
+<pre><code class="lang-xml">&lt;PackageReference Include="OrchardCore.Localization.Core" Version="1.0.0" /&gt;
+</code></pre><h3 id="registering-the-service-2">Registering the service</h3>
+<p>Add the required services to the <code>ConfigureServices</code> method of <code>Startup.cs</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="4-21">public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc()
+        .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
+
+    services.AddPortableObjectLocalization();
+
+    services.Configure&lt;RequestLocalizationOptions&gt;(options =&gt;
+        {
+            var supportedCultures = new List&lt;CultureInfo&gt;
+            {
+                new CultureInfo("en-US"),
+                new CultureInfo("en"),
+                new CultureInfo("fr-FR"),
+                new CultureInfo("fr")
+            };
+
+            options.DefaultRequestCulture = new RequestCulture("en-US");
+            options.SupportedCultures = supportedCultures;
+            options.SupportedUICultures = supportedCultures;
+        });
+}
+</code></pre>
+<p>Add the required middleware to the <code>Configure</code> method of <code>Startup.cs</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="15">public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    if (env.IsDevelopment())
+    {
+        app.UseDeveloperExceptionPage();
+    }
+    else
+    {
+        app.UseExceptionHandler("/Home/Error");
+    }
+
+    app.UseRouting();
+    app.UseStaticFiles();
+
+    app.UseRequestLocalization();
+
+    app.UseEndpoints(endpoints =&gt;
+    {
+        endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+    });
+}
+</code></pre>
+<p>Add the following code to your Razor view of choice. <code>About.cshtml</code> is used in this example.</p>
+<pre><code class="lang-cshtml">@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+&lt;p&gt;@Localizer["Hello world!"]&lt;/p&gt;
+</code></pre>
+<p>An <code>IViewLocalizer</code> instance is injected and used to translate the text "Hello world!".</p>
+<h3 id="creating-a-po-file-2">Creating a PO file</h3>
+<p>Create a file named <em>&lt;culture code&gt;.po</em> in your application root folder. In this example, the file name is <em>fr.po</em> because the French language is used:</p>
+<pre><code class="lang-text">msgid "Hello world!"
+msgstr "Bonjour le monde!"
+</code></pre>
+<p>This file stores both the string to translate and the French-translated string. Translations revert to their parent culture, if necessary. In this example, the <em>fr.po</em> file is used if the requested culture is <code>fr-FR</code> or <code>fr-CA</code>.</p>
+<h3 id="testing-the-application-2">Testing the application</h3>
+<p>Run your application, and navigate to the URL <code>/Home/About</code>. The text <strong>Hello world!</strong> is displayed.</p>
+<p>Navigate to the URL <code>/Home/About?culture=fr-FR</code>. The text <strong>Bonjour le monde!</strong> is displayed.</p>
+<h2 id="pluralization-2">Pluralization</h2>
+<p>PO files support pluralization forms, which is useful when the same string needs to be translated differently based on a cardinality. This task is made complicated by the fact that each language defines custom rules to select which string to use based on the cardinality.</p>
+<p>The Orchard Localization package provides an API to invoke these different plural forms automatically.</p>
+<h3 id="creating-pluralization-po-files-2">Creating pluralization PO files</h3>
+<p>Add the following content to the previously mentioned <em>fr.po</em> file:</p>
+<pre><code class="lang-text">msgid "There is one item."
+msgid_plural "There are {0} items."
+msgstr[0] "Il y a un élément."
+msgstr[1] "Il y a {0} éléments."
+</code></pre>
+<p>See <a href="#what-is-a-po-file" data-linktype="self-bookmark">What is a PO file?</a> for an explanation of what each entry in this example represents.</p>
+<h3 id="adding-a-language-using-different-pluralization-forms-2">Adding a language using different pluralization forms</h3>
+<p>English and French strings were used in the previous example. English and French have only two pluralization forms and share the same form rules, which is that a cardinality of one is mapped to the first plural form. Any other cardinality is mapped to the second plural form.</p>
+<p>Not all languages share the same rules. This is illustrated with the Czech language, which has three plural forms.</p>
+<p>Create the <code>cs.po</code> file as follows, and note how the pluralization needs three different translations:</p>
+<pre><code class="lang-text">msgid "Hello world!"
+msgstr "Ahoj světe!!"
+
+msgid "There is one item."
+msgid_plural "There are {0} items."
+msgstr[0] "Existuje jedna položka."
+msgstr[1] "Existují {0} položky."
+msgstr[2] "Existuje {0} položek."
+</code></pre>
+<p>To accept Czech localizations, add <code>"cs"</code> to the list of supported cultures in the <code>ConfigureServices</code> method:</p>
+<pre><code class="lang-csharp">var supportedCultures = new List&lt;CultureInfo&gt;
+{
+    new CultureInfo("en-US"),
+    new CultureInfo("en"),
+    new CultureInfo("fr-FR"),
+    new CultureInfo("fr"),
+    new CultureInfo("cs")
+};
+</code></pre>
+<p>Edit the <code>Views/Home/About.cshtml</code> file to render localized, plural strings for several cardinalities:</p>
+<pre><code class="lang-cshtml">&lt;p&gt;@Localizer.Plural(1, "There is one item.", "There are {0} items.")&lt;/p&gt;
+&lt;p&gt;@Localizer.Plural(2, "There is one item.", "There are {0} items.")&lt;/p&gt;
+&lt;p&gt;@Localizer.Plural(5, "There is one item.", "There are {0} items.")&lt;/p&gt;
+</code></pre>
+<p><strong>Note:</strong> In a real world scenario, a variable would be used to represent the count. Here, we repeat the same code with three different values to expose a very specific case.</p>
+<p>Upon switching cultures, you see the following:</p>
+<p>For <code>/Home/About</code>:</p>
+<pre><code class="lang-html">There is one item.
+There are 2 items.
+There are 5 items.
+</code></pre>
+<p>For <code>/Home/About?culture=fr</code>:</p>
+<pre><code class="lang-html">Il y a un élément.
+Il y a 2 éléments.
+Il y a 5 éléments.
+</code></pre>
+<p>For <code>/Home/About?culture=cs</code>:</p>
+<pre><code class="lang-html">Existuje jedna položka.
+Existují 2 položky.
+Existuje 5 položek.
+</code></pre>
+<p>Note that for the Czech culture, the three translations are different. The French and English cultures share the same construction for the two last translated strings.</p>
+<h2 id="advanced-tasks-2">Advanced tasks</h2>
+<h3 id="contextualizing-strings-2">Contextualizing strings</h3>
+<p>Applications often contain the strings to be translated in several places. The same string may have a different translation in certain locations within an app (Razor views or class files). A PO file supports the notion of a file context, which can be used to categorize the string being represented. Using a file context, a string can be translated differently, depending on the file context (or lack of a file context).</p>
+<p>The PO localization services use the name of the full class or the view that's used when translating a string. This is accomplished by setting the value on the <code>msgctxt</code> entry.</p>
+<p>Consider a minor addition to the previous <em>fr.po</em> example. A Razor view located at <code>Views/Home/About.cshtml</code> can be defined as the file context by setting the reserved <code>msgctxt</code> entry's value:</p>
+<pre><code class="lang-text">msgctxt "Views.Home.About"
+msgid "Hello world!"
+msgstr "Bonjour le monde!"
+</code></pre>
+<p>With the <code>msgctxt</code> set as such, text translation occurs when navigating to <code>/Home/About?culture=fr-FR</code>. The translation won't occur when navigating to <code>/Home/Contact?culture=fr-FR</code>.</p>
+<p>When no specific entry is matched with a given file context, Orchard Core's fallback mechanism looks for an appropriate PO file without a context. Assuming there's no specific file context defined for <code>Views/Home/Contact.cshtml</code>, navigating to <code>/Home/Contact?culture=fr-FR</code> loads a PO file such as:</p>
+<pre><code class="lang-text">msgid "Hello world!"
+msgstr "Bonjour le monde!"
+</code></pre><h3 id="changing-the-location-of-po-files-2">Changing the location of PO files</h3>
+<p>The default location of PO files can be changed in <code>ConfigureServices</code>:</p>
+<pre><code class="lang-csharp">services.AddPortableObjectLocalization(options =&gt; options.ResourcesPath = "Localization");
+</code></pre>
+<p>In this example, the PO files are loaded from the <em>Localization</em> folder.</p>
+<h3 id="implementing-a-custom-logic-for-finding-localization-files-2">Implementing a custom logic for finding localization files</h3>
+<p>When more complex logic is needed to locate PO files, the <code>OrchardCore.Localization.PortableObject.ILocalizationFileLocationProvider</code> interface can be implemented
+and registered as a service. This is useful when PO files can be stored in varying locations or when the files have to be found within a hierarchy of folders.</p>
+<h3 id="using-a-different-default-pluralized-language-2">Using a different default pluralized language</h3>
+<p>The package includes a <code>Plural</code> extension method that's specific to two plural forms. For languages requiring more plural forms, create an extension method. With an extension method, you won't need to provide any localization file for the default language — the original strings are already available directly in the code.</p>
+<p>You can use the more generic <code>Plural(int count, string[] pluralForms, params object[] arguments)</code> overload which accepts a string array of translations.</p>
+</div>
+</div>
+					
+		<div
+			id="ms--inline-notifications"
+			class="margin-block-xs"
+			data-bi-name="inline-notification"
+		></div>
+	 
+		<div
+			id="assertive-live-region"
+			role="alert"
+			aria-live="assertive"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+		<div
+			id="polite-live-region"
+			role="status"
+			aria-live="polite"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+	
+					
+			
+		<!-- feedback section -->
+		<section
+			class="feedback-section position-relative margin-top-lg border border-radius padding-xxs display-none-print"
+			data-bi-name="open-source-feedback-section"
+			data-open-source-feedback-section
+			hidden
+		>
+			<div class="display-flex flex-direction-column flex-direction-row-tablet">
+				<div
+					class="width-450-tablet padding-inline-xs padding-inline-xs-tablet padding-top-xs padding-bottom-sm padding-top-xs-tablet background-color-body-medium"
+				>
+					<div class="display-flex flex-direction-column">
+						<div class="padding-bottom-xxs">
+							<span class="icon margin-right-xxs" aria-hidden="true">
+								<span class="docon docon-brand-github"></span>
+							</span>
+							<span class="font-weight-semibold">
+								Collaborate with us on GitHub
+							</span>
+						</div>
+						<span class="line-height-normal">
+							The source for this content can be found on GitHub, where you can also create and review issues and pull requests. For more information, see <a href="https://learn.microsoft.com/contribute/content/dotnet/dotnet-contribute">our contributor guide</a>.
+						</span>
+					</div>
+				</div>
+				<div
+					class="display-flex gap-xs width-full-tablet flex-direction-column padding-xs justify-content-space-evenly"
+				>
+					<div class="media">
+						
+					<div class="media-left">
+						<div class="image image-36x36" hidden data-open-source-image-container>
+							<img
+								class="theme-display is-light"
+								src="https://learn.microsoft.com/media/logos/logo_net.svg"
+								aria-hidden="true"
+								data-open-source-image-light
+							/>
+							<img
+								class="theme-display is-dark is-high-contrast"
+								src="https://learn.microsoft.com/media/logos/logo_net.svg"
+								aria-hidden="true"
+								data-open-source-image-dark
+							/>
+						</div>
+					</div>
+			  
+
+						<div class="media-content">
+							<p
+								class="font-size-xl font-weight-semibold margin-bottom-xxs"
+								data-open-source-product-title
+							>
+								ASP.NET Core
+							</p>
+							<div class="display-flex gap-xs flex-direction-column">
+								<p class="line-height-normal" data-open-source-product-description></p>
+								<div class="display-flex gap-xs flex-direction-column">
+									<a href="#" data-github-link>
+										<span class="icon margin-right-xxs" aria-hidden="true">
+											<span class="docon docon-bug"></span>
+										</span>
+										<span>Open a documentation issue</span>
+									</a>
+									<a
+										href="https://github.com/dotnet/aspnetcore/blob/main/CONTRIBUTING.md"
+										class="display-block margin-top-auto font-size-md"
+										data-feedback-product-url
+									>
+										<span class="icon margin-right-xxs" aria-hidden="true">
+											<span class="docon docon-feedback"></span>
+										</span>
+										<span>Provide product feedback</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+			
+		<!-- feedback section -->
+		<section
+			id="site-user-feedback-footer"
+			class="font-size-sm margin-top-md display-none-print display-none-desktop"
+			data-test-id="site-user-feedback-footer"
+			data-bi-name="site-feedback-section"
+		>
+			<hr class="hr" />
+			<h2 id="ms--feedback" class="title is-3">Feedback</h2>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="buttons">
+					<button
+						class="thumb-rating-button like button button-primary button-sm"
+						data-test-id="footer-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+						<span>Yes</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike button button-primary button-sm"
+						data-test-id="footer-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+						<span>No</span>
+					</button>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+		
+				</div>
+				
+		<div id="ms--additional-resources-mobile" class="display-none-print">
+			<hr class="hr" hidden />
+			<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>
+				Additional resources
+			</h2>
+			
+		<section
+			id="right-rail-recommendations-mobile"
+			class=""
+			data-bi-name="recommendations"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-training-mobile"
+			class=""
+			data-bi-name="learning-resource-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-events-mobile"
+			class=""
+			data-bi-name="events-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-qna-mobile"
+			class="margin-top-xxs"
+			data-bi-name="qna-link-card"
+			hidden
+		></section>
+	
+		</div>
+	
+			</div>
+			
+		<div
+			id="action-panel"
+			role="region"
+			aria-label="Action Panel"
+			class="action-panel"
+			tabindex="-1"
+		></div>
+	
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside "
+					data-bi-name="aside"
+			  >
+					
+		<div
+			id="ms--additional-resources"
+			class="right-container padding-sm display-none display-block-desktop height-full"
+			data-bi-name="pageactions"
+			role="complementary"
+			aria-label="Additional resources"
+		>
+			<div id="affixed-right-container" data-bi-name="right-column">
+				
+		<nav
+			id="side-doc-outline"
+			class="doc-outline border-bottom padding-bottom-xs margin-bottom-xs"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h3>In this article</h3>
+		</nav>
+	
+				<!-- Feedback -->
+				
+		<section
+			id="ms--site-user-feedback-right-rail"
+			class="font-size-sm display-none-print"
+			data-test-id="site-user-feedback-right-rail"
+			data-bi-name="site-feedback-right-rail"
+		>
+			<p class="font-weight-semibold margin-bottom-xs">Was this page helpful?</p>
+			<div class="buttons">
+				<button
+					class="thumb-rating-button like button button-primary button-sm"
+					data-test-id="right-rail-rating-yes"
+					data-binary-rating-response="rating-yes"
+					type="button"
+					title="This article is helpful"
+					data-bi-name="button-rating-yes"
+					aria-pressed="false"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-like"></span>
+					</span>
+					<span>Yes</span>
+				</button>
+				<button
+					class="thumb-rating-button dislike button button-primary button-sm"
+					data-test-id="right-rail-rating-no"
+					data-binary-rating-response="rating-no"
+					type="button"
+					title="This article is not helpful"
+					data-bi-name="button-rating-no"
+					aria-pressed="false"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-dislike"></span>
+					</span>
+					<span>No</span>
+				</button>
+			</div>
+		</section>
+	
+			</div>
+		</div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout has-padding has-default-focus border-top  uhf-container"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	
+				<div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-expanded="false"
+				title="Theme"
+				data-bi-name="theme"
+			>
+				<span class="icon">
+					<span class="docon docon-sun" aria-hidden="true"></span>
+				</span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu">
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="light"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="dark"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="high-contrast"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2025</li>
+			</ul>
+		</footer>
+	</footer>
+			</body>
+		
+<!-- Mirrored from learn.microsoft.com/en-us/aspnet/core/fundamentals/portable-object-localization?view=aspnetcore-9.0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 14:53:03 GMT -->
+</html>

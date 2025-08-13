@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/5.6.1/perlwin32 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>perlwin32 - Perl under Win32 - Perldoc Browser</title>
+    <link rel="search" href="../opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="../perlwin32.html">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="../css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html"><img src="../images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.6.1</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="../perlwin32.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0/perlwin32">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/perlwin32">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/perlwin32">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/perlwin32">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/perlwin32">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/perlwin32">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/perlwin32">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/perlwin32">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/perlwin32">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/perlwin32">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/perlwin32">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/perlwin32">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/perlwin32">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/perlwin32">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/perlwin32">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/perlwin32">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/perlwin32">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/perlwin32">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/perlwin32">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/perlwin32">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/perlwin32">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/perlwin32">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/perlwin32">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/perlwin32">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/perlwin32">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/perlwin32">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/perlwin32">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/perlwin32">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/perlwin32">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/perlwin32">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/perlwin32">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/perlwin32">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/perlwin32">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/perlwin32">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/perlwin32">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/perlwin32">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/perlwin32">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/perlwin32">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/perlwin32">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/perlwin32">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/perlwin32">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/perlwin32">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/perlwin32">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/perlwin32">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/perlwin32">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/perlwin32">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/perlwin32">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/perlwin32">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/perlwin32">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/perlwin32">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/perlwin32">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/perlwin32">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/perlwin32">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/perlwin32">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/perlwin32">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/perlwin32">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/perlwin32">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/perlwin32">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/perlwin32">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/perlwin32">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/perlwin32">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/perlwin32">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/perlwin32">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/perlwin32">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/perlwin32">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/perlwin32">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/perlwin32">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/perlwin32">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/perlwin32">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/perlwin32">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/perlwin32">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/perlwin32">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/perlwin32">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/perlwin32">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/perlwin32">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/perlwin32">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/perlwin32">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/perlwin32">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/perlwin32">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.6.2/perlwin32.html">5.6.2</a>
+          <a class="dropdown-item active" href="perlwin32.html">5.6.1</a>
+          <a class="dropdown-item" href="../5.6.0/perlwin32.html">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_04/perlwin32">5.005_04</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_03/perlwin32">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/perlwin32">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/perlwin32">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/perlwin32">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/perlwin32">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/perlwin32">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/perlwin32">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/perlwin32">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/perlwin32">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/perlwin32">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/perlwin32">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/perlwin32">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/perlwin32">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/perlwin32">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/perlwin32">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/perlwin32">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/perlwin32">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/perlwin32">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/perlwin32">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/perlwin32">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/perlwin32">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/perlwin32">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/perlwin32">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/perlwin32">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="../js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/5.6.1/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="../js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="perlwin32.html">perlwin32</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/5.6.1/perlwin32.txt">source</a>,
+            <a href="https://metacpan.org/pod/perlwin32">CPAN</a>)
+          </div>
+        </div>
+        <div class="leading-notice">
+          You are viewing the version of this documentation from Perl 5.6.1.
+            <a href="../perlwin32.html">View the latest version</a>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SYNOPSIS">SYNOPSIS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Setting-Up">Setting Up</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Building">Building</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Testing">Testing</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Installation">Installation</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Usage-Hints">Usage Hints</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#BUGS-AND-CAVEATS">BUGS AND CAVEATS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#AUTHORS">AUTHORS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SEE-ALSO">SEE ALSO</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#HISTORY">HISTORY</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>perlwin32 - Perl under Win32</p>
+
+<h1 id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">#</a>SYNOPSIS</h1>
+
+<p>These are instructions for building Perl under Windows (9x, NT and 2000).</p>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>Before you start, you should glance through the README file found in the top-level directory to which the Perl distribution was extracted. Make sure you read and understand the terms under which this software is being distributed.</p>
+
+<p>Also make sure you read <a href="#BUGS-AND-CAVEATS">&quot;BUGS AND CAVEATS&quot;</a> below for the known limitations of this port.</p>
+
+<p>The INSTALL file in the perl top-level has much information that is only relevant to people building Perl on Unix-like systems. In particular, you can safely ignore any information that talks about &quot;Configure&quot;.</p>
+
+<p>You may also want to look at two other options for building a perl that will work on Windows NT: the README.cygwin and README.os2 files, each of which give a different set of rules to build a Perl that will work on Win32 platforms. Those two methods will probably enable you to build a more Unix-compatible perl, but you will also need to download and use various other build-time and run-time support software described in those files.</p>
+
+<p>This set of instructions is meant to describe a so-called &quot;native&quot; port of Perl to Win32 platforms. The resulting Perl requires no additional software to run (other than what came with your operating system). Currently, this port is capable of using one of the following compilers:</p>
+
+<pre><code class="plaintext">Borland C++		version 5.02 or later
+Microsoft Visual C++	version 4.2 or later
+Mingw32 with GCC		version 2.95.2 or better</code></pre>
+
+<p>The last of these is a high quality freeware compiler. Support for it is still experimental. (Older versions of GCC are known not to work.)</p>
+
+<p>This port currently supports MakeMaker (the set of modules that is used to build extensions to perl). Therefore, you should be able to build and install most extensions found in the CPAN sites. See <a href="#Usage-Hints">&quot;Usage Hints&quot;</a> below for general hints about this.</p>
+
+<h2 id="Setting-Up"><a class="permalink" href="#Setting-Up">#</a><a id="Setting"></a>Setting Up</h2>
+
+<dl>
+
+<dt id="Make"><a class="permalink" href="#Make">#</a>Make</dt>
+<dd>
+
+<p>You need a &quot;make&quot; program to build the sources. If you are using Visual C++ under Windows NT or 2000, nmake will work. All other builds need dmake.</p>
+
+<p>dmake is a freely available make that has very nice macro features and parallelability.</p>
+
+<p>A port of dmake for Windows is available from:</p>
+
+<pre><code class="plaintext">http://www.cpan.org/authors/id/GSAR/dmake-4.1pl1-win32.zip</code></pre>
+
+<p>(This is a fixed version of the original dmake sources obtained from http://www.wticorp.com/dmake/. As of version 4.1PL1, the original sources did not build as shipped and had various other problems. A patch is included in the above fixed version.)</p>
+
+<p>Fetch and install dmake somewhere on your path (follow the instructions in the README.NOW file).</p>
+
+<p>There exists a minor coexistence problem with dmake and Borland C++ compilers. Namely, if a distribution has C files named with mixed case letters, they will be compiled into appropriate .obj-files named with all lowercase letters, and every time dmake is invoked to bring files up to date, it will try to recompile such files again. For example, Tk distribution has a lot of such files, resulting in needless recompiles everytime dmake is invoked. To avoid this, you may use the script &quot;sncfnmcs.pl&quot; after a successful build. It is available in the win32 subdirectory of the Perl source distribution.</p>
+
+</dd>
+<dt id="Command-Shell"><a class="permalink" href="#Command-Shell">#</a><a id="Command"></a>Command Shell</dt>
+<dd>
+
+<p>Use the default &quot;cmd&quot; shell that comes with NT. Some versions of the popular 4DOS/NT shell have incompatibilities that may cause you trouble. If the build fails under that shell, try building again with the cmd shell.</p>
+
+<p>The nmake Makefile also has known incompatibilities with the &quot;command.com&quot; shell that comes with Windows 9x. You will need to use dmake and makefile.mk to build under Windows 9x.</p>
+
+<p>The surest way to build it is on Windows NT, using the cmd shell.</p>
+
+<p>Make sure the path to the build directory does not contain spaces. The build usually works in this circumstance, but some tests will fail.</p>
+
+</dd>
+<dt id="Borland-C++"><a class="permalink" href="#Borland-C++">#</a><a id="Borland"></a><a id="Borland-C"></a>Borland C++</dt>
+<dd>
+
+<p>If you are using the Borland compiler, you will need dmake. (The make that Borland supplies is seriously crippled and will not work for MakeMaker builds.)</p>
+
+<p>See <a href="#Make">&quot;Make&quot;</a> above.</p>
+
+</dd>
+<dt id="Microsoft-Visual-C++"><a class="permalink" href="#Microsoft-Visual-C++">#</a><a id="Microsoft"></a><a id="Microsoft-Visual-C"></a>Microsoft Visual C++</dt>
+<dd>
+
+<p>The nmake that comes with Visual C++ will suffice for building. You will need to run the VCVARS32.BAT file, usually found somewhere like C:\MSDEV4.2\BIN. This will set your build environment.</p>
+
+<p>You can also use dmake to build using Visual C++; provided, however, you set OSRELEASE to &quot;microsft&quot; (or whatever the directory name under which the Visual C dmake configuration lives) in your environment and edit win32/config.vc to change &quot;make=nmake&quot; into &quot;make=dmake&quot;. The latter step is only essential if you want to use dmake as your default make for building extensions using MakeMaker.</p>
+
+</dd>
+<dt id="Mingw32-with-GCC"><a class="permalink" href="#Mingw32-with-GCC">#</a><a id="Mingw32"></a>Mingw32 with GCC</dt>
+<dd>
+
+<p>GCC-2.95.2 binaries can be downloaded from:</p>
+
+<pre><code class="plaintext">ftp://ftp.xraylith.wisc.edu/pub/khan/gnu-win32/mingw32/</code></pre>
+
+<p>You also need dmake. See <a href="#Make">&quot;Make&quot;</a> above on how to get it.</p>
+
+<p>The GCC-2.95.2 bundle comes with Mingw32 libraries and headers.</p>
+
+<p>Make sure you install the binaries that work with MSVCRT.DLL as indicated in the README for the GCC bundle. You may need to set up a few environment variables (usually ran from a batch file).</p>
+
+<p>There are a couple of problems with the version of gcc-2.95.2-msvcrt.exe released 7 November 1999:</p>
+
+<ul>
+
+<li><p>It left out a fix for certain command line quotes. To fix this, be sure to download and install the file fixes/quote-fix-msvcrt.exe from the above ftp location.</p>
+
+</li>
+<li><p>The definition of the fpos_t type in stdio.h may be wrong. If your stdio.h has this problem, you will see an exception when running the test t/lib/io_xs.t. To fix this, change the typedef for fpos_t from &quot;long&quot; to &quot;long long&quot; in the file i386-mingw32msvc/include/stdio.h, and rebuild.</p>
+
+</li>
+</ul>
+
+<p>A potentially simpler to install (but probably soon-to-be-outdated) bundle of the above package with the mentioned fixes already applied is available here:</p>
+
+<pre><code class="plaintext">http://downloads.ActiveState.com/pub/staff/gsar/gcc-2.95.2-msvcrt.zip
+ftp://ftp.ActiveState.com/pub/staff/gsar/gcc-2.95.2-msvcrt.zip</code></pre>
+
+</dd>
+</dl>
+
+<h2 id="Building"><a class="permalink" href="#Building">#</a>Building</h2>
+
+<ul>
+
+<li><p>Make sure you are in the &quot;win32&quot; subdirectory under the perl toplevel. This directory contains a &quot;Makefile&quot; that will work with versions of nmake that come with Visual C++, and a dmake &quot;makefile.mk&quot; that will work for all supported compilers. The defaults in the dmake makefile are setup to build using the GCC compiler.</p>
+
+</li>
+<li><p>Edit the makefile.mk (or Makefile, if you&#39;re using nmake) and change the values of INST_DRV and INST_TOP. You can also enable various build flags. These are explained in the makefiles.</p>
+
+<p>You will have to make sure that CCTYPE is set correctly and that CCHOME points to wherever you installed your compiler.</p>
+
+<p>The default value for CCHOME in the makefiles for Visual C++ may not be correct for some versions. Make sure the default exists and is valid.</p>
+
+<p>If you have either the source or a library that contains des_fcrypt(), enable the appropriate option in the makefile. des_fcrypt() is not bundled with the distribution due to US Government restrictions on the export of cryptographic software. Nevertheless, this routine is part of the &quot;libdes&quot; library (written by Eric Young) which is widely available worldwide, usually along with SSLeay (for example, &quot;ftp://fractal.mta.ca/pub/crypto/SSLeay/DES/&quot;). Set CRYPT_SRC to the name of the file that implements des_fcrypt(). Alternatively, if you have built a library that contains des_fcrypt(), you can set CRYPT_LIB to point to the library name. The location above contains many versions of the &quot;libdes&quot; library, all with slightly different implementations of des_fcrypt(). Older versions have a single, self-contained file (fcrypt.c) that implements crypt(), so they may be easier to use. A patch against the fcrypt.c found in libdes-3.06 is in des_fcrypt.patch.</p>
+
+<p>Perl will also build without des_fcrypt(), but the crypt() builtin will fail at run time.</p>
+
+<p>Be sure to read the instructions near the top of the makefiles carefully.</p>
+
+</li>
+<li><p>Type &quot;dmake&quot; (or &quot;nmake&quot; if you are using that make).</p>
+
+<p>This should build everything. Specifically, it will create perl.exe, perl56.dll at the perl toplevel, and various other extension dll&#39;s under the lib\auto directory. If the build fails for any reason, make sure you have done the previous steps correctly.</p>
+
+</li>
+</ul>
+
+<h2 id="Testing"><a class="permalink" href="#Testing">#</a>Testing</h2>
+
+<p>Type &quot;dmake test&quot; (or &quot;nmake test&quot;). This will run most of the tests from the testsuite (many tests will be skipped).</p>
+
+<p>There should be no test failures when running under Windows NT 4.0 or Windows 2000. Many tests <i>will</i> fail under Windows 9x due to the inferior command shell.</p>
+
+<p>Some test failures may occur if you use a command shell other than the native &quot;cmd.exe&quot;, or if you are building from a path that contains spaces. So don&#39;t do that.</p>
+
+<p>If you are running the tests from a emacs shell window, you may see failures in op/stat.t. Run &quot;dmake test-notty&quot; in that case.</p>
+
+<p>If you&#39;re using the Borland compiler, you may see a failure in op/taint.t arising from the inability to find the Borland Runtime DLLs on the system default path. You will need to copy the DLLs reported by the messages from where Borland chose to install it, into the Windows system directory (usually somewhere like C:\WINNT\SYSTEM32) and rerun the test.</p>
+
+<p>If you&#39;re using Borland compiler versions 5.2 and below, you may run into problems finding the correct header files when building extensions. For example, building the &quot;Tk&quot; extension may fail because both perl and Tk contain a header file called &quot;patchlevel.h&quot;. The latest Borland compiler (v5.5) is free of this misbehaviour, and it even supports an option -VI- for backward (bugward) compatibility for using the old Borland search algorithm to locate header files.</p>
+
+<p>Please report any other failures as described under <a href="#BUGS-AND-CAVEATS">&quot;BUGS AND CAVEATS&quot;</a>.</p>
+
+<h2 id="Installation"><a class="permalink" href="#Installation">#</a>Installation</h2>
+
+<p>Type &quot;dmake install&quot; (or &quot;nmake install&quot;). This will put the newly built perl and the libraries under whatever <code>INST_TOP</code> points to in the Makefile. It will also install the pod documentation under <code>$INST_TOP\$VERSION\lib\pod</code> and HTML versions of the same under <code>$INST_TOP\$VERSION\lib\pod\html</code>. To use the Perl you just installed, you will need to add two components to your PATH environment variable, <code>$INST_TOP\$VERSION\bin</code> and <code>$INST_TOP\$VERSION\bin\$ARCHNAME</code>. For example:</p>
+
+<pre><code>set PATH c:\perl\5.6.0\bin;c:\perl\5.6.0\bin\MSWin32-x86;%PATH%</code></pre>
+
+<p>If you opt to comment out INST_VER and INST_ARCH in the makefiles, the installation structure is much simpler. In that case, it will be sufficient to add a single entry to the path, for instance:</p>
+
+<pre><code>set PATH c:\perl\bin;%PATH%</code></pre>
+
+<h2 id="Usage-Hints"><a class="permalink" href="#Usage-Hints">#</a><a id="Usage"></a>Usage Hints</h2>
+
+<dl>
+
+<dt id="Environment-Variables"><a class="permalink" href="#Environment-Variables">#</a><a id="Environment"></a>Environment Variables</dt>
+<dd>
+
+<p>The installation paths that you set during the build get compiled into perl, so you don&#39;t have to do anything additional to start using that perl (except add its location to your PATH variable).</p>
+
+<p>If you put extensions in unusual places, you can set PERL5LIB to a list of paths separated by semicolons where you want perl to look for libraries. Look for descriptions of other environment variables you can set in <a href="perlrun.html">perlrun</a>.</p>
+
+<p>You can also control the shell that perl uses to run system() and backtick commands via PERL5SHELL. See <a href="perlrun.html">perlrun</a>.</p>
+
+<p>Perl does not depend on the registry, but it can look up certain default values if you choose to put them there. Perl attempts to read entries from <code>HKEY_CURRENT_USER\Software\Perl</code> and <code>HKEY_LOCAL_MACHINE\Software\Perl</code>. Entries in the former override entries in the latter. One or more of the following entries (of type REG_SZ or REG_EXPAND_SZ) may be set:</p>
+
+<pre><code>lib-$]		version-specific standard library path to add to @INC
+lib			standard library path to add to @INC
+sitelib-$]		version-specific site library path to add to @INC
+sitelib		site library path to add to @INC
+vendorlib-$]	version-specific vendor library path to add to @INC
+vendorlib		vendor library path to add to @INC
+PERL*		fallback for all %ENV lookups that begin with &quot;PERL&quot;</code></pre>
+
+<p>Note the <code>$]</code> in the above is not literal. Substitute whatever version of perl you want to honor that entry, e.g. <code>5.6.0</code>. Paths must be separated with semicolons, as usual on win32.</p>
+
+</dd>
+<dt id="File-Globbing"><a class="permalink" href="#File-Globbing">#</a><a id="File"></a>File Globbing</dt>
+<dd>
+
+<p>By default, perl handles file globbing using the File::Glob extension, which provides portable globbing.</p>
+
+<p>If you want perl to use globbing that emulates the quirks of DOS filename conventions, you might want to consider using File::DosGlob to override the internal glob() implementation. See <a href="https://perldoc.perl.org/5.6.1/File::DosGlob">File::DosGlob</a> for details.</p>
+
+</dd>
+<dt id="Using-perl-from-the-command-line"><a class="permalink" href="#Using-perl-from-the-command-line">#</a><a id="Using"></a>Using perl from the command line</dt>
+<dd>
+
+<p>If you are accustomed to using perl from various command-line shells found in UNIX environments, you will be less than pleased with what Windows offers by way of a command shell.</p>
+
+<p>The crucial thing to understand about the Windows environment is that the command line you type in is processed twice before Perl sees it. First, your command shell (usually CMD.EXE on Windows NT, and COMMAND.COM on Windows 9x) preprocesses the command line, to handle redirection, environment variable expansion, and location of the executable to run. Then, the perl executable splits the remaining command line into individual arguments, using the C runtime library upon which Perl was built.</p>
+
+<p>It is particularly important to note that neither the shell nor the C runtime do any wildcard expansions of command-line arguments (so wildcards need not be quoted). Also, the quoting behaviours of the shell and the C runtime are rudimentary at best (and may, if you are using a non-standard shell, be inconsistent). The only (useful) quote character is the double quote (&quot;). It can be used to protect spaces and other special characters in arguments.</p>
+
+<p>The Windows NT documentation has almost no description of how the quoting rules are implemented, but here are some general observations based on experiments: The C runtime breaks arguments at spaces and passes them to programs in argc/argv. Double quotes can be used to prevent arguments with spaces in them from being split up. You can put a double quote in an argument by escaping it with a backslash and enclosing the whole argument within double quotes. The backslash and the pair of double quotes surrounding the argument will be stripped by the C runtime.</p>
+
+<p>The file redirection characters &quot;&lt;&quot;, &quot;&gt;&quot;, and &quot;|&quot; can be quoted by double quotes (although there are suggestions that this may not always be true). Single quotes are not treated as quotes by the shell or the C runtime, they don&#39;t get stripped by the shell (just to make this type of quoting completely useless). The caret &quot;^&quot; has also been observed to behave as a quoting character, but this appears to be a shell feature, and the caret is not stripped from the command line, so Perl still sees it (and the C runtime phase does not treat the caret as a quote character).</p>
+
+<p>Here are some examples of usage of the &quot;cmd&quot; shell:</p>
+
+<p>This prints two doublequotes:</p>
+
+<pre><code class="plaintext">perl -e &quot;print &#39;\&quot;\&quot;&#39; &quot;</code></pre>
+
+<p>This does the same:</p>
+
+<pre><code class="plaintext">perl -e &quot;print \&quot;\\\&quot;\\\&quot;\&quot; &quot;</code></pre>
+
+<p>This prints &quot;bar&quot; and writes &quot;foo&quot; to the file &quot;blurch&quot;:</p>
+
+<pre><code class="plaintext">perl -e &quot;print &#39;foo&#39;; print STDERR &#39;bar&#39;&quot; &gt; blurch</code></pre>
+
+<p>This prints &quot;foo&quot; (&quot;bar&quot; disappears into nowhereland):</p>
+
+<pre><code class="plaintext">perl -e &quot;print &#39;foo&#39;; print STDERR &#39;bar&#39;&quot; 2&gt; nul</code></pre>
+
+<p>This prints &quot;bar&quot; and writes &quot;foo&quot; into the file &quot;blurch&quot;:</p>
+
+<pre><code class="plaintext">perl -e &quot;print &#39;foo&#39;; print STDERR &#39;bar&#39;&quot; 1&gt; blurch</code></pre>
+
+<p>This pipes &quot;foo&quot; to the &quot;less&quot; pager and prints &quot;bar&quot; on the console:</p>
+
+<pre><code class="plaintext">perl -e &quot;print &#39;foo&#39;; print STDERR &#39;bar&#39;&quot; | less</code></pre>
+
+<p>This pipes &quot;foo\nbar\n&quot; to the less pager:</p>
+
+<pre><code class="plaintext">perl -le &quot;print &#39;foo&#39;; print STDERR &#39;bar&#39;&quot; 2&gt;&amp;1 | less</code></pre>
+
+<p>This pipes &quot;foo&quot; to the pager and writes &quot;bar&quot; in the file &quot;blurch&quot;:</p>
+
+<pre><code class="plaintext">perl -e &quot;print &#39;foo&#39;; print STDERR &#39;bar&#39;&quot; 2&gt; blurch | less</code></pre>
+
+<p>Discovering the usefulness of the &quot;command.com&quot; shell on Windows 9x is left as an exercise to the reader :)</p>
+
+<p>One particularly pernicious problem with the 4NT command shell for Windows NT is that it (nearly) always treats a % character as indicating that environment variable expansion is needed. Under this shell, it is therefore important to always double any % characters which you want Perl to see (for example, for hash variables), even when they are quoted.</p>
+
+</dd>
+<dt id="Building-Extensions"><a class="permalink" href="#Building-Extensions">#</a><a id="Building1"></a>Building Extensions</dt>
+<dd>
+
+<p>The Comprehensive Perl Archive Network (CPAN) offers a wealth of extensions, some of which require a C compiler to build. Look in http://www.cpan.org/ for more information on CPAN.</p>
+
+<p>Note that not all of the extensions available from CPAN may work in the Win32 environment; you should check the information at http://testers.cpan.org/ before investing too much effort into porting modules that don&#39;t readily build.</p>
+
+<p>Most extensions (whether they require a C compiler or not) can be built, tested and installed with the standard mantra:</p>
+
+<pre><code>perl Makefile.PL
+$MAKE
+$MAKE test
+$MAKE install</code></pre>
+
+<p>where $MAKE is whatever &#39;make&#39; program you have configured perl to use. Use &quot;perl -V:make&quot; to find out what this is. Some extensions may not provide a testsuite (so &quot;$MAKE test&quot; may not do anything or fail), but most serious ones do.</p>
+
+<p>It is important that you use a supported &#39;make&#39; program, and ensure Config.pm knows about it. If you don&#39;t have nmake, you can either get dmake from the location mentioned earlier or get an old version of nmake reportedly available from:</p>
+
+<pre><code class="plaintext">ftp://ftp.microsoft.com/Softlib/MSLFILES/nmake15.exe</code></pre>
+
+<p>Another option is to use the make written in Perl, available from CPAN:</p>
+
+<pre><code class="plaintext">http://www.cpan.org/authors/id/NI-S/Make-0.03.tar.gz</code></pre>
+
+<p>You may also use dmake. See <a href="#Make">&quot;Make&quot;</a> above on how to get it.</p>
+
+<p>Note that MakeMaker actually emits makefiles with different syntax depending on what &#39;make&#39; it thinks you are using. Therefore, it is important that one of the following values appears in Config.pm:</p>
+
+<pre><code class="plaintext">make=&#39;nmake&#39;	# MakeMaker emits nmake syntax
+make=&#39;dmake&#39;	# MakeMaker emits dmake syntax
+any other value	# MakeMaker emits generic make syntax
+			    (e.g GNU make, or Perl make)</code></pre>
+
+<p>If the value doesn&#39;t match the &#39;make&#39; program you want to use, edit Config.pm to fix it.</p>
+
+<p>If a module implements XSUBs, you will need one of the supported C compilers. You must make sure you have set up the environment for the compiler for command-line compilation.</p>
+
+<p>If a module does not build for some reason, look carefully for why it failed, and report problems to the module author. If it looks like the extension building support is at fault, report that with full details of how the build failed using the perlbug utility.</p>
+
+</dd>
+<dt id="Command-line-Wildcard-Expansion"><a class="permalink" href="#Command-line-Wildcard-Expansion">#</a><a id="Command1"></a>Command-line Wildcard Expansion</dt>
+<dd>
+
+<p>The default command shells on DOS descendant operating systems (such as they are) usually do not expand wildcard arguments supplied to programs. They consider it the application&#39;s job to handle that. This is commonly achieved by linking the application (in our case, perl) with startup code that the C runtime libraries usually provide. However, doing that results in incompatible perl versions (since the behavior of the argv expansion code differs depending on the compiler, and it is even buggy on some compilers). Besides, it may be a source of frustration if you use such a perl binary with an alternate shell that *does* expand wildcards.</p>
+
+<p>Instead, the following solution works rather well. The nice things about it are 1) you can start using it right away; 2) it is more powerful, because it will do the right thing with a pattern like */*/*.c; 3) you can decide whether you do/don&#39;t want to use it; and 4) you can extend the method to add any customizations (or even entirely different kinds of wildcard expansion).</p>
+
+<pre><code>C:\&gt; copy con c:\perl\lib\Wild.pm
+# Wild.pm - emulate shell @ARGV expansion on shells that don&#39;t
+use File::DosGlob;
+@ARGV = map {
+	      my @g = File::DosGlob::glob($_) if /[*?]/;
+	      @g ? @g : $_;
+	    } @ARGV;
+1;
+^Z
+C:\&gt; set PERL5OPT=-MWild
+C:\&gt; perl -le &quot;for (@ARGV) { print }&quot; */*/perl*.c
+p4view/perl/perl.c
+p4view/perl/perlio.c
+p4view/perl/perly.c
+perl5.005/win32/perlglob.c
+perl5.005/win32/perllib.c
+perl5.005/win32/perlglob.c
+perl5.005/win32/perllib.c
+perl5.005/win32/perlglob.c
+perl5.005/win32/perllib.c</code></pre>
+
+<p>Note there are two distinct steps there: 1) You&#39;ll have to create Wild.pm and put it in your perl lib directory. 2) You&#39;ll need to set the PERL5OPT environment variable. If you want argv expansion to be the default, just set PERL5OPT in your default startup environment.</p>
+
+<p>If you are using the Visual C compiler, you can get the C runtime&#39;s command line wildcard expansion built into perl binary. The resulting binary will always expand unquoted command lines, which may not be what you want if you use a shell that does that for you. The expansion done is also somewhat less powerful than the approach suggested above.</p>
+
+</dd>
+<dt id="Win32-Specific-Extensions"><a class="permalink" href="#Win32-Specific-Extensions">#</a><a id="Win32"></a>Win32 Specific Extensions</dt>
+<dd>
+
+<p>A number of extensions specific to the Win32 platform are available from CPAN. You may find that many of these extensions are meant to be used under the Activeware port of Perl, which used to be the only native port for the Win32 platform. Since the Activeware port does not have adequate support for Perl&#39;s extension building tools, these extensions typically do not support those tools either and, therefore, cannot be built using the generic steps shown in the previous section.</p>
+
+<p>To ensure smooth transitioning of existing code that uses the ActiveState port, there is a bundle of Win32 extensions that contains all of the ActiveState extensions and most other Win32 extensions from CPAN in source form, along with many added bugfixes, and with MakeMaker support. This bundle is available at:</p>
+
+<pre><code class="plaintext">http://www.cpan.org/authors/id/GSAR/libwin32-0.151.zip</code></pre>
+
+<p>See the README in that distribution for building and installation instructions. Look for later versions that may be available at the same location.</p>
+
+</dd>
+<dt id="Running-Perl-Scripts"><a class="permalink" href="#Running-Perl-Scripts">#</a><a id="Running"></a>Running Perl Scripts</dt>
+<dd>
+
+<p>Perl scripts on UNIX use the &quot;#!&quot; (a.k.a &quot;shebang&quot;) line to indicate to the OS that it should execute the file using perl. Win32 has no comparable means to indicate arbitrary files are executables.</p>
+
+<p>Instead, all available methods to execute plain text files on Win32 rely on the file &quot;extension&quot;. There are three methods to use this to execute perl scripts:</p>
+
+<ol>
+
+<li><p>There is a facility called &quot;file extension associations&quot; that will work in Windows NT 4.0. This can be manipulated via the two commands &quot;assoc&quot; and &quot;ftype&quot; that come standard with Windows NT 4.0. Type &quot;ftype /?&quot; for a complete example of how to set this up for perl scripts (Say what? You thought Windows NT wasn&#39;t perl-ready? :).</p>
+
+</li>
+<li><p>Since file associations don&#39;t work everywhere, and there are reportedly bugs with file associations where it does work, the old method of wrapping the perl script to make it look like a regular batch file to the OS, may be used. The install process makes available the &quot;pl2bat.bat&quot; script which can be used to wrap perl scripts into batch files. For example:</p>
+
+<pre><code class="plaintext">pl2bat foo.pl</code></pre>
+
+<p>will create the file &quot;FOO.BAT&quot;. Note &quot;pl2bat&quot; strips any .pl suffix and adds a .bat suffix to the generated file.</p>
+
+<p>If you use the 4DOS/NT or similar command shell, note that &quot;pl2bat&quot; uses the &quot;%*&quot; variable in the generated batch file to refer to all the command line arguments, so you may need to make sure that construct works in batch files. As of this writing, 4DOS/NT users will need a &quot;ParameterChar = *&quot; statement in their 4NT.INI file or will need to execute &quot;setdos /p*&quot; in the 4DOS/NT startup file to enable this to work.</p>
+
+</li>
+<li><p>Using &quot;pl2bat&quot; has a few problems: the file name gets changed, so scripts that rely on <code>$0</code> to find what they must do may not run properly; running &quot;pl2bat&quot; replicates the contents of the original script, and so this process can be maintenance intensive if the originals get updated often. A different approach that avoids both problems is possible.</p>
+
+<p>A script called &quot;runperl.bat&quot; is available that can be copied to any filename (along with the .bat suffix). For example, if you call it &quot;foo.bat&quot;, it will run the file &quot;foo&quot; when it is executed. Since you can run batch files on Win32 platforms simply by typing the name (without the extension), this effectively runs the file &quot;foo&quot;, when you type either &quot;foo&quot; or &quot;foo.bat&quot;. With this method, &quot;foo.bat&quot; can even be in a different location than the file &quot;foo&quot;, as long as &quot;foo&quot; is available somewhere on the PATH. If your scripts are on a filesystem that allows symbolic links, you can even avoid copying &quot;runperl.bat&quot;.</p>
+
+<p>Here&#39;s a diversion: copy &quot;runperl.bat&quot; to &quot;runperl&quot;, and type &quot;runperl&quot;. Explain the observed behavior, or lack thereof. :) Hint: .gnidnats llits er&#39;uoy fi ,&quot;lrepnur&quot; eteled :tniH</p>
+
+</li>
+</ol>
+
+</dd>
+<dt id="Miscellaneous-Things"><a class="permalink" href="#Miscellaneous-Things">#</a><a id="Miscellaneous"></a>Miscellaneous Things</dt>
+<dd>
+
+<p>A full set of HTML documentation is installed, so you should be able to use it if you have a web browser installed on your system.</p>
+
+<p><code>perldoc</code> is also a useful tool for browsing information contained in the documentation, especially in conjunction with a pager like <code>less</code> (recent versions of which have Win32 support). You may have to set the PAGER environment variable to use a specific pager. &quot;perldoc -f foo&quot; will print information about the perl operator &quot;foo&quot;.</p>
+
+<p>If you find bugs in perl, you can run <code>perlbug</code> to create a bug report (you may have to send it manually if <code>perlbug</code> cannot find a mailer on your system).</p>
+
+</dd>
+</dl>
+
+<h1 id="BUGS-AND-CAVEATS"><a class="permalink" href="#BUGS-AND-CAVEATS">#</a><a id="BUGS"></a>BUGS AND CAVEATS</h1>
+
+<p>Some of the built-in functions do not act exactly as documented in <a href="perlfunc.html">perlfunc</a>, and a few are not implemented at all. To avoid surprises, particularly if you have had prior exposure to Perl in other operating environments or if you intend to write code that will be portable to other environments. See <a href="perlport.html">perlport</a> for a reasonably definitive list of these differences.</p>
+
+<p>Not all extensions available from CPAN may build or work properly in the Win32 environment. See <a href="#Building-Extensions">&quot;Building Extensions&quot;</a>.</p>
+
+<p>Most <code>socket()</code> related calls are supported, but they may not behave as on Unix platforms. See <a href="perlport.html">perlport</a> for the full list.</p>
+
+<p>Signal handling may not behave as on Unix platforms (where it doesn&#39;t exactly &quot;behave&quot;, either :). For instance, calling <code>die()</code> or <code>exit()</code> from signal handlers will cause an exception, since most implementations of <code>signal()</code> on Win32 are severely crippled. Thus, signals may work only for simple things like setting a flag variable in the handler. Using signals under this port should currently be considered unsupported.</p>
+
+<p>Please send detailed descriptions of any problems and solutions that you may find to &lt;<i>perlbug@perl.com</i>&gt;, along with the output produced by <code>perl -V</code>.</p>
+
+<h1 id="AUTHORS"><a class="permalink" href="#AUTHORS">#</a>AUTHORS</h1>
+
+<dl>
+
+<dt id="Gary-Ng-&lt;71564.1743@CompuServe.COM&gt;"><a class="permalink" href="#Gary-Ng-%3C71564.1743@CompuServe.COM%3E">#</a><a id="Gary"></a><a id="Gary-Ng-71564.1743-CompuServe.COM"></a>Gary Ng &lt;71564.1743@CompuServe.COM&gt;</dt>
+<dd>
+
+</dd>
+<dt id="Gurusamy-Sarathy-&lt;gsar@activestate.com&gt;"><a class="permalink" href="#Gurusamy-Sarathy-%3Cgsar@activestate.com%3E">#</a><a id="Gurusamy"></a><a id="Gurusamy-Sarathy-gsar-activestate.com"></a>Gurusamy Sarathy &lt;gsar@activestate.com&gt;</dt>
+<dd>
+
+</dd>
+<dt id="Nick-Ing-Simmons-&lt;nick@ni-s.u-net.com&gt;"><a class="permalink" href="#Nick-Ing-Simmons-%3Cnick@ni-s.u-net.com%3E">#</a><a id="Nick"></a><a id="Nick-Ing-Simmons-nick-ni-s.u-net.com"></a>Nick Ing-Simmons &lt;nick@ni-s.u-net.com&gt;</dt>
+<dd>
+
+</dd>
+</dl>
+
+<p>This document is maintained by Gurusamy Sarathy.</p>
+
+<h1 id="SEE-ALSO"><a class="permalink" href="#SEE-ALSO">#</a><a id="SEE"></a>SEE ALSO</h1>
+
+<p><a href="perl.html">perl</a></p>
+
+<h1 id="HISTORY"><a class="permalink" href="#HISTORY">#</a>HISTORY</h1>
+
+<p>This port was originally contributed by Gary Ng around 5.003_24, and borrowed from the Hip Communications port that was available at the time. Various people have made numerous and sundry hacks since then.</p>
+
+<p>Borland support was added in 5.004_01 (Gurusamy Sarathy).</p>
+
+<p>GCC/mingw32 support was added in 5.005 (Nick Ing-Simmons).</p>
+
+<p>Support for PERL_OBJECT was added in 5.005 (ActiveState Tool Corp).</p>
+
+<p>Support for fork() emulation was added in 5.6 (ActiveState Tool Corp).</p>
+
+<p>Win9x support was added in 5.6 (Benjamin Stuhl).</p>
+
+<p>Last updated: 1 April 2001</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/5.6.1/perlwin32 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:46 GMT -->
+</html>

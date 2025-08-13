@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/5.41.4/perldelta by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>perldelta - what is new for perl v5.41.4 - Perldoc Browser</title>
+    <link rel="search" href="../opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="../perldelta.html">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="../css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html"><img src="../images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.41.4</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="../perldelta.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.42.0/perldelta.html">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.40.3/perldelta.html">5.40.3</a>
+          <a class="dropdown-item" href="../5.40.2/perldelta.html">5.40.2</a>
+          <a class="dropdown-item" href="../5.40.1/perldelta.html">5.40.1</a>
+          <a class="dropdown-item" href="../5.40.0/perldelta.html">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.38.5/perldelta.html">5.38.5</a>
+          <a class="dropdown-item" href="../5.38.4/perldelta.html">5.38.4</a>
+          <a class="dropdown-item" href="../5.38.3/perldelta.html">5.38.3</a>
+          <a class="dropdown-item" href="../5.38.2/perldelta.html">5.38.2</a>
+          <a class="dropdown-item" href="../5.38.1/perldelta.html">5.38.1</a>
+          <a class="dropdown-item" href="../5.38.0/perldelta.html">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.36.3/perldelta.html">5.36.3</a>
+          <a class="dropdown-item" href="../5.36.2/perldelta.html">5.36.2</a>
+          <a class="dropdown-item" href="../5.36.1/perldelta.html">5.36.1</a>
+          <a class="dropdown-item" href="../5.36.0/perldelta.html">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.34.3/perldelta.html">5.34.3</a>
+          <a class="dropdown-item" href="../5.34.2/perldelta.html">5.34.2</a>
+          <a class="dropdown-item" href="../5.34.1/perldelta.html">5.34.1</a>
+          <a class="dropdown-item" href="../5.34.0/perldelta.html">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.32.1/perldelta.html">5.32.1</a>
+          <a class="dropdown-item" href="../5.32.0/perldelta.html">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.30.3/perldelta.html">5.30.3</a>
+          <a class="dropdown-item" href="../5.30.2/perldelta.html">5.30.2</a>
+          <a class="dropdown-item" href="../5.30.1/perldelta.html">5.30.1</a>
+          <a class="dropdown-item" href="../5.30.0/perldelta.html">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.28.3/perldelta.html">5.28.3</a>
+          <a class="dropdown-item" href="../5.28.2/perldelta.html">5.28.2</a>
+          <a class="dropdown-item" href="../5.28.1/perldelta.html">5.28.1</a>
+          <a class="dropdown-item" href="../5.28.0/perldelta.html">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.26.3/perldelta.html">5.26.3</a>
+          <a class="dropdown-item" href="../5.26.2/perldelta.html">5.26.2</a>
+          <a class="dropdown-item" href="../5.26.1/perldelta.html">5.26.1</a>
+          <a class="dropdown-item" href="../5.26.0/perldelta.html">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.24.4/perldelta.html">5.24.4</a>
+          <a class="dropdown-item" href="../5.24.3/perldelta.html">5.24.3</a>
+          <a class="dropdown-item" href="../5.24.2/perldelta.html">5.24.2</a>
+          <a class="dropdown-item" href="../5.24.1/perldelta.html">5.24.1</a>
+          <a class="dropdown-item" href="../5.24.0/perldelta.html">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.22.4/perldelta.html">5.22.4</a>
+          <a class="dropdown-item" href="../5.22.3/perldelta.html">5.22.3</a>
+          <a class="dropdown-item" href="../5.22.2/perldelta.html">5.22.2</a>
+          <a class="dropdown-item" href="../5.22.1/perldelta.html">5.22.1</a>
+          <a class="dropdown-item" href="../5.22.0/perldelta.html">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.20.3/perldelta.html">5.20.3</a>
+          <a class="dropdown-item" href="../5.20.2/perldelta.html">5.20.2</a>
+          <a class="dropdown-item" href="../5.20.1/perldelta.html">5.20.1</a>
+          <a class="dropdown-item" href="../5.20.0/perldelta.html">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.18.4/perldelta.html">5.18.4</a>
+          <a class="dropdown-item" href="../5.18.3/perldelta.html">5.18.3</a>
+          <a class="dropdown-item" href="../5.18.2/perldelta.html">5.18.2</a>
+          <a class="dropdown-item" href="../5.18.1/perldelta.html">5.18.1</a>
+          <a class="dropdown-item" href="../5.18.0/perldelta.html">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.16.3/perldelta.html">5.16.3</a>
+          <a class="dropdown-item" href="../5.16.2/perldelta.html">5.16.2</a>
+          <a class="dropdown-item" href="../5.16.1/perldelta.html">5.16.1</a>
+          <a class="dropdown-item" href="../5.16.0/perldelta.html">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.14.4/perldelta.html">5.14.4</a>
+          <a class="dropdown-item" href="../5.14.3/perldelta.html">5.14.3</a>
+          <a class="dropdown-item" href="../5.14.2/perldelta.html">5.14.2</a>
+          <a class="dropdown-item" href="../5.14.1/perldelta.html">5.14.1</a>
+          <a class="dropdown-item" href="../5.14.0/perldelta.html">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.12.5/perldelta.html">5.12.5</a>
+          <a class="dropdown-item" href="../5.12.4/perldelta.html">5.12.4</a>
+          <a class="dropdown-item" href="../5.12.3/perldelta.html">5.12.3</a>
+          <a class="dropdown-item" href="../5.12.2/perldelta.html">5.12.2</a>
+          <a class="dropdown-item" href="../5.12.1/perldelta.html">5.12.1</a>
+          <a class="dropdown-item" href="../5.12.0/perldelta.html">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.10.1/perldelta.html">5.10.1</a>
+          <a class="dropdown-item" href="../5.10.0/perldelta.html">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.8.9/perldelta.html">5.8.9</a>
+          <a class="dropdown-item" href="../5.8.8/perldelta.html">5.8.8</a>
+          <a class="dropdown-item" href="../5.8.7/perldelta.html">5.8.7</a>
+          <a class="dropdown-item" href="../5.8.6/perldelta.html">5.8.6</a>
+          <a class="dropdown-item" href="../5.8.5/perldelta.html">5.8.5</a>
+          <a class="dropdown-item" href="../5.8.4/perldelta.html">5.8.4</a>
+          <a class="dropdown-item" href="../5.8.3/perldelta.html">5.8.3</a>
+          <a class="dropdown-item" href="../5.8.2/perldelta.html">5.8.2</a>
+          <a class="dropdown-item" href="../5.8.1/perldelta.html">5.8.1</a>
+          <a class="dropdown-item" href="../5.8.0/perldelta.html">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.6.2/perldelta.html">5.6.2</a>
+          <a class="dropdown-item" href="../5.6.1/perldelta.html">5.6.1</a>
+          <a class="dropdown-item" href="../5.6.0/perldelta.html">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.005_04/perldelta.html">5.005_04</a>
+          <a class="dropdown-item" href="../5.005_03/perldelta.html">5.005_03</a>
+          <a class="dropdown-item" href="../5.005_02/perldelta.html">5.005_02</a>
+          <a class="dropdown-item" href="../5.005_01/perldelta.html">5.005_01</a>
+          <a class="dropdown-item" href="../5.005/perldelta.html">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="../blead/perldelta.html">blead</a>
+          <a class="dropdown-item" href="../5.43.1/perldelta.html">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.42.0-RC3/perldelta.html">5.42.0-RC3</a>
+          <a class="dropdown-item" href="../5.42.0-RC2/perldelta.html">5.42.0-RC2</a>
+          <a class="dropdown-item" href="../5.42.0-RC1/perldelta.html">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.41.13/perldelta.html">5.41.13</a>
+          <a class="dropdown-item" href="../5.41.12/perldelta.html">5.41.12</a>
+          <a class="dropdown-item" href="../5.41.11/perldelta.html">5.41.11</a>
+          <a class="dropdown-item" href="../5.41.10/perldelta.html">5.41.10</a>
+          <a class="dropdown-item" href="../5.41.9/perldelta.html">5.41.9</a>
+          <a class="dropdown-item" href="../5.41.8/perldelta.html">5.41.8</a>
+          <a class="dropdown-item" href="../5.41.7/perldelta.html">5.41.7</a>
+          <a class="dropdown-item" href="../5.41.6/perldelta.html">5.41.6</a>
+          <a class="dropdown-item" href="../5.41.5/perldelta.html">5.41.5</a>
+          <a class="dropdown-item active" href="perldelta.html">5.41.4</a>
+          <a class="dropdown-item" href="../5.41.3/perldelta.html">5.41.3</a>
+          <a class="dropdown-item" href="../5.41.2/perldelta.html">5.41.2</a>
+          <a class="dropdown-item" href="../5.41.1/perldelta.html">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.40.3-RC1/perldelta.html">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.38.5-RC1/perldelta.html">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="../js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/5.41.4/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="../js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="perldelta.html">perldelta</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/5.41.4/perldelta.txt">source</a>,
+            <a href="https://metacpan.org/pod/perldelta">CPAN</a>)
+          </div>
+        </div>
+        <div class="leading-notice">
+          You are viewing the version of this documentation from Perl 5.41.4.
+            This is a development version of Perl.
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Modules-and-Pragmata">Modules and Pragmata</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Updated-Modules-and-Pragmata">Updated Modules and Pragmata</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Diagnostics">Diagnostics</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#New-Warnings">New Warnings</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Configuration-and-Compilation">Configuration and Compilation</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Internal-Changes">Internal Changes</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Selected-Bug-Fixes">Selected Bug Fixes</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Acknowledgements">Acknowledgements</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Reporting-Bugs">Reporting Bugs</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Give-Thanks">Give Thanks</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SEE-ALSO">SEE ALSO</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>perldelta - what is new for perl v5.41.4</p>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>This document describes differences between the 5.41.3 release and the 5.41.4 release.</p>
+
+<p>If you are upgrading from an earlier release such as 5.41.2, first read <a href="https://perldoc.perl.org/5.41.4/perl5413delta">perl5413delta</a>, which describes differences between 5.41.2 and 5.41.3.</p>
+
+<h1 id="Modules-and-Pragmata"><a class="permalink" href="#Modules-and-Pragmata">#</a><a id="Modules"></a>Modules and Pragmata</h1>
+
+<h2 id="Updated-Modules-and-Pragmata"><a class="permalink" href="#Updated-Modules-and-Pragmata">#</a><a id="Updated"></a>Updated Modules and Pragmata</h2>
+
+<ul>
+
+<li><p><a href="https://perldoc.perl.org/5.41.4/CPAN">CPAN</a> has been upgraded from version 2.36 to 2.37.</p>
+
+</li>
+<li><p><a href="https://perldoc.perl.org/5.41.4/Devel::Peek">Devel::Peek</a> has been upgraded from version 1.34 to 1.36.</p>
+
+</li>
+<li><p><a href="https://perldoc.perl.org/5.41.4/ExtUtils::ParseXS">ExtUtils::ParseXS</a> has been upgraded from version 3.53 to 3.54.</p>
+
+</li>
+<li><p><a href="https://perldoc.perl.org/5.41.4/ExtUtils::Typemaps">ExtUtils::Typemaps</a> has been upgraded from version 3.53 to 3.54.</p>
+
+</li>
+<li><p><a href="https://perldoc.perl.org/5.41.4/Module::CoreList">Module::CoreList</a> has been upgraded from version 5.20240829 to 5.20240920.</p>
+
+</li>
+<li><p><a href="https://perldoc.perl.org/5.41.4/overload">overload</a> has been upgraded from version 1.38 to 1.39.</p>
+
+</li>
+<li><p><a href="https://perldoc.perl.org/5.41.4/Scalar::Util">Scalar::Util</a> has been upgraded from version 1.65 to 1.66.</p>
+
+</li>
+<li><p><a href="https://perldoc.perl.org/5.41.4/Storable">Storable</a> has been upgraded from version 3.34 to 3.35.</p>
+
+</li>
+<li><p><a href="https://perldoc.perl.org/5.41.4/Test::Simple">Test::Simple</a> has been upgraded from version 1.302201 to 1.302204.</p>
+
+</li>
+<li><p><a href="https://perldoc.perl.org/5.41.4/version">version</a> has been upgraded from version 0.9930 to 0.9933.</p>
+
+</li>
+<li><p><a href="https://perldoc.perl.org/5.41.4/XS::APItest">XS::APItest</a> has been upgraded from version 1.37 to 1.38.</p>
+
+</li>
+</ul>
+
+<h1 id="Diagnostics"><a class="permalink" href="#Diagnostics">#</a>Diagnostics</h1>
+
+<p>The following additions or changes have been made to diagnostic output, including warnings and fatal error messages. For the complete list of diagnostic messages, see <a href="https://perldoc.perl.org/5.41.4/perldiag">perldiag</a>.</p>
+
+<h3 id="New-Warnings"><a class="permalink" href="#New-Warnings">#</a><a id="New"></a>New Warnings</h3>
+
+<ul>
+
+<li><p><a href="https://perldoc.perl.org/5.41.4/perldiag#Possible-precedence-problem-between-!-and-%25s">Possible precedence problem between ! and %s</a></p>
+
+<p>(W precedence) You wrote something like</p>
+
+<pre><code>!$x &lt; $y               # parsed as: (!$x) &lt; $y
+!$x eq $y              # parsed as: (!$x) eq $y
+!$x =~ /regex/         # parsed as: (!$x) =~ /regex/
+!$obj isa Some::Class  # parsed as: (!$obj) isa Some::Class</code></pre>
+
+<p>but because <code>!</code> has higher precedence than comparison operators, <code>=~</code>, and <code>isa</code>, this is interpreted as comparing/matching the logical negation of the first operand, instead of negating the result of the comparison/match.</p>
+
+<p>To disambiguate, either use a negated comparison/binding operator:</p>
+
+<pre><code>$x &gt;= $y
+$x ne $y
+$x !~ /regex/</code></pre>
+
+<p>... or parentheses:</p>
+
+<pre><code>!($x &lt; $y)
+!($x eq $y)
+!($x =~ /regex/)
+!($obj isa Some::Class)</code></pre>
+
+<p>... or the low-precedence <code>not</code> operator:</p>
+
+<pre><code>not $x &lt; $y
+not $x eq $y
+not $x =~ /regex/
+not $obj isa Some::Class</code></pre>
+
+<p>(If you did mean to compare the boolean result of negating the first operand, parenthesize as <code>(!$x) &lt; $y</code>, <code>(!$x) eq $y</code>, etc.)</p>
+
+<p>(This warning subsumes the <code>Possible precedence problem on isa operator</code> warning from the previous perl release.)</p>
+
+</li>
+</ul>
+
+<h1 id="Configuration-and-Compilation"><a class="permalink" href="#Configuration-and-Compilation">#</a><a id="Configuration"></a>Configuration and Compilation</h1>
+
+<ul>
+
+<li><p>Fix compilation on platforms (e.g. &quot;Gentoo Prefix&quot;) with only a C locale [<a href="https://github.com/Perl/perl5/issues/22569">GH #22569</a>] Bug first reported downstream <a href="https://bugs.gentoo.org/939014">bugs.gentoo.org/939014</a></p>
+
+</li>
+</ul>
+
+<h1 id="Internal-Changes"><a class="permalink" href="#Internal-Changes">#</a><a id="Internal"></a>Internal Changes</h1>
+
+<ul>
+
+<li><p>The <code>op_dump()</code> function has been expanded to include additional information about the recent <code>OP_METHSTART</code> and <code>OP_INITFIELD</code> ops, as well as for <code>OP_ARGCHECK</code> and <code>OP_ARGELEM</code> which had not been done previously.</p>
+
+</li>
+<li><p><code>op_dump()</code> now also has the facility to print extra debugging information about custom operators, if those operators register a helper function via the new <code>xop_dump</code> element of the <code>XOP</code> structure. For more information, see the relevant additions to <a href="https://perldoc.perl.org/5.41.4/perlguts#Custom-Operators">perlguts</a>.</p>
+
+</li>
+</ul>
+
+<h1 id="Selected-Bug-Fixes"><a class="permalink" href="#Selected-Bug-Fixes">#</a><a id="Selected"></a>Selected Bug Fixes</h1>
+
+<ul>
+
+<li><p><code>pack(&quot;p&quot;, ...)</code> and <code>pack(&quot;P&quot;, ...)</code> now SvPV_force() the supplied SV unless it is read only. This will remove CoW from the SV and prevents code that writes through the generated pointer from modifying the value of other SVs that happen the share the same CoWed string buffer.</p>
+
+<p>Note: this does not make <code>pack(&quot;p&quot;,... )</code> safe, if the SV is magical then any writes to the buffer will likely be discarded on the next read. [<a href="https://github.com/Perl/perl5/issues/22380">GH #22380</a>]</p>
+
+</li>
+<li><p>Enforce <code>no feature &quot;bareword_filehandles&quot;</code> for bareword file handles that have strictness removed because they are used in open() with a &quot;dup&quot; mode, such as in <code>open my $fh, &quot;&gt;&amp;&quot;, THISHANDLE</code>. [<a href="https://github.com/Perl/perl5/issues/22568">GH #22568</a>]</p>
+
+</li>
+<li><p>Using <code>goto</code> to tail call, or using the call_sv() and related APIs to call, any of trim(), refaddr(), reftype(), ceil(), floor() or stringify() in the <code>builtin::</code> package would crash or assert due to a <code>TARG</code> handling bug. [<a href="https://github.com/Perl/perl5/issues/22542">GH #22542</a>]</p>
+
+</li>
+<li><p>Fix sv_gets() to accept a <code>SSize_t</code> append offset instead of <code>I32</code>. This prevents integer overflows when appending to a large <code>SV</code> for <code>readpipe</code> aka <code>qx//</code> and <code>readline</code>. <a href="https://www.perlmonks.org/?node_id=11161665">https://www.perlmonks.org/?node_id=11161665</a></p>
+
+</li>
+<li><p>Fixed an issue where `utf8n_to_uvchr` failed to correctly identify certain invalid UTF-8 sequences as invalid. Specifically, sequences that start with continuation bytes or unassigned bytes could cause unexpected behavior or a panic. This fix ensures that such invalid sequences are now properly detected and handled. This correction also resolves related issues in modules that handle UTF-8 processing, such as `Encode.pm`.</p>
+
+</li>
+</ul>
+
+<h1 id="Acknowledgements"><a class="permalink" href="#Acknowledgements">#</a>Acknowledgements</h1>
+
+<p>Perl 5.41.4 represents approximately 3 weeks of development since Perl 5.41.3 and contains approximately 5,800 lines of changes across 400 files from 20 authors.</p>
+
+<p>Excluding auto-generated files, documentation and release tools, there were approximately 3,700 lines of changes to 290 .pm, .t, .c and .h files.</p>
+
+<p>Perl continues to flourish into its fourth decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.41.4:</p>
+
+<p>Andrei Horodniceanu, Antanas Vaitkus, Aristotle Pagaltzis, Craig A. Berry, David Cantrell, David Mitchell, E. Choroba, Ed J, Eric Herman, Graham Knop, James E Keenan, Karl Williamson, Leon Timmermans, Lukas Mai, Masahiro Honma, Paul Evans, Philippe Bruhat (BooK), Sisyphus, Thibault Duponchelle, Tony Cook.</p>
+
+<p>The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker.</p>
+
+<p>Many of the changes included in this version originated in the CPAN modules included in Perl&#39;s core. We&#39;re grateful to the entire CPAN community for helping Perl to flourish.</p>
+
+<p>For a more complete list of all of Perl&#39;s historical contributors, please see the <i>AUTHORS</i> file in the Perl source distribution.</p>
+
+<h1 id="Reporting-Bugs"><a class="permalink" href="#Reporting-Bugs">#</a><a id="Reporting"></a>Reporting Bugs</h1>
+
+<p>If you find what you think is a bug, you might check the perl bug database at <a href="https://github.com/Perl/perl5/issues">https://github.com/Perl/perl5/issues</a>. There may also be information at <a href="https://www.perl.org/">https://www.perl.org/</a>, the Perl Home Page.</p>
+
+<p>If you believe you have an unreported bug, please open an issue at <a href="https://github.com/Perl/perl5/issues">https://github.com/Perl/perl5/issues</a>. Be sure to trim your bug down to a tiny but sufficient test case.</p>
+
+<p>If the bug you are reporting has security implications which make it inappropriate to send to a public issue tracker, then see <a href="https://perldoc.perl.org/5.41.4/perlsec#SECURITY-VULNERABILITY-CONTACT-INFORMATION">&quot;SECURITY VULNERABILITY CONTACT INFORMATION&quot; in perlsec</a> for details of how to report the issue.</p>
+
+<h1 id="Give-Thanks"><a class="permalink" href="#Give-Thanks">#</a><a id="Give"></a>Give Thanks</h1>
+
+<p>If you wish to thank the Perl 5 Porters for the work we had done in Perl 5, you can do so by running the <code>perlthanks</code> program:</p>
+
+<pre><code class="plaintext">perlthanks</code></pre>
+
+<p>This will send an email to the Perl 5 Porters list with your show of thanks.</p>
+
+<h1 id="SEE-ALSO"><a class="permalink" href="#SEE-ALSO">#</a><a id="SEE"></a>SEE ALSO</h1>
+
+<p>The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed.</p>
+
+<p>The <i>INSTALL</i> file for how to build Perl.</p>
+
+<p>The <i>README</i> file for general stuff.</p>
+
+<p>The <i>Artistic</i> and <i>Copying</i> files for copyright information.</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/5.41.4/perldelta by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:49 GMT -->
+</html>

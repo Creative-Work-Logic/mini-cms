@@ -1,0 +1,8 @@
+https://perldoc.perl.org/ -O ~/websites/perldoc -r3 -s0 %v
+File generated automatically on Thu, 07 Aug 2025 01:14:53, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+

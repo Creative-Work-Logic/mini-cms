@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/perlos390 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>perlos390 - building and installing Perl for z/OS (previously called OS/390) - Perldoc Browser</title>
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="perlos390.html">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.html"><img src="images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.42.0</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="perlos390.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item active" href="https://perldoc.perl.org/5.42.0/perlos390">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/perlos390">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/perlos390">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/perlos390">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/perlos390">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/perlos390">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/perlos390">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/perlos390">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/perlos390">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/perlos390">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/perlos390">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/perlos390">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/perlos390">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/perlos390">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/perlos390">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/perlos390">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/perlos390">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/perlos390">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/perlos390">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/perlos390">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/perlos390">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/perlos390">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/perlos390">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/perlos390">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/perlos390">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/perlos390">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/perlos390">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/perlos390">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/perlos390">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/perlos390">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/perlos390">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/perlos390">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/perlos390">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/perlos390">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/perlos390">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/perlos390">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/perlos390">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/perlos390">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/perlos390">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/perlos390">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/perlos390">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/perlos390">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/perlos390">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/perlos390">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/perlos390">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/perlos390">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/perlos390">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/perlos390">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/perlos390">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/perlos390">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/perlos390">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/perlos390">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/perlos390">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/perlos390">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/perlos390">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/perlos390">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/perlos390">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/perlos390">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/perlos390">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/perlos390">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/perlos390">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/perlos390">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/perlos390">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/perlos390">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/perlos390">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/perlos390">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/perlos390">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/perlos390">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/perlos390">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/perlos390">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/perlos390">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/perlos390">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/perlos390">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/perlos390">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/perlos390">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/perlos390">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/perlos390">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/perlos390">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/perlos390">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.6.2/perlos390.html">5.6.2</a>
+          <a class="dropdown-item" href="5.6.1/perlos390.html">5.6.1</a>
+          <a class="dropdown-item" href="5.6.0/perlos390.html">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_04/perlos390">5.005_04</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_03/perlos390">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/perlos390">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/perlos390">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/perlos390">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/perlos390">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/perlos390">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/perlos390">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/perlos390">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/perlos390">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/perlos390">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/perlos390">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/perlos390">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/perlos390">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/perlos390">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/perlos390">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/perlos390">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/perlos390">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/perlos390">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/perlos390">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/perlos390">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/perlos390">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/perlos390">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/perlos390">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/perlos390">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="perlos390.html">perlos390</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/perlos390.txt">source</a>,
+            <a href="https://metacpan.org/pod/perlos390">CPAN</a>)
+          </div>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SYNOPSIS">SYNOPSIS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Tools">Tools</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Building-a-64-bit-Dynamic-ASCII-Perl">Building a 64-bit Dynamic ASCII Perl</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Building-a-64-bit-Dynamic-EBCDIC-Perl">Building a 64-bit Dynamic EBCDIC Perl</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Setup-and-utilities-for-Perl-on-OS/390">Setup and utilities for Perl on OS/390</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Useful-files-for-trouble-shooting">Useful files for trouble-shooting</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Shell">Shell</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Dynamic-loading">Dynamic loading</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Optimizing">Optimizing</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Build-Anomalies-with-Perl-on-OS/390">Build Anomalies with Perl on OS/390</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Testing-Anomalies-with-Perl-on-OS/390">Testing Anomalies with Perl on OS/390</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Out-of-Memory-(31-bit-only)">Out of Memory (31-bit only)</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Usage-Hints-for-Perl-on-z/OS">Usage Hints for Perl on z/OS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Modules-and-Extensions-for-Perl-on-z/OS-(Static-Only)">Modules and Extensions for Perl on z/OS (Static Only)</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Running-Perl-on-z/OS">Running Perl on z/OS</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#AUTHORS">AUTHORS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#OTHER-SITES">OTHER SITES</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#HISTORY">HISTORY</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>perlos390 - building and installing Perl for z/OS (previously called OS/390)</p>
+
+<h1 id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">#</a>SYNOPSIS</h1>
+
+<p>This document will help you Configure, build, test and install Perl on z/OS Unix System Services.</p>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>This is a ported Perl for z/OS. It has been tested on z/OS 2.4 and should work fine with z/OS 2.5. It may work on other versions or releases, but those are the ones it has been tested on.</p>
+
+<p>The native character set for z/OS is EBCDIC, but it can also run in ASCII mode. Perl can support either, but you have to compile it explicitly for one or the other. You could have both an ASCII perl, and an EBCDIC perl on the same machine. If you use ASCII mode and an ASCII perl, the Encode module shipped with perl can be used to translate files from various EBCDIC code pages for handling by perl, and then back on output</p>
+
+<p>This document describes how to build a 64-bit Dynamic Perl, either ASCII or EBCDIC. You can interactively choose other configurations, as well as many other options in the Configure script that is run as part of the build process. You may need to carry out some system configuration tasks before running Configure, as detailed below.</p>
+
+<h2 id="Tools"><a class="permalink" href="#Tools">#</a>Tools</h2>
+
+<p>You will want to get GNU make 4.1 or later. GNU make can be downloaded from a port that Rocket Software provides. You will need the z/OS c99 compiler from IBM (though xlc in c99 mode without optimization turned on works in EBCDIC).</p>
+
+<p>If you want the latest development version of Perl, you will need git. You can use git on another platform and transfer the result via sftp or ftp to z/OS. But there is a z/OS native git client port available through Rocket Software.</p>
+
+<p>You may also need the gunzip client port that Rocket Software provides to unzip any zipped tarball you upload to z/OS.</p>
+
+<h2 id="Building-a-64-bit-Dynamic-ASCII-Perl"><a class="permalink" href="#Building-a-64-bit-Dynamic-ASCII-Perl">#</a><a id="Building"></a>Building a 64-bit Dynamic ASCII Perl</h2>
+
+<p>For building from an official stable release of Perl, go to <a href="https://www.perl.org/get.html">https://www.perl.org/get.html</a> and choose any one of the &quot;Download latest stable source&quot; buttons. This will get you a tarball. The name of that tarball will be something like &#39;perl-V.R.M,tar,gz&#39;, where V.R.M is the version/release/modification of the perl you are downloading. Do</p>
+
+<pre><code class="plaintext">gunzip perl-V.R.M.tar.gz</code></pre>
+
+<p>Then one of:</p>
+
+<pre><code class="plaintext">tar -xvf perl-V.R.M.tar
+
+pax -r -f perl-V.R.M.tar</code></pre>
+
+<p>Either of these will create the source directory. You can rename it to whatever you like; for these instructions, &#39;perl&#39; is assumed to be the name.</p>
+
+<p>If instead you want the latest unstable development release, using the native git on z/OS, clone Perl:</p>
+
+<pre><code class="plaintext">git clone https://github.com/Perl/perl5.git perl</code></pre>
+
+<p>Either way, once you have a &#39;perl&#39; directory containing the source, cd into it, and tag all the code as ASCII:</p>
+
+<pre><code class="plaintext">cd perl
+chtag -R -h -t -cISO8859-1 *</code></pre>
+
+<p>Configure the build environment as 64-bit, Dynamic, ASCII, development, deploying it to <i>/usr/local/perl/ascii</i>:</p>
+
+<pre><code>export PATH=$PWD:$PATH
+export LIBPATH=$PWD:$PATH
+./Configure -Dprefix=/usr/local/perl/ascii -des -Dusedevel \
+      -Duse64bitall -Dusedl</code></pre>
+
+<p>If you are building from a stable source, you don&#39;t need &quot;-Dusedevel&quot;. (If you run Configure without options, it will interactively ask you about every possible option based on its probing of what&#39;s available on your particular machine, so you can choose as you go along.)</p>
+
+<p>Run GNU make to build Perl</p>
+
+<pre><code class="plaintext">make</code></pre>
+
+<p>Run tests to ensure Perl is working correctly. Currently, there are about a dozen failing tests out of nearly 2500</p>
+
+<pre><code class="plaintext">make test_harness</code></pre>
+
+<p>Install Perl into <i>/usr/local/perl/ascii</i>:</p>
+
+<pre><code class="plaintext">make install</code></pre>
+
+<h2 id="Building-a-64-bit-Dynamic-EBCDIC-Perl"><a class="permalink" href="#Building-a-64-bit-Dynamic-EBCDIC-Perl">#</a><a id="Building1"></a>Building a 64-bit Dynamic EBCDIC Perl</h2>
+
+<p>You will need a working perl on some box with connectivity to the destination machine. On z/OS, it could be an ASCII perl, or a previous EBCDIC one. Many machines will already have a pre-built perl already running, or one can easily be downloaded from <a href="https://www.perl.org/get.html">https://www.perl.org/get.html</a>.</p>
+
+<p>Follow the directions above in &quot;Building a 64-bit Dynamic ASCII Perl&quot; as far as getting a populated &#39;perl&#39; directory. Then come back here to proceed.</p>
+
+<p>The downloaded perl will need to be converted to 1047 EBCDIC. To do this:</p>
+
+<pre><code class="plaintext">cd perl
+Porting/makerel -e</code></pre>
+
+<p>If the Porting/makerel step fails with an error that it can not issue the tar command, proceed to issue the command interactively, where V.R.M is the version/release/modification of Perl you are uploading:</p>
+
+<pre><code class="plaintext">cd ../
+tar cf -  --format=ustar perl-V.R.M | gzip --best &gt; perl-V.R.M.tar.gz</code></pre>
+
+<p>Use sftp to upload the zipped tar file to z/OS:</p>
+
+<pre><code class="plaintext">sftp &lt;your system&gt;
+cd /tmp
+put perl-V.R.M.tar.gz</code></pre>
+
+<p>Unzip and untar the zipped tar file on z/OS:</p>
+
+<pre><code class="plaintext">cd /tmp
+gunzip perl-V.R.M.tar.gz</code></pre>
+
+<p>Then one of:</p>
+
+<pre><code class="plaintext">tar -xvf perl-V.R.M.tar
+
+pax -r -f perl-V.R.M.tar</code></pre>
+
+<p>You now have the source code for the EBCDIC Perl on z/OS and can proceed to build it. This is analagous to how you would build the code for ASCII, but note: you <b>should not</b> tag the code but instead leave it untagged.</p>
+
+<p>Configure the build environment as 64-bit, Dynamic, native, development, deploying it to <i>/usr/local/perl/ebcdic</i>:</p>
+
+<pre><code>export PATH=$PWD:$PATH
+export LIBPATH=$PWD:$PATH
+./Configure -Dprefix=/usr/local/perl/ebcdic -des -Dusedevel \
+      -Duse64bitall -Dusedl</code></pre>
+
+<p>If you are building from a stable source, you don&#39;t need &quot;-Dusedevel&quot;. (If you run Configure without options, it will interactively ask you about every possible option based on its probing of what&#39;s available on your particular machine, so you can choose as you go along.)</p>
+
+<p>Run GNU make to build Perl</p>
+
+<pre><code class="plaintext">make</code></pre>
+
+<p>Run tests to ensure Perl is working correctly.</p>
+
+<pre><code class="plaintext">make test_harness</code></pre>
+
+<p>You might also want to have GNU groff for OS/390 installed before running the &quot;make install&quot; step for Perl.</p>
+
+<p>Install Perl into <i>/usr/local/perl/ebcdic</i>:</p>
+
+<pre><code class="plaintext">make install</code></pre>
+
+<p>EBCDIC Perl is still a work in progress. All the core code works as far as we know, but various modules you might want to download from CPAN do not. The failures range from very minor to catastrophic. Many of them are simply bugs in the tests, with the module actually working properly. This happens because, for example, the test is coded to expect a certain character ASCII code point; when it gets the EBCDIC value back instead, it complains. But the code actually worked. Other potential failures that aren&#39;t really failures stem from checksums coming out differently, since <code>A</code>, for example, has a different bit representation between the character sets. A test that is expecting the ASCII value will show failure, even if the module is working perfectly. Also in sorting, uppercase letters come before lowercase letters on ASCII systems; the reverse on EBCDIC.</p>
+
+<p>Some CPAN modules come bundled with the downloaded perl. And a few of those have yet to be fixed to pass on EBCDIC platforms. As a result they are skipped when you run &#39;make test&#39;. The current list is:</p>
+
+<pre><code class="plaintext">Archive::Tar
+Config::Perl::V
+CPAN::Meta
+CPAN::Meta::YAML
+Digest::MD5
+Digest::SHA
+Encode
+ExtUtils::MakeMaker
+ExtUtils::Manifest
+HTTP::Tiny
+IO::Compress
+IPC::Cmd
+JSON::PP
+libnet
+MIME::Base64
+Module::Metadata
+PerlIO::via-QuotedPrint
+Pod::Checker
+podlators
+Pod::Simple
+Socket
+Test::Harness</code></pre>
+
+<p>See also <i>hints/os390.sh</i> for other potential gotchas.</p>
+
+<h2 id="Setup-and-utilities-for-Perl-on-OS/390"><a class="permalink" href="#Setup-and-utilities-for-Perl-on-OS/390">#</a><a id="Setup"></a><a id="Setup-and-utilities-for-Perl-on-OS-390"></a>Setup and utilities for Perl on OS/390</h2>
+
+<p>This may also be a good time to ensure that your <i>/etc/protocol</i> file and either your <i>/etc/resolv.conf</i> or <i>/etc/hosts</i> files are in place. The IBM document that describes such USS system setup issues is &quot;z/OS UNIX System Services Planning&quot;</p>
+
+<p>For successful testing you may need to turn on the sticky bit for your world readable /tmp directory if you have not already done so (see man chmod).</p>
+
+<h2 id="Useful-files-for-trouble-shooting"><a class="permalink" href="#Useful-files-for-trouble-shooting">#</a><a id="Useful"></a>Useful files for trouble-shooting</h2>
+
+<p>If your configuration is failing, read hints/os390.sh This file provides z/OS specific options to direct the build process.</p>
+
+<h3 id="Shell"><a class="permalink" href="#Shell">#</a>Shell</h3>
+
+<p>A message of the form:</p>
+
+<pre><code class="plaintext">(I see you are using the Korn shell.  Some ksh&#39;s blow up on Configure,
+mainly on older exotic systems.  If yours does, try the Bourne shell
+instead.)</code></pre>
+
+<p>is nothing to worry about at all.</p>
+
+<h3 id="Dynamic-loading"><a class="permalink" href="#Dynamic-loading">#</a><a id="Dynamic"></a>Dynamic loading</h3>
+
+<p>Dynamic loading is required if you want to use XS modules from CPAN (like DBI (and DBD&#39;s), JSON::XS, and Text::CSV_XS) or update CORE modules from CPAN with newer versions (like Encode) without rebuilding all of the perl binary.</p>
+
+<p>The instructions above will create a dynamic Perl. If you do not want to use dynamic loading, remove the -Dusedl option. See the comments in hints/os390.sh for more information on dynamic loading.</p>
+
+<h3 id="Optimizing"><a class="permalink" href="#Optimizing">#</a>Optimizing</h3>
+
+<p>Optimization has not been turned on yet. There may be issues if Perl is optimized.</p>
+
+<h2 id="Build-Anomalies-with-Perl-on-OS/390"><a class="permalink" href="#Build-Anomalies-with-Perl-on-OS/390">#</a><a id="Build"></a><a id="Build-Anomalies-with-Perl-on-OS-390"></a>Build Anomalies with Perl on OS/390</h2>
+
+<p>&quot;Out of memory!&quot; messages during the build of Perl are most often fixed by re building the GNU make utility for OS/390 from a source code kit.</p>
+
+<p>Within USS your <i>/etc/profile</i> or <i>$HOME/.profile</i> may limit your ulimit settings. Check that the following command returns reasonable values:</p>
+
+<pre><code class="plaintext">ulimit -a</code></pre>
+
+<p>To conserve memory you should have your compiler modules loaded into the Link Pack Area (LPA/ELPA) rather than in a link list or step lib.</p>
+
+<p>If the compiler complains of syntax errors during the build of the Socket extension then be sure to fix the syntax error in the system header /usr/include/sys/socket.h.</p>
+
+<h2 id="Testing-Anomalies-with-Perl-on-OS/390"><a class="permalink" href="#Testing-Anomalies-with-Perl-on-OS/390">#</a><a id="Testing"></a><a id="Testing-Anomalies-with-Perl-on-OS-390"></a>Testing Anomalies with Perl on OS/390</h2>
+
+<p>The &quot;make test&quot; step runs a Perl Verification Procedure, usually before installation. You might encounter STDERR messages even during a successful run of &quot;make test&quot;. Here is a guide to some of the more commonly seen anomalies:</p>
+
+<h3 id="Out-of-Memory-(31-bit-only)"><a class="permalink" href="#Out-of-Memory-(31-bit-only)">#</a><a id="Out"></a><a id="Out-of-Memory-31-bit-only"></a>Out of Memory (31-bit only)</h3>
+
+<p>Out of memory problems should not be an issue, unless you are attempting to build a 31-bit Perl.</p>
+
+<p>If you _are_ building a 31-bit Perl, the constrained environment may mean you need to change memory options for Perl. In addition to the comments above on memory limitations it is also worth checking for _CEE_RUNOPTS in your environment. Perl now has (in miniperlmain.c) a C #pragma for 31-bit only to set CEE run options, but the environment variable wins.</p>
+
+<p>The 31-bit C code asks for:</p>
+
+<pre><code class="plaintext">#pragma runopts(HEAP(2M,500K,ANYWHERE,KEEP,8K,4K) STACK(,,ANY,) ALL31(ON))</code></pre>
+
+<p>The important parts of that are the second argument (the increment) to HEAP, and allowing the stack to be &quot;Above the (16M) line&quot;. If the heap increment is too small then when perl (for example loading unicode/Name.pl) tries to create a &quot;big&quot; (400K+) string it cannot fit in a single segment and you get &quot;Out of Memory!&quot; - even if there is still plenty of memory available.</p>
+
+<p>A related issue is use with perl&#39;s malloc. Perl&#39;s malloc uses <code>sbrk()</code> to get memory, and <code>sbrk()</code> is limited to the first allocation so in this case something like:</p>
+
+<pre><code class="plaintext">HEAP(8M,500K,ANYWHERE,KEEP,8K,4K)</code></pre>
+
+<p>is needed to get through the test suite.</p>
+
+<h2 id="Usage-Hints-for-Perl-on-z/OS"><a class="permalink" href="#Usage-Hints-for-Perl-on-z/OS">#</a><a id="Usage"></a><a id="Usage-Hints-for-Perl-on-z-OS"></a>Usage Hints for Perl on z/OS</h2>
+
+<p>When using Perl on z/OS please keep in mind that the EBCDIC and ASCII character sets are different. See <a href="perlebcdic.html">perlebcdic</a> for more on such character set issues. Perl builtin functions that may behave differently under EBCDIC are also mentioned in the perlport.pod document.</p>
+
+<p>If you are having trouble with square brackets then consider switching your rlogin or telnet client. Try to avoid older 3270 emulators and ISHELL for working with Perl on USS.</p>
+
+<h2 id="Modules-and-Extensions-for-Perl-on-z/OS-(Static-Only)"><a class="permalink" href="#Modules-and-Extensions-for-Perl-on-z/OS-(Static-Only)">#</a><a id="Modules"></a><a id="Modules-and-Extensions-for-Perl-on-z-OS-Static-Only"></a>Modules and Extensions for Perl on z/OS (Static Only)</h2>
+
+<p>Pure Perl (that is non XS) modules may be installed via the usual:</p>
+
+<pre><code class="plaintext">perl Makefile.PL
+make
+make test
+make install</code></pre>
+
+<p>If you built perl with dynamic loading capability then that would also be the way to build XS based extensions. However, if you built perl with static linking you can still build XS based extensions for z/OS but you will need to follow the instructions in ExtUtils::MakeMaker for building statically linked perl binaries. In the simplest configurations building a static perl + XS extension boils down to:</p>
+
+<pre><code class="plaintext">perl Makefile.PL
+make
+make perl
+make test
+make install
+make -f Makefile.aperl inst_perl MAP_TARGET=perl</code></pre>
+
+<h2 id="Running-Perl-on-z/OS"><a class="permalink" href="#Running-Perl-on-z/OS">#</a><a id="Running"></a><a id="Running-Perl-on-z-OS"></a>Running Perl on z/OS</h2>
+
+<p>To run the 64-bit Dynamic Perl environment, update your PATH and LIBPATH to include the location you installed Perl into, and then run the perl you installed as perlV.R.M where V/R/M is the Version/Release/Modification level of the current development level. If you are running the ASCII/EBCDIC Bi-Modal Perl environment, you also need to set up your ASCII/EBCDIC Bi-Modal environment variables, and ensure any Perl source code you run is tagged appropriately as ASCII or EBCDIC using &quot;chtag -t -c&lt;CCSID&gt;&quot;:</p>
+
+<dl>
+
+<dt id="For-ASCII-Only:"><a class="permalink" href="#For-ASCII-Only:">#</a><a id="For"></a><a id="For-ASCII-Only"></a>For ASCII Only:</dt>
+<dd>
+
+<pre><code class="plaintext">export _BPXK_AUTOCVT=ON
+export _CEE_RUNOPTS=&quot;FILETAG(AUTOCVT,AUTOTAG),POSIX(ON)&quot;
+export _TAG_REDIR_ERR=&quot;txt&quot;
+export _TAG_REDIR_IN=&quot;txt&quot;
+export _TAG_REDIR_OUT=&quot;txt&quot;</code></pre>
+
+</dd>
+<dt id="For-ASCII-or-EBCDIC:"><a class="permalink" href="#For-ASCII-or-EBCDIC:">#</a><a id="For1"></a><a id="For-ASCII-or-EBCDIC"></a>For ASCII or EBCDIC:</dt>
+<dd>
+
+<pre><code>export PATH=/usr/local/perl/ascii:$PATH
+export LIBPATH=/usr/local/perl/ascii/lib:$LIBPATH
+perlV.R.M args</code></pre>
+
+</dd>
+</dl>
+
+<p>If tcsh is your login shell then use the setenv command.</p>
+
+<h1 id="AUTHORS"><a class="permalink" href="#AUTHORS">#</a>AUTHORS</h1>
+
+<p>David Fiander and Peter Prymmer with thanks to Dennis Longnecker and William Raffloer for valuable reports, LPAR and PTF feedback. Thanks to Mike MacIsaac and Egon Terwedow for SG24-5944-00. Thanks to Ignasi Roca for pointing out the floating point problems. Thanks to John Goodyear for dynamic loading help.</p>
+
+<p>Mike Fulton and Karl Williamson have provided updates for UTF8, DLL, 64-bit and ASCII/EBCDIC Bi-Modal support</p>
+
+<h1 id="OTHER-SITES"><a class="permalink" href="#OTHER-SITES">#</a><a id="OTHER"></a>OTHER SITES</h1>
+
+<p><a href="https://github.com/ZOSOpenTools/perlport/">https://github.com/ZOSOpenTools/perlport/</a> provides documentation and tools for building various z/OS Perl configurations and has some useful tools in the &#39;bin&#39; directory you may want to use for building z/OS Perl yourself.</p>
+
+<h1 id="HISTORY"><a class="permalink" href="#HISTORY">#</a>HISTORY</h1>
+
+<p>Updated 24 December 2021 to enable initial ASCII support</p>
+
+<p>Updated 03 October 2019 for perl-5.33.3+</p>
+
+<p>Updated 28 November 2001 for broken URLs.</p>
+
+<p>Updated 12 March 2001 to mention //&#39;SYS1.TCPPARMS(TCPDATA)&#39;.</p>
+
+<p>Updated 24 January 2001 to mention dynamic loading.</p>
+
+<p>Updated 15 January 2001 for the 5.7.1 release of Perl.</p>
+
+<p>Updated 12 November 2000 for the 5.7.1 release of Perl.</p>
+
+<p>This document was podified for the 5.005_03 release of Perl 11 March 1999.</p>
+
+<p>This document was originally written by David Fiander for the 5.005 release of Perl.</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/perlos390 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:51 GMT -->
+</html>

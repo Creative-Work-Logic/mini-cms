@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/5.6.0/perlopentut by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>perlopentut - tutorial on opening things in Perl - Perldoc Browser</title>
+    <link rel="search" href="../opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="../perlopentut.html">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="../css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html"><img src="../images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.6.0</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="../perlopentut.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0/perlopentut">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/perlopentut">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/perlopentut">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/perlopentut">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/perlopentut">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/perlopentut">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/perlopentut">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/perlopentut">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/perlopentut">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/perlopentut">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/perlopentut">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/perlopentut">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/perlopentut">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/perlopentut">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/perlopentut">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/perlopentut">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/perlopentut">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/perlopentut">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/perlopentut">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/perlopentut">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/perlopentut">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/perlopentut">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/perlopentut">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/perlopentut">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/perlopentut">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/perlopentut">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/perlopentut">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/perlopentut">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/perlopentut">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/perlopentut">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/perlopentut">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/perlopentut">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/perlopentut">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/perlopentut">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/perlopentut">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/perlopentut">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/perlopentut">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/perlopentut">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/perlopentut">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/perlopentut">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/perlopentut">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/perlopentut">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/perlopentut">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/perlopentut">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/perlopentut">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/perlopentut">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/perlopentut">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/perlopentut">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/perlopentut">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/perlopentut">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/perlopentut">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/perlopentut">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/perlopentut">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/perlopentut">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/perlopentut">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/perlopentut">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/perlopentut">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/perlopentut">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/perlopentut">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/perlopentut">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/perlopentut">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/perlopentut">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/perlopentut">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/perlopentut">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/perlopentut">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/perlopentut">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/perlopentut">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/perlopentut">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/perlopentut">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/perlopentut">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/perlopentut">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/perlopentut">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/perlopentut">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/perlopentut">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/perlopentut">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/perlopentut">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/perlopentut">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/perlopentut">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/perlopentut">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.6.2/perlopentut.html">5.6.2</a>
+          <a class="dropdown-item" href="../5.6.1/perlopentut.html">5.6.1</a>
+          <a class="dropdown-item active" href="perlopentut.html">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.005_04/perlopentut.html">5.005_04</a>
+          <a class="dropdown-item" href="../5.005_03/perlopentut.html">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/perlopentut">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/perlopentut">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/perlopentut">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/perlopentut">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/perlopentut">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/perlopentut">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/perlopentut">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/perlopentut">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/perlopentut">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/perlopentut">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/perlopentut">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/perlopentut">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/perlopentut">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/perlopentut">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/perlopentut">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/perlopentut">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/perlopentut">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/perlopentut">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/perlopentut">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/perlopentut">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/perlopentut">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/perlopentut">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/perlopentut">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="../js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/5.6.0/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="../js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="perlopentut.html">perlopentut</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/5.6.0/perlopentut.txt">source</a>,
+            <a href="https://metacpan.org/pod/perlopentut">CPAN</a>)
+          </div>
+        </div>
+        <div class="leading-notice">
+          You are viewing the version of this documentation from Perl 5.6.0.
+            <a href="../perlopentut.html">View the latest version</a>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Open-%C3%A0-la-shell">Open à la shell</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Simple-Opens">Simple Opens</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Pipe-Opens">Pipe Opens</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#The-Minus-File">The Minus File</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Mixing-Reads-and-Writes">Mixing Reads and Writes</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Filters">Filters</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Open-%C3%A0-la-C">Open à la C</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Permissions-%C3%A0-la-mode">Permissions à la mode</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Obscure-Open-Tricks">Obscure Open Tricks</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Re-Opening-Files-(dups)">Re-Opening Files (dups)</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Dispelling-the-Dweomer">Dispelling the Dweomer</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Paths-as-Opens">Paths as Opens</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Single-Argument-Open">Single Argument Open</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Playing-with-STDIN-and-STDOUT">Playing with STDIN and STDOUT</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Other-I/O-Issues">Other I/O Issues</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Opening-Non-File-Files">Opening Non-File Files</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Binary-Files">Binary Files</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#File-Locking">File Locking</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SEE-ALSO">SEE ALSO</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#AUTHOR-and-COPYRIGHT">AUTHOR and COPYRIGHT</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#HISTORY">HISTORY</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>perlopentut - tutorial on opening things in Perl</p>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>Perl has two simple, built-in ways to open files: the shell way for convenience, and the C way for precision. The choice is yours.</p>
+
+<h1 id="Open-à-la-shell"><a class="permalink" href="#Open-%C3%A0-la-shell">#</a><a id="Open"></a><a id="Open-la-shell"></a>Open à la shell</h1>
+
+<p>Perl&#39;s <code>open</code> function was designed to mimic the way command-line redirection in the shell works. Here are some basic examples from the shell:</p>
+
+<pre><code class="plaintext">$ myprogram file1 file2 file3
+$ myprogram    &lt;  inputfile
+$ myprogram    &gt;  outputfile
+$ myprogram    &gt;&gt; outputfile
+$ myprogram    |  otherprogram 
+$ otherprogram |  myprogram</code></pre>
+
+<p>And here are some more advanced examples:</p>
+
+<pre><code class="plaintext">$ otherprogram      | myprogram f1 - f2
+$ otherprogram 2&gt;&amp;1 | myprogram -
+$ myprogram     &lt;&amp;3
+$ myprogram     &gt;&amp;4</code></pre>
+
+<p>Programmers accustomed to constructs like those above can take comfort in learning that Perl directly supports these familiar constructs using virtually the same syntax as the shell.</p>
+
+<h2 id="Simple-Opens"><a class="permalink" href="#Simple-Opens">#</a><a id="Simple"></a>Simple Opens</h2>
+
+<p>The <code>open</code> function takes two arguments: the first is a filehandle, and the second is a single string comprising both what to open and how to open it. <code>open</code> returns true when it works, and when it fails, returns a false value and sets the special variable $! to reflect the system error. If the filehandle was previously opened, it will be implicitly closed first.</p>
+
+<p>For example:</p>
+
+<pre><code>open(INFO,      &quot;datafile&quot;) || die(&quot;can&#39;t open datafile: $!&quot;);
+open(INFO,   &quot;&lt;  datafile&quot;) || die(&quot;can&#39;t open datafile: $!&quot;);
+open(RESULTS,&quot;&gt;  runstats&quot;) || die(&quot;can&#39;t open runstats: $!&quot;);
+open(LOG,    &quot;&gt;&gt; logfile &quot;) || die(&quot;can&#39;t open logfile:  $!&quot;);</code></pre>
+
+<p>If you prefer the low-punctuation version, you could write that this way:</p>
+
+<pre><code>open INFO,   &quot;&lt;  datafile&quot;  or die &quot;can&#39;t open datafile: $!&quot;;
+open RESULTS,&quot;&gt;  runstats&quot;  or die &quot;can&#39;t open runstats: $!&quot;;
+open LOG,    &quot;&gt;&gt; logfile &quot;  or die &quot;can&#39;t open logfile:  $!&quot;;</code></pre>
+
+<p>A few things to notice. First, the leading less-than is optional. If omitted, Perl assumes that you want to open the file for reading.</p>
+
+<p>The other important thing to notice is that, just as in the shell, any white space before or after the filename is ignored. This is good, because you wouldn&#39;t want these to do different things:</p>
+
+<pre><code class="plaintext">open INFO,   &quot;&lt;datafile&quot;   
+open INFO,   &quot;&lt; datafile&quot; 
+open INFO,   &quot;&lt;  datafile&quot;</code></pre>
+
+<p>Ignoring surround whitespace also helps for when you read a filename in from a different file, and forget to trim it before opening:</p>
+
+<pre><code>$filename = &lt;INFO&gt;;         # oops, \n still there
+open(EXTRA, &quot;&lt; $filename&quot;) || die &quot;can&#39;t open $filename: $!&quot;;</code></pre>
+
+<p>This is not a bug, but a feature. Because <code>open</code> mimics the shell in its style of using redirection arrows to specify how to open the file, it also does so with respect to extra white space around the filename itself as well. For accessing files with naughty names, see <a href="#Dispelling-the-Dweomer">&quot;Dispelling the Dweomer&quot;</a>.</p>
+
+<h2 id="Pipe-Opens"><a class="permalink" href="#Pipe-Opens">#</a><a id="Pipe"></a>Pipe Opens</h2>
+
+<p>In C, when you want to open a file using the standard I/O library, you use the <code>fopen</code> function, but when opening a pipe, you use the <code>popen</code> function. But in the shell, you just use a different redirection character. That&#39;s also the case for Perl. The <code>open</code> call remains the same--just its argument differs.</p>
+
+<p>If the leading character is a pipe symbol, <code>open</code> starts up a new command and open a write-only filehandle leading into that command. This lets you write into that handle and have what you write show up on that command&#39;s standard input. For example:</p>
+
+<pre><code>open(PRINTER, &quot;| lpr -Plp1&quot;)    || die &quot;cannot fork: $!&quot;;
+print PRINTER &quot;stuff\n&quot;;
+close(PRINTER)                  || die &quot;can&#39;t close lpr: $!&quot;;</code></pre>
+
+<p>If the trailing character is a pipe, you start up a new command and open a read-only filehandle leading out of that command. This lets whatever that command writes to its standard output show up on your handle for reading. For example:</p>
+
+<pre><code>open(NET, &quot;netstat -i -n |&quot;)    || die &quot;cannot fork: $!&quot;;
+while (&lt;NET&gt;) { }               # do something with input
+close(NET)                      || die &quot;can&#39;t close netstat: $!&quot;;</code></pre>
+
+<p>What happens if you try to open a pipe to or from a non-existent command? In most systems, such an <code>open</code> will not return an error. That&#39;s because in the traditional <code>fork</code>/<code>exec</code> model, running the other program happens only in the forked child process, which means that the failed <code>exec</code> can&#39;t be reflected in the return value of <code>open</code>. Only a failed <code>fork</code> shows up there. See <a href="https://perldoc.perl.org/5.6.0/perlfaq8#Why-doesn%27t-open()-return-an-error-when-a-pipe-open-fails%3F">&quot;Why doesn&#39;t open() return an error when a pipe open fails?&quot; in perlfaq8</a> to see how to cope with this. There&#39;s also an explanation in <a href="perlipc.html">perlipc</a>.</p>
+
+<p>If you would like to open a bidirectional pipe, the IPC::Open2 library will handle this for you. Check out <a href="perlipc.html#Bidirectional-Communication-with-Another-Process">&quot;Bidirectional Communication with Another Process&quot; in perlipc</a></p>
+
+<h2 id="The-Minus-File"><a class="permalink" href="#The-Minus-File">#</a><a id="The"></a>The Minus File</h2>
+
+<p>Again following the lead of the standard shell utilities, Perl&#39;s <code>open</code> function treats a file whose name is a single minus, &quot;-&quot;, in a special way. If you open minus for reading, it really means to access the standard input. If you open minus for writing, it really means to access the standard output.</p>
+
+<p>If minus can be used as the default input or default output, what happens if you open a pipe into or out of minus? What&#39;s the default command it would run? The same script as you&#39;re currently running! This is actually a stealth <code>fork</code> hidden inside an <code>open</code> call. See <a href="perlipc.html#Safe-Pipe-Opens">&quot;Safe Pipe Opens&quot; in perlipc</a> for details.</p>
+
+<h2 id="Mixing-Reads-and-Writes"><a class="permalink" href="#Mixing-Reads-and-Writes">#</a><a id="Mixing"></a>Mixing Reads and Writes</h2>
+
+<p>It is possible to specify both read and write access. All you do is add a &quot;+&quot; symbol in front of the redirection. But as in the shell, using a less-than on a file never creates a new file; it only opens an existing one. On the other hand, using a greater-than always clobbers (truncates to zero length) an existing file, or creates a brand-new one if there isn&#39;t an old one. Adding a &quot;+&quot; for read-write doesn&#39;t affect whether it only works on existing files or always clobbers existing ones.</p>
+
+<pre><code>open(WTMP, &quot;+&lt; /usr/adm/wtmp&quot;) 
+    || die &quot;can&#39;t open /usr/adm/wtmp: $!&quot;;
+
+open(SCREEN, &quot;+&gt; /tmp/lkscreen&quot;)
+    || die &quot;can&#39;t open /tmp/lkscreen: $!&quot;;
+
+open(LOGFILE, &quot;+&gt;&gt; /tmp/applog&quot;
+    || die &quot;can&#39;t open /tmp/applog: $!&quot;;</code></pre>
+
+<p>The first one won&#39;t create a new file, and the second one will always clobber an old one. The third one will create a new file if necessary and not clobber an old one, and it will allow you to read at any point in the file, but all writes will always go to the end. In short, the first case is substantially more common than the second and third cases, which are almost always wrong. (If you know C, the plus in Perl&#39;s <code>open</code> is historically derived from the one in C&#39;s fopen(3S), which it ultimately calls.)</p>
+
+<p>In fact, when it comes to updating a file, unless you&#39;re working on a binary file as in the WTMP case above, you probably don&#39;t want to use this approach for updating. Instead, Perl&#39;s <b>-i</b> flag comes to the rescue. The following command takes all the C, C++, or yacc source or header files and changes all their foo&#39;s to bar&#39;s, leaving the old version in the original file name with a &quot;.orig&quot; tacked on the end:</p>
+
+<pre><code class="plaintext">$ perl -i.orig -pe &#39;s/\bfoo\b/bar/g&#39; *.[Cchy]</code></pre>
+
+<p>This is a short cut for some renaming games that are really the best way to update textfiles. See the second question in <a href="https://perldoc.perl.org/5.6.0/perlfaq5">perlfaq5</a> for more details.</p>
+
+<h2 id="Filters"><a class="permalink" href="#Filters">#</a>Filters</h2>
+
+<p>One of the most common uses for <code>open</code> is one you never even notice. When you process the ARGV filehandle using <code>&lt;ARGV&gt;</code>, Perl actually does an implicit open on each file in @ARGV. Thus a program called like this:</p>
+
+<pre><code class="plaintext">$ myprogram file1 file2 file3</code></pre>
+
+<p>Can have all its files opened and processed one at a time using a construct no more complex than:</p>
+
+<pre><code>while (&lt;&gt;) {
+    # do something with $_
+} </code></pre>
+
+<p>If @ARGV is empty when the loop first begins, Perl pretends you&#39;ve opened up minus, that is, the standard input. In fact, $ARGV, the currently open file during <code>&lt;ARGV&gt;</code> processing, is even set to &quot;-&quot; in these circumstances.</p>
+
+<p>You are welcome to pre-process your @ARGV before starting the loop to make sure it&#39;s to your liking. One reason to do this might be to remove command options beginning with a minus. While you can always roll the simple ones by hand, the Getopts modules are good for this.</p>
+
+<pre><code>use Getopt::Std;
+
+# -v, -D, -o ARG, sets $opt_v, $opt_D, $opt_o
+getopts(&quot;vDo:&quot;);            
+
+# -v, -D, -o ARG, sets $args{v}, $args{D}, $args{o}
+getopts(&quot;vDo:&quot;, \%args);    </code></pre>
+
+<p>Or the standard Getopt::Long module to permit named arguments:</p>
+
+<pre><code>    use Getopt::Long;
+    GetOptions( &quot;verbose&quot;  =&gt; \$verbose,        # --verbose
+                &quot;Debug&quot;    =&gt; \$debug,          # --Debug
+                &quot;output=s&quot; =&gt; \$output );       
+	    # --output=somestring or --output somestring</code></pre>
+
+<p>Another reason for preprocessing arguments is to make an empty argument list default to all files:</p>
+
+<pre><code>@ARGV = glob(&quot;*&quot;) unless @ARGV;</code></pre>
+
+<p>You could even filter out all but plain, text files. This is a bit silent, of course, and you might prefer to mention them on the way.</p>
+
+<pre><code>@ARGV = grep { -f &amp;&amp; -T } @ARGV;</code></pre>
+
+<p>If you&#39;re using the <b>-n</b> or <b>-p</b> command-line options, you should put changes to @ARGV in a <code>BEGIN{}</code> block.</p>
+
+<p>Remember that a normal <code>open</code> has special properties, in that it might call fopen(3S) or it might called popen(3S), depending on what its argument looks like; that&#39;s why it&#39;s sometimes called &quot;magic open&quot;. Here&#39;s an example:</p>
+
+<pre><code>$pwdinfo = `domainname` =~ /^(\(none\))?$/
+                ? &#39;&lt; /etc/passwd&#39;
+                : &#39;ypcat passwd |&#39;;
+
+open(PWD, $pwdinfo)                 
+            or die &quot;can&#39;t open $pwdinfo: $!&quot;;</code></pre>
+
+<p>This sort of thing also comes into play in filter processing. Because <code>&lt;ARGV&gt;</code> processing employs the normal, shell-style Perl <code>open</code>, it respects all the special things we&#39;ve already seen:</p>
+
+<pre><code class="plaintext">$ myprogram f1 &quot;cmd1|&quot; - f2 &quot;cmd2|&quot; f3 &lt; tmpfile</code></pre>
+
+<p>That program will read from the file <i>f1</i>, the process <i>cmd1</i>, standard input (<i>tmpfile</i> in this case), the <i>f2</i> file, the <i>cmd2</i> command, and finally the <i>f3</i> file.</p>
+
+<p>Yes, this also means that if you have a file named &quot;-&quot; (and so on) in your directory, that they won&#39;t be processed as literal files by <code>open</code>. You&#39;ll need to pass them as &quot;./-&quot; much as you would for the <i>rm</i> program. Or you could use <code>sysopen</code> as described below.</p>
+
+<p>One of the more interesting applications is to change files of a certain name into pipes. For example, to autoprocess gzipped or compressed files by decompressing them with <i>gzip</i>:</p>
+
+<pre><code>@ARGV = map { /^\.(gz|Z)$/ ? &quot;gzip -dc $_ |&quot; : $_  } @ARGV;</code></pre>
+
+<p>Or, if you have the <i>GET</i> program installed from LWP, you can fetch URLs before processing them:</p>
+
+<pre><code>@ARGV = map { m#^\w+://# ? &quot;GET $_ |&quot; : $_ } @ARGV;</code></pre>
+
+<p>It&#39;s not for nothing that this is called magic <code>&lt;ARGV&gt;</code>. Pretty nifty, eh?</p>
+
+<h1 id="Open-à-la-C"><a class="permalink" href="#Open-%C3%A0-la-C">#</a><a id="Open1"></a><a id="Open-la-C"></a>Open à la C</h1>
+
+<p>If you want the convenience of the shell, then Perl&#39;s <code>open</code> is definitely the way to go. On the other hand, if you want finer precision than C&#39;s simplistic fopen(3S) provides, then you should look to Perl&#39;s <code>sysopen</code>, which is a direct hook into the open(2) system call. That does mean it&#39;s a bit more involved, but that&#39;s the price of precision.</p>
+
+<p><code>sysopen</code> takes 3 (or 4) arguments.</p>
+
+<pre><code class="plaintext">sysopen HANDLE, PATH, FLAGS, [MASK]</code></pre>
+
+<p>The HANDLE argument is a filehandle just as with <code>open</code>. The PATH is a literal path, one that doesn&#39;t pay attention to any greater-thans or less-thans or pipes or minuses, nor ignore white space. If it&#39;s there, it&#39;s part of the path. The FLAGS argument contains one or more values derived from the Fcntl module that have been or&#39;d together using the bitwise &quot;|&quot; operator. The final argument, the MASK, is optional; if present, it is combined with the user&#39;s current umask for the creation mode of the file. You should usually omit this.</p>
+
+<p>Although the traditional values of read-only, write-only, and read-write are 0, 1, and 2 respectively, this is known not to hold true on some systems. Instead, it&#39;s best to load in the appropriate constants first from the Fcntl module, which supplies the following standard flags:</p>
+
+<pre><code class="plaintext">O_RDONLY            Read only
+O_WRONLY            Write only
+O_RDWR              Read and write
+O_CREAT             Create the file if it doesn&#39;t exist
+O_EXCL              Fail if the file already exists
+O_APPEND            Append to the file
+O_TRUNC             Truncate the file
+O_NONBLOCK          Non-blocking access</code></pre>
+
+<p>Less common flags that are sometimes available on some operating systems include <code>O_BINARY</code>, <code>O_TEXT</code>, <code>O_SHLOCK</code>, <code>O_EXLOCK</code>, <code>O_DEFER</code>, <code>O_SYNC</code>, <code>O_ASYNC</code>, <code>O_DSYNC</code>, <code>O_RSYNC</code>, <code>O_NOCTTY</code>, <code>O_NDELAY</code> and <code>O_LARGEFILE</code>. Consult your open(2) manpage or its local equivalent for details. (Note: starting from Perl release 5.6 the O_LARGEFILE flag, if available, is automatically added to the sysopen() flags because large files are the the default.)</p>
+
+<p>Here&#39;s how to use <code>sysopen</code> to emulate the simple <code>open</code> calls we had before. We&#39;ll omit the <code>|| die $!</code> checks for clarity, but make sure you always check the return values in real code. These aren&#39;t quite the same, since <code>open</code> will trim leading and trailing white space, but you&#39;ll get the idea:</p>
+
+<p>To open a file for reading:</p>
+
+<pre><code>open(FH, &quot;&lt; $path&quot;);
+sysopen(FH, $path, O_RDONLY);</code></pre>
+
+<p>To open a file for writing, creating a new file if needed or else truncating an old file:</p>
+
+<pre><code>open(FH, &quot;&gt; $path&quot;);
+sysopen(FH, $path, O_WRONLY | O_TRUNC | O_CREAT);</code></pre>
+
+<p>To open a file for appending, creating one if necessary:</p>
+
+<pre><code>open(FH, &quot;&gt;&gt; $path&quot;);
+sysopen(FH, $path, O_WRONLY | O_APPEND | O_CREAT);</code></pre>
+
+<p>To open a file for update, where the file must already exist:</p>
+
+<pre><code>open(FH, &quot;+&lt; $path&quot;);
+sysopen(FH, $path, O_RDWR);</code></pre>
+
+<p>And here are things you can do with <code>sysopen</code> that you cannot do with a regular <code>open</code>. As you see, it&#39;s just a matter of controlling the flags in the third argument.</p>
+
+<p>To open a file for writing, creating a new file which must not previously exist:</p>
+
+<pre><code>sysopen(FH, $path, O_WRONLY | O_EXCL | O_CREAT);</code></pre>
+
+<p>To open a file for appending, where that file must already exist:</p>
+
+<pre><code>sysopen(FH, $path, O_WRONLY | O_APPEND);</code></pre>
+
+<p>To open a file for update, creating a new file if necessary:</p>
+
+<pre><code>sysopen(FH, $path, O_RDWR | O_CREAT);</code></pre>
+
+<p>To open a file for update, where that file must not already exist:</p>
+
+<pre><code>sysopen(FH, $path, O_RDWR | O_EXCL | O_CREAT);</code></pre>
+
+<p>To open a file without blocking, creating one if necessary:</p>
+
+<pre><code>sysopen(FH, $path, O_WRONLY | O_NONBLOCK | O_CREAT);</code></pre>
+
+<h2 id="Permissions-à-la-mode"><a class="permalink" href="#Permissions-%C3%A0-la-mode">#</a><a id="Permissions"></a><a id="Permissions-la-mode"></a>Permissions à la mode</h2>
+
+<p>If you omit the MASK argument to <code>sysopen</code>, Perl uses the octal value 0666. The normal MASK to use for executables and directories should be 0777, and for anything else, 0666.</p>
+
+<p>Why so permissive? Well, it isn&#39;t really. The MASK will be modified by your process&#39;s current <code>umask</code>. A umask is a number representing <i>disabled</i> permissions bits; that is, bits that will not be turned on in the created files&#39; permissions field.</p>
+
+<p>For example, if your <code>umask</code> were 027, then the 020 part would disable the group from writing, and the 007 part would disable others from reading, writing, or executing. Under these conditions, passing <code>sysopen</code> 0666 would create a file with mode 0640, since <code>0666 &amp;~ 027</code> is 0640.</p>
+
+<p>You should seldom use the MASK argument to <code>sysopen()</code>. That takes away the user&#39;s freedom to choose what permission new files will have. Denying choice is almost always a bad thing. One exception would be for cases where sensitive or private data is being stored, such as with mail folders, cookie files, and internal temporary files.</p>
+
+<h1 id="Obscure-Open-Tricks"><a class="permalink" href="#Obscure-Open-Tricks">#</a><a id="Obscure"></a>Obscure Open Tricks</h1>
+
+<h2 id="Re-Opening-Files-(dups)"><a class="permalink" href="#Re-Opening-Files-(dups)">#</a><a id="Re"></a><a id="Re-Opening-Files-dups"></a>Re-Opening Files (dups)</h2>
+
+<p>Sometimes you already have a filehandle open, and want to make another handle that&#39;s a duplicate of the first one. In the shell, we place an ampersand in front of a file descriptor number when doing redirections. For example, <code>2&gt;&amp;1</code> makes descriptor 2 (that&#39;s STDERR in Perl) be redirected into descriptor 1 (which is usually Perl&#39;s STDOUT). The same is essentially true in Perl: a filename that begins with an ampersand is treated instead as a file descriptor if a number, or as a filehandle if a string.</p>
+
+<pre><code>open(SAVEOUT, &quot;&gt;&amp;SAVEERR&quot;) || die &quot;couldn&#39;t dup SAVEERR: $!&quot;;
+open(MHCONTEXT, &quot;&lt;&amp;4&quot;)     || die &quot;couldn&#39;t dup fd4: $!&quot;;</code></pre>
+
+<p>That means that if a function is expecting a filename, but you don&#39;t want to give it a filename because you already have the file open, you can just pass the filehandle with a leading ampersand. It&#39;s best to use a fully qualified handle though, just in case the function happens to be in a different package:</p>
+
+<pre><code>somefunction(&quot;&amp;main::LOGFILE&quot;);</code></pre>
+
+<p>This way if somefunction() is planning on opening its argument, it can just use the already opened handle. This differs from passing a handle, because with a handle, you don&#39;t open the file. Here you have something you can pass to open.</p>
+
+<p>If you have one of those tricky, newfangled I/O objects that the C++ folks are raving about, then this doesn&#39;t work because those aren&#39;t a proper filehandle in the native Perl sense. You&#39;ll have to use fileno() to pull out the proper descriptor number, assuming you can:</p>
+
+<pre><code>use IO::Socket;
+$handle = IO::Socket::INET-&gt;new(&quot;www.perl.com:80&quot;);
+$fd = $handle-&gt;fileno;
+somefunction(&quot;&amp;$fd&quot;);  # not an indirect function call</code></pre>
+
+<p>It can be easier (and certainly will be faster) just to use real filehandles though:</p>
+
+<pre><code>use IO::Socket;
+local *REMOTE = IO::Socket::INET-&gt;new(&quot;www.perl.com:80&quot;);
+die &quot;can&#39;t connect&quot; unless defined(fileno(REMOTE));
+somefunction(&quot;&amp;main::REMOTE&quot;);</code></pre>
+
+<p>If the filehandle or descriptor number is preceded not just with a simple &quot;&amp;&quot; but rather with a &quot;&amp;=&quot; combination, then Perl will not create a completely new descriptor opened to the same place using the dup(2) system call. Instead, it will just make something of an alias to the existing one using the fdopen(3S) library call This is slightly more parsimonious of systems resources, although this is less a concern these days. Here&#39;s an example of that:</p>
+
+<pre><code>$fd = $ENV{&quot;MHCONTEXTFD&quot;};
+open(MHCONTEXT, &quot;&lt;&amp;=$fd&quot;)   or die &quot;couldn&#39;t fdopen $fd: $!&quot;;</code></pre>
+
+<p>If you&#39;re using magic <code>&lt;ARGV&gt;</code>, you could even pass in as a command line argument in @ARGV something like <code>&quot;&lt;&amp;=$MHCONTEXTFD&quot;</code>, but we&#39;ve never seen anyone actually do this.</p>
+
+<h2 id="Dispelling-the-Dweomer"><a class="permalink" href="#Dispelling-the-Dweomer">#</a><a id="Dispelling"></a>Dispelling the Dweomer</h2>
+
+<p>Perl is more of a DWIMmer language than something like Java--where DWIM is an acronym for &quot;do what I mean&quot;. But this principle sometimes leads to more hidden magic than one knows what to do with. In this way, Perl is also filled with <i>dweomer</i>, an obscure word meaning an enchantment. Sometimes, Perl&#39;s DWIMmer is just too much like dweomer for comfort.</p>
+
+<p>If magic <code>open</code> is a bit too magical for you, you don&#39;t have to turn to <code>sysopen</code>. To open a file with arbitrary weird characters in it, it&#39;s necessary to protect any leading and trailing whitespace. Leading whitespace is protected by inserting a <code>&quot;./&quot;</code> in front of a filename that starts with whitespace. Trailing whitespace is protected by appending an ASCII NUL byte (<code>&quot;\0&quot;</code>) at the end off the string.</p>
+
+<pre><code>$file =~ s#^(\s)#./$1#;
+open(FH, &quot;&lt; $file\0&quot;)   || die &quot;can&#39;t open $file: $!&quot;;</code></pre>
+
+<p>This assumes, of course, that your system considers dot the current working directory, slash the directory separator, and disallows ASCII NULs within a valid filename. Most systems follow these conventions, including all POSIX systems as well as proprietary Microsoft systems. The only vaguely popular system that doesn&#39;t work this way is the proprietary Macintosh system, which uses a colon where the rest of us use a slash. Maybe <code>sysopen</code> isn&#39;t such a bad idea after all.</p>
+
+<p>If you want to use <code>&lt;ARGV&gt;</code> processing in a totally boring and non-magical way, you could do this first:</p>
+
+<pre><code>#   &quot;Sam sat on the ground and put his head in his hands.  
+#   &#39;I wish I had never come here, and I don&#39;t want to see 
+#   no more magic,&#39; he said, and fell silent.&quot;
+for (@ARGV) { 
+    s#^([^./])#./$1#;
+    $_ .= &quot;\0&quot;;
+} 
+while (&lt;&gt;) {  
+    # now process $_
+} </code></pre>
+
+<p>But be warned that users will not appreciate being unable to use &quot;-&quot; to mean standard input, per the standard convention.</p>
+
+<h2 id="Paths-as-Opens"><a class="permalink" href="#Paths-as-Opens">#</a><a id="Paths"></a>Paths as Opens</h2>
+
+<p>You&#39;ve probably noticed how Perl&#39;s <code>warn</code> and <code>die</code> functions can produce messages like:</p>
+
+<pre><code class="plaintext">Some warning at scriptname line 29, &lt;FH&gt; line 7.</code></pre>
+
+<p>That&#39;s because you opened a filehandle FH, and had read in seven records from it. But what was the name of the file, not the handle?</p>
+
+<p>If you aren&#39;t running with <code>strict refs</code>, or if you&#39;ve turn them off temporarily, then all you have to do is this:</p>
+
+<pre><code>open($path, &quot;&lt; $path&quot;) || die &quot;can&#39;t open $path: $!&quot;;
+while (&lt;$path&gt;) {
+    # whatever
+} </code></pre>
+
+<p>Since you&#39;re using the pathname of the file as its handle, you&#39;ll get warnings more like</p>
+
+<pre><code class="plaintext">Some warning at scriptname line 29, &lt;/etc/motd&gt; line 7.</code></pre>
+
+<h2 id="Single-Argument-Open"><a class="permalink" href="#Single-Argument-Open">#</a><a id="Single"></a>Single Argument Open</h2>
+
+<p>Remember how we said that Perl&#39;s open took two arguments? That was a passive prevarication. You see, it can also take just one argument. If and only if the variable is a global variable, not a lexical, you can pass <code>open</code> just one argument, the filehandle, and it will get the path from the global scalar variable of the same name.</p>
+
+<pre><code>$FILE = &quot;/etc/motd&quot;;
+open FILE or die &quot;can&#39;t open $FILE: $!&quot;;
+while (&lt;FILE&gt;) {
+    # whatever
+} </code></pre>
+
+<p>Why is this here? Someone has to cater to the hysterical porpoises. It&#39;s something that&#39;s been in Perl since the very beginning, if not before.</p>
+
+<h2 id="Playing-with-STDIN-and-STDOUT"><a class="permalink" href="#Playing-with-STDIN-and-STDOUT">#</a><a id="Playing"></a>Playing with STDIN and STDOUT</h2>
+
+<p>One clever move with STDOUT is to explicitly close it when you&#39;re done with the program.</p>
+
+<pre><code class="plaintext">END { close(STDOUT) || die &quot;can&#39;t close stdout: $!&quot; }</code></pre>
+
+<p>If you don&#39;t do this, and your program fills up the disk partition due to a command line redirection, it won&#39;t report the error exit with a failure status.</p>
+
+<p>You don&#39;t have to accept the STDIN and STDOUT you were given. You are welcome to reopen them if you&#39;d like.</p>
+
+<pre><code>    open(STDIN, &quot;&lt; datafile&quot;)
+	|| die &quot;can&#39;t open datafile: $!&quot;;
+
+    open(STDOUT, &quot;&gt; output&quot;)
+	|| die &quot;can&#39;t open output: $!&quot;;</code></pre>
+
+<p>And then these can be read directly or passed on to subprocesses. This makes it look as though the program were initially invoked with those redirections from the command line.</p>
+
+<p>It&#39;s probably more interesting to connect these to pipes. For example:</p>
+
+<pre><code>    $pager = $ENV{PAGER} || &quot;(less || more)&quot;;
+    open(STDOUT, &quot;| $pager&quot;)
+	|| die &quot;can&#39;t fork a pager: $!&quot;;</code></pre>
+
+<p>This makes it appear as though your program were called with its stdout already piped into your pager. You can also use this kind of thing in conjunction with an implicit fork to yourself. You might do this if you would rather handle the post processing in your own program, just in a different process:</p>
+
+<pre><code>head(100);
+while (&lt;&gt;) {
+    print;
+} 
+
+sub head {
+    my $lines = shift || 20;
+    return unless $pid = open(STDOUT, &quot;|-&quot;);
+    die &quot;cannot fork: $!&quot; unless defined $pid;
+    while (&lt;STDIN&gt;) {
+        print;
+        last if --$lines &lt; 0;
+    } 
+    exit;
+} </code></pre>
+
+<p>This technique can be applied to repeatedly push as many filters on your output stream as you wish.</p>
+
+<h1 id="Other-I/O-Issues"><a class="permalink" href="#Other-I/O-Issues">#</a><a id="Other"></a><a id="Other-I-O-Issues"></a>Other I/O Issues</h1>
+
+<p>These topics aren&#39;t really arguments related to <code>open</code> or <code>sysopen</code>, but they do affect what you do with your open files.</p>
+
+<h2 id="Opening-Non-File-Files"><a class="permalink" href="#Opening-Non-File-Files">#</a><a id="Opening"></a>Opening Non-File Files</h2>
+
+<p>When is a file not a file? Well, you could say when it exists but isn&#39;t a plain file. We&#39;ll check whether it&#39;s a symbolic link first, just in case.</p>
+
+<pre><code>if (-l $file || ! -f _) {
+    print &quot;$file is not a plain file\n&quot;;
+} </code></pre>
+
+<p>What other kinds of files are there than, well, files? Directories, symbolic links, named pipes, Unix-domain sockets, and block and character devices. Those are all files, too--just not <i>plain</i> files. This isn&#39;t the same issue as being a text file. Not all text files are plain files. Not all plain files are textfiles. That&#39;s why there are separate <code>-f</code> and <code>-T</code> file tests.</p>
+
+<p>To open a directory, you should use the <code>opendir</code> function, then process it with <code>readdir</code>, carefully restoring the directory name if necessary:</p>
+
+<pre><code>opendir(DIR, $dirname) or die &quot;can&#39;t opendir $dirname: $!&quot;;
+while (defined($file = readdir(DIR))) {
+    # do something with &quot;$dirname/$file&quot;
+}
+closedir(DIR);</code></pre>
+
+<p>If you want to process directories recursively, it&#39;s better to use the File::Find module. For example, this prints out all files recursively, add adds a slash to their names if the file is a directory.</p>
+
+<pre><code>@ARGV = qw(.) unless @ARGV;
+use File::Find;
+find sub { print $File::Find::name, -d &amp;&amp; &#39;/&#39;, &quot;\n&quot; }, @ARGV;</code></pre>
+
+<p>This finds all bogus symbolic links beneath a particular directory:</p>
+
+<pre><code>find sub { print &quot;$File::Find::name\n&quot; if -l &amp;&amp; !-e }, $dir;</code></pre>
+
+<p>As you see, with symbolic links, you can just pretend that it is what it points to. Or, if you want to know <i>what</i> it points to, then <code>readlink</code> is called for:</p>
+
+<pre><code>if (-l $file) {
+    if (defined($whither = readlink($file))) {
+        print &quot;$file points to $whither\n&quot;;
+    } else {
+        print &quot;$file points nowhere: $!\n&quot;;
+    } 
+} </code></pre>
+
+<p>Named pipes are a different matter. You pretend they&#39;re regular files, but their opens will normally block until there is both a reader and a writer. You can read more about them in <a href="perlipc.html#Named-Pipes">&quot;Named Pipes&quot; in perlipc</a>. Unix-domain sockets are rather different beasts as well; they&#39;re described in <a href="perlipc.html#Unix-Domain-TCP-Clients-and-Servers">&quot;Unix-Domain TCP Clients and Servers&quot; in perlipc</a>.</p>
+
+<p>When it comes to opening devices, it can be easy and it can tricky. We&#39;ll assume that if you&#39;re opening up a block device, you know what you&#39;re doing. The character devices are more interesting. These are typically used for modems, mice, and some kinds of printers. This is described in <a href="https://perldoc.perl.org/5.6.0/perlfaq8#How-do-I-read-and-write-the-serial-port%3F">&quot;How do I read and write the serial port?&quot; in perlfaq8</a> It&#39;s often enough to open them carefully:</p>
+
+<pre><code>    sysopen(TTYIN, &quot;/dev/ttyS1&quot;, O_RDWR | O_NDELAY | O_NOCTTY)
+		# (O_NOCTTY no longer needed on POSIX systems)
+        or die &quot;can&#39;t open /dev/ttyS1: $!&quot;;
+    open(TTYOUT, &quot;+&gt;&amp;TTYIN&quot;)
+        or die &quot;can&#39;t dup TTYIN: $!&quot;;
+
+    $ofh = select(TTYOUT); $| = 1; select($ofh);
+
+    print TTYOUT &quot;+++at\015&quot;;
+    $answer = &lt;TTYIN&gt;;</code></pre>
+
+<p>With descriptors that you haven&#39;t opened using <code>sysopen</code>, such as a socket, you can set them to be non-blocking using <code>fcntl</code>:</p>
+
+<pre><code>use Fcntl;
+fcntl(Connection, F_SETFL, O_NONBLOCK) 
+    or die &quot;can&#39;t set non blocking: $!&quot;;</code></pre>
+
+<p>Rather than losing yourself in a morass of twisting, turning <code>ioctl</code>s, all dissimilar, if you&#39;re going to manipulate ttys, it&#39;s best to make calls out to the stty(1) program if you have it, or else use the portable POSIX interface. To figure this all out, you&#39;ll need to read the termios(3) manpage, which describes the POSIX interface to tty devices, and then <a href="POSIX.html">POSIX</a>, which describes Perl&#39;s interface to POSIX. There are also some high-level modules on CPAN that can help you with these games. Check out Term::ReadKey and Term::ReadLine.</p>
+
+<p>What else can you open? To open a connection using sockets, you won&#39;t use one of Perl&#39;s two open functions. See <a href="perlipc.html#Sockets%3A-Client%2FServer-Communication">&quot;Sockets: Client/Server Communication&quot; in perlipc</a> for that. Here&#39;s an example. Once you have it, you can use FH as a bidirectional filehandle.</p>
+
+<pre><code>use IO::Socket;
+local *FH = IO::Socket::INET-&gt;new(&quot;www.perl.com:80&quot;);</code></pre>
+
+<p>For opening up a URL, the LWP modules from CPAN are just what the doctor ordered. There&#39;s no filehandle interface, but it&#39;s still easy to get the contents of a document:</p>
+
+<pre><code>use LWP::Simple;
+$doc = get(&#39;http://www.linpro.no/lwp/&#39;);</code></pre>
+
+<h2 id="Binary-Files"><a class="permalink" href="#Binary-Files">#</a><a id="Binary"></a>Binary Files</h2>
+
+<p>On certain legacy systems with what could charitably be called terminally convoluted (some would say broken) I/O models, a file isn&#39;t a file--at least, not with respect to the C standard I/O library. On these old systems whose libraries (but not kernels) distinguish between text and binary streams, to get files to behave properly you&#39;ll have to bend over backwards to avoid nasty problems. On such infelicitous systems, sockets and pipes are already opened in binary mode, and there is currently no way to turn that off. With files, you have more options.</p>
+
+<p>Another option is to use the <code>binmode</code> function on the appropriate handles before doing regular I/O on them:</p>
+
+<pre><code>binmode(STDIN);
+binmode(STDOUT);
+while (&lt;STDIN&gt;) { print } </code></pre>
+
+<p>Passing <code>sysopen</code> a non-standard flag option will also open the file in binary mode on those systems that support it. This is the equivalent of opening the file normally, then calling <code>binmode</code>ing on the handle.</p>
+
+<pre><code>sysopen(BINDAT, &quot;records.data&quot;, O_RDWR | O_BINARY)
+    || die &quot;can&#39;t open records.data: $!&quot;;</code></pre>
+
+<p>Now you can use <code>read</code> and <code>print</code> on that handle without worrying about the system non-standard I/O library breaking your data. It&#39;s not a pretty picture, but then, legacy systems seldom are. CP/M will be with us until the end of days, and after.</p>
+
+<p>On systems with exotic I/O systems, it turns out that, astonishingly enough, even unbuffered I/O using <code>sysread</code> and <code>syswrite</code> might do sneaky data mutilation behind your back.</p>
+
+<pre><code>while (sysread(WHENCE, $buf, 1024)) {
+    syswrite(WHITHER, $buf, length($buf));
+} </code></pre>
+
+<p>Depending on the vicissitudes of your runtime system, even these calls may need <code>binmode</code> or <code>O_BINARY</code> first. Systems known to be free of such difficulties include Unix, the Mac OS, Plan9, and Inferno.</p>
+
+<h2 id="File-Locking"><a class="permalink" href="#File-Locking">#</a><a id="File"></a>File Locking</h2>
+
+<p>In a multitasking environment, you may need to be careful not to collide with other processes who want to do I/O on the same files as others are working on. You&#39;ll often need shared or exclusive locks on files for reading and writing respectively. You might just pretend that only exclusive locks exist.</p>
+
+<p>Never use the existence of a file <code>-e $file</code> as a locking indication, because there is a race condition between the test for the existence of the file and its creation. Atomicity is critical.</p>
+
+<p>Perl&#39;s most portable locking interface is via the <code>flock</code> function, whose simplicity is emulated on systems that don&#39;t directly support it, such as SysV or WindowsNT. The underlying semantics may affect how it all works, so you should learn how <code>flock</code> is implemented on your system&#39;s port of Perl.</p>
+
+<p>File locking <i>does not</i> lock out another process that would like to do I/O. A file lock only locks out others trying to get a lock, not processes trying to do I/O. Because locks are advisory, if one process uses locking and another doesn&#39;t, all bets are off.</p>
+
+<p>By default, the <code>flock</code> call will block until a lock is granted. A request for a shared lock will be granted as soon as there is no exclusive locker. A request for a exclusive lock will be granted as soon as there is no locker of any kind. Locks are on file descriptors, not file names. You can&#39;t lock a file until you open it, and you can&#39;t hold on to a lock once the file has been closed.</p>
+
+<p>Here&#39;s how to get a blocking shared lock on a file, typically used for reading:</p>
+
+<pre><code>use 5.004;
+use Fcntl qw(:DEFAULT :flock);
+open(FH, &quot;&lt; filename&quot;)  or die &quot;can&#39;t open filename: $!&quot;;
+flock(FH, LOCK_SH) 	    or die &quot;can&#39;t lock filename: $!&quot;;
+# now read from FH</code></pre>
+
+<p>You can get a non-blocking lock by using <code>LOCK_NB</code>.</p>
+
+<pre><code>flock(FH, LOCK_SH | LOCK_NB)
+    or die &quot;can&#39;t lock filename: $!&quot;;</code></pre>
+
+<p>This can be useful for producing more user-friendly behaviour by warning if you&#39;re going to be blocking:</p>
+
+<pre><code>    use 5.004;
+    use Fcntl qw(:DEFAULT :flock);
+    open(FH, &quot;&lt; filename&quot;)  or die &quot;can&#39;t open filename: $!&quot;;
+    unless (flock(FH, LOCK_SH | LOCK_NB)) {
+	$| = 1;
+	print &quot;Waiting for lock...&quot;;
+	flock(FH, LOCK_SH)  or die &quot;can&#39;t lock filename: $!&quot;;
+	print &quot;got it.\n&quot;
+    } 
+    # now read from FH</code></pre>
+
+<p>To get an exclusive lock, typically used for writing, you have to be careful. We <code>sysopen</code> the file so it can be locked before it gets emptied. You can get a nonblocking version using <code>LOCK_EX | LOCK_NB</code>.</p>
+
+<pre><code>use 5.004;
+use Fcntl qw(:DEFAULT :flock);
+sysopen(FH, &quot;filename&quot;, O_WRONLY | O_CREAT)
+    or die &quot;can&#39;t open filename: $!&quot;;
+flock(FH, LOCK_EX)
+    or die &quot;can&#39;t lock filename: $!&quot;;
+truncate(FH, 0)
+    or die &quot;can&#39;t truncate filename: $!&quot;;
+# now write to FH</code></pre>
+
+<p>Finally, due to the uncounted millions who cannot be dissuaded from wasting cycles on useless vanity devices called hit counters, here&#39;s how to increment a number in a file safely:</p>
+
+<pre><code>use Fcntl qw(:DEFAULT :flock);
+
+sysopen(FH, &quot;numfile&quot;, O_RDWR | O_CREAT)
+    or die &quot;can&#39;t open numfile: $!&quot;;
+# autoflush FH
+$ofh = select(FH); $| = 1; select ($ofh);
+flock(FH, LOCK_EX)
+    or die &quot;can&#39;t write-lock numfile: $!&quot;;
+
+$num = &lt;FH&gt; || 0;
+seek(FH, 0, 0)
+    or die &quot;can&#39;t rewind numfile : $!&quot;;
+print FH $num+1, &quot;\n&quot;
+    or die &quot;can&#39;t write numfile: $!&quot;;
+
+truncate(FH, tell(FH))
+    or die &quot;can&#39;t truncate numfile: $!&quot;;
+close(FH)
+    or die &quot;can&#39;t close numfile: $!&quot;;</code></pre>
+
+<h1 id="SEE-ALSO"><a class="permalink" href="#SEE-ALSO">#</a><a id="SEE"></a>SEE ALSO</h1>
+
+<p>The <code>open</code> and <code>sysopen</code> function in perlfunc(1); the standard open(2), dup(2), fopen(3), and fdopen(3) manpages; the POSIX documentation.</p>
+
+<h1 id="AUTHOR-and-COPYRIGHT"><a class="permalink" href="#AUTHOR-and-COPYRIGHT">#</a><a id="AUTHOR"></a>AUTHOR and COPYRIGHT</h1>
+
+<p>Copyright 1998 Tom Christiansen.</p>
+
+<p>When included as part of the Standard Version of Perl, or as part of its complete documentation whether printed or otherwise, this work may be distributed only under the terms of Perl&#39;s Artistic License. Any distribution of this file or derivatives thereof outside of that package require that special arrangements be made with copyright holder.</p>
+
+<p>Irrespective of its distribution, all code examples in these files are hereby placed into the public domain. You are permitted and encouraged to use this code in your own programs for fun or for profit as you see fit. A simple comment in the code giving credit would be courteous but is not required.</p>
+
+<h1 id="HISTORY"><a class="permalink" href="#HISTORY">#</a>HISTORY</h1>
+
+<p>First release: Sat Jan 9 08:09:11 MST 1999</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/5.6.0/perlopentut by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:46 GMT -->
+</html>

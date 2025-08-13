@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/less by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>less - perl pragma to request less of something - Perldoc Browser</title>
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="less.html">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.html"><img src="images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.42.0</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="less.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item active" href="https://perldoc.perl.org/5.42.0/less">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/less">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/less">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/less">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/less">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/less">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/less">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/less">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/less">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/less">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/less">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/less">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/less">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/less">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/less">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/less">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/less">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/less">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/less">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/less">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/less">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/less">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/less">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/less">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/less">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/less">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/less">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/less">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/less">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/less">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/less">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/less">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/less">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/less">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/less">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/less">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/less">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/less">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/less">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/less">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/less">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/less">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/less">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/less">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/less">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/less">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/less">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/less">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/less">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/less">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/less">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/less">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/less">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/less">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/less">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/less">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/less">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/less">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/less">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/less">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/less">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/less">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/less">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/less">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/less">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/less">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/less">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/less">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/less">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/less">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/less">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/less">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/less">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/less">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/less">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/less">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/less">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/less">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/less">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.2/less">5.6.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.1/less">5.6.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.0/less">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_04/less">5.005_04</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_03/less">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/less">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/less">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/less">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/less">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/less">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/less">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/less">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/less">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/less">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/less">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/less">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/less">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/less">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/less">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/less">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/less">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/less">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/less">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/less">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/less">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/less">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/less">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/less">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="less.html">less</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/less.txt">source</a>,
+            <a href="https://metacpan.org/pod/less">CPAN</a>)
+          </div>
+            <div id="moduleversion">version 0.03</div>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SYNOPSIS">SYNOPSIS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#FOR-MODULE-AUTHORS">FOR MODULE AUTHORS</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#BOOLEAN-=-less-%3Eof(-FEATURE-)">BOOLEAN = less-&gt;of( FEATURE )</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#FEATURES-=-less-%3Eof()">FEATURES = less-&gt;of()</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#CAVEATS">CAVEATS</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>less - perl pragma to request less of something</p>
+
+<h1 id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">#</a>SYNOPSIS</h1>
+
+<pre><code>use less &#39;CPU&#39;;</code></pre>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>This is a user-pragma. If you&#39;re very lucky some code you&#39;re using will know that you asked for less CPU usage or ram or fat or... we just can&#39;t know. Consult your documentation on everything you&#39;re currently using.</p>
+
+<p>For general suggestions, try requesting <code>CPU</code> or <code>memory</code>.</p>
+
+<pre><code>use less &#39;memory&#39;;
+use less &#39;CPU&#39;;
+use less &#39;fat&#39;;</code></pre>
+
+<p>If you ask for nothing in particular, you&#39;ll be asking for <code>less &#39;please&#39;</code>.</p>
+
+<pre><code>use less &#39;please&#39;;</code></pre>
+
+<h1 id="FOR-MODULE-AUTHORS"><a class="permalink" href="#FOR-MODULE-AUTHORS">#</a><a id="FOR"></a>FOR MODULE AUTHORS</h1>
+
+<p><a href="less.html">less</a> has been in the core as a &quot;joke&quot; module for ages now and it hasn&#39;t had any real way to communicating any information to anything. Thanks to Nicholas Clark we have user pragmas (see <a href="perlpragma.html">perlpragma</a>) and now <code>less</code> can do something.</p>
+
+<p>You can probably expect your users to be able to guess that they can request less CPU or memory or just &quot;less&quot; overall.</p>
+
+<p>If the user didn&#39;t specify anything, it&#39;s interpreted as having used the <code>please</code> tag. It&#39;s up to you to make this useful.</p>
+
+<pre><code># equivalent
+use less;
+use less &#39;please&#39;;</code></pre>
+
+<h2 id="BOOLEAN-=-less-&gt;of(-FEATURE-)"><a class="permalink" href="#BOOLEAN-=-less-%3Eof(-FEATURE-)">#</a><a id="BOOLEAN"></a><a id="BOOLEAN-less-of-FEATURE"></a><code>BOOLEAN = less-&gt;of( FEATURE )</code></h2>
+
+<p>The class method <code>less-&gt;of( NAME )</code> returns a boolean to tell you whether your user requested less of something.</p>
+
+<pre><code>if ( less-&gt;of( &#39;CPU&#39; ) ) {
+    ...
+}
+elsif ( less-&gt;of( &#39;memory&#39; ) ) {
+
+}</code></pre>
+
+<h2 id="FEATURES-=-less-&gt;of()"><a class="permalink" href="#FEATURES-=-less-%3Eof()">#</a><a id="FEATURES"></a><a id="FEATURES-less-of"></a><code>FEATURES = less-&gt;of()</code></h2>
+
+<p>If you don&#39;t ask for any feature, you get the list of features that the user requested you to be nice to. This has the nice side effect that if you don&#39;t respect anything in particular then you can just ask for it and use it like a boolean.</p>
+
+<pre><code>if ( less-&gt;of ) {
+    ...
+}
+else {
+    ...
+}</code></pre>
+
+<h1 id="CAVEATS"><a class="permalink" href="#CAVEATS">#</a>CAVEATS</h1>
+
+<dl>
+
+<dt id="This-probably-does-nothing."><a class="permalink" href="#This-probably-does-nothing.">#</a><a id="This"></a><a id="This-probably-does-nothing"></a>This probably does nothing.</dt>
+<dd>
+
+</dd>
+<dt id="This-works-only-on-5.10+"><a class="permalink" href="#This-works-only-on-5.10+">#</a><a id="This1"></a><a id="This-works-only-on-5.10"></a>This works only on 5.10+</dt>
+<dd>
+
+<p>At least it&#39;s backwards compatible in not doing much.</p>
+
+</dd>
+</dl>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/less by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:52 GMT -->
+</html>

@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/5.6.1/perlfaq3 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>perlfaq3 - Programming Tools ($Revision: 1.38 $, $Date: 1999/05/23 16:08:30 $) - Perldoc Browser</title>
+    <link rel="search" href="../opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="../perlfaq3.html">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="../css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html"><img src="../images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.6.1</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="../perlfaq3.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0/perlfaq3">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/perlfaq3">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/perlfaq3">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/perlfaq3">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/perlfaq3">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/perlfaq3">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/perlfaq3">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/perlfaq3">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/perlfaq3">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/perlfaq3">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/perlfaq3">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/perlfaq3">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/perlfaq3">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/perlfaq3">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/perlfaq3">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/perlfaq3">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/perlfaq3">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/perlfaq3">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/perlfaq3">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/perlfaq3">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/perlfaq3">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/perlfaq3">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/perlfaq3">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/perlfaq3">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/perlfaq3">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/perlfaq3">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/perlfaq3">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/perlfaq3">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/perlfaq3">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/perlfaq3">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/perlfaq3">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/perlfaq3">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/perlfaq3">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/perlfaq3">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/perlfaq3">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/perlfaq3">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/perlfaq3">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/perlfaq3">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/perlfaq3">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/perlfaq3">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/perlfaq3">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/perlfaq3">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/perlfaq3">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/perlfaq3">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/perlfaq3">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/perlfaq3">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/perlfaq3">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/perlfaq3">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/perlfaq3">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/perlfaq3">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/perlfaq3">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/perlfaq3">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/perlfaq3">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/perlfaq3">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/perlfaq3">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/perlfaq3">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/perlfaq3">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/perlfaq3">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/perlfaq3">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/perlfaq3">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/perlfaq3">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/perlfaq3">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/perlfaq3">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/perlfaq3">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/perlfaq3">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/perlfaq3">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/perlfaq3">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/perlfaq3">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/perlfaq3">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/perlfaq3">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/perlfaq3">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/perlfaq3">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/perlfaq3">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/perlfaq3">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/perlfaq3">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/perlfaq3">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/perlfaq3">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/perlfaq3">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/perlfaq3">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.6.2/perlfaq3.html">5.6.2</a>
+          <a class="dropdown-item active" href="perlfaq3.html">5.6.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.0/perlfaq3">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_04/perlfaq3">5.005_04</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_03/perlfaq3">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/perlfaq3">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/perlfaq3">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/perlfaq3">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/perlfaq3">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/perlfaq3">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/perlfaq3">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/perlfaq3">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/perlfaq3">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/perlfaq3">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/perlfaq3">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/perlfaq3">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/perlfaq3">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/perlfaq3">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/perlfaq3">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/perlfaq3">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/perlfaq3">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/perlfaq3">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/perlfaq3">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/perlfaq3">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/perlfaq3">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/perlfaq3">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/perlfaq3">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/perlfaq3">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="../js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/5.6.1/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="../js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="perlfaq3.html">perlfaq3</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/5.6.1/perlfaq3.txt">source</a>,
+            <a href="https://metacpan.org/pod/perlfaq3">CPAN</a>)
+          </div>
+        </div>
+        <div class="leading-notice">
+          You are viewing the version of this documentation from Perl 5.6.1.
+            <a href="../perlfaq3.html">View the latest version</a>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#How-do-I-do-(anything)?">How do I do (anything)?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-can-I-use-Perl-interactively?">How can I use Perl interactively?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Is-there-a-Perl-shell?">Is there a Perl shell?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-do-I-debug-my-Perl-programs?">How do I debug my Perl programs?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-do-I-profile-my-Perl-programs?">How do I profile my Perl programs?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-do-I-cross-reference-my-Perl-programs?">How do I cross-reference my Perl programs?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Is-there-a-pretty-printer-(formatter)-for-Perl?">Is there a pretty-printer (formatter) for Perl?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Is-there-a-ctags-for-Perl?">Is there a ctags for Perl?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Is-there-an-IDE-or-Windows-Perl-Editor?">Is there an IDE or Windows Perl Editor?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Where-can-I-get-Perl-macros-for-vi?">Where can I get Perl macros for vi?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Where-can-I-get-perl-mode-for-emacs?">Where can I get perl-mode for emacs?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-can-I-use-curses-with-Perl?">How can I use curses with Perl?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-can-I-use-X-or-Tk-with-Perl?">How can I use X or Tk with Perl?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-can-I-generate-simple-menus-without-using-CGI-or-Tk?">How can I generate simple menus without using CGI or Tk?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#What-is-undump?">What is undump?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-can-I-make-my-Perl-program-run-faster?">How can I make my Perl program run faster?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-can-I-make-my-Perl-program-take-less-memory?">How can I make my Perl program take less memory?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Is-it-unsafe-to-return-a-pointer-to-local-data?">Is it unsafe to return a pointer to local data?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-can-I-free-an-array-or-hash-so-my-program-shrinks?">How can I free an array or hash so my program shrinks?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-can-I-make-my-CGI-script-more-efficient?">How can I make my CGI script more efficient?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-can-I-hide-the-source-for-my-Perl-program?">How can I hide the source for my Perl program?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-can-I-compile-my-Perl-program-into-byte-code-or-C?">How can I compile my Perl program into byte code or C?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-can-I-compile-Perl-into-Java?">How can I compile Perl into Java?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-can-I-get-%23!perl-to-work-on-%5BMS-DOS,NT,...%5D?">How can I get #!perl to work on [MS-DOS,NT,...]?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Can-I-write-useful-Perl-programs-on-the-command-line?">Can I write useful Perl programs on the command line?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Why-don&#39;t-Perl-one-liners-work-on-my-DOS/Mac/VMS-system?">Why don&#39;t Perl one-liners work on my DOS/Mac/VMS system?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Where-can-I-learn-about-CGI-or-Web-programming-in-Perl?">Where can I learn about CGI or Web programming in Perl?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Where-can-I-learn-about-object-oriented-Perl-programming?">Where can I learn about object-oriented Perl programming?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Where-can-I-learn-about-linking-C-with-Perl?-%5Bh2xs,-xsubpp%5D">Where can I learn about linking C with Perl? [h2xs, xsubpp]</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#I&#39;ve-read-perlembed,-perlguts,-etc.,-but-I-can&#39;t-embed-perl-in-my-C-program;-what-am-I-doing-wrong?">I&#39;ve read perlembed, perlguts, etc., but I can&#39;t embed perl in my C program; what am I doing wrong?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#When-I-tried-to-run-my-script,-I-got-this-message.-What-does-it-mean?">When I tried to run my script, I got this message. What does it mean?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#What&#39;s-MakeMaker?">What&#39;s MakeMaker?</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#AUTHOR-AND-COPYRIGHT">AUTHOR AND COPYRIGHT</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>perlfaq3 - Programming Tools ($Revision: 1.38 $, $Date: 1999/05/23 16:08:30 $)</p>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>This section of the FAQ answers questions related to programmer tools and programming support.</p>
+
+<h2 id="How-do-I-do-(anything)?"><a class="permalink" href="#How-do-I-do-(anything)?">#</a><a id="How"></a><a id="How-do-I-do-anything"></a>How do I do (anything)?</h2>
+
+<p>Have you looked at CPAN (see <a href="perlfaq2.html">perlfaq2</a>)? The chances are that someone has already written a module that can solve your problem. Have you read the appropriate man pages? Here&#39;s a brief index:</p>
+
+<pre><code class="plaintext">Basics	        perldata, perlvar, perlsyn, perlop, perlsub
+Execution	perlrun, perldebug
+Functions	perlfunc
+Objects		perlref, perlmod, perlobj, perltie
+Data Structures	perlref, perllol, perldsc
+Modules		perlmod, perlmodlib, perlsub
+Regexes		perlre, perlfunc, perlop, perllocale
+Moving to perl5	perltrap, perl
+Linking w/C	perlxstut, perlxs, perlcall, perlguts, perlembed
+Various 	http://www.perl.com/CPAN/doc/FMTEYEWTK/index.html
+		(not a man-page but still useful)</code></pre>
+
+<p>A crude table of contents for the Perl man page set is found in <a href="perltoc.html">perltoc</a>.</p>
+
+<h2 id="How-can-I-use-Perl-interactively?"><a class="permalink" href="#How-can-I-use-Perl-interactively?">#</a><a id="How1"></a><a id="How-can-I-use-Perl-interactively"></a>How can I use Perl interactively?</h2>
+
+<p>The typical approach uses the Perl debugger, described in the perldebug(1) man page, on an ``empty&#39;&#39; program, like this:</p>
+
+<pre><code class="plaintext">perl -de 42</code></pre>
+
+<p>Now just type in any legal Perl code, and it will be immediately evaluated. You can also examine the symbol table, get stack backtraces, check variable values, set breakpoints, and other operations typically found in symbolic debuggers.</p>
+
+<h2 id="Is-there-a-Perl-shell?"><a class="permalink" href="#Is-there-a-Perl-shell?">#</a><a id="Is"></a><a id="Is-there-a-Perl-shell"></a>Is there a Perl shell?</h2>
+
+<p>In general, no. The Shell.pm module (distributed with Perl) makes Perl try commands which aren&#39;t part of the Perl language as shell commands. perlsh from the source distribution is simplistic and uninteresting, but may still be what you want.</p>
+
+<h2 id="How-do-I-debug-my-Perl-programs?"><a class="permalink" href="#How-do-I-debug-my-Perl-programs?">#</a><a id="How2"></a><a id="How-do-I-debug-my-Perl-programs"></a>How do I debug my Perl programs?</h2>
+
+<p>Have you tried <code>use warnings</code> or used <code>-w</code>? They enable warnings to detect dubious practices.</p>
+
+<p>Have you tried <code>use strict</code>? It prevents you from using symbolic references, makes you predeclare any subroutines that you call as bare words, and (probably most importantly) forces you to predeclare your variables with <code>my</code>, <code>our</code>, or <code>use vars</code>.</p>
+
+<p>Did you check the return values of each and every system call? The operating system (and thus Perl) tells you whether they worked, and if not why.</p>
+
+<pre><code>open(FH, &quot;&gt; /etc/cantwrite&quot;)
+  or die &quot;Couldn&#39;t write to /etc/cantwrite: $!\n&quot;;</code></pre>
+
+<p>Did you read <a href="perltrap.html">perltrap</a>? It&#39;s full of gotchas for old and new Perl programmers and even has sections for those of you who are upgrading from languages like <i>awk</i> and <i>C</i>.</p>
+
+<p>Have you tried the Perl debugger, described in <a href="perldebug.html">perldebug</a>? You can step through your program and see what it&#39;s doing and thus work out why what it&#39;s doing isn&#39;t what it should be doing.</p>
+
+<h2 id="How-do-I-profile-my-Perl-programs?"><a class="permalink" href="#How-do-I-profile-my-Perl-programs?">#</a><a id="How3"></a><a id="How-do-I-profile-my-Perl-programs"></a>How do I profile my Perl programs?</h2>
+
+<p>You should get the Devel::DProf module from the standard distribution (or separately on CPAN) and also use Benchmark.pm from the standard distribution. The Benchmark module lets you time specific portions of your code, while Devel::DProf gives detailed breakdowns of where your code spends its time.</p>
+
+<p>Here&#39;s a sample use of Benchmark:</p>
+
+<pre><code>  use Benchmark;
+
+  @junk = `cat /etc/motd`;
+  $count = 10_000;
+
+  timethese($count, {
+            &#39;map&#39; =&gt; sub { my @a = @junk;
+			   map { s/a/b/ } @a;
+			   return @a
+			 },
+            &#39;for&#39; =&gt; sub { my @a = @junk;
+			   local $_;
+			   for (@a) { s/a/b/ };
+			   return @a },
+           });</code></pre>
+
+<p>This is what it prints (on one machine--your results will be dependent on your hardware, operating system, and the load on your machine):</p>
+
+<pre><code class="plaintext">Benchmark: timing 10000 iterations of for, map...
+       for:  4 secs ( 3.97 usr  0.01 sys =  3.98 cpu)
+       map:  6 secs ( 4.97 usr  0.00 sys =  4.97 cpu)</code></pre>
+
+<p>Be aware that a good benchmark is very hard to write. It only tests the data you give it and proves little about the differing complexities of contrasting algorithms.</p>
+
+<h2 id="How-do-I-cross-reference-my-Perl-programs?"><a class="permalink" href="#How-do-I-cross-reference-my-Perl-programs?">#</a><a id="How4"></a><a id="How-do-I-cross-reference-my-Perl-programs"></a>How do I cross-reference my Perl programs?</h2>
+
+<p>The B::Xref module, shipped with the new, alpha-release Perl compiler (not the general distribution prior to the 5.005 release), can be used to generate cross-reference reports for Perl programs.</p>
+
+<pre><code class="plaintext">perl -MO=Xref[,OPTIONS] scriptname.plx</code></pre>
+
+<h2 id="Is-there-a-pretty-printer-(formatter)-for-Perl?"><a class="permalink" href="#Is-there-a-pretty-printer-(formatter)-for-Perl?">#</a><a id="Is1"></a><a id="Is-there-a-pretty-printer-formatter-for-Perl"></a>Is there a pretty-printer (formatter) for Perl?</h2>
+
+<p>There is no program that will reformat Perl as much as indent(1) does for C. The complex feedback between the scanner and the parser (this feedback is what confuses the vgrind and emacs programs) makes it challenging at best to write a stand-alone Perl parser.</p>
+
+<p>Of course, if you simply follow the guidelines in <a href="perlstyle.html">perlstyle</a>, you shouldn&#39;t need to reformat. The habit of formatting your code as you write it will help prevent bugs. Your editor can and should help you with this. The perl-mode or newer cperl-mode for emacs can provide remarkable amounts of help with most (but not all) code, and even less programmable editors can provide significant assistance. Tom swears by the following settings in vi and its clones:</p>
+
+<pre><code class="plaintext">set ai sw=4
+map! ^O {^M}^[O^T</code></pre>
+
+<p>Now put that in your <i>.exrc</i> file (replacing the caret characters with control characters) and away you go. In insert mode, ^T is for indenting, ^D is for undenting, and ^O is for blockdenting-- as it were. If you haven&#39;t used the last one, you&#39;re missing a lot. A more complete example, with comments, can be found at http://www.perl.com/CPAN-local/authors/id/TOMC/scripts/toms.exrc.gz</p>
+
+<p>If you are used to using the <i>vgrind</i> program for printing out nice code to a laser printer, you can take a stab at this using http://www.perl.com/CPAN/doc/misc/tips/working.vgrind.entry, but the results are not particularly satisfying for sophisticated code.</p>
+
+<p>The a2ps at http://www.infres.enst.fr/%7Edemaille/a2ps/ does lots of things related to generating nicely printed output of documents.</p>
+
+<h2 id="Is-there-a-ctags-for-Perl?"><a class="permalink" href="#Is-there-a-ctags-for-Perl?">#</a><a id="Is2"></a><a id="Is-there-a-ctags-for-Perl"></a>Is there a ctags for Perl?</h2>
+
+<p>There&#39;s a simple one at http://www.perl.com/CPAN/authors/id/TOMC/scripts/ptags.gz which may do the trick. And if not, it&#39;s easy to hack into what you want.</p>
+
+<h2 id="Is-there-an-IDE-or-Windows-Perl-Editor?"><a class="permalink" href="#Is-there-an-IDE-or-Windows-Perl-Editor?">#</a><a id="Is3"></a><a id="Is-there-an-IDE-or-Windows-Perl-Editor"></a>Is there an IDE or Windows Perl Editor?</h2>
+
+<p>Perl programs are just plain text, so any editor will do.</p>
+
+<p>If you&#39;re on Unix, you already have an IDE--Unix itself. The UNIX philosophy is the philosophy of several small tools that each do one thing and do it well. It&#39;s like a carpenter&#39;s toolbox.</p>
+
+<p>If you want a Windows IDE, check the following:</p>
+
+<dl>
+
+<dt id="CodeMagicCD"><a class="permalink" href="#CodeMagicCD">#</a>CodeMagicCD</dt>
+<dd>
+
+<p>http://www.codemagiccd.com/</p>
+
+</dd>
+<dt id="Komodo"><a class="permalink" href="#Komodo">#</a>Komodo</dt>
+<dd>
+
+<p>ActiveState&#39;s cross-platform, multi-language IDE has Perl support, including a regular expression debugger and remote debugging (http://www.ActiveState.com/Products/Komodo/index.html). (Visual Perl, a Visual Studio.NET plug-in is currently (early 2001) in beta (http://www.ActiveState.com/Products/VisualPerl/index.html)).</p>
+
+</dd>
+<dt id="The-Object-System"><a class="permalink" href="#The-Object-System">#</a><a id="The"></a>The Object System</dt>
+<dd>
+
+<p>(http://www.castlelink.co.uk/object_system/) is a Perl web applications development IDE.</p>
+
+</dd>
+<dt id="PerlBuilder"><a class="permalink" href="#PerlBuilder">#</a>PerlBuilder</dt>
+<dd>
+
+<p>(http://www.solutionsoft.com/perl.htm) is an integrated development environment for Windows that supports Perl development.</p>
+
+</dd>
+<dt id="Perl-code-magic"><a class="permalink" href="#Perl-code-magic">#</a><a id="Perl"></a>Perl code magic</dt>
+<dd>
+
+<p>(http://www.petes-place.com/codemagic.html).</p>
+
+</dd>
+<dt id="visiPerl+"><a class="permalink" href="#visiPerl+">#</a><a id="visiPerl"></a>visiPerl+</dt>
+<dd>
+
+<p>http://helpconsulting.net/visiperl/, from Help Consulting.</p>
+
+</dd>
+</dl>
+
+<p>For editors: if you&#39;re on Unix you probably have vi or a vi clone already, and possibly an emacs too, so you may not need to download anything. In any emacs the cperl-mode (M-x cperl-mode) gives you perhaps the best available Perl editing mode in any editor.</p>
+
+<p>For Windows editors: you can download an Emacs</p>
+
+<dl>
+
+<dt id="GNU-Emacs"><a class="permalink" href="#GNU-Emacs">#</a><a id="GNU"></a>GNU Emacs</dt>
+<dd>
+
+<p>http://www.gnu.org/software/emacs/windows/ntemacs.html</p>
+
+</dd>
+<dt id="MicroEMACS"><a class="permalink" href="#MicroEMACS">#</a>MicroEMACS</dt>
+<dd>
+
+<p>http://members.nbci.com/uemacs/</p>
+
+</dd>
+<dt id="XEmacs"><a class="permalink" href="#XEmacs">#</a>XEmacs</dt>
+<dd>
+
+<p>http://www.xemacs.org/Download/index.html</p>
+
+</dd>
+</dl>
+
+<p>or a vi clone such as</p>
+
+<dl>
+
+<dt id="Elvis"><a class="permalink" href="#Elvis">#</a>Elvis</dt>
+<dd>
+
+<p>ftp://ftp.cs.pdx.edu/pub/elvis/ http://www.fh-wedel.de/elvis/</p>
+
+</dd>
+<dt id="Vile"><a class="permalink" href="#Vile">#</a>Vile</dt>
+<dd>
+
+<p>http://vile.cx/</p>
+
+</dd>
+<dt id="Vim"><a class="permalink" href="#Vim">#</a>Vim</dt>
+<dd>
+
+<p>http://www.vim.org/</p>
+
+<p>win32: http://www.cs.vu.nl/%7Etmgil/vi.html</p>
+
+</dd>
+</dl>
+
+<p>For vi lovers in general, Windows or elsewhere: http://www.thomer.com/thomer/vi/vi.html.</p>
+
+<p>nvi (http://www.bostic.com/vi/, available from CPAN in src/misc/) is yet another vi clone, unfortunately not available for Windows, but in UNIX platforms you might be interested in trying it out, firstly because strictly speaking it is not a vi clone, it is the real vi, or the new incarnation of it, and secondly because you can embed Perl inside it to use Perl as the scripting language. nvi is not alone in this, though: at least also vim and vile offer an embedded Perl.</p>
+
+<p>The following are Win32 multilanguage editor/IDESs that support Perl:</p>
+
+<dl>
+
+<dt id="Codewright"><a class="permalink" href="#Codewright">#</a>Codewright</dt>
+<dd>
+
+<p>http://www.starbase.com/</p>
+
+</dd>
+<dt id="MultiEdit"><a class="permalink" href="#MultiEdit">#</a>MultiEdit</dt>
+<dd>
+
+<p>http://www.MultiEdit.com/</p>
+
+</dd>
+<dt id="SlickEdit"><a class="permalink" href="#SlickEdit">#</a>SlickEdit</dt>
+<dd>
+
+<p>http://www.slickedit.com/</p>
+
+</dd>
+</dl>
+
+<p>There is also a toyedit Text widget based editor written in Perl that is distributed with the Tk module on CPAN. The ptkdb (http://world.std.com/~aep/ptkdb/) is a Perl/tk based debugger that acts as a development environment of sorts. Perl Composer (http://perlcomposer.sourceforge.net/vperl.html) is an IDE for Perl/Tk GUI creation.</p>
+
+<p>In addition to an editor/IDE you might be interested in a more powerful shell environment for Win32. Your options include</p>
+
+<dl>
+
+<dt id="Bash"><a class="permalink" href="#Bash">#</a>Bash</dt>
+<dd>
+
+<p>from the Cygwin package (http://sources.redhat.com/cygwin/)</p>
+
+</dd>
+<dt id="Ksh"><a class="permalink" href="#Ksh">#</a>Ksh</dt>
+<dd>
+
+<p>from the MKS Toolkit (http://www.mks.com/), or the Bourne shell of the U/WIN environment (http://www.research.att.com/sw/tools/uwin/)</p>
+
+</dd>
+<dt id="Tcsh"><a class="permalink" href="#Tcsh">#</a>Tcsh</dt>
+<dd>
+
+<p>ftp://ftp.astron.com/pub/tcsh/, see also http://www.primate.wisc.edu/software/csh-tcsh-book/</p>
+
+</dd>
+<dt id="Zsh"><a class="permalink" href="#Zsh">#</a>Zsh</dt>
+<dd>
+
+<p>ftp://ftp.blarg.net/users/amol/zsh/, see also http://www.zsh.org/</p>
+
+</dd>
+</dl>
+
+<p>MKS and U/WIN are commercial (U/WIN is free for educational and research purposes), Cygwin is covered by the GNU Public License (but that shouldn&#39;t matter for Perl use). The Cygwin, MKS, and U/WIN all contain (in addition to the shells) a comprehensive set of standard UNIX toolkit utilities.</p>
+
+<p>If you&#39;re transferring text files between Unix and Windows using FTP be sure to transfer them in ASCII mode so the ends of lines are appropriately converted.</p>
+
+<p>On Mac OS the MacPerl Application comes with a simple 32k text editor that behaves like a rudimentary IDE. In contrast to the MacPerl Application the MPW Perl tool can make use of the MPW Shell itself as an editor (with no 32k limit).</p>
+
+<dl>
+
+<dt id="BBEdit-and-BBEdit-Lite"><a class="permalink" href="#BBEdit-and-BBEdit-Lite">#</a><a id="BBEdit"></a>BBEdit and BBEdit Lite</dt>
+<dd>
+
+<p>are text editors for Mac OS that have a Perl sensitivity mode (http://web.barebones.com/).</p>
+
+</dd>
+<dt id="Alpha"><a class="permalink" href="#Alpha">#</a>Alpha</dt>
+<dd>
+
+<p>is an editor, written and extensible in Tcl, that nonetheless has built in support for several popular markup and programming languages including Perl and HTML (http://alpha.olm.net/).</p>
+
+</dd>
+</dl>
+
+<p>Pepper and Pe are programming language sensitive text editors for Mac OS X and BeOS respectively (http://www.hekkelman.com/).</p>
+
+<h2 id="Where-can-I-get-Perl-macros-for-vi?"><a class="permalink" href="#Where-can-I-get-Perl-macros-for-vi?">#</a><a id="Where"></a><a id="Where-can-I-get-Perl-macros-for-vi"></a>Where can I get Perl macros for vi?</h2>
+
+<p>For a complete version of Tom Christiansen&#39;s vi configuration file, see http://www.perl.com/CPAN/authors/Tom_Christiansen/scripts/toms.exrc.gz , the standard benchmark file for vi emulators. The file runs best with nvi, the current version of vi out of Berkeley, which incidentally can be built with an embedded Perl interpreter--see http://www.perl.com/CPAN/src/misc.</p>
+
+<h2 id="Where-can-I-get-perl-mode-for-emacs?"><a class="permalink" href="#Where-can-I-get-perl-mode-for-emacs?">#</a><a id="Where1"></a><a id="Where-can-I-get-perl-mode-for-emacs"></a>Where can I get perl-mode for emacs?</h2>
+
+<p>Since Emacs version 19 patchlevel 22 or so, there have been both a perl-mode.el and support for the Perl debugger built in. These should come with the standard Emacs 19 distribution.</p>
+
+<p>In the Perl source directory, you&#39;ll find a directory called &quot;emacs&quot;, which contains a cperl-mode that color-codes keywords, provides context-sensitive help, and other nifty things.</p>
+
+<p>Note that the perl-mode of emacs will have fits with <code>&quot;main&#39;foo&quot;</code> (single quote), and mess up the indentation and highlighting. You are probably using <code>&quot;main::foo&quot;</code> in new Perl code anyway, so this shouldn&#39;t be an issue.</p>
+
+<h2 id="How-can-I-use-curses-with-Perl?"><a class="permalink" href="#How-can-I-use-curses-with-Perl?">#</a><a id="How5"></a><a id="How-can-I-use-curses-with-Perl"></a>How can I use curses with Perl?</h2>
+
+<p>The Curses module from CPAN provides a dynamically loadable object module interface to a curses library. A small demo can be found at the directory http://www.perl.com/CPAN/authors/Tom_Christiansen/scripts/rep; this program repeats a command and updates the screen as needed, rendering <b>rep ps axu</b> similar to <b>top</b>.</p>
+
+<h2 id="How-can-I-use-X-or-Tk-with-Perl?"><a class="permalink" href="#How-can-I-use-X-or-Tk-with-Perl?">#</a><a id="How6"></a><a id="How-can-I-use-X-or-Tk-with-Perl"></a>How can I use X or Tk with Perl?</h2>
+
+<p>Tk is a completely Perl-based, object-oriented interface to the Tk toolkit that doesn&#39;t force you to use Tcl just to get at Tk. Sx is an interface to the Athena Widget set. Both are available from CPAN. See the directory http://www.perl.com/CPAN/modules/by-category/08_User_Interfaces/</p>
+
+<p>Invaluable for Perl/Tk programming are the Perl/Tk FAQ at http://w4.lns.cornell.edu/%7Epvhp/ptk/ptkTOC.html , the Perl/Tk Reference Guide available at http://www.perl.com/CPAN-local/authors/Stephen_O_Lidie/ , and the online manpages at http://www-users.cs.umn.edu/%7Eamundson/perl/perltk/toc.html .</p>
+
+<h2 id="How-can-I-generate-simple-menus-without-using-CGI-or-Tk?"><a class="permalink" href="#How-can-I-generate-simple-menus-without-using-CGI-or-Tk?">#</a><a id="How7"></a><a id="How-can-I-generate-simple-menus-without-using-CGI-or-Tk"></a>How can I generate simple menus without using CGI or Tk?</h2>
+
+<p>The http://www.perl.com/CPAN/authors/id/SKUNZ/perlmenu.v4.0.tar.gz module, which is curses-based, can help with this.</p>
+
+<h2 id="What-is-undump?"><a class="permalink" href="#What-is-undump?">#</a><a id="What"></a><a id="What-is-undump"></a>What is undump?</h2>
+
+<p>See the next question on ``How can I make my Perl program run faster?&#39;&#39;</p>
+
+<h2 id="How-can-I-make-my-Perl-program-run-faster?"><a class="permalink" href="#How-can-I-make-my-Perl-program-run-faster?">#</a><a id="How8"></a><a id="How-can-I-make-my-Perl-program-run-faster"></a>How can I make my Perl program run faster?</h2>
+
+<p>The best way to do this is to come up with a better algorithm. This can often make a dramatic difference. Jon Bentley&#39;s book ``Programming Pearls&#39;&#39; (that&#39;s not a misspelling!) has some good tips on optimization, too. Advice on benchmarking boils down to: benchmark and profile to make sure you&#39;re optimizing the right part, look for better algorithms instead of microtuning your code, and when all else fails consider just buying faster hardware.</p>
+
+<p>A different approach is to autoload seldom-used Perl code. See the AutoSplit and AutoLoader modules in the standard distribution for that. Or you could locate the bottleneck and think about writing just that part in C, the way we used to take bottlenecks in C code and write them in assembler. Similar to rewriting in C, modules that have critical sections can be written in C (for instance, the PDL module from CPAN).</p>
+
+<p>In some cases, it may be worth it to use the backend compiler to produce byte code (saving compilation time) or compile into C, which will certainly save compilation time and sometimes a small amount (but not much) execution time. See the question about compiling your Perl programs for more on the compiler--the wins aren&#39;t as obvious as you&#39;d hope.</p>
+
+<p>If you&#39;re currently linking your perl executable to a shared <i>libc.so</i>, you can often gain a 10-25% performance benefit by rebuilding it to link with a static libc.a instead. This will make a bigger perl executable, but your Perl programs (and programmers) may thank you for it. See the <i>INSTALL</i> file in the source distribution for more information.</p>
+
+<p>Unsubstantiated reports allege that Perl interpreters that use sfio outperform those that don&#39;t (for I/O intensive applications). To try this, see the <i>INSTALL</i> file in the source distribution, especially the ``Selecting File I/O mechanisms&#39;&#39; section.</p>
+
+<p>The undump program was an old attempt to speed up your Perl program by storing the already-compiled form to disk. This is no longer a viable option, as it only worked on a few architectures, and wasn&#39;t a good solution anyway.</p>
+
+<h2 id="How-can-I-make-my-Perl-program-take-less-memory?"><a class="permalink" href="#How-can-I-make-my-Perl-program-take-less-memory?">#</a><a id="How9"></a><a id="How-can-I-make-my-Perl-program-take-less-memory"></a>How can I make my Perl program take less memory?</h2>
+
+<p>When it comes to time-space tradeoffs, Perl nearly always prefers to throw memory at a problem. Scalars in Perl use more memory than strings in C, arrays take more than that, and hashes use even more. While there&#39;s still a lot to be done, recent releases have been addressing these issues. For example, as of 5.004, duplicate hash keys are shared amongst all hashes using them, so require no reallocation.</p>
+
+<p>In some cases, using substr() or vec() to simulate arrays can be highly beneficial. For example, an array of a thousand booleans will take at least 20,000 bytes of space, but it can be turned into one 125-byte bit vector--a considerable memory savings. The standard Tie::SubstrHash module can also help for certain types of data structure. If you&#39;re working with specialist data structures (matrices, for instance) modules that implement these in C may use less memory than equivalent Perl modules.</p>
+
+<p>Another thing to try is learning whether your Perl was compiled with the system malloc or with Perl&#39;s builtin malloc. Whichever one it is, try using the other one and see whether this makes a difference. Information about malloc is in the <i>INSTALL</i> file in the source distribution. You can find out whether you are using perl&#39;s malloc by typing <code>perl -V:usemymalloc</code>.</p>
+
+<h2 id="Is-it-unsafe-to-return-a-pointer-to-local-data?"><a class="permalink" href="#Is-it-unsafe-to-return-a-pointer-to-local-data?">#</a><a id="Is4"></a><a id="Is-it-unsafe-to-return-a-pointer-to-local-data"></a>Is it unsafe to return a pointer to local data?</h2>
+
+<p>No, Perl&#39;s garbage collection system takes care of this.</p>
+
+<pre><code>    sub makeone {
+	my @a = ( 1 .. 10 );
+	return \@a;
+    }
+
+    for $i ( 1 .. 10 ) {
+        push @many, makeone();
+    }
+
+    print $many[4][5], &quot;\n&quot;;
+
+    print &quot;@many\n&quot;;</code></pre>
+
+<h2 id="How-can-I-free-an-array-or-hash-so-my-program-shrinks?"><a class="permalink" href="#How-can-I-free-an-array-or-hash-so-my-program-shrinks?">#</a><a id="How10"></a><a id="How-can-I-free-an-array-or-hash-so-my-program-shrinks"></a>How can I free an array or hash so my program shrinks?</h2>
+
+<p>You can&#39;t. On most operating systems, memory allocated to a program can never be returned to the system. That&#39;s why long-running programs sometimes re-exec themselves. Some operating systems (notably, FreeBSD and Linux) allegedly reclaim large chunks of memory that is no longer used, but it doesn&#39;t appear to happen with Perl (yet). The Mac appears to be the only platform that will reliably (albeit, slowly) return memory to the OS.</p>
+
+<p>We&#39;ve had reports that on Linux (Redhat 5.1) on Intel, <code>undef $scalar</code> will return memory to the system, while on Solaris 2.6 it won&#39;t. In general, try it yourself and see.</p>
+
+<p>However, judicious use of my() on your variables will help make sure that they go out of scope so that Perl can free up that space for use in other parts of your program. A global variable, of course, never goes out of scope, so you can&#39;t get its space automatically reclaimed, although undef()ing and/or delete()ing it will achieve the same effect. In general, memory allocation and de-allocation isn&#39;t something you can or should be worrying about much in Perl, but even this capability (preallocation of data types) is in the works.</p>
+
+<h2 id="How-can-I-make-my-CGI-script-more-efficient?"><a class="permalink" href="#How-can-I-make-my-CGI-script-more-efficient?">#</a><a id="How11"></a><a id="How-can-I-make-my-CGI-script-more-efficient"></a>How can I make my CGI script more efficient?</h2>
+
+<p>Beyond the normal measures described to make general Perl programs faster or smaller, a CGI program has additional issues. It may be run several times per second. Given that each time it runs it will need to be re-compiled and will often allocate a megabyte or more of system memory, this can be a killer. Compiling into C <b>isn&#39;t going to help you</b> because the process start-up overhead is where the bottleneck is.</p>
+
+<p>There are two popular ways to avoid this overhead. One solution involves running the Apache HTTP server (available from http://www.apache.org/) with either of the mod_perl or mod_fastcgi plugin modules.</p>
+
+<p>With mod_perl and the Apache::Registry module (distributed with mod_perl), httpd will run with an embedded Perl interpreter which pre-compiles your script and then executes it within the same address space without forking. The Apache extension also gives Perl access to the internal server API, so modules written in Perl can do just about anything a module written in C can. For more on mod_perl, see http://perl.apache.org/</p>
+
+<p>With the FCGI module (from CPAN) and the mod_fastcgi module (available from http://www.fastcgi.com/) each of your Perl programs becomes a permanent CGI daemon process.</p>
+
+<p>Both of these solutions can have far-reaching effects on your system and on the way you write your CGI programs, so investigate them with care.</p>
+
+<p>See http://www.perl.com/CPAN/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/ .</p>
+
+<p>A non-free, commercial product, ``The Velocity Engine for Perl&#39;&#39;, (http://www.binevolve.com/ or http://www.binevolve.com/velocigen/ ) might also be worth looking at. It will allow you to increase the performance of your Perl programs, running programs up to 25 times faster than normal CGI Perl when running in persistent Perl mode or 4 to 5 times faster without any modification to your existing CGI programs. Fully functional evaluation copies are available from the web site.</p>
+
+<h2 id="How-can-I-hide-the-source-for-my-Perl-program?"><a class="permalink" href="#How-can-I-hide-the-source-for-my-Perl-program?">#</a><a id="How12"></a><a id="How-can-I-hide-the-source-for-my-Perl-program"></a>How can I hide the source for my Perl program?</h2>
+
+<p>Delete it. :-) Seriously, there are a number of (mostly unsatisfactory) solutions with varying levels of ``security&#39;&#39;.</p>
+
+<p>First of all, however, you <i>can&#39;t</i> take away read permission, because the source code has to be readable in order to be compiled and interpreted. (That doesn&#39;t mean that a CGI script&#39;s source is readable by people on the web, though--only by people with access to the filesystem.) So you have to leave the permissions at the socially friendly 0755 level.</p>
+
+<p>Some people regard this as a security problem. If your program does insecure things and relies on people not knowing how to exploit those insecurities, it is not secure. It is often possible for someone to determine the insecure things and exploit them without viewing the source. Security through obscurity, the name for hiding your bugs instead of fixing them, is little security indeed.</p>
+
+<p>You can try using encryption via source filters (Filter::* from CPAN), but any decent programmer will be able to decrypt it. You can try using the byte code compiler and interpreter described below, but the curious might still be able to de-compile it. You can try using the native-code compiler described below, but crackers might be able to disassemble it. These pose varying degrees of difficulty to people wanting to get at your code, but none can definitively conceal it (true of every language, not just Perl).</p>
+
+<p>If you&#39;re concerned about people profiting from your code, then the bottom line is that nothing but a restrictive license will give you legal security. License your software and pepper it with threatening statements like ``This is unpublished proprietary software of XYZ Corp. Your access to it does not give you permission to use it blah blah blah.&#39;&#39; We are not lawyers, of course, so you should see a lawyer if you want to be sure your license&#39;s wording will stand up in court.</p>
+
+<h2 id="How-can-I-compile-my-Perl-program-into-byte-code-or-C?"><a class="permalink" href="#How-can-I-compile-my-Perl-program-into-byte-code-or-C?">#</a><a id="How13"></a><a id="How-can-I-compile-my-Perl-program-into-byte-code-or-C"></a>How can I compile my Perl program into byte code or C?</h2>
+
+<p>Malcolm Beattie has written a multifunction backend compiler, available from CPAN, that can do both these things. It is included in the perl5.005 release, but is still considered experimental. This means it&#39;s fun to play with if you&#39;re a programmer but not really for people looking for turn-key solutions.</p>
+
+<p>Merely compiling into C does not in and of itself guarantee that your code will run very much faster. That&#39;s because except for lucky cases where a lot of native type inferencing is possible, the normal Perl run-time system is still present and so your program will take just as long to run and be just as big. Most programs save little more than compilation time, leaving execution no more than 10-30% faster. A few rare programs actually benefit significantly (even running several times faster), but this takes some tweaking of your code.</p>
+
+<p>You&#39;ll probably be astonished to learn that the current version of the compiler generates a compiled form of your script whose executable is just as big as the original perl executable, and then some. That&#39;s because as currently written, all programs are prepared for a full eval() statement. You can tremendously reduce this cost by building a shared <i>libperl.so</i> library and linking against that. See the <i>INSTALL</i> podfile in the Perl source distribution for details. If you link your main perl binary with this, it will make it minuscule. For example, on one author&#39;s system, <i>/usr/bin/perl</i> is only 11k in size!</p>
+
+<p>In general, the compiler will do nothing to make a Perl program smaller, faster, more portable, or more secure. In fact, it can make your situation worse. The executable will be bigger, your VM system may take longer to load the whole thing, the binary is fragile and hard to fix, and compilation never stopped software piracy in the form of crackers, viruses, or bootleggers. The real advantage of the compiler is merely packaging, and once you see the size of what it makes (well, unless you use a shared <i>libperl.so</i>), you&#39;ll probably want a complete Perl install anyway.</p>
+
+<h2 id="How-can-I-compile-Perl-into-Java?"><a class="permalink" href="#How-can-I-compile-Perl-into-Java?">#</a><a id="How14"></a><a id="How-can-I-compile-Perl-into-Java"></a>How can I compile Perl into Java?</h2>
+
+<p>You can also integrate Java and Perl with the Perl Resource Kit from O&#39;Reilly and Associates. See http://www.oreilly.com/catalog/prkunix/ .</p>
+
+<p>Perl 5.6 comes with Java Perl Lingo, or JPL. JPL, still in development, allows Perl code to be called from Java. See jpl/README in the Perl source tree.</p>
+
+<h2 id="How-can-I-get-#!perl-to-work-on-[MS-DOS,NT,...]?"><a class="permalink" href="#How-can-I-get-%23!perl-to-work-on-%5BMS-DOS,NT,...%5D?">#</a><a id="How15"></a><a id="How-can-I-get-perl-to-work-on-MS-DOS-NT"></a>How can I get <code>#!perl</code> to work on [MS-DOS,NT,...]?</h2>
+
+<p>For OS/2 just use</p>
+
+<pre><code class="plaintext">extproc perl -S -your_switches</code></pre>
+
+<p>as the first line in <code>*.cmd</code> file (<code>-S</code> due to a bug in cmd.exe&#39;s `extproc&#39; handling). For DOS one should first invent a corresponding batch file and codify it in <code>ALTERNATIVE_SHEBANG</code> (see the <i>INSTALL</i> file in the source distribution for more information).</p>
+
+<p>The Win95/NT installation, when using the ActiveState port of Perl, will modify the Registry to associate the <code>.pl</code> extension with the perl interpreter. If you install another port, perhaps even building your own Win95/NT Perl from the standard sources by using a Windows port of gcc (e.g., with cygwin or mingw32), then you&#39;ll have to modify the Registry yourself. In addition to associating <code>.pl</code> with the interpreter, NT people can use: <code>SET PATHEXT=%PATHEXT%;.PL</code> to let them run the program <code>install-linux.pl</code> merely by typing <code>install-linux</code>.</p>
+
+<p>Macintosh Perl programs will have the appropriate Creator and Type, so that double-clicking them will invoke the Perl application.</p>
+
+<p><i>IMPORTANT!</i>: Whatever you do, PLEASE don&#39;t get frustrated, and just throw the perl interpreter into your cgi-bin directory, in order to get your programs working for a web server. This is an EXTREMELY big security risk. Take the time to figure out how to do it correctly.</p>
+
+<h2 id="Can-I-write-useful-Perl-programs-on-the-command-line?"><a class="permalink" href="#Can-I-write-useful-Perl-programs-on-the-command-line?">#</a><a id="Can"></a><a id="Can-I-write-useful-Perl-programs-on-the-command-line"></a>Can I write useful Perl programs on the command line?</h2>
+
+<p>Yes. Read <a href="perlrun.html">perlrun</a> for more information. Some examples follow. (These assume standard Unix shell quoting rules.)</p>
+
+<pre><code>    # sum first and last fields
+    perl -lane &#39;print $F[0] + $F[-1]&#39; *
+
+    # identify text files
+    perl -le &#39;for(@ARGV) {print if -f &amp;&amp; -T _}&#39; *
+
+    # remove (most) comments from C program
+    perl -0777 -pe &#39;s{/\*.*?\*/}{}gs&#39; foo.c
+
+    # make file a month younger than today, defeating reaper daemons
+    perl -e &#39;$X=24*60*60; utime(time(),time() + 30 * $X,@ARGV)&#39; *
+
+    # find first unused uid
+    perl -le &#39;$i++ while getpwuid($i); print $i&#39;
+
+    # display reasonable manpath
+    echo $PATH | perl -nl -072 -e &#39;
+	s![^/+]*$!man!&amp;&amp;-d&amp;&amp;!$s{$_}++&amp;&amp;push@m,$_;END{print&quot;@m&quot;}&#39;</code></pre>
+
+<p>OK, the last one was actually an Obfuscated Perl Contest entry. :-)</p>
+
+<h2 id="Why-don&#39;t-Perl-one-liners-work-on-my-DOS/Mac/VMS-system?"><a class="permalink" href="#Why-don&#39;t-Perl-one-liners-work-on-my-DOS/Mac/VMS-system?">#</a><a id="Why"></a><a id="Why-dont-Perl-one-liners-work-on-my-DOS-Mac-VMS-system"></a>Why don&#39;t Perl one-liners work on my DOS/Mac/VMS system?</h2>
+
+<p>The problem is usually that the command interpreters on those systems have rather different ideas about quoting than the Unix shells under which the one-liners were created. On some systems, you may have to change single-quotes to double ones, which you must <i>NOT</i> do on Unix or Plan9 systems. You might also have to change a single % to a %%.</p>
+
+<p>For example:</p>
+
+<pre><code class="plaintext"># Unix
+perl -e &#39;print &quot;Hello world\n&quot;&#39;
+
+# DOS, etc.
+perl -e &quot;print \&quot;Hello world\n\&quot;&quot;
+
+# Mac
+print &quot;Hello world\n&quot;
+ (then Run &quot;Myscript&quot; or Shift-Command-R)
+
+# VMS
+perl -e &quot;print &quot;&quot;Hello world\n&quot;&quot;&quot;</code></pre>
+
+<p>The problem is that none of these examples are reliable: they depend on the command interpreter. Under Unix, the first two often work. Under DOS, it&#39;s entirely possible that neither works. If 4DOS was the command shell, you&#39;d probably have better luck like this:</p>
+
+<pre><code class="plaintext">perl -e &quot;print &lt;Ctrl-x&gt;&quot;Hello world\n&lt;Ctrl-x&gt;&quot;&quot;</code></pre>
+
+<p>Under the Mac, it depends which environment you are using. The MacPerl shell, or MPW, is much like Unix shells in its support for several quoting variants, except that it makes free use of the Mac&#39;s non-ASCII characters as control characters.</p>
+
+<p>Using qq(), q(), and qx(), instead of &quot;double quotes&quot;, &#39;single quotes&#39;, and `backticks`, may make one-liners easier to write.</p>
+
+<p>There is no general solution to all of this. It is a mess, pure and simple. Sucks to be away from Unix, huh? :-)</p>
+
+<p>[Some of this answer was contributed by Kenneth Albanowski.]</p>
+
+<h2 id="Where-can-I-learn-about-CGI-or-Web-programming-in-Perl?"><a class="permalink" href="#Where-can-I-learn-about-CGI-or-Web-programming-in-Perl?">#</a><a id="Where2"></a><a id="Where-can-I-learn-about-CGI-or-Web-programming-in-Perl"></a>Where can I learn about CGI or Web programming in Perl?</h2>
+
+<p>For modules, get the CGI or LWP modules from CPAN. For textbooks, see the two especially dedicated to web stuff in the question on books. For problems and questions related to the web, like ``Why do I get 500 Errors&#39;&#39; or ``Why doesn&#39;t it run from the browser right when it runs fine on the command line&#39;&#39;, see these sources:</p>
+
+<pre><code class="plaintext">WWW Security FAQ
+    http://www.w3.org/Security/Faq/
+
+Web FAQ
+    http://www.boutell.com/faq/
+
+CGI FAQ
+    http://www.webthing.com/tutorials/cgifaq.html
+
+HTTP Spec
+    http://www.w3.org/pub/WWW/Protocols/HTTP/
+
+HTML Spec
+    http://www.w3.org/TR/REC-html40/
+    http://www.w3.org/pub/WWW/MarkUp/
+
+CGI Spec
+    http://www.w3.org/CGI/
+
+CGI Security FAQ
+    http://www.go2net.com/people/paulp/cgi-security/safe-cgi.txt</code></pre>
+
+<h2 id="Where-can-I-learn-about-object-oriented-Perl-programming?"><a class="permalink" href="#Where-can-I-learn-about-object-oriented-Perl-programming?">#</a><a id="Where3"></a><a id="Where-can-I-learn-about-object-oriented-Perl-programming"></a>Where can I learn about object-oriented Perl programming?</h2>
+
+<p>A good place to start is <a href="perltoot.html">perltoot</a>, and you can use <a href="perlobj.html">perlobj</a>, <a href="perlboot.html">perlboot</a>, and <a href="perlbot.html">perlbot</a> for reference. Perltoot didn&#39;t come out until the 5.004 release; you can get a copy (in pod, html, or postscript) from http://www.perl.com/CPAN/doc/FMTEYEWTK/ .</p>
+
+<h2 id="Where-can-I-learn-about-linking-C-with-Perl?-[h2xs,-xsubpp]"><a class="permalink" href="#Where-can-I-learn-about-linking-C-with-Perl?-%5Bh2xs,-xsubpp%5D">#</a><a id="Where4"></a><a id="Where-can-I-learn-about-linking-C-with-Perl-h2xs-xsubpp"></a>Where can I learn about linking C with Perl? [h2xs, xsubpp]</h2>
+
+<p>If you want to call C from Perl, start with <a href="perlxstut.html">perlxstut</a>, moving on to <a href="perlxs.html">perlxs</a>, <a href="https://metacpan.org/pod/xsubpp">xsubpp</a>, and <a href="perlguts.html">perlguts</a>. If you want to call Perl from C, then read <a href="perlembed.html">perlembed</a>, <a href="perlcall.html">perlcall</a>, and <a href="perlguts.html">perlguts</a>. Don&#39;t forget that you can learn a lot from looking at how the authors of existing extension modules wrote their code and solved their problems.</p>
+
+<h2 id="I&#39;ve-read-perlembed,-perlguts,-etc.,-but-I-can&#39;t-embed-perl-in-my-C-program;-what-am-I-doing-wrong?"><a class="permalink" href="#I&#39;ve-read-perlembed,-perlguts,-etc.,-but-I-can&#39;t-embed-perl-in-my-C-program;-what-am-I-doing-wrong?">#</a><a id="I"></a><a id="Ive-read-perlembed-perlguts-etc.-but-I-cant-embed-perl-in-my-C-program-what-am-I-doing-wrong"></a>I&#39;ve read perlembed, perlguts, etc., but I can&#39;t embed perl in my C program; what am I doing wrong?</h2>
+
+<p>Download the ExtUtils::Embed kit from CPAN and run `make test&#39;. If the tests pass, read the pods again and again and again. If they fail, see <a href="https://perldoc.perl.org/5.6.1/perlbug">perlbug</a> and send a bug report with the output of <code>make test TEST_VERBOSE=1</code> along with <code>perl -V</code>.</p>
+
+<h2 id="When-I-tried-to-run-my-script,-I-got-this-message.-What-does-it-mean?"><a class="permalink" href="#When-I-tried-to-run-my-script,-I-got-this-message.-What-does-it-mean?">#</a><a id="When"></a><a id="When-I-tried-to-run-my-script-I-got-this-message.-What-does-it-mean"></a>When I tried to run my script, I got this message. What does it mean?</h2>
+
+<p>A complete list of Perl&#39;s error messages and warnings with explanatory text can be found in <a href="perldiag.html">perldiag</a>. You can also use the splain program (distributed with Perl) to explain the error messages:</p>
+
+<pre><code class="plaintext">perl program 2&gt;diag.out
+splain [-v] [-p] diag.out</code></pre>
+
+<p>or change your program to explain the messages for you:</p>
+
+<pre><code>use diagnostics;</code></pre>
+
+<p>or</p>
+
+<pre><code>use diagnostics -verbose;</code></pre>
+
+<h2 id="What&#39;s-MakeMaker?"><a class="permalink" href="#What&#39;s-MakeMaker?">#</a><a id="What1"></a><a id="Whats-MakeMaker"></a>What&#39;s MakeMaker?</h2>
+
+<p>This module (part of the standard Perl distribution) is designed to write a Makefile for an extension module from a Makefile.PL. For more information, see <a href="https://perldoc.perl.org/5.6.1/ExtUtils::MakeMaker">ExtUtils::MakeMaker</a>.</p>
+
+<h1 id="AUTHOR-AND-COPYRIGHT"><a class="permalink" href="#AUTHOR-AND-COPYRIGHT">#</a><a id="AUTHOR"></a>AUTHOR AND COPYRIGHT</h1>
+
+<p>Copyright (c) 1997-1999 Tom Christiansen and Nathan Torkington. All rights reserved.</p>
+
+<p>When included as an integrated part of the Standard Distribution of Perl or of its documentation (printed or otherwise), this works is covered under Perl&#39;s Artistic License. For separate distributions of all or part of this FAQ outside of that, see <a href="perlfaq.html">perlfaq</a>.</p>
+
+<p>Irrespective of its distribution, all code examples here are in the public domain. You are permitted and encouraged to use this code and any derivatives thereof in your own programs for fun or for profit as you see fit. A simple comment in the code giving credit to the FAQ would be courteous but is not required.</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/5.6.1/perlfaq3 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:46 GMT -->
+</html>

@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/perlexperiment by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>perlexperiment - A listing of experimental features in Perl - Perldoc Browser</title>
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="perlexperiment.html">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.html"><img src="images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.42.0</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="perlexperiment.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item active" href="https://perldoc.perl.org/5.42.0/perlexperiment">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/perlexperiment">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/perlexperiment">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/perlexperiment">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/perlexperiment">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/perlexperiment">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/perlexperiment">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/perlexperiment">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/perlexperiment">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/perlexperiment">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/perlexperiment">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/perlexperiment">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/perlexperiment">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/perlexperiment">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/perlexperiment">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/perlexperiment">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/perlexperiment">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/perlexperiment">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/perlexperiment">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/perlexperiment">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/perlexperiment">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/perlexperiment">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/perlexperiment">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/perlexperiment">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/perlexperiment">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/perlexperiment">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/perlexperiment">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/perlexperiment">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/perlexperiment">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/perlexperiment">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/perlexperiment">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/perlexperiment">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/perlexperiment">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/perlexperiment">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/perlexperiment">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/perlexperiment">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/perlexperiment">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/perlexperiment">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/perlexperiment">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/perlexperiment">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/perlexperiment">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/perlexperiment">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/perlexperiment">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/perlexperiment">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/perlexperiment">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/perlexperiment">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/perlexperiment">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/perlexperiment">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/perlexperiment">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/perlexperiment">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/perlexperiment">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/perlexperiment">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/perlexperiment">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/perlexperiment">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/perlexperiment">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/perlexperiment">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/perlexperiment">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/perlexperiment">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/perlexperiment">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/perlexperiment">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/perlexperiment">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/perlexperiment">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/perlexperiment">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/perlexperiment">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/perlexperiment">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/perlexperiment">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/perlexperiment">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/perlexperiment">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/perlexperiment">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/perlexperiment">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/perlexperiment">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/perlexperiment">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/perlexperiment">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/perlexperiment">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/perlexperiment">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/perlexperiment">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/perlexperiment">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/perlexperiment">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/perlexperiment">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.2/perlexperiment">5.6.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.1/perlexperiment">5.6.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.0/perlexperiment">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_04/perlexperiment">5.005_04</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_03/perlexperiment">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/perlexperiment">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/perlexperiment">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/perlexperiment">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/perlexperiment">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/perlexperiment">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/perlexperiment">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/perlexperiment">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/perlexperiment">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/perlexperiment">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/perlexperiment">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/perlexperiment">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/perlexperiment">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/perlexperiment">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/perlexperiment">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/perlexperiment">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/perlexperiment">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/perlexperiment">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/perlexperiment">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/perlexperiment">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/perlexperiment">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/perlexperiment">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/perlexperiment">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/perlexperiment">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="perlexperiment.html">perlexperiment</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/perlexperiment.txt">source</a>,
+            <a href="https://metacpan.org/pod/perlexperiment">CPAN</a>)
+          </div>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Current-experiments">Current experiments</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Accepted-features">Accepted features</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Removed-features">Removed features</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Features-abandoned-in-place">Features abandoned in place</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SEE-ALSO">SEE ALSO</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#AUTHORS">AUTHORS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#COPYRIGHT">COPYRIGHT</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#LICENSE">LICENSE</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>perlexperiment - A listing of experimental features in Perl</p>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>This document lists the current and past experimental features in the perl core. Although all of these are documented with their appropriate topics, this succinct listing gives you an overview and basic facts about their status.</p>
+
+<p>So far we&#39;ve merely tried to find and list the experimental features and infer their inception, versions, etc. There&#39;s a lot of speculation here.</p>
+
+<h2 id="Current-experiments"><a class="permalink" href="#Current-experiments">#</a><a id="Current"></a>Current experiments</h2>
+
+<dl>
+
+<dt id="Pluggable-keywords"><a class="permalink" href="#Pluggable-keywords">#</a><a id="Pluggable"></a>Pluggable keywords</dt>
+<dd>
+
+<p>Introduced in Perl 5.11.2</p>
+
+<p>See <a href="perlapi.html#PL_keyword_plugin">&quot;PL_keyword_plugin&quot; in perlapi</a> for the mechanism.</p>
+
+<p>The ticket for this experiment is <a href="https://github.com/Perl/perl5/issues/13199">[perl #13199]</a>.</p>
+
+</dd>
+<dt id="Aliasing-via-reference"><a class="permalink" href="#Aliasing-via-reference">#</a><a id="Aliasing"></a>Aliasing via reference</dt>
+<dd>
+
+<p>Introduced in Perl 5.22.0</p>
+
+<p>Using this feature triggers warnings in the category <code>experimental::refaliasing</code>.</p>
+
+<p>The ticket for this experiment is <a href="https://github.com/Perl/perl5/issues/14150">[perl #14150]</a>.</p>
+
+<p>See also: <a href="perlref.html#Assigning-to-References">&quot;Assigning to References&quot; in perlref</a></p>
+
+</dd>
+<dt id="use-re-&#39;strict&#39;;"><a class="permalink" href="#use-re-&#39;strict&#39;;">#</a><a id="use"></a><a id="use-re-strict"></a>use re &#39;strict&#39;;</dt>
+<dd>
+
+<p>Introduced in Perl 5.22.0</p>
+
+<p>Using this feature triggers warnings in the category <code>experimental::re_strict</code>.</p>
+
+<p>The ticket for this experiment is <a href="https://github.com/Perl/perl5/issues/18755">[perl #18755]</a></p>
+
+<p>See <a href="re.html#%27strict%27-mode">&quot;&#39;strict&#39; mode&quot; in re</a></p>
+
+</dd>
+<dt id="Declaring-a-reference-to-a-variable"><a class="permalink" href="#Declaring-a-reference-to-a-variable">#</a><a id="Declaring"></a>Declaring a reference to a variable</dt>
+<dd>
+
+<p>Introduced in Perl 5.26.0</p>
+
+<p>Using this feature triggers warnings in the category <code>experimental::declared_refs</code>.</p>
+
+<p>The ticket for this experiment is <a href="https://github.com/Perl/perl5/issues/15458">[perl #15458]</a>.</p>
+
+<p>See also: <a href="perlref.html#Declaring-a-Reference-to-a-Variable">&quot;Declaring a Reference to a Variable&quot; in perlref</a></p>
+
+</dd>
+<dt id="There-is-an-installhtml-target-in-the-Makefile."><a class="permalink" href="#There-is-an-installhtml-target-in-the-Makefile.">#</a><a id="There"></a><a id="There-is-an-installhtml-target-in-the-Makefile"></a>There is an <code>installhtml</code> target in the Makefile.</dt>
+<dd>
+
+<p>The ticket for this experiment is <a href="https://github.com/Perl/perl5/issues/12726">[perl #12726]</a>.</p>
+
+</dd>
+<dt id="(Limited)-Variable-length-look-behind"><a class="permalink" href="#(Limited)-Variable-length-look-behind">#</a><a id="Limited-Variable-length-look-behind"></a>(Limited) Variable-length look-behind</dt>
+<dd>
+
+<p>Introduced in Perl 5.30.0.</p>
+
+<p>Variability of up to 255 characters is handled.</p>
+
+<p>Using this feature triggers warnings in the category <code>experimental::vlb</code>.</p>
+
+<p>The ticket for this experiment is <a href="https://github.com/Perl/perl5/issues/18756">[perl #18756]</a>.</p>
+
+<p>See also: <a href="perlre.html#(*positive_lookbehind%3Apattern)">&quot;(*positive_lookbehind:<i>pattern</i>)&quot; in perlre</a> and <a href="perlre.html#(*negative_lookbehind%3Apattern)">&quot;(*negative_lookbehind:<i>pattern</i>)&quot; in perlre</a></p>
+
+</dd>
+<dt id="Unicode-private-use-character-hooks"><a class="permalink" href="#Unicode-private-use-character-hooks">#</a><a id="Unicode"></a>Unicode private use character hooks</dt>
+<dd>
+
+<p>Introduced in Perl 5.30.0.</p>
+
+<p>This feature is part of an interface intended for internal and experimental use by the perl5 developers. You are unlikely to encounter it in the wild.</p>
+
+<p>Using this feature triggers warnings in the category <code>experimental::private_use</code>.</p>
+
+<p>The ticket for this experiment is <a href="https://github.com/Perl/perl5/issues/18758">[perl #18758]</a>.</p>
+
+</dd>
+<dt id="Unicode-property-wildcards"><a class="permalink" href="#Unicode-property-wildcards">#</a><a id="Unicode1"></a>Unicode property wildcards</dt>
+<dd>
+
+<p>Introduced in Perl 5.30.0.</p>
+
+<p>This feature allows regular expression matching against Unicode character properties to be expressed more concisely.</p>
+
+<p>Using this feature triggers warnings in the category <code>experimental::uniprop_wildcards</code>.</p>
+
+<p>The ticket for this experiment is <a href="https://github.com/Perl/perl5/issues/18759">[perl #18759]</a>.</p>
+
+</dd>
+<dt id="try/catch-control-structure"><a class="permalink" href="#try/catch-control-structure">#</a><a id="try"></a><a id="try-catch-control-structure"></a>try/catch control structure</dt>
+<dd>
+
+<p>Introduced in Perl 5.34.0.</p>
+
+<p>Using the optional <code>finally</code> block part of this feature triggers warnings in the category <code>experimental::try</code>.</p>
+
+<p>The ticket for this experiment is <a href="https://github.com/Perl/perl5/issues/18760">[perl #18760]</a></p>
+
+</dd>
+<dt id="Use-of-@_-within-subroutine-signatures"><a class="permalink" href="#Use-of-@_-within-subroutine-signatures">#</a><a id="Use"></a><a id="Use-of-_-within-subroutine-signatures"></a>Use of <code>@_</code> within subroutine signatures</dt>
+<dd>
+
+<p>Introduced in Perl 5.36.0 as part of a reduction in the scope of experimental subroutine signatures.</p>
+
+<p>Using the default arguments array (<code>@_</code>) within a subroutine that uses signatures will emit a warning in the category <code>experimental::args_array_with_signatures</code>. This includes <code>@_</code> directly, elements of it such as <code>$_[$index]</code>, or situations where the default arguments array is accessed implicitly such as <code>shift</code> or <code>pop</code> without arguments.</p>
+
+</dd>
+<dt id="The-builtin-namespace"><a class="permalink" href="#The-builtin-namespace">#</a><a id="The"></a>The builtin namespace</dt>
+<dd>
+
+<p>Introduced in Perl 5.36.0.</p>
+
+<p>Using certain functions of this feature triggers warnings in the category <code>experimental::builtin</code>.</p>
+
+<p>In Perl 5.36.0, a new namespace, <code>builtin</code>, was created for new core functions that will not be present in every namespace, but will be available for importing. The namespace itself was considered experimental until Perl 5.39.2. Some specific functions within it remain experimental.</p>
+
+<p>The ticket for this experiment is <a href="https://github.com/Perl/perl5/issues/19764">[perl #19764]</a>.</p>
+
+</dd>
+<dt id="The-defer-block-modifier"><a class="permalink" href="#The-defer-block-modifier">#</a><a id="The1"></a>The defer block modifier</dt>
+<dd>
+
+<p>Introduced in Perl 5.36.0</p>
+
+<p>Using this feature triggers warnings in the category <code>experimental::defer</code>.</p>
+
+<p>This feature adds a new kind of block, a <code>defer</code> block, which will not be executed until the containing block is being exited.</p>
+
+<p>The ticket for this experiment is <a href="https://github.com/Perl/perl5/issues/17949">[perl #17949]</a>.</p>
+
+</dd>
+<dt id="Extra-paired-delimiters-for-quote-like-operators"><a class="permalink" href="#Extra-paired-delimiters-for-quote-like-operators">#</a><a id="Extra"></a>Extra paired delimiters for quote-like operators</dt>
+<dd>
+
+<p>Introduced in Perl 5.36.0</p>
+
+<p>Using this feature triggers warnings in the category <code>experimental::extra_paired_delimiters</code>.</p>
+
+<p>This feature allows for many non-ASCII pairs of mirroring delimiters, for example:</p>
+
+<pre><code>my @array = qw« tinker tailor soldier spy »;</code></pre>
+
+<p>The ticket for this experiment is <a href="https://github.com/Perl/perl5/issues/19765">[perl #19765]</a>.</p>
+
+</dd>
+<dt id="any-and-all-list-processing-operators"><a class="permalink" href="#any-and-all-list-processing-operators">#</a><a id="any"></a><code>any</code> and <code>all</code> list processing operators</dt>
+<dd>
+
+<p>Introduced in Perl 5.41.7.</p>
+
+<p>Using these features triggers warnings in the categories <code>experimental::any</code> or <code>experiment::all</code>.</p>
+
+<p>This adds new list processing operators named <code>any</code> and <code>all</code>, each as their own named feature.</p>
+
+<p>The ticket for this experiment is <a href="https://github.com/Perl/perl5/issues/22794">[perl #22794]</a>.</p>
+
+</dd>
+</dl>
+
+<h2 id="Accepted-features"><a class="permalink" href="#Accepted-features">#</a><a id="Accepted"></a>Accepted features</h2>
+
+<p>These features were so wildly successful and played so well with others that we decided to remove their experimental status and admit them as full, stable features in the world of Perl, lavishing all the benefits and luxuries thereof. They are also awarded +5 Stability and +3 Charisma.</p>
+
+<dl>
+
+<dt id="64-bit-support"><a class="permalink" href="#64-bit-support">#</a><a id="64"></a><a id="bit-support"></a>64-bit support</dt>
+<dd>
+
+<p>Introduced in Perl 5.005</p>
+
+</dd>
+<dt id="die-accepts-a-reference"><a class="permalink" href="#die-accepts-a-reference">#</a><a id="die"></a>die accepts a reference</dt>
+<dd>
+
+<p>Introduced in Perl 5.005</p>
+
+</dd>
+<dt id="DB-module"><a class="permalink" href="#DB-module">#</a><a id="DB"></a>DB module</dt>
+<dd>
+
+<p>Introduced in Perl 5.6.0</p>
+
+<p>See also <a href="perldebug.html">perldebug</a>, <a href="perldebtut.html">perldebtut</a></p>
+
+</dd>
+<dt id="Weak-references"><a class="permalink" href="#Weak-references">#</a><a id="Weak"></a>Weak references</dt>
+<dd>
+
+<p>Introduced in Perl 5.6.0</p>
+
+</dd>
+<dt id="Internal-file-glob"><a class="permalink" href="#Internal-file-glob">#</a><a id="Internal"></a>Internal file glob</dt>
+<dd>
+
+<p>Introduced in Perl 5.6.0</p>
+
+</dd>
+<dt id="fork()-emulation"><a class="permalink" href="#fork()-emulation">#</a><a id="fork"></a><a id="fork-emulation"></a>fork() emulation</dt>
+<dd>
+
+<p>Introduced in Perl 5.6.1</p>
+
+<p>See also <a href="perlfork.html">perlfork</a></p>
+
+</dd>
+<dt id="-Dusemultiplicity-Duseithreads"><a class="permalink" href="#-Dusemultiplicity-Duseithreads">#</a><a id="Dusemultiplicity--Duseithreads"></a>-Dusemultiplicity -Duseithreads</dt>
+<dd>
+
+<p>Introduced in Perl 5.6.0</p>
+
+<p>Accepted in Perl 5.8.0</p>
+
+</dd>
+<dt id="Support-for-long-doubles"><a class="permalink" href="#Support-for-long-doubles">#</a><a id="Support"></a>Support for long doubles</dt>
+<dd>
+
+<p>Introduced in Perl 5.6.0</p>
+
+<p>Accepted in Perl 5.8.1</p>
+
+</dd>
+<dt id="The-\N-regex-character-class"><a class="permalink" href="#The-%5CN-regex-character-class">#</a><a id="The2"></a><a id="The-N-regex-character-class"></a>The <code>\N</code> regex character class</dt>
+<dd>
+
+<p>The <code>\N</code> character class, not to be confused with the named character sequence <code>\N{NAME}</code>, denotes any non-newline character in a regular expression.</p>
+
+<p>Introduced in Perl 5.12</p>
+
+<p>Exact version of acceptance unclear, but no later than Perl 5.18.</p>
+
+</dd>
+<dt id="(?{code})-and-(??{-code-})"><a class="permalink" href="#(?%7Bcode%7D)-and-(??%7B-code-%7D)">#</a><a id="code-and-code"></a><code>(?{code})</code> and <code>(??{ code })</code></dt>
+<dd>
+
+<p>Introduced in Perl 5.6.0</p>
+
+<p>Accepted in Perl 5.20.0</p>
+
+<p>See also <a href="perlre.html">perlre</a></p>
+
+</dd>
+<dt id="Linux-abstract-Unix-domain-sockets"><a class="permalink" href="#Linux-abstract-Unix-domain-sockets">#</a><a id="Linux"></a>Linux abstract Unix domain sockets</dt>
+<dd>
+
+<p>Introduced in Perl 5.9.2</p>
+
+<p>Accepted before Perl 5.20.0. The Socket library is now primarily maintained on CPAN, rather than in the perl core.</p>
+
+<p>See also <a href="Socket.html">Socket</a></p>
+
+</dd>
+<dt id="Lvalue-subroutines"><a class="permalink" href="#Lvalue-subroutines">#</a><a id="Lvalue"></a>Lvalue subroutines</dt>
+<dd>
+
+<p>Introduced in Perl 5.6.0</p>
+
+<p>Accepted in Perl 5.20.0</p>
+
+<p>See also <a href="perlsub.html">perlsub</a></p>
+
+</dd>
+<dt id="Backtracking-control-verbs"><a class="permalink" href="#Backtracking-control-verbs">#</a><a id="Backtracking"></a>Backtracking control verbs</dt>
+<dd>
+
+<p><code>(*ACCEPT)</code></p>
+
+<p>Introduced in Perl 5.10</p>
+
+<p>Accepted in Perl 5.20.0</p>
+
+</dd>
+<dt id="The-:pop-IO-pseudolayer"><a class="permalink" href="#The-:pop-IO-pseudolayer">#</a><a id="The3"></a>The <code>:pop</code> IO pseudolayer</dt>
+<dd>
+
+<p>See also <a href="perlrun.html#PERLIO">&quot;PERLIO&quot; in perlrun</a></p>
+
+<p>Accepted in Perl 5.20.0</p>
+
+</dd>
+<dt id="\s-in-regexp-matches-vertical-tab"><a class="permalink" href="#%5Cs-in-regexp-matches-vertical-tab">#</a><a id="s-in-regexp-matches-vertical-tab"></a><code>\s</code> in regexp matches vertical tab</dt>
+<dd>
+
+<p>Accepted in Perl 5.22.0</p>
+
+</dd>
+<dt id="Postfix-dereference-syntax"><a class="permalink" href="#Postfix-dereference-syntax">#</a><a id="Postfix"></a>Postfix dereference syntax</dt>
+<dd>
+
+<p>Introduced in Perl 5.20.0</p>
+
+<p>Accepted in Perl 5.24.0</p>
+
+</dd>
+<dt id="Lexical-subroutines"><a class="permalink" href="#Lexical-subroutines">#</a><a id="Lexical"></a>Lexical subroutines</dt>
+<dd>
+
+<p>Introduced in Perl 5.18.0</p>
+
+<p>Accepted in Perl 5.26.0</p>
+
+</dd>
+<dt id="String-and-number-specific-bitwise-operators"><a class="permalink" href="#String-and-number-specific-bitwise-operators">#</a><a id="String"></a><a id="String--and-number-specific-bitwise-operators"></a>String- and number-specific bitwise operators</dt>
+<dd>
+
+<p>Introduced in Perl 5.22.0</p>
+
+<p>Accepted in Perl 5.28.0</p>
+
+</dd>
+<dt id="Alphabetic-assertions"><a class="permalink" href="#Alphabetic-assertions">#</a><a id="Alphabetic"></a>Alphabetic assertions</dt>
+<dd>
+
+<p>Introduced in Perl 5.28.0</p>
+
+<p>Accepted in Perl 5.32.0</p>
+
+</dd>
+<dt id="Script-runs"><a class="permalink" href="#Script-runs">#</a><a id="Script"></a>Script runs</dt>
+<dd>
+
+<p>Introduced in Perl 5.28.0</p>
+
+<p>Accepted in Perl 5.32.0</p>
+
+</dd>
+<dt id="The-infix-isa-operator"><a class="permalink" href="#The-infix-isa-operator">#</a><a id="The4"></a>The infix <code>isa</code> operator</dt>
+<dd>
+
+<p>Introduced in Perl 5.32.0</p>
+
+<p>Accepted in Perl 5.36.0</p>
+
+</dd>
+<dt id="Subroutine-signatures"><a class="permalink" href="#Subroutine-signatures">#</a><a id="Subroutine"></a>Subroutine signatures</dt>
+<dd>
+
+<p>Introduced in Perl 5.20.0</p>
+
+<p>Accepted in Perl 5.36.0</p>
+
+</dd>
+<dt id="Regular-Expression-Set-Operations"><a class="permalink" href="#Regular-Expression-Set-Operations">#</a><a id="Regular"></a>Regular Expression Set Operations</dt>
+<dd>
+
+<p>Introduced in Perl 5.18</p>
+
+<p>Accepted in Perl 5.36</p>
+
+<p>See : <a href="perlrecharclass.html#Extended-Bracketed-Character-Classes">&quot;Extended Bracketed Character Classes&quot; in perlrecharclass</a></p>
+
+</dd>
+<dt id="try/catch-control-structure1"><a class="permalink" href="#try/catch-control-structure1">#</a><a id="try1"></a><a id="try-catch-control-structure1"></a>try/catch control structure</dt>
+<dd>
+
+<p>Introduced in Perl 5.34.0.</p>
+
+<p>Accepted in Perl 5.40 when not using the optional <code>finally</code> block.</p>
+
+</dd>
+<dt id="The-&quot;const&quot;-attribute"><a class="permalink" href="#The-%22const%22-attribute">#</a><a id="The5"></a><a id="The-const-attribute"></a>The &quot;const&quot; attribute</dt>
+<dd>
+
+<p>Introduced in Perl 5.22.0</p>
+
+<p>Accepted in Perl 5.40</p>
+
+<p>See also: <a href="perlsub.html#Constant-Functions">&quot;Constant Functions&quot; in perlsub</a></p>
+
+</dd>
+<dt id="for-loop-with-multiple-iteration-variables"><a class="permalink" href="#for-loop-with-multiple-iteration-variables">#</a><a id="for"></a>for loop with multiple iteration variables</dt>
+<dd>
+
+<p>Introduced in Perl 5.36.0.</p>
+
+<p>Accepted in Perl 5.40.</p>
+
+<p>This feature enables a parenthesized list of iteration variables for <code>for</code> rather than a single variable.</p>
+
+</dd>
+</dl>
+
+<h2 id="Removed-features"><a class="permalink" href="#Removed-features">#</a><a id="Removed"></a>Removed features</h2>
+
+<p>These features are no longer considered experimental and their functionality has disappeared. It&#39;s your own fault if you wrote production programs using these features after we explicitly told you not to (see <a href="perlpolicy.html">perlpolicy</a>).</p>
+
+<dl>
+
+<dt id="5.005-style-threading"><a class="permalink" href="#5.005-style-threading">#</a><a id="5"></a><a id="style-threading"></a>5.005-style threading</dt>
+<dd>
+
+<p>Introduced in Perl 5.005</p>
+
+<p>Removed in Perl 5.10</p>
+
+</dd>
+<dt id="perlcc"><a class="permalink" href="#perlcc">#</a>perlcc</dt>
+<dd>
+
+<p>Introduced in Perl 5.005</p>
+
+<p>Moved from Perl 5.9.0 to CPAN</p>
+
+</dd>
+<dt id="The-pseudo-hash-data-type"><a class="permalink" href="#The-pseudo-hash-data-type">#</a><a id="The6"></a>The pseudo-hash data type</dt>
+<dd>
+
+<p>Introduced in Perl 5.6.0</p>
+
+<p>Removed in Perl 5.9.0</p>
+
+</dd>
+<dt id="GetOpt::Long-Options-can-now-take-multiple-values-at-once-(experimental)"><a class="permalink" href="#GetOpt::Long-Options-can-now-take-multiple-values-at-once-(experimental)">#</a><a id="GetOpt"></a><a id="GetOpt::Long-Options-can-now-take-multiple-values-at-once-experimental"></a>GetOpt::Long Options can now take multiple values at once (experimental)</dt>
+<dd>
+
+<p><code>Getopt::Long</code> upgraded to version 2.35</p>
+
+<p>Removed in Perl 5.8.8</p>
+
+</dd>
+<dt id="Assertions"><a class="permalink" href="#Assertions">#</a>Assertions</dt>
+<dd>
+
+<p>The <code>-A</code> command line switch</p>
+
+<p>Introduced in Perl 5.9.0</p>
+
+<p>Removed in Perl 5.9.5</p>
+
+</dd>
+<dt id="Test::Harness::Straps"><a class="permalink" href="#Test::Harness::Straps">#</a><a id="Test"></a>Test::Harness::Straps</dt>
+<dd>
+
+<p>Moved from Perl 5.10.1 to CPAN</p>
+
+</dd>
+<dt id="legacy"><a class="permalink" href="#legacy">#</a><code>legacy</code></dt>
+<dd>
+
+<p>The experimental <code>legacy</code> pragma was swallowed by the <code>feature</code> pragma.</p>
+
+<p>Introduced in Perl 5.11.2</p>
+
+<p>Removed in Perl 5.11.3</p>
+
+</dd>
+<dt id="Lexical-$_"><a class="permalink" href="#Lexical-$_">#</a><a id="Lexical1"></a><a id="Lexical-_"></a>Lexical <code>$_</code></dt>
+<dd>
+
+<p>Using this feature triggered warnings in the category <code>experimental::lexical_topic</code>.</p>
+
+<p>Introduced in Perl 5.10.0</p>
+
+<p>Removed in Perl 5.24.0</p>
+
+</dd>
+<dt id="Array-and-hash-container-functions-accept-references"><a class="permalink" href="#Array-and-hash-container-functions-accept-references">#</a><a id="Array"></a>Array and hash container functions accept references</dt>
+<dd>
+
+<p>Using this feature triggered warnings in the category <code>experimental::autoderef</code>.</p>
+
+<p>Superseded by <a href="#Postfix-dereference-syntax">&quot;Postfix dereference syntax&quot;</a>.</p>
+
+<p>Introduced in Perl 5.14.0</p>
+
+<p>Removed in Perl 5.24.0</p>
+
+</dd>
+<dt id="our-can-have-an-experimental-optional-attribute-unique"><a class="permalink" href="#our-can-have-an-experimental-optional-attribute-unique">#</a><a id="our"></a><code>our</code> can have an experimental optional attribute <code>unique</code></dt>
+<dd>
+
+<p>Introduced in Perl 5.8.0</p>
+
+<p>Deprecated in Perl 5.10.0</p>
+
+<p>Removed in Perl 5.28.0</p>
+
+</dd>
+<dt id="The-:win32-IO-pseudolayer"><a class="permalink" href="#The-:win32-IO-pseudolayer">#</a><a id="The7"></a>The <code>:win32</code> IO pseudolayer</dt>
+<dd>
+
+<p>Introduced in Perl 5.8.0 (or before)</p>
+
+<p>Removed in Perl 5.36.0</p>
+
+</dd>
+</dl>
+
+<h2 id="Features-abandoned-in-place"><a class="permalink" href="#Features-abandoned-in-place">#</a><a id="Features"></a>Features abandoned in place</h2>
+
+<p>These are experiments that are considered failures, but due to mass use have been left in place.</p>
+
+<p>The switch and smartmatch features are likely to be the only ones which will ever fall into this category. They were introduced before we had a well-defined experimental feature process.</p>
+
+<p>These are unlikely to be updated with behavioural changes.</p>
+
+<dl>
+
+<dt id="Smart-match-(~~)"><a class="permalink" href="#Smart-match-(~~)">#</a><a id="Smart"></a><a id="Smart-match"></a>Smart match (<code>~~</code>)</dt>
+<dd>
+
+<p>Introduced in Perl 5.10.0</p>
+
+<p>Modified in Perl 5.10.1, 5.12.0</p>
+
+<p>Deprecated in 5.38.0</p>
+
+<p>Scheduled for removal in 5.42.0, but this was reversed.</p>
+
+<p>Enabled by default, and in all feature bundles up to 5.40, disabled by default in feature bundle 5.42, but can be enabled with <code>use feature &quot;smartmatch&quot;</code>.</p>
+
+<p>The ticket for this experiment is <a href="https://github.com/Perl/perl5/issues/13173">[perl #13173]</a>.</p>
+
+</dd>
+<dt id="Switch-(given/when)"><a class="permalink" href="#Switch-(given/when)">#</a><a id="Switch"></a><a id="Switch-given-when"></a>Switch (given/when)</dt>
+<dd>
+
+<p>Introduced in Perl 5.10.0</p>
+
+<p>Deprecated in 5.38.0</p>
+
+<p>Scheduled for removal in 5.42.0, but this was reversed.</p>
+
+<p>Enabled by feature bundles 5.10 through 5.34, but can be enabled with <code>use feature &quot;switch&quot;</code>.</p>
+
+<p>The ticket for this experiment is <a href="https://github.com/Perl/perl5/issues/13173">[perl #13173]</a>.</p>
+
+</dd>
+</dl>
+
+<h1 id="SEE-ALSO"><a class="permalink" href="#SEE-ALSO">#</a><a id="SEE"></a>SEE ALSO</h1>
+
+<p>For a complete list of features check <a href="feature.html">feature</a>.</p>
+
+<h1 id="AUTHORS"><a class="permalink" href="#AUTHORS">#</a>AUTHORS</h1>
+
+<p>brian d foy <code>&lt;briandfoy@pobox.com&gt;</code></p>
+
+<p>Sébastien Aperghis-Tramoni <code>&lt;saper@cpan.org&gt;</code></p>
+
+<h1 id="COPYRIGHT"><a class="permalink" href="#COPYRIGHT">#</a>COPYRIGHT</h1>
+
+<p>Copyright 2010, brian d foy <code>&lt;briandfoy@pobox.com&gt;</code></p>
+
+<h1 id="LICENSE"><a class="permalink" href="#LICENSE">#</a>LICENSE</h1>
+
+<p>You can use and redistribute this document under the same terms as Perl itself.</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/perlexperiment by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:51 GMT -->
+</html>

@@ -1,0 +1,3227 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-holy-grail   show-table-of-contents conceptual show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		
+<!-- Mirrored from learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-9.0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 14:53:03 GMT -->
+<head>
+			<title>Model validation in ASP.NET Core MVC | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="Learn about model validation in ASP.NET Core MVC and Razor Pages." />
+			<link rel="canonical" href="validation553c.html?view=aspnetcore-9.0" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="Model validation in ASP.NET Core MVC | Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/dotnet/media/dotnet-logo.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="Model validation in ASP.NET Core MVC" />
+			<meta property="og:url" content="validation553c.html?view=aspnetcore-9.0" />
+			<meta property="og:description" content="Learn about model validation in ASP.NET Core MVC and Razor Pages." />
+			<meta name="platform_id" content="2b607790-2257-7f9a-1829-f2a2aa02cd01" /> <meta name="scope" content="ASP.NET Core" />
+			<meta name="locale" content="en-us" />
+			 <meta name="adobe-target" content="true" />
+			<meta name="uhfHeaderId" content="MSDocsHeader-AspNet" />
+
+			<meta name="page_type" content="conceptual" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="breadcrumb_path" content="/aspnet/core/breadcrumb/toc.json" />
+	
+		<meta name="feedback_system" content="OpenSource" />
+	
+		<meta name="feedback_product_url" content="https://github.com/dotnet/aspnetcore/blob/main/CONTRIBUTING.md" />
+	
+		<meta name="ms.service" content="aspnet-core" />
+	
+		<meta name="ms.topic" content="conceptual" />
+	
+		<meta name="ms.subservice" content="mvc" />
+	
+		<meta name="author" content="tdykstra" />
+	
+		<meta name="monikerRange" content="&gt;= aspnetcore-3.1" />
+	
+		<meta name="ms.author" content="tdykstra" />
+	
+		<meta name="ms.custom" content="mvc" />
+	
+		<meta name="ms.date" content="2023-05-07T00:00:00Z" />
+	
+		<meta name="uid" content="mvc/models/validation" />
+	
+		<meta name="document_id" content="0156ffc3-47ac-d5da-fbc2-9ff5018b071b" />
+	
+		<meta name="document_version_independent_id" content="615db388-a244-41f7-21b5-a4085d9ed479" />
+	
+		<meta name="updated_at" content="2024-08-30T14:33:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/dotnet/AspNetCore.Docs/blob/live/aspnetcore/mvc/models/validation.md" />
+	
+		<meta name="gitcommit" content="https://github.com/dotnet/AspNetCore.Docs/blob/926a96bd372e768202c793ccb6250e769ddf1c42/aspnetcore/mvc/models/validation.md" />
+	
+		<meta name="git_commit_id" content="926a96bd372e768202c793ccb6250e769ddf1c42" />
+	
+		<meta name="monikers" content="aspnetcore-3.1" />
+	
+		<meta name="monikers" content="aspnetcore-5.0" />
+	
+		<meta name="monikers" content="aspnetcore-6.0" />
+	
+		<meta name="monikers" content="aspnetcore-7.0" />
+	
+		<meta name="monikers" content="aspnetcore-8.0" />
+	
+		<meta name="monikers" content="aspnetcore-9.0" />
+	
+		<meta name="monikers" content="aspnetcore-10.0" />
+	
+		<meta name="default_moniker" content="aspnetcore-9.0" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="MSDN.aspnet-core-conceptual" />
+	
+		<meta name="schema" content="Conceptual" />
+	
+		<meta name="toc_rel" content="../../toc.json" />
+	
+		<meta name="pdf_url_template" content="https://learn.microsoft.com/pdfstore/en-us/MSDN.aspnet-core-conceptual/{branchName}{pdfName}" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="word_count" content="11394" />
+	
+		<meta name="config_moniker_range" content="&gt;= aspnetcore-1.0" />
+	
+		<meta name="asset_id" content="mvc/models/validation" />
+	
+		<meta name="moniker_range_name" content="dd7b9de2e2e080a77b76aef7078b3e55" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="aspnetcore/mvc/models/validation.md" />
+	
+		<meta name="previous_tlsh_hash" content="7973FE43520CDF10EEC36E47641AB7001EF8CA497CB16F8416297665A2679EB737CE4EB566A2374053370E5301FAA18DD2D6DBFCD07C2363146854ACC2EE1589EB4637B2E9" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/mvc/models/validation.md" />
+	 
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/97159432-14a9-4307-a469-d2f2c75f0e33" data-source="generated" />
+	
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/d452572f-6212-498f-9050-ca4a9e50a425" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/50565c62-5f6b-4687-be38-323113c72c2e" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/a12e40b7-59a2-4437-96e2-166ce622b864" data-source="generated" />
+	
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="https://learn.microsoft.com/static/assets/0.4.03137.7032-e8b681c0/styles/site-ltr.css" />
+			<link rel="preconnect" href="http://mscom.demdex.net/" crossorigin />
+						<link rel="dns-prefetch" href="http://target.microsoft.com/" />
+						<link rel="dns-prefetch" href="http://microsoftmscompoc.tt.omtrdc.net/" />
+						<link
+							rel="preload"
+							as="script"
+							href="https://learn.microsoft.com/static/third-party/adobe-target/at-js/2.9.0/at.js"
+							integrity="sha384-1/viVM50hgc33O2gOgkWz3EjiD/Fy/ld1dKYXJRUyjNYVEjSUGcSN+iPiQF7e4cu"
+							crossorigin="anonymous"
+							id="adobe-target-script"
+							type="application/javascript"
+						/>
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			<script src="https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/deprecation.js"></script>
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Conceptual",
+    "brand": "",
+    "context": {},
+    "standardFeedback": false,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "OpenSource",
+    "feedbackGitHubRepo": "dotnet/AspNetCore.Docs",
+    "feedbackProductUrl": "https://github.com/dotnet/aspnetcore/blob/main/CONTRIBUTING.md",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": true,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": true,
+    "contributors": [
+      {
+        "name": "tdykstra",
+        "url": "https://github.com/tdykstra"
+      },
+      {
+        "name": "guardrex",
+        "url": "https://github.com/guardrex"
+      },
+      {
+        "name": "Rick-Anderson",
+        "url": "https://github.com/Rick-Anderson"
+      },
+      {
+        "name": "jkrajcir",
+        "url": "https://github.com/jkrajcir"
+      },
+      {
+        "name": "Qluxzz",
+        "url": "https://github.com/Qluxzz"
+      },
+      {
+        "name": "GitHubPang",
+        "url": "https://github.com/GitHubPang"
+      },
+      {
+        "name": "serpent5",
+        "url": "https://github.com/serpent5"
+      },
+      {
+        "name": "pranavkm",
+        "url": "https://github.com/pranavkm"
+      },
+      {
+        "name": "spiritbob",
+        "url": "https://github.com/spiritbob"
+      },
+      {
+        "name": "wadepickett",
+        "url": "https://github.com/wadepickett"
+      },
+      {
+        "name": "scottaddie",
+        "url": "https://github.com/scottaddie"
+      },
+      {
+        "name": "fiyazbinhasan",
+        "url": "https://github.com/fiyazbinhasan"
+      },
+      {
+        "name": "jasonleenaylor",
+        "url": "https://github.com/jasonleenaylor"
+      },
+      {
+        "name": "v-thepet",
+        "url": "https://github.com/v-thepet"
+      },
+      {
+        "name": "Ponant",
+        "url": "https://github.com/Ponant"
+      },
+      {
+        "name": "nschonni",
+        "url": "https://github.com/nschonni"
+      },
+      {
+        "name": "daveabrock",
+        "url": "https://github.com/daveabrock"
+      },
+      {
+        "name": "user135711",
+        "url": "https://github.com/user135711"
+      },
+      {
+        "name": "Rabadash8820",
+        "url": "https://github.com/Rabadash8820"
+      },
+      {
+        "name": "agriffard",
+        "url": "https://github.com/agriffard"
+      },
+      {
+        "name": "rachelappel",
+        "url": "https://github.com/rachelappel"
+      },
+      {
+        "name": "duanemck",
+        "url": "https://github.com/duanemck"
+      },
+      {
+        "name": "isaac2004",
+        "url": "https://github.com/isaac2004"
+      },
+      {
+        "name": "v-anpasi",
+        "url": "https://github.com/v-anpasi"
+      },
+      {
+        "name": "danroth27",
+        "url": "https://github.com/danroth27"
+      }
+    ],
+    "openSourceFeedbackIssueUrl": "https://github.com/dotnet/aspnetcore.docs/issues/new?template=customer-feedback.yml",
+    "openSourceFeedbackIssueTitle": "",
+    "openSourceFeedbackIssueLabels": "Source - Docs.ms,:watch: Not Triaged"
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script src="https://learn.microsoft.com/static/assets/0.4.03137.7032-e8b681c0/scripts/en-us/index-docs.js"></script>
+			
+
+			<!-- json-ld -->
+			
+		</head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+		<a
+			href="#"
+			data-skip-to-ask-learn
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			hidden
+		>
+			Skip to Ask Learn chat experience
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881"
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<header
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				role="banner"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+				></div>
+			</header>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 <section
+					id="layout-body-menu"
+					class="layout-body-menu display-flex"
+					data-bi-name="menu"
+			  >
+					<div
+		id="left-container"
+		class="left-container display-none display-block-tablet padding-inline-sm padding-bottom-sm width-full"
+	>
+		<nav
+			id="affixed-left-container"
+			class="margin-top-sm-tablet position-sticky display-flex flex-direction-column"
+			aria-label="Primary"
+		></nav>
+	</div>
+			  </section>
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main "
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div
+		id="ms--content-header"
+		class="content-header default-focus border-bottom-none"
+		data-bi-name="content-header"
+	>
+		<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+			<button
+				type="button"
+				class="contents-button button button-sm margin-right-xxs"
+				data-bi-name="contents-expand"
+				aria-haspopup="true"
+				data-contents-button
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-menu"></span></span>
+				<span class="contents-expand-title"> Table of contents </span>
+			</button>
+			<button
+				type="button"
+				class="ap-collapse-behavior ap-expanded button button-sm"
+				data-bi-name="ap-collapse"
+				aria-controls="action-panel"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit editor mode</span>
+			</button>
+		</div>
+	</div>
+			<div data-main-column class="padding-sm padding-top-none padding-top-sm-tablet">
+				<div>
+					
+		<div id="article-header" class="background-color-body margin-bottom-xs display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content padding-none"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs	border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	 
+		<button
+			type="button"
+			id="ms--focus-mode-button"
+			data-focus-mode
+			data-bi-name="focus-mode-entry"
+			class="button button-sm flex-shrink-0 margin-right-xxs display-none display-inline-flex-desktop"
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-glasses"></span>
+			</span>
+			<span>Focus mode</span>
+		</button>
+	 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					
+		<button
+			data-page-action-item="overflow-mobile"
+			type="button"
+			class="button-block button-sm has-inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
+			data-bi-name="contents-expand"
+			data-contents-button
+			data-popover-close
+		>
+			<span class="icon">
+				<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+			</span>
+			<span class="contents-expand-title">Table of contents</span>
+		</button>
+	 
+		<a
+			id="lang-link-overflow"
+			class="button-sm has-inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	 
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	
+					
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to plan</span>
+		</button>
+	  
+		<a
+			data-contenteditbtn
+			class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none"
+			data-bi-name="edit"
+			
+			href="https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/mvc/models/validation.md"
+			data-original_content_git_url="https://github.com/dotnet/AspNetCore.Docs/blob/live/aspnetcore/mvc/models/validation.md"
+			data-original_content_git_url_template="{repo}/blob/{branch}/aspnetcore/mvc/models/validation.md"
+			data-pr_repo=""
+			data-pr_branch=""
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-edit-outline"></span>
+			</span>
+			<span>Edit</span>
+		</a>
+	
+					
+		<hr class="margin-block-xxs" />
+		<h4 class="font-size-sm padding-left-xxs">Share via</h4>
+		
+					<a
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-facebook"
+						data-bi-name="facebook"
+						data-page-action-item="overflow-all"
+						href="#"
+					>
+						<span class="icon color-primary" aria-hidden="true">
+							<span class="docon docon-facebook-share"></span>
+						</span>
+						<span>Facebook</span>
+					</a>
+
+					<a
+						href="#"
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-twitter"
+						data-bi-name="twitter"
+						data-page-action-item="overflow-all"
+					>
+						<span class="icon color-text" aria-hidden="true">
+							<span class="docon docon-xlogo-share"></span>
+						</span>
+						<span>x.com</span>
+					</a>
+
+					<a
+						href="#"
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-linkedin"
+						data-bi-name="linkedin"
+						data-page-action-item="overflow-all"
+					>
+						<span class="icon color-primary" aria-hidden="true">
+							<span class="docon docon-linked-in-logo"></span>
+						</span>
+						<span>LinkedIn</span>
+					</a>
+					<a
+						href="#"
+						class="button button-clear button-sm inner-focus button-block justify-content-flex-start text-align-left text-decoration-none share-email"
+						data-bi-name="email"
+						data-page-action-item="overflow-all"
+					>
+						<span class="icon color-primary" aria-hidden="true">
+							<span class="docon docon-mail-message"></span>
+						</span>
+						<span>Email</span>
+					</a>
+			  
+	 
+		<hr class="margin-block-xxs" />
+		<button
+			class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			type="button"
+			data-bi-name="print"
+			data-page-action-item="overflow-all"
+			data-popover-close
+			data-print-page
+			data-check-hidden="true"
+		>
+			<span class="icon color-primary" aria-hidden="true">
+				<span class="docon docon-print"></span>
+			</span>
+			<span>Print</span>
+		</button>
+	
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	
+					<!-- azure disclaimer -->
+					
+					<!-- privateUnauthorizedTemplate is hidden by default -->
+					
+		<div unauthorized-private-section data-bi-name="permission-content-unauthorized-private" hidden>
+			<hr class="hr margin-top-xs margin-bottom-sm" />
+			<div class="notification notification-info">
+				<div class="notification-content">
+					<p class="margin-top-none notification-title">
+						<span class="icon">
+							<span class="docon docon-exclamation-circle-solid" aria-hidden="true"></span>
+						</span>
+						<span>Note</span>
+					</p>
+					<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" href="#" data-bi-name="permission-content-sign-in">signing in</a> or <a  class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+					<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+					<div class="content"><h1 id="model-validation-in-aspnet-core-mvc-and-razor-pages">Model validation in ASP.NET Core MVC and Razor Pages</h1></div>
+					
+		<div
+			id="article-metadata"
+			class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap"
+		>
+			
+		<div class="margin-block-xxs">
+			<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+				  <li class="visibility-hidden-visual-diff">
+			<local-time
+				format="twoDigitNumeric"
+				datetime="2024-08-30T14:33:00.000Z"
+				data-article-date-source="calculated"
+				class="is-invisible"
+			>
+				2024-08-30
+			</local-time>
+		</li>  
+			</ul>
+		</div>
+	 
+				<div
+					id="user-feedback"
+					class="margin-block-xxs display-none display-none-print"
+					hidden
+					data-hide-on-archived
+				>
+					
+		<button
+			id="user-feedback-button"
+			data-test-id="conceptual-feedback-button"
+			class="button button-sm button-clear button-primary display-none"
+			type="button"
+			data-bi-name="user-feedback-button"
+			data-user-feedback-button
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-like"></span>
+			</span>
+			<span>Feedback</span>
+		</button>
+	
+				</div>
+		  
+		</div>
+	 
+		<nav
+			id="center-doc-outline"
+			class="doc-outline is-hidden-desktop display-none-print margin-bottom-sm"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">
+				In this article
+			</h2>
+		</nav>
+	
+					<div class="content"><div data-moniker="aspnetcore-10.0 aspnetcore-7.0 aspnetcore-8.0 aspnetcore-9.0">
+<p>This article explains how to validate user input in an ASP.NET Core MVC or Razor Pages app.</p>
+<p><a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">View or download sample code</a> (<a href="../../overview553c.html?view=aspnetcore-9.0#how-to-download-a-sample" data-linktype="relative-path">how to download</a>).</p>
+<h2 id="model-state">Model state</h2>
+<p>Model state represents errors that come from two subsystems: model binding and model validation. Errors that originate from <a href="model-binding553c.html?view=aspnetcore-9.0" data-linktype="relative-path">model binding</a> are generally data conversion errors. For example, an "x" is entered in an integer field. Model validation occurs after model binding and reports errors where data doesn't conform to business rules. For example, a 0 is entered in a field that expects a rating between 1 and 5.</p>
+<p>Both model binding and model validation occur before the execution of a controller action or a Razor Pages handler method. For web apps, it's the app's responsibility to inspect <code>ModelState.IsValid</code> and react appropriately. Web apps typically redisplay the page with an error message, as shown in the following Razor Pages example:</p>
+<pre><code class="lang-csharp" highlight-lines="3-6">public async Task&lt;IActionResult&gt; OnPostAsync()
+{
+    if (!ModelState.IsValid)
+    {
+        return Page();
+    }
+
+    _context.Movies.Add(Movie);
+    await _context.SaveChangesAsync();
+
+    return RedirectToPage("./Index");
+}
+</code></pre>
+<p>For ASP.NET Core MVC with controllers and views, the following example shows how to check <code>ModelState.IsValid</code> inside of a controller action:</p>
+<pre><code class="lang-csharp" highlight-lines="3-6">public async Task&lt;IActionResult&gt; Create(Movie movie)
+{
+    if (!ModelState.IsValid)
+    {
+        return View(movie);
+    }
+
+    _context.Movies.Add(movie);
+    await _context.SaveChangesAsync();
+
+    return RedirectToAction(nameof(Index));
+}
+</code></pre>
+<p>Web API controllers don't have to check <code>ModelState.IsValid</code> if they have the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.apicontrollerattribute" data-linktype="absolute-path">[ApiController]</a> attribute. In that case, an automatic HTTP 400 response containing error details is returned when model state is invalid. For more information, see <a href="https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-9.0#automatic-http-400-responses" data-linktype="relative-path">Automatic HTTP 400 responses</a>.</p>
+<h2 id="rerun-validation">Rerun validation</h2>
+<p>Validation is automatic, but you might want to repeat it manually. For example, you might compute a value for a property and want to rerun validation after setting the property to the computed value. To rerun validation, call <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.modelstatedictionary.clearvalidationstate" class="no-loc" data-linktype="absolute-path">ModelStateDictionary.ClearValidationState</a> to clear validation specific to the model being validated followed by <code>TryValidateModel</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="6-10">public async Task&lt;IActionResult&gt; OnPostTryValidateAsync()
+{
+    var modifiedReleaseDate = DateTime.Now.Date;
+    Movie.ReleaseDate = modifiedReleaseDate;
+
+    ModelState.ClearValidationState(nameof(Movie));
+    if (!TryValidateModel(Movie, nameof(Movie)))
+    {
+        return Page();
+    }
+
+    _context.Movies.Add(Movie);
+    await _context.SaveChangesAsync();
+
+    return RedirectToPage("./Index");
+}
+</code></pre>
+<h2 id="validation-attributes">Validation attributes</h2>
+<p>Validation attributes let you specify validation rules for model properties. The following example from the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app</a> shows a model class that is annotated with validation attributes. The <code>[ClassicMovie]</code> attribute is a custom validation attribute and the others are built in. Not shown is <code>[ClassicMovieWithClientValidator]</code>, which shows an alternative way to implement a custom attribute.</p>
+<pre><code class="lang-csharp">public class Movie
+{
+    public int Id { get; set; }
+
+    [Required]
+    [StringLength(100)]
+    public string Title { get; set; } = null!;
+
+    [ClassicMovie(1960)]
+    [DataType(DataType.Date)]
+    [Display(Name = "Release Date")]
+    public DateTime ReleaseDate { get; set; }
+
+    [Required]
+    [StringLength(1000)]
+    public string Description { get; set; } = null!;
+
+    [Range(0, 999.99)]
+    public decimal Price { get; set; }
+
+    public Genre Genre { get; set; }
+
+    public bool Preorder { get; set; }
+}
+</code></pre>
+<h2 id="built-in-attributes">Built-in attributes</h2>
+<p>Here are some of the built-in validation attributes:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.validation.validateneverattribute" data-linktype="absolute-path">[ValidateNever]</a>: Indicates that a property or parameter should be excluded from validation.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.creditcardattribute" data-linktype="absolute-path">[CreditCard]</a>: Validates that the property has a credit card format. Requires <a href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.js" data-linktype="external">jQuery Validation Additional Methods</a>.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.compareattribute" data-linktype="absolute-path">[Compare]</a>: Validates that two properties in a model match.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.emailaddressattribute" data-linktype="absolute-path">[EmailAddress]</a>: Validates that the property has an email format.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.phoneattribute" data-linktype="absolute-path">[Phone]</a>: Validates that the property has a telephone number format.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.rangeattribute" data-linktype="absolute-path">[Range]</a>: Validates that the property value falls within a specified range.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.regularexpressionattribute" data-linktype="absolute-path">[RegularExpression]</a>: Validates that the property value matches a specified regular expression.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute" data-linktype="absolute-path">[Required]</a>: Validates that the field isn't null. See <a href="#non-nullable-reference-types-and-required-attribute" data-linktype="self-bookmark"><code>[Required]</code> attribute</a> for details about this attribute's behavior.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute" data-linktype="absolute-path">[StringLength]</a>: Validates that a string property value doesn't exceed a specified length limit.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.urlattribute" data-linktype="absolute-path">[Url]</a>: Validates that the property has a URL format.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.remoteattribute" data-linktype="absolute-path">[Remote]</a>: Validates input on the client by calling an action method on the server. See <a href="#remote-attribute" data-linktype="self-bookmark"><code>[Remote]</code> attribute</a> for details about this attribute's behavior.</li>
+</ul>
+<p>A complete list of validation attributes can be found in the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations" class="no-loc" data-linktype="absolute-path">System.ComponentModel.DataAnnotations</a> namespace.</p>
+<h3 id="error-messages">Error messages</h3>
+<p>Validation attributes let you specify the error message to be displayed for invalid input. For example:</p>
+<pre><code class="lang-csharp">[StringLength(8, ErrorMessage = "Name length can't be more than 8.")]
+</code></pre>
+<p>Internally, the attributes call <a href="https://learn.microsoft.com/en-us/dotnet/api/system.string.format" class="no-loc" data-linktype="absolute-path">String.Format</a> with a placeholder for the field name and sometimes additional placeholders. For example:</p>
+<pre><code class="lang-csharp">[StringLength(8, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
+</code></pre>
+<p>When applied to a <code>Name</code> property, the error message created by the preceding code would be "Name length must be between 6 and 8.".</p>
+<p>To find out which parameters are passed to <code>String.Format</code> for a particular attribute's error message, see the <a href="https://github.com/dotnet/runtime/tree/main/src/libraries/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations" data-linktype="external">DataAnnotations source code</a>.</p>
+<h3 id="use-json-property-names-in-validation-errors">Use JSON property names in validation errors</h3>
+<p>By default, when a validation error occurs, model validation produces a <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.modelstatedictionary" class="no-loc" data-linktype="absolute-path">ModelStateDictionary</a> with the property name as the error key. Some apps, such as single page apps, benefit from using JSON property names for validation errors generated from Web APIs. The following code configures validation to use the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.metadata.systemtextjsonvalidationmetadataprovider" data-linktype="absolute-path"><code>SystemTextJsonValidationMetadataProvider</code></a> to use JSON property names:</p>
+<pre><code class="lang-csharp" highlight-lines="5-8">using Microsoft.AspNetCore.Mvc.ModelBinding.Metadata;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers(options =&gt;
+{
+    options.ModelMetadataDetailsProviders.Add(new SystemTextJsonValidationMetadataProvider());
+});
+
+var app = builder.Build();
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
+</code></pre>
+<p>The following code configures validation to use the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.newtonsoftjson.newtonsoftjsonvalidationmetadataprovider" data-linktype="absolute-path"><code>NewtonsoftJsonValidationMetadataProvider</code></a> to use JSON property name when using <a href="https://www.newtonsoft.com/json" data-linktype="external">Json.NET</a>:</p>
+<pre><code class="lang-csharp" highlight-lines="5-8">using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers(options =&gt;
+{
+    options.ModelMetadataDetailsProviders.Add(new NewtonsoftJsonValidationMetadataProvider());
+}).AddNewtonsoftJson();
+
+var app = builder.Build();
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
+</code></pre>
+<p>For an example of the policy to use camel-casing, see <a href="https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/mvc/models/validation/samples/7.x/ValidationJSON/Program.cs" data-linktype="external"><code>Program.cs</code> on GitHub</a>.</p>
+<h2 id="non-nullable-reference-types-and-required-attribute">Non-nullable reference types and [Required] attribute</h2>
+<p>The validation system treats non-nullable parameters or bound properties as if they had a <code>[Required(AllowEmptyStrings = true)]</code> attribute. By <a href="https://learn.microsoft.com/en-us/dotnet/csharp/nullable-references#nullable-contexts" data-linktype="absolute-path">enabling <code>Nullable</code> contexts</a>, MVC implicitly starts validating non-nullable properties or parameters as if they had been attributed with the <code>[Required(AllowEmptyStrings = true)]</code> attribute. Consider the following code:</p>
+<pre><code class="lang-csharp">public class Person
+{
+    public string Name { get; set; }
+}
+</code></pre>
+<p>If the app was built with <code>&lt;Nullable&gt;enable&lt;/Nullable&gt;</code>, a missing value for <code>Name</code> in a JSON or form post results in a validation error. This may seem contradictory since the <code>[Required(AllowEmptyStrings = true)]</code> attribute is implied, but this is expected behavior because <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayformatattribute.convertemptystringtonull" data-linktype="absolute-path">empty strings are converted to null by default</a>. Use a nullable reference type to allow null or missing values to be specified for the <code>Name</code> property:</p>
+<pre><code class="lang-csharp">public class Person
+{
+    public string? Name { get; set; }
+}
+</code></pre>
+<p>This behavior can be disabled by configuring <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.mvcoptions.suppressimplicitrequiredattributefornonnullablereferencetypes#microsoft-aspnetcore-mvc-mvcoptions-suppressimplicitrequiredattributefornonnullablereferencetypes" class="no-loc" data-linktype="absolute-path">SuppressImplicitRequiredAttributeForNonNullableReferenceTypes</a> in <code>Program.cs</code>:</p>
+<pre><code class="lang-csharp">builder.Services.AddControllers(
+    options =&gt; options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
+</code></pre>
+<h3 id="required-validation-on-the-server">[Required] validation on the server</h3>
+<p>On the server, a required value is considered missing if the property is null. A non-nullable field is always valid, and the <code>[Required]</code> attribute's error message is never displayed.</p>
+<p>However, model binding for a non-nullable property may fail, resulting in an error message such as <code>The value '' is invalid</code>. To specify a custom error message for server-side validation of non-nullable types, you have the following options:</p>
+<ul>
+<li><p>Make the field nullable (for example, <code>decimal?</code> instead of <code>decimal</code>). <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/nullable-types/" data-linktype="absolute-path">Nullable&lt;T&gt;</a> value types are treated like standard nullable types.</p>
+</li>
+<li><p>Specify the default error message to be used by model binding, as shown in the following example:</p>
+<pre><code class="lang-csharp" highlight-lines="5-6">builder.Services.AddRazorPages()
+    .AddMvcOptions(options =&gt;
+    {
+        options.MaxModelValidationErrors = 50;
+        options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
+            _ =&gt; "The field is required.");
+    });
+
+builder.Services.AddSingleton
+    &lt;IValidationAttributeAdapterProvider, CustomValidationAttributeAdapterProvider&gt;();
+</code></pre>
+<p>For more information about model binding errors that you can set default messages for, see <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.metadata.defaultmodelbindingmessageprovider#methods" class="no-loc" data-linktype="absolute-path">DefaultModelBindingMessageProvider</a>.</p>
+</li>
+</ul>
+<h3 id="required-validation-on-the-client">[Required] validation on the client</h3>
+<p>Non-nullable types and strings are handled differently on the client compared to the server. On the client:</p>
+<ul>
+<li>A value is considered present only if input is entered for it. Therefore, client-side validation handles non-nullable types the same as nullable types.</li>
+<li>Whitespace in a string field is considered valid input by the jQuery Validation <a href="https://jqueryvalidation.org/required-method/" data-linktype="external">required</a> method. Server-side validation considers a required string field invalid if only whitespace is entered.</li>
+</ul>
+<p>As noted earlier, non-nullable types are treated as though they had a <code>[Required(AllowEmptyStrings = true)]</code> attribute. That means you get client-side validation even if you don't apply the <code>[Required(AllowEmptyStrings = true)]</code> attribute. But if you don't use the attribute, you get a default error message. To specify a custom error message, use the attribute.</p>
+<h2 id="remote-attribute">[Remote] attribute</h2>
+<p>The <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.remoteattribute" data-linktype="absolute-path">[Remote]</a> attribute implements client-side validation that requires calling a method on the server to determine whether field input is valid. For example, the app may need to verify whether a user name is already in use.</p>
+<p>To implement remote validation:</p>
+<ol>
+<li><p>Create an action method for JavaScript to call.  The jQuery Validation <a href="https://jqueryvalidation.org/remote-method/" data-linktype="external">remote</a> method expects a JSON response:</p>
+<ul>
+<li><code>true</code> means the input data is valid.</li>
+<li><code>false</code>, <code>undefined</code>, or <code>null</code> means the input is invalid. Display the default error message.</li>
+<li>Any other string means the input is invalid. Display the string as a custom error message.</li>
+</ul>
+<p>Here's an example of an action method that returns a custom error message:</p>
+<pre><code class="lang-csharp">[AcceptVerbs("GET", "POST")]
+public IActionResult VerifyEmail(string email)
+{
+    if (!_userService.VerifyEmail(email))
+    {
+        return Json($"Email {email} is already in use.");
+    }
+
+    return Json(true);
+}
+</code></pre>
+</li>
+<li><p>In the model class, annotate the property with a <code>[Remote]</code> attribute that points to the validation action method, as shown in the following example:</p>
+<pre><code class="lang-csharp">[Remote(action: "VerifyEmail", controller: "Users")]
+public string Email { get; set; } = null!;
+</code></pre>
+</li>
+</ol>
+<p><a href="#custom-validation" data-linktype="self-bookmark">Server side validation</a> also needs to be implemented for clients that have disabled JavaScript.</p>
+<h3 id="additional-fields">Additional fields</h3>
+<p>The <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.remoteattribute.additionalfields" class="no-loc" data-linktype="absolute-path">AdditionalFields</a> property of the <code>[Remote]</code> attribute lets you validate combinations of fields against data on the server. For example, if the <code>User</code> model had <code>FirstName</code> and <code>LastName</code> properties, you might want to verify that no existing users already have that pair of names. The following example shows how to use <code>AdditionalFields</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="1,5">[Remote(action: "VerifyName", controller: "Users", AdditionalFields = nameof(LastName))]
+[Display(Name = "First Name")]
+public string FirstName { get; set; } = null!;
+
+[Remote(action: "VerifyName", controller: "Users", AdditionalFields = nameof(FirstName))]
+[Display(Name = "Last Name")]
+public string LastName { get; set; } = null!;
+</code></pre>
+<p><code>AdditionalFields</code> could be set explicitly to the strings "FirstName" and "LastName", but using the <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/nameof" data-linktype="absolute-path">nameof</a> operator simplifies later refactoring. The action method for this validation must accept both <code>firstName</code> and <code>lastName</code> arguments:</p>
+<pre><code class="lang-csharp">[AcceptVerbs("GET", "POST")]
+public IActionResult VerifyName(string firstName, string lastName)
+{
+    if (!_userService.VerifyName(firstName, lastName))
+    {
+        return Json($"A user named {firstName} {lastName} already exists.");
+    }
+
+    return Json(true);
+}
+</code></pre>
+<p>When the user enters a first or last name, JavaScript makes a remote call to see if that pair of names has been taken.</p>
+<p>To validate two or more additional fields, provide them as a comma-delimited list. For example, to add a <code>MiddleName</code> property to the model, set the <code>[Remote]</code> attribute as shown in the following example:</p>
+<pre><code class="lang-csharp">[Remote(action: "VerifyName", controller: "Users",
+    AdditionalFields = nameof(FirstName) + "," + nameof(LastName))]
+public string MiddleName { get; set; }
+</code></pre>
+<p><code>AdditionalFields</code>, like all attribute arguments, must be a constant expression. Therefore, don't use an <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interpolated-strings" data-linktype="absolute-path">interpolated string</a> or call <a href="https://learn.microsoft.com/en-us/dotnet/api/system.string.join" class="no-loc" data-linktype="absolute-path">Join</a> to initialize <code>AdditionalFields</code>.</p>
+<h2 id="alternatives-to-built-in-attributes">Alternatives to built-in attributes</h2>
+<p>If you need validation not provided by built-in attributes, you can:</p>
+<ul>
+<li><a href="#custom-attributes" data-linktype="self-bookmark">Create custom attributes</a>.</li>
+<li><a href="#ivalidatableobject" data-linktype="self-bookmark">Implement IValidatableObject</a>.</li>
+</ul>
+<h2 id="custom-attributes">Custom attributes</h2>
+<p>For scenarios that the built-in validation attributes don't handle, you can create custom validation attributes. Create a class that inherits from <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute" class="no-loc" data-linktype="absolute-path">ValidationAttribute</a>, and override the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.isvalid" class="no-loc" data-linktype="absolute-path">IsValid</a> method.</p>
+<p>The <code>IsValid</code> method accepts an object named <em>value</em>, which is the input to be validated. An overload also accepts a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationcontext" class="no-loc" data-linktype="absolute-path">ValidationContext</a> object, which provides additional information, such as the model instance created by model binding.</p>
+<p>The following example validates that the release date for a movie in the <em>Classic</em> genre isn't later than a specified year. The <code>[ClassicMovie]</code> attribute:</p>
+<ul>
+<li>Is only run on the server.</li>
+<li>For Classic movies, validates the release date:</li>
+</ul>
+<pre><code class="lang-csharp">public class ClassicMovieAttribute : ValidationAttribute
+{
+    public ClassicMovieAttribute(int year)
+        =&gt; Year = year;
+
+    public int Year { get; }
+
+    public string GetErrorMessage() =&gt;
+        $"Classic movies must have a release year no later than {Year}.";
+
+    protected override ValidationResult? IsValid(
+        object? value, ValidationContext validationContext)
+    {
+        var movie = (Movie)validationContext.ObjectInstance;
+        var releaseYear = ((DateTime)value!).Year;
+
+        if (movie.Genre == Genre.Classic &amp;&amp; releaseYear &gt; Year)
+        {
+            return new ValidationResult(GetErrorMessage());
+        }
+
+        return ValidationResult.Success;
+    }
+}
+</code></pre>
+<p>The <code>movie</code> variable in the preceding example represents a <code>Movie</code> object that contains the data from the form submission. When validation fails, a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationresult" class="no-loc" data-linktype="absolute-path">ValidationResult</a> with an error message is returned.</p>
+<h2 id="ivalidatableobject">IValidatableObject</h2>
+<p>The preceding example works only with <code>Movie</code> types. Another option for class-level validation is to implement <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.ivalidatableobject" class="no-loc" data-linktype="absolute-path">IValidatableObject</a> in the model class, as shown in the following example:</p>
+<pre><code class="lang-csharp" highlight-lines="1,26-34">public class ValidatableMovie : IValidatableObject
+{
+    private const int _classicYear = 1960;
+
+    public int Id { get; set; }
+
+    [Required]
+    [StringLength(100)]
+    public string Title { get; set; } = null!;
+
+    [DataType(DataType.Date)]
+    [Display(Name = "Release Date")]
+    public DateTime ReleaseDate { get; set; }
+
+    [Required]
+    [StringLength(1000)]
+    public string Description { get; set; } = null!;
+
+    [Range(0, 999.99)]
+    public decimal Price { get; set; }
+
+    public Genre Genre { get; set; }
+
+    public bool Preorder { get; set; }
+
+    public IEnumerable&lt;ValidationResult&gt; Validate(ValidationContext validationContext)
+    {
+        if (Genre == Genre.Classic &amp;&amp; ReleaseDate.Year &gt; _classicYear)
+        {
+            yield return new ValidationResult(
+                $"Classic movies must have a release year no later than {_classicYear}.",
+                new[] { nameof(ReleaseDate) });
+        }
+    }
+}
+</code></pre>
+<h2 id="custom-validation">Custom validation</h2>
+<p>The following code shows how to add a model error after examining the model:</p>
+<pre><code class="lang-csharp">if (Contact.Name == Contact.ShortName)
+{
+    ModelState.AddModelError("Contact.ShortName", 
+                             "Short name can't be the same as Name.");
+}
+</code></pre>
+<p>The following code implements the validation test in a controller:</p>
+<pre><code class="lang-csharp">if (contact.Name == contact.ShortName)
+{
+    ModelState.AddModelError(nameof(contact.ShortName),
+                             "Short name can't be the same as Name.");
+}
+</code></pre>
+<p>The following code verifies the phone number and email are unique:</p>
+<pre><code class="lang-csharp">public async Task&lt;IActionResult&gt; OnPostAsync()
+{
+    // Attach Validation Error Message to the Model on validation failure.          
+
+    if (Contact.Name == Contact.ShortName)
+    {
+        ModelState.AddModelError("Contact.ShortName", 
+                                 "Short name can't be the same as Name.");
+    }
+
+    if (_context.Contact.Any(i =&gt; i.PhoneNumber == Contact.PhoneNumber))
+    {
+        ModelState.AddModelError("Contact.PhoneNumber",
+                                  "The Phone number is already in use.");
+    }
+    if (_context.Contact.Any(i =&gt; i.Email == Contact.Email))
+    {
+        ModelState.AddModelError("Contact.Email", "The Email is already in use.");
+    }
+
+    if (!ModelState.IsValid || _context.Contact == null || Contact == null)
+    {
+        // if model is invalid, return the page with the model state errors.
+        return Page();
+    }
+    _context.Contact.Add(Contact);
+    await _context.SaveChangesAsync();
+
+    return RedirectToPage("./Index");
+}
+</code></pre>
+<p>The following code implements the validation test in a controller:</p>
+<pre><code class="lang-csharp">[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task&lt;IActionResult&gt; Create([Bind("Id,Name,ShortName,Email,PhoneNumber")] Contact contact)
+{
+    // Attach Validation Error Message to the Model on validation failure.
+    if (contact.Name == contact.ShortName)
+    {
+        ModelState.AddModelError(nameof(contact.ShortName),
+                                 "Short name can't be the same as Name.");
+    }
+
+    if (_context.Contact.Any(i =&gt; i.PhoneNumber == contact.PhoneNumber))
+    {
+        ModelState.AddModelError(nameof(contact.PhoneNumber),
+                                  "The Phone number is already in use.");
+    }
+    if (_context.Contact.Any(i =&gt; i.Email == contact.Email))
+    {
+        ModelState.AddModelError(nameof(contact.Email), "The Email is already in use.");
+    }
+
+    if (ModelState.IsValid)
+    {
+        _context.Add(contact);
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+    return View(contact);
+}
+</code></pre>
+<p>Checking for a unique phone number or email is typically also done with <a href="#remote-attribute" data-linktype="self-bookmark">remote validation</a>.</p>
+<h2 id="validationresult">ValidationResult</h2>
+<p>Consider the following custom <code>ValidateNameAttribute</code>:</p>
+<pre><code class="lang-csharp">public class ValidateNameAttribute : ValidationAttribute
+{
+    public ValidateNameAttribute()
+    {
+        const string defaultErrorMessage = "Error with Name";
+        ErrorMessage ??= defaultErrorMessage;
+    }
+
+    protected override ValidationResult? IsValid(object? value,
+                                         ValidationContext validationContext)
+    {
+        if (value == null || string.IsNullOrWhiteSpace(value.ToString()))
+        {
+            return new ValidationResult("Name is required.");
+        }
+
+        if (value.ToString()!.ToLower().Contains("zz"))
+        {
+
+            return new ValidationResult(
+                        FormatErrorMessage(validationContext.DisplayName));
+        }
+
+        return ValidationResult.Success;
+    }
+}
+</code></pre>
+<p>In the following code, the custom <code>[ValidateName]</code> attribute is applied:</p>
+<pre><code class="lang-csharp">public class Contact
+{
+    public Guid Id { get; set; }
+
+    [ValidateName(ErrorMessage = "Name must not contain `zz`")] 
+    public string? Name { get; set; }
+    public string? Email { get; set; }
+    public string? PhoneNumber { get; set; }
+}
+</code></pre>
+<p>When the model contains <code>zz</code>, a new <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationresult" class="no-loc" data-linktype="absolute-path">ValidationResult</a> is returned.</p>
+<h2 id="top-level-node-validation">Top-level node validation</h2>
+<p>Top-level nodes include:</p>
+<ul>
+<li>Action parameters</li>
+<li>Controller properties</li>
+<li>Page handler parameters</li>
+<li>Page model properties</li>
+</ul>
+<p>Model-bound top-level nodes are validated in addition to validating model properties. In the following example from the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app</a>, the <code>VerifyPhone</code> method uses the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.regularexpressionattribute" class="no-loc" data-linktype="absolute-path">RegularExpressionAttribute</a> to validate the <code>phone</code> action parameter:</p>
+<pre><code class="lang-csharp">[AcceptVerbs("GET", "POST")]
+public IActionResult VerifyPhone(
+    [RegularExpression(@"^\d{3}-\d{3}-\d{4}$")] string phone)
+{
+    if (!ModelState.IsValid)
+    {
+        return Json($"Phone {phone} has an invalid format. Format: ###-###-####");
+    }
+
+    return Json(true);
+}
+</code></pre>
+<p>Top-level nodes can use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.bindrequiredattribute" class="no-loc" data-linktype="absolute-path">BindRequiredAttribute</a> with validation attributes. In the following example from the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app</a>, the <code>CheckAge</code> method specifies that the <code>age</code> parameter must be bound from the query string when the form is submitted:</p>
+<pre><code class="lang-csharp">[HttpPost]
+public IActionResult CheckAge([BindRequired, FromQuery] int age)
+{
+</code></pre>
+<p>In the Check Age page (<code>CheckAge.cshtml</code>), there are two forms. The first form submits an <code>Age</code> value of <code>99</code> as a query string parameter: <code>https://localhost:5001/Users/CheckAge?Age=99</code>.</p>
+<p>When a properly formatted <code>age</code> parameter from the query string is submitted, the form validates.</p>
+<p>The second form on the Check Age page submits the <code>Age</code> value in the body of the request, and validation fails. Binding fails because the <code>age</code> parameter must come from a query string.</p>
+<h2 id="maximum-errors">Maximum errors</h2>
+<p>Validation stops when the maximum number of errors is reached (200 by default). You can configure this number with the following code in <code>Program.cs</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="4">builder.Services.AddRazorPages()
+    .AddMvcOptions(options =&gt;
+    {
+        options.MaxModelValidationErrors = 50;
+        options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
+            _ =&gt; "The field is required.");
+    });
+
+builder.Services.AddSingleton
+    &lt;IValidationAttributeAdapterProvider, CustomValidationAttributeAdapterProvider&gt;();
+</code></pre>
+<h2 id="maximum-recursion">Maximum recursion</h2>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.validation.validationvisitor" class="no-loc" data-linktype="absolute-path">ValidationVisitor</a> traverses the object graph of the model being validated. For models that are deep or are infinitely recursive, validation may result in stack overflow. <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.mvcoptions.maxvalidationdepth" class="no-loc" data-linktype="absolute-path">MvcOptions.MaxValidationDepth</a> provides a way to stop validation early if the visitor recursion exceeds a configured depth. The default value of <code>MvcOptions.MaxValidationDepth</code> is 32.</p>
+<h2 id="automatic-short-circuit">Automatic short-circuit</h2>
+<p>Validation is automatically short-circuited (skipped) if the model graph doesn't require validation. Objects that the runtime skips validation for include collections of primitives (such as <code>byte[]</code>, <code>string[]</code>, <code>Dictionary&lt;string, string&gt;</code>) and complex object graphs that don't have any validators.</p>
+<h2 id="client-side-validation">Client-side validation</h2>
+<p>Client-side validation prevents submission until the form is valid. The Submit button runs JavaScript that either submits the form or displays error messages.</p>
+<p>Client-side validation avoids an unnecessary round trip to the server when there are input errors on a form. The following script references in <code>_Layout.cshtml</code> and <code>_ValidationScriptsPartial.cshtml</code> support client-side validation:</p>
+<pre><code class="lang-cshtml">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"&gt;&lt;/script&gt;
+</code></pre>
+<pre><code class="lang-cshtml">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.js"&gt;&lt;/script&gt;
+</code></pre>
+<p>The <a href="https://github.com/aspnet/jquery-validation-unobtrusive" data-linktype="external">jQuery Unobtrusive Validation</a> script is a custom Microsoft front-end library that builds on the popular <a href="https://jqueryvalidation.org/" data-linktype="external">jQuery Validation</a> plugin. Without jQuery Unobtrusive Validation, you would have to code the same validation logic in two places: once in the server-side validation attributes on model properties, and then again in client-side scripts. Instead, <a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/intro?view=aspnetcore-9.0" data-linktype="relative-path">Tag Helpers</a> and <a href="../views/overview553c.html?view=aspnetcore-9.0" data-linktype="relative-path">HTML helpers</a> use the validation attributes and type metadata from model properties to render HTML 5 <code>data-</code> attributes for the form elements that need validation. jQuery Unobtrusive Validation parses the <code>data-</code> attributes and passes the logic to jQuery Validation, effectively "copying" the server-side validation logic to the client. You can display validation errors on the client using tag helpers as shown here:</p>
+<pre><code class="lang-cshtml" highlight-lines="3-4">&lt;div class="form-group"&gt;
+    &lt;label asp-for="Movie.ReleaseDate" class="control-label"&gt;&lt;/label&gt;
+    &lt;input asp-for="Movie.ReleaseDate" class="form-control" /&gt;
+    &lt;span asp-validation-for="Movie.ReleaseDate" class="text-danger"&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<p>The preceding tag helpers render the following HTML:</p>
+<pre><code class="lang-html">&lt;div class="form-group"&gt;
+    &lt;label class="control-label" for="Movie_ReleaseDate"&gt;Release Date&lt;/label&gt;
+    &lt;input class="form-control" type="date" data-val="true"
+        data-val-required="The Release Date field is required."
+        id="Movie_ReleaseDate" name="Movie.ReleaseDate" value=""&gt;
+    &lt;span class="text-danger field-validation-valid"
+        data-valmsg-for="Movie.ReleaseDate" data-valmsg-replace="true"&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Notice that the <code>data-</code> attributes in the HTML output correspond to the validation attributes for the <code>Movie.ReleaseDate</code> property. The <code>data-val-required</code> attribute contains an error message to display if the user doesn't fill in the release date field. jQuery Unobtrusive Validation passes this value to the jQuery Validation <a href="https://jqueryvalidation.org/required-method/" data-linktype="external">required()</a> method, which then displays that message in the accompanying <strong>&lt;span&gt;</strong> element.</p>
+<p>Data type validation is based on the .NET type of a property, unless that is overridden by a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype" data-linktype="absolute-path">[DataType]</a> attribute. Browsers have their own default error messages, but the jQuery Validation Unobtrusive Validation package can override those messages. <code>[DataType]</code> attributes and subclasses such as <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.emailaddressattribute" data-linktype="absolute-path">[EmailAddress]</a> let you specify the error message.</p>
+<h2 id="unobtrusive-validation">Unobtrusive validation</h2>
+<p>For information on unobtrusive validation, see <a href="https://github.com/dotnet/AspNetCore.Docs/issues/1111" data-linktype="external">this GitHub issue</a>.</p>
+<h3 id="add-validation-to-dynamic-forms">Add Validation to Dynamic Forms</h3>
+<p>jQuery Unobtrusive Validation passes validation logic and parameters to jQuery Validation when the page first loads. Therefore, validation doesn't work automatically on dynamically generated forms. To enable validation, tell jQuery Unobtrusive Validation to parse the dynamic form immediately after you create it. For example, the following code sets up client-side validation on a form added via AJAX.</p>
+<pre><code class="lang-javascript">$.get({
+    url: "https://url/that/returns/a/form",
+    dataType: "html",
+    error: function(jqXHR, textStatus, errorThrown) {
+        alert(textStatus + ": Couldn't add form. " + errorThrown);
+    },
+    success: function(newFormHTML) {
+        var container = document.getElementById("form-container");
+        container.insertAdjacentHTML("beforeend", newFormHTML);
+        var forms = container.getElementsByTagName("form");
+        var newForm = forms[forms.length - 1];
+        $.validator.unobtrusive.parse(newForm);
+    }
+})
+</code></pre>
+<p>The <code>$.validator.unobtrusive.parse()</code> method accepts a jQuery selector for its one argument. This method tells jQuery Unobtrusive Validation to parse the <code>data-</code> attributes of forms within that selector. The values of those attributes are then passed to the jQuery Validation plugin.</p>
+<h3 id="add-validation-to-dynamic-controls">Add Validation to Dynamic Controls</h3>
+<p>The <code>$.validator.unobtrusive.parse()</code> method works on an entire form, not on individual dynamically generated controls, such as <code>&lt;input&gt;</code> and <code>&lt;select/&gt;</code>. To reparse the form, remove the validation data that was added when the form was parsed earlier, as shown in the following example:</p>
+<pre><code class="lang-javascript">$.get({
+    url: "https://url/that/returns/a/control",
+    dataType: "html",
+    error: function(jqXHR, textStatus, errorThrown) {
+        alert(textStatus + ": Couldn't add control. " + errorThrown);
+    },
+    success: function(newInputHTML) {
+        var form = document.getElementById("my-form");
+        form.insertAdjacentHTML("beforeend", newInputHTML);
+        $(form).removeData("validator")    // Added by jQuery Validation
+               .removeData("unobtrusiveValidation");   // Added by jQuery Unobtrusive Validation
+        $.validator.unobtrusive.parse(form);
+    }
+})
+</code></pre>
+<h2 id="custom-client-side-validation">Custom client-side validation</h2>
+<p>Custom client-side validation is done by generating <code>data-</code> HTML attributes that work with a custom jQuery Validation adapter. The following sample adapter code was written for the <code>[ClassicMovie]</code> and <code>[ClassicMovieWithClientValidator]</code> attributes that were introduced earlier in this article:</p>
+<pre><code class="lang-javascript">$.validator.addMethod('classicmovie', function (value, element, params) {
+    var genre = $(params[0]).val(), year = params[1], date = new Date(value);
+
+    // The Classic genre has a value of '0'.
+    if (genre &amp;&amp; genre.length &gt; 0 &amp;&amp; genre[0] === '0') {
+        // The release date for a Classic is valid if it's no greater than the given year.
+        return date.getUTCFullYear() &lt;= year;
+    }
+
+    return true;
+});
+
+$.validator.unobtrusive.adapters.add('classicmovie', ['year'], function (options) {
+    var element = $(options.form).find('select#Movie_Genre')[0];
+
+    options.rules['classicmovie'] = [element, parseInt(options.params['year'])];
+    options.messages['classicmovie'] = options.message;
+});
+</code></pre>
+<p>For information about how to write adapters, see the <a href="https://jqueryvalidation.org/documentation/" data-linktype="external">jQuery Validation documentation</a>.</p>
+<p>The use of an adapter for a given field is triggered by <code>data-</code> attributes that:</p>
+<ul>
+<li>Flag the field as being subject to validation (<code>data-val="true"</code>).</li>
+<li>Identify a validation rule name and error message text (for example, <code>data-val-rulename="Error message."</code>).</li>
+<li>Provide any additional parameters the validator needs (for example, <code>data-val-rulename-param1="value"</code>).</li>
+</ul>
+<p>The following example shows the <code>data-</code> attributes for the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app's</a> <code>ClassicMovie</code> attribute:</p>
+<pre><code class="lang-html">&lt;input class="form-control" type="date"
+    data-val="true"
+    data-val-classicmovie="Classic movies must have a release year no later than 1960."
+    data-val-classicmovie-year="1960"
+    data-val-required="The Release Date field is required."
+    id="Movie_ReleaseDate" name="Movie.ReleaseDate" value=""&gt;
+</code></pre>
+<p>As noted earlier, <a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/intro?view=aspnetcore-9.0" data-linktype="relative-path">Tag Helpers</a> and <a href="../views/overview553c.html?view=aspnetcore-9.0" data-linktype="relative-path">HTML helpers</a> use information from validation attributes to render <code>data-</code> attributes. There are two options for writing code that results in the creation of custom <code>data-</code> HTML attributes:</p>
+<ul>
+<li>Create a class that derives from <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.dataannotations.attributeadapterbase-1" class="no-loc" data-linktype="absolute-path">AttributeAdapterBase&lt;TAttribute&gt;</a> and a class that implements <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.dataannotations.ivalidationattributeadapterprovider" class="no-loc" data-linktype="absolute-path">IValidationAttributeAdapterProvider</a>, and register your attribute and its adapter in DI. This method follows the <a href="https://wikipedia.org/wiki/Single_responsibility_principle" data-linktype="external">single responsibility principle</a> in that server-related and client-related validation code is in separate classes. The adapter also has the advantage that since it's registered in DI, other services in DI are available to it if needed.</li>
+<li>Implement <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.validation.iclientmodelvalidator" class="no-loc" data-linktype="absolute-path">IClientModelValidator</a> in your <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute" class="no-loc" data-linktype="absolute-path">ValidationAttribute</a> class. This method might be appropriate if the attribute doesn't do any server-side validation and doesn't need any services from DI.</li>
+</ul>
+<h3 id="attributeadapter-for-client-side-validation">AttributeAdapter for client-side validation</h3>
+<p>This method of rendering <code>data-</code> attributes in HTML is used by the <code>ClassicMovie</code> attribute in the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app</a>. To add client validation by using this method:</p>
+<ol>
+<li><p>Create an attribute adapter class for the custom validation attribute. Derive the class from <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.dataannotations.attributeadapterbase-1" class="no-loc" data-linktype="absolute-path">AttributeAdapterBase&lt;TAttribute&gt;</a>. Create an <code>AddValidation</code> method that adds <code>data-</code> attributes to the rendered output, as shown in this example:</p>
+<pre><code class="lang-csharp">public class ClassicMovieAttributeAdapter : AttributeAdapterBase&lt;ClassicMovieAttribute&gt;
+{
+    public ClassicMovieAttributeAdapter(
+        ClassicMovieAttribute attribute, IStringLocalizer? stringLocalizer)
+        : base(attribute, stringLocalizer)
+    {
+
+    }
+
+    public override void AddValidation(ClientModelValidationContext context)
+    {
+        MergeAttribute(context.Attributes, "data-val", "true");
+        MergeAttribute(context.Attributes, "data-val-classicmovie", GetErrorMessage(context));
+
+        var year = Attribute.Year.ToString(CultureInfo.InvariantCulture);
+        MergeAttribute(context.Attributes, "data-val-classicmovie-year", year);
+    }
+
+    public override string GetErrorMessage(ModelValidationContextBase validationContext)
+        =&gt; Attribute.GetErrorMessage();
+}
+</code></pre>
+</li>
+<li><p>Create an adapter provider class that implements <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.dataannotations.ivalidationattributeadapterprovider" class="no-loc" data-linktype="absolute-path">IValidationAttributeAdapterProvider</a>. In the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.dataannotations.ivalidationattributeadapterprovider.getattributeadapter" class="no-loc" data-linktype="absolute-path">GetAttributeAdapter</a> method pass in the custom attribute to the adapter's constructor, as shown in this example:</p>
+<pre><code class="lang-csharp">public class CustomValidationAttributeAdapterProvider : IValidationAttributeAdapterProvider
+{
+    private readonly IValidationAttributeAdapterProvider baseProvider =
+        new ValidationAttributeAdapterProvider();
+
+    public IAttributeAdapter? GetAttributeAdapter(
+        ValidationAttribute attribute, IStringLocalizer? stringLocalizer)
+    {
+        if (attribute is ClassicMovieAttribute classicMovieAttribute)
+        {
+            return new ClassicMovieAttributeAdapter(classicMovieAttribute, stringLocalizer);
+        }
+
+        return baseProvider.GetAttributeAdapter(attribute, stringLocalizer);
+    }
+}
+</code></pre>
+</li>
+<li><p>Register the adapter provider for DI in <code>Program.cs</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="9-10">builder.Services.AddRazorPages()
+    .AddMvcOptions(options =&gt;
+    {
+        options.MaxModelValidationErrors = 50;
+        options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
+            _ =&gt; "The field is required.");
+    });
+
+builder.Services.AddSingleton
+    &lt;IValidationAttributeAdapterProvider, CustomValidationAttributeAdapterProvider&gt;();
+</code></pre>
+</li>
+</ol>
+<h3 id="iclientmodelvalidator-for-client-side-validation">IClientModelValidator for client-side validation</h3>
+<p>This method of rendering <code>data-</code> attributes in HTML is used by the <code>ClassicMovieWithClientValidator</code> attribute in the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app</a>. To add client validation by using this method:</p>
+<ul>
+<li><p>In the custom validation attribute, implement the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.validation.iclientmodelvalidator" class="no-loc" data-linktype="absolute-path">IClientModelValidator</a> interface and create an <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.validation.iclientmodelvalidator.addvalidation" class="no-loc" data-linktype="absolute-path">AddValidation</a> method. In the <code>AddValidation</code> method, add <code>data-</code> attributes for validation, as shown in the following example:</p>
+<pre><code class="lang-csharp">public class ClassicMovieWithClientValidatorAttribute :
+    ValidationAttribute, IClientModelValidator
+{
+    public ClassicMovieWithClientValidatorAttribute(int year)
+        =&gt; Year = year;
+
+    public int Year { get; }
+
+    public void AddValidation(ClientModelValidationContext context)
+    {
+        MergeAttribute(context.Attributes, "data-val", "true");
+        MergeAttribute(context.Attributes, "data-val-classicmovie", GetErrorMessage());
+
+        var year = Year.ToString(CultureInfo.InvariantCulture);
+        MergeAttribute(context.Attributes, "data-val-classicmovie-year", year);
+    }
+
+    public string GetErrorMessage() =&gt;
+        $"Classic movies must have a release year no later than {Year}.";
+
+    protected override ValidationResult? IsValid(
+        object? value, ValidationContext validationContext)
+    {
+        var movie = (Movie)validationContext.ObjectInstance;
+        var releaseYear = ((DateTime)value!).Year;
+
+        if (movie.Genre == Genre.Classic &amp;&amp; releaseYear &gt; Year)
+        {
+            return new ValidationResult(GetErrorMessage());
+        }
+
+        return ValidationResult.Success;
+    }
+
+    private static bool MergeAttribute(IDictionary&lt;string, string&gt; attributes, string key, string value)
+    {
+        if (attributes.ContainsKey(key))
+        {
+            return false;
+        }
+
+        attributes.Add(key, value);
+        return true;
+    }
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="disable-client-side-validation">Disable client-side validation</h2>
+<p>The following code disables client validation in Razor Pages:</p>
+<pre><code class="lang-csharp" highlight-lines="2-5">builder.Services.AddRazorPages()
+    .AddViewOptions(options =&gt;
+    {
+        options.HtmlHelperOptions.ClientValidationEnabled = false;
+    });
+</code></pre>
+<p>Other options to disable client-side validation:</p>
+<ul>
+<li>Comment out the reference to <code>_ValidationScriptsPartial</code> in all the <code>.cshtml</code> files.</li>
+<li>Remove the contents of the <em>Pages\Shared_ValidationScriptsPartial.cshtml</em> file.</li>
+</ul>
+<p>The preceding approach won't prevent client-side validation of ASP.NET Core Identity Razor class library. For more information, see <a href="https://learn.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-9.0" data-linktype="relative-path">Scaffold Identity in ASP.NET Core projects</a>.</p>
+<h2 id="problem-details">Problem details</h2>
+<p><a href="https://www.rfc-editor.org/rfc/rfc7807.html" data-linktype="external">Problem Details</a> are not the only response format to describe an HTTP API error, however, they are commonly used to report errors for HTTP APIs.</p>
+<p>The problem details service implements the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iproblemdetailsservice" class="no-loc" data-linktype="absolute-path">IProblemDetailsService</a> interface, which supports creating problem details in ASP.NET Core. The <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.problemdetailsservicecollectionextensions.addproblemdetails#microsoft-extensions-dependencyinjection-problemdetailsservicecollectionextensions-addproblemdetails(microsoft-extensions-dependencyinjection-iservicecollection)" class="no-loc" data-linktype="absolute-path">AddProblemDetails(IServiceCollection)</a> extension method on <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection" class="no-loc" data-linktype="absolute-path">IServiceCollection</a> registers the default <code>IProblemDetailsService</code> implementation.</p>
+<p>In ASP.NET Core apps, the following middleware generates problem details HTTP responses when <code>AddProblemDetails</code> is called, except when the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept" data-linktype="external"><code>Accept</code> request HTTP header</a> doesn't include one of the content types supported by the registered <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iproblemdetailswriter" class="no-loc" data-linktype="absolute-path">IProblemDetailsWriter</a> (default: <code>application/json</code>):</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.diagnostics.exceptionhandlermiddleware" class="no-loc" data-linktype="absolute-path">ExceptionHandlerMiddleware</a>: Generates a problem details response when a custom handler is not defined.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.diagnostics.statuscodepagesmiddleware" class="no-loc" data-linktype="absolute-path">StatusCodePagesMiddleware</a>: Generates a problem details response by default.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.diagnostics.developerexceptionpagemiddleware" class="no-loc" data-linktype="absolute-path">DeveloperExceptionPageMiddleware</a>: Generates a problem details response in development when the <code>Accept</code> request HTTP header doesn't include <code>text/html</code>.</li>
+</ul>
+<h2 id="additional-resources">Additional resources</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations" class="no-loc" data-linktype="absolute-path">System.ComponentModel.DataAnnotations</a></li>
+<li><a href="model-binding553c.html?view=aspnetcore-9.0" data-linktype="relative-path">Model Binding</a></li>
+</ul>
+</div>
+<div data-moniker="aspnetcore-6.0">
+<p>This article explains how to validate user input in an ASP.NET Core MVC or Razor Pages app.</p>
+<p><a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">View or download sample code</a> (<a href="../../overview553c.html?view=aspnetcore-9.0#how-to-download-a-sample" data-linktype="relative-path">how to download</a>).</p>
+<h2 id="model-state">Model state</h2>
+<p>Model state represents errors that come from two subsystems: model binding and model validation. Errors that originate from <a href="model-binding553c.html?view=aspnetcore-9.0" data-linktype="relative-path">model binding</a> are generally data conversion errors. For example, an "x" is entered in an integer field. Model validation occurs after model binding and reports errors where data doesn't conform to business rules. For example, a 0 is entered in a field that expects a rating between 1 and 5.</p>
+<p>Both model binding and model validation occur before the execution of a controller action or a Razor Pages handler method. For web apps, it's the app's responsibility to inspect <code>ModelState.IsValid</code> and react appropriately. Web apps typically redisplay the page with an error message, as shown in the following Razor Pages example:</p>
+<pre><code class="lang-csharp" highlight-lines="3-6">public async Task&lt;IActionResult&gt; OnPostAsync()
+{
+    if (!ModelState.IsValid)
+    {
+        return Page();
+    }
+
+    _context.Movies.Add(Movie);
+    await _context.SaveChangesAsync();
+
+    return RedirectToPage("./Index");
+}
+</code></pre>
+<p>For ASP.NET Core MVC with controllers and views, the following example shows how to check <code>ModelState.IsValid</code> inside of a controller action:</p>
+<pre><code class="lang-csharp" highlight-lines="3-6">public async Task&lt;IActionResult&gt; Create(Movie movie)
+{
+    if (!ModelState.IsValid)
+    {
+        return View(movie);
+    }
+
+    _context.Movies.Add(movie);
+    await _context.SaveChangesAsync();
+
+    return RedirectToAction(nameof(Index));
+}
+</code></pre>
+<p>Web API controllers don't have to check <code>ModelState.IsValid</code> if they have the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.apicontrollerattribute" data-linktype="absolute-path">[ApiController]</a> attribute. In that case, an automatic HTTP 400 response containing error details is returned when model state is invalid. For more information, see <a href="https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-9.0#automatic-http-400-responses" data-linktype="relative-path">Automatic HTTP 400 responses</a>.</p>
+<h2 id="rerun-validation">Rerun validation</h2>
+<p>Validation is automatic, but you might want to repeat it manually. For example, you might compute a value for a property and want to rerun validation after setting the property to the computed value. To rerun validation, call <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.modelstatedictionary.clearvalidationstate" class="no-loc" data-linktype="absolute-path">ModelStateDictionary.ClearValidationState</a> to clear validation specific to the model being validated followed by <code>TryValidateModel</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="6-10">public async Task&lt;IActionResult&gt; OnPostTryValidateAsync()
+{
+    var modifiedReleaseDate = DateTime.Now.Date;
+    Movie.ReleaseDate = modifiedReleaseDate;
+
+    ModelState.ClearValidationState(nameof(Movie));
+    if (!TryValidateModel(Movie, nameof(Movie)))
+    {
+        return Page();
+    }
+
+    _context.Movies.Add(Movie);
+    await _context.SaveChangesAsync();
+
+    return RedirectToPage("./Index");
+}
+</code></pre>
+<h2 id="validation-attributes">Validation attributes</h2>
+<p>Validation attributes let you specify validation rules for model properties. The following example from the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app</a> shows a model class that is annotated with validation attributes. The <code>[ClassicMovie]</code> attribute is a custom validation attribute and the others are built in. Not shown is <code>[ClassicMovieWithClientValidator]</code>, which shows an alternative way to implement a custom attribute.</p>
+<pre><code class="lang-csharp">public class Movie
+{
+    public int Id { get; set; }
+
+    [Required]
+    [StringLength(100)]
+    public string Title { get; set; } = null!;
+
+    [ClassicMovie(1960)]
+    [DataType(DataType.Date)]
+    [Display(Name = "Release Date")]
+    public DateTime ReleaseDate { get; set; }
+
+    [Required]
+    [StringLength(1000)]
+    public string Description { get; set; } = null!;
+
+    [Range(0, 999.99)]
+    public decimal Price { get; set; }
+
+    public Genre Genre { get; set; }
+
+    public bool Preorder { get; set; }
+}
+</code></pre>
+<h2 id="built-in-attributes">Built-in attributes</h2>
+<p>Here are some of the built-in validation attributes:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.validation.validateneverattribute" data-linktype="absolute-path">[ValidateNever]</a>: Indicates that a property or parameter should be excluded from validation.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.creditcardattribute" data-linktype="absolute-path">[CreditCard]</a>: Validates that the property has a credit card format. Requires <a href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.js" data-linktype="external">jQuery Validation Additional Methods</a>.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.compareattribute" data-linktype="absolute-path">[Compare]</a>: Validates that two properties in a model match.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.emailaddressattribute" data-linktype="absolute-path">[EmailAddress]</a>: Validates that the property has an email format.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.phoneattribute" data-linktype="absolute-path">[Phone]</a>: Validates that the property has a telephone number format.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.rangeattribute" data-linktype="absolute-path">[Range]</a>: Validates that the property value falls within a specified range.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.regularexpressionattribute" data-linktype="absolute-path">[RegularExpression]</a>: Validates that the property value matches a specified regular expression.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute" data-linktype="absolute-path">[Required]</a>: Validates that the field isn't null. See <a href="#non-nullable-reference-types-and-the-required-attribute" data-linktype="self-bookmark"><code>[Required]</code> attribute</a> for details about this attribute's behavior.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute" data-linktype="absolute-path">[StringLength]</a>: Validates that a string property value doesn't exceed a specified length limit.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.urlattribute" data-linktype="absolute-path">[Url]</a>: Validates that the property has a URL format.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.remoteattribute" data-linktype="absolute-path">[Remote]</a>: Validates input on the client by calling an action method on the server. See <a href="#remote-attribute" data-linktype="self-bookmark"><code>[Remote]</code> attribute</a> for details about this attribute's behavior.</li>
+</ul>
+<p>A complete list of validation attributes can be found in the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations" class="no-loc" data-linktype="absolute-path">System.ComponentModel.DataAnnotations</a> namespace.</p>
+<h3 id="error-messages">Error messages</h3>
+<p>Validation attributes let you specify the error message to be displayed for invalid input. For example:</p>
+<pre><code class="lang-csharp">[StringLength(8, ErrorMessage = "Name length can't be more than 8.")]
+</code></pre>
+<p>Internally, the attributes call <a href="https://learn.microsoft.com/en-us/dotnet/api/system.string.format" class="no-loc" data-linktype="absolute-path">String.Format</a> with a placeholder for the field name and sometimes additional placeholders. For example:</p>
+<pre><code class="lang-csharp">[StringLength(8, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
+</code></pre>
+<p>When applied to a <code>Name</code> property, the error message created by the preceding code would be "Name length must be between 6 and 8.".</p>
+<p>To find out which parameters are passed to <code>String.Format</code> for a particular attribute's error message, see the <a href="https://github.com/dotnet/runtime/tree/main/src/libraries/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations" data-linktype="external">DataAnnotations source code</a>.</p>
+<h2 id="non-nullable-reference-types-and-the-required-attribute">Non-nullable reference types and the [Required] attribute</h2>
+<p>The validation system treats non-nullable parameters or bound properties as if they had a <code>[Required(AllowEmptyStrings = true)]</code> attribute. By <a href="https://learn.microsoft.com/en-us/dotnet/csharp/nullable-references#nullable-contexts" data-linktype="absolute-path">enabling <code>Nullable</code> contexts</a>, MVC implicitly starts validating non-nullable properties <a href="#ngen" data-linktype="self-bookmark">on non-generic types</a> or parameters as if they had been attributed with the <code>[Required(AllowEmptyStrings = true)]</code> attribute. Consider the following code:</p>
+<pre><code class="lang-csharp">public class Person
+{
+    public string Name { get; set; }
+}
+</code></pre>
+<p>If the app was built with <code>&lt;Nullable&gt;enable&lt;/Nullable&gt;</code>, a missing value for <code>Name</code> in a JSON or form post results in a validation error. Use a nullable reference type to allow null or missing values to be specified for the <code>Name</code> property:</p>
+<pre><code class="lang-csharp">public class Person
+{
+    public string? Name { get; set; }
+}
+</code></pre>
+<p>This behavior can be disabled by configuring <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.mvcoptions.suppressimplicitrequiredattributefornonnullablereferencetypes#microsoft-aspnetcore-mvc-mvcoptions-suppressimplicitrequiredattributefornonnullablereferencetypes" class="no-loc" data-linktype="absolute-path">SuppressImplicitRequiredAttributeForNonNullableReferenceTypes</a> in <code>Program.cs</code>:</p>
+<pre><code class="lang-csharp">builder.Services.AddControllers(
+    options =&gt; options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
+</code></pre>
+<p><a name="ngen"></a></p>
+<h2 id="non-nullable-properties-on-generic-types-and-required-attribute">Non-nullable properties on generic types and [Required] attribute</h2>
+<p>Non-nullable properties on generic types must include the <code>[Required]</code> attribute when the type is required. In the following code, <code>TestRequired</code> is not required:</p>
+<pre><code class="lang-csharp" highlight-lines="3">public class WeatherForecast&lt;T&gt;
+{
+    public string TestRequired { get; set; } = null!;
+    public T? Inner { get; set; }
+}
+</code></pre>
+<p>In the following code, <code>TestRequired</code> is explicitly marked as required:</p>
+<pre><code class="lang-csharp" highlight-lines="5-6">using System.ComponentModel.DataAnnotations;
+
+public class WeatherForecast&lt;T&gt;
+{
+    [Required]
+    public string TestRequired { get; set; } = null!;
+    public T? Inner { get; set; }
+}
+</code></pre><h3 id="required-validation-on-the-server">[Required] validation on the server</h3>
+<p>On the server, a required value is considered missing if the property is null. A non-nullable field is always valid, and the <code>[Required]</code> attribute's error message is never displayed.</p>
+<p>However, model binding for a non-nullable property may fail, resulting in an error message such as <code>The value '' is invalid</code>. To specify a custom error message for server-side validation of non-nullable types, you have the following options:</p>
+<ul>
+<li><p>Make the field nullable (for example, <code>decimal?</code> instead of <code>decimal</code>). <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/nullable-types/" data-linktype="absolute-path">Nullable&lt;T&gt;</a> value types are treated like standard nullable types.</p>
+</li>
+<li><p>Specify the default error message to be used by model binding, as shown in the following example:</p>
+<pre><code class="lang-csharp" highlight-lines="5-6">builder.Services.AddRazorPages()
+    .AddMvcOptions(options =&gt;
+    {
+        options.MaxModelValidationErrors = 50;
+        options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
+            _ =&gt; "The field is required.");
+    });
+
+builder.Services.AddSingleton
+    &lt;IValidationAttributeAdapterProvider, CustomValidationAttributeAdapterProvider&gt;();
+</code></pre>
+<p>For more information about model binding errors that you can set default messages for, see <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.metadata.defaultmodelbindingmessageprovider#methods" class="no-loc" data-linktype="absolute-path">DefaultModelBindingMessageProvider</a>.</p>
+</li>
+</ul>
+<h3 id="required-validation-on-the-client">[Required] validation on the client</h3>
+<p>Non-nullable types and strings are handled differently on the client compared to the server. On the client:</p>
+<ul>
+<li>A value is considered present only if input is entered for it. Therefore, client-side validation handles non-nullable types the same as nullable types.</li>
+<li>Whitespace in a string field is considered valid input by the jQuery Validation <a href="https://jqueryvalidation.org/required-method/" data-linktype="external">required</a> method. Server-side validation considers a required string field invalid if only whitespace is entered.</li>
+</ul>
+<p>As noted earlier, non-nullable types are treated as though they had a <code>[Required(AllowEmptyStrings = true)]</code> attribute. That means you get client-side validation even if you don't apply the <code>[Required(AllowEmptyStrings = true)]</code> attribute. But if you don't use the attribute, you get a default error message. To specify a custom error message, use the attribute.</p>
+<h2 id="remote-attribute">[Remote] attribute</h2>
+<p>The <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.remoteattribute" data-linktype="absolute-path">[Remote]</a> attribute implements client-side validation that requires calling a method on the server to determine whether field input is valid. For example, the app may need to verify whether a user name is already in use.</p>
+<p>To implement remote validation:</p>
+<ol>
+<li><p>Create an action method for JavaScript to call.  The jQuery Validation <a href="https://jqueryvalidation.org/remote-method/" data-linktype="external">remote</a> method expects a JSON response:</p>
+<ul>
+<li><code>true</code> means the input data is valid.</li>
+<li><code>false</code>, <code>undefined</code>, or <code>null</code> means the input is invalid. Display the default error message.</li>
+<li>Any other string means the input is invalid. Display the string as a custom error message.</li>
+</ul>
+<p>Here's an example of an action method that returns a custom error message:</p>
+<pre><code class="lang-csharp">[AcceptVerbs("GET", "POST")]
+public IActionResult VerifyEmail(string email)
+{
+    if (!_userService.VerifyEmail(email))
+    {
+        return Json($"Email {email} is already in use.");
+    }
+
+    return Json(true);
+}
+</code></pre>
+</li>
+<li><p>In the model class, annotate the property with a <code>[Remote]</code> attribute that points to the validation action method, as shown in the following example:</p>
+<pre><code class="lang-csharp">[Remote(action: "VerifyEmail", controller: "Users")]
+public string Email { get; set; } = null!;
+</code></pre>
+</li>
+</ol>
+<h3 id="additional-fields">Additional fields</h3>
+<p>The <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.remoteattribute.additionalfields" class="no-loc" data-linktype="absolute-path">AdditionalFields</a> property of the <code>[Remote]</code> attribute lets you validate combinations of fields against data on the server. For example, if the <code>User</code> model had <code>FirstName</code> and <code>LastName</code> properties, you might want to verify that no existing users already have that pair of names. The following example shows how to use <code>AdditionalFields</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="1,5">[Remote(action: "VerifyName", controller: "Users", AdditionalFields = nameof(LastName))]
+[Display(Name = "First Name")]
+public string FirstName { get; set; } = null!;
+
+[Remote(action: "VerifyName", controller: "Users", AdditionalFields = nameof(FirstName))]
+[Display(Name = "Last Name")]
+public string LastName { get; set; } = null!;
+</code></pre>
+<p><code>AdditionalFields</code> could be set explicitly to the strings "FirstName" and "LastName", but using the <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/nameof" data-linktype="absolute-path">nameof</a> operator simplifies later refactoring. The action method for this validation must accept both <code>firstName</code> and <code>lastName</code> arguments:</p>
+<pre><code class="lang-csharp">[AcceptVerbs("GET", "POST")]
+public IActionResult VerifyName(string firstName, string lastName)
+{
+    if (!_userService.VerifyName(firstName, lastName))
+    {
+        return Json($"A user named {firstName} {lastName} already exists.");
+    }
+
+    return Json(true);
+}
+</code></pre>
+<p>When the user enters a first or last name, JavaScript makes a remote call to see if that pair of names has been taken.</p>
+<p>To validate two or more additional fields, provide them as a comma-delimited list. For example, to add a <code>MiddleName</code> property to the model, set the <code>[Remote]</code> attribute as shown in the following example:</p>
+<pre><code class="lang-csharp">[Remote(action: "VerifyName", controller: "Users",
+    AdditionalFields = nameof(FirstName) + "," + nameof(LastName))]
+public string MiddleName { get; set; }
+</code></pre>
+<p><code>AdditionalFields</code>, like all attribute arguments, must be a constant expression. Therefore, don't use an <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interpolated-strings" data-linktype="absolute-path">interpolated string</a> or call <a href="https://learn.microsoft.com/en-us/dotnet/api/system.string.join" class="no-loc" data-linktype="absolute-path">Join</a> to initialize <code>AdditionalFields</code>.</p>
+<h2 id="alternatives-to-built-in-attributes">Alternatives to built-in attributes</h2>
+<p>If you need validation not provided by built-in attributes, you can:</p>
+<ul>
+<li><a href="#custom-attributes" data-linktype="self-bookmark">Create custom attributes</a>.</li>
+<li><a href="#ivalidatableobject" data-linktype="self-bookmark">Implement IValidatableObject</a>.</li>
+</ul>
+<h2 id="custom-attributes">Custom attributes</h2>
+<p>For scenarios that the built-in validation attributes don't handle, you can create custom validation attributes. Create a class that inherits from <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute" class="no-loc" data-linktype="absolute-path">ValidationAttribute</a>, and override the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.isvalid" class="no-loc" data-linktype="absolute-path">IsValid</a> method.</p>
+<p>The <code>IsValid</code> method accepts an object named <em>value</em>, which is the input to be validated. An overload also accepts a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationcontext" class="no-loc" data-linktype="absolute-path">ValidationContext</a> object, which provides additional information, such as the model instance created by model binding.</p>
+<p>The following example validates that the release date for a movie in the <em>Classic</em> genre isn't later than a specified year. The <code>[ClassicMovie]</code> attribute:</p>
+<ul>
+<li>Is only run on the server.</li>
+<li>For Classic movies, validates the release date:</li>
+</ul>
+<pre><code class="lang-csharp">public class ClassicMovieAttribute : ValidationAttribute
+{
+    public ClassicMovieAttribute(int year)
+        =&gt; Year = year;
+
+    public int Year { get; }
+
+    public string GetErrorMessage() =&gt;
+        $"Classic movies must have a release year no later than {Year}.";
+
+    protected override ValidationResult? IsValid(
+        object? value, ValidationContext validationContext)
+    {
+        var movie = (Movie)validationContext.ObjectInstance;
+        var releaseYear = ((DateTime)value!).Year;
+
+        if (movie.Genre == Genre.Classic &amp;&amp; releaseYear &gt; Year)
+        {
+            return new ValidationResult(GetErrorMessage());
+        }
+
+        return ValidationResult.Success;
+    }
+}
+</code></pre>
+<p>The <code>movie</code> variable in the preceding example represents a <code>Movie</code> object that contains the data from the form submission. When validation fails, a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationresult" class="no-loc" data-linktype="absolute-path">ValidationResult</a> with an error message is returned.</p>
+<h2 id="ivalidatableobject">IValidatableObject</h2>
+<p>The preceding example works only with <code>Movie</code> types. Another option for class-level validation is to implement <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.ivalidatableobject" class="no-loc" data-linktype="absolute-path">IValidatableObject</a> in the model class, as shown in the following example:</p>
+<pre><code class="lang-csharp" highlight-lines="1,26-34">public class ValidatableMovie : IValidatableObject
+{
+    private const int _classicYear = 1960;
+
+    public int Id { get; set; }
+
+    [Required]
+    [StringLength(100)]
+    public string Title { get; set; } = null!;
+
+    [DataType(DataType.Date)]
+    [Display(Name = "Release Date")]
+    public DateTime ReleaseDate { get; set; }
+
+    [Required]
+    [StringLength(1000)]
+    public string Description { get; set; } = null!;
+
+    [Range(0, 999.99)]
+    public decimal Price { get; set; }
+
+    public Genre Genre { get; set; }
+
+    public bool Preorder { get; set; }
+
+    public IEnumerable&lt;ValidationResult&gt; Validate(ValidationContext validationContext)
+    {
+        if (Genre == Genre.Classic &amp;&amp; ReleaseDate.Year &gt; _classicYear)
+        {
+            yield return new ValidationResult(
+                $"Classic movies must have a release year no later than {_classicYear}.",
+                new[] { nameof(ReleaseDate) });
+        }
+    }
+}
+</code></pre>
+<h2 id="top-level-node-validation">Top-level node validation</h2>
+<p>Top-level nodes include:</p>
+<ul>
+<li>Action parameters</li>
+<li>Controller properties</li>
+<li>Page handler parameters</li>
+<li>Page model properties</li>
+</ul>
+<p>Model-bound top-level nodes are validated in addition to validating model properties. In the following example from the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app</a>, the <code>VerifyPhone</code> method uses the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.regularexpressionattribute" class="no-loc" data-linktype="absolute-path">RegularExpressionAttribute</a> to validate the <code>phone</code> action parameter:</p>
+<pre><code class="lang-csharp">[AcceptVerbs("GET", "POST")]
+public IActionResult VerifyPhone(
+    [RegularExpression(@"^\d{3}-\d{3}-\d{4}$")] string phone)
+{
+    if (!ModelState.IsValid)
+    {
+        return Json($"Phone {phone} has an invalid format. Format: ###-###-####");
+    }
+
+    return Json(true);
+}
+</code></pre>
+<p>Top-level nodes can use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.bindrequiredattribute" class="no-loc" data-linktype="absolute-path">BindRequiredAttribute</a> with validation attributes. In the following example from the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app</a>, the <code>CheckAge</code> method specifies that the <code>age</code> parameter must be bound from the query string when the form is submitted:</p>
+<pre><code class="lang-csharp">[HttpPost]
+public IActionResult CheckAge([BindRequired, FromQuery] int age)
+{
+</code></pre>
+<p>In the Check Age page (<code>CheckAge.cshtml</code>), there are two forms. The first form submits an <code>Age</code> value of <code>99</code> as a query string parameter: <code>https://localhost:5001/Users/CheckAge?Age=99</code>.</p>
+<p>When a properly formatted <code>age</code> parameter from the query string is submitted, the form validates.</p>
+<p>The second form on the Check Age page submits the <code>Age</code> value in the body of the request, and validation fails. Binding fails because the <code>age</code> parameter must come from a query string.</p>
+<h2 id="maximum-errors">Maximum errors</h2>
+<p>Validation stops when the maximum number of errors is reached (200 by default). You can configure this number with the following code in <code>Program.cs</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="4">builder.Services.AddRazorPages()
+    .AddMvcOptions(options =&gt;
+    {
+        options.MaxModelValidationErrors = 50;
+        options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
+            _ =&gt; "The field is required.");
+    });
+
+builder.Services.AddSingleton
+    &lt;IValidationAttributeAdapterProvider, CustomValidationAttributeAdapterProvider&gt;();
+</code></pre>
+<h2 id="maximum-recursion">Maximum recursion</h2>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.validation.validationvisitor" class="no-loc" data-linktype="absolute-path">ValidationVisitor</a> traverses the object graph of the model being validated. For models that are deep or are infinitely recursive, validation may result in stack overflow. <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.mvcoptions.maxvalidationdepth" class="no-loc" data-linktype="absolute-path">MvcOptions.MaxValidationDepth</a> provides a way to stop validation early if the visitor recursion exceeds a configured depth. The default value of <code>MvcOptions.MaxValidationDepth</code> is 32.</p>
+<h2 id="automatic-short-circuit">Automatic short-circuit</h2>
+<p>Validation is automatically short-circuited (skipped) if the model graph doesn't require validation. Objects that the runtime skips validation for include collections of primitives (such as <code>byte[]</code>, <code>string[]</code>, <code>Dictionary&lt;string, string&gt;</code>) and complex object graphs that don't have any validators.</p>
+<h2 id="client-side-validation">Client-side validation</h2>
+<p>Client-side validation prevents submission until the form is valid. The Submit button runs JavaScript that either submits the form or displays error messages.</p>
+<p>Client-side validation avoids an unnecessary round trip to the server when there are input errors on a form. The following script references in <code>_Layout.cshtml</code> and <code>_ValidationScriptsPartial.cshtml</code> support client-side validation:</p>
+<pre><code class="lang-cshtml">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"&gt;&lt;/script&gt;
+</code></pre>
+<pre><code class="lang-cshtml">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.js"&gt;&lt;/script&gt;
+</code></pre>
+<p>The <a href="https://github.com/aspnet/jquery-validation-unobtrusive" data-linktype="external">jQuery Unobtrusive Validation</a> script is a custom Microsoft front-end library that builds on the popular <a href="https://jqueryvalidation.org/" data-linktype="external">jQuery Validation</a> plugin. Without jQuery Unobtrusive Validation, you would have to code the same validation logic in two places: once in the server-side validation attributes on model properties, and then again in client-side scripts. Instead, <a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/intro?view=aspnetcore-9.0" data-linktype="relative-path">Tag Helpers</a> and <a href="../views/overview553c.html?view=aspnetcore-9.0" data-linktype="relative-path">HTML helpers</a> use the validation attributes and type metadata from model properties to render HTML 5 <code>data-</code> attributes for the form elements that need validation. jQuery Unobtrusive Validation parses the <code>data-</code> attributes and passes the logic to jQuery Validation, effectively "copying" the server-side validation logic to the client. You can display validation errors on the client using tag helpers as shown here:</p>
+<pre><code class="lang-cshtml" highlight-lines="3-4">&lt;div class="form-group"&gt;
+    &lt;label asp-for="Movie.ReleaseDate" class="control-label"&gt;&lt;/label&gt;
+    &lt;input asp-for="Movie.ReleaseDate" class="form-control" /&gt;
+    &lt;span asp-validation-for="Movie.ReleaseDate" class="text-danger"&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<p>The preceding tag helpers render the following HTML:</p>
+<pre><code class="lang-html">&lt;div class="form-group"&gt;
+    &lt;label class="control-label" for="Movie_ReleaseDate"&gt;Release Date&lt;/label&gt;
+    &lt;input class="form-control" type="date" data-val="true"
+        data-val-required="The Release Date field is required."
+        id="Movie_ReleaseDate" name="Movie.ReleaseDate" value=""&gt;
+    &lt;span class="text-danger field-validation-valid"
+        data-valmsg-for="Movie.ReleaseDate" data-valmsg-replace="true"&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Notice that the <code>data-</code> attributes in the HTML output correspond to the validation attributes for the <code>Movie.ReleaseDate</code> property. The <code>data-val-required</code> attribute contains an error message to display if the user doesn't fill in the release date field. jQuery Unobtrusive Validation passes this value to the jQuery Validation <a href="https://jqueryvalidation.org/required-method/" data-linktype="external">required()</a> method, which then displays that message in the accompanying <strong>&lt;span&gt;</strong> element.</p>
+<p>Data type validation is based on the .NET type of a property, unless that is overridden by a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype" data-linktype="absolute-path">[DataType]</a> attribute. Browsers have their own default error messages, but the jQuery Validation Unobtrusive Validation package can override those messages. <code>[DataType]</code> attributes and subclasses such as <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.emailaddressattribute" data-linktype="absolute-path">[EmailAddress]</a> let you specify the error message.</p>
+<h2 id="unobtrusive-validation">Unobtrusive validation</h2>
+<p>For information on unobtrusive validation, see <a href="https://github.com/dotnet/AspNetCore.Docs/issues/1111" data-linktype="external">this GitHub issue</a>.</p>
+<h3 id="add-validation-to-dynamic-forms">Add Validation to Dynamic Forms</h3>
+<p>jQuery Unobtrusive Validation passes validation logic and parameters to jQuery Validation when the page first loads. Therefore, validation doesn't work automatically on dynamically generated forms. To enable validation, tell jQuery Unobtrusive Validation to parse the dynamic form immediately after you create it. For example, the following code sets up client-side validation on a form added via AJAX.</p>
+<pre><code class="lang-javascript">$.get({
+    url: "https://url/that/returns/a/form",
+    dataType: "html",
+    error: function(jqXHR, textStatus, errorThrown) {
+        alert(textStatus + ": Couldn't add form. " + errorThrown);
+    },
+    success: function(newFormHTML) {
+        var container = document.getElementById("form-container");
+        container.insertAdjacentHTML("beforeend", newFormHTML);
+        var forms = container.getElementsByTagName("form");
+        var newForm = forms[forms.length - 1];
+        $.validator.unobtrusive.parse(newForm);
+    }
+})
+</code></pre>
+<p>The <code>$.validator.unobtrusive.parse()</code> method accepts a jQuery selector for its one argument. This method tells jQuery Unobtrusive Validation to parse the <code>data-</code> attributes of forms within that selector. The values of those attributes are then passed to the jQuery Validation plugin.</p>
+<h3 id="add-validation-to-dynamic-controls">Add Validation to Dynamic Controls</h3>
+<p>The <code>$.validator.unobtrusive.parse()</code> method works on an entire form, not on individual dynamically generated controls, such as <code>&lt;input&gt;</code> and <code>&lt;select/&gt;</code>. To reparse the form, remove the validation data that was added when the form was parsed earlier, as shown in the following example:</p>
+<pre><code class="lang-javascript">$.get({
+    url: "https://url/that/returns/a/control",
+    dataType: "html",
+    error: function(jqXHR, textStatus, errorThrown) {
+        alert(textStatus + ": Couldn't add control. " + errorThrown);
+    },
+    success: function(newInputHTML) {
+        var form = document.getElementById("my-form");
+        form.insertAdjacentHTML("beforeend", newInputHTML);
+        $(form).removeData("validator")    // Added by jQuery Validation
+               .removeData("unobtrusiveValidation");   // Added by jQuery Unobtrusive Validation
+        $.validator.unobtrusive.parse(form);
+    }
+})
+</code></pre>
+<h2 id="custom-client-side-validation">Custom client-side validation</h2>
+<p>Custom client-side validation is done by generating <code>data-</code> HTML attributes that work with a custom jQuery Validation adapter. The following sample adapter code was written for the <code>[ClassicMovie]</code> and <code>[ClassicMovieWithClientValidator]</code> attributes that were introduced earlier in this article:</p>
+<pre><code class="lang-javascript">$.validator.addMethod('classicmovie', function (value, element, params) {
+    var genre = $(params[0]).val(), year = params[1], date = new Date(value);
+
+    // The Classic genre has a value of '0'.
+    if (genre &amp;&amp; genre.length &gt; 0 &amp;&amp; genre[0] === '0') {
+        // The release date for a Classic is valid if it's no greater than the given year.
+        return date.getUTCFullYear() &lt;= year;
+    }
+
+    return true;
+});
+
+$.validator.unobtrusive.adapters.add('classicmovie', ['year'], function (options) {
+    var element = $(options.form).find('select#Movie_Genre')[0];
+
+    options.rules['classicmovie'] = [element, parseInt(options.params['year'])];
+    options.messages['classicmovie'] = options.message;
+});
+</code></pre>
+<p>For information about how to write adapters, see the <a href="https://jqueryvalidation.org/documentation/" data-linktype="external">jQuery Validation documentation</a>.</p>
+<p>The use of an adapter for a given field is triggered by <code>data-</code> attributes that:</p>
+<ul>
+<li>Flag the field as being subject to validation (<code>data-val="true"</code>).</li>
+<li>Identify a validation rule name and error message text (for example, <code>data-val-rulename="Error message."</code>).</li>
+<li>Provide any additional parameters the validator needs (for example, <code>data-val-rulename-param1="value"</code>).</li>
+</ul>
+<p>The following example shows the <code>data-</code> attributes for the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app's</a> <code>ClassicMovie</code> attribute:</p>
+<pre><code class="lang-html">&lt;input class="form-control" type="date"
+    data-val="true"
+    data-val-classicmovie="Classic movies must have a release year no later than 1960."
+    data-val-classicmovie-year="1960"
+    data-val-required="The Release Date field is required."
+    id="Movie_ReleaseDate" name="Movie.ReleaseDate" value=""&gt;
+</code></pre>
+<p>As noted earlier, <a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/intro?view=aspnetcore-9.0" data-linktype="relative-path">Tag Helpers</a> and <a href="../views/overview553c.html?view=aspnetcore-9.0" data-linktype="relative-path">HTML helpers</a> use information from validation attributes to render <code>data-</code> attributes. There are two options for writing code that results in the creation of custom <code>data-</code> HTML attributes:</p>
+<ul>
+<li>Create a class that derives from <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.dataannotations.attributeadapterbase-1" class="no-loc" data-linktype="absolute-path">AttributeAdapterBase&lt;TAttribute&gt;</a> and a class that implements <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.dataannotations.ivalidationattributeadapterprovider" class="no-loc" data-linktype="absolute-path">IValidationAttributeAdapterProvider</a>, and register your attribute and its adapter in DI. This method follows the <a href="https://wikipedia.org/wiki/Single_responsibility_principle" data-linktype="external">single responsibility principle</a> in that server-related and client-related validation code is in separate classes. The adapter also has the advantage that since it's registered in DI, other services in DI are available to it if needed.</li>
+<li>Implement <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.validation.iclientmodelvalidator" class="no-loc" data-linktype="absolute-path">IClientModelValidator</a> in your <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute" class="no-loc" data-linktype="absolute-path">ValidationAttribute</a> class. This method might be appropriate if the attribute doesn't do any server-side validation and doesn't need any services from DI.</li>
+</ul>
+<h3 id="attributeadapter-for-client-side-validation">AttributeAdapter for client-side validation</h3>
+<p>This method of rendering <code>data-</code> attributes in HTML is used by the <code>ClassicMovie</code> attribute in the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app</a>. To add client validation by using this method:</p>
+<ol>
+<li><p>Create an attribute adapter class for the custom validation attribute. Derive the class from <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.dataannotations.attributeadapterbase-1" class="no-loc" data-linktype="absolute-path">AttributeAdapterBase&lt;TAttribute&gt;</a>. Create an <code>AddValidation</code> method that adds <code>data-</code> attributes to the rendered output, as shown in this example:</p>
+<pre><code class="lang-csharp">public class ClassicMovieAttributeAdapter : AttributeAdapterBase&lt;ClassicMovieAttribute&gt;
+{
+    public ClassicMovieAttributeAdapter(
+        ClassicMovieAttribute attribute, IStringLocalizer? stringLocalizer)
+        : base(attribute, stringLocalizer)
+    {
+
+    }
+
+    public override void AddValidation(ClientModelValidationContext context)
+    {
+        MergeAttribute(context.Attributes, "data-val", "true");
+        MergeAttribute(context.Attributes, "data-val-classicmovie", GetErrorMessage(context));
+
+        var year = Attribute.Year.ToString(CultureInfo.InvariantCulture);
+        MergeAttribute(context.Attributes, "data-val-classicmovie-year", year);
+    }
+
+    public override string GetErrorMessage(ModelValidationContextBase validationContext)
+        =&gt; Attribute.GetErrorMessage();
+}
+</code></pre>
+</li>
+<li><p>Create an adapter provider class that implements <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.dataannotations.ivalidationattributeadapterprovider" class="no-loc" data-linktype="absolute-path">IValidationAttributeAdapterProvider</a>. In the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.dataannotations.ivalidationattributeadapterprovider.getattributeadapter" class="no-loc" data-linktype="absolute-path">GetAttributeAdapter</a> method pass in the custom attribute to the adapter's constructor, as shown in this example:</p>
+<pre><code class="lang-csharp">public class CustomValidationAttributeAdapterProvider : IValidationAttributeAdapterProvider
+{
+    private readonly IValidationAttributeAdapterProvider baseProvider =
+        new ValidationAttributeAdapterProvider();
+
+    public IAttributeAdapter? GetAttributeAdapter(
+        ValidationAttribute attribute, IStringLocalizer? stringLocalizer)
+    {
+        if (attribute is ClassicMovieAttribute classicMovieAttribute)
+        {
+            return new ClassicMovieAttributeAdapter(classicMovieAttribute, stringLocalizer);
+        }
+
+        return baseProvider.GetAttributeAdapter(attribute, stringLocalizer);
+    }
+}
+</code></pre>
+</li>
+<li><p>Register the adapter provider for DI in <code>Program.cs</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="9-10">builder.Services.AddRazorPages()
+    .AddMvcOptions(options =&gt;
+    {
+        options.MaxModelValidationErrors = 50;
+        options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
+            _ =&gt; "The field is required.");
+    });
+
+builder.Services.AddSingleton
+    &lt;IValidationAttributeAdapterProvider, CustomValidationAttributeAdapterProvider&gt;();
+</code></pre>
+</li>
+</ol>
+<h3 id="iclientmodelvalidator-for-client-side-validation">IClientModelValidator for client-side validation</h3>
+<p>This method of rendering <code>data-</code> attributes in HTML is used by the <code>ClassicMovieWithClientValidator</code> attribute in the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app</a>. To add client validation by using this method:</p>
+<ul>
+<li><p>In the custom validation attribute, implement the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.validation.iclientmodelvalidator" class="no-loc" data-linktype="absolute-path">IClientModelValidator</a> interface and create an <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.validation.iclientmodelvalidator.addvalidation" class="no-loc" data-linktype="absolute-path">AddValidation</a> method. In the <code>AddValidation</code> method, add <code>data-</code> attributes for validation, as shown in the following example:</p>
+<pre><code class="lang-csharp">public class ClassicMovieWithClientValidatorAttribute :
+    ValidationAttribute, IClientModelValidator
+{
+    public ClassicMovieWithClientValidatorAttribute(int year)
+        =&gt; Year = year;
+
+    public int Year { get; }
+
+    public void AddValidation(ClientModelValidationContext context)
+    {
+        MergeAttribute(context.Attributes, "data-val", "true");
+        MergeAttribute(context.Attributes, "data-val-classicmovie", GetErrorMessage());
+
+        var year = Year.ToString(CultureInfo.InvariantCulture);
+        MergeAttribute(context.Attributes, "data-val-classicmovie-year", year);
+    }
+
+    public string GetErrorMessage() =&gt;
+        $"Classic movies must have a release year no later than {Year}.";
+
+    protected override ValidationResult? IsValid(
+        object? value, ValidationContext validationContext)
+    {
+        var movie = (Movie)validationContext.ObjectInstance;
+        var releaseYear = ((DateTime)value!).Year;
+
+        if (movie.Genre == Genre.Classic &amp;&amp; releaseYear &gt; Year)
+        {
+            return new ValidationResult(GetErrorMessage());
+        }
+
+        return ValidationResult.Success;
+    }
+
+    private static bool MergeAttribute(IDictionary&lt;string, string&gt; attributes, string key, string value)
+    {
+        if (attributes.ContainsKey(key))
+        {
+            return false;
+        }
+
+        attributes.Add(key, value);
+        return true;
+    }
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="disable-client-side-validation">Disable client-side validation</h2>
+<p>The following code disables client validation in Razor Pages:</p>
+<pre><code class="lang-csharp" highlight-lines="2-5">builder.Services.AddRazorPages()
+    .AddViewOptions(options =&gt;
+    {
+        options.HtmlHelperOptions.ClientValidationEnabled = false;
+    });
+</code></pre>
+<p>Other options to disable client-side validation:</p>
+<ul>
+<li>Comment out the reference to <code>_ValidationScriptsPartial</code> in all the <code>.cshtml</code> files.</li>
+<li>Remove the contents of the <em>Pages\Shared_ValidationScriptsPartial.cshtml</em> file.</li>
+</ul>
+<p>The preceding approach won't prevent client-side validation of ASP.NET Core Identity Razor class library. For more information, see <a href="https://learn.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-9.0" data-linktype="relative-path">Scaffold Identity in ASP.NET Core projects</a>.</p>
+<h2 id="additional-resources">Additional resources</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations" class="no-loc" data-linktype="absolute-path">System.ComponentModel.DataAnnotations</a></li>
+<li><a href="model-binding553c.html?view=aspnetcore-9.0" data-linktype="relative-path">Model Binding</a></li>
+</ul>
+</div>
+<div data-moniker="aspnetcore-3.1 aspnetcore-5.0">
+<p>This article explains how to validate user input in an ASP.NET Core MVC or Razor Pages app.</p>
+<p><a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">View or download sample code</a> (<a href="../../overview553c.html?view=aspnetcore-9.0#how-to-download-a-sample" data-linktype="relative-path">how to download</a>).</p>
+<h2 id="model-state-1">Model state</h2>
+<p>Model state represents errors that come from two subsystems: model binding and model validation. Errors that originate from <a href="model-binding553c.html?view=aspnetcore-9.0" data-linktype="relative-path">model binding</a> are generally data conversion errors. For example, an "x" is entered in an integer field. Model validation occurs after model binding and reports errors where data doesn't conform to business rules. For example, a 0 is entered in a field that expects a rating between 1 and 5.</p>
+<p>Both model binding and model validation occur before the execution of a controller action or a Razor Pages handler method. For web apps, it's the app's responsibility to inspect <code>ModelState.IsValid</code> and react appropriately. Web apps typically redisplay the page with an error message:</p>
+<pre><code class="lang-csharp" highlight-lines="3-6">public async Task&lt;IActionResult&gt; OnPostAsync()
+{
+    if (!ModelState.IsValid)
+    {
+        return Page();
+    }
+
+    _context.Movies.Add(Movie);
+    await _context.SaveChangesAsync();
+
+    return RedirectToPage("./Index");
+}
+</code></pre>
+<p>Web API controllers don't have to check <code>ModelState.IsValid</code> if they have the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.apicontrollerattribute" data-linktype="absolute-path">[ApiController]</a> attribute. In that case, an automatic HTTP 400 response containing error details is returned when model state is invalid. For more information, see <a href="https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-9.0#automatic-http-400-responses" data-linktype="relative-path">Automatic HTTP 400 responses</a>.</p>
+<h2 id="rerun-validation-1">Rerun validation</h2>
+<p>Validation is automatic, but you might want to repeat it manually. For example, you might compute a value for a property and want to rerun validation after setting the property to the computed value. To rerun validation, call <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.modelstatedictionary.clearvalidationstate" class="no-loc" data-linktype="absolute-path">ModelStateDictionary.ClearValidationState</a> to clear validation specific to the model being validated followed by <code>TryValidateModel</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="6-10">public async Task&lt;IActionResult&gt; OnPostTryValidateAsync()
+{
+    var modifiedReleaseDate = DateTime.Now.Date;
+    Movie.ReleaseDate = modifiedReleaseDate;
+
+    ModelState.ClearValidationState(nameof(Movie));
+    if (!TryValidateModel(Movie, nameof(Movie)))
+    {
+        return Page();
+    }
+
+    _context.Movies.Add(Movie);
+    await _context.SaveChangesAsync();
+
+    return RedirectToPage("./Index");
+}
+</code></pre>
+<h2 id="validation-attributes-1">Validation attributes</h2>
+<p>Validation attributes let you specify validation rules for model properties. The following example from the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app</a> shows a model class that is annotated with validation attributes. The <code>[ClassicMovie]</code> attribute is a custom validation attribute and the others are built in. Not shown is <code>[ClassicMovieWithClientValidator]</code>, which shows an alternative way to implement a custom attribute.</p>
+<pre><code class="lang-csharp">public class Movie
+{
+    public int Id { get; set; }
+
+    [Required]
+    [StringLength(100)]
+    public string Title { get; set; }
+
+    [ClassicMovie(1960)]
+    [DataType(DataType.Date)]
+    [Display(Name = "Release Date")]
+    public DateTime ReleaseDate { get; set; }
+
+    [Required]
+    [StringLength(1000)]
+    public string Description { get; set; }
+
+    [Range(0, 999.99)]
+    public decimal Price { get; set; }
+
+    public Genre Genre { get; set; }
+
+    public bool Preorder { get; set; }
+}
+</code></pre>
+<h2 id="built-in-attributes-1">Built-in attributes</h2>
+<p>Here are some of the built-in validation attributes:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.validation.validateneverattribute" data-linktype="absolute-path">[ValidateNever]</a>: Indicates that a property or parameter should be excluded from validation.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.creditcardattribute" data-linktype="absolute-path">[CreditCard]</a>: Validates that the property has a credit card format. Requires <a href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.js" data-linktype="external">jQuery Validation Additional Methods</a>.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.compareattribute" data-linktype="absolute-path">[Compare]</a>: Validates that two properties in a model match.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.emailaddressattribute" data-linktype="absolute-path">[EmailAddress]</a>: Validates that the property has an email format.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.phoneattribute" data-linktype="absolute-path">[Phone]</a>: Validates that the property has a telephone number format.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.rangeattribute" data-linktype="absolute-path">[Range]</a>: Validates that the property value falls within a specified range.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.regularexpressionattribute" data-linktype="absolute-path">[RegularExpression]</a>: Validates that the property value matches a specified regular expression.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute" data-linktype="absolute-path">[Required]</a>: Validates that the field isn't null. See <a href="#non-nullable-reference-types-and-the-required-attribute" data-linktype="self-bookmark"><code>[Required]</code> attribute</a> for details about this attribute's behavior.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute" data-linktype="absolute-path">[StringLength]</a>: Validates that a string property value doesn't exceed a specified length limit.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.urlattribute" data-linktype="absolute-path">[Url]</a>: Validates that the property has a URL format.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.remoteattribute" data-linktype="absolute-path">[Remote]</a>: Validates input on the client by calling an action method on the server. See <a href="#remote-attribute" data-linktype="self-bookmark"><code>[Remote]</code> attribute</a> for details about this attribute's behavior.</li>
+</ul>
+<p>A complete list of validation attributes can be found in the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations" class="no-loc" data-linktype="absolute-path">System.ComponentModel.DataAnnotations</a> namespace.</p>
+<h3 id="error-messages-1">Error messages</h3>
+<p>Validation attributes let you specify the error message to be displayed for invalid input. For example:</p>
+<pre><code class="lang-csharp">[StringLength(8, ErrorMessage = "Name length can't be more than 8.")]
+</code></pre>
+<p>Internally, the attributes call <a href="https://learn.microsoft.com/en-us/dotnet/api/system.string.format" class="no-loc" data-linktype="absolute-path">String.Format</a> with a placeholder for the field name and sometimes additional placeholders. For example:</p>
+<pre><code class="lang-csharp">[StringLength(8, ErrorMessage = "{0} length must be between {2} and {1}.", MinimumLength = 6)]
+</code></pre>
+<p>When applied to a <code>Name</code> property, the error message created by the preceding code would be "Name length must be between 6 and 8.".</p>
+<p>To find out which parameters are passed to <code>String.Format</code> for a particular attribute's error message, see the <a href="https://github.com/dotnet/runtime/tree/main/src/libraries/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations" data-linktype="external">DataAnnotations source code</a>.</p>
+<h2 id="non-nullable-reference-types-and-required-attribute">Non-nullable reference types and [Required] attribute</h2>
+<p>The validation system treats non-nullable parameters or bound properties as if they had a <code>[Required(AllowEmptyStrings = true)]</code> attribute. By <a href="https://learn.microsoft.com/en-us/dotnet/csharp/nullable-references#nullable-contexts" data-linktype="absolute-path">enabling <code>Nullable</code> contexts</a>, MVC implicitly starts validating non-nullable properties or parameters as if they had been attributed with the <code>[Required(AllowEmptyStrings = true)]</code> attribute. Consider the following code:</p>
+<pre><code class="lang-csharp">public class Person
+{
+    public string Name { get; set; }
+}
+</code></pre>
+<p>If the app was built with <code>&lt;Nullable&gt;enable&lt;/Nullable&gt;</code>, a missing value for <code>Name</code> in a JSON or form post results in a validation error. Use a nullable reference type to allow null or missing values to be specified for the <code>Name</code> property:</p>
+<pre><code class="lang-csharp">public class Person
+{
+    public string? Name { get; set; }
+}
+</code></pre>
+<p>This behavior can be disabled by configuring <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.mvcoptions.suppressimplicitrequiredattributefornonnullablereferencetypes#microsoft-aspnetcore-mvc-mvcoptions-suppressimplicitrequiredattributefornonnullablereferencetypes" class="no-loc" data-linktype="absolute-path">SuppressImplicitRequiredAttributeForNonNullableReferenceTypes</a> in <code>Startup.ConfigureServices</code>:</p>
+<pre><code class="lang-csharp">services.AddControllers(options =&gt; options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
+</code></pre>
+<h3 id="required-validation-on-the-server-1">[Required] validation on the server</h3>
+<p>On the server, a required value is considered missing if the property is null. A non-nullable field is always valid, and the <code>[Required]</code> attribute's error message is never displayed.</p>
+<p>However, model binding for a non-nullable property may fail, resulting in an error message such as <code>The value '' is invalid</code>. To specify a custom error message for server-side validation of non-nullable types, you have the following options:</p>
+<ul>
+<li><p>Make the field nullable (for example, <code>decimal?</code> instead of <code>decimal</code>). <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/nullable-types/" data-linktype="absolute-path">Nullable&lt;T&gt;</a> value types are treated like standard nullable types.</p>
+</li>
+<li><p>Specify the default error message to be used by model binding, as shown in the following example:</p>
+<pre><code class="lang-csharp" highlight-lines="5-6">services.AddRazorPages()
+    .AddMvcOptions(options =&gt;
+    {
+        options.MaxModelValidationErrors = 50;
+        options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
+            _ =&gt; "The field is required.");
+    });
+
+services.AddSingleton&lt;IValidationAttributeAdapterProvider,
+    CustomValidationAttributeAdapterProvider&gt;();
+</code></pre>
+<p>For more information about model binding errors that you can set default messages for, see <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.metadata.defaultmodelbindingmessageprovider#methods" class="no-loc" data-linktype="absolute-path">DefaultModelBindingMessageProvider</a>.</p>
+</li>
+</ul>
+<h3 id="required-validation-on-the-client-1">[Required] validation on the client</h3>
+<p>Non-nullable types and strings are handled differently on the client compared to the server. On the client:</p>
+<ul>
+<li>A value is considered present only if input is entered for it. Therefore, client-side validation handles non-nullable types the same as nullable types.</li>
+<li>Whitespace in a string field is considered valid input by the jQuery Validation <a href="https://jqueryvalidation.org/required-method/" data-linktype="external">required</a> method. Server-side validation considers a required string field invalid if only whitespace is entered.</li>
+</ul>
+<p>As noted earlier, non-nullable types are treated as though they had a <code>[Required(AllowEmptyStrings = true)]</code> attribute. That means you get client-side validation even if you don't apply the <code>[Required(AllowEmptyStrings = true)]</code> attribute. But if you don't use the attribute, you get a default error message. To specify a custom error message, use the attribute.</p>
+<h2 id="remote-attribute-1">[Remote] attribute</h2>
+<p>The <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.remoteattribute" data-linktype="absolute-path">[Remote]</a> attribute implements client-side validation that requires calling a method on the server to determine whether field input is valid. For example, the app may need to verify whether a user name is already in use.</p>
+<p>To implement remote validation:</p>
+<ol>
+<li><p>Create an action method for JavaScript to call.  The jQuery Validation <a href="https://jqueryvalidation.org/remote-method/" data-linktype="external">remote</a> method expects a JSON response:</p>
+<ul>
+<li><code>true</code> means the input data is valid.</li>
+<li><code>false</code>, <code>undefined</code>, or <code>null</code> means the input is invalid. Display the default error message.</li>
+<li>Any other string means the input is invalid. Display the string as a custom error message.</li>
+</ul>
+<p>Here's an example of an action method that returns a custom error message:</p>
+<pre><code class="lang-csharp">[AcceptVerbs("GET", "POST")]
+public IActionResult VerifyEmail(string email)
+{
+    if (!_userService.VerifyEmail(email))
+    {
+        return Json($"Email {email} is already in use.");
+    }
+
+    return Json(true);
+}
+</code></pre>
+</li>
+<li><p>In the model class, annotate the property with a <code>[Remote]</code> attribute that points to the validation action method, as shown in the following example:</p>
+<pre><code class="lang-csharp">[Remote(action: "VerifyEmail", controller: "Users")]
+public string Email { get; set; }
+</code></pre>
+</li>
+</ol>
+<h3 id="additional-fields-1">Additional fields</h3>
+<p>The <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.remoteattribute.additionalfields" class="no-loc" data-linktype="absolute-path">AdditionalFields</a> property of the <code>[Remote]</code> attribute lets you validate combinations of fields against data on the server. For example, if the <code>User</code> model had <code>FirstName</code> and <code>LastName</code> properties, you might want to verify that no existing users already have that pair of names. The following example shows how to use <code>AdditionalFields</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="1,5">[Remote(action: "VerifyName", controller: "Users", AdditionalFields = nameof(LastName))]
+[Display(Name = "First Name")]
+public string FirstName { get; set; }
+
+[Remote(action: "VerifyName", controller: "Users", AdditionalFields = nameof(FirstName))]
+[Display(Name = "Last Name")]
+public string LastName { get; set; }
+</code></pre>
+<p><code>AdditionalFields</code> could be set explicitly to the strings "FirstName" and "LastName", but using the <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/nameof" data-linktype="absolute-path">nameof</a> operator simplifies later refactoring. The action method for this validation must accept both <code>firstName</code> and <code>lastName</code> arguments:</p>
+<pre><code class="lang-csharp">[AcceptVerbs("GET", "POST")]
+public IActionResult VerifyName(string firstName, string lastName)
+{
+    if (!_userService.VerifyName(firstName, lastName))
+    {
+        return Json($"A user named {firstName} {lastName} already exists.");
+    }
+
+    return Json(true);
+}
+</code></pre>
+<p>When the user enters a first or last name, JavaScript makes a remote call to see if that pair of names has been taken.</p>
+<p>To validate two or more additional fields, provide them as a comma-delimited list. For example, to add a <code>MiddleName</code> property to the model, set the <code>[Remote]</code> attribute as shown in the following example:</p>
+<pre><code class="lang-csharp">[Remote(action: "VerifyName", controller: "Users", AdditionalFields = nameof(FirstName) + "," + nameof(LastName))]
+public string MiddleName { get; set; }
+</code></pre>
+<p><code>AdditionalFields</code>, like all attribute arguments, must be a constant expression. Therefore, don't use an <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interpolated-strings" data-linktype="absolute-path">interpolated string</a> or call <a href="https://learn.microsoft.com/en-us/dotnet/api/system.string.join" class="no-loc" data-linktype="absolute-path">Join</a> to initialize <code>AdditionalFields</code>.</p>
+<h2 id="alternatives-to-built-in-attributes-1">Alternatives to built-in attributes</h2>
+<p>If you need validation not provided by built-in attributes, you can:</p>
+<ul>
+<li><a href="#custom-attributes" data-linktype="self-bookmark">Create custom attributes</a>.</li>
+<li><a href="#ivalidatableobject" data-linktype="self-bookmark">Implement IValidatableObject</a>.</li>
+</ul>
+<h2 id="custom-attributes-1">Custom attributes</h2>
+<p>For scenarios that the built-in validation attributes don't handle, you can create custom validation attributes. Create a class that inherits from <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute" class="no-loc" data-linktype="absolute-path">ValidationAttribute</a>, and override the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.isvalid" class="no-loc" data-linktype="absolute-path">IsValid</a> method.</p>
+<p>The <code>IsValid</code> method accepts an object named <em>value</em>, which is the input to be validated. An overload also accepts a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationcontext" class="no-loc" data-linktype="absolute-path">ValidationContext</a> object, which provides additional information, such as the model instance created by model binding.</p>
+<p>The following example validates that the release date for a movie in the <em>Classic</em> genre isn't later than a specified year. The <code>[ClassicMovie]</code> attribute:</p>
+<ul>
+<li>Is only run on the server.</li>
+<li>For Classic movies, validates the release date:</li>
+</ul>
+<pre><code class="lang-csharp">public class ClassicMovieAttribute : ValidationAttribute
+{
+    public ClassicMovieAttribute(int year)
+    {
+        Year = year;
+    }
+
+    public int Year { get; }
+
+    public string GetErrorMessage() =&gt;
+        $"Classic movies must have a release year no later than {Year}.";
+
+    protected override ValidationResult IsValid(object value,
+        ValidationContext validationContext)
+    {
+        var movie = (Movie)validationContext.ObjectInstance;
+        var releaseYear = ((DateTime)value).Year;
+
+        if (movie.Genre == Genre.Classic &amp;&amp; releaseYear &gt; Year)
+        {
+            return new ValidationResult(GetErrorMessage());
+        }
+
+        return ValidationResult.Success;
+    }
+}
+</code></pre>
+<p>The <code>movie</code> variable in the preceding example represents a <code>Movie</code> object that contains the data from the form submission. When validation fails, a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationresult" class="no-loc" data-linktype="absolute-path">ValidationResult</a> with an error message is returned.</p>
+<h2 id="ivalidatableobject-1">IValidatableObject</h2>
+<p>The preceding example works only with <code>Movie</code> types. Another option for class-level validation is to implement <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.ivalidatableobject" class="no-loc" data-linktype="absolute-path">IValidatableObject</a> in the model class, as shown in the following example:</p>
+<pre><code class="lang-csharp" highlight-lines="1,26-34">public class ValidatableMovie : IValidatableObject
+{
+    private const int _classicYear = 1960;
+
+    public int Id { get; set; }
+
+    [Required]
+    [StringLength(100)]
+    public string Title { get; set; }
+
+    [DataType(DataType.Date)]
+    [Display(Name = "Release Date")]
+    public DateTime ReleaseDate { get; set; }
+
+    [Required]
+    [StringLength(1000)]
+    public string Description { get; set; }
+
+    [Range(0, 999.99)]
+    public decimal Price { get; set; }
+
+    public Genre Genre { get; set; }
+
+    public bool Preorder { get; set; }
+
+    public IEnumerable&lt;ValidationResult&gt; Validate(ValidationContext validationContext)
+    {
+        if (Genre == Genre.Classic &amp;&amp; ReleaseDate.Year &gt; _classicYear)
+        {
+            yield return new ValidationResult(
+                $"Classic movies must have a release year no later than {_classicYear}.",
+                new[] { nameof(ReleaseDate) });
+        }
+    }
+}
+</code></pre>
+<h2 id="top-level-node-validation-1">Top-level node validation</h2>
+<p>Top-level nodes include:</p>
+<ul>
+<li>Action parameters</li>
+<li>Controller properties</li>
+<li>Page handler parameters</li>
+<li>Page model properties</li>
+</ul>
+<p>Model-bound top-level nodes are validated in addition to validating model properties. In the following example from the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app</a>, the <code>VerifyPhone</code> method uses the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.regularexpressionattribute" class="no-loc" data-linktype="absolute-path">RegularExpressionAttribute</a> to validate the <code>phone</code> action parameter:</p>
+<pre><code class="lang-csharp">[AcceptVerbs("GET", "POST")]
+public IActionResult VerifyPhone(
+    [RegularExpression(@"^\d{3}-\d{3}-\d{4}$")] string phone)
+{
+    if (!ModelState.IsValid)
+    {
+        return Json($"Phone {phone} has an invalid format. Format: ###-###-####");
+    }
+
+    return Json(true);
+}
+</code></pre>
+<p>Top-level nodes can use <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.bindrequiredattribute" class="no-loc" data-linktype="absolute-path">BindRequiredAttribute</a> with validation attributes. In the following example from the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app</a>, the <code>CheckAge</code> method specifies that the <code>age</code> parameter must be bound from the query string when the form is submitted:</p>
+<pre><code class="lang-csharp">[HttpPost]
+public IActionResult CheckAge([BindRequired, FromQuery] int age)
+{
+</code></pre>
+<p>In the Check Age page (<code>CheckAge.cshtml</code>), there are two forms. The first form submits an <code>Age</code> value of <code>99</code> as a query string parameter: <code>https://localhost:5001/Users/CheckAge?Age=99</code>.</p>
+<p>When a properly formatted <code>age</code> parameter from the query string is submitted, the form validates.</p>
+<p>The second form on the Check Age page submits the <code>Age</code> value in the body of the request, and validation fails. Binding fails because the <code>age</code> parameter must come from a query string.</p>
+<h2 id="maximum-errors-1">Maximum errors</h2>
+<p>Validation stops when the maximum number of errors is reached (200 by default). You can configure this number with the following code in <code>Startup.ConfigureServices</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="4">services.AddRazorPages()
+    .AddMvcOptions(options =&gt;
+    {
+        options.MaxModelValidationErrors = 50;
+        options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
+            _ =&gt; "The field is required.");
+    });
+
+services.AddSingleton&lt;IValidationAttributeAdapterProvider,
+    CustomValidationAttributeAdapterProvider&gt;();
+</code></pre>
+<h2 id="maximum-recursion-1">Maximum recursion</h2>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.validation.validationvisitor" class="no-loc" data-linktype="absolute-path">ValidationVisitor</a> traverses the object graph of the model being validated. For models that are deep or are infinitely recursive, validation may result in stack overflow. <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.mvcoptions.maxvalidationdepth" class="no-loc" data-linktype="absolute-path">MvcOptions.MaxValidationDepth</a> provides a way to stop validation early if the visitor recursion exceeds a configured depth. The default value of <code>MvcOptions.MaxValidationDepth</code> is 32.</p>
+<h2 id="automatic-short-circuit-1">Automatic short-circuit</h2>
+<p>Validation is automatically short-circuited (skipped) if the model graph doesn't require validation. Objects that the runtime skips validation for include collections of primitives (such as <code>byte[]</code>, <code>string[]</code>, <code>Dictionary&lt;string, string&gt;</code>) and complex object graphs that don't have any validators.</p>
+<h2 id="client-side-validation-1">Client-side validation</h2>
+<p>Client-side validation prevents submission until the form is valid. The Submit button runs JavaScript that either submits the form or displays error messages.</p>
+<p>Client-side validation avoids an unnecessary round trip to the server when there are input errors on a form. The following script references in <code>_Layout.cshtml</code> and <code>_ValidationScriptsPartial.cshtml</code> support client-side validation:</p>
+<pre><code class="lang-cshtml">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"&gt;&lt;/script&gt;
+</code></pre>
+<pre><code class="lang-cshtml">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.js"&gt;&lt;/script&gt;
+</code></pre>
+<p>The <a href="https://github.com/aspnet/jquery-validation-unobtrusive" data-linktype="external">jQuery Unobtrusive Validation</a> script is a custom Microsoft front-end library that builds on the popular <a href="https://jqueryvalidation.org/" data-linktype="external">jQuery Validation</a> plugin. Without jQuery Unobtrusive Validation, you would have to code the same validation logic in two places: once in the server-side validation attributes on model properties, and then again in client-side scripts. Instead, <a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/intro?view=aspnetcore-9.0" data-linktype="relative-path">Tag Helpers</a> and <a href="../views/overview553c.html?view=aspnetcore-9.0" data-linktype="relative-path">HTML helpers</a> use the validation attributes and type metadata from model properties to render HTML 5 <code>data-</code> attributes for the form elements that need validation. jQuery Unobtrusive Validation parses the <code>data-</code> attributes and passes the logic to jQuery Validation, effectively "copying" the server-side validation logic to the client. You can display validation errors on the client using tag helpers as shown here:</p>
+<pre><code class="lang-cshtml" highlight-lines="3-4">&lt;div class="form-group"&gt;
+    &lt;label asp-for="Movie.ReleaseDate" class="control-label"&gt;&lt;/label&gt;
+    &lt;input asp-for="Movie.ReleaseDate" class="form-control" /&gt;
+    &lt;span asp-validation-for="Movie.ReleaseDate" class="text-danger"&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<p>The preceding tag helpers render the following HTML:</p>
+<pre><code class="lang-html">&lt;div class="form-group"&gt;
+    &lt;label class="control-label" for="Movie_ReleaseDate"&gt;Release Date&lt;/label&gt;
+    &lt;input class="form-control" type="date" data-val="true"
+        data-val-required="The Release Date field is required."
+        id="Movie_ReleaseDate" name="Movie.ReleaseDate" value=""&gt;
+    &lt;span class="text-danger field-validation-valid"
+        data-valmsg-for="Movie.ReleaseDate" data-valmsg-replace="true"&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Notice that the <code>data-</code> attributes in the HTML output correspond to the validation attributes for the <code>Movie.ReleaseDate</code> property. The <code>data-val-required</code> attribute contains an error message to display if the user doesn't fill in the release date field. jQuery Unobtrusive Validation passes this value to the jQuery Validation <a href="https://jqueryvalidation.org/required-method/" data-linktype="external">required()</a> method, which then displays that message in the accompanying <strong>&lt;span&gt;</strong> element.</p>
+<p>Data type validation is based on the .NET type of a property, unless that is overridden by a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype" data-linktype="absolute-path">[DataType]</a> attribute. Browsers have their own default error messages, but the jQuery Validation Unobtrusive Validation package can override those messages. <code>[DataType]</code> attributes and subclasses such as <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.emailaddressattribute" data-linktype="absolute-path">[EmailAddress]</a> let you specify the error message.</p>
+<h2 id="unobtrusive-validation-1">Unobtrusive validation</h2>
+<p>For information on unobtrusive validation, see <a href="https://github.com/dotnet/AspNetCore.Docs/issues/1111" data-linktype="external">this GitHub issue</a>.</p>
+<h3 id="add-validation-to-dynamic-forms-1">Add Validation to Dynamic Forms</h3>
+<p>jQuery Unobtrusive Validation passes validation logic and parameters to jQuery Validation when the page first loads. Therefore, validation doesn't work automatically on dynamically generated forms. To enable validation, tell jQuery Unobtrusive Validation to parse the dynamic form immediately after you create it. For example, the following code sets up client-side validation on a form added via AJAX.</p>
+<pre><code class="lang-javascript">$.get({
+    url: "https://url/that/returns/a/form",
+    dataType: "html",
+    error: function(jqXHR, textStatus, errorThrown) {
+        alert(textStatus + ": Couldn't add form. " + errorThrown);
+    },
+    success: function(newFormHTML) {
+        var container = document.getElementById("form-container");
+        container.insertAdjacentHTML("beforeend", newFormHTML);
+        var forms = container.getElementsByTagName("form");
+        var newForm = forms[forms.length - 1];
+        $.validator.unobtrusive.parse(newForm);
+    }
+})
+</code></pre>
+<p>The <code>$.validator.unobtrusive.parse()</code> method accepts a jQuery selector for its one argument. This method tells jQuery Unobtrusive Validation to parse the <code>data-</code> attributes of forms within that selector. The values of those attributes are then passed to the jQuery Validation plugin.</p>
+<h3 id="add-validation-to-dynamic-controls-1">Add Validation to Dynamic Controls</h3>
+<p>The <code>$.validator.unobtrusive.parse()</code> method works on an entire form, not on individual dynamically generated controls, such as <code>&lt;input&gt;</code> and <code>&lt;select/&gt;</code>. To reparse the form, remove the validation data that was added when the form was parsed earlier, as shown in the following example:</p>
+<pre><code class="lang-javascript">$.get({
+    url: "https://url/that/returns/a/control",
+    dataType: "html",
+    error: function(jqXHR, textStatus, errorThrown) {
+        alert(textStatus + ": Couldn't add control. " + errorThrown);
+    },
+    success: function(newInputHTML) {
+        var form = document.getElementById("my-form");
+        form.insertAdjacentHTML("beforeend", newInputHTML);
+        $(form).removeData("validator")    // Added by jQuery Validation
+               .removeData("unobtrusiveValidation");   // Added by jQuery Unobtrusive Validation
+        $.validator.unobtrusive.parse(form);
+    }
+})
+</code></pre>
+<h2 id="custom-client-side-validation-1">Custom client-side validation</h2>
+<p>Custom client-side validation is done by generating <code>data-</code> HTML attributes that work with a custom jQuery Validation adapter. The following sample adapter code was written for the <code>[ClassicMovie]</code> and <code>[ClassicMovieWithClientValidator]</code> attributes that were introduced earlier in this article:</p>
+<pre><code class="lang-javascript">$.validator.addMethod('classicmovie', function (value, element, params) {
+    var genre = $(params[0]).val(), year = params[1], date = new Date(value);
+
+    // The Classic genre has a value of '0'.
+    if (genre &amp;&amp; genre.length &gt; 0 &amp;&amp; genre[0] === '0') {
+        // The release date for a Classic is valid if it's no greater than the given year.
+        return date.getUTCFullYear() &lt;= year;
+    }
+
+    return true;
+});
+
+$.validator.unobtrusive.adapters.add('classicmovie', ['year'], function (options) {
+    var element = $(options.form).find('select#Movie_Genre')[0];
+
+    options.rules['classicmovie'] = [element, parseInt(options.params['year'])];
+    options.messages['classicmovie'] = options.message;
+});
+</code></pre>
+<p>For information about how to write adapters, see the <a href="https://jqueryvalidation.org/documentation/" data-linktype="external">jQuery Validation documentation</a>.</p>
+<p>The use of an adapter for a given field is triggered by <code>data-</code> attributes that:</p>
+<ul>
+<li>Flag the field as being subject to validation (<code>data-val="true"</code>).</li>
+<li>Identify a validation rule name and error message text (for example, <code>data-val-rulename="Error message."</code>).</li>
+<li>Provide any additional parameters the validator needs (for example, <code>data-val-rulename-param1="value"</code>).</li>
+</ul>
+<p>The following example shows the <code>data-</code> attributes for the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app's</a> <code>ClassicMovie</code> attribute:</p>
+<pre><code class="lang-html">&lt;input class="form-control" type="date"
+    data-val="true"
+    data-val-classicmovie="Classic movies must have a release year no later than 1960."
+    data-val-classicmovie-year="1960"
+    data-val-required="The Release Date field is required."
+    id="Movie_ReleaseDate" name="Movie.ReleaseDate" value=""&gt;
+</code></pre>
+<p>As noted earlier, <a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/intro?view=aspnetcore-9.0" data-linktype="relative-path">Tag Helpers</a> and <a href="../views/overview553c.html?view=aspnetcore-9.0" data-linktype="relative-path">HTML helpers</a> use information from validation attributes to render <code>data-</code> attributes. There are two options for writing code that results in the creation of custom <code>data-</code> HTML attributes:</p>
+<ul>
+<li>Create a class that derives from <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.dataannotations.attributeadapterbase-1" class="no-loc" data-linktype="absolute-path">AttributeAdapterBase&lt;TAttribute&gt;</a> and a class that implements <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.dataannotations.ivalidationattributeadapterprovider" class="no-loc" data-linktype="absolute-path">IValidationAttributeAdapterProvider</a>, and register your attribute and its adapter in DI. This method follows the <a href="https://wikipedia.org/wiki/Single_responsibility_principle" data-linktype="external">single responsibility principle</a> in that server-related and client-related validation code is in separate classes. The adapter also has the advantage that since it's registered in DI, other services in DI are available to it if needed.</li>
+<li>Implement <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.validation.iclientmodelvalidator" class="no-loc" data-linktype="absolute-path">IClientModelValidator</a> in your <a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute" class="no-loc" data-linktype="absolute-path">ValidationAttribute</a> class. This method might be appropriate if the attribute doesn't do any server-side validation and doesn't need any services from DI.</li>
+</ul>
+<h3 id="attributeadapter-for-client-side-validation-1">AttributeAdapter for client-side validation</h3>
+<p>This method of rendering <code>data-</code> attributes in HTML is used by the <code>ClassicMovie</code> attribute in the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app</a>. To add client validation by using this method:</p>
+<ol>
+<li><p>Create an attribute adapter class for the custom validation attribute. Derive the class from <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.dataannotations.attributeadapterbase-1" class="no-loc" data-linktype="absolute-path">AttributeAdapterBase&lt;TAttribute&gt;</a>. Create an <code>AddValidation</code> method that adds <code>data-</code> attributes to the rendered output, as shown in this example:</p>
+<pre><code class="lang-csharp">public class ClassicMovieAttributeAdapter : AttributeAdapterBase&lt;ClassicMovieAttribute&gt;
+{
+    public ClassicMovieAttributeAdapter(ClassicMovieAttribute attribute,
+        IStringLocalizer stringLocalizer)
+        : base(attribute, stringLocalizer)
+    {
+
+    }
+
+    public override void AddValidation(ClientModelValidationContext context)
+    {
+        MergeAttribute(context.Attributes, "data-val", "true");
+        MergeAttribute(context.Attributes, "data-val-classicmovie", GetErrorMessage(context));
+
+        var year = Attribute.Year.ToString(CultureInfo.InvariantCulture);
+        MergeAttribute(context.Attributes, "data-val-classicmovie-year", year);
+    }
+
+    public override string GetErrorMessage(ModelValidationContextBase validationContext) =&gt;
+        Attribute.GetErrorMessage();
+}
+</code></pre>
+</li>
+<li><p>Create an adapter provider class that implements <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.dataannotations.ivalidationattributeadapterprovider" class="no-loc" data-linktype="absolute-path">IValidationAttributeAdapterProvider</a>. In the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.dataannotations.ivalidationattributeadapterprovider.getattributeadapter" class="no-loc" data-linktype="absolute-path">GetAttributeAdapter</a> method pass in the custom attribute to the adapter's constructor, as shown in this example:</p>
+<pre><code class="lang-csharp">public class CustomValidationAttributeAdapterProvider : IValidationAttributeAdapterProvider
+{
+    private readonly IValidationAttributeAdapterProvider baseProvider =
+        new ValidationAttributeAdapterProvider();
+
+    public IAttributeAdapter GetAttributeAdapter(ValidationAttribute attribute,
+        IStringLocalizer stringLocalizer)
+    {
+        if (attribute is ClassicMovieAttribute classicMovieAttribute)
+        {
+            return new ClassicMovieAttributeAdapter(classicMovieAttribute, stringLocalizer);
+        }
+
+        return baseProvider.GetAttributeAdapter(attribute, stringLocalizer);
+    }
+}
+</code></pre>
+</li>
+<li><p>Register the adapter provider for DI in <code>Startup.ConfigureServices</code>:</p>
+<pre><code class="lang-csharp" highlight-lines="9-10">services.AddRazorPages()
+    .AddMvcOptions(options =&gt;
+    {
+        options.MaxModelValidationErrors = 50;
+        options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
+            _ =&gt; "The field is required.");
+    });
+
+services.AddSingleton&lt;IValidationAttributeAdapterProvider,
+    CustomValidationAttributeAdapterProvider&gt;();
+</code></pre>
+</li>
+</ol>
+<h3 id="iclientmodelvalidator-for-client-side-validation-1">IClientModelValidator for client-side validation</h3>
+<p>This method of rendering <code>data-</code> attributes in HTML is used by the <code>ClassicMovieWithClientValidator</code> attribute in the <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/models/validation/samples" data-linktype="external">sample app</a>. To add client validation by using this method:</p>
+<ul>
+<li><p>In the custom validation attribute, implement the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.validation.iclientmodelvalidator" class="no-loc" data-linktype="absolute-path">IClientModelValidator</a> interface and create an <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.validation.iclientmodelvalidator.addvalidation" class="no-loc" data-linktype="absolute-path">AddValidation</a> method. In the <code>AddValidation</code> method, add <code>data-</code> attributes for validation, as shown in the following example:</p>
+<pre><code class="lang-csharp">public class ClassicMovieWithClientValidatorAttribute :
+    ValidationAttribute, IClientModelValidator
+{
+    public ClassicMovieWithClientValidatorAttribute(int year)
+    {
+        Year = year;
+    }
+
+    public int Year { get; }
+
+    public void AddValidation(ClientModelValidationContext context)
+    {
+        MergeAttribute(context.Attributes, "data-val", "true");
+        MergeAttribute(context.Attributes, "data-val-classicmovie", GetErrorMessage());
+
+        var year = Year.ToString(CultureInfo.InvariantCulture);
+        MergeAttribute(context.Attributes, "data-val-classicmovie-year", year);
+    }
+
+    public string GetErrorMessage() =&gt;
+        $"Classic movies must have a release year no later than {Year}.";
+
+    protected override ValidationResult IsValid(object value,
+        ValidationContext validationContext)
+    {
+        var movie = (Movie)validationContext.ObjectInstance;
+        var releaseYear = ((DateTime)value).Year;
+
+        if (movie.Genre == Genre.Classic &amp;&amp; releaseYear &gt; Year)
+        {
+            return new ValidationResult(GetErrorMessage());
+        }
+
+        return ValidationResult.Success;
+    }
+
+    private bool MergeAttribute(IDictionary&lt;string, string&gt; attributes, string key, string value)
+    {
+        if (attributes.ContainsKey(key))
+        {
+            return false;
+        }
+
+        attributes.Add(key, value);
+        return true;
+    }
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="disable-client-side-validation-1">Disable client-side validation</h2>
+<p>The following code disables client validation in Razor Pages:</p>
+<pre><code class="lang-csharp" highlight-lines="2-5">services.AddRazorPages()
+    .AddViewOptions(options =&gt;
+    {
+        options.HtmlHelperOptions.ClientValidationEnabled = false;
+    });
+</code></pre>
+<p>Other options to disable client-side validation:</p>
+<ul>
+<li>Comment out the reference to <code>_ValidationScriptsPartial</code> in all the <code>.cshtml</code> files.</li>
+<li>Remove the contents of the <em>Pages\Shared_ValidationScriptsPartial.cshtml</em> file.</li>
+</ul>
+<p>The preceding approach won't prevent client-side validation of ASP.NET Core Identity Razor class library. For more information, see <a href="https://learn.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-9.0" data-linktype="relative-path">Scaffold Identity in ASP.NET Core projects</a>.</p>
+<h2 id="additional-resources-1">Additional resources</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations" class="no-loc" data-linktype="absolute-path">System.ComponentModel.DataAnnotations</a></li>
+<li><a href="model-binding553c.html?view=aspnetcore-9.0" data-linktype="relative-path">Model Binding</a></li>
+</ul>
+</div>
+</div>
+					
+		<div
+			id="ms--inline-notifications"
+			class="margin-block-xs"
+			data-bi-name="inline-notification"
+		></div>
+	 
+		<div
+			id="assertive-live-region"
+			role="alert"
+			aria-live="assertive"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+		<div
+			id="polite-live-region"
+			role="status"
+			aria-live="polite"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+	
+					
+			
+		<!-- feedback section -->
+		<section
+			class="feedback-section position-relative margin-top-lg border border-radius padding-xxs display-none-print"
+			data-bi-name="open-source-feedback-section"
+			data-open-source-feedback-section
+			hidden
+		>
+			<div class="display-flex flex-direction-column flex-direction-row-tablet">
+				<div
+					class="width-450-tablet padding-inline-xs padding-inline-xs-tablet padding-top-xs padding-bottom-sm padding-top-xs-tablet background-color-body-medium"
+				>
+					<div class="display-flex flex-direction-column">
+						<div class="padding-bottom-xxs">
+							<span class="icon margin-right-xxs" aria-hidden="true">
+								<span class="docon docon-brand-github"></span>
+							</span>
+							<span class="font-weight-semibold">
+								Collaborate with us on GitHub
+							</span>
+						</div>
+						<span class="line-height-normal">
+							The source for this content can be found on GitHub, where you can also create and review issues and pull requests. For more information, see <a href="https://learn.microsoft.com/contribute/content/dotnet/dotnet-contribute">our contributor guide</a>.
+						</span>
+					</div>
+				</div>
+				<div
+					class="display-flex gap-xs width-full-tablet flex-direction-column padding-xs justify-content-space-evenly"
+				>
+					<div class="media">
+						
+					<div class="media-left">
+						<div class="image image-36x36" hidden data-open-source-image-container>
+							<img
+								class="theme-display is-light"
+								src="https://learn.microsoft.com/media/logos/logo_net.svg"
+								aria-hidden="true"
+								data-open-source-image-light
+							/>
+							<img
+								class="theme-display is-dark is-high-contrast"
+								src="https://learn.microsoft.com/media/logos/logo_net.svg"
+								aria-hidden="true"
+								data-open-source-image-dark
+							/>
+						</div>
+					</div>
+			  
+
+						<div class="media-content">
+							<p
+								class="font-size-xl font-weight-semibold margin-bottom-xxs"
+								data-open-source-product-title
+							>
+								ASP.NET Core
+							</p>
+							<div class="display-flex gap-xs flex-direction-column">
+								<p class="line-height-normal" data-open-source-product-description></p>
+								<div class="display-flex gap-xs flex-direction-column">
+									<a href="#" data-github-link>
+										<span class="icon margin-right-xxs" aria-hidden="true">
+											<span class="docon docon-bug"></span>
+										</span>
+										<span>Open a documentation issue</span>
+									</a>
+									<a
+										href="https://github.com/dotnet/aspnetcore/blob/main/CONTRIBUTING.md"
+										class="display-block margin-top-auto font-size-md"
+										data-feedback-product-url
+									>
+										<span class="icon margin-right-xxs" aria-hidden="true">
+											<span class="docon docon-feedback"></span>
+										</span>
+										<span>Provide product feedback</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+			
+		<!-- feedback section -->
+		<section
+			id="site-user-feedback-footer"
+			class="font-size-sm margin-top-md display-none-print display-none-desktop"
+			data-test-id="site-user-feedback-footer"
+			data-bi-name="site-feedback-section"
+		>
+			<hr class="hr" />
+			<h2 id="ms--feedback" class="title is-3">Feedback</h2>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="buttons">
+					<button
+						class="thumb-rating-button like button button-primary button-sm"
+						data-test-id="footer-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+						<span>Yes</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike button button-primary button-sm"
+						data-test-id="footer-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+						<span>No</span>
+					</button>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+		
+				</div>
+				
+		<div id="ms--additional-resources-mobile" class="display-none-print">
+			<hr class="hr" hidden />
+			<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>
+				Additional resources
+			</h2>
+			
+		<section
+			id="right-rail-recommendations-mobile"
+			class=""
+			data-bi-name="recommendations"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-training-mobile"
+			class=""
+			data-bi-name="learning-resource-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-events-mobile"
+			class=""
+			data-bi-name="events-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-qna-mobile"
+			class="margin-top-xxs"
+			data-bi-name="qna-link-card"
+			hidden
+		></section>
+	
+		</div>
+	
+			</div>
+			
+		<div
+			id="action-panel"
+			role="region"
+			aria-label="Action Panel"
+			class="action-panel"
+			tabindex="-1"
+		></div>
+	
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside "
+					data-bi-name="aside"
+			  >
+					
+		<div
+			id="ms--additional-resources"
+			class="right-container padding-sm display-none display-block-desktop height-full"
+			data-bi-name="pageactions"
+			role="complementary"
+			aria-label="Additional resources"
+		>
+			<div id="affixed-right-container" data-bi-name="right-column">
+				
+		<nav
+			id="side-doc-outline"
+			class="doc-outline border-bottom padding-bottom-xs margin-bottom-xs"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h3>In this article</h3>
+		</nav>
+	
+				<!-- Feedback -->
+				
+		<section
+			id="ms--site-user-feedback-right-rail"
+			class="font-size-sm display-none-print"
+			data-test-id="site-user-feedback-right-rail"
+			data-bi-name="site-feedback-right-rail"
+		>
+			<p class="font-weight-semibold margin-bottom-xs">Was this page helpful?</p>
+			<div class="buttons">
+				<button
+					class="thumb-rating-button like button button-primary button-sm"
+					data-test-id="right-rail-rating-yes"
+					data-binary-rating-response="rating-yes"
+					type="button"
+					title="This article is helpful"
+					data-bi-name="button-rating-yes"
+					aria-pressed="false"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-like"></span>
+					</span>
+					<span>Yes</span>
+				</button>
+				<button
+					class="thumb-rating-button dislike button button-primary button-sm"
+					data-test-id="right-rail-rating-no"
+					data-binary-rating-response="rating-no"
+					type="button"
+					title="This article is not helpful"
+					data-bi-name="button-rating-no"
+					aria-pressed="false"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-dislike"></span>
+					</span>
+					<span>No</span>
+				</button>
+			</div>
+		</section>
+	
+			</div>
+		</div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout has-padding has-default-focus border-top  uhf-container"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	
+				<div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-expanded="false"
+				title="Theme"
+				data-bi-name="theme"
+			>
+				<span class="icon">
+					<span class="docon docon-sun" aria-hidden="true"></span>
+				</span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu">
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="light"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="dark"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							data-theme-to="high-contrast"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2025</li>
+			</ul>
+		</footer>
+	</footer>
+			</body>
+		
+<!-- Mirrored from learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-9.0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 14:53:03 GMT -->
+</html>

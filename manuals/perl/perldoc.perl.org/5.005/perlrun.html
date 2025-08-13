@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/5.005/perlrun by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>perlrun - how to execute the Perl interpreter - Perldoc Browser</title>
+    <link rel="search" href="../opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="../perlrun.html">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="../css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html"><img src="../images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.005</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="../perlrun.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0/perlrun">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/perlrun">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/perlrun">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/perlrun">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/perlrun">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/perlrun">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/perlrun">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/perlrun">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/perlrun">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/perlrun">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/perlrun">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/perlrun">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/perlrun">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/perlrun">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/perlrun">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/perlrun">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/perlrun">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/perlrun">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/perlrun">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/perlrun">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/perlrun">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/perlrun">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/perlrun">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/perlrun">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/perlrun">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/perlrun">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/perlrun">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/perlrun">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/perlrun">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/perlrun">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/perlrun">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/perlrun">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/perlrun">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/perlrun">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/perlrun">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/perlrun">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/perlrun">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/perlrun">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/perlrun">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/perlrun">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/perlrun">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/perlrun">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/perlrun">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/perlrun">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/perlrun">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/perlrun">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/perlrun">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/perlrun">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/perlrun">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/perlrun">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/perlrun">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/perlrun">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/perlrun">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/perlrun">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/perlrun">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/perlrun">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/perlrun">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/perlrun">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/perlrun">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/perlrun">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/perlrun">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/perlrun">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/perlrun">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/perlrun">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/perlrun">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/perlrun">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/perlrun">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/perlrun">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/perlrun">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/perlrun">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/perlrun">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/perlrun">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/perlrun">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/perlrun">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/perlrun">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/perlrun">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/perlrun">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/perlrun">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/perlrun">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.6.2/perlrun.html">5.6.2</a>
+          <a class="dropdown-item" href="../5.6.1/perlrun.html">5.6.1</a>
+          <a class="dropdown-item" href="../5.6.0/perlrun.html">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.005_04/perlrun.html">5.005_04</a>
+          <a class="dropdown-item" href="../5.005_03/perlrun.html">5.005_03</a>
+          <a class="dropdown-item" href="../5.005_02/perlrun.html">5.005_02</a>
+          <a class="dropdown-item" href="../5.005_01/perlrun.html">5.005_01</a>
+          <a class="dropdown-item active" href="perlrun.html">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/perlrun">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/perlrun">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/perlrun">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/perlrun">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/perlrun">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/perlrun">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/perlrun">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/perlrun">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/perlrun">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/perlrun">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/perlrun">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/perlrun">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/perlrun">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/perlrun">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/perlrun">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/perlrun">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/perlrun">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/perlrun">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/perlrun">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/perlrun">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="../js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/5.005/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="../js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="perlrun.html">perlrun</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/5.005/perlrun.txt">source</a>,
+            <a href="https://metacpan.org/pod/perlrun">CPAN</a>)
+          </div>
+        </div>
+        <div class="leading-notice">
+          You are viewing the version of this documentation from Perl 5.005.
+            <a href="../perlrun.html">View the latest version</a>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SYNOPSIS">SYNOPSIS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#%23!-and-quoting-on-non-Unix-systems">#! and quoting on non-Unix systems</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Location-of-Perl">Location of Perl</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Switches">Switches</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#ENVIRONMENT">ENVIRONMENT</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>perlrun - how to execute the Perl interpreter</p>
+
+<h1 id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">#</a>SYNOPSIS</h1>
+
+<p><b>perl</b> <span style="white-space: nowrap;">[ <b>-sTuU</b> ]</span> <span style="white-space: nowrap;">[ <b>-hv</b> ] [ <b>-V</b>[:<i>configvar</i>] ]</span> <span style="white-space: nowrap;">[ <b>-cw</b> ] [ <b>-d</b>[:<i>debugger</i>] ] [ <b>-D</b>[<i>number/list</i>] ]</span> <span style="white-space: nowrap;">[ <b>-pna</b> ] [ <b>-F</b><i>pattern</i> ] [ <b>-l</b>[<i>octal</i>] ] [ <b>-0</b>[<i>octal</i>] ]</span> <span style="white-space: nowrap;">[ <b>-I</b><i>dir</i> ] [ <b>-m</b>[<b>-</b>]<i>module</i> ] [ <b>-M</b>[<b>-</b>]<i>&#39;module...&#39;</i> ]</span> <span style="white-space: nowrap;">[ <b>-P</b> ]</span> <span style="white-space: nowrap;">[ <b>-S</b> ]</span> <span style="white-space: nowrap;">[ <b>-x</b>[<i>dir</i>] ]</span> <span style="white-space: nowrap;">[ <b>-i</b>[<i>extension</i>] ]</span> <span style="white-space: nowrap;">[ <b>-e</b> <i>&#39;command&#39;</i> ] [ <b>--</b> ] [ <i>programfile</i> ] [ <i>argument</i> ]...</span></p>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>Upon startup, Perl looks for your script in one of the following places:</p>
+
+<ol>
+
+<li><p>Specified line by line via <b>-e</b> switches on the command line.</p>
+
+</li>
+<li><p>Contained in the file specified by the first filename on the command line. (Note that systems supporting the #! notation invoke interpreters this way. See <a href="#Location-of-Perl">&quot;Location of Perl&quot;</a>.)</p>
+
+</li>
+<li><p>Passed in implicitly via standard input. This works only if there are no filename arguments--to pass arguments to a STDIN script you must explicitly specify a &quot;-&quot; for the script name.</p>
+
+</li>
+</ol>
+
+<p>With methods 2 and 3, Perl starts parsing the input file from the beginning, unless you&#39;ve specified a <b>-x</b> switch, in which case it scans for the first line starting with #! and containing the word &quot;perl&quot;, and starts there instead. This is useful for running a script embedded in a larger message. (In this case you would indicate the end of the script using the <code>__END__</code> token.)</p>
+
+<p>The #! line is always examined for switches as the line is being parsed. Thus, if you&#39;re on a machine that allows only one argument with the #! line, or worse, doesn&#39;t even recognize the #! line, you still can get consistent switch behavior regardless of how Perl was invoked, even if <b>-x</b> was used to find the beginning of the script.</p>
+
+<p>Because many operating systems silently chop off kernel interpretation of the #! line after 32 characters, some switches may be passed in on the command line, and some may not; you could even get a &quot;-&quot; without its letter, if you&#39;re not careful. You probably want to make sure that all your switches fall either before or after that 32 character boundary. Most switches don&#39;t actually care if they&#39;re processed redundantly, but getting a - instead of a complete switch could cause Perl to try to execute standard input instead of your script. And a partial <b>-I</b> switch could also cause odd results.</p>
+
+<p>Some switches do care if they are processed twice, for instance combinations of <b>-l</b> and <b>-0</b>. Either put all the switches after the 32 character boundary (if applicable), or replace the use of <b>-0</b><i>digits</i> by <code>BEGIN{ $/ = &quot;\0digits&quot;; }</code>.</p>
+
+<p>Parsing of the #! switches starts wherever &quot;perl&quot; is mentioned in the line. The sequences &quot;-*&quot; and &quot;- &quot; are specifically ignored so that you could, if you were so inclined, say</p>
+
+<pre><code>#!/bin/sh -- # -*- perl -*- -p
+eval &#39;exec /usr/bin/perl -wS $0 ${1+&quot;$@&quot;}&#39;
+    if $running_under_some_shell;</code></pre>
+
+<p>to let Perl see the <b>-p</b> switch.</p>
+
+<p>If the #! line does not contain the word &quot;perl&quot;, the program named after the #! is executed instead of the Perl interpreter. This is slightly bizarre, but it helps people on machines that don&#39;t do #!, because they can tell a program that their SHELL is /usr/bin/perl, and Perl will then dispatch the program to the correct interpreter for them.</p>
+
+<p>After locating your script, Perl compiles the entire script to an internal form. If there are any compilation errors, execution of the script is not attempted. (This is unlike the typical shell script, which might run part-way through before finding a syntax error.)</p>
+
+<p>If the script is syntactically correct, it is executed. If the script runs off the end without hitting an exit() or die() operator, an implicit <code>exit(0)</code> is provided to indicate successful completion.</p>
+
+<h2 id="#!-and-quoting-on-non-Unix-systems"><a class="permalink" href="#%23!-and-quoting-on-non-Unix-systems">#</a><a id="and-quoting-on-non-Unix-systems"></a>#! and quoting on non-Unix systems</h2>
+
+<p>Unix&#39;s #! technique can be simulated on other systems:</p>
+
+<dl>
+
+<dt id="OS/2"><a class="permalink" href="#OS/2">#</a><a id="OS"></a><a id="OS-2"></a>OS/2</dt>
+<dd>
+
+<p>Put</p>
+
+<pre><code class="plaintext">extproc perl -S -your_switches</code></pre>
+
+<p>as the first line in <code>*.cmd</code> file (<code>-S</code> due to a bug in cmd.exe&#39;s `extproc&#39; handling).</p>
+
+</dd>
+<dt id="MS-DOS"><a class="permalink" href="#MS-DOS">#</a><a id="MS"></a>MS-DOS</dt>
+<dd>
+
+<p>Create a batch file to run your script, and codify it in <code>ALTERNATIVE_SHEBANG</code> (see the <i>dosish.h</i> file in the source distribution for more information).</p>
+
+</dd>
+<dt id="Win95/NT"><a class="permalink" href="#Win95/NT">#</a><a id="Win95"></a><a id="Win95-NT"></a>Win95/NT</dt>
+<dd>
+
+<p>The Win95/NT installation, when using the Activeware port of Perl, will modify the Registry to associate the <i>.pl</i> extension with the perl interpreter. If you install another port of Perl, including the one in the Win32 directory of the Perl distribution, then you&#39;ll have to modify the Registry yourself. Note that this means you can no longer tell the difference between an executable Perl program and a Perl library file.</p>
+
+</dd>
+<dt id="Macintosh"><a class="permalink" href="#Macintosh">#</a>Macintosh</dt>
+<dd>
+
+<p>Macintosh perl scripts will have the appropriate Creator and Type, so that double-clicking them will invoke the perl application.</p>
+
+</dd>
+</dl>
+
+<p>Command-interpreters on non-Unix systems have rather different ideas on quoting than Unix shells. You&#39;ll need to learn the special characters in your command-interpreter (<code>*</code>, <code>\</code> and <code>&quot;</code> are common) and how to protect whitespace and these characters to run one-liners (see <code>-e</code> below).</p>
+
+<p>On some systems, you may have to change single-quotes to double ones, which you must <i>NOT</i> do on Unix or Plan9 systems. You might also have to change a single % to a %%.</p>
+
+<p>For example:</p>
+
+<pre><code class="plaintext"># Unix
+perl -e &#39;print &quot;Hello world\n&quot;&#39;
+
+# MS-DOS, etc.
+perl -e &quot;print \&quot;Hello world\n\&quot;&quot;
+
+# Macintosh
+print &quot;Hello world\n&quot;
+ (then Run &quot;Myscript&quot; or Shift-Command-R)
+
+# VMS
+perl -e &quot;print &quot;&quot;Hello world\n&quot;&quot;&quot;</code></pre>
+
+<p>The problem is that none of this is reliable: it depends on the command and it is entirely possible neither works. If 4DOS was the command shell, this would probably work better:</p>
+
+<pre><code class="plaintext">perl -e &quot;print &lt;Ctrl-x&gt;&quot;Hello world\n&lt;Ctrl-x&gt;&quot;&quot;</code></pre>
+
+<p>CMD.EXE in Windows NT slipped a lot of standard Unix functionality in when nobody was looking, but just try to find documentation for its quoting rules.</p>
+
+<p>Under the Macintosh, it depends which environment you are using. The MacPerl shell, or MPW, is much like Unix shells in its support for several quoting variants, except that it makes free use of the Macintosh&#39;s non-ASCII characters as control characters.</p>
+
+<p>There is no general solution to all of this. It&#39;s just a mess.</p>
+
+<h2 id="Location-of-Perl"><a class="permalink" href="#Location-of-Perl">#</a><a id="Location"></a>Location of Perl</h2>
+
+<p>It may seem obvious to say, but Perl is useful only when users can easily find it. When possible, it&#39;s good for both <b>/usr/bin/perl</b> and <b>/usr/local/bin/perl</b> to be symlinks to the actual binary. If that can&#39;t be done, system administrators are strongly encouraged to put (symlinks to) perl and its accompanying utilities, such as perldoc, into a directory typically found along a user&#39;s PATH, or in another obvious and convenient place.</p>
+
+<p>In this documentation, <code>#!/usr/bin/perl</code> on the first line of the script will stand in for whatever method works on your system.</p>
+
+<h2 id="Switches"><a class="permalink" href="#Switches">#</a>Switches</h2>
+
+<p>A single-character switch may be combined with the following switch, if any.</p>
+
+<pre><code class="plaintext">#!/usr/bin/perl -spi.bak	# same as -s -p -i.bak</code></pre>
+
+<p>Switches include:</p>
+
+<dl>
+
+<dt id="-0[digits]"><a class="permalink" href="#-0%5Bdigits%5D">#</a><a id="digits"></a><b>-0</b>[<i>digits</i>]</dt>
+<dd>
+
+<p>specifies the input record separator (<code>$/</code>) as an octal number. If there are no digits, the null character is the separator. Other switches may precede or follow the digits. For example, if you have a version of <b>find</b> which can print filenames terminated by the null character, you can say this:</p>
+
+<pre><code class="plaintext">find . -name &#39;*.bak&#39; -print0 | perl -n0e unlink</code></pre>
+
+<p>The special value 00 will cause Perl to slurp files in paragraph mode. The value 0777 will cause Perl to slurp files whole because there is no legal character with that value.</p>
+
+</dd>
+<dt id="-a"><a class="permalink" href="#-a">#</a><a id="a"></a><b>-a</b></dt>
+<dd>
+
+<p>turns on autosplit mode when used with a <b>-n</b> or <b>-p</b>. An implicit split command to the @F array is done as the first thing inside the implicit while loop produced by the <b>-n</b> or <b>-p</b>.</p>
+
+<pre><code>perl -ane &#39;print pop(@F), &quot;\n&quot;;&#39;</code></pre>
+
+<p>is equivalent to</p>
+
+<pre><code>    while (&lt;&gt;) {
+	@F = split(&#39; &#39;);
+	print pop(@F), &quot;\n&quot;;
+    }</code></pre>
+
+<p>An alternate delimiter may be specified using <b>-F</b>.</p>
+
+</dd>
+<dt id="-c"><a class="permalink" href="#-c">#</a><a id="c"></a><b>-c</b></dt>
+<dd>
+
+<p>causes Perl to check the syntax of the script and then exit without executing it. Actually, it <i>will</i> execute <code>BEGIN</code>, <code>END</code>, and <code>use</code> blocks, because these are considered as occurring outside the execution of your program.</p>
+
+</dd>
+<dt id="-d"><a class="permalink" href="#-d">#</a><a id="d"></a><b>-d</b></dt>
+<dd>
+
+<p>runs the script under the Perl debugger. See <a href="perldebug.html">perldebug</a>.</p>
+
+</dd>
+<dt id="-d:foo"><a class="permalink" href="#-d:foo">#</a><a id="d:foo"></a><b>-d:</b><i>foo</i></dt>
+<dd>
+
+<p>runs the script under the control of a debugging or tracing module installed as Devel::foo. E.g., <b>-d:DProf</b> executes the script using the Devel::DProf profiler. See <a href="perldebug.html">perldebug</a>.</p>
+
+</dd>
+<dt id="-Dletters"><a class="permalink" href="#-Dletters">#</a><a id="Dletters"></a><b>-D</b><i>letters</i></dt>
+<dd>
+
+</dd>
+<dt id="-Dnumber"><a class="permalink" href="#-Dnumber">#</a><a id="Dnumber"></a><b>-D</b><i>number</i></dt>
+<dd>
+
+<p>sets debugging flags. To watch how it executes your script, use <b>-Dtls</b>. (This works only if debugging is compiled into your Perl.) Another nice value is <b>-Dx</b>, which lists your compiled syntax tree. And <b>-Dr</b> displays compiled regular expressions. As an alternative, specify a number instead of list of letters (e.g., <b>-D14</b> is equivalent to <b>-Dtls</b>):</p>
+
+<pre><code class="plaintext">    1  p  Tokenizing and parsing
+    2  s  Stack snapshots
+    4  l  Context (loop) stack processing
+    8  t  Trace execution
+   16  o  Method and overloading resolution
+   32  c  String/numeric conversions
+   64  P  Print preprocessor command for -P
+  128  m  Memory allocation
+  256  f  Format processing
+  512  r  Regular expression parsing and execution
+ 1024  x  Syntax tree dump
+ 2048  u  Tainting checks
+ 4096  L  Memory leaks (needs C&lt;-DLEAKTEST&gt; when compiling Perl)
+ 8192  H  Hash dump -- usurps values()
+16384  X  Scratchpad allocation
+32768  D  Cleaning up</code></pre>
+
+<p>All these flags require <code>-DDEBUGGING</code> when you compile the Perl executable. This flag is automatically set if you include <code>-g</code> option when <code>Configure</code> asks you about optimizer/debugger flags.</p>
+
+</dd>
+<dt id="-e-commandline"><a class="permalink" href="#-e-commandline">#</a><a id="e-commandline"></a><b>-e</b> <i>commandline</i></dt>
+<dd>
+
+<p>may be used to enter one line of script. If <b>-e</b> is given, Perl will not look for a script filename in the argument list. Multiple <b>-e</b> commands may be given to build up a multi-line script. Make sure to use semicolons where you would in a normal program.</p>
+
+</dd>
+<dt id="-Fpattern"><a class="permalink" href="#-Fpattern">#</a><a id="Fpattern"></a><b>-F</b><i>pattern</i></dt>
+<dd>
+
+<p>specifies the pattern to split on if <b>-a</b> is also in effect. The pattern may be surrounded by <code>//</code>, <code>&quot;&quot;</code>, or <code>&#39;&#39;</code>, otherwise it will be put in single quotes.</p>
+
+</dd>
+<dt id="-h"><a class="permalink" href="#-h">#</a><a id="h"></a><b>-h</b></dt>
+<dd>
+
+<p>prints a summary of the options.</p>
+
+</dd>
+<dt id="-i[extension]"><a class="permalink" href="#-i%5Bextension%5D">#</a><a id="i-extension"></a><b>-i</b>[<i>extension</i>]</dt>
+<dd>
+
+<p>specifies that files processed by the <code>&lt;&gt;</code> construct are to be edited in-place. It does this by renaming the input file, opening the output file by the original name, and selecting that output file as the default for print() statements. The extension, if supplied, is used to modify the name of the old file to make a backup copy, following these rules:</p>
+
+<p>If no extension is supplied, no backup is made and the current file is overwritten.</p>
+
+<p>If the extension doesn&#39;t contain a <code>*</code> then it is appended to the end of the current filename as a suffix.</p>
+
+<p>If the extension does contain one or more <code>*</code> characters, then each <code>*</code> is replaced with the current filename. In perl terms you could think of this as:</p>
+
+<pre><code>($backup = $extension) =~ s/\*/$file_name/g;</code></pre>
+
+<p>This allows you to add a prefix to the backup file, instead of (or in addition to) a suffix:</p>
+
+<pre><code class="plaintext">$ perl -pi&#39;bak_*&#39; -e &#39;s/bar/baz/&#39; fileA	# backup to &#39;bak_fileA&#39;</code></pre>
+
+<p>Or even to place backup copies of the original files into another directory (provided the directory already exists):</p>
+
+<pre><code class="plaintext">$ perl -pi&#39;old/*.bak&#39; -e &#39;s/bar/baz/&#39; fileA # backup to &#39;old/fileA.bak&#39;</code></pre>
+
+<p>These sets of one-liners are equivalent:</p>
+
+<pre><code class="plaintext">$ perl -pi -e &#39;s/bar/baz/&#39; fileA		# overwrite current file
+$ perl -pi&#39;*&#39; -e &#39;s/bar/baz/&#39; fileA		# overwrite current file
+
+$ perl -pi&#39;.bak&#39; -e &#39;s/bar/baz/&#39; fileA	# backup to &#39;fileA.bak&#39;
+$ perl -pi&#39;*.bak&#39; -e &#39;s/bar/baz/&#39; fileA	# backup to &#39;fileA.bak&#39;</code></pre>
+
+<p>From the shell, saying</p>
+
+<pre><code class="plaintext">$ perl -p -i.bak -e &quot;s/foo/bar/; ... &quot;</code></pre>
+
+<p>is the same as using the script:</p>
+
+<pre><code>#!/usr/bin/perl -pi.bak
+s/foo/bar/;</code></pre>
+
+<p>which is equivalent to</p>
+
+<pre><code>    #!/usr/bin/perl
+    $extension = &#39;.bak&#39;;
+    while (&lt;&gt;) {
+	if ($ARGV ne $oldargv) {
+	    if ($extension !~ /\*/) {
+		$backup = $ARGV . $extension;
+	    }
+	    else {
+		($backup = $extension) =~ s/\*/$ARGV/g;
+	    }
+	    rename($ARGV, $backup);
+	    open(ARGVOUT, &quot;&gt;$ARGV&quot;);
+	    select(ARGVOUT);
+	    $oldargv = $ARGV;
+	}
+	s/foo/bar/;
+    }
+    continue {
+	print;	# this prints to original filename
+    }
+    select(STDOUT);</code></pre>
+
+<p>except that the <b>-i</b> form doesn&#39;t need to compare $ARGV to $oldargv to know when the filename has changed. It does, however, use ARGVOUT for the selected filehandle. Note that STDOUT is restored as the default output filehandle after the loop.</p>
+
+<p>As shown above, Perl creates the backup file whether or not any output is actually changed. So this is just a fancy way to copy files:</p>
+
+<pre><code class="plaintext">  $ perl -p -i&#39;/some/file/path/*&#39; -e 1 file1 file2 file3...
+or
+  $ perl -p -i&#39;.bak&#39; -e 1 file1 file2 file3...</code></pre>
+
+<p>You can use <code>eof</code> without parentheses to locate the end of each input file, in case you want to append to each file, or reset line numbering (see example in <a href="perlfunc.html#eof">&quot;eof&quot; in perlfunc</a>).</p>
+
+<p>If, for a given file, Perl is unable to create the backup file as specified in the extension then it will skip that file and continue on with the next one (if it exists).</p>
+
+<p>For a discussion of issues surrounding file permissions and <code>-i</code>, see <a href="https://perldoc.perl.org/5.005/perlfaq5#Why-does-Perl-let-me-delete-read-only-files%3F-Why-does-i-clobber-protected-files%3F-Isn%27t-this-a-bug-in-Perl%3F">&quot;Why does Perl let me delete read-only files? Why does -i clobber protected files? Isn&#39;t this a bug in Perl?&quot; in perlfaq5</a>.</p>
+
+<p>You cannot use <b>-i</b> to create directories or to strip extensions from files.</p>
+
+<p>Perl does not expand <code>~</code>, so don&#39;t do that.</p>
+
+<p>Finally, note that the <b>-i</b> switch does not impede execution when no files are given on the command line. In this case, no backup is made (the original file cannot, of course, be determined) and processing proceeds from STDIN to STDOUT as might be expected.</p>
+
+</dd>
+<dt id="-Idirectory"><a class="permalink" href="#-Idirectory">#</a><a id="Idirectory"></a><b>-I</b><i>directory</i></dt>
+<dd>
+
+<p>Directories specified by <b>-I</b> are prepended to the search path for modules (<code>@INC</code>), and also tells the C preprocessor where to search for include files. The C preprocessor is invoked with <b>-P</b>; by default it searches /usr/include and /usr/lib/perl.</p>
+
+</dd>
+<dt id="-l[octnum]"><a class="permalink" href="#-l%5Boctnum%5D">#</a><a id="l-octnum"></a><b>-l</b>[<i>octnum</i>]</dt>
+<dd>
+
+<p>enables automatic line-ending processing. It has two effects: first, it automatically chomps &quot;<code>$/</code>&quot; (the input record separator) when used with <b>-n</b> or <b>-p</b>, and second, it assigns &quot;<code>$\</code>&quot; (the output record separator) to have the value of <i>octnum</i> so that any print statements will have that separator added back on. If <i>octnum</i> is omitted, sets &quot;<code>$\</code>&quot; to the current value of &quot;<code>$/</code>&quot;. For instance, to trim lines to 80 columns:</p>
+
+<pre><code>perl -lpe &#39;substr($_, 80) = &quot;&quot;&#39;</code></pre>
+
+<p>Note that the assignment <code>$\ = $/</code> is done when the switch is processed, so the input record separator can be different than the output record separator if the <b>-l</b> switch is followed by a <b>-0</b> switch:</p>
+
+<pre><code>gnufind / -print0 | perl -ln0e &#39;print &quot;found $_&quot; if -p&#39;</code></pre>
+
+<p>This sets <code>$\</code> to newline and then sets <code>$/</code> to the null character.</p>
+
+</dd>
+<dt id="-m[-]module"><a class="permalink" href="#-m%5B-%5Dmodule">#</a><a id="m---module"></a><b>-m</b>[<b>-</b>]<i>module</i></dt>
+<dd>
+
+</dd>
+<dt id="-M[-]module"><a class="permalink" href="#-M%5B-%5Dmodule">#</a><a id="M---module"></a><b>-M</b>[<b>-</b>]<i>module</i></dt>
+<dd>
+
+</dd>
+<dt id="-M[-]&#39;module-...&#39;"><a class="permalink" href="#-M%5B-%5D&#39;module-...&#39;">#</a><a id="M---module1"></a><b>-M</b>[<b>-</b>]<i>&#39;module ...&#39;</i></dt>
+<dd>
+
+</dd>
+<dt id="-[mM][-]module=arg[,arg]..."><a class="permalink" href="#-%5BmM%5D%5B-%5Dmodule=arg%5B,arg%5D...">#</a><a id="mM---module-arg-arg"></a><b>-[mM]</b>[<b>-</b>]<i>module=arg[,arg]...</i></dt>
+<dd>
+
+<p><code>-m</code><i>module</i> executes <code>use</code> <i>module</i> <code>();</code> before executing your script.</p>
+
+<p><code>-M</code><i>module</i> executes <code>use</code> <i>module</i> <code>;</code> before executing your script. You can use quotes to add extra code after the module name, e.g., <code>-M&#39;module qw(foo bar)&#39;</code>.</p>
+
+<p>If the first character after the <code>-M</code> or <code>-m</code> is a dash (<code>-</code>) then the &#39;use&#39; is replaced with &#39;no&#39;.</p>
+
+<p>A little builtin syntactic sugar means you can also say <code>-mmodule=foo,bar</code> or <code>-Mmodule=foo,bar</code> as a shortcut for <code>-M&#39;module qw(foo bar)&#39;</code>. This avoids the need to use quotes when importing symbols. The actual code generated by <code>-Mmodule=foo,bar</code> is <code>use module split(/,/,q{foo,bar})</code>. Note that the <code>=</code> form removes the distinction between <code>-m</code> and <code>-M</code>.</p>
+
+</dd>
+<dt id="-n"><a class="permalink" href="#-n">#</a><a id="n"></a><b>-n</b></dt>
+<dd>
+
+<p>causes Perl to assume the following loop around your script, which makes it iterate over filename arguments somewhat like <b>sed -n</b> or <b>awk</b>:</p>
+
+<pre><code>    while (&lt;&gt;) {
+	...		# your script goes here
+    }</code></pre>
+
+<p>Note that the lines are not printed by default. See <b>-p</b> to have lines printed. If a file named by an argument cannot be opened for some reason, Perl warns you about it, and moves on to the next file.</p>
+
+<p>Here is an efficient way to delete all files older than a week:</p>
+
+<pre><code class="plaintext">find . -mtime +7 -print | perl -nle &#39;unlink;&#39;</code></pre>
+
+<p>This is faster than using the <code>-exec</code> switch of <b>find</b> because you don&#39;t have to start a process on every filename found.</p>
+
+<p><code>BEGIN</code> and <code>END</code> blocks may be used to capture control before or after the implicit loop, just as in <b>awk</b>.</p>
+
+</dd>
+<dt id="-p"><a class="permalink" href="#-p">#</a><a id="p"></a><b>-p</b></dt>
+<dd>
+
+<p>causes Perl to assume the following loop around your script, which makes it iterate over filename arguments somewhat like <b>sed</b>:</p>
+
+<pre><code>    while (&lt;&gt;) {
+	...		# your script goes here
+    } continue {
+	print or die &quot;-p destination: $!\n&quot;;
+    }</code></pre>
+
+<p>If a file named by an argument cannot be opened for some reason, Perl warns you about it, and moves on to the next file. Note that the lines are printed automatically. An error occuring during printing is treated as fatal. To suppress printing use the <b>-n</b> switch. A <b>-p</b> overrides a <b>-n</b> switch.</p>
+
+<p><code>BEGIN</code> and <code>END</code> blocks may be used to capture control before or after the implicit loop, just as in awk.</p>
+
+</dd>
+<dt id="-P"><a class="permalink" href="#-P">#</a><a id="P"></a><b>-P</b></dt>
+<dd>
+
+<p>causes your script to be run through the C preprocessor before compilation by Perl. (Because both comments and cpp directives begin with the # character, you should avoid starting comments with any words recognized by the C preprocessor such as &quot;if&quot;, &quot;else&quot;, or &quot;define&quot;.)</p>
+
+</dd>
+<dt id="-s"><a class="permalink" href="#-s">#</a><a id="s"></a><b>-s</b></dt>
+<dd>
+
+<p>enables some rudimentary switch parsing for switches on the command line after the script name but before any filename arguments (or before a <b>--</b>). Any switch found there is removed from @ARGV and sets the corresponding variable in the Perl script. The following script prints &quot;true&quot; if and only if the script is invoked with a <b>-xyz</b> switch.</p>
+
+<pre><code>#!/usr/bin/perl -s
+if ($xyz) { print &quot;true\n&quot;; }</code></pre>
+
+</dd>
+<dt id="-S"><a class="permalink" href="#-S">#</a><a id="S"></a><b>-S</b></dt>
+<dd>
+
+<p>makes Perl use the PATH environment variable to search for the script (unless the name of the script contains directory separators). On some platforms, this also makes Perl append suffixes to the filename while searching for it. For example, on Win32 platforms, the &quot;.bat&quot; and &quot;.cmd&quot; suffixes are appended if a lookup for the original name fails, and if the name does not already end in one of those suffixes. If your Perl was compiled with DEBUGGING turned on, using the -Dp switch to Perl shows how the search progresses.</p>
+
+<p>If the filename supplied contains directory separators (i.e. it is an absolute or relative pathname), and if the file is not found, platforms that append file extensions will do so and try to look for the file with those extensions added, one by one.</p>
+
+<p>On DOS-like platforms, if the script does not contain directory separators, it will first be searched for in the current directory before being searched for on the PATH. On Unix platforms, the script will be searched for strictly on the PATH.</p>
+
+<p>Typically this is used to emulate #! startup on platforms that don&#39;t support #!. This example works on many platforms that have a shell compatible with Bourne shell:</p>
+
+<pre><code>    #!/usr/bin/perl
+    eval &#39;exec /usr/bin/perl -wS $0 ${1+&quot;$@&quot;}&#39;
+	    if $running_under_some_shell;</code></pre>
+
+<p>The system ignores the first line and feeds the script to /bin/sh, which proceeds to try to execute the Perl script as a shell script. The shell executes the second line as a normal shell command, and thus starts up the Perl interpreter. On some systems $0 doesn&#39;t always contain the full pathname, so the <b>-S</b> tells Perl to search for the script if necessary. After Perl locates the script, it parses the lines and ignores them because the variable $running_under_some_shell is never true. If the script will be interpreted by csh, you will need to replace <code>${1+&quot;$@&quot;}</code> with <code>$*</code>, even though that doesn&#39;t understand embedded spaces (and such) in the argument list. To start up sh rather than csh, some systems may have to replace the #! line with a line containing just a colon, which will be politely ignored by Perl. Other systems can&#39;t control that, and need a totally devious construct that will work under any of csh, sh, or Perl, such as the following:</p>
+
+<pre><code>eval &#39;(exit $?0)&#39; &amp;&amp; eval &#39;exec /usr/bin/perl -wS $0 ${1+&quot;$@&quot;}&#39;
+&amp; eval &#39;exec /usr/bin/perl -wS $0 $argv:q&#39;
+	if $running_under_some_shell;</code></pre>
+
+</dd>
+<dt id="-T"><a class="permalink" href="#-T">#</a><a id="T"></a><b>-T</b></dt>
+<dd>
+
+<p>forces &quot;taint&quot; checks to be turned on so you can test them. Ordinarily these checks are done only when running setuid or setgid. It&#39;s a good idea to turn them on explicitly for programs run on another&#39;s behalf, such as CGI programs. See <a href="perlsec.html">perlsec</a>. Note that (for security reasons) this option must be seen by Perl quite early; usually this means it must appear early on the command line or in the #! line (for systems which support that).</p>
+
+</dd>
+<dt id="-u"><a class="permalink" href="#-u">#</a><a id="u"></a><b>-u</b></dt>
+<dd>
+
+<p>causes Perl to dump core after compiling your script. You can then in theory take this core dump and turn it into an executable file by using the <b>undump</b> program (not supplied). This speeds startup at the expense of some disk space (which you can minimize by stripping the executable). (Still, a &quot;hello world&quot; executable comes out to about 200K on my machine.) If you want to execute a portion of your script before dumping, use the dump() operator instead. Note: availability of <b>undump</b> is platform specific and may not be available for a specific port of Perl. It has been superseded by the new perl-to-C compiler, which is more portable, even though it&#39;s still only considered beta.</p>
+
+</dd>
+<dt id="-U"><a class="permalink" href="#-U">#</a><a id="U"></a><b>-U</b></dt>
+<dd>
+
+<p>allows Perl to do unsafe operations. Currently the only &quot;unsafe&quot; operations are the unlinking of directories while running as superuser, and running setuid programs with fatal taint checks turned into warnings. Note that the <b>-w</b> switch (or the <code>$^W</code> variable) must be used along with this option to actually <b>generate</b> the taint-check warnings.</p>
+
+</dd>
+<dt id="-v"><a class="permalink" href="#-v">#</a><a id="v"></a><b>-v</b></dt>
+<dd>
+
+<p>prints the version and patchlevel of your Perl executable.</p>
+
+</dd>
+<dt id="-V"><a class="permalink" href="#-V">#</a><a id="V"></a><b>-V</b></dt>
+<dd>
+
+<p>prints summary of the major perl configuration values and the current value of @INC.</p>
+
+</dd>
+<dt id="-V:name"><a class="permalink" href="#-V:name">#</a><a id="V:name"></a><b>-V:</b><i>name</i></dt>
+<dd>
+
+<p>Prints to STDOUT the value of the named configuration variable.</p>
+
+</dd>
+<dt id="-w"><a class="permalink" href="#-w">#</a><a id="w"></a><b>-w</b></dt>
+<dd>
+
+<p>prints warnings about variable names that are mentioned only once, and scalar variables that are used before being set. Also warns about redefined subroutines, and references to undefined filehandles or filehandles opened read-only that you are attempting to write on. Also warns you if you use values as a number that doesn&#39;t look like numbers, using an array as though it were a scalar, if your subroutines recurse more than 100 deep, and innumerable other things.</p>
+
+<p>You can disable specific warnings using <code>__WARN__</code> hooks, as described in <a href="perlvar.html">perlvar</a> and <a href="perlfunc.html#warn">&quot;warn&quot; in perlfunc</a>. See also <a href="perldiag.html">perldiag</a> and <a href="perltrap.html">perltrap</a>.</p>
+
+</dd>
+<dt id="-x-directory"><a class="permalink" href="#-x-directory">#</a><a id="x-directory"></a><b>-x</b> <i>directory</i></dt>
+<dd>
+
+<p>tells Perl that the script is embedded in a message. Leading garbage will be discarded until the first line that starts with #! and contains the string &quot;perl&quot;. Any meaningful switches on that line will be applied. If a directory name is specified, Perl will switch to that directory before running the script. The <b>-x</b> switch controls only the disposal of leading garbage. The script must be terminated with <code>__END__</code> if there is trailing garbage to be ignored (the script can process any or all of the trailing garbage via the DATA filehandle if desired).</p>
+
+</dd>
+</dl>
+
+<h1 id="ENVIRONMENT"><a class="permalink" href="#ENVIRONMENT">#</a>ENVIRONMENT</h1>
+
+<dl>
+
+<dt id="HOME"><a class="permalink" href="#HOME">#</a>HOME</dt>
+<dd>
+
+<p>Used if chdir has no argument.</p>
+
+</dd>
+<dt id="LOGDIR"><a class="permalink" href="#LOGDIR">#</a>LOGDIR</dt>
+<dd>
+
+<p>Used if chdir has no argument and HOME is not set.</p>
+
+</dd>
+<dt id="PATH"><a class="permalink" href="#PATH">#</a>PATH</dt>
+<dd>
+
+<p>Used in executing subprocesses, and in finding the script if <b>-S</b> is used.</p>
+
+</dd>
+<dt id="PERL5LIB"><a class="permalink" href="#PERL5LIB">#</a>PERL5LIB</dt>
+<dd>
+
+<p>A colon-separated list of directories in which to look for Perl library files before looking in the standard library and the current directory. If PERL5LIB is not defined, PERLLIB is used. When running taint checks (because the script was running setuid or setgid, or the <b>-T</b> switch was used), neither variable is used. The script should instead say</p>
+
+<pre><code>use lib &quot;/my/directory&quot;;</code></pre>
+
+</dd>
+<dt id="PERL5OPT"><a class="permalink" href="#PERL5OPT">#</a>PERL5OPT</dt>
+<dd>
+
+<p>Command-line options (switches). Switches in this variable are taken as if they were on every Perl command line. Only the <b>-[DIMUdmw]</b> switches are allowed. When running taint checks (because the script was running setuid or setgid, or the <b>-T</b> switch was used), this variable is ignored.</p>
+
+</dd>
+<dt id="PERLLIB"><a class="permalink" href="#PERLLIB">#</a>PERLLIB</dt>
+<dd>
+
+<p>A colon-separated list of directories in which to look for Perl library files before looking in the standard library and the current directory. If PERL5LIB is defined, PERLLIB is not used.</p>
+
+</dd>
+<dt id="PERL5DB"><a class="permalink" href="#PERL5DB">#</a>PERL5DB</dt>
+<dd>
+
+<p>The command used to load the debugger code. The default is:</p>
+
+<pre><code class="plaintext">BEGIN { require &#39;perl5db.pl&#39; }</code></pre>
+
+</dd>
+<dt id="PERL5SHELL-(specific-to-WIN32-port)"><a class="permalink" href="#PERL5SHELL-(specific-to-WIN32-port)">#</a><a id="PERL5SHELL"></a><a id="PERL5SHELL-specific-to-WIN32-port"></a>PERL5SHELL (specific to WIN32 port)</dt>
+<dd>
+
+<p>May be set to an alternative shell that perl must use internally for executing &quot;backtick&quot; commands or system(). Default is <code>cmd.exe /x/c</code> on WindowsNT and <code>command.com /c</code> on Windows95. The value is considered to be space delimited. Precede any character that needs to be protected (like a space or backslash) with a backslash.</p>
+
+<p>Note that Perl doesn&#39;t use COMSPEC for this purpose because COMSPEC has a high degree of variability among users, leading to portability concerns. Besides, perl can use a shell that may not be fit for interactive use, and setting COMSPEC to such a shell may interfere with the proper functioning of other programs (which usually look in COMSPEC to find a shell fit for interactive use).</p>
+
+</dd>
+<dt id="PERL_DEBUG_MSTATS"><a class="permalink" href="#PERL_DEBUG_MSTATS">#</a>PERL_DEBUG_MSTATS</dt>
+<dd>
+
+<p>Relevant only if perl is compiled with the malloc included with the perl distribution (that is, if <code>perl -V:d_mymalloc</code> is &#39;define&#39;). If set, this causes memory statistics to be dumped after execution. If set to an integer greater than one, also causes memory statistics to be dumped after compilation.</p>
+
+</dd>
+<dt id="PERL_DESTRUCT_LEVEL"><a class="permalink" href="#PERL_DESTRUCT_LEVEL">#</a>PERL_DESTRUCT_LEVEL</dt>
+<dd>
+
+<p>Relevant only if your perl executable was built with <b>-DDEBUGGING</b>, this controls the behavior of global destruction of objects and other references.</p>
+
+</dd>
+</dl>
+
+<p>Perl also has environment variables that control how Perl handles data specific to particular natural languages. See <a href="perllocale.html">perllocale</a>.</p>
+
+<p>Apart from these, Perl uses no other environment variables, except to make them available to the script being executed, and to child processes. However, scripts running setuid would do well to execute the following lines before doing anything else, just to keep people honest:</p>
+
+<pre><code>$ENV{PATH} = &#39;/bin:/usr/bin&#39;;    # or whatever you need
+$ENV{SHELL} = &#39;/bin/sh&#39; if exists $ENV{SHELL};
+delete @ENV{qw(IFS CDPATH ENV BASH_ENV)};</code></pre>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/5.005/perlrun by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:48 GMT -->
+</html>

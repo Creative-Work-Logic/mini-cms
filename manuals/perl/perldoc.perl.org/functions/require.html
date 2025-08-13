@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/functions/require by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>require - Perldoc Browser</title>
+    <link rel="search" href="../opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="require.html">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="../css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html"><img src="../images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.42.0</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="require.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item active" href="https://perldoc.perl.org/5.42.0/functions/require">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/functions/require">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/functions/require">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/functions/require">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/functions/require">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/functions/require">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/functions/require">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/functions/require">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/functions/require">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/functions/require">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/functions/require">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/functions/require">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/functions/require">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/functions/require">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/functions/require">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/functions/require">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/functions/require">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/functions/require">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/functions/require">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/functions/require">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/functions/require">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/functions/require">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/functions/require">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/functions/require">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/functions/require">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/functions/require">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/functions/require">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/functions/require">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/functions/require">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/functions/require">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/functions/require">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/functions/require">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/functions/require">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/functions/require">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/functions/require">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/functions/require">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/functions/require">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/functions/require">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/functions/require">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/functions/require">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/functions/require">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/functions/require">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/functions/require">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/functions/require">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/functions/require">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/functions/require">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/functions/require">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/functions/require">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/functions/require">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/functions/require">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/functions/require">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/functions/require">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/functions/require">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/functions/require">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/functions/require">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/functions/require">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/functions/require">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/functions/require">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/functions/require">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/functions/require">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/functions/require">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/functions/require">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/functions/require">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/functions/require">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/functions/require">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/functions/require">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/functions/require">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/functions/require">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/functions/require">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/functions/require">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/functions/require">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/functions/require">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/functions/require">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/functions/require">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/functions/require">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/functions/require">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/functions/require">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/functions/require">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/functions/require">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.2/functions/require">5.6.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.1/functions/require">5.6.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.0/functions/require">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_04/functions/require">5.005_04</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_03/functions/require">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/functions/require">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/functions/require">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/functions/require">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/functions/require">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/functions/require">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/functions/require">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/functions/require">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/functions/require">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/functions/require">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/functions/require">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/functions/require">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/functions/require">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/functions/require">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/functions/require">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/functions/require">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/functions/require">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/functions/require">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/functions/require">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/functions/require">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/functions/require">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/functions/require">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/functions/require">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/functions/require">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="../perl.html">Perl</a>
+          <a class="dropdown-item" href="../perlintro.html">Intro</a>
+          <a class="dropdown-item" href="../perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="../perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="../perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../perlop.html">Operators</a>
+          <a class="dropdown-item" href="../functions.html">Functions</a>
+          <a class="dropdown-item" href="../variables.html">Variables</a>
+          <a class="dropdown-item" href="../modules.html">Modules</a>
+          <a class="dropdown-item" href="../perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="../perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="../perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="../js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="../js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="../functions.html">functions</a>
+            / <a href="require.html">require</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/functions/require.txt">source</a>,
+            <a href="https://metacpan.org/pod/perlfunc#require-VERSION">CPAN</a>)
+          </div>
+        </div>
+      <dl>
+
+<dt id="require-VERSION"><a class="permalink" href="#require-VERSION">#</a><a id="require1"></a>require VERSION </dt>
+<dd>
+
+</dd>
+<dt id="require-EXPR"><a class="permalink" href="#require-EXPR">#</a><a id="require2"></a>require EXPR</dt>
+<dd>
+
+</dd>
+<dt id="require"><a class="permalink" href="#require">#</a>require</dt>
+<dd>
+
+<p>Demands a version of Perl specified by VERSION, or demands some semantics specified by EXPR or by <a href="../perlvar.html#%24_"><code>$_</code></a> if EXPR is not supplied.</p>
+
+<p>VERSION may be either a literal such as v5.24.1, which will be compared to <a href="../perlvar.html#%24%5EV"><code>$^V</code></a> (or <code>$PERL_VERSION</code> in <a href="../English.html">English</a>), or a numeric argument of the form 5.024001, which will be compared to <a href="../perlvar.html#%24%5D"><code>$]</code></a>. An exception is raised if VERSION is greater than the version of the current Perl interpreter. Compare with <a href="use.html"><code>use</code></a>, which can do a similar check at compile time.</p>
+
+<p>Specifying VERSION as a numeric argument of the form 5.024001 should generally be avoided as older less readable syntax compared to v5.24.1. Before perl 5.8.0 (released in 2002), the more verbose numeric form was the only supported syntax, which is why you might see it in older code.</p>
+
+<pre><code>require v5.24.1;    # run time version check
+require 5.24.1;     # ditto
+require 5.024_001;  # ditto; older syntax compatible
+                      with perl 5.6</code></pre>
+
+<p>Otherwise, <code>require</code> demands that a library file be included if it hasn&#39;t already been included. The file is included via the do-FILE mechanism, which is essentially just a variety of <a href="eval.html"><code>eval</code></a> with the caveat that lexical variables in the invoking script will be invisible to the included code. If it were implemented in pure Perl, it would have semantics similar to the following:</p>
+
+<pre><code>use Carp &#39;croak&#39;;
+use version;
+
+sub require {
+    my ($filename) = @_;
+    if ( my $version = eval { version-&gt;parse($filename) } ) {
+        if ( $version &gt; $^V ) {
+           my $vn = $version-&gt;normal;
+           croak &quot;Perl $vn required--this is only $^V, stopped&quot;;
+        }
+        return 1;
+    }
+
+    if (exists $INC{$filename}) {
+        return 1 if $INC{$filename};
+        croak &quot;Compilation failed in require&quot;;
+    }
+
+    local $INC;
+    # this type of loop lets a hook overwrite $INC if they wish
+    for($INC = 0; $INC &lt; @INC; $INC++) {
+        my $prefix = $INC[$INC];
+        if (!defined $prefix) {
+            next;
+        }
+        if (ref $prefix) {
+            #... do other stuff - see text below ....
+        }
+        # (see text below about possible appending of .pmc
+        # suffix to $filename)
+        my $realfilename = &quot;$prefix/$filename&quot;;
+        next if ! -e $realfilename || -d _ || -b _;
+        $INC{$filename} = $realfilename;
+        my $result = do($realfilename);
+                     # but run in caller&#39;s namespace
+
+        if (!defined $result) {
+            $INC{$filename} = undef;
+            croak $@ ? &quot;$@Compilation failed in require&quot;
+                     : &quot;Can&#39;t locate $filename: $!\n&quot;;
+        }
+        if (!$result) {
+            delete $INC{$filename};
+            croak &quot;$filename did not return true value&quot;;
+        }
+        $! = 0;
+        return $result;
+    }
+    croak &quot;Can&#39;t locate $filename in \@INC ...&quot;;
+}</code></pre>
+
+<p>Note that the file will not be included twice under the same specified name.</p>
+
+<p>Historically the file must return true as the last statement to indicate successful execution of any initialization code, so it&#39;s customary to end such a file with <code>1;</code> unless you&#39;re sure it&#39;ll return true otherwise. But it&#39;s better just to put the <code>1;</code>, in case you add more statements. As of 5.37.6 this requirement may be avoided by enabling the &#39;module_true&#39; feature, which is enabled by default in modern version bundles. Thus code with <code>use v5.37;</code> no longer needs to concern itself with this issue. See <a href="../feature.html">feature</a> for more details. Note that this affects the compilation unit within which the feature is used, and using it before requiring a module will not change the behavior of existing modules that do not themselves also use it.</p>
+
+<p>If EXPR is a bareword, <code>require</code> assumes a <i>.pm</i> extension and replaces <code>::</code> with <code>/</code> in the filename for you, to make it easy to load standard modules. This form of loading of modules does not risk altering your namespace, however it will autovivify the stash for the required module.</p>
+
+<p>In other words, if you try this:</p>
+
+<pre><code>require Foo::Bar;     # a splendid bareword</code></pre>
+
+<p>The require function will actually look for the <i>Foo/Bar.pm</i> file in the directories specified in the <a href="../perlvar.html#%40INC"><code>@INC</code></a> array, and it will autovivify the <code>Foo::Bar::</code> stash at compile time.</p>
+
+<p>But if you try this:</p>
+
+<pre><code>    my $class = &#39;Foo::Bar&#39;;
+    require $class;       # $class is not a bareword
+#or
+    require &quot;Foo::Bar&quot;;   # not a bareword because of the &quot;&quot;</code></pre>
+
+<p>The require function will look for the <i>Foo::Bar</i> file in the <a href="../perlvar.html#%40INC"><code>@INC</code></a> array and will complain about not finding <i>Foo::Bar</i> there. In this case you can do:</p>
+
+<pre><code>eval &quot;require $class&quot;;</code></pre>
+
+<p>or you could do</p>
+
+<pre><code>require &quot;Foo/Bar.pm&quot;;</code></pre>
+
+<p>Neither of these forms will autovivify any stashes at compile time and only have run time effects.</p>
+
+<p>Now that you understand how <code>require</code> looks for files with a bareword argument, there is a little extra functionality going on behind the scenes. Before <code>require</code> looks for a <i>.pm</i> extension, it will first look for a similar filename with a <i>.pmc</i> extension. If this file is found, it will be loaded in place of any file ending in a <i>.pm</i> extension. This applies to both the explicit <code>require &quot;Foo/Bar.pm&quot;;</code> form and the <code>require Foo::Bar;</code> form.</p>
+
+<p>You can also insert hooks into the import facility by putting Perl coderefs or objects directly into the <a href="../perlvar.html#%40INC"><code>@INC</code></a> array. There are two types of hooks, INC filters, and INCDIR hooks, and there are three forms of representing a hook: subroutine references, array references, and blessed objects.</p>
+
+<p>Subroutine references are the simplest case. When the inclusion system walks through <a href="../perlvar.html#%40INC"><code>@INC</code></a> and encounters a subroutine, unless this subroutine is blessed and supports an INCDIR hook this subroutine will be assumed to be an INC hook will be called with two parameters, the first a reference to itself, and the second the name of the file to be included (e.g., <i>Foo/Bar.pm</i>). The subroutine should return either nothing or else a list of up to four values in the following order:</p>
+
+<ol>
+
+<li><p>A reference to a scalar, containing any initial source code to prepend to the file or generator output.</p>
+
+</li>
+<li><p>A filehandle, from which the file will be read.</p>
+
+</li>
+<li><p>A reference to a subroutine. If there is no filehandle (previous item), then this subroutine is expected to generate one line of source code per call, writing the line into <a href="../perlvar.html#%24_"><code>$_</code></a> and returning 1, then finally at end of file returning 0. If there is a filehandle, then the subroutine will be called to act as a simple source filter, with the line as read in <a href="../perlvar.html#%24_"><code>$_</code></a>. Again, return 1 for each valid line, and 0 after all lines have been returned. For historical reasons the subroutine will receive a meaningless argument (in fact always the numeric value zero) as <code>$_[0]</code>.</p>
+
+</li>
+<li><p>Optional state for the subroutine. The state is passed in as <code>$_[1]</code>.</p>
+
+</li>
+</ol>
+
+<p><code>AUTOLOAD</code> cannot be used to resolve the <code>INCDIR</code> method, <code>INC</code> is checked first, and <code>AUTOLOAD</code> would resolve that.</p>
+
+<p>If an empty list, <a href="undef.html"><code>undef</code></a>, or nothing that matches the first 3 values above is returned, then <code>require</code> looks at the remaining elements of <a href="../perlvar.html#%40INC"><code>@INC</code></a>. Note that this filehandle must be a real filehandle (strictly a typeglob or reference to a typeglob, whether blessed or unblessed); tied filehandles will be ignored and processing will stop there.</p>
+
+<p>If the hook is an object, it should provide an <code>INC</code> or <code>INCDIR</code> method that will be called as above, the first parameter being the object itself. If it does not provide either method, and the object is not CODE ref then an exception will be thrown, otherwise it will simply be executed like an unblessed CODE ref would. Note that you must fully qualify the method name when you declare an <code>INC</code> sub (unlike the <code>INCDIR</code> sub), as the unqualified symbol <code>INC</code> is always forced into package <code>main</code>. Here is a typical code layout for an <code>INC</code> hook:</p>
+
+<pre><code># In Foo.pm
+package Foo;
+sub new { ... }
+sub Foo::INC {
+    my ($self, $filename) = @_;
+    ...
+}
+
+# In the main program
+push @INC, Foo-&gt;new(...);</code></pre>
+
+<p>If the hook is an array reference, its first element must be a subroutine reference or an object as described above. When the first element is an object that supports an <code>INC</code> or <code>INCDIR</code> method then the method will be called with the object as the first argument, the filename requested as the second, and the hook array reference as the third. When the first element is a subroutine then it will be called with the array as the first argument, and the filename as the second, no third parameter will be passed in. In both forms you can modify the contents of the array to provide state between calls, or whatever you like.</p>
+
+<p>In other words, you can write:</p>
+
+<pre><code>push @INC, \&amp;my_sub;
+sub my_sub {
+    my ($coderef, $filename) = @_;  # $coderef is \&amp;my_sub
+    ...
+}</code></pre>
+
+<p>or:</p>
+
+<pre><code>push @INC, [ \&amp;my_sub, $x, $y, ... ];
+sub my_sub {
+    my ($arrayref, $filename) = @_;
+    # Retrieve $x, $y, ...
+    my (undef, @parameters) = @$arrayref;
+    ...
+}</code></pre>
+
+<p>or:</p>
+
+<pre><code>push @INC, [ HookObj-&gt;new(), $x, $y, ... ];
+sub HookObj::INC {
+    my ($self, $filename, $arrayref)= @_;
+    my (undef, @parameters) = @$arrayref;
+    ...
+}</code></pre>
+
+<p>These hooks are also permitted to set the <a href="../perlvar.html#%25INC"><code>%INC</code></a> entry corresponding to the files they have loaded. See <a href="../perlvar.html#%25INC">&quot;%INC&quot; in perlvar</a>. Should an <code>INC</code> hook not do this then perl will set the <code>%INC</code> entry to be the hook reference itself.</p>
+
+<p>A hook may also be used to rewrite the <code>@INC</code> array. While this might sound strange, there are situations where it can be very useful to do this. Such hooks usually just return undef and do not mix filtering and <code>@INC</code> modifications. While in older versions of perl having a hook modify <code>@INC</code> was fraught with issues and could even result in segfaults or assert failures, as of 5.37.7 the logic has been made much more robust and the hook now has control over the loop iteration if it wishes to do so.</p>
+
+<p>There is a now a facility to control the iterator for the <code>@INC</code> array traversal that is performed during require. The <code>$INC</code> variable will be initialized with the index of the currently executing hook. Once the hook returns the next slot in <code>@INC</code> that will be checked will be the integer successor of value in <code>$INC</code> (or -1 if it is undef). For example the following code</p>
+
+<pre><code>push @INC, sub {
+    splice @INC, $INC, 1; # remove this hook from @INC
+    unshift @INC, sub { warn &quot;A&quot; };
+    undef $INC; # reset the $INC iterator so we
+                # execute the newly installed sub
+                # immediately.
+};</code></pre>
+
+<p>would install a sub into <code>@INC</code> that when executed as a hook (by for instance a require of a file that does not exist), the hook will splice itself out of <code>@INC</code>, and add a new sub to the front that will warn whenever someone does a require operation that requires an <code>@INC</code> search, and then immediately execute that hook.</p>
+
+<p>Prior to 5.37.7, there was no way to cause perl to use the newly installed hook immediately, or to inspect any changed items in <code>@INC</code> to the left of the iterator, and so the warning would only be generated on the second call to require. In more recent perl the presence of the last statement which undefines <code>$INC</code> will cause perl to restart the traversal of the <code>@INC</code> array at the beginning and execute the newly installed sub immediately.</p>
+
+<p>Whatever value <code>$INC</code> held, if any, will be restored at the end of the require. Any changes made to <code>$INC</code> during the lifetime of the hook will be unrolled after the hook exits, and its value only has meaning immediately after execution of the hook, thus setting <code>$INC</code> to some value prior to executing a <code>require</code> will have no effect on how the require executes at all.</p>
+
+<p>As of 5.37.7 <code>@INC</code> values of undef will be silently ignored.</p>
+
+<p>The function <code>require()</code> is difficult to wrap properly. Many modules consult the stack to find information about their caller, and injecting a new stack frame by wrapping <code>require()</code> often breaks things. Nevertheless it can be very helpful to have the ability to perform actions before and after a <code>require</code>, for instance for trace utilities like <code>Devel::TraceUse</code> or to measure time to load and the memory consumption of the require graph. Because of the difficulties in safely creating a <code>require()</code> wrapper in 5.37.10 we introduced a new mechanism.</p>
+
+<p>As of 5.37.10, prior to any other actions it performs, <code>require</code> will check if <code>${^HOOK}{require__before}</code> contains a coderef, and if it does it will be called with the filename form of the item being loaded. The hook may modify <code>$_[0]</code> to load a different filename, or it may throw a fatal exception to cause the require to fail, which will be treated as though the required code itself had thrown an exception.</p>
+
+<p>The <code>${^HOOK}{require__before}</code> hook may return a code reference, in which case the code reference will be executed (in an eval with the filename as a parameter) after the require completes. It will be executed regardless of how the compilation completed, and even if the require throws a fatal exception. The function may consult <code>%INC</code> to determine if the require failed or not. For instance the following code will print some diagnostics before and after every <code>require</code> statement. The example also includes logic to chain the signal, so that multiple signals can cooperate. Well behaved <code>${^HOOK}{require__before}</code> handlers should always take this into account.</p>
+
+<pre><code>{
+    use Scalar::Util qw(reftype);
+    my $old_hook = ${^HOOK}{require__before};
+    local ${^HOOK}{require__before} = sub {
+        my ($name) = @_;
+        my $old_hook_ret;
+        $old_hook_ret = $old_hook-&gt;($name) if $old_hook;
+        warn &quot;Requiring: $name\n&quot;;
+        return sub {
+            $old_hook_ret-&gt;() if ref($old_hook_ret)
+                              &amp;&amp; reftype($old_hook_ret) eq &quot;CODE&quot;;
+            warn sprintf &quot;Finished requiring %s: %s\n&quot;,
+                    $name, $INC{$name} ? &quot;loaded&quot; :&quot;failed&quot;;
+        };
+    };
+    require Whatever;
+}</code></pre>
+
+<p>This hook executes for ALL <code>require</code> statements, unlike <code>INC</code> and <code>INCDIR</code> hooks, which are only executed for relative file names, and it executes first before any other special behaviour inside of require. Note that the initial hook in <code>${^HOOK}{require__before}</code> is *not* executed inside of an eval, and throwing an exception will stop further processing, but the after hook it may return is executed inside of an eval, and any exceptions it throws will be silently ignored. This is because it executes inside of the scope cleanup logic that is triggered after the require completes, and an exception at this time would not stop the module from being loaded, etc.</p>
+
+<p>There is a similar hook that fires after require completes, <code>${^HOOK}{require__after}</code>, which will be called after each require statement completes, either via an exception or successfully. It will be called with the filename of the most recently executed require statement. It is executed in an eval, and will not in any way affect execution.</p>
+
+<p>For a yet-more-powerful import facility built around <code>require</code>, see <a href="use.html"><code>use</code></a> and <a href="../perlmod.html">perlmod</a>.</p>
+
+</dd>
+</dl>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/functions/require by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:52 GMT -->
+</html>

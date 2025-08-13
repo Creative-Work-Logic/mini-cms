@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/5.005_02/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 15:51:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perl Documentation - Perldoc Browser</title>
+    <link rel="search" href="../opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="../index.html">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="../css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html"><img src="../images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.005_02</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="../index.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.42.0/index.html">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.40.3/index.html">5.40.3</a>
+          <a class="dropdown-item" href="../5.40.2/index.html">5.40.2</a>
+          <a class="dropdown-item" href="../5.40.1/index.html">5.40.1</a>
+          <a class="dropdown-item" href="../5.40.0/index.html">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.38.5/index.html">5.38.5</a>
+          <a class="dropdown-item" href="../5.38.4/index.html">5.38.4</a>
+          <a class="dropdown-item" href="../5.38.3/index.html">5.38.3</a>
+          <a class="dropdown-item" href="../5.38.2/index.html">5.38.2</a>
+          <a class="dropdown-item" href="../5.38.1/index.html">5.38.1</a>
+          <a class="dropdown-item" href="../5.38.0/index.html">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.36.3/index.html">5.36.3</a>
+          <a class="dropdown-item" href="../5.36.2/index.html">5.36.2</a>
+          <a class="dropdown-item" href="../5.36.1/index.html">5.36.1</a>
+          <a class="dropdown-item" href="../5.36.0/index.html">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.34.3/index.html">5.34.3</a>
+          <a class="dropdown-item" href="../5.34.2/index.html">5.34.2</a>
+          <a class="dropdown-item" href="../5.34.1/index.html">5.34.1</a>
+          <a class="dropdown-item" href="../5.34.0/index.html">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.32.1/index.html">5.32.1</a>
+          <a class="dropdown-item" href="../5.32.0/index.html">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.30.3/index.html">5.30.3</a>
+          <a class="dropdown-item" href="../5.30.2/index.html">5.30.2</a>
+          <a class="dropdown-item" href="../5.30.1/index.html">5.30.1</a>
+          <a class="dropdown-item" href="../5.30.0/index.html">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.28.3/index.html">5.28.3</a>
+          <a class="dropdown-item" href="../5.28.2/index.html">5.28.2</a>
+          <a class="dropdown-item" href="../5.28.1/index.html">5.28.1</a>
+          <a class="dropdown-item" href="../5.28.0/index.html">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.26.3/index.html">5.26.3</a>
+          <a class="dropdown-item" href="../5.26.2/index.html">5.26.2</a>
+          <a class="dropdown-item" href="../5.26.1/index.html">5.26.1</a>
+          <a class="dropdown-item" href="../5.26.0/index.html">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.24.4/index.html">5.24.4</a>
+          <a class="dropdown-item" href="../5.24.3/index.html">5.24.3</a>
+          <a class="dropdown-item" href="../5.24.2/index.html">5.24.2</a>
+          <a class="dropdown-item" href="../5.24.1/index.html">5.24.1</a>
+          <a class="dropdown-item" href="../5.24.0/index.html">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.22.4/index.html">5.22.4</a>
+          <a class="dropdown-item" href="../5.22.3/index.html">5.22.3</a>
+          <a class="dropdown-item" href="../5.22.2/index.html">5.22.2</a>
+          <a class="dropdown-item" href="../5.22.1/index.html">5.22.1</a>
+          <a class="dropdown-item" href="../5.22.0/index.html">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.20.3/index.html">5.20.3</a>
+          <a class="dropdown-item" href="../5.20.2/index.html">5.20.2</a>
+          <a class="dropdown-item" href="../5.20.1/index.html">5.20.1</a>
+          <a class="dropdown-item" href="../5.20.0/index.html">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.18.4/index.html">5.18.4</a>
+          <a class="dropdown-item" href="../5.18.3/index.html">5.18.3</a>
+          <a class="dropdown-item" href="../5.18.2/index.html">5.18.2</a>
+          <a class="dropdown-item" href="../5.18.1/index.html">5.18.1</a>
+          <a class="dropdown-item" href="../5.18.0/index.html">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.16.3/index.html">5.16.3</a>
+          <a class="dropdown-item" href="../5.16.2/index.html">5.16.2</a>
+          <a class="dropdown-item" href="../5.16.1/index.html">5.16.1</a>
+          <a class="dropdown-item" href="../5.16.0/index.html">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.14.4/index.html">5.14.4</a>
+          <a class="dropdown-item" href="../5.14.3/index.html">5.14.3</a>
+          <a class="dropdown-item" href="../5.14.2/index.html">5.14.2</a>
+          <a class="dropdown-item" href="../5.14.1/index.html">5.14.1</a>
+          <a class="dropdown-item" href="../5.14.0/index.html">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.12.5/index.html">5.12.5</a>
+          <a class="dropdown-item" href="../5.12.4/index.html">5.12.4</a>
+          <a class="dropdown-item" href="../5.12.3/index.html">5.12.3</a>
+          <a class="dropdown-item" href="../5.12.2/index.html">5.12.2</a>
+          <a class="dropdown-item" href="../5.12.1/index.html">5.12.1</a>
+          <a class="dropdown-item" href="../5.12.0/index.html">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.10.1/index.html">5.10.1</a>
+          <a class="dropdown-item" href="../5.10.0/index.html">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.8.9/index.html">5.8.9</a>
+          <a class="dropdown-item" href="../5.8.8/index.html">5.8.8</a>
+          <a class="dropdown-item" href="../5.8.7/index.html">5.8.7</a>
+          <a class="dropdown-item" href="../5.8.6/index.html">5.8.6</a>
+          <a class="dropdown-item" href="../5.8.5/index.html">5.8.5</a>
+          <a class="dropdown-item" href="../5.8.4/index.html">5.8.4</a>
+          <a class="dropdown-item" href="../5.8.3/index.html">5.8.3</a>
+          <a class="dropdown-item" href="../5.8.2/index.html">5.8.2</a>
+          <a class="dropdown-item" href="../5.8.1/index.html">5.8.1</a>
+          <a class="dropdown-item" href="../5.8.0/index.html">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.6.2/index.html">5.6.2</a>
+          <a class="dropdown-item" href="../5.6.1/index.html">5.6.1</a>
+          <a class="dropdown-item" href="../5.6.0/index.html">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.005_04/index.html">5.005_04</a>
+          <a class="dropdown-item" href="../5.005_03/index.html">5.005_03</a>
+          <a class="dropdown-item active" href="index.html">5.005_02</a>
+          <a class="dropdown-item" href="../5.005_01/index.html">5.005_01</a>
+          <a class="dropdown-item" href="../5.005/index.html">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="../blead/index.html">blead</a>
+          <a class="dropdown-item" href="../5.43.1/index.html">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.42.0-RC3/index.html">5.42.0-RC3</a>
+          <a class="dropdown-item" href="../5.42.0-RC2/index.html">5.42.0-RC2</a>
+          <a class="dropdown-item" href="../5.42.0-RC1/index.html">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.41.13/index.html">5.41.13</a>
+          <a class="dropdown-item" href="../5.41.12/index.html">5.41.12</a>
+          <a class="dropdown-item" href="../5.41.11/index.html">5.41.11</a>
+          <a class="dropdown-item" href="../5.41.10/index.html">5.41.10</a>
+          <a class="dropdown-item" href="../5.41.9/index.html">5.41.9</a>
+          <a class="dropdown-item" href="../5.41.8/index.html">5.41.8</a>
+          <a class="dropdown-item" href="../5.41.7/index.html">5.41.7</a>
+          <a class="dropdown-item" href="../5.41.6/index.html">5.41.6</a>
+          <a class="dropdown-item" href="../5.41.5/index.html">5.41.5</a>
+          <a class="dropdown-item" href="../5.41.4/index.html">5.41.4</a>
+          <a class="dropdown-item" href="../5.41.3/index.html">5.41.3</a>
+          <a class="dropdown-item" href="../5.41.2/index.html">5.41.2</a>
+          <a class="dropdown-item" href="../5.41.1/index.html">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.40.3-RC1/index.html">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.38.5-RC1/index.html">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="../js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/5.005_02/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="../js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div class="leading-notice">
+          You are viewing the version of this documentation from Perl 5.005_02.
+            <a href="../index.html">View the latest version</a>
+        </div>
+      <h1 id="Perl-5.005_02-Documentation"><a class="permalink" href="#Perl-5.005_02-Documentation">#</a><a id="Perl"></a>Perl 5.005_02 Documentation</h1>
+
+<p>For ease of access, the Perl manual has been split up into a number of sections:</p>
+
+<pre><code class="nohighlight">perl		Perl overview (this section)
+<a href="perldelta.html">perldelta</a>		Perl changes since previous version
+<a href="perlfaq.html">perlfaq</a>		Perl frequently asked questions
+<a href="perltoc.html">perltoc</a>		Perl documentation table of contents
+
+<a href="perldata.html">perldata</a>		Perl data structures
+<a href="perlsyn.html">perlsyn</a>		Perl syntax
+<a href="perlop.html">perlop</a>		Perl operators and precedence
+<a href="perlre.html">perlre</a>		Perl regular expressions
+<a href="perlrun.html">perlrun</a>		Perl execution and options
+<a href="perlfunc.html">perlfunc</a>		Perl builtin functions
+<a href="perlvar.html">perlvar</a>		Perl predefined variables
+<a href="perlsub.html">perlsub</a>		Perl subroutines
+<a href="perlmod.html">perlmod</a>		Perl modules: how they work
+<a href="perlmodlib.html">perlmodlib</a>		Perl modules: how to write and use
+<a href="perlmodinstall.html">perlmodinstall</a>	Perl modules: how to install from CPAN
+<a href="perlform.html">perlform</a>		Perl formats
+<a href="perllocale.html">perllocale</a>		Perl locale support
+
+<a href="perlref.html">perlref</a>		Perl references
+<a href="perldsc.html">perldsc</a>		Perl data structures intro
+<a href="perllol.html">perllol</a>		Perl data structures: lists of lists
+<a href="perltoot.html">perltoot</a>		Perl OO tutorial
+<a href="perlobj.html">perlobj</a>		Perl objects
+<a href="perltie.html">perltie</a>		Perl objects hidden behind simple variables
+<a href="perlbot.html">perlbot</a>		Perl OO tricks and examples
+<a href="perlipc.html">perlipc</a>		Perl interprocess communication
+
+<a href="perldebug.html">perldebug</a>		Perl debugging
+<a href="perldiag.html">perldiag</a>		Perl diagnostic messages
+<a href="perlsec.html">perlsec</a>		Perl security
+<a href="perltrap.html">perltrap</a>		Perl traps for the unwary
+<a href="perlport.html">perlport</a>		Perl portability guide
+<a href="perlstyle.html">perlstyle</a>		Perl style guide
+
+<a href="perlpod.html">perlpod</a>		Perl plain old documentation
+<a href="perlbook.html">perlbook</a>		Perl book information
+
+<a href="perlembed.html">perlembed</a>		Perl ways to embed perl in your C or C++ application
+<a href="perlapio.html">perlapio</a>		Perl internal IO abstraction interface
+<a href="perlxs.html">perlxs</a>		Perl XS application programming interface
+<a href="perlxstut.html">perlxstut</a>		Perl XS tutorial
+<a href="perlguts.html">perlguts</a>		Perl internal functions for those doing extensions
+<a href="perlcall.html">perlcall</a>		Perl calling conventions from C
+
+<a href="perlhist.html">perlhist</a>		Perl history records</code></pre>
+
+<p>(If you&#39;re intending to read these straight through for the first time, the suggested order will tend to reduce the number of forward references.)</p>
+
+<p>By default, all of the above manpages are installed in the <i>/usr/local/man/</i> directory.</p>
+
+<p>Extensive additional documentation for Perl modules is available. The default configuration for perl will place this additional documentation in the <i>/usr/local/lib/perl5/man</i> directory (or else in the <i>man</i> subdirectory of the Perl library directory). Some of this additional documentation is distributed standard with Perl, but you&#39;ll also find documentation for third-party modules there.</p>
+
+<p>You should be able to view Perl&#39;s documentation with your man(1) program by including the proper directories in the appropriate start-up files, or in the MANPATH environment variable. To find out where the configuration has installed the manpages, type:</p>
+
+<pre><code class="nohighlight">perl -V:man.dir</code></pre>
+
+<p>If the directories have a common stem, such as <i>/usr/local/man/man1</i> and <i>/usr/local/man/man3</i>, you need only to add that stem (<i>/usr/local/man</i>) to your man(1) configuration files or your MANPATH environment variable. If they do not share a stem, you&#39;ll have to add both stems.</p>
+
+<p>If that doesn&#39;t work for some reason, you can still use the supplied <i>perldoc</i> script to view module information. You might also look into getting a replacement man program.</p>
+
+<p>If something strange has gone wrong with your program and you&#39;re not sure where you should look for help, try the <b>-w</b> switch first. It will often point out exactly where the trouble is.</p>
+
+<p><i>Full perl(1) documentation: <a href="perl.html">perl</a></i></p>
+
+<h2 id="Reference-Lists"><a class="permalink" href="#Reference-Lists">#</a><a id="Reference"></a>Reference Lists</h2>
+
+<ul>
+
+<li><p><a href="perlop.html">Operators</a></p>
+
+</li>
+<li><p><a href="functions.html">Functions</a></p>
+
+</li>
+<li><p><a href="variables.html">Variables</a></p>
+
+</li>
+<li><p><a href="modules.html">Modules</a></p>
+
+</li>
+<li><p><a href="perlutil.html">Utilities</a></p>
+
+</li>
+</ul>
+
+<h2 id="More-Info"><a class="permalink" href="#More-Info">#</a><a id="More"></a>More Info</h2>
+
+<ul>
+
+<li><p><a href="perldelta.html">Perl 5.005_02 Release Notes</a></p>
+
+</li>
+<li><p><a href="perlcommunity.html">Community</a></p>
+
+</li>
+<li><p><a href="perlfaq.html">FAQs</a></p>
+
+</li>
+</ul>
+
+<h2 id="About-Perl"><a class="permalink" href="#About-Perl">#</a><a id="About"></a>About Perl</h2>
+
+<p>Perl is a language optimized for scanning arbitrary text files, extracting information from those text files, and printing reports based on that information. It&#39;s also a good language for many system management tasks. The language is intended to be practical (easy to use, efficient, complete) rather than beautiful (tiny, elegant, minimal).</p>
+
+<p>Perl combines (in the author&#39;s opinion, anyway) some of the best features of C, <b>sed</b>, <b>awk</b>, and <b>sh</b>, so people familiar with those languages should have little difficulty with it. (Language historians will also note some vestiges of <b>csh</b>, Pascal, and even BASIC-PLUS.) Expression syntax corresponds quite closely to C expression syntax. Unlike most Unix utilities, Perl does not arbitrarily limit the size of your data--if you&#39;ve got the memory, Perl can slurp in your whole file as a single string. Recursion is of unlimited depth. And the tables used by hashes (previously called &quot;associative arrays&quot;) grow as necessary to prevent degraded performance. Perl uses sophisticated pattern matching techniques to scan large amounts of data very quickly. Although optimized for scanning text, Perl can also deal with binary data, and can make dbm files look like hashes. Setuid Perl scripts are safer than C programs through a dataflow tracing mechanism which prevents many stupid security holes.</p>
+
+<p>If you have a problem that would ordinarily use <b>sed</b> or <b>awk</b> or <b>sh</b>, but it exceeds their capabilities or must run a little faster, and you don&#39;t want to write the silly thing in C, then Perl may be for you. There are also translators to turn your <b>sed</b> and <b>awk</b> scripts into Perl scripts.</p>
+
+<p>But wait, there&#39;s more...</p>
+
+<p>Perl version 5 is nearly a complete rewrite, and provides the following additional benefits:</p>
+
+<ul>
+
+<li><p>Many usability enhancements</p>
+
+<p>It is now possible to write much more readable Perl code (even within regular expressions). Formerly cryptic variable names can be replaced by mnemonic identifiers. Error messages are more informative, and the optional warnings will catch many of the mistakes a novice might make. This cannot be stressed enough. Whenever you get mysterious behavior, try the <b>-w</b> switch!!! Whenever you don&#39;t get mysterious behavior, try using <b>-w</b> anyway.</p>
+
+</li>
+<li><p>Simplified grammar</p>
+
+<p>The new yacc grammar is one half the size of the old one. Many of the arbitrary grammar rules have been regularized. The number of reserved words has been cut by 2/3. Despite this, nearly all old Perl scripts will continue to work unchanged.</p>
+
+</li>
+<li><p>Lexical scoping</p>
+
+<p>Perl variables may now be declared within a lexical scope, like &quot;auto&quot; variables in C. Not only is this more efficient, but it contributes to better privacy for &quot;programming in the large&quot;. Anonymous subroutines exhibit deep binding of lexical variables (closures).</p>
+
+</li>
+<li><p>Arbitrarily nested data structures</p>
+
+<p>Any scalar value, including any array element, may now contain a reference to any other variable or subroutine. You can easily create anonymous variables and subroutines. Perl manages your reference counts for you.</p>
+
+</li>
+<li><p>Modularity and reusability</p>
+
+<p>The Perl library is now defined in terms of modules which can be easily shared among various packages. A package may choose to import all or a portion of a module&#39;s published interface. Pragmas (that is, compiler directives) are defined and used by the same mechanism.</p>
+
+</li>
+<li><p>Object-oriented programming</p>
+
+<p>A package can function as a class. Dynamic multiple inheritance and virtual methods are supported in a straightforward manner and with very little new syntax. Filehandles may now be treated as objects.</p>
+
+</li>
+<li><p>Embeddable and Extensible</p>
+
+<p>Perl may now be embedded easily in your C or C++ application, and can either call or be called by your routines through a documented interface. The XS preprocessor is provided to make it easy to glue your C or C++ routines into Perl. Dynamic loading of modules is supported, and Perl itself can be made into a dynamic library.</p>
+
+</li>
+<li><p>POSIX compliant</p>
+
+<p>A major new module is the POSIX module, which provides access to all available POSIX routines and definitions, via object classes where appropriate.</p>
+
+</li>
+<li><p>Package constructors and destructors</p>
+
+<p>The new BEGIN and END blocks provide means to capture control as a package is being compiled, and after the program exits. As a degenerate case they work just like awk&#39;s BEGIN and END when you use the <b>-p</b> or <b>-n</b> switches.</p>
+
+</li>
+<li><p>Multiple simultaneous DBM implementations</p>
+
+<p>A Perl program may now access DBM, NDBM, SDBM, GDBM, and Berkeley DB files from the same script simultaneously. In fact, the old dbmopen interface has been generalized to allow any variable to be tied to an object class which defines its access methods.</p>
+
+</li>
+<li><p>Subroutine definitions may now be autoloaded</p>
+
+<p>In fact, the AUTOLOAD mechanism also allows you to define any arbitrary semantics for undefined subroutine calls. It&#39;s not for just autoloading.</p>
+
+</li>
+<li><p>Regular expression enhancements</p>
+
+<p>You can now specify nongreedy quantifiers. You can now do grouping without creating a backreference. You can now write regular expressions with embedded whitespace and comments for readability. A consistent extensibility mechanism has been added that is upwardly compatible with all old regular expressions.</p>
+
+</li>
+<li><p>Innumerable Unbundled Modules</p>
+
+<p>The Comprehensive Perl Archive Network described in <a href="perlmodlib.html">perlmodlib</a> contains hundreds of plug-and-play modules full of reusable code. See <i>http://www.perl.com/CPAN</i> for a site near you.</p>
+
+</li>
+<li><p>Compilability</p>
+
+<p>While not yet in full production mode, a working perl-to-C compiler does exist. It can generate portable byte code, simple C, or optimized C code.</p>
+
+</li>
+</ul>
+
+<p>Okay, that&#39;s <i>definitely</i> enough hype.</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/5.005_02/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 15:52:37 GMT -->
+</html>

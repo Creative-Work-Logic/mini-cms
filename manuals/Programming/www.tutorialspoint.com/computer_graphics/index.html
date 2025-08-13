@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+
+<!-- Mirrored from www.tutorialspoint.com/computer_graphics/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Aug 2025 05:12:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title>Computer Graphics Tutorial</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes">
+<meta name="keywords" content="computer graphics, 2D graphics, 3D graphics, rendering techniques, computer graphics applications, graphic design, visual computing">
+<meta name="description" content="Explore the fundamentals of Computer Graphics including 2D and 3D graphics, rendering techniques, and applications in this comprehensive tutorial.">
+<!-- Open Graph Meta Tags for Social Sharing -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Computer Graphics Tutorial">
+<meta property="og:description" content="Explore the fundamentals of Computer Graphics including 2D and 3D graphics, rendering techniques, and applications in this comprehensive tutorial.">
+<meta property="og:url" content="index.html">
+<meta property="og:image" content="../images/tp_logo_436.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="436">
+<meta property="og:image:height" content="228">
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Computer Graphics Tutorial">
+<meta name="twitter:description" content="Explore the fundamentals of Computer Graphics including 2D and 3D graphics, rendering techniques, and applications in this comprehensive tutorial.">
+<meta name="twitter:image" content="../images/tp_logo_436.png">
+<!-- Favicon -->
+<link rel="icon" href="../images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+<!-- Preload Google Fonts -->
+<link rel="preload" href="../../fonts.googleapis.com/css24961.css?family=Nunito:wght@400;600;700&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "mainEntityOfPage": {
+     "@type": "WebPage",
+     "id": "https://www.tutorialspoint.com/computer_graphics/index.htm"
+   },
+  "headline": "Computer Graphics Tutorial",
+  "description": "Explore the fundamentals of Computer Graphics including 2D and 3D graphics, rendering techniques, and applications in this comprehensive tutorial.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TutorialsPoint",
+     "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.tutorialspoint.com/images/tp_logo_436.png"
+      }
+   },
+   "proficiencyLevel": "Beginner",
+   "educationalUse": "Tutorial"
+}
+</script>
+<script>
+   window.googletag = window.googletag || {};
+   window.googletag.cmd = window.googletag.cmd || [];
+   window.googletag.cmd.push(() => {
+        window.googletag.pubads().enableAsyncRendering();
+        window.googletag.pubads().disableInitialLoad();
+  });
+  const injectPgScript = (src, isAsync, onLoadCallback) => {
+    if (!src)
+      return;
+    const script = document.createElement("script");
+    script.src = src;
+    if (isAsync)
+      script.async = isAsync;
+    if (onLoadCallback)
+      script.onload = onLoadCallback;
+    document.head.appendChild(script);
+  };
+  const initiatePgAds = () => {
+    !!window.__tcfapi && window.__tcfapi("addEventListener", 2, (tcData, success) => {
+      if (success && (tcData.eventStatus === "useractioncomplete" || tcData.eventStatus === "tcloaded" || tcData.gdprApplies === false)) {
+        if (!window._initAds) {
+          window._initAds = true;
+          injectPgScript("../../dsh7ky7308k4b.cloudfront.net/publishers/tutorialspointcom.min.js", true);
+          injectPgScript("//btloader.com/tag?o=5184339635601408&upapi=true", true);
+        }
+      }
+    }
+    );
+  };
+  injectPgScript("../../securepubads.g.doubleclick.net/tag/js/fa070.txt?network-code=8095840", true, () => { 
+    window.googlefc = window.googlefc || {
+      callbackQueue: []
+    };
+    window.googlefc.callbackQueue.push({
+      "CONSENT_API_READY": () => initiatePgAds()
+    });
+  });
+</script>
+<link rel="stylesheet" href="../static/css/new-lib-stylef858.css?v-2" media="screen, print">
+<link rel="canonical" href="index.html">
+</head>
+<body class="[--nav-1-height:44px] md:[--nav-2-height:68px] [--nav-2-height:60px] [--nav-3-height:40px]">
+   <nav class="bg-[#2c9d30] z-[11] text-sm max-lg:sticky top-0 text-white flex items-center h-(--nav-1-height) [&_a]:hover:underline">
+      <div
+         class="w-(--container) px-4 mx-auto flex items-center gap-6 overflow-x-auto scrollbar-hidden whitespace-nowrap">
+         <a class="min-w-fit" href="../index.html" alt="Online Courses, Certifications &amp; eBooks">
+            <i class="fa-sharp fa-light fa-home"></i> Home
+         </a>
+         <a class="min-w-fit" href="../whiteboard.html" title="Online Whiteboard">
+            <i class="fa-sharp fa-light fa-chalkboard"></i> Whiteboard</a>
+         </a>
+         <a class="min-w-fit" href="../compilers/index.html" title="Online Compilers and Editors">
+            <i class="fa-sharp fa-light fa-code"></i> Online Compilers
+         </a>
+         <a class="min-w-fit" href="../practice/index.html" title="Practice">
+            <i class="fa-sharp fa-light fa-display-code"></i> Practice
+         </a>
+         <a class="min-w-fit" href="../articles/index.html" alt="Tutorials And Articles">
+            <i class="fa-sharp fa-light fa-pen-to-square top-nav-icon"></i> Articles
+         </a>
+         <a class="min-w-fit" href="../job_search.html" alt="Latest Jop Openings">
+            <i class="fa-sharp fa-light fa-suitcase top-nav-icon"></i> Jobs
+         </a>
+	      <a class="min-w-fit" href="../online_dev_tools.html" alt="Development Tools">
+	         <i class="fa-sharp fa-light fa-tools"></i> Tools
+         </a>         
+         <a class="min-w-fit" href="../business/index.html" alt="Corporate Training - Training For A Team">
+            <i class="fa-sharp fa-light fa-screen-users top-nav-icon"></i> Corporate Training
+         </a>
+         
+         <div class="ml-auto flex items-center gap-2">
+            <a class=" bg-[#318634] size-8 grid place-items-center" target="_blank"
+               href="https://www.facebook.com/tutorialspointindia" aria-label="Connect with us on Facebook" rel="nofollow">
+               <i class="fa-sharp fa-light fa-brands fa-facebook-f !h-[18px]"></i>
+            </a>
+            <a class="bg-[#318634] size-8 grid place-items-center" target="_blank"
+               href="https://x.com/tutorialspoint" aria-label="Connect with us on X" rel="nofollow">
+               <i class="fa-sharp fa-light fa-brands fa-x-twitter !h-[18px]"></i>
+            </a>
+            <a class="bg-[#318634] size-8 grid place-items-center" target="_blank" rel="nofollow"
+               href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" aria-label="Connect with us on Youtube">
+               <i class="fa-sharp fa-light fa-brands fa-youtube !h-[18px]"></i>
+            </a>
+            <a class="bg-[#318634] size-8 grid place-items-center" target="_blank"
+               href="https://www.linkedin.com/company/tutorialspoint/" aria-label="Connect with us on LinkedIn" rel="nofollow">
+               <i class="fa-sharp fa-light fa-brands fa-linkedin-in !h-[18px]"></i>
+            </a>
+            <a class="bg-[#318634] size-8 grid place-items-center" target="_blank"
+               href="https://www.instagram.com/tutorialspoint_/" aria-label="Connect with us on Instagram" rel="nofollow">
+               <i class="fa-sharp fa-light fa-brands fa-instagram !h-[18px]"></i>
+            </a>            
+         </div>
+      </div>
+      <div class="w-(--container) lg:hidden px-4 mx-auto absolute h-full pointer-events-none inset-x-0">
+         <div class="absolute inset-y-0 right-0 h-full w-10 bg-gradient-to-l from-[#2c9d30] to-transparent"
+            aria-hidden="true">
+         </div>
+      </div>
+   </nav>
+   <nav
+      class="h-(--nav-2-height) z-[11] sticky bg-white top-(--nav-1-height) lg:top-0 px-3 flex items-center border-b border-gray-300">
+      <div class="w-(--container) mx-auto  flex gap-3 items-center">
+         <a href="../index-2.html" class="block md:w-full md:max-w-[226px]" title="Tutorialspoint">
+            <svg class="max-md:hidden w-full" xmlns="http://www.w3.org/2000/svg" width="226" height="42" viewBox="0 0 226 42" fill="none">
+               <path
+                  d="M76.2136 13.8408V27.7576H72.3845V26.1045C71.3229 27.3193 69.7701 27.9689 68.0642 27.9689C64.5731 27.9689 62.1172 26.0042 62.1172 21.7103V13.8461H66.1523V21.1135C66.1523 23.4426 67.1874 24.4778 68.9726 24.4778C70.7577 24.4778 72.1785 23.2895 72.1785 20.7279V13.8461H76.2136V13.8408Z"
+                  fill="#40A944"></path>
+               <path
+                  d="M89.1484 20.7959C89.1484 16.6077 92.3807 13.6289 96.8066 13.6289C101.233 13.6289 104.438 16.6024 104.438 20.7959C104.438 24.9894 101.233 27.9629 96.8066 27.9629C92.3807 27.9629 89.1484 24.9894 89.1484 20.7959ZM100.351 20.7959C100.351 18.3928 98.8242 16.9404 96.8066 16.9404C94.7891 16.9404 93.2363 18.3876 93.2363 20.7959C93.2363 23.2043 94.7891 24.6514 96.8066 24.6514C98.8242 24.6514 100.351 23.2043 100.351 20.7959Z"
+                  fill="#40A944"></path>
+               <path
+                  d="M115.28 13.6348V17.3582C114.942 17.3318 114.683 17.3054 114.377 17.3054C112.153 17.3054 110.68 18.5202 110.68 21.1873V27.7575H106.645V13.8407H110.5V15.6787C111.482 14.3319 113.141 13.6348 115.285 13.6348H115.28Z"
+                  fill="#40A944"></path>
+               <path d="M117.695 13.8408H121.73V27.7576H117.695V13.8408Z" fill="#40A944">
+               </path>
+               <path
+                  d="M139.119 13.8402V27.757H135.263V26.1514C134.255 27.3661 132.781 27.9629 130.917 27.9629C126.987 27.9629 123.961 25.169 123.961 20.7959C123.961 16.4228 126.987 13.6289 130.917 13.6289C132.623 13.6289 134.07 14.1729 135.079 15.3084V13.8349H139.114L139.119 13.8402ZM135.163 20.7959C135.163 18.3928 133.61 16.9404 131.619 16.9404C129.628 16.9404 128.049 18.3876 128.049 20.7959C128.049 23.2043 129.602 24.6514 131.619 24.6514C133.637 24.6514 135.163 23.2043 135.163 20.7959Z"
+                  fill="#40A944"></path>
+               <path d="M146.402 8.5625H142.367V27.7555H146.402V8.5625Z" fill="#40A944">
+               </path>
+               <path
+                  d="M149.141 26.4622L150.487 23.5679C151.729 24.3707 153.619 24.9147 155.325 24.9147C157.19 24.9147 157.887 24.4235 157.887 23.6471C157.887 21.3708 149.479 23.7 149.479 18.1385C149.479 15.4978 151.861 13.6387 155.917 13.6387C157.829 13.6387 159.952 14.077 161.272 14.8534L159.925 17.7266C158.552 16.9502 157.184 16.6914 155.917 16.6914C154.105 16.6914 153.329 17.2618 153.329 17.9854C153.329 20.3673 161.737 18.0646 161.737 23.5468C161.737 26.1347 159.334 27.9674 155.167 27.9674C152.811 27.9674 150.435 27.3231 149.141 26.4675V26.4622Z"
+                  fill="#40A944"></path>
+               <path
+                  d="M178.226 20.9541C178.226 25.0948 175.332 27.8835 171.45 27.8835C169.279 27.8835 167.415 26.9539 166.279 25.1952V32.7742H164.441V14.1515H166.2V16.8398C167.315 15.0283 169.2 14.0459 171.45 14.0459C175.332 14.0459 178.226 16.8398 178.226 20.9541ZM176.388 20.9541C176.388 17.8011 174.191 15.6515 171.318 15.6515C168.445 15.6515 166.248 17.7958 166.248 20.9541C166.248 24.1125 168.418 26.2568 171.318 26.2568C174.218 26.2568 176.388 24.1336 176.388 20.9541Z"
+                  fill="#000"></path>
+               <path
+                  d="M180.129 20.9541C180.129 16.919 183.076 14.0459 187.058 14.0459C191.041 14.0459 193.966 16.919 193.966 20.9541C193.966 24.9892 191.046 27.8835 187.058 27.8835C183.071 27.8835 180.129 24.9892 180.129 20.9541ZM192.102 20.9541C192.102 17.7747 189.953 15.6515 187.058 15.6515C184.164 15.6515 181.988 17.7747 181.988 20.9541C181.988 24.1336 184.159 26.2568 187.058 26.2568C189.958 26.2568 192.102 24.1336 192.102 20.9541Z"
+                  fill="#000"></path>
+               <path d="M196.754 14.1523H198.592V27.7575H196.754V14.1523Z" fill="#000"></path>
+               <path
+                  d="M215.288 19.8661V27.7567H213.45V20.051C213.45 17.1778 211.95 15.7043 209.362 15.7043C206.442 15.7043 204.604 17.5159 204.604 20.6161V27.7567H202.766V14.1515H204.524V16.6602C205.507 15.0071 207.345 14.0459 209.695 14.0459C213.006 14.0459 215.283 15.9578 215.283 19.8661H215.288Z"
+                  fill="#000"></path>
+               <path
+                  d="M59.3346 24.2389C58.8699 24.5769 58.2731 24.7565 57.6815 24.7565C56.5935 24.7565 55.9756 24.1122 55.9756 22.9185V17.2568H59.4139V14.1512H55.9756V10.2852L51.9405 11.2411V14.1512H50.2188V17.2568H51.9405V22.9714C51.9405 26.2829 53.8313 27.9624 57.1375 27.9624C58.3523 27.9624 59.567 27.6772 60.3962 27.0804L59.3346 24.2336V24.2389Z"
+                  fill="#40A944"></path>
+               <path
+                  d="M87.2878 24.2389C86.823 24.5769 86.2262 24.7565 85.6347 24.7565C84.5467 24.7565 83.9287 24.1122 83.9287 22.9185V17.2568H87.367V14.1512H83.9287V10.2852L79.8936 11.2411V14.1512H78.1719V17.2568H79.8936V22.9714C79.8936 26.2829 81.7844 27.9624 85.0907 27.9624C86.3054 27.9624 87.5202 27.6772 88.3494 27.0804L87.2878 24.2336V24.2389Z"
+                  fill="#40A944"></path>
+               <path
+                  d="M119.713 11.8222C120.827 11.8222 121.73 10.9189 121.73 9.80465C121.73 8.69039 120.827 7.78711 119.713 7.78711C118.599 7.78711 117.695 8.69039 117.695 9.80465C117.695 10.9189 118.599 11.8222 119.713 11.8222Z"
+                  fill="#40A944"></path>
+               <path
+                  d="M197.674 11.8222C198.788 11.8222 199.691 10.9189 199.691 9.80465C199.691 8.69039 198.788 7.78711 197.674 7.78711C196.56 7.78711 195.656 8.69039 195.656 9.80465C195.656 10.9189 196.56 11.8222 197.674 11.8222Z"
+                  fill="#40A944"></path>
+               <path
+                  d="M225.15 25.6071C224.633 26.0719 223.909 26.3043 223.133 26.3043C221.606 26.3043 220.803 25.4223 220.803 23.822V15.699H224.918V14.1462H220.803V10.2168L218.965 11.1728V14.1462H217.043V15.699H218.965V23.9223C218.965 26.4311 220.386 27.8782 222.948 27.8782C224.009 27.8782 225.097 27.5666 225.794 26.9222L225.15 25.6019V25.6071Z"
+                  fill="#000"></path>
+               <path
+                  d="M27.3002 39.5829C33.1626 39.4561 38.4072 35.87 40.8842 30.5568C42.3208 27.4829 43.0444 24.013 42.8542 20.3582C42.2785 9.30395 33.1521 0.394029 22.082 0.0718569C9.95038 -0.282005 0 9.44655 0 21.5043C0 30.7099 5.80439 38.5583 13.9485 41.6004C13.1721 40.7871 12.6017 39.7941 12.2531 38.6217C11.7091 36.8101 11.725 34.6711 12.2954 32.2046L15.2319 19.8881H9.16343L10.1564 15.5837L10.4257 14.4429H16.5259L16.6368 13.9411L18.0628 7.76175L26.9727 6.05582L25.1506 13.9411L23.8408 19.8881L20.8197 33.2609C20.3602 35.2626 20.5398 36.8101 21.3743 37.8928C21.3743 37.8928 22.6207 39.6832 27.3002 39.5829ZM29.4128 13.4605C31.8951 12.9904 34.0288 15.1242 33.5588 17.6065C33.2947 18.9902 32.1803 20.1099 30.7912 20.374C28.3089 20.8441 26.1752 18.7103 26.6453 16.228C26.9093 14.8443 28.0237 13.7246 29.4128 13.4605Z"
+                  fill="#40A944"></path>
+            </svg>
+            <svg class="md:hidden" xmlns="http://www.w3.org/2000/svg" width="43" height="42" viewBox="0 0 43 42"
+               fill="none">
+               <path
+                  d="M27.3002 39.5829C33.1626 39.4561 38.4072 35.87 40.8842 30.5568C42.3208 27.4829 43.0444 24.013 42.8542 20.3582C42.2785 9.30395 33.1521 0.394029 22.082 0.0718569C9.95038 -0.282005 0 9.44655 0 21.5043C0 30.7099 5.80439 38.5583 13.9485 41.6004C13.1721 40.7871 12.6017 39.7941 12.2531 38.6217C11.7091 36.8101 11.725 34.6711 12.2954 32.2046L15.2319 19.8881H9.16343L10.1564 15.5837L10.4257 14.4429H16.5259L16.6368 13.9411L18.0628 7.76175L26.9727 6.05582L25.1506 13.9411L23.8408 19.8881L20.8197 33.2609C20.3602 35.2626 20.5398 36.8101 21.3743 37.8928C21.3743 37.8928 22.6207 39.6832 27.3002 39.5829ZM29.4128 13.4605C31.8951 12.9904 34.0288 15.1242 33.5588 17.6065C33.2947 18.9902 32.1803 20.1099 30.7912 20.374C28.3089 20.8441 26.1752 18.7103 26.6453 16.228C26.9093 14.8443 28.0237 13.7246 29.4128 13.4605Z"
+                  fill="#40A944"></path>
+            </svg>
+         </a>
+         <button data-toc-toggle aria-expanded="false" class="lg:mr-10 min-w-fit cursor-pointer group flex items-center gap-1.5">
+            Chapters
+            <i class="fa-sharp max-md:group-aria-expanded:-rotate-90 fa-light fa-angle-down"></i>
+         </button>
+         <div data-categories class="ml-auto lg:ml-7">
+            <button data-categories-toggle aria-expanded="false" class="lg:mr-10 min-w-fit cursor-pointer group flex items-center gap-1.5">
+               <i class="fa-sharp fa-light fa-grid-2" aria-hidden="true"></i>
+               <span>Categories</span>
+               <i class="fa-sharp max-md:group-aria-expanded:-rotate-90 fa-light fa-angle-down" aria-hidden="true"></i>
+            </button>
+            <div data-categories-popup class="w-full shadow-lg h-[calc(100vh-var(--nav-2-height)-var(--nav-1-height))] top-(--nav-2-height) text-base lg:text-sm max-lg:overflow-y-auto lg:h-[519px] bottom-0 flex-col [&_a]:py-2 bg-white z-[11] lg:max-w-fit lg:flex-row max-lg:left-0 border border-gray-300 hidden data-[visible]:flex absolute lg:items-start">
+               <div data-categories-tabs-list class="divide-y flex flex-col h-full lg:overflow-y-auto [&_a]:py-4 [&_a]:px-3 divide-gray-300">
+                  <a class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" aria-selected="true" href="#item1" title="AI, ML, and Data Science Tutorials">
+                     <span>AI, ML, and Data Science</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" href="#item2" title="Programming Languages Tutorials">
+                     <span>Programming Languages</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" href="#item3" title="Web Development Languages Tutorials">
+                     <span>Web Development Languages</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" href="#item4" title="DevOps Tutorials">
+                     <span>DevOps</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" href="#item5" title="Database Tutorials">
+                     <span>Databases</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" href="#item6" title="Computer Science Subject Tutorials">
+                     <span>Computer Science Subjects</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" href="#item7" title="Python Technologies Tutorials">
+                     <span>Python Technologies</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 transition-colors" href="#item8" title="Software Testing Tutorials">
+                     <span>Software Testing</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a aria-selected="false" class="w-full flex items-center lg:gap-10 hover:bg-gray-100 lg:border-b-transparent transition-colors" href="#item9" title="Cyber Security Tutorials">
+                     <span>Cyber Security</span>
+                     <i class="fa-sharp fa-light !h-5 lg:!h-4 ml-auto fa-angle-right" aria-hidden="true"></i>
+                  </a>
+                  <a href="../top-categories.html" class="sticky mt-auto bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center hover:bg-[#27902b] transition-colors" title="View All Tutorial Categories">
+                     <i class="fa-sharp fa-light fa-cubes" aria-hidden="true"></i> <span>All Categories</span>
+                  </a>
+               </div>
+               <div data-categories-panels
+                  class="has-[[data-visible]]:h-full [&_a:not(.sticky)]:hover:bg-gray-200 [&_a]:transition-colors lg:[&_a:not(.sticky)]:border-l [&_a]:border-gray-300 lg:bg-gray-100 [&>div]:grow [&>div>div]:grow [&>div]:flex lg:overflow-y-auto [&>div]:flex-col lg:h-full flex flex-col lg:min-w-[350px]">
+                  <div id="item1" role="tabpanel" aria-labelledby="tab-item1">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../artificial_intelligence/index.html" title="Learn Artificial Intelligence">Artificial Intelligence</a>
+                        <a href="../machine_learning/index.html" title="Learn Machine Learning">Machine Learning</a>
+                        <a href="../machine_learning_with_python/index.html" title="Learn Machine Learning with Python">ML With Python</a>
+                        <a href="../data_science/index.html" title="Learn Data Science">Data Science</a>
+                        <a href="../statistics/index.html" title="Learn Statistics">Statistics</a>
+                        <a href="../natural_language_processing/index.html" title="Learn Natural Language Processing">NLP</a>
+                        <a href="../artificial_neural_network/index.html" title="Learn Neural Networks">Neural Networks</a>
+                        <a href="../tensorflow/index.html" title="Learn TensorFlow">TensorFlow</a>
+                        <a href="../pytorch/index.html" title="Learn PyTorch">PyTorch</a>
+                        <a href="../matplotlib/index.html" title="Learn Matplotlib">Matplotlib</a>
+                        <a href="../numpy/index.html" title="Learn NumPy">NumPy</a>
+                        <a href="../python_pandas/index.html" title="Learn Pandas">Pandas</a>
+                        <a href="../scipy/index.html" title="Learn SciPy">SciPy</a>
+                        <a href="../big_data_analytics/index.html" title="Learn Big Data Analytics">Big Data Analytics</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors" href="../machine_learning_tutorials.html" title="View All Machine Learning Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item2" role="tabpanel" aria-labelledby="tab-item2">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../python/index.html" title="Learn Python Programming">Learn Python</a>
+                        <a href="../java/index.html" title="Learn Java Programming">Learn Java</a>
+                        <a href="../cplusplus/index.html" title="Learn C++ Programming">Learn C++</a>
+                        <a href="../cprogramming/index.html" title="Learn C Programming">Learn C</a>
+                        <a href="../php/index.html" title="Learn PHP Programming">Learn PHP</a>
+                        <a href="../go/index.html" title="Learn Go Programming">Learn Go</a>
+                        <a href="../kotlin/index.html" title="Learn Kotlin Programming">Learn Kotlin</a>
+                        <a href="../r/index.html" title="Learn R Programming">Learn R</a>
+                        <a href="../asp.net/index.html" title="Learn ASP.Net">Learn ASP.Net</a>
+                        <a href="../csharp/index.html" title="Learn C# Programming">Learn C#.Net</a>
+                        <a href="../vb.net/index.html" title="Learn VB.Net">Learn VB.Net</a>
+                        <a href="../scala/index.html" title="Learn Scala Programming">Learn Scala</a>
+                        <a href="../swift/index.html" title="Learn Swift Programming">Learn Swift</a>
+                        <a href="../perl/index.html" title="Learn Perl Programming">Learn Perl</a>
+                        <a href="../ruby/index.html" title="Learn Ruby Programming">Learn Ruby</a>
+                        <a href="../rust/index.html" title="Learn Rust Programming">Learn Rust</a>
+                        <a href="../lua/index.html" title="Learn Lua Programming">Learn Lua</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors"
+                           href="../computer_programming_tutorials.html" title="View All Programming Language Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item3" role="tabpanel" aria-labelledby="tab-item3">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../html/index.html" title="Learn HTML">Learn HTML</a>
+                        <a href="../css/index.html" title="Learn CSS">Learn CSS</a>
+                        <a href="../javascript/index.html" title="Learn JavaScript">Learn JavaScript</a>
+                        <a href="../jquery/index.html" title="Learn jQuery">Learn jQuery</a>
+                        <a href="../reactjs/index.html" title="Learn React.js">ReactJs</a>
+                        <a href="../nodejs/index.html" title="Learn Node.js">NodeJs</a>
+                        <a href="../wordpress/index.html" title="Learn WordPress">Wordpress</a>
+                        <a href="../angularjs/index.html" title="Learn Angular.js">AngularJs</a>
+                        <a href="../php/index.html" title="Learn PHP">Learn PHP</a>
+                        <a href="../django/index.html" title="Learn Django">Django</a>
+                        <a href="../json/index.html" title="Learn JSON">Learn JSON</a>
+                        <a href="../codeigniter/index.html" title="Learn CodeIgniter">Codeigniter</a>
+                        <a href="../typescript/index.html" title="Learn TypeScript">TypeScript</a>
+                        <a href="../ajax/index.html" title="Learn AJAX">Learn Ajax</a>
+                        <a href="../bootstrap/index.html" title="Learn Bootstrap">Bootstrap</a>
+                        <a href="../sass/index.html" title="Learn Sass">Learn Sass</a>
+                        <a href="../appml/index.html" title="Learn AppML">AppML</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors"
+                           href="../web_development_tutorials.html" title="View All Web Development Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item4" role="tabpanel" aria-labelledby="tab-item4">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../git/index.html" title="Learn Git">GIT</a>
+                        <a href="../amazon_web_services/index.html" title="Learn Amazon Web Services">AWS</a>
+                        <a href="../docker/index.html" title="Learn Docker">Docker</a>
+                        <a href="../kubernetes/index.html" title="Learn Kubernetes">Kubernetes</a>
+                        <a href="../microsoft_azure/index.html" title="Learn Microsoft Azure">Azure</a>
+                        <a href="../gitlab/index.html" title="Learn GitLab">Gitlab</a>
+                        <a href="../jira/index.html" title="Learn Jira">Jira</a>
+                        <a href="../gerrit/index.html" title="Learn Gerrit">Gerrit</a>
+                        <a href="../ansible/index.html" title="Learn Ansible">Ansible</a>
+                        <a href="../bugzilla/index.html" title="Learn Bugzilla">Bugzilla</a>
+                        <a href="../chef/index.html" title="Learn Chef">Chef</a>
+                        <a href="../saltstack/index.html" title="Learn SaltStack">SaltStack</a>
+                        <a href="../openshift/index.html" title="Learn OpenShift">OpenShift</a>
+                        <a href="../puppet/index.html" title="Learn Puppet">Puppet</a>
+                        <a href="../unix/index.html" title="Learn UNIX">UNIX</a>
+                        <a href="../linux_admin/index.html" title="Learn Linux Administration">Linux Admin</a>
+                        <a href="../ubuntu/index.html" title="Learn Ubuntu">Ubuntu</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors"
+                           href="../devops_tutorials.html" title="View All DevOps Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item5" role="tabpanel" aria-labelledby="tab-item5">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../dbms/index.html" title="Learn Database Management Systems">DBMS</a>
+                        <a href="../sql/index.html" title="Learn SQL">SQL</a>
+                        <a href="../plsql/index.html" title="Learn PL/SQL">PL/SQL</a>
+                        <a href="../mysql/index.html" title="Learn MySQL">MySQL</a>
+                        <a href="../tinydb/index.html" title="Learn TinyDB">TinyDB</a>
+                        <a href="../ms_sql_server/index.html" title="Learn Microsoft SQL Server">SQL Server</a>
+                        <a href="../mongodb/index.html" title="Learn MongoDB">MongoDB</a>
+                        <a href="../postgresql/index.html" title="Learn PostgreSQL">PostgreSQL</a>
+                        <a href="../sqlite/index.html" title="Learn SQLite">SQLite</a>
+                        <a href="../redis/index.html" title="Learn Redis">Redis</a>
+                        <a href="../phpmyadmin/index.html" title="Learn PHPMyAdmin">PHP MyAdmin</a>
+                        <a href="../mariadb/index.html" title="Learn MariaDB">MariaDB</a>
+                        <a href="../couchdb/index.html" title="Learn CouchDB">CouchDB</a>
+                        <a href="../db2/index.html" title="Learn DB2">DB2</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors"
+                           href="../database_tutorials.html" title="View All Database Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item6" role="tabpanel" aria-labelledby="tab-item6">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../computer_fundamentals/index.html" title="Learn Computer Fundamentals">Computer Fundamentals</a>
+                        <a href="../operating_system/index.html" title="Learn Operating System Concepts">Operating System</a>
+                        <a href="../dbms/index.html" title="Learn Database Management Systems">DBMS</a>
+                        <a href="../data_structures_algorithms/index.html" title="Learn Data Structures and Algorithms">DSA</a>
+                        <a href="../data_communication_computer_network/index.html" title="Learn Computer Networks">Computer Networks</a>
+                        <a href="../software_engineering/index.html" title="Learn Software Engineering">Software Engineering</a>
+                        <a href="index.html" title="Learn Computer Graphics">Computer Graphics</a>
+                        <a href="../data_mining/index.html" title="Learn Data Mining">Data Mining</a>
+                        <a href="../digital_marketing/index.html" title="Learn Digital Marketing">Digital Marketing</a>
+                        <a href="../seo/index.html" title="Learn Search Engine Optimization">SEO</a>
+                        <a href="../digital-electronics/index.html" title="Learn Digital Circuits">Digital Circuits</a>
+                        <a href="../discrete_mathematics/index.html" title="Learn Discrete Mathematics">Discrete Mathematics</a>
+                        <a href="../cryptography/index.html" title="Learn Cryptography">Cryptography</a>
+                        <a href="../cloud_computing/index.html" title="Learn Cloud Computing">Cloud Computing</a>
+                        <a href="../compiler_design/index.html" title="Learn Compiler Design">Compiler Design</a>
+                        <a href="../embedded_systems/index.html" title="Learn Embedded Systems">Embedded Systems</a>
+                        <a href="../microprocessor/index.html" title="Learn Microprocessors">Microprocessors</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors"
+                           href="../computer_science_tutorials.html" title="View All Computer Science Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item7" role="tabpanel" aria-labelledby="tab-item7">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../python/index.html" title="Learn Python Programming">Python</a>
+                        <a href="../numpy/index.html" title="Learn NumPy for Data Analysis">NumPy</a>
+                        <a href="../python_pandas/index.html" title="Learn Pandas for Data Analysis">Pandas</a>
+                        <a href="../matplotlib/index.html" title="Learn Matplotlib for Data Visualization">Matplotlib</a>
+                        <a href="../django/index.html" title="Learn Django Web Framework">Django</a>
+                        <a href="../pyqt/index.html" title="Learn PyQt for GUI Development">PyQt</a>
+                        <a href="../pycharm/index.html" title="Learn PyCharm IDE">PyCharm</a>
+                        <a href="../python_pillow/index.html" title="Learn Pillow for Image Processing">Pillow</a>
+                        <a href="../opencv/index.html" title="Learn OpenCV for Computer Vision">OpenCV</a>
+                        <a href="../seaborn/index.html" title="Learn Seaborn for Statistical Data Visualization">Seaborn</a>
+                        <a href="../machine_learning_with_python/index.html" title="Learn Machine Learning with Python">ML with Python</a>
+                        <a href="../scipy/index.html" title="Learn SciPy for Scientific Computing">SciPy</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors" href="../python_technologies_tutorials.html" title="View All Python Technology Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item8" role="tabpanel" aria-labelledby="tab-item8">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../software_testing/index.html" title="Learn Software Testing Fundamentals">Software Testing</a>
+                        <a href="../jira/index.html" title="Learn Jira for Project Management">Jira</a>
+                        <a href="../selenium/index.html" title="Learn Selenium for Test Automation">Selenium</a>
+                        <a href="../testrail/index.html" title="Learn TestRail for Test Case Management">TestRail</a>
+                        <a href="../postman/index.html" title="Learn Postman for API Testing">Postman</a>
+                        <a href="../cucumber/index.html" title="Learn Cucumber for BDD Testing">Cucumber</a>
+                        <a href="../cypress/index.html" title="Learn Cypress for Front-End Testing">Cypress</a>
+                        <a href="../watir/index.html" title="Learn Watir for Ruby-Based Testing">Watir</a>
+                        <a href="../agile/index.html" title="Learn Agile Methodology">Agile</a>
+                        <a href="../jmeter/index.html" title="Learn JMeter for Performance Testing">jMeter</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors" href="../software_testing_tutorials.html" title="View All Software Testing Tutorials">See all</a>
+                     </div>
+                  </div>
+                  <div id="item9" role="tabpanel" aria-labelledby="tab-item9">
+                     <button class="lg:hidden m-3 bg-gray-200 px-4 w-fit flex items-center gap-2 pr-4 py-1.5">
+                        <i class="fa-sharp fa-light fa-angle-left !h-4" aria-hidden="true"></i> <span>Back</span>
+                     </button>
+                     <div class="flex flex-col [&_a]:py-4 [&_a]:px-3 max-lg:divide-y divide-gray-300">
+                        <a href="../blockchain/index.html" title="Learn Blockchain Technology">Blockchain</a>
+                        <a href="../information_security_cyber_law/index.html" title="Learn Information Security and Cyber Law">Information Security</a>
+                        <a href="../computer_security/index.html" title="Learn Computer Security Fundamentals">Computer Security</a>
+                        <a href="../internet_security/index.html" title="Learn Internet Security Best Practices">Internet Security</a>
+                        <a href="../network_security/index.html" title="Learn Network Security">Network Security</a>
+                        <a href="../wireless_security/index.html" title="Learn Wireless Security">Wireless Security</a>
+                        <a class="sticky bottom-0 bg-[#2c9d30] !py-2.5 text-white text-center mt-auto hover:bg-[#27902b] transition-colors" href="../cyber_security_tutorials.html" title="View All Cyber Security Tutorials">See all</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <button aria-expanded="false" data-nav-toggle class="lg:hidden group flex items-center gap-1.5"
+            aria-label="Toggle menu">
+            <svg class="group-aria-expanded:hidden size-7" xmlns="http://www.w3.org/2000/svg" fill="none"
+               viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <svg class="group-aria-expanded:block hidden size-7" xmlns="http://www.w3.org/2000/svg" fill="none"
+               viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+         </button>
+         <div data-nav
+            class="w-full max-lg:shadow-lg top-(--nav-2-height) max-lg:flex-col [&_a]:py-2 max-lg:bg-white z-[2] left-0 max-lg:p-4 max-lg:border border-gray-300 max-lg:hidden max-lg:data-[visible]:flex max-lg:absolute flex lg:items-center lg:gap-6">
+            <div class="relative w-full max-w-[600px] max-lg:mb-2">
+               <input data-result="search-results" id="search-strings" name="key"
+                  class="border-black w-full py-2 border focus:border-[#2c9d30] placeholder:text-black/90 text-sm focus:outline-hidden px-3"
+                  placeholder="Search tutorials, courses and ebooks..." />
+               <div class="search-box search-box-inn right-0" id="search-results"></div>
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="absolute right-3 inset-y-0 my-auto size-5 opacity-50">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                     d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+               </svg>
+            </div>
+            <a href="../tutorialslibrary.html" class="lg:ml-auto hover:underline    ">Library</a>
+            <a href="../market/index.html" class="hover:underline">Courses</a>
+            <a href="../latest/certifications.html" class="hover:underline">Certifications</a>
+            <a href="../market/login.html"
+               class="bg-[#2c9d30] py-2 px-4 text-white hover:opacity-80 max-lg:mt-1 transition-opacity font-semibold" id="nav__signup-link">Login</a>
+         </div>
+      </div>
+   </nav>
+   <nav class="bg-[#031926] text-sm text-white relative flex items-center h-(--nav-3-height) [&_a]:hover:bg-[#2c9d30]">
+      <div class="w-(--container) px-4 mx-auto absolute h-full pointer-events-none inset-x-0">
+         <div class="absolute inset-y-0 left-0 h-full w-10 bg-gradient-to-r from-[#031926] to-transparent"
+            aria-hidden="true">
+         </div>
+      </div>
+      <button class="w-[50px] !h-[30px] flex items-center cursor-pointer" data-scroll-prev>
+         <i class="fa-sharp fa-light !h-4 z-[2] ml-3 lg:ml-6 fa-angle-left"></i>
+      </button>
+      <div data-scroll-container class="w-(--container) px-4 mx-auto flex items-center overflow-x-auto scrollbar-hidden whitespace-nowrap h-full [&_a]:h-full [&_a]:flex [&_a]:items-center [&_a]:px-3.5 lg:[&_a]:px-5">
+         <a href="../sql/index.html" title="SQL Tutorial">SQL</a>
+         <a href="../html/index.html" title="HTML Tutorial">HTML</a>
+         <a href="../css/index.html" title="CSS Tutorial">CSS</a>
+         <a href="../javascript/index.html" title="JavaScript Tutorial">Javascript</a>
+         <a href="../python/index.html" title="Python Tutorial">Python</a>
+         <a href="../java/index.html" title="Java Tutorial">Java</a>
+         <a href="../cprogramming/index.html" title="C Tutorial">C</a>
+         <a href="../cplusplus/index.html" title="C++ Tutorial">C++</a>
+         <a href="../php/index.html" title="PHP Tutorial">PHP</a>
+         <a href="../scala/index.html" title="Scala Tutorial">Scala</a>
+         <a href="../csharp/index.html" title="C# Tutorial">C#</a>
+         <a href="../tailwind_css/index.html" title="Tailwind CSS Tutorial">Tailwind CSS</a>
+         <a href="../nodejs/index.html" title="Node.js Tutorial">Node.js</a>
+         <a href="../mysql/index.html" title="MySQL">MySQL</a>
+         <a href="../mongodb/index.html" title="MongoDB Tutorial">MongoDB</a>
+         <a href="../plsql/index.html" title="PL/SQL Tutorial">PL/SQL</a>
+         <a href="../swift/index.html" title="Swift Tutorial">Swift</a>
+         <a href="../bootstrap/index.html" title="Bootstrap Tutorial">Bootstrap</a>
+         <a href="../r/index.html" title="R Programming">R</a>
+         <a href="../machine_learning/index.html" title="Machine Learning">Machine Learning</a>
+         <a href="../blockchain/index.html" title="Blockchain Tutorial">Blockchain</a>
+         <a href="../angular/index.html" title="Angular Tutorial">Angular</a>
+         <a href="../react_native/index.html" title="React Native Tutorial">React Native</a>
+         <a href="../computer_fundamentals/index.html" title="Computer Fundamentals Tutorial">Computer Fundamentals </a>
+         <a href="../compiler_design/index.html" title="Compiler Design Tutorial">Compiler Design</a>
+         <a href="../operating_system/index.html" title="Operating System Tutorial">Operating System</a>
+         <a href="../data_structures_algorithms/index.html" title="Data Structure and Algorithms Tutorial">Data Structure and Algorithms </a>
+         <a href="../data_communication_computer_network/index.html" title="Computer Network Tutorial"> Computer Network</a>
+         <a href="../dbms/index.html" title="DBMS Tutorial">DBMS</a>
+         <a href="../excel/index.html" title="Excel Tutorial">Excel</a>
+      </div>
+      <button class="cursor-pointer w-[50px]  h-[30px] flex items-center" data-scroll-next>
+         <i class="fa-sharp fa-light !h-4 z-[2] mr-3 lg:mr-6 fa-angle-right"></i>
+      </button>
+      <div class="w-(--container) px-4 mx-auto absolute h-full pointer-events-none inset-x-0">
+         <div class="absolute inset-y-0 right-0 h-full w-10 bg-gradient-to-l from-[#031926] to-transparent" aria-hidden="true">
+         </div>
+      </div>
+   </nav>
+<main class="bg-light" style="overflow: unset;">
+<div class="container-fluid">
+<div class="row">
+<div class="tutorial-toc">
+<div class="toc-nav">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+   tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+   "HTML-CSS": {
+     linebreaks: { automatic: true, width: "container" }
+   }
+});
+</script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML"> </script> 
+<div class="mini-logo">
+<img src="images/computer-graphics-mini-logo.jpg" alt="Computer Graphics Tutorial" />
+</div>
+<ul class="toc chapters">
+<li><a href="index.html">Computer Graphics - Home</a></li>
+<li><a href="computer_graphics_basics.html">Computer Graphics Basics</a></li>
+<li><a href="computer_graphics_applications.html">Computer Graphics Applications</a></li>
+<li><a href="graphics_api_and_pipelines.html">Graphics APIs and Pipelines</a></li> 
+<li class="heading">Computer Graphics Maths</li>
+<li><a href="computer_graphics_sets_and_mapping.html">Sets and Mapping</a></li>
+<li><a href="computer_graphics_solving_quadratic_equations.html">Solving Quadratic Equations</a></li>
+<li><a href="computer_graphics_trigonometry.html">Computer Graphics Trigonometry</a></li>
+<li><a href="computer_graphics_vectors.html">Computer Graphics Vectors</a></li>
+<li><a href="computer_graphics_linear_interpolation.html">Linear Interpolation</a></li> 
+<li class="heading">Computer Graphics Devices</li>
+<li><a href="computer_graphics_cathode_ray_tube.html">Cathode Ray Tube</a></li>
+<li><a href="computer_graphics_raster_scan_display.html">Raster Scan Display</a></li> 
+<li><a href="computer_graphics_random_scan_device.html">Random Scan Device</a></li> 
+<li><a href="computer_graphics_phosphorescence_and_color_crt.html">Phosphorescence Color CRT</a></li>
+<li><a href="computer_graphics_flat_panel_displays.html">Flat Panel Displays</a></li> 
+<li><a href="computer_graphics_3d_viewing_devices.html">3D Viewing Devices</a></li>
+<li><a href="computer_graphics_images_pixels_and_geometry.html">Images Pixels and Geometry</a></li> 
+<li><a href="computer_graphics_color_models.html">Color Models</a></li> 
+<li class="heading">Line Generation</li>
+<li><a href="line_generation_algorithm.html">Line Generation Algorithm</a></li>
+<li><a href="computer_graphics_dda_algorithm.html">DDA Algorithm</a></li> 
+<li><a href="bresenhams_line_generation_algorithm.html">Bresenham's Line Generation Algorithm</a></li> 
+<li><a href="mid_point_line_generation_algorithm.html">Mid-point Line Generation Algorithm</a></li>
+<li class="heading">Circle Generation</li> 
+<li><a href="circle_generation_algorithm.html">Circle Generation Algorithm</a></li>
+<li><a href="bresenhams_circle_generation_algorithm.html">Bresenham's Circle Generation Algorithm</a></li> 
+<li><a href="mid_point_circle_generation_algorithm.html">Mid-point Circle Generation Algorithm</a></li> 
+<li><a href="computer_graphics_ellipse_generation_algorithm.html">Ellipse Generation Algorithm</a></li> 
+<li class="heading">Polygon Filling</li> 
+<li><a href="polygon_filling_algorithm.html">Polygon Filling Algorithm</a></li>
+<li><a href="computer_graphics_scan_line_algorithm.html">Scan Line Algorithm</a></li> 
+<li><a href="computer_graphics_flood_filling_algorithm.html">Flood Filling Algorithm</a></li> 
+<li><a href="computer_graphics_boundary_fill_algorithm.html">Boundary Fill Algorithm</a></li> 
+<li><a href="computer_graphics_4_and_8_connected_polygon.html">4 and 8 Connected Polygon</a></li> 
+<li><a href="computer_graphics_inside_outside_test.html">Inside Outside Test</a></li> 
+<li class="heading">2D Transformation</li>
+<li><a href="2d_transformation.html">2D Transformation</a></li>
+<li><a href="transformation_between_coordinate_system.html">Transformation Between Coordinate System</a></li> 
+<li><a href="computer_graphics_affine_transformation.html">Affine Transformation</a></li>
+<li><a href="computer_graphics_raster_methods_transformation.html">Raster Methods Transformation</a></li> 
+<li class="heading">2D Viewing</li>
+<li><a href="viewing_pipeline_and_reference_frame.html">Viewing Pipeline and Reference Frame</a></li>
+<li><a href="window_viewport_coordinate_transformation.html">Window Viewport Coordinate Transformation</a></li> 
+<li><a href="viewing_and_clipping.html">Viewing &amp; Clipping</a></li>
+<li><a href="computer_graphics_point_clipping_algorithm.html">Point Clipping Algorithm</a></li> 
+<li><a href="computer_graphics_cohen_sutherland_line_clipping.html">Cohen-Sutherland Line Clipping</a></li> 
+<li><a href="computer_graphics_cyrus_beck_line_clipping_algorithm.html">Cyrus-Beck Line Clipping Algorithm</a></li>
+<li><a href="polygon_clipping_sutherland_hodgman_algorithm.html">Polygon Clipping Sutherland–Hodgman Algorithm</a></li>
+<li><a href="computer_graphics_text_clipping.html">Text Clipping</a></li>
+<li><a href="computer_graphics_clipping_techniques.html">Clipping Techniques</a></li> 
+<li><a href="bitmap_graphics.html">Bitmap Graphics</a></li> 
+<li class="heading">3D Viewing Transformation</li>
+<li><a href="3d_computer_graphics.html">3D Computer Graphics</a></li>
+<li><a href="computer_graphics_parallel_projection.html">Parallel Projection</a></li> 
+<li><a href="computer_graphics_orthographic_projection.html">Orthographic Projection</a></li> 
+<li><a href="computer_graphics_oblique_projection.html">Oblique Projection</a></li> 
+<li><a href="computer_graphics_perspective_projection.html">Perspective Projection</a></li> 
+<li><a href="3d_transformation.html">3D Transformation</a></li>
+<li><a href="computer_graphics_rotation_quaternions.html">Rotation with Quaternions</a></li> 
+<li><a href="computer_graphics_modelling_3d_coordinate_systems.html">Modelling and Coordinate Systems</a></li> 
+<li><a href="computer_graphics_back_face_culling.html">Back-face Culling</a></li> 
+<li><a href="lighting_in_3d_graphics.html">Lighting in 3D Graphics</a></li> 
+<li><a href="shadowing_in_3d_graphics.html">Shadowing in 3D Graphics</a></li> 
+<li class="heading">3D Object Representation</li>
+<li><a href="computer_graphics_representing_polygons.html">Represnting Polygons</a></li>
+<li><a href="computer_graphics_surfaces.html">Computer Graphics Surfaces</a></li>
+<li><a href="visible_surface_detection.html">Visible Surface Detection</a></li>
+<li><a href="computer_graphics_3d_objects_representation.html">3D Objects Representation</a></li>
+<li class="heading">Computer Graphics Curves</li>
+<li><a href="computer_graphics_curves.html">Computer Graphics Curves</a></li>
+<li><a href="types_of_curves_in_computer_graphics.html">Types of Curves</a></li>
+<!--<li><a href="/computer_graphics/types_of_spline_curves.htm">Types of Spline Curves</a></li>-->
+<li><a href="computer_graphics_bezier_curves_and_surfaces.html">Bezier Curves and Surfaces</a></li> 
+<li><a href="computer_graphics_b_spline_curves_and_surfaces.html">B-Spline Curves and Surfaces</a></li>
+<li class="heading">Data Structures For Graphics</li>
+<li><a href="computer_graphics_triangle_meshes.html">Triangle Meshes</a></li>
+<li><a href="computer_graphics_scene_graphs.html">Scene Graphs</a></li>
+<li><a href="spatial_data_structure_in_computer_graphics.html">Spatial Data Structure</a></li> 
+<li><a href="computer_graphics_binary_space_partitioning.html">Binary Space Partitioning</a></li>
+<li><a href="computer_graphics_tiling_multidimensional_arrays.html">Tiling Multidimensional Arrays</a></li>
+<li class="heading">Color Theory</li>
+<li><a href="computer_graphics_colorimetry.html">Colorimetry</a></li> 
+<li><a href="computer_graphics_chromatic_adaptation.html">Chromatic Adaptation</a></li>
+<li><a href="computer_graphics_color_appearance.html">Color Appearance</a></li> 
+<li><a href="computer_graphics_antialiasing.html">Antialiasing</a></li> 
+<li class="heading">Ray Tracing</li>
+<li><a href="computer_graphics_ray_tracing_algorithm.html">Ray Tracing Algorithm</a></li>
+<li><a href="computer_graphics_perspective_ray_tracing.html">Perspective Ray Tracing</a></li> 
+<li><a href="computing_viewing_rays_in_ray_tracing.html">Computing Viewing Rays</a></li> 
+<li><a href="ray_object_intersection_in_ray_tracing.html">Ray-Object Intersection</a></li> 
+<li><a href="shading_in_ray_tracing.html">Shading in Ray Tracing</a></li> 
+<li><a href="transparency_and_refraction_in_ray_tracing.html">Transparency and Refraction</a></li> 
+<li><a href="constructive_solid_geometry_in_ray_tracing.html">Constructive Solid Geometry</a></li> 
+<li class="heading">Texture Mapping</li>
+<li><a href="texture_values_in_texture_mapping.html">Texture Values</a></li>
+<li><a href="texture_coordinate_function_in_texture_mapping.html">Texture Coordinate Function</a></li>
+<li><a href="antialiasing_texture_lookups_for_texture_mapping.html">Antialiasing Texture Lookups</a></li> 
+<li><a href="procedural_3d_textures_for_texture_mapping.html">Procedural 3D Textures</a></li> 
+<li class="heading">Reflection Models</li> 
+<li><a href="real_world_materials_for_reflection_models.html">Real-World Materials</a></li> 
+<li><a href="implementing_reflection_models_in_computer_graphics.html">Implementing Reflection Models</a></li> 
+<li><a href="computer_graphics_specular_reflection_models.html">Specular Reflection Models</a></li> 
+<li><a href="computer_graphics_smooth_layered_model.html">Smooth-Layered Model</a></li> 
+<li><a href="computer_graphics_rough_layered_model.html">Rough-Layered Model</a></li> 
+<li class="heading">Surface Shading</li> 
+<li><a href="computer_graphics_diffuse_shading.html">Diffuse Shading</a></li> 
+<li><a href="computer_graphics_phong_shading.html">Phong Shading</a></li> 
+<li><a href="computer_graphics_artistic_shading.html">Artistic Shading</a></li> 
+<li class="heading">Computer Animation</li>
+<li><a href="computer_animation.html">Computer Animation</a></li>
+<li><a href="computer_graphics_keyframe_animation.html">Keyframe Animation</a></li> 
+<li><a href="computer_graphics_morphing_animation.html">Morphing Animation</a></li> 
+<li><a href="computer_graphics_motion_path_animation.html">Motion Path Animation</a></li> 
+<li><a href="computer_graphics_deformation_animation.html">Deformation Animation</a></li> 
+<li><a href="computer_graphics_character_animation.html">Character Animation</a></li> 
+<li><a href="computer_graphics_physics_based_animation.html">Physics-Based Animation</a></li> 
+<li><a href="computer_graphics_procedural_animation_techniques.html">Procedural Animation Techniques</a></li> 
+<li><a href="computer_graphics_fractals.html">Computer Graphics Fractals</a></li>
+</ul>
+<ul class="toc chapters">
+<li><a href="computer_graphics_quick_guide.html">Computer Graphics - Quick Guide</a></li>
+<li><a href="computer_graphics_useful_resources.html">Computer Graphics - Resources</a></li>
+<li><a href="computer_graphics_discussion.html">Computer Graphics - Discussion</a></li>
+</ul>
+         <ul class="toc reading">
+            <li class="sreading">Selected Reading</li>
+            <li><a target="_blank" href="../upsc_ias_exams.html">UPSC IAS Exams Notes</a></li>
+            <li><a target="_blank" href="../developers_best_practices/index.html">Developer's Best Practices</a></li>
+            <li><a target="_blank" href="../questions_and_answers.html">Questions and Answers</a></li>
+            <li><a target="_blank" href="../effective_resume_writing.html">Effective Resume Writing</a></li>
+            <li><a target="_blank" href="../resume-builder.html">AI Based Resume Builder</a></li>
+            <li><a target="_blank" href="../assist.html">Personal AI Study Assistant</a></li>
+            <li><a target="_blank" href="../generate_coding_logic.html">Generate Coding Logic</a></li>
+            <li><a target="_blank" href="../hr_interview_questions/index.html">HR Interview Questions</a></li>
+            <li><a target="_blank" href="../computer_glossary.html">Computer Glossary</a></li>
+            <li><a target="_blank" href="../computer_whoiswho.html">Who is Who</a></li>
+         </ul>
+      </div>
+      <div id="stickyparent" class="d-none d-sm-block">
+         <div style="height:0px;width:300px;" id="sticky-ad">
+          <!-- Placeholder for an advertisement -->
+         </div>
+      </div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="tutorial-content" id="mainContent">
+<div class="cover">
+<img class="img-responsive" src="images/computer-graphics.jpg" alt="Computer Graphics Tutorial">
+</div>
+<h1>Computer Graphics Tutorial</h1>
+<div class="center-aligned tutorial-menu">
+<form action="https://www.tutorialspoint.com/job_search.php" class="tutorial-menu-slider" id="tutorial-menu-slider" method="POST">
+<input type="hidden" name="search_string" value="Computer Graphics">
+<button type="submit" class="tp-btn"><i class="fal fa-search-dollar"></i> Job Search</button>
+<a class="tp-btn" href="computer_graphics_pdf_version.html"><i class="fal fa-file-pdf"></i> PDF Version</a>
+<a class="tp-btn" href="computer_graphics_quick_guide.html"><i class="fal fa-book-reader"></i> Quick Guide</a>
+<a class="tp-btn" href="computer_graphics_useful_resources.html"><i class="fal fa-external-link"></i> Resources</a>
+<a class="tp-btn" href="computer_graphics_discussion.html"><i class="fal fa-comments"></i> Discussion</a>
+</form>
+</div>
+<p>Computer Graphics simplify the process of displaying pictures of any size on a computer screen. Various algorithms and techniques are used to generate graphics in computers. This tutorial will help you understand how all these graphics are processed by the computer to give a rich visual experience to the user.</p>
+<h2>What is Computer Graphics?</h2>
+<p>Computer graphics, a dynamic field within computing, involves the creation, manipulation, and rendering of visual content using computers. It includes digital images, animations, and interactive graphics used in various sectors like entertainment, education, scientific visualization, and virtual reality.</p>
+<p>Computer graphics can be used in UI design, rendering, geometric objects, and animation. It refers to the manipulation and representation of images or data in a graphical manner, requiring various technology for creation and manipulation, and digital synthesis and its manipulation.</p>
+<div class="inserted-div"><script async="true" id="PS_67ebd889ca6f1325b65a5242" type="text/javascript" src="https://ads.playstream.media/api/adserver/scripts?PS_TAGID=67ebd889ca6f1325b65a5242&amp;PS_PUB_ID=67ebd5e3ca6f1325b65a46fe"></script></div>
+<h2>Types of Computer Graphics</h2>
+<p>Computer graphics can be broadly categorized based on their applications, nature, or the way they are generated. Here are the main types of computer graphics −</p>
+<ul class="list-nobg">
+<li>
+<b>Raster Graphics (Bitmap Graphics)</b> − Bitmap graphics are the images made up of tiny dots called pixels (picture elements).</li>
+<li>
+<b>Vector Graphics</b> − Images are created using mathematical equations to represent geometric shapes such as lines, circles, and polygons.</li>
+<li>
+<b>3D Graphics</b> − Graphics that represent three-dimensional objects and scenes, often used for simulations, video games, and movies.</li>
+<li>
+<b>Interactive Graphics</b> − Graphics that allow users to interact with them, typically through a user interface (UI).</li>
+<li>
+<b>Real-Time Graphics</b> − Graphics that are rendered in real-time, meaning they are created and displayed instantly as the user interacts with them.</li>
+</ul>
+<h2>Basic Principles of Animation in Computer Graphics</h2> 
+<p>The animation in computer graphics is nothing but a sequence of frames where each frame is generating a graphics output on the scene. Generally, not all frames are generated in a similar way.</p>
+<p>The concept of <b>interpolation</b> is used for animation creation. These can be done with linear, quadratic or other interpolation types. There are several types of animation including <b>key-framing, morphing, tween animations</b>, etc.</p>
+<h2>Raster and Vector Graphics</h2>
+<p>Raster and vector graphics are two common types of digital images.</p>
+<p>Raster graphics consist of tiny pixels; they are ideal for detailed and colourful images like photographs. On the other hand, vector graphics use mathematical paths for scaled designs like logos and illustrations.</p>
+<img src="images/difference_between_raster_and_vector_graphics.jpg" alt="Difference Between Raster and Vector Graphics">
+<p>Raster images use bit maps to store information, requiring a larger bitmap for larger files. Vector graphics, on the other hand, use sequential commands or mathematical statements to place lines or shapes in a 2-D or 3-D environment.</p>
+<h2>Pixel and Image Resolution</h2>
+<p>Pixels, derived from the term "picture element," are the fundamental unit of digital images, representing visual information. They consist of RGB subpixels, which mix to create diverse colors. Pixels form a raster image, with each pixel representing a specific position and color value.</p>
+<img src="images/what_is_a_pixel.jpg" alt="What is a Pixel">
+<p>In an image, how many pixels are there in row and in column manner that signifies the resolution. An image with large number of pixels inside it will be more accurate and detailed image as compared to lower number of picture elements.</p>
+<h2>What is Rendering in Computer Graphics?</h2> 
+<p>The term <b>rendering</b> states visualizing the data. In computer graphics showing the generated graphics is rendering. However we generally use 3D rendering with the term "rendering". </p>
+<p>3D rendering is a computer-based process that generates a 2D image from a digital 3D scene. It is essential in various industries like architecture, product design, advertising, video games, and visual effects.</p> 
+<p>Some of the rendering techniques are listed below −</p>
+<ul class="list-nobg">
+<li>
+<b>Scanline</b> is a traditional rendering technique that calculates computer graphics surface.</li>
+<li>
+<b>Z-Buffer</b> is a two-dimensional data system used for depth calculation and storage.</li>
+<li>
+<b>Shading</b> and <b>lighting</b> manipulate light and dark levels using software effects.</li>
+<li>
+<b>Texture / Bump Mapping</b> displays color, material, and object details.</li>
+<li>
+<b>Ray Tracing</b> and <b>Ray Casting</b> are useful rendering techniques for creating natural lighting effects.</li>
+</ul> 
+<h2>Who Should Learn Computer Graphics</h2>
+<p>This tutorial on Computer Graphics has been prepared for students who dont know how graphics are used in computers. It explains the <strong><a href="computer_graphics_basics.html" target="_blank">basics of graphics</a></strong> and how they are implemented in computers to generate various visuals.</p>
+<h2>Prerequisites to Learn Computer Graphics</h2>
+<p>Before you start proceeding with this tutorial, we assume that you are already aware of the basic concepts of C programming language and basic mathematics.</p>
+<h2>FAQs on Computer Graphics</h2>
+<p>There are some very <b>Frequently Asked Questions (FAQs)</b> on <b>Computer Graphics</b>, this section tries to answer them briefly.</p>
+<h3>1. How do display devices like CRT and LCD work in the context of graphics?</h3>
+<blockquote class="quote">
+<p>CRT monitors use electron beams to glow up phosphor dots on the screen. Like this images are formed. On the other hand, LCD monitors use liquid crystals and a backlight to control light and form images.</p>
+<p>Both types rely on the graphics card to render and send the image signal. CRTs use an analog signal, while LCDs use a digital signal. The graphics card and monitor must support the same resolution and refresh rate for proper display.</p>
+</blockquote>
+<h3>2. What is the role of linear algebra in computer graphics?</h3>
+<blockquote class="quote">
+<p>Linear algebra is like the math toolkit for computer graphics. It helps in creating and moving objects in 2D or 3D on the screen. For example, it allows us to rotate, scale, and shift objects. Think of it as the math behind making video games and animations look real.</p>
+<p>Without linear algebra, it will not be possible to create the graphics. From the linear equation, we form matrices to solve the problems in action.</p>
+</blockquote>
+<h3>3. What is a Frame Buffer?</h3>
+<blockquote class="quote">
+<p>A frame buffer is a memory buffer in RAM that contains a bitmap that drives a video display. It represents all pixels in a complete video frame and converts an in-memory bitmap into a video signal for display on a computer monitor. </p>
+<p>The buffer typically contains color values for every pixel, stored in 1-bit binary, 4-bit palettized, 8-bit palettized, 16-bit high color, and 24-bit true color formats. The total memory required depends on the output signal resolution and color depth.</p>
+<img src="images/what_is_a_frame_buffer.jpg" alt="What is a Frame Buffer?">
+</blockquote>
+<h3>4. How do Spatial Data Structures improve rendering efficiency?</h3>
+<blockquote class="quote">
+<p>Spatial data structures like grids, octrees, and BSP trees, help organize 3D objects in a scene. They make rendering faster by reducing the number of calculations needed to determine what is visible. </p>
+<p>For example, instead of checking every object, the system only checks those in relevant areas. This speeds up processes like ray tracing, making graphics smoother and more efficient. Also for object which comes front or rear of some other objects, these data structures helps us a lot.</p>
+</blockquote>
+<h3>5. What is the significance of Color Depth?</h3>
+<blockquote class="quote">
+<p>Color depth, also known as bit depth, is the number of bits used to indicate the color of a single pixel or each color component of a single pixel. It can be defined as bits per pixel (bpp), bits per component, bits per channel, bits per color (bpc), bits per pixel component, bits per color channel, or bits per sample (bps). </p>
+<p>Modern standards typically use bits per component, while historical lower-depth systems used bits per pixel more often. Color precision and gamut are defined through a color encoding specification.</p>
+</blockquote>
+<h3>6. What is anti-aliasing, and why is it important?</h3>
+<blockquote class="quote">
+<p><b><a href="computer_graphics_antialiasing.html" target="_blank">Antialiasing</a></b> is a technique in computer graphics that removes the aliasing effect, which results in jagged edges in rasterized images. This issue arises from <b>undersampling</b>, a distortion caused by low-frequency scan conversion. </p>
+<p>Aliasing occurs when smooth, continuous curves are rasterized using pixels, and the cause of anti-aliasing is undersampling.</p>
+<img src="images/what_is_anti_aliasing.jpg" alt="What is anti-aliasing?">
+<p>After applying anti-aliasing, the images turns to be smoothed and produces more clear lines which makes the picture much more effective in action.</p> </blockquote>
+<h3>7. What is the difference between 2D and 3D graphics?</h3>
+<blockquote class="quote">
+<p>2D and 3D graphics differ in their creation and outcome. 2D graphics consist of height and width, while 3D graphics add depth for realism.</p>
+<p>2D graphics are commonly used in animation and video games, providing a flat view of movement on the screen. 3D graphics offer realistic depth, allowing viewers to see into spaces, observe light and shadow movement, and gain a fuller understanding of the content. They work with the brain's natural tendency to explore and enrich our understanding of the world.</p>
+</blockquote>
+<h3>8. What are Homogeneous Coordinates?</h3>
+<blockquote class="quote">
+<p>Homogeneous coordinates are fairly used in computer graphics. This serves as the basis for geometry used to display three-dimensional objects on two-dimensional image planes. They provide a standard for performing operations on points in Euclidean space, such as matrix multiplication.</p>
+<p>These coordinate systems are used in two ways: by adding an extra value, and by solving problems in representing and implementing geometric object transformations. Most graphics are represented by matrices, which are applied to vectors in cartesian form.</p>
+</blockquote>
+<h3>What is Graphics Pipeline?</h3> 
+<blockquote class="quote">
+<p><b><a href="graphics_api_and_pipelines.html" target="_blank">Graphics Pipeline</a></b> is a framework in computer graphics that outlines the procedures for converting a 3D scene into a 2D representation on a screen. It converts the model into a visually perceivable format on a computer display. </p>
+<p>A universally applicable graphics pipeline is not available due to its dependence on specific software, hardware configurations, and display attributes. Instead, graphics application programming interfaces (APIs) like Direct3D, OpenGL, and Vulkan standardize common procedures and oversee the graphics pipeline of a hardware accelerator.</p> 
+</blockquote>
+<h3>9. What are Transformation Matrices in computer graphics?</h3>
+<blockquote class="quote">
+<p>A transformation matrix is a square matrix that represents a linear transformation in vector space. It transforms a coordinate system from one to another by maintaining the linearity attribute of the space. </p>
+<p>The matrix carries coefficients, making it easier to compute and change geometrical objects.</p>
+<p>$$&amp;bsol;mathrm{&amp;bsol;begin{bmatrix}a &amp; b &amp;bsol;&amp;bsol;c &amp; d &amp;bsol;end{bmatrix} &amp;bsol;: &amp;bsol;begin{bmatrix} x &amp;bsol;&amp;bsol; y &amp;bsol;end{bmatrix} &amp;bsol;: = &amp;bsol;: &amp;bsol;begin{bmatrix} x' \\ y' &amp;bsol;end{bmatrix}}$$</p>
+<p>For example, in a 2D coordinate system with coordinate vectors i and j, a transformation matrix <b>T</b> can transform a vector <b>v = (x, y)</b> into a vector <b>w = (x', y')</b>, creating a new coordinate system. The matrix's coefficients determine the directions of transformation and are used to find the vector <b>w</b>.</p>
+</blockquote>
+<h3>10. How do Translation, Scaling, and Rotation work in 2D / 3D transformations?</h3>
+<blockquote class="quote">
+<p>Translation, scaling, and rotation are key techniques used in <b><a href="2d_transformation.html" target="_blank">2D</a></b> and <b><a href="3d_transformation.html" target="_blank">3D transformations</a></b> to alter an object's position, orientation, and size.</p>
+<p>We can form a matrix which adds <b>x</b>, <b>y</b>, and <b>z</b> parameters to translate to another coordinate.</p>
+<p>Scaling resizes it in coordinate using scaling factors along the X, Y, and Z directions. So here with scaling matrix, we use the scaling factor for each axis.</p>
+<p>For rotation, we use trigonometric functions with sine and cosine. Rotation changes an object's orientation around one or more axes, either around the center of the grid or along a line.</p>
+</blockquote>
+<h3>11. What is a View Matrix in graphics rendering?</h3>
+<blockquote class="quote">
+<p>The view matrix is a matrix used to convert vertices from world-space to view-space, typically concatenated with the object's world and projection matrix. This allows vertices to be directly transformed from object-space to clip-space in the vertex program.</p>
+<p>If <b>M</b> represents the object's world matrix, <b>V</b> represents the view matrix, and <b>P</b> is the projection matrix, the concatenated world, view, and projection can be represented by MVP.</p>
+</blockquote>
+<h3>12. What is Perspective Projection? How is it different from Orthographic Projection?</h3>
+<blockquote class="quote">
+<p><b><a href="computer_graphics_orthographic_projection.html" target="_blank">Orthographic projections</a></b> are <b><a href="computer_graphics_parallel_projection.html" target="_blank">parallel projections</a></b> that can be represented by an <b><a href="computer_graphics_affine_transformation.html" target="_blank">affine transformation</a></b>. <b><a href="computer_graphics_perspective_projection.html" target="_blank">Perspective projections</a></b> are not parallel projections. They are useful for artistic and technical reasons, such as verifying part fit in floor plans or representing problems in different basis for easier coordinates.</p>
+<p>In the following example, we can see for perspective projections, we are assuming the lines will meet at a point; but for orthographic, it will meet at infinite distance.</p>
+<img src="images/what_is_perspective_projection.jpg" alt="What is Perspective Projection?">
+<p>Orthographic projections are commonly used in CAD drawings and technical documentations to ensure dimensions are easy to measure and to represent problems in different bases for easier understanding.</p>
+</blockquote>
+<h3>13. What is the concept of Clipping in graphics?</h3>
+<blockquote class="quote">
+<p>To display a large portion of a picture, scaling and translation are necessary, along with identifying the visible part. This process is challenging as some parts are partially inside, and partially visible lines or elements are omitted.</p>
+<img src="images/what_is_the_concept_of_clipping_in_graphics.jpg" alt="What is the concept of Clipping in graphics?">
+<p>Clipping is a process used to determine the visible and invisible portions of each element, with visible portions selected and invisible ones discarded. There are various types of clipping, including line and polygon clipping.</p>
+</blockquote>
+<h3>14. What are vectors and how are they used in computer graphics?</h3>
+<blockquote class="quote">
+<p><b><a href="computer_graphics_vectors.html" target="_blank">Vector graphics</a></b> are a versatile and scalable computer graphics approach that uses mathematical equations and geometric shapes instead of pixel-based raster graphics. They have no resolution limit and retain image quality at any size.</p>
+<p>Graphic artists preserve their work as vector declarations. The most prevalent vector graphic format is SVG, and they are based on analytical or coordinate geometry.</p>
+<p>Ivan Sutherland invented vector graphics in 1963 and developed the first vector graphics editor, Sketchpad, which allowed users to create and edit vector graphics on a computer screen.</p>
+</blockquote>
+<h3>15. What is Ray Tracing, and how does it differ from Rasterization?</h3>
+<blockquote class="quote">
+<p><b><a href="computer_graphics_ray_tracing_algorithm.html" target="_blank">Ray tracing</a></b> is a technique used in real-time computer graphics to display three-dimensional objects on a two-dimensional screen. It involves observing the path of light beams from your eye to the objects that light interacts with. </p>
+<p>Rasterization, on the other hand, is a technique used to display three-dimensional objects on a two-dimensional screen. It creates 3D models of objects from a mesh of virtual triangles, where each triangle's vertices intersect with other triangles of different sizes and shapes. This information, including position, color, texture, and "normal," determines the object's surface orientation.</p>
+</blockquote>
+<h3>16. What is the role of normal vectors in lighting calculations?</h3>
+<blockquote class="quote">
+<p>Normal vectors are used in lighting calculations for 3D graphics. They indicate surface orientation at each point. This is needed for light reflection and shading. These vectors are essential for calculating diffuse and specular reflections, creating realistic highlights, and implementing techniques like bump mapping.</p>
+<p>In shader programs, normal vectors are key inputs for various lighting models. They allow for efficient creation of complex lighting effects without requiring excessive geometric detail, making them necessary for real-time 3D rendering and smooth lighting across surfaces.</p>
+</blockquote>
+<h3>17. What is the significance of Depth Buffers in 3D rendering? </h3>
+<blockquote class="quote">
+<p>Depth buffers are crucial in 3D rendering for determining visibility of objects and surfaces. Without them, rendering order can cause incorrect layering of faces.</p>
+<p>For a simple cube as well, if the system does not know proper ordering it will display each of the faces but they will be in any order and face hidden behind may be visible in front. To applying face culling, it needs depth buffer with it.</p>
+</blockquote>
+<h3>18. What is Bresenham's line-drawing algorithm?</h3>
+<blockquote class="quote">
+<p><b><a href="bresenhams_line_generation_algorithm.html" target="_blank">Bresenham's line algorithm</a></b> is a n-dimensional raster drawing algorithm that selects points to form a close approximation to a straight line between two points. It is commonly used for drawing line primitives in bitmap images, as it uses inexpensive operations like integer addition, subtraction, and bit shifting.</p>
+<p>As an incremental error algorithm, it is one of the earliest in computer graphics. An extension of this algorithm is called the midpoint circle algorithm can be used for drawing circles.</p>
+</blockquote>
+<h3>19. What is Scanline Algorithm, and how is it used in raster graphics?</h3>
+<blockquote class="quote">
+<p>The Scan-line algorithm is an algorithm that is used in 3D graphics for hidden surface removal. This algorithm processes one line at a time, rather than processing one pixel at a time.</p>
+<p>The Scanline algorithm examines points where the scan-line intersects polygon surfaces from left to right, performs depth calculations to identify hidden regions. Then, it updates color-intensity values in the refresh buffer if the flag of the corresponding surface is on.</p>
+</blockquote>
+<h3>20. What is Midpoint Circle Algorithm?</h3>
+<blockquote class="quote">
+<p>The <b><a href="mid_point_circle_generation_algorithm.html" target="_blank">midpoint circle algorithm</a></b> is a method used in computer graphics to draw circles efficiently. It is an extension of Bresenhams line drawing algorithm. It works by determining which pixels should be colored to form a circle on a digital screen. </p>
+<p>Starting from one point, the algorithm moves along the circle's circumference, deciding whether to move straight or diagonally to the next pixel. It makes these decisions by calculating the midpoint between two possible pixels. This approach avoids using complex trigonometric calculations, making it faster and easier to implement.</p>
+</blockquote>
+<h3>21. How does the Flood-Fill Algorithm work?</h3>
+<blockquote class="quote">
+<p>The <b><a href="computer_graphics_flood_filling_algorithm.html" target="_blank">flood ffill algorithm</a></b> is a method used to fill multiple color boundaries in a region. It starts with a seed point inside the region and uses four or eight connected approaches to fill it with the desired color.</p>
+<img src="images/how_does_the_flood_fill_algorithm_work.jpg" alt="How does the Flood-Fill Algorithm work?">
+<p>Flood-fill algorithm is more suitable for filling multiple color boundaries and interiors with one color. The fill algorithm starts at a specified interior point (x, y) and reassigns all pixel values to the desired color. It then steps through pixel positions until all interior points are repainted.</p>
+</blockquote>
+<h3>22. What is Texture Mapping?</h3>
+<blockquote class="quote">
+<p>A <b><a href="texture_values_in_texture_mapping.html" target="_blank">texture map</a></b> is an image applied to the surface of a shape or polygon, either bitmap or procedural. They can be stored in image file formats, referenced by 3D models, or assembled into resource bundles. They can have one to three dimensions, with two dimensions being most common for visible surfaces.</p>
+<p>Modern hardware may store texture map data in swizzled or tiled orderings for improved cache coherency. Rendering APIs manage texture map resources as buffers or surfaces, allowing render to texture' for additional effects.</p>
+</blockquote>
+<h3>23. What is the purpose of Z-buffer in 3D rendering?</h3>
+<blockquote class="quote">
+<p>Z-Buffer is nothing but a type of depth buffer and it stores the depth information of different objects in 3D scene. </p>
+<p>Which object is present in front, which one in back these are determined by the Z-buffer. This is essential to represent 3D objects in correct way. Otherwise, some face which are not placed in back will come front and generate invalid images.</p>
+<img src="images/what_is_the_purpose_of_z_buffer_in_3d_rendering.jpg" alt="What is the purpose of Z-buffer in 3D rendering?">
+</blockquote>
+<h3>24. What is Gouraud Shading, and how does it differ from Phong Shading?</h3>
+<blockquote class="quote">
+<p>Gouraud shading calculates lighting at vertices and interpolates colors across polygons. This method is computationally efficient but can produce visible artifacts, especially with specular highlights, which may appear angular or jump between vertices as the view changes. The quality heavily depends on model complexity.</p>
+<p><b><a href="computer_graphics_phong_shading.html" target="_blank">Phong shading</a></b>, on the other hand, interpolates lighting parameters across polygons and calculates lighting per fragment. This approach produces smoother, more realistic results, particularly for specular highlights, which appear round and move fluidly across surfaces.</p>
+</blockquote>
+<h3>25. What is Ambient Occlusion, and how is it used in rendering?</h3>
+<blockquote class="quote">
+<p>Ambient occlusion is a type of lighting technique used in 3D graphics. This adds subtle shadows to make scenes look more realistic.</p>
+<p>In the following figures, it will be clearer. It simulates how objects block light in the real world, darkening areas where objects are close together or in corners.</p>
+<img src="images/what_is_ambient_occlusion.jpg" alt="What is Ambient Occlusion?">
+<p>This technique calculates how much ambient light each surface point can "see," creating softer shadows in enclosed spaces. This significantly improves the overall visual quality and realism of 3D rendered scenes.</p>
+</blockquote>
+<h3>26. Differences between a Shader and a Texture?</h3>
+<blockquote class="quote">
+<p>Shaders and textures are two important components in 3D graphics. These are used in different purposes. Shaders are GPU-run programs that control rendering of 3D objects, influencing lighting, color, and special effects. Shaders can create complex visual effects and are highly flexible, allowing dynamic changes based on inputs.</p>
+<p>Textures, on the other hand, are images applied to 3D models to add detail and realism, providing surface information like color patterns, roughness, or bump effects.</p>
+</blockquote>
+<h3>27. What is interpolation in computer graphics?</h3>
+<blockquote class="quote">
+<p><b><a href="computer_graphics_linear_interpolation.html" target="_blank">Interpolation</a></b> techniques are used in computer graphics for animation creation. These are used to make smooth animation by taking two frames and generating intermediate frames for smooth transition. </p>
+<p>There are several types of interpolations including linear, quadratic, etc. These can be used for movement rotation, scaling animations along with morphing and some other techniques like character animation (Walking, running) etc.</p>
+</blockquote>
+<h3>28. What is a Scene Graph?</h3>
+<blockquote class="quote">
+<p>In computer graphics, the <b><a href="computer_graphics_scene_graphs.html" target="_blank">scene graph</a></b> is a data structure used in vector-based graphics editing applications and modern computer games to arrange a logical representation of a graphical scene. It consists of nodes in a tree structure, with the effect of a parent applied to all its child nodes.</p>
+<p>In many programs, a geometrical transformation matrix is used to efficiently process operations, such as grouping related shapes and objects into a compound object that can be manipulated as a single object.</p>
+</blockquote>
+<h3>29. What is Global Illumination in computer graphics?</h3>
+<blockquote class="quote">
+<p>Global illumination (GI) is a set of 3D computer graphics algorithms that enhance the realistic lighting in 3D scenes. These algorithms consider both direct and indirect light sources including reflections, refractions, and shadows. They simulate these effects, affecting the rendering of other objects.</p>
+<p>However, in practice, only diffuse inter-reflection or caustics are considered global illumination, as they simulate the effects of light rays from the same source on other surfaces in the scene.</p>
+</blockquote>
+<h3>30. How do Fractals relate to computer graphics?</h3>
+<blockquote class="quote">
+<p><b><a href="computer_graphics_fractals.html" target="_blank">Fractals</a></b> are complex images created by a computer using iterations, based on a single formula.</p>
+<p>Geometric fractals are generated with non-integer shapes found in nature. These are created by starting with an initiator and replacing parts with a generator, resulting in a deterministic, non-random self-similar fractal.</p>
+<img src="images/fractals_relate_to_computer_graphics.jpg" alt="Fractals relate to computer graphics">
+</blockquote>
+<h3>31. How do graphics techniques differ for real-time vs Offline Rendering?</h3>
+<blockquote class="quote">
+<p><b>Offline rendering</b> is a traditional method of creating images or animations by computing every pixel in a scene before displaying the final result. It uses powerful software like Autodesk 3ds Max, V-Ray, or Blender Cycles etc. </p>
+<p><b>Real-time rendering</b>, on the other hand, is a fast-paced method used in video games and interactive applications, and is increasingly gaining popularity in architectural visualization.</p>
+</blockquote>
+<h3>32. What is a GPU, and how does it accelerate graphic rendering?</h3>
+<blockquote class="quote">
+<p>A GPU is a specialized circuit that efficiently processes and manipulates computer graphics and image data. This offloads compute-intensive tasks from the CPU, enabling the CPU to handle more general computational workloads.</p>
+<p>GPUs are used in gaming and 3D graphics rendering. It helps graphics processing by real-time rendering of complex environments and high-resolution textures, handling transformations, vertex generation, pixel shaders, antialiasing etc.</p>
+</blockquote>
+<h3>33. What is OpenGL, and why is it widely used in graphics development?</h3>
+<blockquote class="quote">
+<p>OpenGL is an API related to graphics. That is used to communicate with graphic hardware (GPU). It provides a graphical representation of an application.</p>
+<p>OpenGL allows for 2D and 3D vector graphics to be rendered through hardware acceleration, making it widely used in VR, CAD, and games. OpenGL is cross-platform and language-independent.</p>
+</blockquote>
+<h3>34. How does DirectX compare to OpenGL?</h3>
+<blockquote class="quote">
+<p>OpenGL and DirectX are not similar in terms of their functionality. DirectX is a suite of APIs, including Direct3D and Direct2D, which are only compatible with Microsoft platforms like Windows and Xbox. OpenGL is cross-platform and compatible with Microsoft, Apple, and Linux systems.</p>
+<p>Apple has deprecated OpenGL; however on macOS and iOS, it is still supported. In terms of gaming frame rate and system resource use, OpenGL and DirectX 11 are almost on par, with little noticeable difference in most cases.</p>
+</blockquote>
+<h3>35. What is the concept of LOD (Level of Detail) in 3D rendering?</h3>
+<blockquote class="quote">
+<p>Level of detail (LOD) in computer graphics says the complexity of a 3D model representation. It can be decreased as the model moves away from the viewer or based on metrics like object importance or viewpoint-relative speed. </p>
+<p>LOD techniques increase rendering efficiency by reducing workload on graphics pipeline stages, usually vertex transformations. LOD is often applied to geometry detail but can be generalized to include shader management and mipmapping for higher rendering quality.</p>
+</blockquote>
+<h3>36. What is a Game Engine, and how does it relate to computer graphics?</h3>
+<blockquote class="quote">
+<p>A game engine is software that helps create video games. It handles many tasks like rendering graphics, processing physics, managing audio, and handling user inputs.</p>
+<p>In computer graphics, the game engines graphics engine is important. It renders 2D and 3D visuals, ensuring smooth and realistic images. This allows game developers to focus on designing the game rather than building graphics from scratch. </p>
+<p>Some of the popular game engines include <b>Unity</b>, <b>Unreal Engine</b>, and <b>Godot</b>.</p>
+</blockquote>
+<h3>37. What are some common optimization techniques used in real-time graphics?</h3>
+<blockquote class="quote">
+<p>Optimization techniques are used to enhance the performance and make the system faster in different applications by removing unnecessary computations. There are many such optimization techniques, including the following −</p>
+<ul class="list-nobg">
+<li>
+<b>Instancing</b> − Reuses the same object multiple times with different transformations, reducing the number of draw calls.</li>
+<li>
+<b>Culling</b> − Skips rendering objects not visible to the camera, saving processing power.</li>
+<li>
+<b>Level-of-Detail (LOD) Management</b> − Uses simpler models for distant objects to maintain performance without sacrificing visual quality.</li>
+</ul>
+</blockquote>
+<h3>38. How do graphics techniques for VR differ from traditional 3D graphics?</h3>
+<blockquote class="quote">
+<p>The technology for VR is different. In VR, we use stereoscopic images where two images merge together to get a realistic 3D view. On the other hand, traditional 3D images are just 2D render, where no actual 3D feeling comes. </p>
+<p>We can say VR graphics differ in terms of immersion, performance, field of view, and interaction. VR aims for a fully immersive experience. Traditional 3D graphics focus on visual representation. High frame rates and low latency are required for smooth interaction, while a wider field of view mimics human vision.</p> 
+</blockquote> <div class="library-page-bottom-nav ">
+   <div class="button button--blue" id="print-page">
+    <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M112 160V64c0-8.8 7.2-16 16-16H357.5c4.2 0 8.3 1.7 11.3 4.7l26.5 26.5c3 3 4.7 7.1 4.7 11.3V160h48V90.5c0-17-6.7-33.3-18.7-45.3L402.7 18.7C390.7 6.7 374.5 0 357.5 0H128C92.7 0 64 28.7 64 64v96h48zm16 208H384v96H128V368zm-16-48c-17.7 0-32 14.3-32 32H48V256c0-8.8 7.2-16 16-16H448c8.8 0 16 7.2 16 16v96H432c0-17.7-14.3-32-32-32H112zm320 80h48c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64V368c0 17.7 14.3 32 32 32H80v80c0 17.7 14.3 32 32 32H400c17.7 0 32-14.3 32-32V400z"/></svg>
+      Print Page
+   </div>
+   <div class="flex-group">
+   <a href="index.html">
+   <div class="button button--neutral">
+   <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M1.03117 8.48836C0.64065 8.09783 0.64065 7.46467 1.03117 7.07414L7.39514 0.710183C7.78566 0.319658 8.41883 0.319658 8.80935 0.710183C9.19987 1.10071 9.19987 1.73387 8.80935 2.1244L3.15249 7.78125L8.80935 13.4381C9.19987 13.8286 9.19987 14.4618 8.80935 14.8523C8.41882 15.2428 7.78566 15.2428 7.39513 14.8523L1.03117 8.48836ZM3.12109 8.78125L1.73828 8.78125L1.73828 6.78125L3.12109 6.78125L3.12109 8.78125Z" fill="black" /></svg>
+      Previous
+   </div>
+   </a>
+   <a href="computer_graphics_basics.html">
+   <div class="button ">Next
+   <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path
+   d="M8.87117 8.48836C9.26169 8.09783 9.26169 7.46467 8.87117 7.07414L2.50721 0.710183C2.11668 0.319658 1.48352 0.319658 1.09299 0.710183C0.70247 1.10071 0.70247 1.73387 1.09299 2.1244L6.74985 7.78125L1.093 13.4381C0.702471 13.8286 0.702471 14.4618 1.093 14.8523C1.48352 15.2428 2.11668 15.2428 2.50721 14.8523L8.87117 8.48836ZM6.78125 8.78125L8.16406 8.78125L8.16406 6.78125L6.78125 6.78125L6.78125 8.78125Z" fill="white" /></svg>
+   </div>
+   </a>
+   </div>
+</div>
+   <div class="bottom-library-ads mt"  style="margin:5px;">
+      <div class="google-bottom-ads" id="google-bottom-ads">
+         <div>Advertisements</div>
+                    <div style="width: 750px; height: 300px;">
+                <!-- TAGNAME: 750x300_Bottom_Ad -->
+                <div id='tutorialspointcom47468'>
+                </div>
+           </div>
+                 </div>
+   </div>
+   </div>
+   <div>
+         <div class="data-sticky" id="google-right-ads">
+        <div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;min-height:280px!important">
+             <!-- TAGNAME: 336x280_Right_Sidebar_1 -->
+             <div id='tutorialspointcom47465'>
+             </div>
+        </div>
+        <div class="google-right-ad" style="margin-top:16px;min-height:280px!important">
+            <!-- TAGNAME: 336x280_Right_Sidebar_2 -->
+            <div id='tutorialspointcom47466'>
+            </div>
+        </div>
+        <div class="google-right-ad" style="margin-top:16px;min-height:280px!important">
+            <!-- TAGNAME: 300x600_Right_Sidebar -->
+           <div id='tutorialspointcom47467'>
+           </div>
+        </div>
+      </div>
+     </div>
+   </div>
+</div>
+</div>
+</main>
+<footer class="bg-neutral-800 text-sm">
+      <div class="container mx-auto px-4 py-12">
+         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:justify-items-center gap-8">
+            <div>
+               <h5 class="text-white font-bold text-base mb-4">TOP TUTORIALS</h5>
+               <ul class="space-y-2">
+                  <li><a href="../python/index.html" class="text-gray-300 hover:text-white">Python Tutorial</a></li>
+                  <li><a href="../java/index.html" class="text-gray-300 hover:text-white">Java Tutorial</a></li>
+                  <li><a href="../cplusplus/index.html" class="text-gray-300 hover:text-white">C++ Tutorial</a></li>
+                  <li><a href="../cprogramming/index.html" class="text-gray-300 hover:text-white">C Programming
+                        Tutorial</a></li>
+                  <li><a href="../csharp/index.html" class="text-gray-300 hover:text-white">C# Tutorial</a></li>
+                  <li><a href="../php/index.html" class="text-gray-300 hover:text-white">PHP Tutorial</a></li>
+                  <li><a href="../r/index.html" class="text-gray-300 hover:text-white">R Tutorial</a></li>
+                  <li><a href="../html/index.html" class="text-gray-300 hover:text-white">HTML Tutorial</a></li>
+                  <li><a href="../css/index.html" class="text-gray-300 hover:text-white">CSS Tutorial</a></li>
+                  <li><a href="../javascript/index.html" class="text-gray-300 hover:text-white">JavaScript Tutorial</a>
+                  </li>
+                  <li><a href="../sql/index.html" class="text-gray-300 hover:text-white">SQL Tutorial</a></li>
+               </ul>
+            </div>
+
+            <div>
+               <h5 class="text-white font-bold text-base mb-4">TRENDING TECHNOLOGIES</h5>
+               <ul class="space-y-2">
+                  <li><a href="../cloud_computing/index.html" class="text-gray-300 hover:text-white">Cloud Computing
+                        Tutorial</a></li>
+                  <li><a href="../amazon_web_services/index.html" class="text-gray-300 hover:text-white">Amazon Web
+                        Services Tutorial</a></li>
+                  <li><a href="../microsoft_azure/index.html" class="text-gray-300 hover:text-white">Microsoft Azure
+                        Tutorial</a></li>
+                  <li><a href="../git/index.html" class="text-gray-300 hover:text-white">Git Tutorial</a></li>
+                  <li><a href="../ethical_hacking/index.html" class="text-gray-300 hover:text-white">Ethical Hacking
+                        Tutorial</a></li>
+                  <li><a href="../docker/index.html" class="text-gray-300 hover:text-white">Docker Tutorial</a></li>
+                  <li><a href="../kubernetes/index.html" class="text-gray-300 hover:text-white">Kubernetes Tutorial</a>
+                  </li>
+                  <li><a href="../data_structures_algorithms/index.html" class="text-gray-300 hover:text-white">DSA
+                        Tutorial</a></li>
+                  <li><a href="../spring_boot/index.html" class="text-gray-300 hover:text-white">Spring Boot Tutorial</a>
+                  </li>
+                  <li><a href="../sdlc/index.html" class="text-gray-300 hover:text-white">SDLC Tutorial</a></li>
+                  <li><a href="../unix/index.html" class="text-gray-300 hover:text-white">Unix Tutorial</a></li>
+               </ul>
+            </div>
+
+            <div>
+               <h5 class="text-white font-bold text-base mb-4">CERTIFICATIONS</h5>
+               <ul class="space-y-2">
+                  <li><a href="../certification/business-analytics-certification-2023/index.html"
+                        class="text-gray-300 hover:text-white">Business Analytics Certification</a></li>
+                  <li><a href="../certification/java-prime-pack/index.html" class="text-gray-300 hover:text-white">Java &
+                        Spring Boot Advanced Certification</a></li>
+                  <li><a href="../certification/data-science-advanced-certification/index.html"
+                        class="text-gray-300 hover:text-white">Data Science Advanced Certification</a></li>
+                  <li><a href="../certification/cloud-computing-and-devops-advanced-certification/index.html"
+                        class="text-gray-300 hover:text-white">Cloud Computing And DevOps</a></li>
+                  <li><a href="../certification/advanced-certification-in-business-analytics/index.html"
+                        class="text-gray-300 hover:text-white">Advanced Certification In Business Analytics</a></li>
+                  <li><a href="../certification/artificial-intelligence-and-machine-learning-certification/index.html"
+                        class="text-gray-300 hover:text-white">Artificial Intelligence And Machine Learning</a></li>
+                  <li><a href="../certification/devops-certification/index.html"
+                        class="text-gray-300 hover:text-white">DevOps Certification</a></li>
+                  <li><a href="../certification/game-development-prime-pack/index.html"
+                        class="text-gray-300 hover:text-white">Game Development Certification</a></li>
+                  <li><a href="../certification/frontend-developer-certification/index.html"
+                        class="text-gray-300 hover:text-white">Front-End Developer Certification</a></li>
+                  <li><a href="../certification/aws-prime-pack/index.html" class="text-gray-300 hover:text-white">AWS
+                        Certification Training</a></li>
+                  <li><a href="../certification/complete-python-prime-pack/index.html"
+                        class="text-gray-300 hover:text-white">Python Programming Certification</a></li>
+               </ul>
+            </div>
+
+            <div>
+               <h5 class="text-white font-bold text-base mb-4">COMPILERS & EDITORS</h5>
+               <ul class="space-y-2">
+                    <li><a href="../compilers/online-java-compiler.html" class="text-gray-300 hover:text-white" title="Online Java Compiler">Online Java Compiler</a></li>
+                    <li><a href="../compilers/online-python-compiler.html" class="text-gray-300 hover:text-white" title="Online Python Compiler">Online Python Compiler</a></li>
+                    <li><a href="../compilers/online-golang-compiler.html" class="text-gray-300 hover:text-white" title="Online Go Compiler">Online Go Compiler</a></li>
+                    <li><a href="../compilers/online-c-compiler.html" class="text-gray-300 hover:text-white" title="Online C Compiler">Online C Compiler</a></li>
+                    <li><a href="../compilers/online-cpp-compiler.html" class="text-gray-300 hover:text-white" title="Online C++ Compiler">Online C++ Compiler</a></li>
+                    <li><a href="../compilers/online-csharp-compiler.html" class="text-gray-300 hover:text-white" title="Online C# Compiler">Online C# Compiler</a></li>
+                    <li><a href="../compilers/online-php-compiler.html" class="text-gray-300 hover:text-white" title="Online PHP Compiler">Online PHP Compiler</a></li>
+                    <li><a href="../compilers/online-matlab-compiler.html" class="text-gray-300 hover:text-white" title="Online MATLAB Compiler">Online MATLAB Compiler</a></li>
+                    <li><a href="../compilers/online-bash-terminal.html" class="text-gray-300 hover:text-white" title="Online Bash Terminal">Online Bash Terminal</a></li>
+                    <li><a href="../compilers/online-sql-editor.html" class="text-gray-300 hover:text-white" title="Online SQL Compiler">Online SQL Compiler</a></li>
+                    <li><a href="../compilers/online-html-editor.html" class="text-gray-300 hover:text-white" title="Online Html Editor">Online Html Editor</a></li>
+               </ul>
+            </div>
+         </div>
+
+         <ul class="footer-links flex text-xs flex-wrap justify-center gap-x-2 text-gray-300 mt-10 mb-6">
+           <li><a href="../about/index.html" class="hover:text-white">ABOUT US</a></li>
+           <li><a href="../about/about_team.html" class="hover:text-white">OUR TEAM</a></li>
+           <li><a href="../about/about_careers.html" class="hover:text-white">CAREERS</a></li>
+           <li><a href="../job_search.html" class="hover:text-white">JOBS</a></li>
+           <li><a href="../about/contact_us.html" class="hover:text-white">CONTACT US</a></li>
+           <li><a href="../about/about_terms_of_use.html" class="hover:text-white">TERMS OF USE</a></li>
+           <li><a href="../about/about_privacy.html" class="hover:text-white">PRIVACY POLICY</a></li>
+           <li><a href="../about/return_refund_policy.html" class="hover:text-white">REFUND POLICY</a></li>
+           <li><a href="../about/about_cookies.html" class="hover:text-white">COOKIES POLICY</a></li>
+           <li><a href="../about/faq.html" class="hover:text-white">FAQ'S</a></li>
+         </ul>
+
+         <div class="flex flex-col md:flex-row items-center justify-center gap-8 py-6 border-t border-gray-700">
+            <img class="h-8 mb-4 md:mb-0" src="../static/images/logo-footer.svg" loading="lazy" alt="tutorials point logo">
+
+            <div class="flex space-x-6 mb-4 md:mb-0">
+               <a rel="nofollow" target="_blank" href="https://www.facebook.com/tutorialspointindia" class="text-gray-400 hover:text-white" aria-label="Facebook">
+                  <i class="!size-7 fa-brands fa-facebook-f"></i>
+               </a>
+               <a target="_blank" href="https://x.com/tutorialspoint" rel="nofollow" class="text-gray-400 hover:text-white" aria-label="X">
+                  <i class="!size-7 fa-brands fa-x-twitter"></i>
+               </a>
+               <a target="_blank" href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" rel="nofollow" class="text-gray-400 hover:text-white" aria-label="YouTube">
+                  <i class="!size-7 fa-brands fa-youtube"></i>
+               </a>
+               <a target="_blank" href="https://www.linkedin.com/company/tutorialspoint/" rel="nofollow" class="text-gray-400 hover:text-white" aria-label="Linkedin">
+                  <i class="!size-7 fa-brands fa-linkedin-in"></i>
+               </a>
+               <a target="_blank" href="https://www.instagram.com/tutorialspoint_/" rel="nofollow" class="text-gray-400 hover:text-white" aria-label="Instagram">
+                  <i class="!size-7 fa-brands fa-instagram"></i>
+               </a>
+            </div>
+
+            <div class="flex space-x-4">
+               <a href="https://play.google.com/store/apps/details?id=com.tutorialspoint.onlineviewer" target="_blank"
+                  rel="nofollow">
+                  <img src="../static/images/googleplay.svg" alt="Download Android App" loading="lazy" class="h-10">
+               </a>
+               <a href="https://itunes.apple.com/us/app/tutorials-point/id914891263?ls=1&amp;mt=8" target="_blank" rel="nofollow">
+                  <img src="../static/images/appstore.svg" alt="Download IOS App" loading="lazy" class="h-10">
+               </a>
+            </div>
+         </div>
+         <div class="pt-6 pb-8 text-center border-t border-gray-700">
+            <p class="text-gray-300 max-w-5xl mx-auto mb-2">
+               Tutorials Point is a leading Ed Tech company striving to provide the best learning material on technical
+               and non-technical subjects.
+            </p>
+            <p class="text-gray-300 mt-8 text-sm">© Copyright 2025. All Rights Reserved.</p>
+         </div>
+      </div>
+</footer>
+<script src="../static/js/new-lib-script.min3aa2.js?v-3"></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<div id="fluid-privacy-opt-out-link" onmouseover="this.style.color='rgb(25, 103, 210)'; this.style.cursor='pointer'" onmouseout="this.style.color='#CCCCCC'; this.style.cursor='auto'"></div>
+<script>
+const privacyOptOutLink = document.getElementById("fluid-privacy-opt-out-link");
+window.googlefc = window.googlefc || { callbackQueue: [] };
+window.googlefc.ccpa = window.googlefc.ccpa || {};
+window.googlefc.ccpa.overrideDnsLink = true;
+window.googlefc.callbackQueue.push({
+    "CONSENT_API_READY": () => {
+      if (!privacyOptOutLink) {
+        return;
+      }
+      !!window.__tcfapi && window.__tcfapi("addEventListener", 2, (tcData, success) => {
+        if (success && tcData.gdprApplies) {
+          privacyOptOutLink.innerText = "Change GDPR Consent";
+          privacyOptOutLink.addEventListener("click", () => googlefc.showRevocationMessage());
+          return;
+        }
+      });
+    }
+});
+window.googlefc.callbackQueue.push({
+    "INITIAL_CCPA_DATA_READY": () => {
+      if (!privacyOptOutLink) {
+        return;
+      }
+
+      if (googlefc.ccpa.getInitialCcpaStatus() && googlefc.ccpa.getInitialCcpaStatus() === googlefc.ccpa.InitialCcpaStatusEnum.NOT_OPTED_OUT) {
+        privacyOptOutLink.innerText = "Don't sell or share my personal info";
+        privacyOptOutLink.addEventListener("click", () => googlefc.ccpa.openConfirmationDialog((optedOut) => {
+          if (optedOut) {
+            privacyOptOutLink.style.display = "none";
+          }
+        }));
+        return
+      }
+    }
+ });
+</script>
+<script>
+if(getCookie('auid') == '' || getCookie('auid') == null){
+   window.onload = function() {
+        initializeGoogleOneTap();
+   };
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EX9ZP4VY84"></script>
+<script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-EX9ZP4VY84');
+</script>
+<!-- New Facebook Pixel Code -->
+<script>
+   !function(f,b,e,v,n,t,s)
+   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+   n.queue=[];t=b.createElement(e);t.async=!0;
+   t.src=v;s=b.getElementsByTagName(e)[0];
+   s.parentNode.insertBefore(t,s)}(window,document,'script',
+   '../../connect.facebook.net/en_US/fbevents.js');
+   fbq('init', '854536859149047');
+   fbq('track', 'PageView');
+</script>
+ <!-- End facebook Pixel Code -->
+</body>
+
+<!-- Mirrored from www.tutorialspoint.com/computer_graphics/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Aug 2025 05:14:48 GMT -->
+</html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/Net::Cmd by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Net::Cmd - Network Command class (as used by FTP, SMTP etc) - Perldoc Browser</title>
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="Net__Cmd.html">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.html"><img src="images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.42.0</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="Net__Cmd.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item active" href="https://perldoc.perl.org/5.42.0/Net::Cmd">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/Net::Cmd">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/Net::Cmd">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/Net::Cmd">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/Net::Cmd">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/Net::Cmd">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/Net::Cmd">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/Net::Cmd">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/Net::Cmd">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/Net::Cmd">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/Net::Cmd">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/Net::Cmd">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/Net::Cmd">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/Net::Cmd">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/Net::Cmd">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/Net::Cmd">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/Net::Cmd">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/Net::Cmd">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/Net::Cmd">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/Net::Cmd">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/Net::Cmd">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/Net::Cmd">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/Net::Cmd">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/Net::Cmd">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/Net::Cmd">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/Net::Cmd">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/Net::Cmd">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/Net::Cmd">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/Net::Cmd">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/Net::Cmd">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/Net::Cmd">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/Net::Cmd">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/Net::Cmd">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/Net::Cmd">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/Net::Cmd">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/Net::Cmd">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/Net::Cmd">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/Net::Cmd">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/Net::Cmd">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/Net::Cmd">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/Net::Cmd">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/Net::Cmd">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/Net::Cmd">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/Net::Cmd">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/Net::Cmd">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/Net::Cmd">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/Net::Cmd">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/Net::Cmd">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/Net::Cmd">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/Net::Cmd">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/Net::Cmd">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/Net::Cmd">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/Net::Cmd">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/Net::Cmd">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/Net::Cmd">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/Net::Cmd">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/Net::Cmd">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/Net::Cmd">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/Net::Cmd">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/Net::Cmd">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/Net::Cmd">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/Net::Cmd">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/Net::Cmd">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/Net::Cmd">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/Net::Cmd">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/Net::Cmd">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/Net::Cmd">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/Net::Cmd">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/Net::Cmd">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/Net::Cmd">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/Net::Cmd">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/Net::Cmd">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/Net::Cmd">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/Net::Cmd">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/Net::Cmd">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/Net::Cmd">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/Net::Cmd">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/Net::Cmd">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/Net::Cmd">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.2/Net::Cmd">5.6.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.1/Net::Cmd">5.6.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.0/Net::Cmd">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_04/Net::Cmd">5.005_04</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_03/Net::Cmd">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/Net::Cmd">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/Net::Cmd">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/Net::Cmd">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/Net::Cmd">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/Net::Cmd">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/Net::Cmd">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/Net::Cmd">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/Net::Cmd">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/Net::Cmd">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/Net::Cmd">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/Net::Cmd">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/Net::Cmd">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/Net::Cmd">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/Net::Cmd">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/Net::Cmd">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/Net::Cmd">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/Net::Cmd">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/Net::Cmd">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/Net::Cmd">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/Net::Cmd">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/Net::Cmd">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/Net::Cmd">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/Net::Cmd">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="Net__Cmd.html">Net::Cmd</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/Net::Cmd.txt">source</a>,
+            <a href="https://metacpan.org/pod/Net::Cmd">CPAN</a>)
+          </div>
+            <div id="moduleversion">version 3.15</div>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SYNOPSIS">SYNOPSIS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Public-Methods">Public Methods</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Protected-Methods">Protected Methods</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Pseudo-Responses">Pseudo Responses</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#EXPORTS">EXPORTS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#KNOWN-BUGS">KNOWN BUGS</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#AUTHOR">AUTHOR</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#COPYRIGHT">COPYRIGHT</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#LICENCE">LICENCE</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#VERSION">VERSION</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DATE">DATE</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#HISTORY">HISTORY</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>Net::Cmd - Network Command class (as used by FTP, SMTP etc)</p>
+
+<h1 id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">#</a>SYNOPSIS</h1>
+
+<pre><code>use Net::Cmd;
+
+@ISA = qw(Net::Cmd);</code></pre>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p><code>Net::Cmd</code> is a collection of methods that can be inherited by a sub-class of <code>IO::Socket::INET</code>. These methods implement the functionality required for a command based protocol, for example FTP and SMTP.</p>
+
+<p>If your sub-class does not also derive from <code>IO::Socket::INET</code> or similar (e.g. <code>IO::Socket::IP</code>, <code>IO::Socket::INET6</code> or <code>IO::Socket::SSL</code>) then you must provide the following methods by other means yourself: <code>close()</code> and <code>timeout()</code>.</p>
+
+<h2 id="Public-Methods"><a class="permalink" href="#Public-Methods">#</a><a id="Public"></a>Public Methods</h2>
+
+<p>These methods provide a user interface to the <code>Net::Cmd</code> object.</p>
+
+<dl>
+
+<dt id="debug($level)"><a class="permalink" href="#debug($level)">#</a><a id="debug"></a><a id="debug-level"></a><code>debug($level)</code></dt>
+<dd>
+
+<p>Set the level of debug information for this object. If <code>$level</code> is not given then the current state is returned. Otherwise the state is changed to <code>$level</code> and the previous state returned.</p>
+
+<p>Different packages may implement different levels of debug but a non-zero value results in copies of all commands and responses also being sent to STDERR.</p>
+
+<p>If <code>$level</code> is <code>undef</code> then the debug level will be set to the default debug level for the class.</p>
+
+<p>This method can also be called as a <i>static</i> method to set/get the default debug level for a given class.</p>
+
+</dd>
+<dt id="message()"><a class="permalink" href="#message()">#</a><a id="message"></a><code>message()</code></dt>
+<dd>
+
+<p>Returns the text message returned from the last command. In a scalar context it returns a single string, in a list context it will return each line as a separate element. (See <a href="#PSEUDO-RESPONSES">&quot;PSEUDO RESPONSES&quot;</a> below.)</p>
+
+</dd>
+<dt id="code()"><a class="permalink" href="#code()">#</a><a id="code"></a><code>code()</code></dt>
+<dd>
+
+<p>Returns the 3-digit code from the last command. If a command is pending then the value 0 is returned. (See <a href="#PSEUDO-RESPONSES">&quot;PSEUDO RESPONSES&quot;</a> below.)</p>
+
+</dd>
+<dt id="ok()"><a class="permalink" href="#ok()">#</a><a id="ok"></a><code>ok()</code></dt>
+<dd>
+
+<p>Returns non-zero if the last code value was greater than zero and less than 400. This holds true for most command servers. Servers where this does not hold may override this method.</p>
+
+</dd>
+<dt id="status()"><a class="permalink" href="#status()">#</a><a id="status"></a><code>status()</code></dt>
+<dd>
+
+<p>Returns the most significant digit of the current status code. If a command is pending then <code>CMD_PENDING</code> is returned.</p>
+
+</dd>
+<dt id="datasend($data)"><a class="permalink" href="#datasend($data)">#</a><a id="datasend"></a><a id="datasend-data"></a><code>datasend($data)</code></dt>
+<dd>
+
+<p>Send data to the remote server, converting LF to CRLF. Any line starting with a &#39;.&#39; will be prefixed with another &#39;.&#39;. <code>$data</code> may be an array or a reference to an array. The <code>$data</code> passed in must be encoded by the caller to octets of whatever encoding is required, e.g. by using the Encode module&#39;s <code>encode()</code> function.</p>
+
+</dd>
+<dt id="dataend()"><a class="permalink" href="#dataend()">#</a><a id="dataend"></a><code>dataend()</code></dt>
+<dd>
+
+<p>End the sending of data to the remote server. This is done by ensuring that the data already sent ends with CRLF then sending &#39;.CRLF&#39; to end the transmission. Once this data has been sent <code>dataend</code> calls <code>response</code> and returns true if <code>response</code> returns CMD_OK.</p>
+
+</dd>
+</dl>
+
+<h2 id="Protected-Methods"><a class="permalink" href="#Protected-Methods">#</a><a id="Protected"></a>Protected Methods</h2>
+
+<p>These methods are not intended to be called by the user, but used or over-ridden by a sub-class of <code>Net::Cmd</code></p>
+
+<dl>
+
+<dt id="debug_print($dir,-$text)"><a class="permalink" href="#debug_print($dir,-$text)">#</a><a id="debug_print"></a><a id="debug_print-dir-text"></a><code>debug_print($dir, $text)</code></dt>
+<dd>
+
+<p>Print debugging information. <code>$dir</code> denotes the direction <i>true</i> being data being sent to the server. Calls <code>debug_text</code> before printing to STDERR.</p>
+
+</dd>
+<dt id="debug_text($dir,-$text)"><a class="permalink" href="#debug_text($dir,-$text)">#</a><a id="debug_text"></a><a id="debug_text-dir-text"></a><code>debug_text($dir, $text)</code></dt>
+<dd>
+
+<p>This method is called to print debugging information. <code>$text</code> is the text being sent. The method should return the text to be printed.</p>
+
+<p>This is primarily meant for the use of modules such as FTP where passwords are sent, but we do not want to display them in the debugging information.</p>
+
+</dd>
+<dt id="command($cmd[,-$args,-...-])"><a class="permalink" href="#command($cmd%5B,-$args,-...-%5D)">#</a><a id="command"></a><a id="command-cmd-args"></a><code>command($cmd[, $args, ... ])</code></dt>
+<dd>
+
+<p>Send a command to the command server. All arguments are first joined with a space character and CRLF is appended, this string is then sent to the command server.</p>
+
+<p>Returns undef upon failure.</p>
+
+</dd>
+<dt id="unsupported()"><a class="permalink" href="#unsupported()">#</a><a id="unsupported"></a><code>unsupported()</code></dt>
+<dd>
+
+<p>Sets the status code to 580 and the response text to &#39;Unsupported command&#39;. Returns zero.</p>
+
+</dd>
+<dt id="response()"><a class="permalink" href="#response()">#</a><a id="response"></a><code>response()</code></dt>
+<dd>
+
+<p>Obtain a response from the server. Upon success the most significant digit of the status code is returned. Upon failure, timeout etc., <i>CMD_ERROR</i> is returned.</p>
+
+</dd>
+<dt id="parse_response($text)"><a class="permalink" href="#parse_response($text)">#</a><a id="parse_response"></a><a id="parse_response-text"></a><code>parse_response($text)</code></dt>
+<dd>
+
+<p>This method is called by <code>response</code> as a method with one argument. It should return an array of 2 values, the 3-digit status code and a flag which is true when this is part of a multi-line response and this line is not the last.</p>
+
+</dd>
+<dt id="getline()"><a class="permalink" href="#getline()">#</a><a id="getline"></a><code>getline()</code></dt>
+<dd>
+
+<p>Retrieve one line, delimited by CRLF, from the remote server. Returns <i>undef</i> upon failure.</p>
+
+<p><b>NOTE</b>: If you do use this method for any reason, please remember to add some <code>debug_print</code> calls into your method.</p>
+
+</dd>
+<dt id="ungetline($text)"><a class="permalink" href="#ungetline($text)">#</a><a id="ungetline"></a><a id="ungetline-text"></a><code>ungetline($text)</code></dt>
+<dd>
+
+<p>Unget a line of text from the server.</p>
+
+</dd>
+<dt id="rawdatasend($data)"><a class="permalink" href="#rawdatasend($data)">#</a><a id="rawdatasend"></a><a id="rawdatasend-data"></a><code>rawdatasend($data)</code></dt>
+<dd>
+
+<p>Send data to the remote server without performing any conversions. <code>$data</code> is a scalar. As with <code>datasend()</code>, the <code>$data</code> passed in must be encoded by the caller to octets of whatever encoding is required, e.g. by using the Encode module&#39;s <code>encode()</code> function.</p>
+
+</dd>
+<dt id="read_until_dot()"><a class="permalink" href="#read_until_dot()">#</a><a id="read_until_dot"></a><code>read_until_dot()</code></dt>
+<dd>
+
+<p>Read data from the remote server until a line consisting of a single &#39;.&#39;. Any lines starting with &#39;..&#39; will have one of the &#39;.&#39;s removed.</p>
+
+<p>Returns a reference to a list containing the lines, or <i>undef</i> upon failure.</p>
+
+</dd>
+<dt id="tied_fh()"><a class="permalink" href="#tied_fh()">#</a><a id="tied_fh"></a><code>tied_fh()</code></dt>
+<dd>
+
+<p>Returns a filehandle tied to the Net::Cmd object. After issuing a command, you may read from this filehandle using read() or &lt;&gt;. The filehandle will return EOF when the final dot is encountered. Similarly, you may write to the filehandle in order to send data to the server after issuing a command that expects data to be written.</p>
+
+<p>See the Net::POP3 and Net::SMTP modules for examples of this.</p>
+
+</dd>
+</dl>
+
+<h2 id="Pseudo-Responses"><a class="permalink" href="#Pseudo-Responses">#</a><a id="Pseudo"></a>Pseudo Responses</h2>
+
+<p>Normally the values returned by <code>message()</code> and <code>code()</code> are obtained from the remote server, but in a few circumstances, as detailed below, <code>Net::Cmd</code> will return values that it sets. You can alter this behavior by overriding DEF_REPLY_CODE() to specify a different default reply code, or overriding one of the specific error handling methods below.</p>
+
+<dl>
+
+<dt id="Initial-value"><a class="permalink" href="#Initial-value">#</a><a id="Initial"></a>Initial value</dt>
+<dd>
+
+<p>Before any command has executed or if an unexpected error occurs <code>code()</code> will return &quot;421&quot; (temporary connection failure) and <code>message()</code> will return undef.</p>
+
+</dd>
+<dt id="Connection-closed"><a class="permalink" href="#Connection-closed">#</a><a id="Connection"></a>Connection closed</dt>
+<dd>
+
+<p>If the underlying <code>IO::Handle</code> is closed, or if there are any read or write failures, the file handle will be forced closed, and <code>code()</code> will return &quot;421&quot; (temporary connection failure) and <code>message()</code> will return &quot;[$pkg] Connection closed&quot; (where $pkg is the name of the class that subclassed <code>Net::Cmd</code>). The _set_status_closed() method can be overridden to set a different message (by calling set_status()) or otherwise trap this error.</p>
+
+</dd>
+<dt id="Timeout"><a class="permalink" href="#Timeout">#</a>Timeout</dt>
+<dd>
+
+<p>If there is a read or write timeout <code>code()</code> will return &quot;421&quot; (temporary connection failure) and <code>message()</code> will return &quot;[$pkg] Timeout&quot; (where $pkg is the name of the class that subclassed <code>Net::Cmd</code>). The _set_status_timeout() method can be overridden to set a different message (by calling set_status()) or otherwise trap this error.</p>
+
+</dd>
+</dl>
+
+<h1 id="EXPORTS"><a class="permalink" href="#EXPORTS">#</a>EXPORTS</h1>
+
+<p>The following symbols are, or can be, exported by this module:</p>
+
+<dl>
+
+<dt id="Default-Exports"><a class="permalink" href="#Default-Exports">#</a><a id="Default"></a>Default Exports</dt>
+<dd>
+
+<p><code>CMD_INFO</code>, <code>CMD_OK</code>, <code>CMD_MORE</code>, <code>CMD_REJECT</code>, <code>CMD_ERROR</code>, <code>CMD_PENDING</code>.</p>
+
+<p>(These correspond to possible results of <code>response()</code> and <code>status()</code>.)</p>
+
+</dd>
+<dt id="Optional-Exports"><a class="permalink" href="#Optional-Exports">#</a><a id="Optional"></a>Optional Exports</dt>
+<dd>
+
+<p><i>None</i>.</p>
+
+</dd>
+<dt id="Export-Tags"><a class="permalink" href="#Export-Tags">#</a><a id="Export"></a>Export Tags</dt>
+<dd>
+
+<p><i>None</i>.</p>
+
+</dd>
+</dl>
+
+<h1 id="KNOWN-BUGS"><a class="permalink" href="#KNOWN-BUGS">#</a><a id="KNOWN"></a>KNOWN BUGS</h1>
+
+<p>See <a href="https://rt.cpan.org/Dist/Display.html?Status=Active&amp;Queue=libnet">https://rt.cpan.org/Dist/Display.html?Status=Active&amp;Queue=libnet</a>.</p>
+
+<h1 id="AUTHOR"><a class="permalink" href="#AUTHOR">#</a>AUTHOR</h1>
+
+<p>Graham Barr &lt;<a href="mailto:gbarr@pobox.com">gbarr@pobox.com</a>&gt;.</p>
+
+<p>Steve Hay &lt;<a href="mailto:shay@cpan.org">shay@cpan.org</a>&gt; is now maintaining libnet as of version 1.22_02.</p>
+
+<h1 id="COPYRIGHT"><a class="permalink" href="#COPYRIGHT">#</a>COPYRIGHT</h1>
+
+<p>Copyright (C) 1995-2006 Graham Barr. All rights reserved.</p>
+
+<p>Copyright (C) 2013-2016, 2020, 2022 Steve Hay. All rights reserved.</p>
+
+<h1 id="LICENCE"><a class="permalink" href="#LICENCE">#</a>LICENCE</h1>
+
+<p>This module is free software; you can redistribute it and/or modify it under the same terms as Perl itself, i.e. under the terms of either the GNU General Public License or the Artistic License, as specified in the <i>LICENCE</i> file.</p>
+
+<h1 id="VERSION"><a class="permalink" href="#VERSION">#</a>VERSION</h1>
+
+<p>Version 3.15</p>
+
+<h1 id="DATE"><a class="permalink" href="#DATE">#</a>DATE</h1>
+
+<p>20 March 2023</p>
+
+<h1 id="HISTORY"><a class="permalink" href="#HISTORY">#</a>HISTORY</h1>
+
+<p>See the <i>Changes</i> file.</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/Net::Cmd by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:53 GMT -->
+</html>

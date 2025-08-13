@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/5.8.5/modules by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perl core modules - Perldoc Browser</title>
+    <link rel="search" href="../opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="../modules.html">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="../css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html"><img src="../images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.8.5</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="../modules.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.42.0/modules.html">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.40.3/modules.html">5.40.3</a>
+          <a class="dropdown-item" href="../5.40.2/modules.html">5.40.2</a>
+          <a class="dropdown-item" href="../5.40.1/modules.html">5.40.1</a>
+          <a class="dropdown-item" href="../5.40.0/modules.html">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.38.5/modules.html">5.38.5</a>
+          <a class="dropdown-item" href="../5.38.4/modules.html">5.38.4</a>
+          <a class="dropdown-item" href="../5.38.3/modules.html">5.38.3</a>
+          <a class="dropdown-item" href="../5.38.2/modules.html">5.38.2</a>
+          <a class="dropdown-item" href="../5.38.1/modules.html">5.38.1</a>
+          <a class="dropdown-item" href="../5.38.0/modules.html">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.36.3/modules.html">5.36.3</a>
+          <a class="dropdown-item" href="../5.36.2/modules.html">5.36.2</a>
+          <a class="dropdown-item" href="../5.36.1/modules.html">5.36.1</a>
+          <a class="dropdown-item" href="../5.36.0/modules.html">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.34.3/modules.html">5.34.3</a>
+          <a class="dropdown-item" href="../5.34.2/modules.html">5.34.2</a>
+          <a class="dropdown-item" href="../5.34.1/modules.html">5.34.1</a>
+          <a class="dropdown-item" href="../5.34.0/modules.html">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.32.1/modules.html">5.32.1</a>
+          <a class="dropdown-item" href="../5.32.0/modules.html">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.30.3/modules.html">5.30.3</a>
+          <a class="dropdown-item" href="../5.30.2/modules.html">5.30.2</a>
+          <a class="dropdown-item" href="../5.30.1/modules.html">5.30.1</a>
+          <a class="dropdown-item" href="../5.30.0/modules.html">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.28.3/modules.html">5.28.3</a>
+          <a class="dropdown-item" href="../5.28.2/modules.html">5.28.2</a>
+          <a class="dropdown-item" href="../5.28.1/modules.html">5.28.1</a>
+          <a class="dropdown-item" href="../5.28.0/modules.html">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.26.3/modules.html">5.26.3</a>
+          <a class="dropdown-item" href="../5.26.2/modules.html">5.26.2</a>
+          <a class="dropdown-item" href="../5.26.1/modules.html">5.26.1</a>
+          <a class="dropdown-item" href="../5.26.0/modules.html">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.24.4/modules.html">5.24.4</a>
+          <a class="dropdown-item" href="../5.24.3/modules.html">5.24.3</a>
+          <a class="dropdown-item" href="../5.24.2/modules.html">5.24.2</a>
+          <a class="dropdown-item" href="../5.24.1/modules.html">5.24.1</a>
+          <a class="dropdown-item" href="../5.24.0/modules.html">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.22.4/modules.html">5.22.4</a>
+          <a class="dropdown-item" href="../5.22.3/modules.html">5.22.3</a>
+          <a class="dropdown-item" href="../5.22.2/modules.html">5.22.2</a>
+          <a class="dropdown-item" href="../5.22.1/modules.html">5.22.1</a>
+          <a class="dropdown-item" href="../5.22.0/modules.html">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.20.3/modules.html">5.20.3</a>
+          <a class="dropdown-item" href="../5.20.2/modules.html">5.20.2</a>
+          <a class="dropdown-item" href="../5.20.1/modules.html">5.20.1</a>
+          <a class="dropdown-item" href="../5.20.0/modules.html">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.18.4/modules.html">5.18.4</a>
+          <a class="dropdown-item" href="../5.18.3/modules.html">5.18.3</a>
+          <a class="dropdown-item" href="../5.18.2/modules.html">5.18.2</a>
+          <a class="dropdown-item" href="../5.18.1/modules.html">5.18.1</a>
+          <a class="dropdown-item" href="../5.18.0/modules.html">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.16.3/modules.html">5.16.3</a>
+          <a class="dropdown-item" href="../5.16.2/modules.html">5.16.2</a>
+          <a class="dropdown-item" href="../5.16.1/modules.html">5.16.1</a>
+          <a class="dropdown-item" href="../5.16.0/modules.html">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.14.4/modules.html">5.14.4</a>
+          <a class="dropdown-item" href="../5.14.3/modules.html">5.14.3</a>
+          <a class="dropdown-item" href="../5.14.2/modules.html">5.14.2</a>
+          <a class="dropdown-item" href="../5.14.1/modules.html">5.14.1</a>
+          <a class="dropdown-item" href="../5.14.0/modules.html">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.12.5/modules.html">5.12.5</a>
+          <a class="dropdown-item" href="../5.12.4/modules.html">5.12.4</a>
+          <a class="dropdown-item" href="../5.12.3/modules.html">5.12.3</a>
+          <a class="dropdown-item" href="../5.12.2/modules.html">5.12.2</a>
+          <a class="dropdown-item" href="../5.12.1/modules.html">5.12.1</a>
+          <a class="dropdown-item" href="../5.12.0/modules.html">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.10.1/modules.html">5.10.1</a>
+          <a class="dropdown-item" href="../5.10.0/modules.html">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.8.9/modules.html">5.8.9</a>
+          <a class="dropdown-item" href="../5.8.8/modules.html">5.8.8</a>
+          <a class="dropdown-item" href="../5.8.7/modules.html">5.8.7</a>
+          <a class="dropdown-item" href="../5.8.6/modules.html">5.8.6</a>
+          <a class="dropdown-item active" href="modules.html">5.8.5</a>
+          <a class="dropdown-item" href="../5.8.4/modules.html">5.8.4</a>
+          <a class="dropdown-item" href="../5.8.3/modules.html">5.8.3</a>
+          <a class="dropdown-item" href="../5.8.2/modules.html">5.8.2</a>
+          <a class="dropdown-item" href="../5.8.1/modules.html">5.8.1</a>
+          <a class="dropdown-item" href="../5.8.0/modules.html">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.6.2/modules.html">5.6.2</a>
+          <a class="dropdown-item" href="../5.6.1/modules.html">5.6.1</a>
+          <a class="dropdown-item" href="../5.6.0/modules.html">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.005_04/modules.html">5.005_04</a>
+          <a class="dropdown-item" href="../5.005_03/modules.html">5.005_03</a>
+          <a class="dropdown-item" href="../5.005_02/modules.html">5.005_02</a>
+          <a class="dropdown-item" href="../5.005_01/modules.html">5.005_01</a>
+          <a class="dropdown-item" href="../5.005/modules.html">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="../blead/modules.html">blead</a>
+          <a class="dropdown-item" href="../5.43.1/modules.html">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.42.0-RC3/modules.html">5.42.0-RC3</a>
+          <a class="dropdown-item" href="../5.42.0-RC2/modules.html">5.42.0-RC2</a>
+          <a class="dropdown-item" href="../5.42.0-RC1/modules.html">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.41.13/modules.html">5.41.13</a>
+          <a class="dropdown-item" href="../5.41.12/modules.html">5.41.12</a>
+          <a class="dropdown-item" href="../5.41.11/modules.html">5.41.11</a>
+          <a class="dropdown-item" href="../5.41.10/modules.html">5.41.10</a>
+          <a class="dropdown-item" href="../5.41.9/modules.html">5.41.9</a>
+          <a class="dropdown-item" href="../5.41.8/modules.html">5.41.8</a>
+          <a class="dropdown-item" href="../5.41.7/modules.html">5.41.7</a>
+          <a class="dropdown-item" href="../5.41.6/modules.html">5.41.6</a>
+          <a class="dropdown-item" href="../5.41.5/modules.html">5.41.5</a>
+          <a class="dropdown-item" href="../5.41.4/modules.html">5.41.4</a>
+          <a class="dropdown-item" href="../5.41.3/modules.html">5.41.3</a>
+          <a class="dropdown-item" href="../5.41.2/modules.html">5.41.2</a>
+          <a class="dropdown-item" href="../5.41.1/modules.html">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.40.3-RC1/modules.html">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.38.5-RC1/modules.html">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="../js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/5.8.5/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="../js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="modules.html">modules</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/5.8.5/modules.txt">source</a>,
+            <a href="https://metacpan.org/">CPAN</a>)
+          </div>
+        </div>
+        <div class="leading-notice">
+          You are viewing the version of this documentation from Perl 5.8.5.
+            <a href="../modules.html">View the latest version</a>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#Pragmatic-Modules">Pragmatic Modules</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Standard-Modules">Standard Modules</a>
+              </li>
+          </ul>
+
+      <h2 id="Pragmatic-Modules"><a class="permalink" href="#Pragmatic-Modules">#</a><a id="Pragmatic"></a>Pragmatic Modules</h2>
+
+<p>They work somewhat like compiler directives (pragmata) in that they tend to affect the compilation of your program, and thus will usually work well only when used within a <code>use</code>, or <code>no</code>. Most of these are lexically scoped, so an inner BLOCK may countermand them by saying:</p>
+
+<pre><code>no integer;
+no strict &#39;refs&#39;;
+no warnings;</code></pre>
+
+<p>which lasts until the end of that BLOCK.</p>
+
+<p>Some pragmas are lexically scoped--typically those that affect the <code>$^H</code> hints variable. Others affect the current package instead, like <code>use vars</code> and <code>use subs</code>, which allow you to predeclare a variables or subroutines within a particular <i>file</i> rather than just a block. Such declarations are effective for the entire file for which they were declared. You cannot rescind them with <code>no vars</code> or <code>no subs</code>.</p>
+
+<p>The following pragmas are defined (and have their own documentation).</p>
+
+<ul>
+
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/attributes">attributes</a></b> - Get/set subroutine or variable attributes</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/attrs">attrs</a></b> - Set/get attributes of a subroutine (deprecated)</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/autouse">autouse</a></b> - Postpone load of modules until a function is used</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/base">base</a></b> - Establish IS-A relationship with base class at compile time</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/bigint">bigint</a></b> - Transparent BigInteger support for Perl</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/bignum">bignum</a></b> - Transparent BigNumber support for Perl</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/bigrat">bigrat</a></b> - Transparent BigNumber/BigRational support for Perl</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/blib">blib</a></b> - Use MakeMaker&#39;s uninstalled version of a package</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/bytes">bytes</a></b> - Force byte semantics rather than character semantics</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/charnames">charnames</a></b> - Define character names for <code>\N{named}</code> string literal escapes</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/constant">constant</a></b> - Declare constants</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/diagnostics">diagnostics</a></b> - Produce verbose warning diagnostics</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/encoding">encoding</a></b> - Allows you to write your script in non-ascii or non-utf8</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/fields">fields</a></b> - Compile-time class fields</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/filetest">filetest</a></b> - Control the filetest permission operators</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/if">if</a></b> - <code>use</code> a Perl module if a condition holds</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/integer">integer</a></b> - Use integer arithmetic instead of floating point</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/less">less</a></b> - Request less of something from the compiler</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/lib">lib</a></b> - Manipulate @INC at compile time</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/locale">locale</a></b> - Use and avoid POSIX locales for built-in operations</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/open">open</a></b> - Set default PerlIO layers for input and output</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ops">ops</a></b> - Restrict unsafe operations when compiling</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/overload">overload</a></b> - Package for overloading perl operations</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/re">re</a></b> - Alter regular expression behaviour</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/sigtrap">sigtrap</a></b> - Enable simple signal handling</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/sort">sort</a></b> - Control sort() behaviour</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/strict">strict</a></b> - Restrict unsafe constructs</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/subs">subs</a></b> - Predeclare sub names</p>
+
+</li>
+<li><p><b><a href="threads.html">threads</a></b> - Perl extension allowing use of interpreter based threads from perl</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/threads::shared">threads::shared</a></b> - Perl extension for sharing data structures between threads</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/utf8">utf8</a></b> - Enable/disable UTF-8 (or UTF-EBCDIC) in source code</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/vars">vars</a></b> - Predeclare global variable names (obsolete)</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/vmsish">vmsish</a></b> - Control VMS-specific language features</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/warnings">warnings</a></b> - Control optional warnings</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/warnings::register">warnings::register</a></b> - Warnings import function</p>
+
+</li>
+</ul>
+
+<h2 id="Standard-Modules"><a class="permalink" href="#Standard-Modules">#</a><a id="Standard"></a>Standard Modules</h2>
+
+<p>Standard, bundled modules are all expected to behave in a well-defined manner with respect to namespace pollution because they use the Exporter module. See their own documentation for details.</p>
+
+<p>It&#39;s possible that not all modules listed below are installed on your system. For example, the GDBM_File module will not be installed if you don&#39;t have the gdbm library.</p>
+
+<ul>
+
+<li><p><b><a href="AnyDBM_File.html">AnyDBM_File</a></b> - Provide framework for multiple DBMs</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Attribute::Handlers">Attribute::Handlers</a></b> - Simpler definition of attribute handlers</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/AutoLoader">AutoLoader</a></b> - Load subroutines only on demand</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/AutoSplit">AutoSplit</a></b> - Split a package for autoloading</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B">B</a></b> - The Perl Compiler</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::Asmdata">B::Asmdata</a></b> - Autogenerated data about Perl ops, used to generate bytecode</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::Assembler">B::Assembler</a></b> - Assemble Perl bytecode</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::Bblock">B::Bblock</a></b> - Walk basic blocks</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::Bytecode">B::Bytecode</a></b> - Perl compiler&#39;s bytecode backend</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::C">B::C</a></b> - Perl compiler&#39;s C backend</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::CC">B::CC</a></b> - Perl compiler&#39;s optimized C translation backend</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::Concise">B::Concise</a></b> - Walk Perl syntax tree, printing concise info about ops</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::Debug">B::Debug</a></b> - Walk Perl syntax tree, printing debug info about ops</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::Deparse">B::Deparse</a></b> - Perl compiler backend to produce perl code</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::Disassembler">B::Disassembler</a></b> - Disassemble Perl bytecode</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::Lint">B::Lint</a></b> - Perl lint</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::Showlex">B::Showlex</a></b> - Show lexical variables used in functions or files</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::Stackobj">B::Stackobj</a></b> - Helper module for CC backend</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::Stash">B::Stash</a></b> - Show what stashes are loaded</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::Terse">B::Terse</a></b> - Walk Perl syntax tree, printing terse info about ops</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/B::Xref">B::Xref</a></b> - Generates cross reference reports for Perl programs</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Benchmark">Benchmark</a></b> - Benchmark running times of Perl code</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ByteLoader">ByteLoader</a></b> - Load byte compiled perl code</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/CGI">CGI</a></b> - Simple Common Gateway Interface Class</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/CGI::Apache">CGI::Apache</a></b> - Backward compatibility module for CGI.pm</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/CGI::Carp">CGI::Carp</a></b> - CGI routines for writing to the HTTPD (or other) error log</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/CGI::Cookie">CGI::Cookie</a></b> - Interface to Netscape Cookies</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/CGI::Fast">CGI::Fast</a></b> - CGI Interface for Fast CGI</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/CGI::Pretty">CGI::Pretty</a></b> - Module to produce nicely formatted HTML code</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/CGI::Push">CGI::Push</a></b> - Simple Interface to Server Push</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/CGI::Switch">CGI::Switch</a></b> - Backward compatibility module for defunct CGI::Switch</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/CGI::Util">CGI::Util</a></b> - Internal utilities used by CGI module</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/CPAN">CPAN</a></b> - Query, download and build perl modules from CPAN sites</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/CPAN::FirstTime">CPAN::FirstTime</a></b> - Utility for CPAN::Config file Initialization</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/CPAN::Nox">CPAN::Nox</a></b> - Wrapper around CPAN.pm without using any XS module</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Carp">Carp</a></b> - Warn of errors (from perspective of caller)</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Carp::Heavy">Carp::Heavy</a></b> - No user serviceable parts inside</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Class::ISA">Class::ISA</a></b> - Report the search path for a class&#39;s ISA tree</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Class::Struct">Class::Struct</a></b> - Declare struct-like datatypes as Perl classes</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Config">Config</a></b> - Access Perl configuration information</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Cwd">Cwd</a></b> - Get pathname of current working directory</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/DB">DB</a></b> - Programmatic interface to the Perl debugging API (draft, subject to</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/DB_File">DB_File</a></b> - Perl5 access to Berkeley DB version 1.x</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Data::Dumper">Data::Dumper</a></b> - Stringified perl data structures, suitable for both printing and <code>eval</code></p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Devel::DProf">Devel::DProf</a></b> - A Perl code profiler</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Devel::PPPort">Devel::PPPort</a></b> - Perl/Pollution/Portability</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Devel::Peek">Devel::Peek</a></b> - A data debugging tool for the XS programmer</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Devel::SelfStubber">Devel::SelfStubber</a></b> - Generate stubs for a SelfLoading module</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Digest">Digest</a></b> - Modules that calculate message digests</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Digest::MD5">Digest::MD5</a></b> - Perl interface to the MD5 Algorithm</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Digest::base">Digest::base</a></b> - Digest base class</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/DirHandle">DirHandle</a></b> - Supply object methods for directory handles</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Dumpvalue">Dumpvalue</a></b> - Provides screen dump of Perl data.</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/DynaLoader">DynaLoader</a></b> - Dynamically load C libraries into Perl code</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode">Encode</a></b> - Character encodings</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::Alias">Encode::Alias</a></b> - Alias definitions to encodings</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::Byte">Encode::Byte</a></b> - Single Byte Encodings</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::CJKConstants">Encode::CJKConstants</a></b> - Internally used by Encode::??::ISO_2022_*</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::CN">Encode::CN</a></b> - China-based Chinese Encodings</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::CN::HZ">Encode::CN::HZ</a></b> - Internally used by Encode::CN</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::Config">Encode::Config</a></b> - Internally used by Encode</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::EBCDIC">Encode::EBCDIC</a></b> - EBCDIC Encodings</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::Encoder">Encode::Encoder</a></b> - Object Oriented Encoder</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::Encoding">Encode::Encoding</a></b> - Encode Implementation Base Class</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::Guess">Encode::Guess</a></b> - Guesses encoding from data</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::JP">Encode::JP</a></b> - Japanese Encodings</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::JP::H2Z">Encode::JP::H2Z</a></b> - Internally used by Encode::JP::2022_JP*</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::JP::JIS7">Encode::JP::JIS7</a></b> - Internally used by Encode::JP</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::KR">Encode::KR</a></b> - Korean Encodings</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::KR::2022_KR">Encode::KR::2022_KR</a></b> - Internally used by Encode::KR</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::MIME::Header">Encode::MIME::Header</a></b> - MIME &#39;B&#39; and &#39;Q&#39; header encoding</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::PerlIO">Encode::PerlIO</a></b> - A detailed document on Encode and PerlIO</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::Supported">Encode::Supported</a></b> - Encodings supported by Encode</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::Symbol">Encode::Symbol</a></b> - Symbol Encodings</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::TW">Encode::TW</a></b> - Taiwan-based Chinese Encodings</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::Unicode">Encode::Unicode</a></b> - Various Unicode Transformation Formats</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Encode::Unicode::UTF7">Encode::Unicode::UTF7</a></b> - UTF-7 encoding</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/English">English</a></b> - Use nice English (or awk) names for ugly punctuation variables</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Env">Env</a></b> - Perl module that imports environment variables as scalars or arrays</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Errno">Errno</a></b> - System errno constants</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Exporter">Exporter</a></b> - Implements default import method for modules</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Exporter::Heavy">Exporter::Heavy</a></b> - Exporter guts</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::Command">ExtUtils::Command</a></b> - Utilities to replace common UNIX commands in Makefiles etc.</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::Command::MM">ExtUtils::Command::MM</a></b> - Commands for the MM&#39;s to use in Makefiles</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::Constant">ExtUtils::Constant</a></b> - Generate XS code to import C header constants</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::Embed">ExtUtils::Embed</a></b> - Utilities for embedding Perl in C/C++ applications</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::Install">ExtUtils::Install</a></b> - Install files from here to there</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::Installed">ExtUtils::Installed</a></b> - Inventory management of installed modules</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::Liblist">ExtUtils::Liblist</a></b> - Determine libraries to use and how to use them</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MM">ExtUtils::MM</a></b> - OS adjusted ExtUtils::MakeMaker subclass</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MM_Any">ExtUtils::MM_Any</a></b> - Platform-agnostic MM methods</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MM_BeOS">ExtUtils::MM_BeOS</a></b> - Methods to override UN*X behaviour in ExtUtils::MakeMaker</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MM_Cygwin">ExtUtils::MM_Cygwin</a></b> - Methods to override UN*X behaviour in ExtUtils::MakeMaker</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MM_DOS">ExtUtils::MM_DOS</a></b> - DOS specific subclass of ExtUtils::MM_Unix</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MM_MacOS">ExtUtils::MM_MacOS</a></b> - Methods to override UN*X behaviour in ExtUtils::MakeMaker</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MM_NW5">ExtUtils::MM_NW5</a></b> - Methods to override UN*X behaviour in ExtUtils::MakeMaker</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MM_OS2">ExtUtils::MM_OS2</a></b> - Methods to override UN*X behaviour in ExtUtils::MakeMaker</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MM_UWIN">ExtUtils::MM_UWIN</a></b> - U/WIN specific subclass of ExtUtils::MM_Unix</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MM_Unix">ExtUtils::MM_Unix</a></b> - Methods used by ExtUtils::MakeMaker</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MM_VMS">ExtUtils::MM_VMS</a></b> - Methods to override UN*X behaviour in ExtUtils::MakeMaker</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MM_Win32">ExtUtils::MM_Win32</a></b> - Methods to override UN*X behaviour in ExtUtils::MakeMaker</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MM_Win95">ExtUtils::MM_Win95</a></b> - Method to customize MakeMaker for Win9X</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MY">ExtUtils::MY</a></b> - ExtUtils::MakeMaker subclass for customization</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MakeMaker">ExtUtils::MakeMaker</a></b> - Create a module Makefile</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MakeMaker::FAQ">ExtUtils::MakeMaker::FAQ</a></b> - Frequently Asked Questions About MakeMaker</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MakeMaker::Tutorial">ExtUtils::MakeMaker::Tutorial</a></b> - Writing a module with MakeMaker</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MakeMaker::bytes">ExtUtils::MakeMaker::bytes</a></b> - Version-agnostic bytes.pm</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::MakeMaker::vmsish">ExtUtils::MakeMaker::vmsish</a></b> - Platform-agnostic vmsish.pm</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::Manifest">ExtUtils::Manifest</a></b> - Utilities to write and check a MANIFEST file</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::Mkbootstrap">ExtUtils::Mkbootstrap</a></b> - Make a bootstrap file for use by DynaLoader</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::Mksymlists">ExtUtils::Mksymlists</a></b> - Write linker options files for dynamic extension</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::Packlist">ExtUtils::Packlist</a></b> - Manage .packlist files</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ExtUtils::testlib">ExtUtils::testlib</a></b> - Add blib/* directories to @INC</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Fatal">Fatal</a></b> - Replace functions with equivalents which succeed or die</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Fcntl">Fcntl</a></b> - Load the C Fcntl.h defines</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Basename">File::Basename</a></b> - Split a pathname into pieces</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::CheckTree">File::CheckTree</a></b> - Run many filetest checks on a tree</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Compare">File::Compare</a></b> - Compare files or filehandles</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Copy">File::Copy</a></b> - Copy files or filehandles</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::DosGlob">File::DosGlob</a></b> - DOS like globbing and then some</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Find">File::Find</a></b> - Traverse a directory tree.</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Glob">File::Glob</a></b> - Perl extension for BSD glob routine</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Path">File::Path</a></b> - Create or remove directory trees</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Spec">File::Spec</a></b> - Portably perform operations on file names</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Spec::Cygwin">File::Spec::Cygwin</a></b> - Methods for Cygwin file specs</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Spec::Epoc">File::Spec::Epoc</a></b> - Methods for Epoc file specs</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Spec::Functions">File::Spec::Functions</a></b> - Portably perform operations on file names</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Spec::Mac">File::Spec::Mac</a></b> - File::Spec for Mac OS (Classic)</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Spec::OS2">File::Spec::OS2</a></b> - Methods for OS/2 file specs</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Spec::Unix">File::Spec::Unix</a></b> - File::Spec for Unix, base for other File::Spec modules</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Spec::VMS">File::Spec::VMS</a></b> - Methods for VMS file specs</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Spec::Win32">File::Spec::Win32</a></b> - Methods for Win32 file specs</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::Temp">File::Temp</a></b> - Return name and handle of a temporary file safely</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/File::stat">File::stat</a></b> - By-name interface to Perl&#39;s built-in stat() functions</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/FileCache">FileCache</a></b> - Keep more files open than the system permits</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/FileHandle">FileHandle</a></b> - Supply object methods for filehandles</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Filter::Simple">Filter::Simple</a></b> - Simplified source filtering</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Filter::Util::Call">Filter::Util::Call</a></b> - Perl Source Filter Utility Module</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/FindBin">FindBin</a></b> - Locate directory of original perl script</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/GDBM_File">GDBM_File</a></b> - Perl5 access to the gdbm library.</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Getopt::Long">Getopt::Long</a></b> - Extended processing of command line options</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Getopt::Std">Getopt::Std</a></b> - Process single-character switches with switch clustering</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Hash::Util">Hash::Util</a></b> - A selection of general-utility hash subroutines</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/I18N::Collate">I18N::Collate</a></b> - Compare 8-bit scalar data according to the current locale</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/I18N::LangTags">I18N::LangTags</a></b> - Functions for dealing with RFC3066-style language tags</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/I18N::LangTags::List">I18N::LangTags::List</a></b> - Tags and names for human languages</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/I18N::Langinfo">I18N::Langinfo</a></b> - Query locale information</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/IO">IO</a></b> - Load various IO modules</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/IO::Dir">IO::Dir</a></b> - Supply object methods for directory handles</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/IO::File">IO::File</a></b> - Supply object methods for filehandles</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/IO::Handle">IO::Handle</a></b> - Supply object methods for I/O handles</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/IO::Pipe">IO::Pipe</a></b> - Supply object methods for pipes</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/IO::Poll">IO::Poll</a></b> - Object interface to system poll call</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/IO::Seekable">IO::Seekable</a></b> - Supply seek based methods for I/O objects</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/IO::Select">IO::Select</a></b> - OO interface to the select system call</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/IO::Socket">IO::Socket</a></b> - Object interface to socket communications</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/IO::Socket::INET">IO::Socket::INET</a></b> - Object interface for AF_INET domain sockets</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/IO::Socket::UNIX">IO::Socket::UNIX</a></b> - Object interface for AF_UNIX domain sockets</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/IPC::Open2">IPC::Open2</a></b> - Open a process for both reading and writing</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/IPC::Open3">IPC::Open3</a></b> - Open a process for reading, writing, and error handling</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/IPC::SysV">IPC::SysV</a></b> - SysV IPC constants</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/IPC::SysV::Msg">IPC::SysV::Msg</a></b> - SysV Msg IPC object class</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/IPC::SysV::Semaphore">IPC::SysV::Semaphore</a></b> - SysV Semaphore IPC object class</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/List::Util">List::Util</a></b> - A selection of general-utility list subroutines</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Locale::Constants">Locale::Constants</a></b> - Constants for Locale codes</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Locale::Country">Locale::Country</a></b> - ISO codes for country identification (ISO 3166)</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Locale::Currency">Locale::Currency</a></b> - ISO three letter codes for currency identification (ISO 4217)</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Locale::Language">Locale::Language</a></b> - ISO two letter codes for language identification (ISO 639)</p>
+
+</li>
+<li><p><b><a href="Locale__Maketext.html">Locale::Maketext</a></b> - Framework for localization</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Locale::Maketext::TPJ13">Locale::Maketext::TPJ13</a></b> - Article about software localization</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Locale::Script">Locale::Script</a></b> - ISO codes for script identification (ISO 15924)</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/MIME::Base64">MIME::Base64</a></b> - Encoding and decoding of base64 strings</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/MIME::Base64::QuotedPrint">MIME::Base64::QuotedPrint</a></b> - Encoding and decoding of quoted-printable strings</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Math::BigFloat">Math::BigFloat</a></b> - Arbitrary size floating point math package</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Math::BigInt">Math::BigInt</a></b> - Arbitrary size integer math package</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Math::BigInt::Calc">Math::BigInt::Calc</a></b> - Pure Perl module to support Math::BigInt</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Math::BigRat">Math::BigRat</a></b> - Arbitrarily big rationals</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Math::Complex">Math::Complex</a></b> - Complex numbers and associated mathematical functions</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Math::Trig">Math::Trig</a></b> - Trigonometric functions</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Memoize">Memoize</a></b> - Make functions faster by trading space for time</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Memoize::AnyDBM_File">Memoize::AnyDBM_File</a></b> - Glue to provide EXISTS for AnyDBM_File for Storable use</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Memoize::Expire">Memoize::Expire</a></b> - Plug-in module for automatic expiration of memoized values</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Memoize::ExpireFile">Memoize::ExpireFile</a></b> - Test for Memoize expiration semantics</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Memoize::ExpireTest">Memoize::ExpireTest</a></b> - Test for Memoize expiration semantics</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Memoize::NDBM_File">Memoize::NDBM_File</a></b> - Glue to provide EXISTS for NDBM_File for Storable use</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Memoize::SDBM_File">Memoize::SDBM_File</a></b> - Glue to provide EXISTS for SDBM_File for Storable use</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Memoize::Storable">Memoize::Storable</a></b> - Store Memoized data in Storable database</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/NDBM_File">NDBM_File</a></b> - Tied access to ndbm files</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/NEXT">NEXT</a></b> - Provide a pseudo-class NEXT (et al) that allows method redispatch</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Net::Cmd">Net::Cmd</a></b> - Network Command class (as used by FTP, SMTP etc)</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Net::Config">Net::Config</a></b> - Local configuration data for libnet</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Net::Domain">Net::Domain</a></b> - Attempt to evaluate the current host&#39;s internet name and domain</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Net::FTP">Net::FTP</a></b> - FTP Client class</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Net::NNTP">Net::NNTP</a></b> - NNTP Client class</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Net::Netrc">Net::Netrc</a></b> - OO interface to users netrc file</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Net::POP3">Net::POP3</a></b> - Post Office Protocol 3 Client class (RFC1939)</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Net::Ping">Net::Ping</a></b> - Check a remote host for reachability</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Net::SMTP">Net::SMTP</a></b> - Simple Mail Transfer Protocol Client</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Net::Time">Net::Time</a></b> - Time and daytime network client interface</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Net::hostent">Net::hostent</a></b> - By-name interface to Perl&#39;s built-in gethost*() functions</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Net::libnetFAQ">Net::libnetFAQ</a></b> - Libnet Frequently Asked Questions</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Net::netent">Net::netent</a></b> - By-name interface to Perl&#39;s built-in getnet*() functions</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Net::protoent">Net::protoent</a></b> - By-name interface to Perl&#39;s built-in getproto*() functions</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Net::servent">Net::servent</a></b> - By-name interface to Perl&#39;s built-in getserv*() functions</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/O">O</a></b> - Generic interface to Perl Compiler backends</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/ODBM_File">ODBM_File</a></b> - Tied access to odbm files</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Opcode">Opcode</a></b> - Disable named opcodes when compiling perl code</p>
+
+</li>
+<li><p><b><a href="POSIX.html">POSIX</a></b> - Perl interface to IEEE Std 1003.1</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/PerlIO">PerlIO</a></b> - On demand loader for PerlIO layers and root of PerlIO::* name space</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/PerlIO::encoding">PerlIO::encoding</a></b> - Encoding layer</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/PerlIO::scalar">PerlIO::scalar</a></b> - In-memory IO, scalar IO</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/PerlIO::via">PerlIO::via</a></b> - Helper class for PerlIO layers implemented in perl</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/PerlIO::via::QuotedPrint">PerlIO::via::QuotedPrint</a></b> - PerlIO layer for quoted-printable strings</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Checker">Pod::Checker</a></b> - Check pod documents for syntax errors</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Find">Pod::Find</a></b> - Find POD documents in directory trees</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Functions">Pod::Functions</a></b> - Group Perl&#39;s functions a la perlfunc.pod</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Html">Pod::Html</a></b> - Module to convert pod files to HTML</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::InputObjects">Pod::InputObjects</a></b> - Objects representing POD input paragraphs, commands, etc.</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::LaTeX">Pod::LaTeX</a></b> - Convert Pod data to formatted Latex</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Man">Pod::Man</a></b> - Convert POD data to formatted *roff input</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::ParseLink">Pod::ParseLink</a></b> - Parse an L&lt;&gt; formatting code in POD text</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::ParseUtils">Pod::ParseUtils</a></b> - Helpers for POD parsing and conversion</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Parser">Pod::Parser</a></b> - Base class for creating POD filters and translators</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Perldoc::ToChecker">Pod::Perldoc::ToChecker</a></b> - Let Perldoc check Pod for errors</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Perldoc::ToMan">Pod::Perldoc::ToMan</a></b> - Let Perldoc render Pod as man pages</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Perldoc::ToNroff">Pod::Perldoc::ToNroff</a></b> - Let Perldoc convert Pod to nroff</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Perldoc::ToPod">Pod::Perldoc::ToPod</a></b> - Let Perldoc render Pod as ... Pod!</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Perldoc::ToRtf">Pod::Perldoc::ToRtf</a></b> - Let Perldoc render Pod as RTF</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Perldoc::ToText">Pod::Perldoc::ToText</a></b> - Let Perldoc render Pod as plaintext</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Perldoc::ToTk">Pod::Perldoc::ToTk</a></b> - Let Perldoc use Tk::Pod to render Pod</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Perldoc::ToXml">Pod::Perldoc::ToXml</a></b> - Let Perldoc render Pod as XML</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::PlainText">Pod::PlainText</a></b> - Convert POD data to formatted ASCII text</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Plainer">Pod::Plainer</a></b> - Perl extension for converting Pod to old style Pod.</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Select">Pod::Select</a></b> - Extract selected sections of POD from input</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Text">Pod::Text</a></b> - Convert POD data to formatted ASCII text</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Text::Color">Pod::Text::Color</a></b> - Convert POD data to formatted color ASCII text</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Text::Overstrike">Pod::Text::Overstrike</a></b> - Convert POD data to formatted overstrike text</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Text::Termcap">Pod::Text::Termcap</a></b> - Convert POD data to ASCII text with format escapes</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Pod::Usage">Pod::Usage</a></b> - Print a usage message from embedded pod documentation</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/SDBM_File">SDBM_File</a></b> - Tied access to sdbm files</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Safe">Safe</a></b> - Compile and execute code in restricted compartments</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Scalar::Util">Scalar::Util</a></b> - A selection of general-utility scalar subroutines</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Search::Dict">Search::Dict</a></b> - Search for key in dictionary file</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/SelectSaver">SelectSaver</a></b> - Save and restore selected file handle</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/SelfLoader">SelfLoader</a></b> - Load functions only on demand</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Shell">Shell</a></b> - Run shell commands transparently within perl</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Socket">Socket</a></b> - Load the C socket.h defines and structure manipulators</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Storable">Storable</a></b> - Persistence for Perl data structures</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Switch">Switch</a></b> - A switch statement for Perl</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Symbol">Symbol</a></b> - Manipulate Perl symbols and their names</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Sys::Hostname">Sys::Hostname</a></b> - Try every conceivable way to get hostname</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Sys::Syslog">Sys::Syslog</a></b> - Perl interface to the UNIX syslog(3) calls</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Term::ANSIColor">Term::ANSIColor</a></b> - Color screen output using ANSI escape sequences</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Term::Cap">Term::Cap</a></b> - Perl termcap interface</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Term::Complete">Term::Complete</a></b> - Perl word completion module</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Term::ReadLine">Term::ReadLine</a></b> - Perl interface to various <code>readline</code> packages.</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Test">Test</a></b> - Provides a simple framework for writing test scripts</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Test::Builder">Test::Builder</a></b> - Backend for building test libraries</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Test::Harness">Test::Harness</a></b> - Run Perl standard test scripts with statistics</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Test::Harness::Assert">Test::Harness::Assert</a></b> - Simple assert</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Test::Harness::Iterator">Test::Harness::Iterator</a></b> - Internal Test::Harness Iterator</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Test::Harness::Straps">Test::Harness::Straps</a></b> - Detailed analysis of test results</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Test::More">Test::More</a></b> - Yet another framework for writing test scripts</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Test::Simple">Test::Simple</a></b> - Basic utilities for writing tests.</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Test::Tutorial">Test::Tutorial</a></b> - A tutorial about writing really basic tests</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Text::Abbrev">Text::Abbrev</a></b> - Create an abbreviation table from a list</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Text::Balanced">Text::Balanced</a></b> - Extract delimited text sequences from strings.</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Text::ParseWords">Text::ParseWords</a></b> - Parse text into an array of tokens or array of arrays</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Text::Soundex">Text::Soundex</a></b> - Implementation of the Soundex Algorithm as Described by Knuth</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Text::Tabs">Text::Tabs</a></b> - Expand and unexpand tabs per the unix expand(1) and unexpand(1)</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Text::Wrap">Text::Wrap</a></b> - Line wrapping to form simple paragraphs</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Thread">Thread</a></b> - Manipulate threads in Perl (for old code only)</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Thread::Queue">Thread::Queue</a></b> - Thread-safe queues</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Thread::Semaphore">Thread::Semaphore</a></b> - Thread-safe semaphores</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/Thread::Signal">Thread::Signal</a></b> - Start a thread which runs signal handlers reliably (for old code)</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/Thread::Specific">Thread::Specific</a></b> - Thread-specific keys</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Tie::Array">Tie::Array</a></b> - Base class for tied arrays</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Tie::File">Tie::File</a></b> - Access the lines of a disk file via a Perl array</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Tie::Handle">Tie::Handle</a></b> - Base class definitions for tied handles</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Tie::Hash">Tie::Hash</a></b> - Base class definitions for tied hashes</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Tie::Memoize">Tie::Memoize</a></b> - Add data to hash when needed</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Tie::RefHash">Tie::RefHash</a></b> - Use references as hash keys</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Tie::Scalar">Tie::Scalar</a></b> - Base class definitions for tied scalars</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Tie::SubstrHash">Tie::SubstrHash</a></b> - Fixed-table-size, fixed-key-length hashing</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Time::HiRes">Time::HiRes</a></b> - High resolution alarm, sleep, gettimeofday, interval timers</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Time::Local">Time::Local</a></b> - Efficiently compute time from local and GMT time</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Time::gmtime">Time::gmtime</a></b> - By-name interface to Perl&#39;s built-in gmtime() function</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Time::localtime">Time::localtime</a></b> - By-name interface to Perl&#39;s built-in localtime() function</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Time::tm">Time::tm</a></b> - Internal object used by Time::gmtime and Time::localtime</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/UNIVERSAL">UNIVERSAL</a></b> - Base class for ALL classes (blessed references)</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Unicode::Collate">Unicode::Collate</a></b> - Unicode Collation Algorithm</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Unicode::Normalize">Unicode::Normalize</a></b> - Unicode Normalization Forms</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/Unicode::UCD">Unicode::UCD</a></b> - Unicode character database</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/User::grent">User::grent</a></b> - By-name interface to Perl&#39;s built-in getgr*() functions</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/User::pwent">User::pwent</a></b> - By-name interface to Perl&#39;s built-in getpw*() functions</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/Win32">Win32</a></b> - Interfaces to some Win32 API Functions</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/XS::APItest">XS::APItest</a></b> - Test the perl C API</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/XS::Typemap">XS::Typemap</a></b> - Module to test the XS typemaps distributed with perl</p>
+
+</li>
+<li><p><b><a href="https://perldoc.perl.org/5.8.5/XSLoader">XSLoader</a></b> - Dynamically load C libraries into Perl code</p>
+
+</li>
+</ul>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/5.8.5/modules by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:42 GMT -->
+</html>

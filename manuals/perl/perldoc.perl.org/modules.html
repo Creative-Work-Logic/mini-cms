@@ -1,0 +1,2426 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/modules by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:08:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perl core modules - Perldoc Browser</title>
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="modules.html">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.html"><img src="images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.42.0</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="modules.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item active" href="5.42.0/modules.html">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.40.3/modules.html">5.40.3</a>
+          <a class="dropdown-item" href="5.40.2/modules.html">5.40.2</a>
+          <a class="dropdown-item" href="5.40.1/modules.html">5.40.1</a>
+          <a class="dropdown-item" href="5.40.0/modules.html">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.38.5/modules.html">5.38.5</a>
+          <a class="dropdown-item" href="5.38.4/modules.html">5.38.4</a>
+          <a class="dropdown-item" href="5.38.3/modules.html">5.38.3</a>
+          <a class="dropdown-item" href="5.38.2/modules.html">5.38.2</a>
+          <a class="dropdown-item" href="5.38.1/modules.html">5.38.1</a>
+          <a class="dropdown-item" href="5.38.0/modules.html">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.36.3/modules.html">5.36.3</a>
+          <a class="dropdown-item" href="5.36.2/modules.html">5.36.2</a>
+          <a class="dropdown-item" href="5.36.1/modules.html">5.36.1</a>
+          <a class="dropdown-item" href="5.36.0/modules.html">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.34.3/modules.html">5.34.3</a>
+          <a class="dropdown-item" href="5.34.2/modules.html">5.34.2</a>
+          <a class="dropdown-item" href="5.34.1/modules.html">5.34.1</a>
+          <a class="dropdown-item" href="5.34.0/modules.html">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.32.1/modules.html">5.32.1</a>
+          <a class="dropdown-item" href="5.32.0/modules.html">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.30.3/modules.html">5.30.3</a>
+          <a class="dropdown-item" href="5.30.2/modules.html">5.30.2</a>
+          <a class="dropdown-item" href="5.30.1/modules.html">5.30.1</a>
+          <a class="dropdown-item" href="5.30.0/modules.html">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.28.3/modules.html">5.28.3</a>
+          <a class="dropdown-item" href="5.28.2/modules.html">5.28.2</a>
+          <a class="dropdown-item" href="5.28.1/modules.html">5.28.1</a>
+          <a class="dropdown-item" href="5.28.0/modules.html">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.26.3/modules.html">5.26.3</a>
+          <a class="dropdown-item" href="5.26.2/modules.html">5.26.2</a>
+          <a class="dropdown-item" href="5.26.1/modules.html">5.26.1</a>
+          <a class="dropdown-item" href="5.26.0/modules.html">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.24.4/modules.html">5.24.4</a>
+          <a class="dropdown-item" href="5.24.3/modules.html">5.24.3</a>
+          <a class="dropdown-item" href="5.24.2/modules.html">5.24.2</a>
+          <a class="dropdown-item" href="5.24.1/modules.html">5.24.1</a>
+          <a class="dropdown-item" href="5.24.0/modules.html">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.22.4/modules.html">5.22.4</a>
+          <a class="dropdown-item" href="5.22.3/modules.html">5.22.3</a>
+          <a class="dropdown-item" href="5.22.2/modules.html">5.22.2</a>
+          <a class="dropdown-item" href="5.22.1/modules.html">5.22.1</a>
+          <a class="dropdown-item" href="5.22.0/modules.html">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.20.3/modules.html">5.20.3</a>
+          <a class="dropdown-item" href="5.20.2/modules.html">5.20.2</a>
+          <a class="dropdown-item" href="5.20.1/modules.html">5.20.1</a>
+          <a class="dropdown-item" href="5.20.0/modules.html">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.18.4/modules.html">5.18.4</a>
+          <a class="dropdown-item" href="5.18.3/modules.html">5.18.3</a>
+          <a class="dropdown-item" href="5.18.2/modules.html">5.18.2</a>
+          <a class="dropdown-item" href="5.18.1/modules.html">5.18.1</a>
+          <a class="dropdown-item" href="5.18.0/modules.html">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.16.3/modules.html">5.16.3</a>
+          <a class="dropdown-item" href="5.16.2/modules.html">5.16.2</a>
+          <a class="dropdown-item" href="5.16.1/modules.html">5.16.1</a>
+          <a class="dropdown-item" href="5.16.0/modules.html">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.14.4/modules.html">5.14.4</a>
+          <a class="dropdown-item" href="5.14.3/modules.html">5.14.3</a>
+          <a class="dropdown-item" href="5.14.2/modules.html">5.14.2</a>
+          <a class="dropdown-item" href="5.14.1/modules.html">5.14.1</a>
+          <a class="dropdown-item" href="5.14.0/modules.html">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.12.5/modules.html">5.12.5</a>
+          <a class="dropdown-item" href="5.12.4/modules.html">5.12.4</a>
+          <a class="dropdown-item" href="5.12.3/modules.html">5.12.3</a>
+          <a class="dropdown-item" href="5.12.2/modules.html">5.12.2</a>
+          <a class="dropdown-item" href="5.12.1/modules.html">5.12.1</a>
+          <a class="dropdown-item" href="5.12.0/modules.html">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.10.1/modules.html">5.10.1</a>
+          <a class="dropdown-item" href="5.10.0/modules.html">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.8.9/modules.html">5.8.9</a>
+          <a class="dropdown-item" href="5.8.8/modules.html">5.8.8</a>
+          <a class="dropdown-item" href="5.8.7/modules.html">5.8.7</a>
+          <a class="dropdown-item" href="5.8.6/modules.html">5.8.6</a>
+          <a class="dropdown-item" href="5.8.5/modules.html">5.8.5</a>
+          <a class="dropdown-item" href="5.8.4/modules.html">5.8.4</a>
+          <a class="dropdown-item" href="5.8.3/modules.html">5.8.3</a>
+          <a class="dropdown-item" href="5.8.2/modules.html">5.8.2</a>
+          <a class="dropdown-item" href="5.8.1/modules.html">5.8.1</a>
+          <a class="dropdown-item" href="5.8.0/modules.html">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.6.2/modules.html">5.6.2</a>
+          <a class="dropdown-item" href="5.6.1/modules.html">5.6.1</a>
+          <a class="dropdown-item" href="5.6.0/modules.html">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.005_04/modules.html">5.005_04</a>
+          <a class="dropdown-item" href="5.005_03/modules.html">5.005_03</a>
+          <a class="dropdown-item" href="5.005_02/modules.html">5.005_02</a>
+          <a class="dropdown-item" href="5.005_01/modules.html">5.005_01</a>
+          <a class="dropdown-item" href="5.005/modules.html">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="blead/modules.html">blead</a>
+          <a class="dropdown-item" href="5.43.1/modules.html">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.42.0-RC3/modules.html">5.42.0-RC3</a>
+          <a class="dropdown-item" href="5.42.0-RC2/modules.html">5.42.0-RC2</a>
+          <a class="dropdown-item" href="5.42.0-RC1/modules.html">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.41.13/modules.html">5.41.13</a>
+          <a class="dropdown-item" href="5.41.12/modules.html">5.41.12</a>
+          <a class="dropdown-item" href="5.41.11/modules.html">5.41.11</a>
+          <a class="dropdown-item" href="5.41.10/modules.html">5.41.10</a>
+          <a class="dropdown-item" href="5.41.9/modules.html">5.41.9</a>
+          <a class="dropdown-item" href="5.41.8/modules.html">5.41.8</a>
+          <a class="dropdown-item" href="5.41.7/modules.html">5.41.7</a>
+          <a class="dropdown-item" href="5.41.6/modules.html">5.41.6</a>
+          <a class="dropdown-item" href="5.41.5/modules.html">5.41.5</a>
+          <a class="dropdown-item" href="5.41.4/modules.html">5.41.4</a>
+          <a class="dropdown-item" href="5.41.3/modules.html">5.41.3</a>
+          <a class="dropdown-item" href="5.41.2/modules.html">5.41.2</a>
+          <a class="dropdown-item" href="5.41.1/modules.html">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.40.3-RC1/modules.html">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="5.38.5-RC1/modules.html">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="modules.html">modules</a>
+          <div id="more">
+            (<a href="modules.txt">source</a>,
+            <a href="https://metacpan.org/">CPAN</a>)
+          </div>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#Pragmatic-Modules">Pragmatic Modules</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Standard-Modules">Standard Modules</a>
+              </li>
+          </ul>
+
+      <h2 id="Pragmatic-Modules"><a class="permalink" href="#Pragmatic-Modules">#</a><a id="Pragmatic"></a>Pragmatic Modules</h2>
+
+<p>They work somewhat like compiler directives (pragmata) in that they tend to affect the compilation of your program, and thus will usually work well only when used within a <code>use</code>, or <code>no</code>. Most of these are lexically scoped, so an inner BLOCK may countermand them by saying:</p>
+
+<pre><code>no integer;
+no strict &#39;refs&#39;;
+no warnings;</code></pre>
+
+<p>which lasts until the end of that BLOCK.</p>
+
+<p>Some pragmas are lexically scoped--typically those that affect the <code>$^H</code> hints variable. Others affect the current package instead, like <code>use vars</code> and <code>use subs</code>, which allow you to predeclare a variables or subroutines within a particular <i>file</i> rather than just a block. Such declarations are effective for the entire file for which they were declared. You cannot rescind them with <code>no vars</code> or <code>no subs</code>.</p>
+
+<p>The following pragmas are defined (and have their own documentation).</p>
+
+<ul>
+
+<li><p><b><a href="attributes.html">attributes</a></b> - Get/set subroutine or variable attributes</p>
+
+</li>
+<li><p><b><a href="autodie.html">autodie</a></b> - Replace functions with ones that succeed or die with lexical scope</p>
+
+</li>
+<li><p><b><a href="autodie__exception.html">autodie::exception</a></b> - Exceptions from autodying functions.</p>
+
+</li>
+<li><p><b><a href="autodie__exception__system.html">autodie::exception::system</a></b> - Exceptions from autodying system().</p>
+
+</li>
+<li><p><b><a href="autodie__hints.html">autodie::hints</a></b> - Provide hints about user subroutines to autodie</p>
+
+</li>
+<li><p><b><a href="autodie__skip.html">autodie::skip</a></b> - Skip a package when throwing autodie exceptions</p>
+
+</li>
+<li><p><b><a href="autouse.html">autouse</a></b> - Postpone load of modules until a function is used</p>
+
+</li>
+<li><p><b><a href="base.html">base</a></b> - Establish an ISA relationship with base classes at compile time</p>
+
+</li>
+<li><p><b><a href="bigfloat.html">bigfloat</a></b> - Transparent big floating point number support for Perl</p>
+
+</li>
+<li><p><b><a href="bigint.html">bigint</a></b> - Transparent big integer support for Perl</p>
+
+</li>
+<li><p><b><a href="bignum.html">bignum</a></b> - Transparent big number support for Perl</p>
+
+</li>
+<li><p><b><a href="bigrat.html">bigrat</a></b> - Transparent big rational number support for Perl</p>
+
+</li>
+<li><p><b><a href="blib.html">blib</a></b> - Use MakeMaker&#39;s uninstalled version of a package</p>
+
+</li>
+<li><p><b><a href="builtin.html">builtin</a></b> - Import built-in utility functions</p>
+
+</li>
+<li><p><b><a href="bytes.html">bytes</a></b> - Expose the individual bytes of characters</p>
+
+</li>
+<li><p><b><a href="charnames.html">charnames</a></b> - Access to Unicode character names and named character sequences; also define character names</p>
+
+</li>
+<li><p><b><a href="constant.html">constant</a></b> - Declare constants</p>
+
+</li>
+<li><p><b><a href="deprecate.html">deprecate</a></b> - Perl pragma for deprecating the inclusion of a module in core</p>
+
+</li>
+<li><p><b><a href="diagnostics.html">diagnostics</a></b> - Produce verbose warning diagnostics</p>
+
+</li>
+<li><p><b><a href="encoding.html">encoding</a></b> - Allows you to write your script in non-ASCII and non-UTF-8</p>
+
+</li>
+<li><p><b><a href="encoding__warnings.html">encoding::warnings</a></b> - Warn on implicit encoding conversions</p>
+
+</li>
+<li><p><b><a href="experimental.html">experimental</a></b> - Experimental features made easy</p>
+
+</li>
+<li><p><b><a href="feature.html">feature</a></b> - Enable new features</p>
+
+</li>
+<li><p><b><a href="fields.html">fields</a></b> - Compile-time class fields</p>
+
+</li>
+<li><p><b><a href="filetest.html">filetest</a></b> - Control the filetest permission operators</p>
+
+</li>
+<li><p><b><a href="if.html">if</a></b> - <code>use</code> a Perl module if a condition holds</p>
+
+</li>
+<li><p><b><a href="integer.html">integer</a></b> - Use integer arithmetic instead of floating point</p>
+
+</li>
+<li><p><b><a href="less.html">less</a></b> - Request less of something</p>
+
+</li>
+<li><p><b><a href="lib.html">lib</a></b> - Manipulate @INC at compile time</p>
+
+</li>
+<li><p><b><a href="locale.html">locale</a></b> - Use or avoid POSIX locales for built-in operations</p>
+
+</li>
+<li><p><b><a href="mro.html">mro</a></b> - Method Resolution Order</p>
+
+</li>
+<li><p><b><a href="ok.html">ok</a></b> - Alternative to Test::More::use_ok</p>
+
+</li>
+<li><p><b><a href="open.html">open</a></b> - Set default PerlIO layers for input and output</p>
+
+</li>
+<li><p><b><a href="ops.html">ops</a></b> - Restrict unsafe operations when compiling</p>
+
+</li>
+<li><p><b><a href="overload.html">overload</a></b> - Package for overloading Perl operations</p>
+
+</li>
+<li><p><b><a href="overloading.html">overloading</a></b> - Lexically control overloading</p>
+
+</li>
+<li><p><b><a href="parent.html">parent</a></b> - Establish an ISA relationship with base classes at compile time</p>
+
+</li>
+<li><p><b><a href="re.html">re</a></b> - Alter regular expression behaviour</p>
+
+</li>
+<li><p><b><a href="sigtrap.html">sigtrap</a></b> - Enable simple signal handling</p>
+
+</li>
+<li><p><b><a href="sort.html">sort</a></b> - Control sort() behaviour</p>
+
+</li>
+<li><p><b><a href="source__encoding.html">source::encoding</a></b> - Declare Perl source code encoding</p>
+
+</li>
+<li><p><b><a href="stable.html">stable</a></b> - Experimental features made easy, once we know they&#39;re stable</p>
+
+</li>
+<li><p><b><a href="strict.html">strict</a></b> - Restrict unsafe constructs</p>
+
+</li>
+<li><p><b><a href="subs.html">subs</a></b> - Predeclare subroutine names</p>
+
+</li>
+<li><p><b><a href="threads.html">threads</a></b> - Perl interpreter-based threads</p>
+
+</li>
+<li><p><b><a href="threads__shared.html">threads::shared</a></b> - Perl extension for sharing data structures between threads</p>
+
+</li>
+<li><p><b><a href="utf8.html">utf8</a></b> - Enable/disable UTF-8 (or UTF-EBCDIC) in source code</p>
+
+</li>
+<li><p><b><a href="vars.html">vars</a></b> - Predeclare global variable names</p>
+
+</li>
+<li><p><b><a href="version.html">version</a></b> - Perl extension for Version Objects</p>
+
+</li>
+<li><p><b><a href="vmsish.html">vmsish</a></b> - Control VMS-specific language features</p>
+
+</li>
+<li><p><b><a href="warnings.html">warnings</a></b> - Control optional warnings</p>
+
+</li>
+<li><p><b><a href="warnings__register.html">warnings::register</a></b> - Warnings import function</p>
+
+</li>
+</ul>
+
+<h2 id="Standard-Modules"><a class="permalink" href="#Standard-Modules">#</a><a id="Standard"></a>Standard Modules</h2>
+
+<p>Standard, bundled modules are all expected to behave in a well-defined manner with respect to namespace pollution because they use the Exporter module. See their own documentation for details.</p>
+
+<p>It&#39;s possible that not all modules listed below are installed on your system. For example, the GDBM_File module will not be installed if you don&#39;t have the gdbm library.</p>
+
+<ul>
+
+<li><p><b><a href="https://metacpan.org/pod/Amiga::ARexx">Amiga::ARexx</a></b> - Perl extension for ARexx support</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/Amiga::Exec">Amiga::Exec</a></b> - Perl extension for low level amiga support</p>
+
+</li>
+<li><p><b><a href="AnyDBM_File.html">AnyDBM_File</a></b> - Provide framework for multiple DBMs</p>
+
+</li>
+<li><p><b><a href="App__Cpan.html">App::Cpan</a></b> - Easily interact with CPAN from the command line</p>
+
+</li>
+<li><p><b><a href="App__Prove.html">App::Prove</a></b> - Implements the <code>prove</code> command.</p>
+
+</li>
+<li><p><b><a href="App__Prove__State.html">App::Prove::State</a></b> - State storage for the <code>prove</code> command.</p>
+
+</li>
+<li><p><b><a href="App__Prove__State__Result.html">App::Prove::State::Result</a></b> - Individual test suite results.</p>
+
+</li>
+<li><p><b><a href="App__Prove__State__Result__Test.html">App::Prove::State::Result::Test</a></b> - Individual test results.</p>
+
+</li>
+<li><p><b><a href="Archive__Tar.html">Archive::Tar</a></b> - Module for manipulations of tar archives</p>
+
+</li>
+<li><p><b><a href="Archive__Tar__File.html">Archive::Tar::File</a></b> - A subclass for in-memory extracted file from Archive::Tar</p>
+
+</li>
+<li><p><b><a href="Attribute__Handlers.html">Attribute::Handlers</a></b> - Simpler definition of attribute handlers</p>
+
+</li>
+<li><p><b><a href="AutoLoader.html">AutoLoader</a></b> - Load subroutines only on demand</p>
+
+</li>
+<li><p><b><a href="AutoSplit.html">AutoSplit</a></b> - Split a package for autoloading</p>
+
+</li>
+<li><p><b><a href="B.html">B</a></b> - The Perl Compiler Backend</p>
+
+</li>
+<li><p><b><a href="B__Concise.html">B::Concise</a></b> - Walk Perl syntax tree, printing concise info about ops</p>
+
+</li>
+<li><p><b><a href="B__Deparse.html">B::Deparse</a></b> - Perl compiler backend to produce perl code</p>
+
+</li>
+<li><p><b><a href="B__Op_private.html">B::Op_private</a></b> - OP op_private flag definitions</p>
+
+</li>
+<li><p><b><a href="B__Showlex.html">B::Showlex</a></b> - Show lexical variables used in functions or files</p>
+
+</li>
+<li><p><b><a href="B__Terse.html">B::Terse</a></b> - Walk Perl syntax tree, printing terse info about ops</p>
+
+</li>
+<li><p><b><a href="B__Xref.html">B::Xref</a></b> - Generates cross reference reports for Perl programs</p>
+
+</li>
+<li><p><b><a href="Benchmark.html">Benchmark</a></b> - Benchmark running times of Perl code</p>
+
+</li>
+<li><p><b><a href="IO__Socket__IP.html"><code>IO::Socket::IP</code></a></b> - Family-neutral IP socket supporting both IPv4 and IPv6</p>
+
+</li>
+<li><p><b><a href="Socket.html"><code>Socket</code></a></b> - Networking constants and support functions</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Refcount.html"><code>Test2::Tools::Refcount</code></a></b> - Assert reference counts on objects</p>
+
+</li>
+<li><p><b><a href="CORE.html">CORE</a></b> - Namespace for Perl&#39;s core routines</p>
+
+</li>
+<li><p><b><a href="CPAN.html">CPAN</a></b> - Query, download and build perl modules from CPAN sites</p>
+
+</li>
+<li><p><b><a href="CPAN__API__HOWTO.html">CPAN::API::HOWTO</a></b> - A recipe book for programming with CPAN.pm</p>
+
+</li>
+<li><p><b><a href="CPAN__Debug.html">CPAN::Debug</a></b> - Internal debugging for CPAN.pm</p>
+
+</li>
+<li><p><b><a href="CPAN__Distroprefs.html">CPAN::Distroprefs</a></b> - Read and match distroprefs</p>
+
+</li>
+<li><p><b><a href="CPAN__FirstTime.html">CPAN::FirstTime</a></b> - Utility for CPAN::Config file Initialization</p>
+
+</li>
+<li><p><b><a href="CPAN__HandleConfig.html">CPAN::HandleConfig</a></b> - Internal configuration handling for CPAN.pm</p>
+
+</li>
+<li><p><b><a href="CPAN__Kwalify.html">CPAN::Kwalify</a></b> - Interface between CPAN.pm and Kwalify.pm</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta.html">CPAN::Meta</a></b> - The distribution metadata for a CPAN dist</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta__Converter.html">CPAN::Meta::Converter</a></b> - Convert CPAN distribution metadata structures</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta__Feature.html">CPAN::Meta::Feature</a></b> - An optional feature provided by a CPAN distribution</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta__History.html">CPAN::Meta::History</a></b> - History of CPAN Meta Spec changes</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta__History__Meta_1_0.html">CPAN::Meta::History::Meta_1_0</a></b> - Version 1.0 metadata specification for META.yml</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta__History__Meta_1_1.html">CPAN::Meta::History::Meta_1_1</a></b> - Version 1.1 metadata specification for META.yml</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta__History__Meta_1_2.html">CPAN::Meta::History::Meta_1_2</a></b> - Version 1.2 metadata specification for META.yml</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta__History__Meta_1_3.html">CPAN::Meta::History::Meta_1_3</a></b> - Version 1.3 metadata specification for META.yml</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta__History__Meta_1_4.html">CPAN::Meta::History::Meta_1_4</a></b> - Version 1.4 metadata specification for META.yml</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta__Merge.html">CPAN::Meta::Merge</a></b> - Merging CPAN Meta fragments</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta__Prereqs.html">CPAN::Meta::Prereqs</a></b> - A set of distribution prerequisites by phase and type</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta__Requirements.html">CPAN::Meta::Requirements</a></b> - A set of version requirements for a CPAN dist</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta__Requirements__Range.html">CPAN::Meta::Requirements::Range</a></b> - A set of version requirements for a CPAN dist</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta__Spec.html">CPAN::Meta::Spec</a></b> - Specification for CPAN distribution metadata</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta__Validator.html">CPAN::Meta::Validator</a></b> - Validate CPAN distribution metadata structures</p>
+
+</li>
+<li><p><b><a href="CPAN__Meta__YAML.html">CPAN::Meta::YAML</a></b> - Read and write a subset of YAML for CPAN Meta files</p>
+
+</li>
+<li><p><b><a href="CPAN__Nox.html">CPAN::Nox</a></b> - Wrapper around CPAN.pm without using any XS module</p>
+
+</li>
+<li><p><b><a href="CPAN__Plugin.html">CPAN::Plugin</a></b> - Base class for CPAN shell extensions</p>
+
+</li>
+<li><p><b><a href="CPAN__Plugin__Specfile.html">CPAN::Plugin::Specfile</a></b> - Proof of concept implementation of a trivial CPAN::Plugin</p>
+
+</li>
+<li><p><b><a href="CPAN__Queue.html">CPAN::Queue</a></b> - Internal queue support for CPAN.pm</p>
+
+</li>
+<li><p><b><a href="CPAN__Tarzip.html">CPAN::Tarzip</a></b> - Internal handling of tar archives for CPAN.pm</p>
+
+</li>
+<li><p><b><a href="CPAN__Version.html">CPAN::Version</a></b> - Utility functions to compare CPAN versions</p>
+
+</li>
+<li><p><b><a href="Carp.html">Carp</a></b> - Alternative warn and die for modules</p>
+
+</li>
+<li><p><b><a href="Class__Struct.html">Class::Struct</a></b> - Declare struct-like datatypes as Perl classes</p>
+
+</li>
+<li><p><b><a href="Compress__Raw__Bzip2.html">Compress::Raw::Bzip2</a></b> - Low-Level Interface to bzip2 compression library</p>
+
+</li>
+<li><p><b><a href="Compress__Raw__Zlib.html">Compress::Raw::Zlib</a></b> - Low-Level Interface to zlib or zlib-ng compression library</p>
+
+</li>
+<li><p><b><a href="Compress__Zlib.html">Compress::Zlib</a></b> - Interface to zlib compression library</p>
+
+</li>
+<li><p><b><a href="Config.html">Config</a></b> - Access Perl configuration information</p>
+
+</li>
+<li><p><b><a href="Config__Extensions.html">Config::Extensions</a></b> - Hash lookup of which core extensions were built.</p>
+
+</li>
+<li><p><b><a href="Config__Perl__V.html">Config::Perl::V</a></b> - Structured data retrieval of perl -V output</p>
+
+</li>
+<li><p><b><a href="Cwd.html">Cwd</a></b> - Get pathname of current working directory</p>
+
+</li>
+<li><p><b><a href="DB.html">DB</a></b> - Programmatic interface to the Perl debugging API</p>
+
+</li>
+<li><p><b><a href="DBM_Filter.html">DBM_Filter</a></b> - Filter DBM keys/values</p>
+
+</li>
+<li><p><b><a href="DBM_Filter__compress.html">DBM_Filter::compress</a></b> - Filter for DBM_Filter</p>
+
+</li>
+<li><p><b><a href="DBM_Filter__encode.html">DBM_Filter::encode</a></b> - Filter for DBM_Filter</p>
+
+</li>
+<li><p><b><a href="DBM_Filter__int32.html">DBM_Filter::int32</a></b> - Filter for DBM_Filter</p>
+
+</li>
+<li><p><b><a href="DBM_Filter__null.html">DBM_Filter::null</a></b> - Filter for DBM_Filter</p>
+
+</li>
+<li><p><b><a href="DBM_Filter__utf8.html">DBM_Filter::utf8</a></b> - Filter for DBM_Filter</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/DB_File">DB_File</a></b> - Perl5 access to Berkeley DB version 1.x</p>
+
+</li>
+<li><p><b><a href="Data__Dumper.html">Data::Dumper</a></b> - Stringified perl data structures, suitable for both printing and <code>eval</code></p>
+
+</li>
+<li><p><b><a href="Devel__PPPort.html">Devel::PPPort</a></b> - Perl/Pollution/Portability</p>
+
+</li>
+<li><p><b><a href="Devel__Peek.html">Devel::Peek</a></b> - A data debugging tool for the XS programmer</p>
+
+</li>
+<li><p><b><a href="Devel__SelfStubber.html">Devel::SelfStubber</a></b> - Generate stubs for a SelfLoading module</p>
+
+</li>
+<li><p><b><a href="Digest.html">Digest</a></b> - Modules that calculate message digests</p>
+
+</li>
+<li><p><b><a href="Digest__MD5.html">Digest::MD5</a></b> - Perl interface to the MD5 Algorithm</p>
+
+</li>
+<li><p><b><a href="Digest__SHA.html">Digest::SHA</a></b> - Perl extension for SHA-1/224/256/384/512</p>
+
+</li>
+<li><p><b><a href="Digest__base.html">Digest::base</a></b> - Digest base class</p>
+
+</li>
+<li><p><b><a href="Digest__file.html">Digest::file</a></b> - Calculate digests of files</p>
+
+</li>
+<li><p><b><a href="DirHandle.html">DirHandle</a></b> - (obsolete) supply object methods for directory handles</p>
+
+</li>
+<li><p><b><a href="Dumpvalue.html">Dumpvalue</a></b> - Provides screen dump of Perl data.</p>
+
+</li>
+<li><p><b><a href="DynaLoader.html">DynaLoader</a></b> - Dynamically load C libraries into Perl code</p>
+
+</li>
+<li><p><b><a href="Encode.html">Encode</a></b> - Character encodings in Perl</p>
+
+</li>
+<li><p><b><a href="Encode__Alias.html">Encode::Alias</a></b> - Alias definitions to encodings</p>
+
+</li>
+<li><p><b><a href="Encode__Byte.html">Encode::Byte</a></b> - Single Byte Encodings</p>
+
+</li>
+<li><p><b><a href="Encode__CJKConstants.html">Encode::CJKConstants</a></b> - Internally used by Encode::??::ISO_2022_*</p>
+
+</li>
+<li><p><b><a href="Encode__CN.html">Encode::CN</a></b> - China-based Chinese Encodings</p>
+
+</li>
+<li><p><b><a href="Encode__CN__HZ.html">Encode::CN::HZ</a></b> - Internally used by Encode::CN</p>
+
+</li>
+<li><p><b><a href="Encode__Config.html">Encode::Config</a></b> - Internally used by Encode</p>
+
+</li>
+<li><p><b><a href="Encode__EBCDIC.html">Encode::EBCDIC</a></b> - EBCDIC Encodings</p>
+
+</li>
+<li><p><b><a href="Encode__Encoder.html">Encode::Encoder</a></b> - Object Oriented Encoder</p>
+
+</li>
+<li><p><b><a href="Encode__Encoding.html">Encode::Encoding</a></b> - Encode Implementation Base Class</p>
+
+</li>
+<li><p><b><a href="Encode__GSM0338.html">Encode::GSM0338</a></b> - ETSI GSM 03.38 Encoding</p>
+
+</li>
+<li><p><b><a href="Encode__Guess.html">Encode::Guess</a></b> - Guesses encoding from data</p>
+
+</li>
+<li><p><b><a href="Encode__JP.html">Encode::JP</a></b> - Japanese Encodings</p>
+
+</li>
+<li><p><b><a href="Encode__JP__H2Z.html">Encode::JP::H2Z</a></b> - Internally used by Encode::JP::2022_JP*</p>
+
+</li>
+<li><p><b><a href="Encode__JP__JIS7.html">Encode::JP::JIS7</a></b> - Internally used by Encode::JP</p>
+
+</li>
+<li><p><b><a href="Encode__KR.html">Encode::KR</a></b> - Korean Encodings</p>
+
+</li>
+<li><p><b><a href="Encode__KR__2022_KR.html">Encode::KR::2022_KR</a></b> - Internally used by Encode::KR</p>
+
+</li>
+<li><p><b><a href="Encode__MIME__Header.html">Encode::MIME::Header</a></b> - MIME encoding for an unstructured email header</p>
+
+</li>
+<li><p><b><a href="Encode__MIME__Name.html">Encode::MIME::Name</a></b> - Internally used by Encode</p>
+
+</li>
+<li><p><b><a href="Encode__PerlIO.html">Encode::PerlIO</a></b> - A detailed document on Encode and PerlIO</p>
+
+</li>
+<li><p><b><a href="Encode__Supported.html">Encode::Supported</a></b> - Encodings supported by Encode</p>
+
+</li>
+<li><p><b><a href="Encode__Symbol.html">Encode::Symbol</a></b> - Symbol Encodings</p>
+
+</li>
+<li><p><b><a href="Encode__TW.html">Encode::TW</a></b> - Taiwan-based Chinese Encodings</p>
+
+</li>
+<li><p><b><a href="Encode__Unicode.html">Encode::Unicode</a></b> - Various Unicode Transformation Formats</p>
+
+</li>
+<li><p><b><a href="Encode__Unicode__UTF7.html">Encode::Unicode::UTF7</a></b> - UTF-7 encoding</p>
+
+</li>
+<li><p><b><a href="English.html">English</a></b> - Use nice English (or awk) names for ugly punctuation variables</p>
+
+</li>
+<li><p><b><a href="Env.html">Env</a></b> - Perl module that imports environment variables as scalars or arrays</p>
+
+</li>
+<li><p><b><a href="Errno.html">Errno</a></b> - System errno constants</p>
+
+</li>
+<li><p><b><a href="Exporter.html">Exporter</a></b> - Implements default import method for modules</p>
+
+</li>
+<li><p><b><a href="Exporter__Heavy.html">Exporter::Heavy</a></b> - Exporter guts</p>
+
+</li>
+<li><p><b><a href="ExtUtils__CBuilder.html">ExtUtils::CBuilder</a></b> - Compile and link C code for Perl modules</p>
+
+</li>
+<li><p><b><a href="ExtUtils__CBuilder__Platform__Windows.html">ExtUtils::CBuilder::Platform::Windows</a></b> - Builder class for Windows platforms</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Command.html">ExtUtils::Command</a></b> - Utilities to replace common UNIX commands in Makefiles etc.</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Command__MM.html">ExtUtils::Command::MM</a></b> - Commands for the MM&#39;s to use in Makefiles</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Constant.html">ExtUtils::Constant</a></b> - Generate XS code to import C header constants</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Constant__Base.html">ExtUtils::Constant::Base</a></b> - Base class for ExtUtils::Constant objects</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Constant__Utils.html">ExtUtils::Constant::Utils</a></b> - Helper functions for ExtUtils::Constant</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Constant__XS.html">ExtUtils::Constant::XS</a></b> - Generate C code for XS modules&#39; constants.</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Embed.html">ExtUtils::Embed</a></b> - Utilities for embedding Perl in C/C++ applications</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Install.html">ExtUtils::Install</a></b> - Install files from here to there</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Installed.html">ExtUtils::Installed</a></b> - Inventory management of installed modules</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Liblist.html">ExtUtils::Liblist</a></b> - Determine libraries to use and how to use them</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM.html">ExtUtils::MM</a></b> - OS adjusted ExtUtils::MakeMaker subclass</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_AIX.html">ExtUtils::MM_AIX</a></b> - AIX specific subclass of ExtUtils::MM_Unix</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_Any.html">ExtUtils::MM_Any</a></b> - Platform-agnostic MM methods</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_BeOS.html">ExtUtils::MM_BeOS</a></b> - Methods to override UN*X behaviour in ExtUtils::MakeMaker</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_Cygwin.html">ExtUtils::MM_Cygwin</a></b> - Methods to override UN*X behaviour in ExtUtils::MakeMaker</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_DOS.html">ExtUtils::MM_DOS</a></b> - DOS specific subclass of ExtUtils::MM_Unix</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_Darwin.html">ExtUtils::MM_Darwin</a></b> - Special behaviors for OS X</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_MacOS.html">ExtUtils::MM_MacOS</a></b> - Once produced Makefiles for MacOS Classic</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_NW5.html">ExtUtils::MM_NW5</a></b> - Methods to override UN*X behaviour in ExtUtils::MakeMaker</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_OS2.html">ExtUtils::MM_OS2</a></b> - Methods to override UN*X behaviour in ExtUtils::MakeMaker</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_OS390.html">ExtUtils::MM_OS390</a></b> - OS390 specific subclass of ExtUtils::MM_Unix</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_QNX.html">ExtUtils::MM_QNX</a></b> - QNX specific subclass of ExtUtils::MM_Unix</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_UWIN.html">ExtUtils::MM_UWIN</a></b> - U/WIN specific subclass of ExtUtils::MM_Unix</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_Unix.html">ExtUtils::MM_Unix</a></b> - Methods used by ExtUtils::MakeMaker</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_VMS.html">ExtUtils::MM_VMS</a></b> - Methods to override UN*X behaviour in ExtUtils::MakeMaker</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_VOS.html">ExtUtils::MM_VOS</a></b> - VOS specific subclass of ExtUtils::MM_Unix</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_Win32.html">ExtUtils::MM_Win32</a></b> - Methods to override UN*X behaviour in ExtUtils::MakeMaker</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MM_Win95.html">ExtUtils::MM_Win95</a></b> - Method to customize MakeMaker for Win9X</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MY.html">ExtUtils::MY</a></b> - ExtUtils::MakeMaker subclass for customization</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MakeMaker.html">ExtUtils::MakeMaker</a></b> - Create a module Makefile</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MakeMaker__Config.html">ExtUtils::MakeMaker::Config</a></b> - Wrapper around Config.pm</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MakeMaker__FAQ.html">ExtUtils::MakeMaker::FAQ</a></b> - Frequently Asked Questions About MakeMaker</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MakeMaker__Locale.html">ExtUtils::MakeMaker::Locale</a></b> - Bundled Encode::Locale</p>
+
+</li>
+<li><p><b><a href="ExtUtils__MakeMaker__Tutorial.html">ExtUtils::MakeMaker::Tutorial</a></b> - Writing a module with MakeMaker</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Manifest.html">ExtUtils::Manifest</a></b> - Utilities to write and check a MANIFEST file</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Miniperl.html">ExtUtils::Miniperl</a></b> - Write the C code for miniperlmain.c and perlmain.c</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Mkbootstrap.html">ExtUtils::Mkbootstrap</a></b> - Make a bootstrap file for use by DynaLoader</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Mksymlists.html">ExtUtils::Mksymlists</a></b> - Write linker options files for dynamic extension</p>
+
+</li>
+<li><p><b><a href="ExtUtils__PL2Bat.html">ExtUtils::PL2Bat</a></b> - Batch file creation to run perl scripts on Windows</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Packlist.html">ExtUtils::Packlist</a></b> - Manage .packlist files</p>
+
+</li>
+<li><p><b><a href="ExtUtils__ParseXS.html">ExtUtils::ParseXS</a></b> - Converts Perl XS code into C code</p>
+
+</li>
+<li><p><b><a href="ExtUtils__ParseXS__Constants.html">ExtUtils::ParseXS::Constants</a></b> - Initialization values for some globals</p>
+
+</li>
+<li><p><b><a href="ExtUtils__ParseXS__Eval.html">ExtUtils::ParseXS::Eval</a></b> - Clean package to evaluate code in</p>
+
+</li>
+<li><p><b><a href="ExtUtils__ParseXS__Node.html">ExtUtils::ParseXS::Node</a></b> - Classes for nodes of an ExtUtils::ParseXS AST</p>
+
+</li>
+<li><p><b><a href="ExtUtils__ParseXS__Utilities.html">ExtUtils::ParseXS::Utilities</a></b> - Subroutines used with ExtUtils::ParseXS</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Typemaps.html">ExtUtils::Typemaps</a></b> - Read/Write/Modify Perl/XS typemap files</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Typemaps__Cmd.html">ExtUtils::Typemaps::Cmd</a></b> - Quick commands for handling typemaps</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Typemaps__InputMap.html">ExtUtils::Typemaps::InputMap</a></b> - Entry in the INPUT section of a typemap</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Typemaps__OutputMap.html">ExtUtils::Typemaps::OutputMap</a></b> - Entry in the OUTPUT section of a typemap</p>
+
+</li>
+<li><p><b><a href="ExtUtils__Typemaps__Type.html">ExtUtils::Typemaps::Type</a></b> - Entry in the TYPEMAP section of a typemap</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/ExtUtils::XSSymSet">ExtUtils::XSSymSet</a></b> - Keep sets of symbol names palatable to the VMS linker</p>
+
+</li>
+<li><p><b><a href="ExtUtils__testlib.html">ExtUtils::testlib</a></b> - Add blib/* directories to @INC</p>
+
+</li>
+<li><p><b><a href="Fatal.html">Fatal</a></b> - Replace functions with equivalents which succeed or die</p>
+
+</li>
+<li><p><b><a href="Fcntl.html">Fcntl</a></b> - Various flag constants and helper functions from C&#39;s fcntl.h</p>
+
+</li>
+<li><p><b><a href="File__Basename.html">File::Basename</a></b> - Parse file paths into directory, filename and suffix.</p>
+
+</li>
+<li><p><b><a href="File__Compare.html">File::Compare</a></b> - Compare files or filehandles</p>
+
+</li>
+<li><p><b><a href="File__Copy.html">File::Copy</a></b> - Copy files or filehandles</p>
+
+</li>
+<li><p><b><a href="File__DosGlob.html">File::DosGlob</a></b> - DOS like globbing and then some</p>
+
+</li>
+<li><p><b><a href="File__Fetch.html">File::Fetch</a></b> - A generic file fetching mechanism</p>
+
+</li>
+<li><p><b><a href="File__Find.html">File::Find</a></b> - Traverse a directory tree.</p>
+
+</li>
+<li><p><b><a href="File__Glob.html">File::Glob</a></b> - Perl extension for BSD glob routine</p>
+
+</li>
+<li><p><b><a href="File__GlobMapper.html">File::GlobMapper</a></b> - Extend File Glob to Allow Input and Output Files</p>
+
+</li>
+<li><p><b><a href="File__Path.html">File::Path</a></b> - Create or remove directory trees</p>
+
+</li>
+<li><p><b><a href="File__Spec.html">File::Spec</a></b> - Portably perform operations on file names</p>
+
+</li>
+<li><p><b><a href="File__Spec__AmigaOS.html">File::Spec::AmigaOS</a></b> - File::Spec for AmigaOS</p>
+
+</li>
+<li><p><b><a href="File__Spec__Cygwin.html">File::Spec::Cygwin</a></b> - Methods for Cygwin file specs</p>
+
+</li>
+<li><p><b><a href="File__Spec__Epoc.html">File::Spec::Epoc</a></b> - Methods for Epoc file specs</p>
+
+</li>
+<li><p><b><a href="File__Spec__Functions.html">File::Spec::Functions</a></b> - Portably perform operations on file names</p>
+
+</li>
+<li><p><b><a href="File__Spec__Mac.html">File::Spec::Mac</a></b> - File::Spec for Mac OS (Classic)</p>
+
+</li>
+<li><p><b><a href="File__Spec__OS2.html">File::Spec::OS2</a></b> - Methods for OS/2 file specs</p>
+
+</li>
+<li><p><b><a href="File__Spec__Unix.html">File::Spec::Unix</a></b> - File::Spec for Unix, base for other File::Spec modules</p>
+
+</li>
+<li><p><b><a href="File__Spec__VMS.html">File::Spec::VMS</a></b> - Methods for VMS file specs</p>
+
+</li>
+<li><p><b><a href="File__Spec__Win32.html">File::Spec::Win32</a></b> - Methods for Win32 file specs</p>
+
+</li>
+<li><p><b><a href="File__Temp.html">File::Temp</a></b> - Return name and handle of a temporary file safely</p>
+
+</li>
+<li><p><b><a href="File__stat.html">File::stat</a></b> - By-name interface to Perl&#39;s built-in stat() functions</p>
+
+</li>
+<li><p><b><a href="FileCache.html">FileCache</a></b> - Keep more files open than the system permits</p>
+
+</li>
+<li><p><b><a href="FileHandle.html">FileHandle</a></b> - Supply object methods for filehandles</p>
+
+</li>
+<li><p><b><a href="Filter__Simple.html">Filter::Simple</a></b> - Simplified source filtering</p>
+
+</li>
+<li><p><b><a href="Filter__Util__Call.html">Filter::Util::Call</a></b> - Perl Source Filter Utility Module</p>
+
+</li>
+<li><p><b><a href="FindBin.html">FindBin</a></b> - Locate directory of original Perl script</p>
+
+</li>
+<li><p><b><a href="GDBM_File.html">GDBM_File</a></b> - Perl5 access to the gdbm library.</p>
+
+</li>
+<li><p><b><a href="Getopt__Long.html">Getopt::Long</a></b> - Extended processing of command line options</p>
+
+</li>
+<li><p><b><a href="Getopt__Long__Parser.html">Getopt::Long::Parser</a></b> - Getopt::Long object-oriented interface</p>
+
+</li>
+<li><p><b><a href="Getopt__Std.html">Getopt::Std</a></b> - Process single-character switches with switch clustering</p>
+
+</li>
+<li><p><b><a href="HTTP__Tiny.html">HTTP::Tiny</a></b> - A small, simple, correct HTTP/1.1 client</p>
+
+</li>
+<li><p><b><a href="Hash__Util.html">Hash::Util</a></b> - A selection of general-utility hash subroutines</p>
+
+</li>
+<li><p><b><a href="Hash__Util__FieldHash.html">Hash::Util::FieldHash</a></b> - Support for Inside-Out Classes</p>
+
+</li>
+<li><p><b><a href="I18N__Collate.html">I18N::Collate</a></b> - Compare 8-bit scalar data according to the current locale</p>
+
+</li>
+<li><p><b><a href="I18N__LangTags.html">I18N::LangTags</a></b> - Functions for dealing with RFC3066-style language tags</p>
+
+</li>
+<li><p><b><a href="I18N__LangTags__Detect.html">I18N::LangTags::Detect</a></b> - Detect the user&#39;s language preferences</p>
+
+</li>
+<li><p><b><a href="I18N__LangTags__List.html">I18N::LangTags::List</a></b> - Tags and names for human languages</p>
+
+</li>
+<li><p><b><a href="I18N__Langinfo.html">I18N::Langinfo</a></b> - Query locale information</p>
+
+</li>
+<li><p><b><a href="IO.html">IO</a></b> - Load various IO modules</p>
+
+</li>
+<li><p><b><a href="IO__Compress.html">IO::Compress</a></b> - Read/write compressed data in multiple formats</p>
+
+</li>
+<li><p><b><a href="IO__Compress__Base.html">IO::Compress::Base</a></b> - Base Class for IO::Compress modules</p>
+
+</li>
+<li><p><b><a href="IO__Compress__Bzip2.html">IO::Compress::Bzip2</a></b> - Write bzip2 files/buffers</p>
+
+</li>
+<li><p><b><a href="IO__Compress__Deflate.html">IO::Compress::Deflate</a></b> - Write RFC 1950 files/buffers</p>
+
+</li>
+<li><p><b><a href="IO__Compress__FAQ.html">IO::Compress::FAQ</a></b> - Frequently Asked Questions about IO::Compress</p>
+
+</li>
+<li><p><b><a href="IO__Compress__Gzip.html">IO::Compress::Gzip</a></b> - Write RFC 1952 files/buffers</p>
+
+</li>
+<li><p><b><a href="IO__Compress__RawDeflate.html">IO::Compress::RawDeflate</a></b> - Write RFC 1951 files/buffers</p>
+
+</li>
+<li><p><b><a href="IO__Compress__Zip.html">IO::Compress::Zip</a></b> - Write zip files/buffers</p>
+
+</li>
+<li><p><b><a href="IO__Dir.html">IO::Dir</a></b> - Supply object methods for directory handles</p>
+
+</li>
+<li><p><b><a href="IO__File.html">IO::File</a></b> - Supply object methods for filehandles</p>
+
+</li>
+<li><p><b><a href="IO__Handle.html">IO::Handle</a></b> - Supply object methods for I/O handles</p>
+
+</li>
+<li><p><b><a href="IO__Pipe.html">IO::Pipe</a></b> - Supply object methods for pipes</p>
+
+</li>
+<li><p><b><a href="IO__Poll.html">IO::Poll</a></b> - Object interface to system poll call</p>
+
+</li>
+<li><p><b><a href="IO__Seekable.html">IO::Seekable</a></b> - Supply seek based methods for I/O objects</p>
+
+</li>
+<li><p><b><a href="IO__Select.html">IO::Select</a></b> - OO interface to the <code>select</code> system call</p>
+
+</li>
+<li><p><b><a href="IO__Socket.html">IO::Socket</a></b> - Object interface to socket communications</p>
+
+</li>
+<li><p><b><a href="IO__Socket__INET.html">IO::Socket::INET</a></b> - Object interface for AF_INET domain sockets</p>
+
+</li>
+<li><p><b><a href="IO__Socket__UNIX.html">IO::Socket::UNIX</a></b> - Object interface for AF_UNIX domain sockets</p>
+
+</li>
+<li><p><b><a href="IO__Uncompress__AnyInflate.html">IO::Uncompress::AnyInflate</a></b> - Uncompress zlib-based (zip, gzip) file/buffer</p>
+
+</li>
+<li><p><b><a href="IO__Uncompress__AnyUncompress.html">IO::Uncompress::AnyUncompress</a></b> - Uncompress gzip, zip, bzip2, zstd, xz, lzma, lzip, lzf or lzop file/buffer</p>
+
+</li>
+<li><p><b><a href="IO__Uncompress__Base.html">IO::Uncompress::Base</a></b> - Base Class for IO::Uncompress modules</p>
+
+</li>
+<li><p><b><a href="IO__Uncompress__Bunzip2.html">IO::Uncompress::Bunzip2</a></b> - Read bzip2 files/buffers</p>
+
+</li>
+<li><p><b><a href="IO__Uncompress__Gunzip.html">IO::Uncompress::Gunzip</a></b> - Read RFC 1952 files/buffers</p>
+
+</li>
+<li><p><b><a href="IO__Uncompress__Inflate.html">IO::Uncompress::Inflate</a></b> - Read RFC 1950 files/buffers</p>
+
+</li>
+<li><p><b><a href="IO__Uncompress__RawInflate.html">IO::Uncompress::RawInflate</a></b> - Read RFC 1951 files/buffers</p>
+
+</li>
+<li><p><b><a href="IO__Uncompress__Unzip.html">IO::Uncompress::Unzip</a></b> - Read zip files/buffers</p>
+
+</li>
+<li><p><b><a href="IO__Zlib.html">IO::Zlib</a></b> - IO:: style interface to <a href="Compress__Zlib.html">Compress::Zlib</a></p>
+
+</li>
+<li><p><b><a href="IPC__Cmd.html">IPC::Cmd</a></b> - Finding and running system commands made easy</p>
+
+</li>
+<li><p><b><a href="IPC__Msg.html">IPC::Msg</a></b> - SysV Msg IPC object class</p>
+
+</li>
+<li><p><b><a href="IPC__Open2.html">IPC::Open2</a></b> - Open a process for both reading and writing using open2()</p>
+
+</li>
+<li><p><b><a href="IPC__Open3.html">IPC::Open3</a></b> - Open a process for reading, writing, and error handling using open3()</p>
+
+</li>
+<li><p><b><a href="IPC__Semaphore.html">IPC::Semaphore</a></b> - SysV Semaphore IPC object class</p>
+
+</li>
+<li><p><b><a href="IPC__SharedMem.html">IPC::SharedMem</a></b> - SysV Shared Memory IPC object class</p>
+
+</li>
+<li><p><b><a href="IPC__SysV.html">IPC::SysV</a></b> - System V IPC constants and system calls</p>
+
+</li>
+<li><p><b><a href="Internals.html">Internals</a></b> - Reserved special namespace for internals related functions</p>
+
+</li>
+<li><p><b><a href="JSON__PP.html">JSON::PP</a></b> - JSON::XS compatible pure-Perl module.</p>
+
+</li>
+<li><p><b><a href="JSON__PP__Boolean.html">JSON::PP::Boolean</a></b> - Dummy module providing JSON::PP::Boolean</p>
+
+</li>
+<li><p><b><a href="List__Util.html">List::Util</a></b> - A selection of general-utility list subroutines</p>
+
+</li>
+<li><p><b><a href="List__Util__XS.html">List::Util::XS</a></b> - Indicate if List::Util was compiled with a C compiler</p>
+
+</li>
+<li><p><b><a href="Locale__Maketext.html">Locale::Maketext</a></b> - Framework for localization</p>
+
+</li>
+<li><p><b><a href="Locale__Maketext__Cookbook.html">Locale::Maketext::Cookbook</a></b> - Recipes for using Locale::Maketext</p>
+
+</li>
+<li><p><b><a href="Locale__Maketext__Guts.html">Locale::Maketext::Guts</a></b> - Deprecated module to load Locale::Maketext utf8 code</p>
+
+</li>
+<li><p><b><a href="Locale__Maketext__GutsLoader.html">Locale::Maketext::GutsLoader</a></b> - Deprecated module to load Locale::Maketext utf8 code</p>
+
+</li>
+<li><p><b><a href="Locale__Maketext__Simple.html">Locale::Maketext::Simple</a></b> - Simple interface to Locale::Maketext::Lexicon</p>
+
+</li>
+<li><p><b><a href="Locale__Maketext__TPJ13.html">Locale::Maketext::TPJ13</a></b> - Article about software localization</p>
+
+</li>
+<li><p><b><a href="MIME__Base64.html">MIME::Base64</a></b> - Encoding and decoding of base64 strings</p>
+
+</li>
+<li><p><b><a href="MIME__QuotedPrint.html">MIME::QuotedPrint</a></b> - Encoding and decoding of quoted-printable strings</p>
+
+</li>
+<li><p><b><a href="Math__BigFloat.html">Math::BigFloat</a></b> - Arbitrary size floating point math package</p>
+
+</li>
+<li><p><b><a href="Math__BigInt.html">Math::BigInt</a></b> - Arbitrary size integer math package</p>
+
+</li>
+<li><p><b><a href="Math__BigInt__Calc.html">Math::BigInt::Calc</a></b> - Pure Perl module to support Math::BigInt</p>
+
+</li>
+<li><p><b><a href="Math__BigInt__FastCalc.html">Math::BigInt::FastCalc</a></b> - Math::BigInt::Calc with some XS for more speed</p>
+
+</li>
+<li><p><b><a href="Math__BigInt__Lib.html">Math::BigInt::Lib</a></b> - Virtual parent class for Math::BigInt libraries</p>
+
+</li>
+<li><p><b><a href="Math__BigRat.html">Math::BigRat</a></b> - Arbitrary size rational number math package</p>
+
+</li>
+<li><p><b><a href="Math__Complex.html">Math::Complex</a></b> - Complex numbers and associated mathematical functions</p>
+
+</li>
+<li><p><b><a href="Math__Trig.html">Math::Trig</a></b> - Trigonometric functions</p>
+
+</li>
+<li><p><b><a href="Memoize.html">Memoize</a></b> - Make functions faster by trading space for time</p>
+
+</li>
+<li><p><b><a href="Memoize__AnyDBM_File.html">Memoize::AnyDBM_File</a></b> - Glue to provide EXISTS for AnyDBM_File for Storable use</p>
+
+</li>
+<li><p><b><a href="Memoize__Expire.html">Memoize::Expire</a></b> - Plug-in module for automatic expiration of memoized values</p>
+
+</li>
+<li><p><b><a href="Memoize__NDBM_File.html">Memoize::NDBM_File</a></b> - Glue to provide EXISTS for NDBM_File for Storable use</p>
+
+</li>
+<li><p><b><a href="Memoize__SDBM_File.html">Memoize::SDBM_File</a></b> - DEPRECATED compatibility shim</p>
+
+</li>
+<li><p><b><a href="Memoize__Storable.html">Memoize::Storable</a></b> - Store Memoized data in Storable database</p>
+
+</li>
+<li><p><b><a href="Module__CoreList.html">Module::CoreList</a></b> - What modules shipped with versions of perl</p>
+
+</li>
+<li><p><b><a href="Module__CoreList__Utils.html">Module::CoreList::Utils</a></b> - What utilities shipped with versions of perl</p>
+
+</li>
+<li><p><b><a href="Module__Load.html">Module::Load</a></b> - Runtime require of both modules and files</p>
+
+</li>
+<li><p><b><a href="Module__Load__Conditional.html">Module::Load::Conditional</a></b> - Looking up module information / loading at runtime</p>
+
+</li>
+<li><p><b><a href="Module__Loaded.html">Module::Loaded</a></b> - Mark modules as loaded or unloaded</p>
+
+</li>
+<li><p><b><a href="Module__Metadata.html">Module::Metadata</a></b> - Gather package and POD information from perl module files</p>
+
+</li>
+<li><p><b><a href="NDBM_File.html">NDBM_File</a></b> - Tied access to ndbm files</p>
+
+</li>
+<li><p><b><a href="NEXT.html">NEXT</a></b> - Provide a pseudo-class NEXT (et al) that allows method redispatch</p>
+
+</li>
+<li><p><b><a href="Net__Cmd.html">Net::Cmd</a></b> - Network Command class (as used by FTP, SMTP etc)</p>
+
+</li>
+<li><p><b><a href="Net__Config.html">Net::Config</a></b> - Local configuration data for libnet</p>
+
+</li>
+<li><p><b><a href="Net__Domain.html">Net::Domain</a></b> - Attempt to evaluate the current host&#39;s internet name and domain</p>
+
+</li>
+<li><p><b><a href="Net__FTP.html">Net::FTP</a></b> - FTP Client class</p>
+
+</li>
+<li><p><b><a href="Net__FTP__dataconn.html">Net::FTP::dataconn</a></b> - FTP Client data connection class</p>
+
+</li>
+<li><p><b><a href="Net__NNTP.html">Net::NNTP</a></b> - NNTP Client class</p>
+
+</li>
+<li><p><b><a href="Net__Netrc.html">Net::Netrc</a></b> - OO interface to users netrc file</p>
+
+</li>
+<li><p><b><a href="Net__POP3.html">Net::POP3</a></b> - Post Office Protocol 3 Client class (RFC1939)</p>
+
+</li>
+<li><p><b><a href="Net__Ping.html">Net::Ping</a></b> - Check a remote host for reachability</p>
+
+</li>
+<li><p><b><a href="Net__SMTP.html">Net::SMTP</a></b> - Simple Mail Transfer Protocol Client</p>
+
+</li>
+<li><p><b><a href="Net__Time.html">Net::Time</a></b> - Time and daytime network client interface</p>
+
+</li>
+<li><p><b><a href="Net__hostent.html">Net::hostent</a></b> - By-name interface to Perl&#39;s built-in gethost*() functions</p>
+
+</li>
+<li><p><b><a href="Net__libnetFAQ.html">Net::libnetFAQ</a></b> - Libnet Frequently Asked Questions</p>
+
+</li>
+<li><p><b><a href="Net__netent.html">Net::netent</a></b> - By-name interface to Perl&#39;s built-in getnet*() functions</p>
+
+</li>
+<li><p><b><a href="Net__protoent.html">Net::protoent</a></b> - By-name interface to Perl&#39;s built-in getproto*() functions</p>
+
+</li>
+<li><p><b><a href="Net__servent.html">Net::servent</a></b> - By-name interface to Perl&#39;s built-in getserv*() functions</p>
+
+</li>
+<li><p><b><a href="O.html">O</a></b> - Generic interface to Perl Compiler backends</p>
+
+</li>
+<li><p><b><a href="ODBM_File.html">ODBM_File</a></b> - Tied access to odbm files</p>
+
+</li>
+<li><p><b><a href="Opcode.html">Opcode</a></b> - Disable named opcodes when compiling perl code</p>
+
+</li>
+<li><p><b><a href="POSIX.html">POSIX</a></b> - Perl interface to IEEE Std 1003.1</p>
+
+</li>
+<li><p><b><a href="Params__Check.html">Params::Check</a></b> - A generic input parsing/checking mechanism.</p>
+
+</li>
+<li><p><b><a href="Parse__CPAN__Meta.html">Parse::CPAN::Meta</a></b> - Parse META.yml and META.json CPAN metadata files</p>
+
+</li>
+<li><p><b><a href="Perl__OSType.html">Perl::OSType</a></b> - Map Perl operating system names to generic types</p>
+
+</li>
+<li><p><b><a href="PerlIO.html">PerlIO</a></b> - On demand loader for PerlIO layers and root of PerlIO::* name space</p>
+
+</li>
+<li><p><b><a href="PerlIO__encoding.html">PerlIO::encoding</a></b> - Encoding layer</p>
+
+</li>
+<li><p><b><a href="PerlIO__mmap.html">PerlIO::mmap</a></b> - Memory mapped IO</p>
+
+</li>
+<li><p><b><a href="PerlIO__scalar.html">PerlIO::scalar</a></b> - In-memory IO, scalar IO</p>
+
+</li>
+<li><p><b><a href="PerlIO__via.html">PerlIO::via</a></b> - Helper class for PerlIO layers implemented in perl</p>
+
+</li>
+<li><p><b><a href="PerlIO__via__QuotedPrint.html">PerlIO::via::QuotedPrint</a></b> - PerlIO layer for quoted-printable strings</p>
+
+</li>
+<li><p><b><a href="Pod__Checker.html">Pod::Checker</a></b> - Check pod documents for syntax errors</p>
+
+</li>
+<li><p><b><a href="Pod__Escapes.html">Pod::Escapes</a></b> - For resolving Pod E&lt;...&gt; sequences</p>
+
+</li>
+<li><p><b><a href="Pod__Functions.html">Pod::Functions</a></b> - Group Perl&#39;s functions a la perlfunc.pod</p>
+
+</li>
+<li><p><b><a href="Pod__Html.html">Pod::Html</a></b> - Module to convert pod files to HTML</p>
+
+</li>
+<li><p><b><a href="Pod__Html__Util.html">Pod::Html::Util</a></b> - Helper functions for Pod-Html</p>
+
+</li>
+<li><p><b><a href="Pod__Man.html">Pod::Man</a></b> - Convert POD data to formatted *roff input</p>
+
+</li>
+<li><p><b><a href="Pod__ParseLink.html">Pod::ParseLink</a></b> - Parse an L&lt;&gt; formatting code in POD text</p>
+
+</li>
+<li><p><b><a href="Pod__Perldoc.html">Pod::Perldoc</a></b> - Look up Perl documentation in Pod format.</p>
+
+</li>
+<li><p><b><a href="Pod__Perldoc__BaseTo.html">Pod::Perldoc::BaseTo</a></b> - Base for Pod::Perldoc formatters</p>
+
+</li>
+<li><p><b><a href="Pod__Perldoc__GetOptsOO.html">Pod::Perldoc::GetOptsOO</a></b> - Customized option parser for Pod::Perldoc</p>
+
+</li>
+<li><p><b><a href="Pod__Perldoc__ToANSI.html">Pod::Perldoc::ToANSI</a></b> - Render Pod with ANSI color escapes</p>
+
+</li>
+<li><p><b><a href="Pod__Perldoc__ToChecker.html">Pod::Perldoc::ToChecker</a></b> - Let Perldoc check Pod for errors</p>
+
+</li>
+<li><p><b><a href="Pod__Perldoc__ToMan.html">Pod::Perldoc::ToMan</a></b> - Let Perldoc render Pod as man pages</p>
+
+</li>
+<li><p><b><a href="Pod__Perldoc__ToNroff.html">Pod::Perldoc::ToNroff</a></b> - Let Perldoc convert Pod to nroff</p>
+
+</li>
+<li><p><b><a href="Pod__Perldoc__ToPod.html">Pod::Perldoc::ToPod</a></b> - Let Perldoc render Pod as ... Pod!</p>
+
+</li>
+<li><p><b><a href="Pod__Perldoc__ToRtf.html">Pod::Perldoc::ToRtf</a></b> - Let Perldoc render Pod as RTF</p>
+
+</li>
+<li><p><b><a href="Pod__Perldoc__ToTerm.html">Pod::Perldoc::ToTerm</a></b> - Render Pod with terminal escapes</p>
+
+</li>
+<li><p><b><a href="Pod__Perldoc__ToText.html">Pod::Perldoc::ToText</a></b> - Let Perldoc render Pod as plaintext</p>
+
+</li>
+<li><p><b><a href="Pod__Perldoc__ToTk.html">Pod::Perldoc::ToTk</a></b> - Let Perldoc use Tk::Pod to render Pod</p>
+
+</li>
+<li><p><b><a href="Pod__Perldoc__ToXml.html">Pod::Perldoc::ToXml</a></b> - Let Perldoc render Pod as XML</p>
+
+</li>
+<li><p><b><a href="Pod__Simple.html">Pod::Simple</a></b> - Framework for parsing Pod</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__Checker.html">Pod::Simple::Checker</a></b> - Check the Pod syntax of a document</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__Debug.html">Pod::Simple::Debug</a></b> - Put Pod::Simple into trace/debug mode</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__DumpAsText.html">Pod::Simple::DumpAsText</a></b> - Dump Pod-parsing events as text</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__DumpAsXML.html">Pod::Simple::DumpAsXML</a></b> - Turn Pod into XML</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__HTML.html">Pod::Simple::HTML</a></b> - Convert Pod to HTML</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__HTMLBatch.html">Pod::Simple::HTMLBatch</a></b> - Convert several Pod files to several HTML files</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__JustPod.html">Pod::Simple::JustPod</a></b> - Just the Pod, the whole Pod, and nothing but the Pod</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__LinkSection.html">Pod::Simple::LinkSection</a></b> - Represent &quot;section&quot; attributes of L codes</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__Methody.html">Pod::Simple::Methody</a></b> - Turn Pod::Simple events into method calls</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__PullParser.html">Pod::Simple::PullParser</a></b> - A pull-parser interface to parsing Pod</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__PullParserEndToken.html">Pod::Simple::PullParserEndToken</a></b> - End-tokens from Pod::Simple::PullParser</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__PullParserStartToken.html">Pod::Simple::PullParserStartToken</a></b> - Start-tokens from Pod::Simple::PullParser</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__PullParserTextToken.html">Pod::Simple::PullParserTextToken</a></b> - Text-tokens from Pod::Simple::PullParser</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__PullParserToken.html">Pod::Simple::PullParserToken</a></b> - Tokens from Pod::Simple::PullParser</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__RTF.html">Pod::Simple::RTF</a></b> - Format Pod as RTF</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__Search.html">Pod::Simple::Search</a></b> - Find POD documents in directory trees</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__SimpleTree.html">Pod::Simple::SimpleTree</a></b> - Parse Pod into a simple parse tree</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__Subclassing.html">Pod::Simple::Subclassing</a></b> - Write a formatter as a Pod::Simple subclass</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__Text.html">Pod::Simple::Text</a></b> - Format Pod as plaintext</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__TextContent.html">Pod::Simple::TextContent</a></b> - Get the text content of Pod</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__XHTML.html">Pod::Simple::XHTML</a></b> - Format Pod as validating XHTML</p>
+
+</li>
+<li><p><b><a href="Pod__Simple__XMLOutStream.html">Pod::Simple::XMLOutStream</a></b> - Turn Pod into XML</p>
+
+</li>
+<li><p><b><a href="Pod__Text.html">Pod::Text</a></b> - Convert POD data to formatted text</p>
+
+</li>
+<li><p><b><a href="Pod__Text__Color.html">Pod::Text::Color</a></b> - Convert POD data to formatted color ASCII text</p>
+
+</li>
+<li><p><b><a href="Pod__Text__Overstrike.html">Pod::Text::Overstrike</a></b> - Convert POD data to formatted overstrike text</p>
+
+</li>
+<li><p><b><a href="Pod__Text__Termcap.html">Pod::Text::Termcap</a></b> - Convert POD data to ASCII text with format escapes</p>
+
+</li>
+<li><p><b><a href="Pod__Usage.html">Pod::Usage</a></b> - Extracts POD documentation and shows usage information</p>
+
+</li>
+<li><p><b><a href="SDBM_File.html">SDBM_File</a></b> - Tied access to sdbm files</p>
+
+</li>
+<li><p><b><a href="Safe.html">Safe</a></b> - Compile and execute code in restricted compartments</p>
+
+</li>
+<li><p><b><a href="Scalar__List__Utils.html">Scalar::List::Utils</a></b> - A distribution of general-utility subroutines</p>
+
+</li>
+<li><p><b><a href="Scalar__Util.html">Scalar::Util</a></b> - A selection of general-utility scalar subroutines</p>
+
+</li>
+<li><p><b><a href="Search__Dict.html">Search::Dict</a></b> - Look - search for key in dictionary file</p>
+
+</li>
+<li><p><b><a href="SelectSaver.html">SelectSaver</a></b> - Save and restore selected file handle</p>
+
+</li>
+<li><p><b><a href="SelfLoader.html">SelfLoader</a></b> - Load functions only on demand</p>
+
+</li>
+<li><p><b><a href="Storable.html">Storable</a></b> - Persistence for Perl data structures</p>
+
+</li>
+<li><p><b><a href="Sub__Util.html">Sub::Util</a></b> - A selection of utility subroutines for subs and CODE references</p>
+
+</li>
+<li><p><b><a href="Symbol.html">Symbol</a></b> - Manipulate Perl symbols and their names</p>
+
+</li>
+<li><p><b><a href="Sys__Hostname.html">Sys::Hostname</a></b> - Try every conceivable way to get hostname</p>
+
+</li>
+<li><p><b><a href="Sys__Syslog.html">Sys::Syslog</a></b> - Perl interface to the UNIX syslog(3) calls</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/Sys::Syslog::Win32">Sys::Syslog::Win32</a></b> - Win32 support for Sys::Syslog</p>
+
+</li>
+<li><p><b><a href="TAP__Base.html">TAP::Base</a></b> - Base class that provides common functionality to <a href="TAP__Parser.html">TAP::Parser</a></p>
+
+</li>
+<li><p><b><a href="TAP__Formatter__Base.html">TAP::Formatter::Base</a></b> - Base class for harness output delegates</p>
+
+</li>
+<li><p><b><a href="TAP__Formatter__Color.html">TAP::Formatter::Color</a></b> - Run Perl test scripts with color</p>
+
+</li>
+<li><p><b><a href="TAP__Formatter__Console.html">TAP::Formatter::Console</a></b> - Harness output delegate for default console output</p>
+
+</li>
+<li><p><b><a href="TAP__Formatter__Console__ParallelSession.html">TAP::Formatter::Console::ParallelSession</a></b> - Harness output delegate for parallel console output</p>
+
+</li>
+<li><p><b><a href="TAP__Formatter__Console__Session.html">TAP::Formatter::Console::Session</a></b> - Harness output delegate for default console output</p>
+
+</li>
+<li><p><b><a href="TAP__Formatter__File.html">TAP::Formatter::File</a></b> - Harness output delegate for file output</p>
+
+</li>
+<li><p><b><a href="TAP__Formatter__File__Session.html">TAP::Formatter::File::Session</a></b> - Harness output delegate for file output</p>
+
+</li>
+<li><p><b><a href="TAP__Formatter__Session.html">TAP::Formatter::Session</a></b> - Abstract base class for harness output delegate</p>
+
+</li>
+<li><p><b><a href="TAP__Harness.html">TAP::Harness</a></b> - Run test scripts with statistics</p>
+
+</li>
+<li><p><b><a href="TAP__Harness__Env.html">TAP::Harness::Env</a></b> - Parsing harness related environmental variables where appropriate</p>
+
+</li>
+<li><p><b><a href="TAP__Object.html">TAP::Object</a></b> - Base class that provides common functionality to all <code>TAP::*</code> modules</p>
+
+</li>
+<li><p><b><a href="TAP__Parser.html">TAP::Parser</a></b> - Parse <a href="https://metacpan.org/pod/Test::Harness::TAP">TAP</a> output</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Aggregator.html">TAP::Parser::Aggregator</a></b> - Aggregate TAP::Parser results</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Grammar.html">TAP::Parser::Grammar</a></b> - A grammar for the Test Anything Protocol.</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Iterator.html">TAP::Parser::Iterator</a></b> - Base class for TAP source iterators</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Iterator__Array.html">TAP::Parser::Iterator::Array</a></b> - Iterator for array-based TAP sources</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Iterator__Process.html">TAP::Parser::Iterator::Process</a></b> - Iterator for process-based TAP sources</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Iterator__Stream.html">TAP::Parser::Iterator::Stream</a></b> - Iterator for filehandle-based TAP sources</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__IteratorFactory.html">TAP::Parser::IteratorFactory</a></b> - Figures out which SourceHandler objects to use for a given Source</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Multiplexer.html">TAP::Parser::Multiplexer</a></b> - Multiplex multiple TAP::Parsers</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Result.html">TAP::Parser::Result</a></b> - Base class for TAP::Parser output objects</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Result__Bailout.html">TAP::Parser::Result::Bailout</a></b> - Bailout result token.</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Result__Comment.html">TAP::Parser::Result::Comment</a></b> - Comment result token.</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Result__Plan.html">TAP::Parser::Result::Plan</a></b> - Plan result token.</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Result__Pragma.html">TAP::Parser::Result::Pragma</a></b> - TAP pragma token.</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Result__Test.html">TAP::Parser::Result::Test</a></b> - Test result token.</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Result__Unknown.html">TAP::Parser::Result::Unknown</a></b> - Unknown result token.</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Result__Version.html">TAP::Parser::Result::Version</a></b> - TAP syntax version token.</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Result__YAML.html">TAP::Parser::Result::YAML</a></b> - YAML result token.</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__ResultFactory.html">TAP::Parser::ResultFactory</a></b> - Factory for creating TAP::Parser output objects</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Scheduler.html">TAP::Parser::Scheduler</a></b> - Schedule tests during parallel testing</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Scheduler__Job.html">TAP::Parser::Scheduler::Job</a></b> - A single testing job.</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Scheduler__Spinner.html">TAP::Parser::Scheduler::Spinner</a></b> - A no-op job.</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__Source.html">TAP::Parser::Source</a></b> - A TAP source &amp; meta data about it</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__SourceHandler.html">TAP::Parser::SourceHandler</a></b> - Base class for different TAP source handlers</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__SourceHandler__Executable.html">TAP::Parser::SourceHandler::Executable</a></b> - Stream output from an executable TAP source</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__SourceHandler__File.html">TAP::Parser::SourceHandler::File</a></b> - Stream TAP from a text file.</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__SourceHandler__Handle.html">TAP::Parser::SourceHandler::Handle</a></b> - Stream TAP from an IO::Handle or a GLOB.</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__SourceHandler__Perl.html">TAP::Parser::SourceHandler::Perl</a></b> - Stream TAP from a Perl executable</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__SourceHandler__RawTAP.html">TAP::Parser::SourceHandler::RawTAP</a></b> - Stream output from raw TAP in a scalar/array ref.</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__YAMLish__Reader.html">TAP::Parser::YAMLish::Reader</a></b> - Read YAMLish data from iterator</p>
+
+</li>
+<li><p><b><a href="TAP__Parser__YAMLish__Writer.html">TAP::Parser::YAMLish::Writer</a></b> - Write YAMLish data</p>
+
+</li>
+<li><p><b><a href="Term__ANSIColor.html">Term::ANSIColor</a></b> - Color screen output using ANSI escape sequences</p>
+
+</li>
+<li><p><b><a href="Term__Cap.html">Term::Cap</a></b> - Perl termcap interface</p>
+
+</li>
+<li><p><b><a href="Term__Complete.html">Term::Complete</a></b> - Perl word completion module</p>
+
+</li>
+<li><p><b><a href="Term__ReadLine.html">Term::ReadLine</a></b> - Perl interface to various <code>readline</code> packages.</p>
+
+</li>
+<li><p><b><a href="Term__Table.html">Term::Table</a></b> - Format a header and rows into a table</p>
+
+</li>
+<li><p><b><a href="Term__Table__Cell.html">Term::Table::Cell</a></b> - Representation of a cell in a table.</p>
+
+</li>
+<li><p><b><a href="Term__Table__CellStack.html">Term::Table::CellStack</a></b> - Combine several cells into one (vertical)</p>
+
+</li>
+<li><p><b><a href="Term__Table__HashBase.html">Term::Table::HashBase</a></b> - Build hash based classes.</p>
+
+</li>
+<li><p><b><a href="Term__Table__LineBreak.html">Term::Table::LineBreak</a></b> - Break up lines for use in tables.</p>
+
+</li>
+<li><p><b><a href="Term__Table__Util.html">Term::Table::Util</a></b> - Utilities for Term::Table.</p>
+
+</li>
+<li><p><b><a href="Test.html">Test</a></b> - Provides a simple framework for writing test scripts</p>
+
+</li>
+<li><p><b><a href="Test2.html">Test2</a></b> - Framework for writing test tools that all work together.</p>
+
+</li>
+<li><p><b><a href="Test2__API.html">Test2::API</a></b> - Primary interface for writing Test2 based testing tools.</p>
+
+</li>
+<li><p><b><a href="Test2__API__Breakage.html">Test2::API::Breakage</a></b> - What breaks at what version</p>
+
+</li>
+<li><p><b><a href="Test2__API__Context.html">Test2::API::Context</a></b> - Object to represent a testing context.</p>
+
+</li>
+<li><p><b><a href="Test2__API__Instance.html">Test2::API::Instance</a></b> - Object used by Test2::API under the hood</p>
+
+</li>
+<li><p><b><a href="Test2__API__InterceptResult.html">Test2::API::InterceptResult</a></b> - Representation of a list of events.</p>
+
+</li>
+<li><p><b><a href="Test2__API__InterceptResult__Event.html">Test2::API::InterceptResult::Event</a></b> - Representation of an event for use in</p>
+
+</li>
+<li><p><b><a href="Test2__API__InterceptResult__Hub.html">Test2::API::InterceptResult::Hub</a></b> - Hub used by InterceptResult.</p>
+
+</li>
+<li><p><b><a href="Test2__API__InterceptResult__Squasher.html">Test2::API::InterceptResult::Squasher</a></b> - Encapsulation of the algorithm that</p>
+
+</li>
+<li><p><b><a href="Test2__API__Stack.html">Test2::API::Stack</a></b> - Object to manage a stack of <a href="Test2__Hub.html">Test2::Hub</a></p>
+
+</li>
+<li><p><b><a href="Test2__AsyncSubtest.html">Test2::AsyncSubtest</a></b> - Object representing an async subtest.</p>
+
+</li>
+<li><p><b><a href="Test2__AsyncSubtest__Event__Attach.html">Test2::AsyncSubtest::Event::Attach</a></b> - Event to attach a subtest to the parent.</p>
+
+</li>
+<li><p><b><a href="Test2__AsyncSubtest__Event__Detach.html">Test2::AsyncSubtest::Event::Detach</a></b> - Event to detach a subtest from the parent.</p>
+
+</li>
+<li><p><b><a href="Test2__AsyncSubtest__Hub.html">Test2::AsyncSubtest::Hub</a></b> - Hub used by async subtests.</p>
+
+</li>
+<li><p><b><a href="Test2__Bundle.html">Test2::Bundle</a></b> - Documentation for bundles.</p>
+
+</li>
+<li><p><b><a href="Test2__Bundle__Extended.html">Test2::Bundle::Extended</a></b> - Old name for Test2::V0</p>
+
+</li>
+<li><p><b><a href="Test2__Bundle__More.html">Test2::Bundle::More</a></b> - ALMOST a drop-in replacement for Test::More.</p>
+
+</li>
+<li><p><b><a href="Test2__Bundle__Simple.html">Test2::Bundle::Simple</a></b> - ALMOST a drop-in replacement for Test::Simple.</p>
+
+</li>
+<li><p><b><a href="Test2__Compare.html">Test2::Compare</a></b> - Test2 extension for writing deep comparison tools.</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Array.html">Test2::Compare::Array</a></b> - Internal representation of an array comparison.</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Bag.html">Test2::Compare::Bag</a></b> - Internal representation of a bag comparison.</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Base.html">Test2::Compare::Base</a></b> - Base class for comparison classes.</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Bool.html">Test2::Compare::Bool</a></b> - Compare two values as booleans</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Custom.html">Test2::Compare::Custom</a></b> - Custom field check for comparisons.</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__DeepRef.html">Test2::Compare::DeepRef</a></b> - Ref comparison</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Delta.html">Test2::Compare::Delta</a></b> - Representation of differences between nested data</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Event.html">Test2::Compare::Event</a></b> - Event specific Object subclass.</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__EventMeta.html">Test2::Compare::EventMeta</a></b> - Meta class for events in deep comparisons</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Float.html">Test2::Compare::Float</a></b> - Compare two values as numbers with tolerance.</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Hash.html">Test2::Compare::Hash</a></b> - Representation of a hash in a deep comparison.</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Isa.html">Test2::Compare::Isa</a></b> - Check if the value is an instance of the class.</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Meta.html">Test2::Compare::Meta</a></b> - Check library for meta-checks</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Negatable.html">Test2::Compare::Negatable</a></b> - Poor mans &#39;role&#39; for compare objects that can be negated.</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Number.html">Test2::Compare::Number</a></b> - Compare two values as numbers</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Object.html">Test2::Compare::Object</a></b> - Representation of an object during deep</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__OrderedSubset.html">Test2::Compare::OrderedSubset</a></b> - Internal representation of an ordered subset.</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Pattern.html">Test2::Compare::Pattern</a></b> - Use a pattern to validate values in a deep</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Ref.html">Test2::Compare::Ref</a></b> - Ref comparison</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Regex.html">Test2::Compare::Regex</a></b> - Regex direct comparison</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Scalar.html">Test2::Compare::Scalar</a></b> - Representation of a Scalar Ref in deep</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Set.html">Test2::Compare::Set</a></b> - Allows a field to be matched against a set of</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__String.html">Test2::Compare::String</a></b> - Compare two values as strings</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Undef.html">Test2::Compare::Undef</a></b> - Check that something is undefined</p>
+
+</li>
+<li><p><b><a href="Test2__Compare__Wildcard.html">Test2::Compare::Wildcard</a></b> - Placeholder check.</p>
+
+</li>
+<li><p><b><a href="Test2__Env.html">Test2::Env</a></b> - Documentation for environment variables used or set by Test2.</p>
+
+</li>
+<li><p><b><a href="Test2__Event.html">Test2::Event</a></b> - Base class for events</p>
+
+</li>
+<li><p><b><a href="Test2__Event__Bail.html">Test2::Event::Bail</a></b> - Bailout!</p>
+
+</li>
+<li><p><b><a href="Test2__Event__Diag.html">Test2::Event::Diag</a></b> - Diag event type</p>
+
+</li>
+<li><p><b><a href="Test2__Event__Encoding.html">Test2::Event::Encoding</a></b> - Set the encoding for the output stream</p>
+
+</li>
+<li><p><b><a href="Test2__Event__Exception.html">Test2::Event::Exception</a></b> - Exception event</p>
+
+</li>
+<li><p><b><a href="Test2__Event__Fail.html">Test2::Event::Fail</a></b> - Event for a simple failed assertion</p>
+
+</li>
+<li><p><b><a href="Test2__Event__Generic.html">Test2::Event::Generic</a></b> - Generic event type.</p>
+
+</li>
+<li><p><b><a href="Test2__Event__Note.html">Test2::Event::Note</a></b> - Note event type</p>
+
+</li>
+<li><p><b><a href="Test2__Event__Ok.html">Test2::Event::Ok</a></b> - Ok event type</p>
+
+</li>
+<li><p><b><a href="Test2__Event__Pass.html">Test2::Event::Pass</a></b> - Event for a simple passing assertion</p>
+
+</li>
+<li><p><b><a href="Test2__Event__Plan.html">Test2::Event::Plan</a></b> - The event of a plan</p>
+
+</li>
+<li><p><b><a href="Test2__Event__Skip.html">Test2::Event::Skip</a></b> - Skip event type</p>
+
+</li>
+<li><p><b><a href="Test2__Event__Subtest.html">Test2::Event::Subtest</a></b> - Event for subtest types</p>
+
+</li>
+<li><p><b><a href="Test2__Event__TAP__Version.html">Test2::Event::TAP::Version</a></b> - Event for TAP version.</p>
+
+</li>
+<li><p><b><a href="Test2__Event__V2.html">Test2::Event::V2</a></b> - Second generation event.</p>
+
+</li>
+<li><p><b><a href="Test2__Event__Waiting.html">Test2::Event::Waiting</a></b> - Tell all procs/threads it is time to be done</p>
+
+</li>
+<li><p><b><a href="Test2__EventFacet.html">Test2::EventFacet</a></b> - Base class for all event facets.</p>
+
+</li>
+<li><p><b><a href="Test2__EventFacet__About.html">Test2::EventFacet::About</a></b> - Facet with event details.</p>
+
+</li>
+<li><p><b><a href="Test2__EventFacet__Amnesty.html">Test2::EventFacet::Amnesty</a></b> - Facet for assertion amnesty.</p>
+
+</li>
+<li><p><b><a href="Test2__EventFacet__Assert.html">Test2::EventFacet::Assert</a></b> - Facet representing an assertion.</p>
+
+</li>
+<li><p><b><a href="Test2__EventFacet__Control.html">Test2::EventFacet::Control</a></b> - Facet for hub actions and behaviors.</p>
+
+</li>
+<li><p><b><a href="Test2__EventFacet__Error.html">Test2::EventFacet::Error</a></b> - Facet for errors that need to be shown.</p>
+
+</li>
+<li><p><b><a href="Test2__EventFacet__Hub.html">Test2::EventFacet::Hub</a></b> - Facet for the hubs an event passes through.</p>
+
+</li>
+<li><p><b><a href="Test2__EventFacet__Info.html">Test2::EventFacet::Info</a></b> - Facet for information a developer might care about.</p>
+
+</li>
+<li><p><b><a href="Test2__EventFacet__Info__Table.html">Test2::EventFacet::Info::Table</a></b> - Intermediary representation of a table.</p>
+
+</li>
+<li><p><b><a href="Test2__EventFacet__Meta.html">Test2::EventFacet::Meta</a></b> - Facet for meta-data</p>
+
+</li>
+<li><p><b><a href="Test2__EventFacet__Parent.html">Test2::EventFacet::Parent</a></b> - Facet for events contains other events</p>
+
+</li>
+<li><p><b><a href="Test2__EventFacet__Plan.html">Test2::EventFacet::Plan</a></b> - Facet for setting the plan</p>
+
+</li>
+<li><p><b><a href="Test2__EventFacet__Render.html">Test2::EventFacet::Render</a></b> - Facet that dictates how to render an event.</p>
+
+</li>
+<li><p><b><a href="Test2__EventFacet__Trace.html">Test2::EventFacet::Trace</a></b> - Debug information for events</p>
+
+</li>
+<li><p><b><a href="Test2__Formatter.html">Test2::Formatter</a></b> - Namespace for formatters.</p>
+
+</li>
+<li><p><b><a href="Test2__Formatter__TAP.html">Test2::Formatter::TAP</a></b> - Standard TAP formatter</p>
+
+</li>
+<li><p><b><a href="Test2__Hub.html">Test2::Hub</a></b> - The conduit through which all events flow.</p>
+
+</li>
+<li><p><b><a href="Test2__Hub__Interceptor.html">Test2::Hub::Interceptor</a></b> - Hub used by interceptor to grab results.</p>
+
+</li>
+<li><p><b><a href="Test2__Hub__Interceptor__Terminator.html">Test2::Hub::Interceptor::Terminator</a></b> - Exception class used by</p>
+
+</li>
+<li><p><b><a href="Test2__Hub__Subtest.html">Test2::Hub::Subtest</a></b> - Hub used by subtests</p>
+
+</li>
+<li><p><b><a href="Test2__IPC.html">Test2::IPC</a></b> - Turn on IPC for threading or forking support.</p>
+
+</li>
+<li><p><b><a href="Test2__IPC__Driver.html">Test2::IPC::Driver</a></b> - Base class for Test2 IPC drivers.</p>
+
+</li>
+<li><p><b><a href="Test2__IPC__Driver__Files.html">Test2::IPC::Driver::Files</a></b> - Temp dir + Files concurrency model.</p>
+
+</li>
+<li><p><b><a href="Test2__Manual.html">Test2::Manual</a></b> - Documentation hub for Test2 and Test2-Suite.</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Anatomy.html">Test2::Manual::Anatomy</a></b> - The hub for documentation of the inner workings of</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Anatomy__API.html">Test2::Manual::Anatomy::API</a></b> - Internals documentation for the API.</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Anatomy__Context.html">Test2::Manual::Anatomy::Context</a></b> - Internals documentation for the Context</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Anatomy__EndToEnd.html">Test2::Manual::Anatomy::EndToEnd</a></b> - Overview of Test2 from load to finish.</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Anatomy__Event.html">Test2::Manual::Anatomy::Event</a></b> - The internals of events</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Anatomy__Hubs.html">Test2::Manual::Anatomy::Hubs</a></b> - Internals documentation for the hub stack, and</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Anatomy__IPC.html">Test2::Manual::Anatomy::IPC</a></b> - Manual for the IPC system.</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Anatomy__Utilities.html">Test2::Manual::Anatomy::Utilities</a></b> - Overview of utilities for Test2.</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Concurrency.html">Test2::Manual::Concurrency</a></b> - Documentation for Concurrency support.</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Contributing.html">Test2::Manual::Contributing</a></b> - How to contribute to the Test2 project.</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Testing.html">Test2::Manual::Testing</a></b> - Hub for documentation about writing tests with Test2.</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Testing__Introduction.html">Test2::Manual::Testing::Introduction</a></b> - Introduction to testing with Test2.</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Testing__Migrating.html">Test2::Manual::Testing::Migrating</a></b> - How to migrate existing tests from</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Testing__Planning.html">Test2::Manual::Testing::Planning</a></b> - The many ways to set a plan.</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Testing__Todo.html">Test2::Manual::Testing::Todo</a></b> - Tutorial for marking tests as TODO.</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Tooling.html">Test2::Manual::Tooling</a></b> - Manual page for tool authors.</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Tooling__FirstTool.html">Test2::Manual::Tooling::FirstTool</a></b> - Write your first tool with Test2.</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Tooling__Formatter.html">Test2::Manual::Tooling::Formatter</a></b> - How to write a custom formatter, in our</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Tooling__Nesting.html">Test2::Manual::Tooling::Nesting</a></b> - Tutorial for using other tools within your</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Tooling__Plugin__TestExit.html">Test2::Manual::Tooling::Plugin::TestExit</a></b> - How to safely add pre-exit</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Tooling__Plugin__TestingDone.html">Test2::Manual::Tooling::Plugin::TestingDone</a></b> - Run code when the test file is</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Tooling__Plugin__ToolCompletes.html">Test2::Manual::Tooling::Plugin::ToolCompletes</a></b> - How to add behaviors that occur</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Tooling__Plugin__ToolStarts.html">Test2::Manual::Tooling::Plugin::ToolStarts</a></b> - How to add behaviors that occur</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Tooling__Subtest.html">Test2::Manual::Tooling::Subtest</a></b> - How to implement a tool that makes use of</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Tooling__TestBuilder.html">Test2::Manual::Tooling::TestBuilder</a></b> - This section maps Test::Builder methods</p>
+
+</li>
+<li><p><b><a href="Test2__Manual__Tooling__Testing.html">Test2::Manual::Tooling::Testing</a></b> - Tutorial on how to test your testing tools.</p>
+
+</li>
+<li><p><b><a href="Test2__Mock.html">Test2::Mock</a></b> - Module for managing mocked classes and instances.</p>
+
+</li>
+<li><p><b><a href="Test2__Plugin.html">Test2::Plugin</a></b> - Documentation for plugins</p>
+
+</li>
+<li><p><b><a href="Test2__Plugin__BailOnFail.html">Test2::Plugin::BailOnFail</a></b> - Automatically bail out of testing on the first test</p>
+
+</li>
+<li><p><b><a href="Test2__Plugin__DieOnFail.html">Test2::Plugin::DieOnFail</a></b> - Automatically die on the first test failure.</p>
+
+</li>
+<li><p><b><a href="Test2__Plugin__ExitSummary.html">Test2::Plugin::ExitSummary</a></b> - Add extra diagnostics on failure at the end of the</p>
+
+</li>
+<li><p><b><a href="Test2__Plugin__SRand.html">Test2::Plugin::SRand</a></b> - Control the random seed for more controlled test</p>
+
+</li>
+<li><p><b><a href="Test2__Plugin__Times.html">Test2::Plugin::Times</a></b> - Output timing data at the end of the test.</p>
+
+</li>
+<li><p><b><a href="Test2__Plugin__UTF8.html">Test2::Plugin::UTF8</a></b> - Test2 plugin to test with utf8.</p>
+
+</li>
+<li><p><b><a href="Test2__Require.html">Test2::Require</a></b> - Base class and documentation for skip-unless type test</p>
+
+</li>
+<li><p><b><a href="Test2__Require__AuthorTesting.html">Test2::Require::AuthorTesting</a></b> - Only run a test when the AUTHOR_TESTING</p>
+
+</li>
+<li><p><b><a href="Test2__Require__AutomatedTesting.html">Test2::Require::AutomatedTesting</a></b> - Only run a test when the AUTOMATED_TESTING</p>
+
+</li>
+<li><p><b><a href="Test2__Require__EnvVar.html">Test2::Require::EnvVar</a></b> - Only run a test when a specific environment variable</p>
+
+</li>
+<li><p><b><a href="Test2__Require__ExtendedTesting.html">Test2::Require::ExtendedTesting</a></b> - Only run a test when the EXTENDED_TESTING</p>
+
+</li>
+<li><p><b><a href="Test2__Require__Fork.html">Test2::Require::Fork</a></b> - Skip a test file unless the system supports forking</p>
+
+</li>
+<li><p><b><a href="Test2__Require__Module.html">Test2::Require::Module</a></b> - Skip tests if certain packages are not installed, or</p>
+
+</li>
+<li><p><b><a href="Test2__Require__NonInteractiveTesting.html">Test2::Require::NonInteractiveTesting</a></b> - Only run a test when the NONINTERACTIVE_TESTING</p>
+
+</li>
+<li><p><b><a href="Test2__Require__Perl.html">Test2::Require::Perl</a></b> - Skip the test unless the necessary version of Perl is</p>
+
+</li>
+<li><p><b><a href="Test2__Require__RealFork.html">Test2::Require::RealFork</a></b> - Skip a test file unless the system supports true</p>
+
+</li>
+<li><p><b><a href="Test2__Require__ReleaseTesting.html">Test2::Require::ReleaseTesting</a></b> - Only run a test when the RELEASE_TESTING</p>
+
+</li>
+<li><p><b><a href="Test2__Require__Threads.html">Test2::Require::Threads</a></b> - Skip a test file unless the system supports threading</p>
+
+</li>
+<li><p><b><a href="Test2__Suite.html">Test2::Suite</a></b> - Distribution with a rich set of tools built upon the Test2</p>
+
+</li>
+<li><p><b><a href="Test2__Todo.html">Test2::Todo</a></b> - TODO extension for Test2.</p>
+
+</li>
+<li><p><b><a href="Test2__Tools.html">Test2::Tools</a></b> - Documentation for Tools.</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__AsyncSubtest.html">Test2::Tools::AsyncSubtest</a></b> - Tools for writing async subtests.</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Basic.html">Test2::Tools::Basic</a></b> - Test2 implementation of the basic testing tools.</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Class.html">Test2::Tools::Class</a></b> - Test2 implementation of the tools for testing classes.</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__ClassicCompare.html">Test2::Tools::ClassicCompare</a></b> - Classic (Test::More style) comparison tools.</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Compare.html">Test2::Tools::Compare</a></b> - Tools for comparing deep data structures.</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Defer.html">Test2::Tools::Defer</a></b> - Write tests that get executed at a later time</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Encoding.html">Test2::Tools::Encoding</a></b> - Tools for managing the encoding of <a href="Test2.html">Test2</a> based</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Event.html">Test2::Tools::Event</a></b> - Tools for generating test events.</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Exception.html">Test2::Tools::Exception</a></b> - Test2 based tools for checking exceptions</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Exports.html">Test2::Tools::Exports</a></b> - Tools for validating exporters.</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__GenTemp.html">Test2::Tools::GenTemp</a></b> - Tool for generating a populated temp directory.</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Grab.html">Test2::Tools::Grab</a></b> - Temporarily intercept all events without adding a scope</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Mock.html">Test2::Tools::Mock</a></b> - Class/Instance mocking for Test2.</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Ref.html">Test2::Tools::Ref</a></b> - Tools for validating references.</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Spec.html">Test2::Tools::Spec</a></b> - RSPEC implementation on top of Test2::Workflow</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Subtest.html">Test2::Tools::Subtest</a></b> - Tools for writing subtests</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Target.html">Test2::Tools::Target</a></b> - Alias the testing target package.</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Tester.html">Test2::Tools::Tester</a></b> - Tools to help you test other testing tools.</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Tiny.html">Test2::Tools::Tiny</a></b> - Tiny set of tools for unfortunate souls who cannot use</p>
+
+</li>
+<li><p><b><a href="Test2__Tools__Warnings.html">Test2::Tools::Warnings</a></b> - Tools to verify warnings.</p>
+
+</li>
+<li><p><b><a href="Test2__Transition.html">Test2::Transition</a></b> - Transition notes when upgrading to Test2</p>
+
+</li>
+<li><p><b><a href="Test2__Util.html">Test2::Util</a></b> - Tools used by Test2 and friends.</p>
+
+</li>
+<li><p><b><a href="Test2__Util__ExternalMeta.html">Test2::Util::ExternalMeta</a></b> - Allow third party tools to safely attach meta-data</p>
+
+</li>
+<li><p><b><a href="Test2__Util__Facets2Legacy.html">Test2::Util::Facets2Legacy</a></b> - Convert facet data to the legacy event API.</p>
+
+</li>
+<li><p><b><a href="Test2__Util__Grabber.html">Test2::Util::Grabber</a></b> - Object used to temporarily intercept all events.</p>
+
+</li>
+<li><p><b><a href="Test2__Util__Guard.html">Test2::Util::Guard</a></b> - Inline copy of <a href="https://metacpan.org/pod/Scope::Guard">Scope::Guard</a></p>
+
+</li>
+<li><p><b><a href="Test2__Util__HashBase.html">Test2::Util::HashBase</a></b> - Build hash based classes.</p>
+
+</li>
+<li><p><b><a href="Test2__Util__Importer.html">Test2::Util::Importer</a></b> - Inline copy of <a href="https://metacpan.org/pod/Importer">Importer</a>.</p>
+
+</li>
+<li><p><b><a href="Test2__Util__Ref.html">Test2::Util::Ref</a></b> - Tools for inspecting or manipulating references.</p>
+
+</li>
+<li><p><b><a href="Test2__Util__Sig.html">Test2::Util::Sig</a></b> - Signal tools used by Test2 and friends.</p>
+
+</li>
+<li><p><b><a href="Test2__Util__Stash.html">Test2::Util::Stash</a></b> - Utilities for manipulating stashes and globs.</p>
+
+</li>
+<li><p><b><a href="Test2__Util__Sub.html">Test2::Util::Sub</a></b> - Tools for inspecting and manipulating subs.</p>
+
+</li>
+<li><p><b><a href="Test2__Util__Table.html">Test2::Util::Table</a></b> - Format a header and rows into a table</p>
+
+</li>
+<li><p><b><a href="Test2__Util__Table__LineBreak.html">Test2::Util::Table::LineBreak</a></b> - Break up lines for use in tables.</p>
+
+</li>
+<li><p><b><a href="Test2__Util__Times.html">Test2::Util::Times</a></b> - Format timing/benchmark information.</p>
+
+</li>
+<li><p><b><a href="Test2__Util__Trace.html">Test2::Util::Trace</a></b> - Legacy wrapper for <a href="Test2__EventFacet__Trace.html">Test2::EventFacet::Trace</a>.</p>
+
+</li>
+<li><p><b><a href="Test2__V0.html">Test2::V0</a></b> - 0Th edition of the Test2 recommended bundle.</p>
+
+</li>
+<li><p><b><a href="Test2__Workflow.html">Test2::Workflow</a></b> - A test workflow is a way of structuring tests using</p>
+
+</li>
+<li><p><b><a href="Test2__Workflow__BlockBase.html">Test2::Workflow::BlockBase</a></b> - Base class for all workflow blocks.</p>
+
+</li>
+<li><p><b><a href="Test2__Workflow__Build.html">Test2::Workflow::Build</a></b> - Represents a build in progress.</p>
+
+</li>
+<li><p><b><a href="Test2__Workflow__Runner.html">Test2::Workflow::Runner</a></b> - Runs the workflows.</p>
+
+</li>
+<li><p><b><a href="Test2__Workflow__Task.html">Test2::Workflow::Task</a></b> - Encapsulation of a Task</p>
+
+</li>
+<li><p><b><a href="Test2__Workflow__Task__Action.html">Test2::Workflow::Task::Action</a></b> - Encapsulation of an action.</p>
+
+</li>
+<li><p><b><a href="Test2__Workflow__Task__Group.html">Test2::Workflow::Task::Group</a></b> - Encapsulation of a group (describe).</p>
+
+</li>
+<li><p><b><a href="Test__Builder.html">Test::Builder</a></b> - Backend for building test libraries</p>
+
+</li>
+<li><p><b><a href="Test__Builder__Formatter.html">Test::Builder::Formatter</a></b> - Test::Builder subclass of Test2::Formatter::TAP</p>
+
+</li>
+<li><p><b><a href="Test__Builder__Module.html">Test::Builder::Module</a></b> - Base class for test modules</p>
+
+</li>
+<li><p><b><a href="Test__Builder__Tester.html">Test::Builder::Tester</a></b> - Test testsuites that have been built with</p>
+
+</li>
+<li><p><b><a href="Test__Builder__Tester__Color.html">Test::Builder::Tester::Color</a></b> - Turn on colour in Test::Builder::Tester</p>
+
+</li>
+<li><p><b><a href="Test__Builder__TodoDiag.html">Test::Builder::TodoDiag</a></b> - Test::Builder subclass of Test2::Event::Diag</p>
+
+</li>
+<li><p><b><a href="Test__Harness.html">Test::Harness</a></b> - Run Perl standard test scripts with statistics</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/Test::Harness::Beyond">Test::Harness::Beyond</a></b> - Beyond make test</p>
+
+</li>
+<li><p><b><a href="Test__More.html">Test::More</a></b> - Yet another framework for writing test scripts</p>
+
+</li>
+<li><p><b><a href="Test__Simple.html">Test::Simple</a></b> - Basic utilities for writing tests.</p>
+
+</li>
+<li><p><b><a href="Test__Tester.html">Test::Tester</a></b> - Ease testing test modules built with Test::Builder</p>
+
+</li>
+<li><p><b><a href="Test__Tester__Capture.html">Test::Tester::Capture</a></b> - Help testing test modules built with Test::Builder</p>
+
+</li>
+<li><p><b><a href="Test__Tester__CaptureRunner.html">Test::Tester::CaptureRunner</a></b> - Help testing test modules built with Test::Builder</p>
+
+</li>
+<li><p><b><a href="Test__Tutorial.html">Test::Tutorial</a></b> - A tutorial about writing really basic tests</p>
+
+</li>
+<li><p><b><a href="Test__use__ok.html">Test::use::ok</a></b> - Alternative to Test::More::use_ok</p>
+
+</li>
+<li><p><b><a href="Text__Abbrev.html">Text::Abbrev</a></b> - Abbrev - create an abbreviation table from a list</p>
+
+</li>
+<li><p><b><a href="Text__Balanced.html">Text::Balanced</a></b> - Extract delimited text sequences from strings.</p>
+
+</li>
+<li><p><b><a href="Text__ParseWords.html">Text::ParseWords</a></b> - Parse text into an array of tokens or array of arrays</p>
+
+</li>
+<li><p><b><a href="Text__Tabs.html">Text::Tabs</a></b> - Expand and unexpand tabs like unix expand(1) and unexpand(1)</p>
+
+</li>
+<li><p><b><a href="Text__Wrap.html">Text::Wrap</a></b> - Line wrapping to form simple paragraphs</p>
+
+</li>
+<li><p><b><a href="Thread.html">Thread</a></b> - Manipulate threads in Perl (for old code only)</p>
+
+</li>
+<li><p><b><a href="Thread__Queue.html">Thread::Queue</a></b> - Thread-safe queues</p>
+
+</li>
+<li><p><b><a href="Thread__Semaphore.html">Thread::Semaphore</a></b> - Thread-safe semaphores</p>
+
+</li>
+<li><p><b><a href="Tie__Array.html">Tie::Array</a></b> - Base class for tied arrays</p>
+
+</li>
+<li><p><b><a href="Tie__File.html">Tie::File</a></b> - Access the lines of a disk file via a Perl array</p>
+
+</li>
+<li><p><b><a href="Tie__Handle.html">Tie::Handle</a></b> - Base class definitions for tied handles</p>
+
+</li>
+<li><p><b><a href="Tie__Hash.html">Tie::Hash</a></b> - Base class definitions for tied hashes</p>
+
+</li>
+<li><p><b><a href="Tie__Hash__NamedCapture.html">Tie::Hash::NamedCapture</a></b> - Named regexp capture buffers</p>
+
+</li>
+<li><p><b><a href="Tie__Memoize.html">Tie::Memoize</a></b> - Add data to hash when needed</p>
+
+</li>
+<li><p><b><a href="Tie__RefHash.html">Tie::RefHash</a></b> - Use references as hash keys</p>
+
+</li>
+<li><p><b><a href="Tie__Scalar.html">Tie::Scalar</a></b> - Base class definitions for tied scalars</p>
+
+</li>
+<li><p><b><a href="Tie__StdHandle.html">Tie::StdHandle</a></b> - Base class definitions for tied handles</p>
+
+</li>
+<li><p><b><a href="Tie__SubstrHash.html">Tie::SubstrHash</a></b> - Fixed-table-size, fixed-key-length hashing</p>
+
+</li>
+<li><p><b><a href="Time__HiRes.html">Time::HiRes</a></b> - High resolution alarm, sleep, gettimeofday, interval timers</p>
+
+</li>
+<li><p><b><a href="Time__Local.html">Time::Local</a></b> - Efficiently compute time from local and GMT time</p>
+
+</li>
+<li><p><b><a href="Time__Piece.html">Time::Piece</a></b> - Object Oriented time objects</p>
+
+</li>
+<li><p><b><a href="Time__Seconds.html">Time::Seconds</a></b> - A simple API to convert seconds to other date values</p>
+
+</li>
+<li><p><b><a href="Time__gmtime.html">Time::gmtime</a></b> - By-name interface to Perl&#39;s built-in gmtime() function</p>
+
+</li>
+<li><p><b><a href="Time__localtime.html">Time::localtime</a></b> - By-name interface to Perl&#39;s built-in localtime() function</p>
+
+</li>
+<li><p><b><a href="Time__tm.html">Time::tm</a></b> - Internal object used by Time::gmtime and Time::localtime</p>
+
+</li>
+<li><p><b><a href="UNIVERSAL.html">UNIVERSAL</a></b> - Base class for ALL classes (blessed references)</p>
+
+</li>
+<li><p><b><a href="Unicode__Collate.html">Unicode::Collate</a></b> - Unicode Collation Algorithm</p>
+
+</li>
+<li><p><b><a href="Unicode__Collate__CJK__Big5.html">Unicode::Collate::CJK::Big5</a></b> - Weighting CJK Unified Ideographs</p>
+
+</li>
+<li><p><b><a href="Unicode__Collate__CJK__GB2312.html">Unicode::Collate::CJK::GB2312</a></b> - Weighting CJK Unified Ideographs</p>
+
+</li>
+<li><p><b><a href="Unicode__Collate__CJK__JISX0208.html">Unicode::Collate::CJK::JISX0208</a></b> - Weighting JIS KANJI for Unicode::Collate</p>
+
+</li>
+<li><p><b><a href="Unicode__Collate__CJK__Korean.html">Unicode::Collate::CJK::Korean</a></b> - Weighting CJK Unified Ideographs</p>
+
+</li>
+<li><p><b><a href="Unicode__Collate__CJK__Pinyin.html">Unicode::Collate::CJK::Pinyin</a></b> - Weighting CJK Unified Ideographs</p>
+
+</li>
+<li><p><b><a href="Unicode__Collate__CJK__Stroke.html">Unicode::Collate::CJK::Stroke</a></b> - Weighting CJK Unified Ideographs</p>
+
+</li>
+<li><p><b><a href="Unicode__Collate__CJK__Zhuyin.html">Unicode::Collate::CJK::Zhuyin</a></b> - Weighting CJK Unified Ideographs</p>
+
+</li>
+<li><p><b><a href="Unicode__Collate__Locale.html">Unicode::Collate::Locale</a></b> - Linguistic tailoring for DUCET via Unicode::Collate</p>
+
+</li>
+<li><p><b><a href="Unicode__Normalize.html">Unicode::Normalize</a></b> - Unicode Normalization Forms</p>
+
+</li>
+<li><p><b><a href="Unicode__UCD.html">Unicode::UCD</a></b> - Unicode character database</p>
+
+</li>
+<li><p><b><a href="User__grent.html">User::grent</a></b> - By-name interface to Perl&#39;s built-in getgr*() functions</p>
+
+</li>
+<li><p><b><a href="User__pwent.html">User::pwent</a></b> - By-name interface to Perl&#39;s built-in getpw*() functions</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/VMS::DCLsym">VMS::DCLsym</a></b> - Perl extension to manipulate DCL symbols</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/VMS::Filespec">VMS::Filespec</a></b> - Convert between VMS and Unix file specification syntax</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/VMS::Stdio">VMS::Stdio</a></b> - Standard I/O functions via VMS extensions</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/Win32">Win32</a></b> - Interfaces to some Win32 API Functions</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/Win32API::File">Win32API::File</a></b> - Low-level access to Win32 system API calls for files/dirs.</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/Win32CORE">Win32CORE</a></b> - Win32 CORE function stubs</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/XS::APItest">XS::APItest</a></b> - Test the perl C API</p>
+
+</li>
+<li><p><b><a href="https://metacpan.org/pod/XS::Typemap">XS::Typemap</a></b> - Module to test the XS typemaps distributed with perl</p>
+
+</li>
+<li><p><b><a href="XSLoader.html">XSLoader</a></b> - Dynamically load C libraries into Perl code</p>
+
+</li>
+<li><p><b><a href="autodie__Scope__Guard.html">autodie::Scope::Guard</a></b> - Wrapper class for calling subs at end of scope</p>
+
+</li>
+<li><p><b><a href="autodie__Scope__GuardStack.html">autodie::Scope::GuardStack</a></b> - Hook stack for managing scopes via %^H</p>
+
+</li>
+<li><p><b><a href="autodie__Util.html">autodie::Util</a></b> - Internal Utility subroutines for autodie and Fatal</p>
+
+</li>
+<li><p><b><a href="version__Internals.html">version::Internals</a></b> - Perl extension for Version Objects</p>
+
+</li>
+</ul>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/modules by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:19:37 GMT -->
+</html>

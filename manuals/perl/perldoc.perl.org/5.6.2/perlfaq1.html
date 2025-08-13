@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/5.6.2/perlfaq1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>perlfaq1 - General Questions About Perl ($Revision: 1.12 $, $Date: 2003/07/09 15:47:28 $) - Perldoc Browser</title>
+    <link rel="search" href="../opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="../perlfaq1.html">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="../css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html"><img src="../images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.6.2</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="../perlfaq1.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0/perlfaq1">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/perlfaq1">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/perlfaq1">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/perlfaq1">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/perlfaq1">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/perlfaq1">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/perlfaq1">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/perlfaq1">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/perlfaq1">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/perlfaq1">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/perlfaq1">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/perlfaq1">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/perlfaq1">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/perlfaq1">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/perlfaq1">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/perlfaq1">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/perlfaq1">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/perlfaq1">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/perlfaq1">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/perlfaq1">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/perlfaq1">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/perlfaq1">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/perlfaq1">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/perlfaq1">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/perlfaq1">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/perlfaq1">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/perlfaq1">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/perlfaq1">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/perlfaq1">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/perlfaq1">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/perlfaq1">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/perlfaq1">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/perlfaq1">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/perlfaq1">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/perlfaq1">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/perlfaq1">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/perlfaq1">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/perlfaq1">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/perlfaq1">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/perlfaq1">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/perlfaq1">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/perlfaq1">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/perlfaq1">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/perlfaq1">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/perlfaq1">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/perlfaq1">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/perlfaq1">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/perlfaq1">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/perlfaq1">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/perlfaq1">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/perlfaq1">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/perlfaq1">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/perlfaq1">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/perlfaq1">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/perlfaq1">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/perlfaq1">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/perlfaq1">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/perlfaq1">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/perlfaq1">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/perlfaq1">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/perlfaq1">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/perlfaq1">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/perlfaq1">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/perlfaq1">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/perlfaq1">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/perlfaq1">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/perlfaq1">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/perlfaq1">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/perlfaq1">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/perlfaq1">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/perlfaq1">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/perlfaq1">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/perlfaq1">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/perlfaq1">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/perlfaq1">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/perlfaq1">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/perlfaq1">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/perlfaq1">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/perlfaq1">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item active" href="perlfaq1.html">5.6.2</a>
+          <a class="dropdown-item" href="../5.6.1/perlfaq1.html">5.6.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.6.0/perlfaq1">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_04/perlfaq1">5.005_04</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_03/perlfaq1">5.005_03</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_02/perlfaq1">5.005_02</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005_01/perlfaq1">5.005_01</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.005/perlfaq1">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/perlfaq1">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/perlfaq1">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/perlfaq1">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/perlfaq1">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/perlfaq1">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/perlfaq1">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/perlfaq1">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/perlfaq1">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/perlfaq1">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/perlfaq1">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/perlfaq1">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/perlfaq1">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/perlfaq1">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/perlfaq1">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/perlfaq1">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/perlfaq1">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/perlfaq1">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/perlfaq1">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/perlfaq1">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/perlfaq1">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="../js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/5.6.2/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="../js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="perlfaq1.html">perlfaq1</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/5.6.2/perlfaq1.txt">source</a>,
+            <a href="https://metacpan.org/pod/perlfaq1">CPAN</a>)
+          </div>
+        </div>
+        <div class="leading-notice">
+          You are viewing the version of this documentation from Perl 5.6.2.
+            <a href="../perlfaq1.html">View the latest version</a>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#What-is-Perl?">What is Perl?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Who-supports-Perl?-Who-develops-it?-Why-is-it-free?">Who supports Perl? Who develops it? Why is it free?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Which-version-of-Perl-should-I-use?">Which version of Perl should I use?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#What-are-perl4-and-perl5?">What are perl4 and perl5?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#What-is-Ponie?">What is Ponie?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#What-is-perl6?">What is perl6?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-stable-is-Perl?">How stable is Perl?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Is-Perl-difficult-to-learn?">Is Perl difficult to learn?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-does-Perl-compare-with-other-languages-like-Java,-Python,-REXX,-Scheme,-or-Tcl?">How does Perl compare with other languages like Java, Python, REXX, Scheme, or Tcl?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Can-I-do-%5Btask%5D-in-Perl?">Can I do [task] in Perl?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#When-shouldn&#39;t-I-program-in-Perl?">When shouldn&#39;t I program in Perl?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#What&#39;s-the-difference-between-%22perl%22-and-%22Perl%22?">What&#39;s the difference between &quot;perl&quot; and &quot;Perl&quot;?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Is-it-a-Perl-program-or-a-Perl-script?">Is it a Perl program or a Perl script?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#What-is-a-JAPH?">What is a JAPH?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Where-can-I-get-a-list-of-Larry-Wall-witticisms?">Where can I get a list of Larry Wall witticisms?</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#How-can-I-convince-my-sysadmin/supervisor/employees-to-use-version-5/5.6.1/Perl-instead-of-some-other-language?">How can I convince my sysadmin/supervisor/employees to use version 5/5.6.1/Perl instead of some other language?</a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#AUTHOR-AND-COPYRIGHT">AUTHOR AND COPYRIGHT</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>perlfaq1 - General Questions About Perl ($Revision: 1.12 $, $Date: 2003/07/09 15:47:28 $)</p>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>This section of the FAQ answers very general, high-level questions about Perl.</p>
+
+<h2 id="What-is-Perl?"><a class="permalink" href="#What-is-Perl?">#</a><a id="What"></a><a id="What-is-Perl"></a>What is Perl?</h2>
+
+<p>Perl is a high-level programming language with an eclectic heritage written by Larry Wall and a cast of thousands. It derives from the ubiquitous C programming language and to a lesser extent from sed, awk, the Unix shell, and at least a dozen other tools and languages. Perl&#39;s process, file, and text manipulation facilities make it particularly well-suited for tasks involving quick prototyping, system utilities, software tools, system management tasks, database access, graphical programming, networking, and world wide web programming. These strengths make it especially popular with system administrators and CGI script authors, but mathematicians, geneticists, journalists, and even managers also use Perl. Maybe you should, too.</p>
+
+<h2 id="Who-supports-Perl?-Who-develops-it?-Why-is-it-free?"><a class="permalink" href="#Who-supports-Perl?-Who-develops-it?-Why-is-it-free?">#</a><a id="Who"></a><a id="Who-supports-Perl-Who-develops-it-Why-is-it-free"></a>Who supports Perl? Who develops it? Why is it free?</h2>
+
+<p>The original culture of the pre-populist Internet and the deeply-held beliefs of Perl&#39;s author, Larry Wall, gave rise to the free and open distribution policy of perl. Perl is supported by its users. The core, the standard Perl library, the optional modules, and the documentation you&#39;re reading now were all written by volunteers. See the personal note at the end of the README file in the perl source distribution for more details. See <a href="perlhist.html">perlhist</a> (new as of 5.005) for Perl&#39;s milestone releases.</p>
+
+<p>In particular, the core development team (known as the Perl Porters) are a rag-tag band of highly altruistic individuals committed to producing better software for free than you could hope to purchase for money. You may snoop on pending developments via the archives at http://www.xray.mpe.mpg.de/mailing-lists/perl5-porters/ and http://archive.develooper.com/perl5-porters@perl.org/ or the news gateway nntp://nntp.perl.org/perl.perl5.porters or its web interface at http://nntp.perl.org/group/perl.perl5.porters , or read the faq at http://simon-cozens.org/writings/p5p-faq , or you can subscribe to the mailing list by sending perl5-porters-request@perl.org a subscription request (an empty message with no subject is fine).</p>
+
+<p>While the GNU project includes Perl in its distributions, there&#39;s no such thing as &quot;GNU Perl&quot;. Perl is not produced nor maintained by the Free Software Foundation. Perl&#39;s licensing terms are also more open than GNU software&#39;s tend to be.</p>
+
+<p>You can get commercial support of Perl if you wish, although for most users the informal support will more than suffice. See the answer to &quot;Where can I buy a commercial version of perl?&quot; for more information.</p>
+
+<h2 id="Which-version-of-Perl-should-I-use?"><a class="permalink" href="#Which-version-of-Perl-should-I-use?">#</a><a id="Which"></a><a id="Which-version-of-Perl-should-I-use"></a>Which version of Perl should I use?</h2>
+
+<p>You should definitely use version 5. Version 4 is old, limited, and no longer maintained; its last patch (4.036) was in 1992, long ago and far away. Sure, it&#39;s stable, but so is anything that&#39;s dead; in fact, perl4 had been called a dead, flea-bitten camel carcass. The most recent production release is 5.8.1 (although 5.005_03 and 5.6.1 are still supported). The most cutting-edge development release is 5.9. Further references to the Perl language in this document refer to the production release unless otherwise specified. There may be one or more official bug fixes by the time you read this, and also perhaps some experimental versions on the way to the next release. All releases prior to 5.004 were subject to buffer overruns, a grave security issue.</p>
+
+<h2 id="What-are-perl4-and-perl5?"><a class="permalink" href="#What-are-perl4-and-perl5?">#</a><a id="What1"></a><a id="What-are-perl4-and-perl5"></a>What are perl4 and perl5?</h2>
+
+<p>Perl4 and perl5 are informal names for different versions of the Perl programming language. It&#39;s easier to say &quot;perl5&quot; than it is to say &quot;the 5(.004) release of Perl&quot;, but some people have interpreted this to mean there&#39;s a language called &quot;perl5&quot;, which isn&#39;t the case. Perl5 is merely the popular name for the fifth major release (October 1994), while perl4 was the fourth major release (March 1991). There was also a perl1 (in January 1988), a perl2 (June 1988), and a perl3 (October 1989).</p>
+
+<p>The 5.0 release is, essentially, a ground-up rewrite of the original perl source code from releases 1 through 4. It has been modularized, object-oriented, tweaked, trimmed, and optimized until it almost doesn&#39;t look like the old code. However, the interface is mostly the same, and compatibility with previous releases is very high. See <a href="perltrap.html#Perl4-to-Perl5-Traps">&quot;Perl4 to Perl5 Traps&quot; in perltrap</a>.</p>
+
+<p>To avoid the &quot;what language is perl5?&quot; confusion, some people prefer to simply use &quot;perl&quot; to refer to the latest version of perl and avoid using &quot;perl5&quot; altogether. It&#39;s not really that big a deal, though.</p>
+
+<p>See <a href="perlhist.html">perlhist</a> for a history of Perl revisions.</p>
+
+<h2 id="What-is-Ponie?"><a class="permalink" href="#What-is-Ponie?">#</a><a id="What2"></a><a id="What-is-Ponie"></a>What is Ponie?</h2>
+
+<p>At The O&#39;Reilly Open Source Software Convention in 2003, Artur Bergman, Fotango, and The Perl Foundation announced a project to run perl5 on the Parrot virtual machine named Ponie. Ponie stands for Perl On New Internal Engine. The Perl 5.10 language implementation will be used for Ponie, and there will be no language level differences between perl5 and ponie. Ponie is not a complete rewrite of perl5.</p>
+
+<h2 id="What-is-perl6?"><a class="permalink" href="#What-is-perl6?">#</a><a id="What3"></a><a id="What-is-perl6"></a>What is perl6?</h2>
+
+<p>At The Second O&#39;Reilly Open Source Software Convention, Larry Wall announced Perl6 development would begin in earnest. Perl6 was an oft used term for Chip Salzenberg&#39;s project to rewrite Perl in C++ named Topaz. However, Topaz provided valuable insights to the next version of Perl and its implementation, but was ultimately abandoned.</p>
+
+<p>If you want to learn more about Perl6, or have a desire to help in the crusade to make Perl a better place then peruse the Perl6 developers page at http://dev.perl.org/perl6/ and get involved.</p>
+
+<p>Perl6 is not scheduled for release yet, and Perl5 will still be supported for quite awhile after its release. Do not wait for Perl6 to do whatever you need to do.</p>
+
+<p>&quot;We&#39;re really serious about reinventing everything that needs reinventing.&quot; --Larry Wall</p>
+
+<h2 id="How-stable-is-Perl?"><a class="permalink" href="#How-stable-is-Perl?">#</a><a id="How"></a><a id="How-stable-is-Perl"></a>How stable is Perl?</h2>
+
+<p>Production releases, which incorporate bug fixes and new functionality, are widely tested before release. Since the 5.000 release, we have averaged only about one production release per year.</p>
+
+<p>Larry and the Perl development team occasionally make changes to the internal core of the language, but all possible efforts are made toward backward compatibility. While not quite all perl4 scripts run flawlessly under perl5, an update to perl should nearly never invalidate a program written for an earlier version of perl (barring accidental bug fixes and the rare new keyword).</p>
+
+<h2 id="Is-Perl-difficult-to-learn?"><a class="permalink" href="#Is-Perl-difficult-to-learn?">#</a><a id="Is"></a><a id="Is-Perl-difficult-to-learn"></a>Is Perl difficult to learn?</h2>
+
+<p>No, Perl is easy to start learning--and easy to keep learning. It looks like most programming languages you&#39;re likely to have experience with, so if you&#39;ve ever written a C program, an awk script, a shell script, or even a BASIC program, you&#39;re already partway there.</p>
+
+<p>Most tasks only require a small subset of the Perl language. One of the guiding mottos for Perl development is &quot;there&#39;s more than one way to do it&quot; (TMTOWTDI, sometimes pronounced &quot;tim toady&quot;). Perl&#39;s learning curve is therefore shallow (easy to learn) and long (there&#39;s a whole lot you can do if you really want).</p>
+
+<p>Finally, because Perl is frequently (but not always, and certainly not by definition) an interpreted language, you can write your programs and test them without an intermediate compilation step, allowing you to experiment and test/debug quickly and easily. This ease of experimentation flattens the learning curve even more.</p>
+
+<p>Things that make Perl easier to learn: Unix experience, almost any kind of programming experience, an understanding of regular expressions, and the ability to understand other people&#39;s code. If there&#39;s something you need to do, then it&#39;s probably already been done, and a working example is usually available for free. Don&#39;t forget the new perl modules, either. They&#39;re discussed in Part 3 of this FAQ, along with CPAN, which is discussed in Part 2.</p>
+
+<h2 id="How-does-Perl-compare-with-other-languages-like-Java,-Python,-REXX,-Scheme,-or-Tcl?"><a class="permalink" href="#How-does-Perl-compare-with-other-languages-like-Java,-Python,-REXX,-Scheme,-or-Tcl?">#</a><a id="How1"></a><a id="How-does-Perl-compare-with-other-languages-like-Java-Python-REXX-Scheme-or-Tcl"></a>How does Perl compare with other languages like Java, Python, REXX, Scheme, or Tcl?</h2>
+
+<p>Favorably in some areas, unfavorably in others. Precisely which areas are good and bad is often a personal choice, so asking this question on Usenet runs a strong risk of starting an unproductive Holy War.</p>
+
+<p>Probably the best thing to do is try to write equivalent code to do a set of tasks. These languages have their own newsgroups in which you can learn about (but hopefully not argue about) them.</p>
+
+<p>Some comparison documents can be found at http://language.perl.com/versus/ if you really can&#39;t stop yourself.</p>
+
+<h2 id="Can-I-do-[task]-in-Perl?"><a class="permalink" href="#Can-I-do-%5Btask%5D-in-Perl?">#</a><a id="Can"></a><a id="Can-I-do-task-in-Perl"></a>Can I do [task] in Perl?</h2>
+
+<p>Perl is flexible and extensible enough for you to use on virtually any task, from one-line file-processing tasks to large, elaborate systems. For many people, Perl serves as a great replacement for shell scripting. For others, it serves as a convenient, high-level replacement for most of what they&#39;d program in low-level languages like C or C++. It&#39;s ultimately up to you (and possibly your management) which tasks you&#39;ll use Perl for and which you won&#39;t.</p>
+
+<p>If you have a library that provides an API, you can make any component of it available as just another Perl function or variable using a Perl extension written in C or C++ and dynamically linked into your main perl interpreter. You can also go the other direction, and write your main program in C or C++, and then link in some Perl code on the fly, to create a powerful application. See <a href="perlembed.html">perlembed</a>.</p>
+
+<p>That said, there will always be small, focused, special-purpose languages dedicated to a specific problem domain that are simply more convenient for certain kinds of problems. Perl tries to be all things to all people, but nothing special to anyone. Examples of specialized languages that come to mind include prolog and matlab.</p>
+
+<h2 id="When-shouldn&#39;t-I-program-in-Perl?"><a class="permalink" href="#When-shouldn&#39;t-I-program-in-Perl?">#</a><a id="When"></a><a id="When-shouldnt-I-program-in-Perl"></a>When shouldn&#39;t I program in Perl?</h2>
+
+<p>When your manager forbids it--but do consider replacing them :-).</p>
+
+<p>Actually, one good reason is when you already have an existing application written in another language that&#39;s all done (and done well), or you have an application language specifically designed for a certain task (e.g. prolog, make).</p>
+
+<p>For various reasons, Perl is probably not well-suited for real-time embedded systems, low-level operating systems development work like device drivers or context-switching code, complex multi-threaded shared-memory applications, or extremely large applications. You&#39;ll notice that perl is not itself written in Perl.</p>
+
+<p>The new, native-code compiler for Perl may eventually reduce the limitations given in the previous statement to some degree, but understand that Perl remains fundamentally a dynamically typed language, not a statically typed one. You certainly won&#39;t be chastised if you don&#39;t trust nuclear-plant or brain-surgery monitoring code to it. And Larry will sleep easier, too--Wall Street programs not withstanding. :-)</p>
+
+<h2 id="What&#39;s-the-difference-between-&quot;perl&quot;-and-&quot;Perl&quot;?"><a class="permalink" href="#What&#39;s-the-difference-between-%22perl%22-and-%22Perl%22?">#</a><a id="What4"></a><a id="Whats-the-difference-between-perl-and-Perl"></a>What&#39;s the difference between &quot;perl&quot; and &quot;Perl&quot;?</h2>
+
+<p>One bit. Oh, you weren&#39;t talking ASCII? :-) Larry now uses &quot;Perl&quot; to signify the language proper and &quot;perl&quot; the implementation of it, i.e. the current interpreter. Hence Tom&#39;s quip that &quot;Nothing but perl can parse Perl.&quot; You may or may not choose to follow this usage. For example, parallelism means &quot;awk and perl&quot; and &quot;Python and Perl&quot; look OK, while &quot;awk and Perl&quot; and &quot;Python and perl&quot; do not. But never write &quot;PERL&quot;, because perl is not an acronym, apocryphal folklore and post-facto expansions notwithstanding.</p>
+
+<h2 id="Is-it-a-Perl-program-or-a-Perl-script?"><a class="permalink" href="#Is-it-a-Perl-program-or-a-Perl-script?">#</a><a id="Is1"></a><a id="Is-it-a-Perl-program-or-a-Perl-script"></a>Is it a Perl program or a Perl script?</h2>
+
+<p>Larry doesn&#39;t really care. He says (half in jest) that &quot;a script is what you give the actors. A program is what you give the audience.&quot;</p>
+
+<p>Originally, a script was a canned sequence of normally interactive commands--that is, a chat script. Something like a UUCP or PPP chat script or an expect script fits the bill nicely, as do configuration scripts run by a program at its start up, such <i>.cshrc</i> or <i>.ircrc</i>, for example. Chat scripts were just drivers for existing programs, not stand-alone programs in their own right.</p>
+
+<p>A computer scientist will correctly explain that all programs are interpreted and that the only question is at what level. But if you ask this question of someone who isn&#39;t a computer scientist, they might tell you that a <i>program</i> has been compiled to physical machine code once and can then be run multiple times, whereas a <i>script</i> must be translated by a program each time it&#39;s used.</p>
+
+<p>Perl programs are (usually) neither strictly compiled nor strictly interpreted. They can be compiled to a byte-code form (something of a Perl virtual machine) or to completely different languages, like C or assembly language. You can&#39;t tell just by looking at it whether the source is destined for a pure interpreter, a parse-tree interpreter, a byte-code interpreter, or a native-code compiler, so it&#39;s hard to give a definitive answer here.</p>
+
+<p>Now that &quot;script&quot; and &quot;scripting&quot; are terms that have been seized by unscrupulous or unknowing marketeers for their own nefarious purposes, they have begun to take on strange and often pejorative meanings, like &quot;non serious&quot; or &quot;not real programming&quot;. Consequently, some Perl programmers prefer to avoid them altogether.</p>
+
+<h2 id="What-is-a-JAPH?"><a class="permalink" href="#What-is-a-JAPH?">#</a><a id="What5"></a><a id="What-is-a-JAPH"></a>What is a JAPH?</h2>
+
+<p>These are the &quot;just another perl hacker&quot; signatures that some people sign their postings with. Randal Schwartz made these famous. About 100 of the earlier ones are available from http://www.cpan.org/misc/japh .</p>
+
+<h2 id="Where-can-I-get-a-list-of-Larry-Wall-witticisms?"><a class="permalink" href="#Where-can-I-get-a-list-of-Larry-Wall-witticisms?">#</a><a id="Where"></a><a id="Where-can-I-get-a-list-of-Larry-Wall-witticisms"></a>Where can I get a list of Larry Wall witticisms?</h2>
+
+<p>Over a hundred quips by Larry, from postings of his or source code, can be found at http://www.cpan.org/misc/lwall-quotes.txt.gz .</p>
+
+<h2 id="How-can-I-convince-my-sysadmin/supervisor/employees-to-use-version-5/5.6.1/Perl-instead-of-some-other-language?"><a class="permalink" href="#How-can-I-convince-my-sysadmin/supervisor/employees-to-use-version-5/5.6.1/Perl-instead-of-some-other-language?">#</a><a id="How2"></a><a id="How-can-I-convince-my-sysadmin-supervisor-employees-to-use-version-5-5.6.1-Perl-instead-of-some-other-language"></a>How can I convince my sysadmin/supervisor/employees to use version 5/5.6.1/Perl instead of some other language?</h2>
+
+<p>If your manager or employees are wary of unsupported software, or software which doesn&#39;t officially ship with your operating system, you might try to appeal to their self-interest. If programmers can be more productive using and utilizing Perl constructs, functionality, simplicity, and power, then the typical manager/supervisor/employee may be persuaded. Regarding using Perl in general, it&#39;s also sometimes helpful to point out that delivery times may be reduced using Perl compared to other languages.</p>
+
+<p>If you have a project which has a bottleneck, especially in terms of translation or testing, Perl almost certainly will provide a viable, quick solution. In conjunction with any persuasion effort, you should not fail to point out that Perl is used, quite extensively, and with extremely reliable and valuable results, at many large computer software and hardware companies throughout the world. In fact, many Unix vendors now ship Perl by default. Support is usually just a news-posting away, if you can&#39;t find the answer in the <i>comprehensive</i> documentation, including this FAQ.</p>
+
+<p>See http://www.perl.org/advocacy/ for more information.</p>
+
+<p>If you face reluctance to upgrading from an older version of perl, then point out that version 4 is utterly unmaintained and unsupported by the Perl Development Team. Another big sell for Perl5 is the large number of modules and extensions which greatly reduce development time for any given task. Also mention that the difference between version 4 and version 5 of Perl is like the difference between awk and C++. (Well, OK, maybe it&#39;s not quite that distinct, but you get the idea.) If you want support and a reasonable guarantee that what you&#39;re developing will continue to work in the future, then you have to run the supported version. As of October 2003 that means running either 5.8.1 (released in September 2003), or one of the older releases like 5.6.1 (released in April 2001) or 5.005_03 (released in March 1999), although 5.004_05 isn&#39;t that bad if you <b>absolutely</b> need such an old version (released in April 1999) for stability reasons. Anything older than 5.004_05 shouldn&#39;t be used.</p>
+
+<p>Of particular note is the massive bug hunt for buffer overflow problems that went into the 5.004 release. All releases prior to that, including perl4, are considered insecure and should be upgraded as soon as possible.</p>
+
+<p>In August 2000 in all Linux distributions a new security problem was found in the optional &#39;suidperl&#39; (not built or installed by default) in all the Perl branches 5.6, 5.005, and 5.004, see http://www.cpan.org/src/5.0/sperl-2000-08-05/ Perl maintenance releases 5.6.1 and 5.8.0 have this security hole closed. Most, if not all, Linux distribution have patches for this vulnerability available, see http://www.linuxsecurity.com/advisories/ , but the most recommendable way is to upgrade to at least Perl 5.6.1.</p>
+
+<h1 id="AUTHOR-AND-COPYRIGHT"><a class="permalink" href="#AUTHOR-AND-COPYRIGHT">#</a><a id="AUTHOR"></a>AUTHOR AND COPYRIGHT</h1>
+
+<p>Copyright (c) 1997, 1998, 1999, 2000, 2001 Tom Christiansen and Nathan Torkington. All rights reserved.</p>
+
+<p>This documentation is free; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>Irrespective of its distribution, all code examples here are in the public domain. You are permitted and encouraged to use this code and any derivatives thereof in your own programs for fun or for profit as you see fit. A simple comment in the code giving credit to the FAQ would be courteous but is not required.</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/5.6.2/perlfaq1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:45 GMT -->
+</html>

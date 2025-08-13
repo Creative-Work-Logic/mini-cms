@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/5.10.1/perlobj by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>perlobj - Perl objects - Perldoc Browser</title>
+    <link rel="search" href="../opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="../perlobj.html">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="../css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html"><img src="../images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.10.1</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="../perlobj.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0/perlobj">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/perlobj">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/perlobj">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/perlobj">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/perlobj">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/perlobj">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/perlobj">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/perlobj">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/perlobj">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/perlobj">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/perlobj">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/perlobj">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/perlobj">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/perlobj">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/perlobj">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/perlobj">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/perlobj">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/perlobj">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/perlobj">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/perlobj">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/perlobj">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/perlobj">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/perlobj">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/perlobj">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/perlobj">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/perlobj">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/perlobj">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/perlobj">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/perlobj">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/perlobj">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/perlobj">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/perlobj">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/perlobj">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/perlobj">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/perlobj">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/perlobj">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/perlobj">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/perlobj">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/perlobj">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/perlobj">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/perlobj">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/perlobj">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/perlobj">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/perlobj">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/perlobj">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/perlobj">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/perlobj">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/perlobj">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/perlobj">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/perlobj">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/perlobj">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/perlobj">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.16.3/perlobj.html">5.16.3</a>
+          <a class="dropdown-item" href="../5.16.2/perlobj.html">5.16.2</a>
+          <a class="dropdown-item" href="../5.16.1/perlobj.html">5.16.1</a>
+          <a class="dropdown-item" href="../5.16.0/perlobj.html">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.14.4/perlobj.html">5.14.4</a>
+          <a class="dropdown-item" href="../5.14.3/perlobj.html">5.14.3</a>
+          <a class="dropdown-item" href="../5.14.2/perlobj.html">5.14.2</a>
+          <a class="dropdown-item" href="../5.14.1/perlobj.html">5.14.1</a>
+          <a class="dropdown-item" href="../5.14.0/perlobj.html">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.12.5/perlobj.html">5.12.5</a>
+          <a class="dropdown-item" href="../5.12.4/perlobj.html">5.12.4</a>
+          <a class="dropdown-item" href="../5.12.3/perlobj.html">5.12.3</a>
+          <a class="dropdown-item" href="../5.12.2/perlobj.html">5.12.2</a>
+          <a class="dropdown-item" href="../5.12.1/perlobj.html">5.12.1</a>
+          <a class="dropdown-item" href="../5.12.0/perlobj.html">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item active" href="perlobj.html">5.10.1</a>
+          <a class="dropdown-item" href="../5.10.0/perlobj.html">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.8.9/perlobj.html">5.8.9</a>
+          <a class="dropdown-item" href="../5.8.8/perlobj.html">5.8.8</a>
+          <a class="dropdown-item" href="../5.8.7/perlobj.html">5.8.7</a>
+          <a class="dropdown-item" href="../5.8.6/perlobj.html">5.8.6</a>
+          <a class="dropdown-item" href="../5.8.5/perlobj.html">5.8.5</a>
+          <a class="dropdown-item" href="../5.8.4/perlobj.html">5.8.4</a>
+          <a class="dropdown-item" href="../5.8.3/perlobj.html">5.8.3</a>
+          <a class="dropdown-item" href="../5.8.2/perlobj.html">5.8.2</a>
+          <a class="dropdown-item" href="../5.8.1/perlobj.html">5.8.1</a>
+          <a class="dropdown-item" href="../5.8.0/perlobj.html">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.6.2/perlobj.html">5.6.2</a>
+          <a class="dropdown-item" href="../5.6.1/perlobj.html">5.6.1</a>
+          <a class="dropdown-item" href="../5.6.0/perlobj.html">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.005_04/perlobj.html">5.005_04</a>
+          <a class="dropdown-item" href="../5.005_03/perlobj.html">5.005_03</a>
+          <a class="dropdown-item" href="../5.005_02/perlobj.html">5.005_02</a>
+          <a class="dropdown-item" href="../5.005_01/perlobj.html">5.005_01</a>
+          <a class="dropdown-item" href="../5.005/perlobj.html">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/perlobj">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/perlobj">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/perlobj">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/perlobj">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/perlobj">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/perlobj">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/perlobj">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/perlobj">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/perlobj">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/perlobj">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/perlobj">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/perlobj">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/perlobj">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/perlobj">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/perlobj">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/perlobj">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/perlobj">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/perlobj">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/perlobj">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/perlobj">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="../js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/5.10.1/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="../js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="perlobj.html">perlobj</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/5.10.1/perlobj.txt">source</a>,
+            <a href="https://metacpan.org/pod/perlobj">CPAN</a>)
+          </div>
+        </div>
+        <div class="leading-notice">
+          You are viewing the version of this documentation from Perl 5.10.1.
+            <a href="../perlobj.html">View the latest version</a>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME  </a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#An-Object-is-Simply-a-Reference">An Object is Simply a Reference    </a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#A-Class-is-Simply-a-Package">A Class is Simply a Package    </a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#A-Method-is-Simply-a-Subroutine">A Method is Simply a Subroutine </a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Method-Invocation">Method Invocation    </a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Indirect-Object-Syntax">Indirect Object Syntax   </a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Default-UNIVERSAL-methods">Default UNIVERSAL methods </a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Destructors">Destructors  </a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Summary">Summary</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Two-Phased-Garbage-Collection">Two-Phased Garbage Collection      </a>
+              </li>
+          </ul>
+
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#SEE-ALSO">SEE ALSO</a>
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME  </h1>
+
+<p>perlobj - Perl objects</p>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<p>First you need to understand what references are in Perl. See <a href="perlref.html">perlref</a> for that. Second, if you still find the following reference work too complicated, a tutorial on object-oriented programming in Perl can be found in <a href="perltoot.html">perltoot</a> and <a href="perltooc.html">perltooc</a>.</p>
+
+<p>If you&#39;re still with us, then here are three very simple definitions that you should find reassuring.</p>
+
+<ol>
+
+<li><p>An object is simply a reference that happens to know which class it belongs to.</p>
+
+</li>
+<li><p>A class is simply a package that happens to provide methods to deal with object references.</p>
+
+</li>
+<li><p>A method is simply a subroutine that expects an object reference (or a package name, for class methods) as the first argument.</p>
+
+</li>
+</ol>
+
+<p>We&#39;ll cover these points now in more depth.</p>
+
+<h2 id="An-Object-is-Simply-a-Reference"><a class="permalink" href="#An-Object-is-Simply-a-Reference">#</a><a id="An"></a>An Object is Simply a Reference    </h2>
+
+<p>Unlike say C++, Perl doesn&#39;t provide any special syntax for constructors. A constructor is merely a subroutine that returns a reference to something &quot;blessed&quot; into a class, generally the class that the subroutine is defined in. Here is a typical constructor:</p>
+
+<pre><code>package Critter;
+sub new { bless {} }</code></pre>
+
+<p>That word <code>new</code> isn&#39;t special. You could have written a construct this way, too:</p>
+
+<pre><code>package Critter;
+sub spawn { bless {} }</code></pre>
+
+<p>This might even be preferable, because the C++ programmers won&#39;t be tricked into thinking that <code>new</code> works in Perl as it does in C++. It doesn&#39;t. We recommend that you name your constructors whatever makes sense in the context of the problem you&#39;re solving. For example, constructors in the Tk extension to Perl are named after the widgets they create.</p>
+
+<p>One thing that&#39;s different about Perl constructors compared with those in C++ is that in Perl, they have to allocate their own memory. (The other things is that they don&#39;t automatically call overridden base-class constructors.) The <code>{}</code> allocates an anonymous hash containing no key/value pairs, and returns it The bless() takes that reference and tells the object it references that it&#39;s now a Critter, and returns the reference. This is for convenience, because the referenced object itself knows that it has been blessed, and the reference to it could have been returned directly, like this:</p>
+
+<pre><code>    sub new {
+	my $self = {};
+	bless $self;
+	return $self;
+    }</code></pre>
+
+<p>You often see such a thing in more complicated constructors that wish to call methods in the class as part of the construction:</p>
+
+<pre><code>    sub new {
+	my $self = {};
+	bless $self;
+	$self-&gt;initialize();
+	return $self;
+    }</code></pre>
+
+<p>If you care about inheritance (and you should; see <a href="perlmodlib.html#Modules%3A-Creation%2C-Use%2C-and-Abuse">&quot;Modules: Creation, Use, and Abuse&quot; in perlmodlib</a>), then you want to use the two-arg form of bless so that your constructors may be inherited:</p>
+
+<pre><code>    sub new {
+	my $class = shift;
+	my $self = {};
+	bless $self, $class;
+	$self-&gt;initialize();
+	return $self;
+    }</code></pre>
+
+<p>Or if you expect people to call not just <code>CLASS-&gt;new()</code> but also <code>$obj-&gt;new()</code>, then use something like the following. (Note that using this to call new() on an instance does not automatically perform any copying. If you want a shallow or deep copy of an object, you&#39;ll have to specifically allow for that.) The initialize() method used will be of whatever $class we blessed the object into:</p>
+
+<pre><code>    sub new {
+	my $this = shift;
+	my $class = ref($this) || $this;
+	my $self = {};
+	bless $self, $class;
+	$self-&gt;initialize();
+	return $self;
+    }</code></pre>
+
+<p>Within the class package, the methods will typically deal with the reference as an ordinary reference. Outside the class package, the reference is generally treated as an opaque value that may be accessed only through the class&#39;s methods.</p>
+
+<p>Although a constructor can in theory re-bless a referenced object currently belonging to another class, this is almost certainly going to get you into trouble. The new class is responsible for all cleanup later. The previous blessing is forgotten, as an object may belong to only one class at a time. (Although of course it&#39;s free to inherit methods from many classes.) If you find yourself having to do this, the parent class is probably misbehaving, though.</p>
+
+<p>A clarification: Perl objects are blessed. References are not. Objects know which package they belong to. References do not. The bless() function uses the reference to find the object. Consider the following example:</p>
+
+<pre><code>$a = {};
+$b = $a;
+bless $a, BLAH;
+print &quot;\$b is a &quot;, ref($b), &quot;\n&quot;;</code></pre>
+
+<p>This reports $b as being a BLAH, so obviously bless() operated on the object and not on the reference.</p>
+
+<h2 id="A-Class-is-Simply-a-Package"><a class="permalink" href="#A-Class-is-Simply-a-Package">#</a><a id="A"></a>A Class is Simply a Package    </h2>
+
+<p>Unlike say C++, Perl doesn&#39;t provide any special syntax for class definitions. You use a package as a class by putting method definitions into the class.</p>
+
+<p>There is a special array within each package called @ISA, which says where else to look for a method if you can&#39;t find it in the current package. This is how Perl implements inheritance. Each element of the @ISA array is just the name of another package that happens to be a class package. The classes are searched for missing methods in depth-first, left-to-right order by default (see <a href="https://perldoc.perl.org/5.10.1/mro">mro</a> for alternative search order and other in-depth information). The classes accessible through @ISA are known as base classes of the current class.</p>
+
+<p>All classes implicitly inherit from class <code>UNIVERSAL</code> as their last base class. Several commonly used methods are automatically supplied in the UNIVERSAL class; see <a href="#Default-UNIVERSAL-methods">&quot;Default UNIVERSAL methods&quot;</a> or <a href="https://perldoc.perl.org/5.10.1/UNIVERSAL">UNIVERSAL</a> for more details.   </p>
+
+<p>If a missing method is found in a base class, it is cached in the current class for efficiency. Changing @ISA or defining new subroutines invalidates the cache and causes Perl to do the lookup again.</p>
+
+<p>If neither the current class, its named base classes, nor the UNIVERSAL class contains the requested method, these three places are searched all over again, this time looking for a method named AUTOLOAD(). If an AUTOLOAD is found, this method is called on behalf of the missing method, setting the package global $AUTOLOAD to be the fully qualified name of the method that was intended to be called. </p>
+
+<p>If none of that works, Perl finally gives up and complains.</p>
+
+<p>If you want to stop the AUTOLOAD inheritance say simply </p>
+
+<pre><code>sub AUTOLOAD;</code></pre>
+
+<p>and the call will die using the name of the sub being called.</p>
+
+<p>Perl classes do method inheritance only. Data inheritance is left up to the class itself. By and large, this is not a problem in Perl, because most classes model the attributes of their object using an anonymous hash, which serves as its own little namespace to be carved up by the various classes that might want to do something with the object. The only problem with this is that you can&#39;t sure that you aren&#39;t using a piece of the hash that isn&#39;t already used. A reasonable workaround is to prepend your fieldname in the hash with the package name.  </p>
+
+<pre><code>    sub bump {
+	my $self = shift;
+	$self-&gt;{ __PACKAGE__ . &quot;.count&quot;}++;
+    } </code></pre>
+
+<h2 id="A-Method-is-Simply-a-Subroutine"><a class="permalink" href="#A-Method-is-Simply-a-Subroutine">#</a><a id="A1"></a>A Method is Simply a Subroutine </h2>
+
+<p>Unlike say C++, Perl doesn&#39;t provide any special syntax for method definition. (It does provide a little syntax for method invocation though. More on that later.) A method expects its first argument to be the object (reference) or package (string) it is being invoked on. There are two ways of calling methods, which we&#39;ll call class methods and instance methods.</p>
+
+<p>A class method expects a class name as the first argument. It provides functionality for the class as a whole, not for any individual object belonging to the class. Constructors are often class methods, but see <a href="perltoot.html">perltoot</a> and <a href="perltooc.html">perltooc</a> for alternatives. Many class methods simply ignore their first argument, because they already know what package they&#39;re in and don&#39;t care what package they were invoked via. (These aren&#39;t necessarily the same, because class methods follow the inheritance tree just like ordinary instance methods.) Another typical use for class methods is to look up an object by name:</p>
+
+<pre><code>    sub find {
+	my ($class, $name) = @_;
+	$objtable{$name};
+    }</code></pre>
+
+<p>An instance method expects an object reference as its first argument. Typically it shifts the first argument into a &quot;self&quot; or &quot;this&quot; variable, and then uses that as an ordinary reference.</p>
+
+<pre><code>    sub display {
+	my $self = shift;
+	my @keys = @_ ? @_ : sort keys %$self;
+	foreach $key (@keys) {
+	    print &quot;\t$key =&gt; $self-&gt;{$key}\n&quot;;
+	}
+    }</code></pre>
+
+<h2 id="Method-Invocation"><a class="permalink" href="#Method-Invocation">#</a><a id="Method"></a>Method Invocation    </h2>
+
+<p>For various historical and other reasons, Perl offers two equivalent ways to write a method call. The simpler and more common way is to use the arrow notation:</p>
+
+<pre><code>my $fred = Critter-&gt;find(&quot;Fred&quot;);
+$fred-&gt;display(&quot;Height&quot;, &quot;Weight&quot;);</code></pre>
+
+<p>You should already be familiar with the use of the <code>-&gt;</code> operator with references. In fact, since <code>$fred</code> above is a reference to an object, you could think of the method call as just another form of dereferencing.</p>
+
+<p>Whatever is on the left side of the arrow, whether a reference or a class name, is passed to the method subroutine as its first argument. So the above code is mostly equivalent to:</p>
+
+<pre><code>my $fred = Critter::find(&quot;Critter&quot;, &quot;Fred&quot;);
+Critter::display($fred, &quot;Height&quot;, &quot;Weight&quot;);</code></pre>
+
+<p>How does Perl know which package the subroutine is in? By looking at the left side of the arrow, which must be either a package name or a reference to an object, i.e. something that has been blessed to a package. Either way, that&#39;s the package where Perl starts looking. If that package has no subroutine with that name, Perl starts looking for it in any base classes of that package, and so on.</p>
+
+<p>If you need to, you <i>can</i> force Perl to start looking in some other package:</p>
+
+<pre><code>my $barney = MyCritter-&gt;Critter::find(&quot;Barney&quot;);
+$barney-&gt;Critter::display(&quot;Height&quot;, &quot;Weight&quot;);</code></pre>
+
+<p>Here <code>MyCritter</code> is presumably a subclass of <code>Critter</code> that defines its own versions of find() and display(). We haven&#39;t specified what those methods do, but that doesn&#39;t matter above since we&#39;ve forced Perl to start looking for the subroutines in <code>Critter</code>.</p>
+
+<p>As a special case of the above, you may use the <code>SUPER</code> pseudo-class to tell Perl to start looking for the method in the packages named in the current class&#39;s <code>@ISA</code> list. </p>
+
+<pre><code>package MyCritter;
+use base &#39;Critter&#39;;    # sets @MyCritter::ISA = (&#39;Critter&#39;);
+
+sub display { 
+    my ($self, @args) = @_;
+    $self-&gt;SUPER::display(&quot;Name&quot;, @args);
+}</code></pre>
+
+<p>It is important to note that <code>SUPER</code> refers to the superclass(es) of the <i>current package</i> and not to the superclass(es) of the object. Also, the <code>SUPER</code> pseudo-class can only currently be used as a modifier to a method name, but not in any of the other ways that class names are normally used, eg: </p>
+
+<pre><code>something-&gt;SUPER::method(...);	# OK
+SUPER::method(...);			# WRONG
+SUPER-&gt;method(...);			# WRONG</code></pre>
+
+<p>Instead of a class name or an object reference, you can also use any expression that returns either of those on the left side of the arrow. So the following statement is valid:</p>
+
+<pre><code>Critter-&gt;find(&quot;Fred&quot;)-&gt;display(&quot;Height&quot;, &quot;Weight&quot;);</code></pre>
+
+<p>and so is the following:</p>
+
+<pre><code>my $fred = (reverse &quot;rettirC&quot;)-&gt;find(reverse &quot;derF&quot;);</code></pre>
+
+<p>The right side of the arrow typically is the method name, but a simple scalar variable containing either the method name or a subroutine reference can also be used.</p>
+
+<p>If the right side of the arrow is a scalar containing a reference to a subroutine, then this is equivalent to calling the referenced subroutine directly with the class name or object on the left side of the arrow as its first argument. No lookup is done and there is no requirement that the subroutine be defined in any package related to the class name or object on the left side of the arrow.</p>
+
+<p>For example, the following calls to $display are equivalent:</p>
+
+<pre><code>my $display = sub { my $self = shift; ... };
+$fred-&gt;$display(&quot;Height&quot;, &quot;Weight&quot;);
+$display-&gt;($fred, &quot;Height&quot;, &quot;Weight&quot;);</code></pre>
+
+<h2 id="Indirect-Object-Syntax"><a class="permalink" href="#Indirect-Object-Syntax">#</a><a id="Indirect"></a>Indirect Object Syntax   </h2>
+
+<p>The other way to invoke a method is by using the so-called &quot;indirect object&quot; notation. This syntax was available in Perl 4 long before objects were introduced, and is still used with filehandles like this:</p>
+
+<pre><code>print STDERR &quot;help!!!\n&quot;;</code></pre>
+
+<p>The same syntax can be used to call either object or class methods.</p>
+
+<pre><code>my $fred = find Critter &quot;Fred&quot;;
+display $fred &quot;Height&quot;, &quot;Weight&quot;;</code></pre>
+
+<p>Notice that there is no comma between the object or class name and the parameters. This is how Perl can tell you want an indirect method call instead of an ordinary subroutine call.</p>
+
+<p>But what if there are no arguments? In that case, Perl must guess what you want. Even worse, it must make that guess <i>at compile time</i>. Usually Perl gets it right, but when it doesn&#39;t you get a function call compiled as a method, or vice versa. This can introduce subtle bugs that are hard to detect.</p>
+
+<p>For example, a call to a method <code>new</code> in indirect notation -- as C++ programmers are wont to make -- can be miscompiled into a subroutine call if there&#39;s already a <code>new</code> function in scope. You&#39;d end up calling the current package&#39;s <code>new</code> as a subroutine, rather than the desired class&#39;s method. The compiler tries to cheat by remembering bareword <code>require</code>s, but the grief when it messes up just isn&#39;t worth the years of debugging it will take you to track down such subtle bugs.</p>
+
+<p>There is another problem with this syntax: the indirect object is limited to a name, a scalar variable, or a block, because it would have to do too much lookahead otherwise, just like any other postfix dereference in the language. (These are the same quirky rules as are used for the filehandle slot in functions like <code>print</code> and <code>printf</code>.) This can lead to horribly confusing precedence problems, as in these next two lines:</p>
+
+<pre><code>move $obj-&gt;{FIELD};                 # probably wrong!
+move $ary[$i];                      # probably wrong!</code></pre>
+
+<p>Those actually parse as the very surprising:</p>
+
+<pre><code>$obj-&gt;move-&gt;{FIELD};                # Well, lookee here
+$ary-&gt;move([$i]);                   # Didn&#39;t expect this one, eh?</code></pre>
+
+<p>Rather than what you might have expected:</p>
+
+<pre><code>$obj-&gt;{FIELD}-&gt;move();              # You should be so lucky.
+$ary[$i]-&gt;move;                     # Yeah, sure.</code></pre>
+
+<p>To get the correct behavior with indirect object syntax, you would have to use a block around the indirect object:</p>
+
+<pre><code>move {$obj-&gt;{FIELD}};
+move {$ary[$i]};</code></pre>
+
+<p>Even then, you still have the same potential problem if there happens to be a function named <code>move</code> in the current package. <b>The <code>-&gt;</code> notation suffers from neither of these disturbing ambiguities, so we recommend you use it exclusively.</b> However, you may still end up having to read code using the indirect object notation, so it&#39;s important to be familiar with it.</p>
+
+<h2 id="Default-UNIVERSAL-methods"><a class="permalink" href="#Default-UNIVERSAL-methods">#</a><a id="Default"></a>Default UNIVERSAL methods </h2>
+
+<p>The <code>UNIVERSAL</code> package automatically contains the following methods that are inherited by all other classes:</p>
+
+<dl>
+
+<dt id="isa(CLASS)"><a class="permalink" href="#isa(CLASS)">#</a><a id="isa"></a><a id="isa-CLASS"></a>isa(CLASS) </dt>
+<dd>
+
+<p><code>isa</code> returns <i>true</i> if its object is blessed into a subclass of <code>CLASS</code></p>
+
+</dd>
+<dt id="DOES(ROLE)"><a class="permalink" href="#DOES(ROLE)">#</a><a id="DOES"></a><a id="DOES-ROLE"></a>DOES(ROLE) </dt>
+<dd>
+
+<p><code>DOES</code> returns <i>true</i> if its object claims to perform the role <code>ROLE</code>. By default, this is equivalent to <code>isa</code>.</p>
+
+</dd>
+<dt id="can(METHOD)"><a class="permalink" href="#can(METHOD)">#</a><a id="can"></a><a id="can-METHOD"></a>can(METHOD) </dt>
+<dd>
+
+<p><code>can</code> checks to see if its object has a method called <code>METHOD</code>, if it does then a reference to the sub is returned, if it does not then <code>undef</code> is returned.</p>
+
+</dd>
+<dt id="VERSION(-[NEED]-)"><a class="permalink" href="#VERSION(-%5BNEED%5D-)">#</a><a id="VERSION"></a><a id="VERSION-NEED"></a>VERSION( [NEED] ) </dt>
+<dd>
+
+<p><code>VERSION</code> returns the version number of the class (package). If the NEED argument is given then it will check that the current version (as defined by the $VERSION variable in the given package) not less than NEED; it will die if this is not the case. This method is called automatically by the <code>VERSION</code> form of <code>use</code>.</p>
+
+<pre><code>use Package 1.2 qw(some imported subs);
+# implies:
+Package-&gt;VERSION(1.2);</code></pre>
+
+</dd>
+</dl>
+
+<h2 id="Destructors"><a class="permalink" href="#Destructors">#</a>Destructors  </h2>
+
+<p>When the last reference to an object goes away, the object is automatically destroyed. (This may even be after you exit, if you&#39;ve stored references in global variables.) If you want to capture control just before the object is freed, you may define a DESTROY method in your class. It will automatically be called at the appropriate moment, and you can do any extra cleanup you need to do. Perl passes a reference to the object under destruction as the first (and only) argument. Beware that the reference is a read-only value, and cannot be modified by manipulating <code>$_[0]</code> within the destructor. The object itself (i.e. the thingy the reference points to, namely <code>${$_[0]}</code>, <code>@{$_[0]}</code>, <code>%{$_[0]}</code> etc.) is not similarly constrained.</p>
+
+<p>Since DESTROY methods can be called at unpredictable times, it is important that you localise any global variables that the method may update. In particular, localise <code>$@</code> if you use <code>eval {}</code> and localise <code>$?</code> if you use <code>system</code> or backticks.</p>
+
+<p>If you arrange to re-bless the reference before the destructor returns, perl will again call the DESTROY method for the re-blessed object after the current one returns. This can be used for clean delegation of object destruction, or for ensuring that destructors in the base classes of your choosing get called. Explicitly calling DESTROY is also possible, but is usually never needed.</p>
+
+<p>Do not confuse the previous discussion with how objects <i>CONTAINED</i> in the current one are destroyed. Such objects will be freed and destroyed automatically when the current object is freed, provided no other references to them exist elsewhere.</p>
+
+<h2 id="Summary"><a class="permalink" href="#Summary">#</a>Summary</h2>
+
+<p>That&#39;s about all there is to it. Now you need just to go off and buy a book about object-oriented design methodology, and bang your forehead with it for the next six months or so.</p>
+
+<h2 id="Two-Phased-Garbage-Collection"><a class="permalink" href="#Two-Phased-Garbage-Collection">#</a><a id="Two"></a>Two-Phased Garbage Collection      </h2>
+
+<p>For most purposes, Perl uses a fast and simple, reference-based garbage collection system. That means there&#39;s an extra dereference going on at some level, so if you haven&#39;t built your Perl executable using your C compiler&#39;s <code>-O</code> flag, performance will suffer. If you <i>have</i> built Perl with <code>cc -O</code>, then this probably won&#39;t matter.</p>
+
+<p>A more serious concern is that unreachable memory with a non-zero reference count will not normally get freed. Therefore, this is a bad idea:</p>
+
+<pre><code>    {
+	my $a;
+	$a = \$a;
+    }</code></pre>
+
+<p>Even thought $a <i>should</i> go away, it can&#39;t. When building recursive data structures, you&#39;ll have to break the self-reference yourself explicitly if you don&#39;t care to leak. For example, here&#39;s a self-referential node such as one might use in a sophisticated tree structure:</p>
+
+<pre><code>    sub new_node {
+	my $class = shift;
+	my $node  = {};
+	$node-&gt;{LEFT} = $node-&gt;{RIGHT} = $node;
+	$node-&gt;{DATA} = [ @_ ];
+	return bless $node =&gt; $class;
+    }</code></pre>
+
+<p>If you create nodes like that, they (currently) won&#39;t go away unless you break their self reference yourself. (In other words, this is not to be construed as a feature, and you shouldn&#39;t depend on it.)</p>
+
+<p>Almost.</p>
+
+<p>When an interpreter thread finally shuts down (usually when your program exits), then a rather costly but complete mark-and-sweep style of garbage collection is performed, and everything allocated by that thread gets destroyed. This is essential to support Perl as an embedded or a multithreadable language. For example, this program demonstrates Perl&#39;s two-phased garbage collection:</p>
+
+<pre><code>    #!/usr/bin/perl
+    package Subtle;
+
+    sub new {
+	my $test;
+	$test = \$test;
+	warn &quot;CREATING &quot; . \$test;
+	return bless \$test;
+    }
+
+    sub DESTROY {
+	my $self = shift;
+	warn &quot;DESTROYING $self&quot;;
+    }
+
+    package main;
+
+    warn &quot;starting program&quot;;
+    {
+	my $a = Subtle-&gt;new;
+	my $b = Subtle-&gt;new;
+	$$a = 0;  # break selfref
+	warn &quot;leaving block&quot;;
+    }
+
+    warn &quot;just exited block&quot;;
+    warn &quot;time to die...&quot;;
+    exit;</code></pre>
+
+<p>When run as <i>/foo/test</i>, the following output is produced:</p>
+
+<pre><code class="plaintext">starting program at /foo/test line 18.
+CREATING SCALAR(0x8e5b8) at /foo/test line 7.
+CREATING SCALAR(0x8e57c) at /foo/test line 7.
+leaving block at /foo/test line 23.
+DESTROYING Subtle=SCALAR(0x8e5b8) at /foo/test line 13.
+just exited block at /foo/test line 26.
+time to die... at /foo/test line 27.
+DESTROYING Subtle=SCALAR(0x8e57c) during global destruction.</code></pre>
+
+<p>Notice that &quot;global destruction&quot; bit there? That&#39;s the thread garbage collector reaching the unreachable.</p>
+
+<p>Objects are always destructed, even when regular refs aren&#39;t. Objects are destructed in a separate pass before ordinary refs just to prevent object destructors from using refs that have been themselves destructed. Plain refs are only garbage-collected if the destruct level is greater than 0. You can test the higher levels of global destruction by setting the PERL_DESTRUCT_LEVEL environment variable, presuming <code>-DDEBUGGING</code> was enabled during perl build time. See <a href="https://perldoc.perl.org/5.10.1/perlhack#PERL_DESTRUCT_LEVEL">&quot;PERL_DESTRUCT_LEVEL&quot; in perlhack</a> for more information.</p>
+
+<p>A more complete garbage collection strategy will be implemented at a future date.</p>
+
+<p>In the meantime, the best solution is to create a non-recursive container class that holds a pointer to the self-referential data structure. Define a DESTROY method for the containing object&#39;s class that manually breaks the circularities in the self-referential structure.</p>
+
+<h1 id="SEE-ALSO"><a class="permalink" href="#SEE-ALSO">#</a><a id="SEE"></a>SEE ALSO</h1>
+
+<p>A kinder, gentler tutorial on object-oriented programming in Perl can be found in <a href="perltoot.html">perltoot</a>, <a href="perlboot.html">perlboot</a> and <a href="perltooc.html">perltooc</a>. You should also check out <a href="perlbot.html">perlbot</a> for other object tricks, traps, and tips, as well as <a href="perlmodlib.html">perlmodlib</a> for some style guides on constructing both modules and classes.</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/5.10.1/perlobj by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:40 GMT -->
+</html>

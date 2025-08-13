@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from perldoc.perl.org/5.005_01/perldata by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>perldata - Perl data types - Perldoc Browser</title>
+    <link rel="search" href="../opensearch.xml" type="application/opensearchdescription+xml" title="Perldoc Browser">
+    <link rel="canonical" href="../perldata.html">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/stackoverflow-light.min.css" rel="stylesheet">
+    <link href="../css/perldoc.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVNWBNT5FB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVNWBNT5FB');
+      gtag('config', 'UA-50555-3');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark"><div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html"><img src="../images/perl_camel_30.png" width="30" height="30" class="d-inline-block align-text-top" alt="Perl Camel Logo"> Perldoc Browser</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-stable" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5.005_01</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-stable">
+          <a class="dropdown-item" href="../perldata.html">Latest</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0/perldata">5.42.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3/perldata">5.40.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.2/perldata">5.40.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.1/perldata">5.40.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.0/perldata">5.40.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5/perldata">5.38.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.4/perldata">5.38.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.3/perldata">5.38.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.2/perldata">5.38.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.1/perldata">5.38.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.0/perldata">5.38.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.3/perldata">5.36.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.2/perldata">5.36.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.1/perldata">5.36.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.36.0/perldata">5.36.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.3/perldata">5.34.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.2/perldata">5.34.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.1/perldata">5.34.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.34.0/perldata">5.34.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.1/perldata">5.32.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.32.0/perldata">5.32.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.3/perldata">5.30.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.2/perldata">5.30.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.1/perldata">5.30.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.30.0/perldata">5.30.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.3/perldata">5.28.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.2/perldata">5.28.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.1/perldata">5.28.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.28.0/perldata">5.28.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.3/perldata">5.26.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.2/perldata">5.26.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.1/perldata">5.26.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.26.0/perldata">5.26.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.4/perldata">5.24.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.3/perldata">5.24.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.2/perldata">5.24.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.1/perldata">5.24.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.24.0/perldata">5.24.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.4/perldata">5.22.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.3/perldata">5.22.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.2/perldata">5.22.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.1/perldata">5.22.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.22.0/perldata">5.22.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.3/perldata">5.20.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.2/perldata">5.20.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.1/perldata">5.20.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.20.0/perldata">5.20.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.4/perldata">5.18.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.3/perldata">5.18.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.2/perldata">5.18.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.1/perldata">5.18.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.18.0/perldata">5.18.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.3/perldata">5.16.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.2/perldata">5.16.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.1/perldata">5.16.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.16.0/perldata">5.16.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.4/perldata">5.14.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.3/perldata">5.14.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.2/perldata">5.14.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.1/perldata">5.14.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.14.0/perldata">5.14.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.5/perldata">5.12.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.4/perldata">5.12.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.3/perldata">5.12.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.2/perldata">5.12.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.1/perldata">5.12.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.12.0/perldata">5.12.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.1/perldata">5.10.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.10.0/perldata">5.10.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.9/perldata">5.8.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.8/perldata">5.8.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.7/perldata">5.8.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.6/perldata">5.8.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.5/perldata">5.8.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.4/perldata">5.8.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.3/perldata">5.8.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.2/perldata">5.8.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.1/perldata">5.8.1</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.8.0/perldata">5.8.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.6.2/perldata.html">5.6.2</a>
+          <a class="dropdown-item" href="../5.6.1/perldata.html">5.6.1</a>
+          <a class="dropdown-item" href="../5.6.0/perldata.html">5.6.0</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="../5.005_04/perldata.html">5.005_04</a>
+          <a class="dropdown-item" href="../5.005_03/perldata.html">5.005_03</a>
+          <a class="dropdown-item" href="../5.005_02/perldata.html">5.005_02</a>
+          <a class="dropdown-item active" href="perldata.html">5.005_01</a>
+          <a class="dropdown-item" href="../5.005/perldata.html">5.005</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-dev" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-dev">
+          <a class="dropdown-item" href="https://perldoc.perl.org/blead/perldata">blead</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.43.1/perldata">5.43.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC3/perldata">5.42.0-RC3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC2/perldata">5.42.0-RC2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.42.0-RC1/perldata">5.42.0-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.13/perldata">5.41.13</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.12/perldata">5.41.12</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.11/perldata">5.41.11</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.10/perldata">5.41.10</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.9/perldata">5.41.9</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.8/perldata">5.41.8</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.7/perldata">5.41.7</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.6/perldata">5.41.6</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.5/perldata">5.41.5</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.4/perldata">5.41.4</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.3/perldata">5.41.3</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.2/perldata">5.41.2</a>
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.41.1/perldata">5.41.1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.40.3-RC1/perldata">5.40.3-RC1</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="https://perldoc.perl.org/5.38.5-RC1/perldata">5.38.5-RC1</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-nowrap">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownlink-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownlink-nav">
+          <a class="dropdown-item" href="perl.html">Perl</a>
+          <a class="dropdown-item" href="perlintro.html">Intro</a>
+          <a class="dropdown-item" href="perl.html#Tutorials">Tutorials</a>
+          <a class="dropdown-item" href="perlfaq.html">FAQs</a>
+          <a class="dropdown-item" href="perl.html#Reference-Manual">Reference</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perlop.html">Operators</a>
+          <a class="dropdown-item" href="functions.html">Functions</a>
+          <a class="dropdown-item" href="variables.html">Variables</a>
+          <a class="dropdown-item" href="modules.html">Modules</a>
+          <a class="dropdown-item" href="perlutil.html">Utilities</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="perldelta.html">Release Notes</a>
+          <a class="dropdown-item" href="perlcommunity.html">Community</a>
+          <a class="dropdown-item" href="perlhist.html">History</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <button id="content-expand-button" type="button" class="btn btn-dark d-none d-lg-inline-block me-4">Expand</button>
+      <script src="../js/perldoc-expand-page.js"></script>
+    </ul>
+    <form class="form-inline" method="get" action="https://perldoc.perl.org/5.005_01/search">
+      <input id="search-input" class="form-control me-3" type="search" name="q" placeholder="[S]earch" aria-label="Search" value="">
+    </form>
+    <script src="../js/perldoc-focus-search.js"></script>
+  </div>
+</div></nav>
+
+    <div id="wrapperlicious" class="container-fluid">
+      <div id="perldocdiv">
+        <div id="links">
+          <a href="perldata.html">perldata</a>
+          <div id="more">
+            (<a href="https://perldoc.perl.org/5.005_01/perldata.txt">source</a>,
+            <a href="https://metacpan.org/pod/perldata">CPAN</a>)
+          </div>
+        </div>
+        <div class="leading-notice">
+          You are viewing the version of this documentation from Perl 5.005_01.
+            <a href="../perldata.html">View the latest version</a>
+        </div>
+        <h1><a id="toc">CONTENTS</a></h1>
+                  <ul>
+              <li>
+                <a class="text-decoration-none" href="#NAME">NAME</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#DESCRIPTION">DESCRIPTION</a>
+                            <ul>
+              <li>
+                <a class="text-decoration-none" href="#Variable-names">Variable names</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Context">Context</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Scalar-values">Scalar values</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Scalar-value-constructors">Scalar value constructors</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#List-value-constructors">List value constructors</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#Typeglobs-and-Filehandles">Typeglobs and Filehandles</a>
+              </li>
+          </ul>
+
+              </li>
+          </ul>
+
+      <h1 id="NAME"><a class="permalink" href="#NAME">#</a>NAME</h1>
+
+<p>perldata - Perl data types</p>
+
+<h1 id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">#</a>DESCRIPTION</h1>
+
+<h2 id="Variable-names"><a class="permalink" href="#Variable-names">#</a><a id="Variable"></a>Variable names</h2>
+
+<p>Perl has three data structures: scalars, arrays of scalars, and associative arrays of scalars, known as &quot;hashes&quot;. Normal arrays are indexed by number, starting with 0. (Negative subscripts count from the end.) Hash arrays are indexed by string.</p>
+
+<p>Values are usually referred to by name (or through a named reference). The first character of the name tells you to what sort of data structure it refers. The rest of the name tells you the particular value to which it refers. Most often, it consists of a single <i>identifier</i>, that is, a string beginning with a letter or underscore, and containing letters, underscores, and digits. In some cases, it may be a chain of identifiers, separated by <code>::</code> (or by <code>&#39;</code>, but that&#39;s deprecated); all but the last are interpreted as names of packages, to locate the namespace in which to look up the final identifier (see <a href="perlmod.html#Packages">&quot;Packages&quot; in perlmod</a> for details). It&#39;s possible to substitute for a simple identifier an expression that produces a reference to the value at runtime; this is described in more detail below, and in <a href="perlref.html">perlref</a>.</p>
+
+<p>There are also special variables whose names don&#39;t follow these rules, so that they don&#39;t accidentally collide with one of your normal variables. Strings that match parenthesized parts of a regular expression are saved under names containing only digits after the <code>$</code> (see <a href="perlop.html">perlop</a> and <a href="perlre.html">perlre</a>). In addition, several special variables that provide windows into the inner working of Perl have names containing punctuation characters (see <a href="perlvar.html">perlvar</a>).</p>
+
+<p>Scalar values are always named with &#39;$&#39;, even when referring to a scalar that is part of an array. It works like the English word &quot;the&quot;. Thus we have:</p>
+
+<pre><code>$days		# the simple scalar value &quot;days&quot;
+$days[28]		# the 29th element of array @days
+$days{&#39;Feb&#39;}	# the &#39;Feb&#39; value from hash %days
+$#days		# the last index of array @days</code></pre>
+
+<p>but entire arrays or array slices are denoted by &#39;@&#39;, which works much like the word &quot;these&quot; or &quot;those&quot;:</p>
+
+<pre><code>@days		# ($days[0], $days[1],... $days[n])
+@days[3,4,5]	# same as @days[3..5]
+@days{&#39;a&#39;,&#39;c&#39;}	# same as ($days{&#39;a&#39;},$days{&#39;c&#39;})</code></pre>
+
+<p>and entire hashes are denoted by &#39;%&#39;:</p>
+
+<pre><code>%days		# (key1, val1, key2, val2 ...)</code></pre>
+
+<p>In addition, subroutines are named with an initial &#39;&amp;&#39;, though this is optional when it&#39;s otherwise unambiguous (just as &quot;do&quot; is often redundant in English). Symbol table entries can be named with an initial &#39;*&#39;, but you don&#39;t really care about that yet.</p>
+
+<p>Every variable type has its own namespace. You can, without fear of conflict, use the same name for a scalar variable, an array, or a hash (or, for that matter, a filehandle, a subroutine name, or a label). This means that $foo and @foo are two different variables. It also means that <code>$foo[1]</code> is a part of @foo, not a part of $foo. This may seem a bit weird, but that&#39;s okay, because it is weird.</p>
+
+<p>Because variable and array references always start with &#39;$&#39;, &#39;@&#39;, or &#39;%&#39;, the &quot;reserved&quot; words aren&#39;t in fact reserved with respect to variable names. (They ARE reserved with respect to labels and filehandles, however, which don&#39;t have an initial special character. You can&#39;t have a filehandle named &quot;log&quot;, for instance. Hint: you could say <code>open(LOG,&#39;logfile&#39;)</code> rather than <code>open(log,&#39;logfile&#39;)</code>. Using uppercase filehandles also improves readability and protects you from conflict with future reserved words.) Case <i>IS</i> significant--&quot;FOO&quot;, &quot;Foo&quot;, and &quot;foo&quot; are all different names. Names that start with a letter or underscore may also contain digits and underscores.</p>
+
+<p>It is possible to replace such an alphanumeric name with an expression that returns a reference to an object of that type. For a description of this, see <a href="perlref.html">perlref</a>.</p>
+
+<p>Names that start with a digit may contain only more digits. Names that do not start with a letter, underscore, or digit are limited to one character, e.g., <code>$%</code> or <code>$$</code>. (Most of these one character names have a predefined significance to Perl. For instance, <code>$$</code> is the current process id.)</p>
+
+<h2 id="Context"><a class="permalink" href="#Context">#</a>Context</h2>
+
+<p>The interpretation of operations and values in Perl sometimes depends on the requirements of the context around the operation or value. There are two major contexts: scalar and list. Certain operations return list values in contexts wanting a list, and scalar values otherwise. (If this is true of an operation it will be mentioned in the documentation for that operation.) In other words, Perl overloads certain operations based on whether the expected return value is singular or plural. (Some words in English work this way, like &quot;fish&quot; and &quot;sheep&quot;.)</p>
+
+<p>In a reciprocal fashion, an operation provides either a scalar or a list context to each of its arguments. For example, if you say</p>
+
+<pre><code class="plaintext">int( &lt;STDIN&gt; )</code></pre>
+
+<p>the integer operation provides a scalar context for the &lt;STDIN&gt; operator, which responds by reading one line from STDIN and passing it back to the integer operation, which will then find the integer value of that line and return that. If, on the other hand, you say</p>
+
+<pre><code class="plaintext">sort( &lt;STDIN&gt; )</code></pre>
+
+<p>then the sort operation provides a list context for &lt;STDIN&gt;, which will proceed to read every line available up to the end of file, and pass that list of lines back to the sort routine, which will then sort those lines and return them as a list to whatever the context of the sort was.</p>
+
+<p>Assignment is a little bit special in that it uses its left argument to determine the context for the right argument. Assignment to a scalar evaluates the righthand side in a scalar context, while assignment to an array or array slice evaluates the righthand side in a list context. Assignment to a list also evaluates the righthand side in a list context.</p>
+
+<p>User defined subroutines may choose to care whether they are being called in a scalar or list context, but most subroutines do not need to care, because scalars are automatically interpolated into lists. See <a href="perlfunc.html#wantarray">&quot;wantarray&quot; in perlfunc</a>.</p>
+
+<h2 id="Scalar-values"><a class="permalink" href="#Scalar-values">#</a><a id="Scalar"></a>Scalar values</h2>
+
+<p>All data in Perl is a scalar or an array of scalars or a hash of scalars. Scalar variables may contain various kinds of singular data, such as numbers, strings, and references. In general, conversion from one form to another is transparent. (A scalar may not contain multiple values, but may contain a reference to an array or hash containing multiple values.) Because of the automatic conversion of scalars, operations, and functions that return scalars don&#39;t need to care (and, in fact, can&#39;t care) whether the context is looking for a string or a number.</p>
+
+<p>Scalars aren&#39;t necessarily one thing or another. There&#39;s no place to declare a scalar variable to be of type &quot;string&quot;, or of type &quot;number&quot;, or type &quot;filehandle&quot;, or anything else. Perl is a contextually polymorphic language whose scalars can be strings, numbers, or references (which includes objects). While strings and numbers are considered pretty much the same thing for nearly all purposes, references are strongly-typed uncastable pointers with builtin reference-counting and destructor invocation.</p>
+
+<p>A scalar value is interpreted as TRUE in the Boolean sense if it is not the null string or the number 0 (or its string equivalent, &quot;0&quot;). The Boolean context is just a special kind of scalar context.</p>
+
+<p>There are actually two varieties of null scalars: defined and undefined. Undefined null scalars are returned when there is no real value for something, such as when there was an error, or at end of file, or when you refer to an uninitialized variable or element of an array. An undefined null scalar may become defined the first time you use it as if it were defined, but prior to that you can use the defined() operator to determine whether the value is defined or not.</p>
+
+<p>To find out whether a given string is a valid nonzero number, it&#39;s usually enough to test it against both numeric 0 and also lexical &quot;0&quot; (although this will cause <b>-w</b> noises). That&#39;s because strings that aren&#39;t numbers count as 0, just as they do in <b>awk</b>:</p>
+
+<pre><code>    if ($str == 0 &amp;&amp; $str ne &quot;0&quot;)  {
+	warn &quot;That doesn&#39;t look like a number&quot;;
+    }</code></pre>
+
+<p>That&#39;s usually preferable because otherwise you won&#39;t treat IEEE notations like <code>NaN</code> or <code>Infinity</code> properly. At other times you might prefer to use the POSIX::strtod function or a regular expression to check whether data is numeric. See <a href="perlre.html">perlre</a> for details on regular expressions.</p>
+
+<pre><code>    warn &quot;has nondigits&quot;	if     /\D/;
+    warn &quot;not a natural number&quot; unless /^\d+$/;             # rejects -3
+    warn &quot;not an integer&quot;       unless /^-?\d+$/;           # rejects +3
+    warn &quot;not an integer&quot;       unless /^[+-]?\d+$/;
+    warn &quot;not a decimal number&quot; unless /^-?\d+\.?\d*$/;     # rejects .2
+    warn &quot;not a decimal number&quot; unless /^-?(?:\d+(?:\.\d*)?|\.\d+)$/;
+    warn &quot;not a C float&quot;
+	unless /^([+-]?)(?=\d|\.\d)\d*(\.\d*)?([Ee]([+-]?\d+))?$/;</code></pre>
+
+<p>The length of an array is a scalar value. You may find the length of array @days by evaluating <code>$#days</code>, as in <b>csh</b>. (Actually, it&#39;s not the length of the array, it&#39;s the subscript of the last element, because there is (ordinarily) a 0th element.) Assigning to <code>$#days</code> changes the length of the array. Shortening an array by this method destroys intervening values. Lengthening an array that was previously shortened <i>NO LONGER</i> recovers the values that were in those elements. (It used to in Perl 4, but we had to break this to make sure destructors were called when expected.) You can also gain some miniscule measure of efficiency by pre-extending an array that is going to get big. (You can also extend an array by assigning to an element that is off the end of the array.) You can truncate an array down to nothing by assigning the null list () to it. The following are equivalent:</p>
+
+<pre><code>@whatever = ();
+$#whatever = -1;</code></pre>
+
+<p>If you evaluate a named array in a scalar context, it returns the length of the array. (Note that this is not true of lists, which return the last value, like the C comma operator, nor of built-in functions, which return whatever they feel like returning.) The following is always true:</p>
+
+<pre><code>scalar(@whatever) == $#whatever - $[ + 1;</code></pre>
+
+<p>Version 5 of Perl changed the semantics of <code>$[</code>: files that don&#39;t set the value of <code>$[</code> no longer need to worry about whether another file changed its value. (In other words, use of <code>$[</code> is deprecated.) So in general you can assume that</p>
+
+<pre><code>scalar(@whatever) == $#whatever + 1;</code></pre>
+
+<p>Some programmers choose to use an explicit conversion so nothing&#39;s left to doubt:</p>
+
+<pre><code>$element_count = scalar(@whatever);</code></pre>
+
+<p>If you evaluate a hash in a scalar context, it returns a value that is true if and only if the hash contains any key/value pairs. (If there are any key/value pairs, the value returned is a string consisting of the number of used buckets and the number of allocated buckets, separated by a slash. This is pretty much useful only to find out whether Perl&#39;s (compiled in) hashing algorithm is performing poorly on your data set. For example, you stick 10,000 things in a hash, but evaluating %HASH in scalar context reveals &quot;1/16&quot;, which means only one out of sixteen buckets has been touched, and presumably contains all 10,000 of your items. This isn&#39;t supposed to happen.)</p>
+
+<p>You can preallocate space for a hash by assigning to the keys() function. This rounds up the allocated bucked to the next power of two:</p>
+
+<pre><code>keys(%users) = 1000;		# allocate 1024 buckets</code></pre>
+
+<h2 id="Scalar-value-constructors"><a class="permalink" href="#Scalar-value-constructors">#</a><a id="Scalar1"></a>Scalar value constructors</h2>
+
+<p>Numeric literals are specified in any of the customary floating point or integer formats:</p>
+
+<pre><code class="plaintext">12345
+12345.67
+.23E-10
+0xffff		# hex
+0377		# octal
+4_294_967_296	# underline for legibility</code></pre>
+
+<p>String literals are usually delimited by either single or double quotes. They work much like shell quotes: double-quoted string literals are subject to backslash and variable substitution; single-quoted strings are not (except for &quot;<code>\&#39;</code>&quot; and &quot;<code>\\</code>&quot;). The usual Unix backslash rules apply for making characters such as newline, tab, etc., as well as some more exotic forms. See <a href="perlop.html#Quote-and-Quotelike-Operators">&quot;Quote and Quotelike Operators&quot; in perlop</a> for a list.</p>
+
+<p>Octal or hex representations in string literals (e.g. &#39;0xffff&#39;) are not automatically converted to their integer representation. The hex() and oct() functions make these conversions for you. See <a href="perlfunc.html#hex">&quot;hex&quot; in perlfunc</a> and <a href="perlfunc.html#oct">&quot;oct&quot; in perlfunc</a> for more details.</p>
+
+<p>You can also embed newlines directly in your strings, i.e., they can end on a different line than they begin. This is nice, but if you forget your trailing quote, the error will not be reported until Perl finds another line containing the quote character, which may be much further on in the script. Variable substitution inside strings is limited to scalar variables, arrays, and array slices. (In other words, names beginning with $ or @, followed by an optional bracketed expression as a subscript.) The following code segment prints out &quot;The price is $100.&quot;</p>
+
+<pre><code>$Price = &#39;$100&#39;;	# not interpreted
+print &quot;The price is $Price.\n&quot;;	# interpreted</code></pre>
+
+<p>As in some shells, you can put curly brackets around the name to delimit it from following alphanumerics. In fact, an identifier within such curlies is forced to be a string, as is any single identifier within a hash subscript. Our earlier example,</p>
+
+<pre><code>$days{&#39;Feb&#39;}</code></pre>
+
+<p>can be written as</p>
+
+<pre><code>$days{Feb}</code></pre>
+
+<p>and the quotes will be assumed automatically. But anything more complicated in the subscript will be interpreted as an expression.</p>
+
+<p>Note that a single-quoted string must be separated from a preceding word by a space, because single quote is a valid (though deprecated) character in a variable name (see <a href="perlmod.html#Packages">&quot;Packages&quot; in perlmod</a>).</p>
+
+<p>Three special literals are __FILE__, __LINE__, and __PACKAGE__, which represent the current filename, line number, and package name at that point in your program. They may be used only as separate tokens; they will not be interpolated into strings. If there is no current package (due to an empty <code>package;</code> directive), __PACKAGE__ is the undefined value.</p>
+
+<p>The tokens __END__ and __DATA__ may be used to indicate the logical end of the script before the actual end of file. Any following text is ignored, but may be read via a DATA filehandle: main::DATA for __END__, or PACKNAME::DATA (where PACKNAME is the current package) for __DATA__. The two control characters ^D and ^Z are synonyms for __END__ (or __DATA__ in a module). See <a href="https://perldoc.perl.org/5.005_01/SelfLoader">SelfLoader</a> for more description of __DATA__, and an example of its use. Note that you cannot read from the DATA filehandle in a BEGIN block: the BEGIN block is executed as soon as it is seen (during compilation), at which point the corresponding __DATA__ (or __END__) token has not yet been seen.</p>
+
+<p>A word that has no other interpretation in the grammar will be treated as if it were a quoted string. These are known as &quot;barewords&quot;. As with filehandles and labels, a bareword that consists entirely of lowercase letters risks conflict with future reserved words, and if you use the <b>-w</b> switch, Perl will warn you about any such words. Some people may wish to outlaw barewords entirely. If you say</p>
+
+<pre><code>use strict &#39;subs&#39;;</code></pre>
+
+<p>then any bareword that would NOT be interpreted as a subroutine call produces a compile-time error instead. The restriction lasts to the end of the enclosing block. An inner block may countermand this by saying <code>no strict &#39;subs&#39;</code>.</p>
+
+<p>Array variables are interpolated into double-quoted strings by joining all the elements of the array with the delimiter specified in the <code>$&quot;</code> variable (<code>$LIST_SEPARATOR</code> in English), space by default. The following are equivalent:</p>
+
+<pre><code>$temp = join($&quot;,@ARGV);
+system &quot;echo $temp&quot;;
+
+system &quot;echo @ARGV&quot;;</code></pre>
+
+<p>Within search patterns (which also undergo double-quotish substitution) there is a bad ambiguity: Is <code>/$foo[bar]/</code> to be interpreted as <code>/${foo}[bar]/</code> (where <code>[bar]</code> is a character class for the regular expression) or as <code>/${foo[bar]}/</code> (where <code>[bar]</code> is the subscript to array @foo)? If @foo doesn&#39;t otherwise exist, then it&#39;s obviously a character class. If @foo exists, Perl takes a good guess about <code>[bar]</code>, and is almost always right. If it does guess wrong, or if you&#39;re just plain paranoid, you can force the correct interpretation with curly brackets as above.</p>
+
+<p>A line-oriented form of quoting is based on the shell &quot;here-doc&quot; syntax. Following a <code>&lt;&lt;</code> you specify a string to terminate the quoted material, and all lines following the current line down to the terminating string are the value of the item. The terminating string may be either an identifier (a word), or some quoted text. If quoted, the type of quotes you use determines the treatment of the text, just as in regular quoting. An unquoted identifier works like double quotes. There must be no space between the <code>&lt;&lt;</code> and the identifier. (If you put a space it will be treated as a null identifier, which is valid, and matches the first empty line.) The terminating string must appear by itself (unquoted and with no surrounding whitespace) on the terminating line.</p>
+
+<pre><code>	print &lt;&lt;EOF;
+    The price is $Price.
+    EOF
+
+	print &lt;&lt;&quot;EOF&quot;;	# same as above
+    The price is $Price.
+    EOF
+
+	print &lt;&lt;`EOC`;	# execute commands
+    echo hi there
+    echo lo there
+    EOC
+
+	print &lt;&lt;&quot;foo&quot;, &lt;&lt;&quot;bar&quot;;	# you can stack them
+    I said foo.
+    foo
+    I said bar.
+    bar
+
+	myfunc(&lt;&lt;&quot;THIS&quot;, 23, &lt;&lt;&#39;THAT&#39;);
+    Here&#39;s a line
+    or two.
+    THIS
+    and here&#39;s another.
+    THAT</code></pre>
+
+<p>Just don&#39;t forget that you have to put a semicolon on the end to finish the statement, as Perl doesn&#39;t know you&#39;re not going to try to do this:</p>
+
+<pre><code>	print &lt;&lt;ABC
+    179231
+    ABC
+	+ 20;</code></pre>
+
+<h2 id="List-value-constructors"><a class="permalink" href="#List-value-constructors">#</a><a id="List"></a>List value constructors</h2>
+
+<p>List values are denoted by separating individual values by commas (and enclosing the list in parentheses where precedence requires it):</p>
+
+<pre><code class="plaintext">(LIST)</code></pre>
+
+<p>In a context not requiring a list value, the value of the list literal is the value of the final element, as with the C comma operator. For example,</p>
+
+<pre><code>@foo = (&#39;cc&#39;, &#39;-E&#39;, $bar);</code></pre>
+
+<p>assigns the entire list value to array foo, but</p>
+
+<pre><code>$foo = (&#39;cc&#39;, &#39;-E&#39;, $bar);</code></pre>
+
+<p>assigns the value of variable bar to variable foo. Note that the value of an actual array in a scalar context is the length of the array; the following assigns the value 3 to $foo:</p>
+
+<pre><code>@foo = (&#39;cc&#39;, &#39;-E&#39;, $bar);
+$foo = @foo;		# $foo gets 3</code></pre>
+
+<p>You may have an optional comma before the closing parenthesis of a list literal, so that you can say:</p>
+
+<pre><code>    @foo = (
+	1,
+	2,
+	3,
+    );</code></pre>
+
+<p>LISTs do automatic interpolation of sublists. That is, when a LIST is evaluated, each element of the list is evaluated in a list context, and the resulting list value is interpolated into LIST just as if each individual element were a member of LIST. Thus arrays and hashes lose their identity in a LIST--the list</p>
+
+<pre><code>(@foo,@bar,&amp;SomeSub,%glarch)</code></pre>
+
+<p>contains all the elements of @foo followed by all the elements of @bar, followed by all the elements returned by the subroutine named SomeSub called in a list context, followed by the key/value pairs of %glarch. To make a list reference that does <i>NOT</i> interpolate, see <a href="perlref.html">perlref</a>.</p>
+
+<p>The null list is represented by (). Interpolating it in a list has no effect. Thus ((),(),()) is equivalent to (). Similarly, interpolating an array with no elements is the same as if no array had been interpolated at that point.</p>
+
+<p>A list value may also be subscripted like a normal array. You must put the list in parentheses to avoid ambiguity. For example:</p>
+
+<pre><code># Stat returns list value.
+$time = (stat($file))[8];
+
+# SYNTAX ERROR HERE.
+$time = stat($file)[8];  # OOPS, FORGOT PARENTHESES
+
+# Find a hex digit.
+$hexdigit = (&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;)[$digit-10];
+
+# A &quot;reverse comma operator&quot;.
+return (pop(@foo),pop(@foo))[0];</code></pre>
+
+<p>You may assign to <code>undef</code> in a list. This is useful for throwing away some of the return values of a function:</p>
+
+<pre><code>($dev, $ino, undef, undef, $uid, $gid) = stat($file);</code></pre>
+
+<p>Lists may be assigned to if and only if each element of the list is legal to assign to:</p>
+
+<pre><code>($a, $b, $c) = (1, 2, 3);
+
+($map{&#39;red&#39;}, $map{&#39;blue&#39;}, $map{&#39;green&#39;}) = (0x00f, 0x0f0, 0xf00);</code></pre>
+
+<p>Array assignment in a scalar context returns the number of elements produced by the expression on the right side of the assignment:</p>
+
+<pre><code>$x = (($foo,$bar) = (3,2,1));	# set $x to 3, not 2
+$x = (($foo,$bar) = f());	        # set $x to f()&#39;s return count</code></pre>
+
+<p>This is very handy when you want to do a list assignment in a Boolean context, because most list functions return a null list when finished, which when assigned produces a 0, which is interpreted as FALSE.</p>
+
+<p>The final element may be an array or a hash:</p>
+
+<pre><code>($a, $b, @rest) = split;
+my($a, $b, %rest) = @_;</code></pre>
+
+<p>You can actually put an array or hash anywhere in the list, but the first one in the list will soak up all the values, and anything after it will get a null value. This may be useful in a local() or my().</p>
+
+<p>A hash literal contains pairs of values to be interpreted as a key and a value:</p>
+
+<pre><code># same as map assignment above
+%map = (&#39;red&#39;,0x00f,&#39;blue&#39;,0x0f0,&#39;green&#39;,0xf00);</code></pre>
+
+<p>While literal lists and named arrays are usually interchangeable, that&#39;s not the case for hashes. Just because you can subscript a list value like a normal array does not mean that you can subscript a list value as a hash. Likewise, hashes included as parts of other lists (including parameters lists and return lists from functions) always flatten out into key/value pairs. That&#39;s why it&#39;s good to use references sometimes.</p>
+
+<p>It is often more readable to use the <code>=&gt;</code> operator between key/value pairs. The <code>=&gt;</code> operator is mostly just a more visually distinctive synonym for a comma, but it also arranges for its left-hand operand to be interpreted as a string--if it&#39;s a bareword that would be a legal identifier. This makes it nice for initializing hashes:</p>
+
+<pre><code>    %map = (
+		 red   =&gt; 0x00f,
+		 blue  =&gt; 0x0f0,
+		 green =&gt; 0xf00,
+   );</code></pre>
+
+<p>or for initializing hash references to be used as records:</p>
+
+<pre><code>    $rec = {
+		witch =&gt; &#39;Mable the Merciless&#39;,
+		cat   =&gt; &#39;Fluffy the Ferocious&#39;,
+		date  =&gt; &#39;10/31/1776&#39;,
+    };</code></pre>
+
+<p>or for using call-by-named-parameter to complicated functions:</p>
+
+<pre><code>   $field = $query-&gt;radio_group(
+	       name      =&gt; &#39;group_name&#39;,
+               values    =&gt; [&#39;eenie&#39;,&#39;meenie&#39;,&#39;minie&#39;],
+               default   =&gt; &#39;meenie&#39;,
+               linebreak =&gt; &#39;true&#39;,
+               labels    =&gt; \%labels
+   );</code></pre>
+
+<p>Note that just because a hash is initialized in that order doesn&#39;t mean that it comes out in that order. See <a href="perlfunc.html#sort">&quot;sort&quot; in perlfunc</a> for examples of how to arrange for an output ordering.</p>
+
+<h2 id="Typeglobs-and-Filehandles"><a class="permalink" href="#Typeglobs-and-Filehandles">#</a><a id="Typeglobs"></a>Typeglobs and Filehandles</h2>
+
+<p>Perl uses an internal type called a <i>typeglob</i> to hold an entire symbol table entry. The type prefix of a typeglob is a <code>*</code>, because it represents all types. This used to be the preferred way to pass arrays and hashes by reference into a function, but now that we have real references, this is seldom needed.</p>
+
+<p>The main use of typeglobs in modern Perl is create symbol table aliases. This assignment:</p>
+
+<pre><code>*this = *that;</code></pre>
+
+<p>makes $this an alias for $that, @this an alias for @that, %this an alias for %that, &amp;this an alias for &amp;that, etc. Much safer is to use a reference. This:</p>
+
+<pre><code>local *Here::blue = \$There::green;</code></pre>
+
+<p>temporarily makes $Here::blue an alias for $There::green, but doesn&#39;t make @Here::blue an alias for @There::green, or %Here::blue an alias for %There::green, etc. See <a href="perlmod.html#Symbol-Tables">&quot;Symbol Tables&quot; in perlmod</a> for more examples of this. Strange though this may seem, this is the basis for the whole module import/export system.</p>
+
+<p>Another use for typeglobs is to to pass filehandles into a function or to create new filehandles. If you need to use a typeglob to save away a filehandle, do it this way:</p>
+
+<pre><code>$fh = *STDOUT;</code></pre>
+
+<p>or perhaps as a real reference, like this:</p>
+
+<pre><code>$fh = \*STDOUT;</code></pre>
+
+<p>See <a href="perlsub.html">perlsub</a> for examples of using these as indirect filehandles in functions.</p>
+
+<p>Typeglobs are also a way to create a local filehandle using the local() operator. These last until their block is exited, but may be passed back. For example:</p>
+
+<pre><code>    sub newopen {
+	my $path = shift;
+	local *FH;  # not my!
+	open   (FH, $path) 	    or  return undef;
+	return *FH;
+    }
+    $fh = newopen(&#39;/etc/passwd&#39;);</code></pre>
+
+<p>Now that we have the *foo{THING} notation, typeglobs aren&#39;t used as much for filehandle manipulations, although they&#39;re still needed to pass brand new file and directory handles into or out of functions. That&#39;s because *HANDLE{IO} only works if HANDLE has already been used as a handle. In other words, *FH can be used to create new symbol table entries, but *foo{THING} cannot.</p>
+
+<p>Another way to create anonymous filehandles is with the IO::Handle module and its ilk. These modules have the advantage of not hiding different types of the same name during the local(). See the bottom of <a href="perlfunc.html#open()">&quot;open()&quot; in perlfunc</a> for an example.</p>
+
+<p>See <a href="perlref.html">perlref</a>, <a href="perlsub.html">perlsub</a>, and <a href="perlmod.html#Symbol-Tables">&quot;Symbol Tables&quot; in perlmod</a> for more discussion on typeglobs and the *foo{THING} syntax.</p>
+
+
+      </div>
+      <div id="footer">
+        <p>Perldoc Browser is maintained by Dan Book (<a href="https://metacpan.org/author/DBOOK">DBOOK</a>). Please contact him via the <a href="https://github.com/Grinnz/perldoc-browser/issues">GitHub issue tracker</a> or <a href="mailto:dbook@cpan.org">email</a> regarding any issues with the site itself, search, or rendering of documentation.</p>
+
+<p>The Perl documentation is maintained by the Perl 5 Porters in the development of Perl. Please contact them via the <a href="https://github.com/Perl/perl5/issues">Perl issue tracker</a>, the <a href="https://lists.perl.org/list/perl5-porters.html">mailing list</a>, or <a href="https://kiwiirc.com/client/irc.perl.org/p5p">IRC</a> to report any issues with the contents or format of the documentation.</p>
+
+
+      </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+
+<!-- Mirrored from perldoc.perl.org/5.005_01/perldata by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 16:20:47 GMT -->
+</html>
